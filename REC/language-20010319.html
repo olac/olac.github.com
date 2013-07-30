@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>OLAC Language Vocabulary</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="OLAC Language Vocabulary">
+<meta name="Creator" content="Gary Simons, SIL International&#10;      (mailto:gary_simons@sil.org)&#10;        Steven Bird, University of Pennsylvania&#10;      (mailto:sb@ldc.upenn.edu)">
+<meta name="Description" content=" &#10;       This document specifies the controlled vocabulary of language&#10;        identifiers used by OLAC.  &#10;    ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20010319">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>OLAC Language Vocabulary</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2001-03-19</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Recommendation. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/REC/language-20010319.html">http://www.language-archives.org/REC/language-20010319.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/REC/language.html">http://www.language-archives.org/REC/language.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td>None.</td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p> This document specifies the controlled vocabulary of language
+        identifiers used by OLAC. </p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>Gary Simons, SIL International
+      (<a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>)<br>
+        Steven Bird, University of Pennsylvania
+      (<a href="mailto:sb@ldc.upenn.edu">mailto:sb@ldc.upenn.edu</a>)</editors>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 2001 Gary Simons (SIL International) and Steven Bird (University of
+        Pennsylvania). This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Ethnologue codes">Ethnologue codes</A>
+</LI>
+<LI>
+<A href="#Other RFC 1766 codes">Other RFC 1766 codes</A>
+</LI>
+<LI>
+<A href="#Languages for which codes are not assigned">Languages for which codes are not assigned</A>
+</LI>
+<LI>
+<A href="#Mapping to unqualified Dublin Core">Mapping to unqualified Dublin Core</A>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>Language identification is an important dimension of language resource
+        classification. However, the character-string representation of language names
+        is problematic for several reasons: </p>
+<ul>
+<li>
+<p>Different languages (in different parts of the world) may have the
+            same name.</p>
+</li>
+<li>
+<p>The same language may have a different name in each country where
+            it is spoken.</p>
+</li>
+<li>
+<p>Within the same country, the preferred name for a language may
+            change over time.</p>
+</li>
+<li>
+<p>In the early history of discovering new languages (before names
+            were standardized), different people referred to the same language by different
+            names.</p>
+</li>
+<li>
+<p>For languages having non-Roman orthographies, the language name
+            may have several possible romanizations.</p>
+</li>
+</ul>
+<p>The sum of these facts taken together suggests that a standard based
+        on names will not work. Rather, what is needed is a standard based on unique
+        identifiers that do not change, combined with accessible documentation that
+        clarifies the particular speech variety denoted by each identifier. </p>
+<p>The information technology community has a standard for language
+        identification, namely, ISO 639 [<a href="http://lcweb.loc.gov/standards/iso639-2/langhome.html">ISO-639</a>]. Part 1 of this standard
+        lists two-letter codes for identifying about 140 of the world's major
+        languages; part 2 of the standard lists three-letter codes for identifying
+        about 400 languages. ISO 639 in turn forms the core of another standard, RFC
+        3166 [<a href="#RFC-3166">RFC-3166</a>] (formerly RFC 1766 [<a href="http://www.ietf.org/rfc/rfc1766.txt">RFC-1766</a>]), which is the
+        standard used for language identification in the xml:lang attribute of XML and
+        in the language element of the Dublin Core Metadata Initiative. RFC 3166
+        provides a mechanism for users to register new language identification codes
+        for languages not covered by ISO 639, but very few additional languages have
+        been registered. </p>
+<p>Unfortunately, the existing standard falls far short of meeting the
+        needs of the language resources community since it fails to account for more
+        than 90% of the world's languages, and it fails to adequately document what
+        languages the codes refer to [<a href="http://www.ldc.upenn.edu/exploration/expl2000/papers/simons/simons.htm">Simons-2000</a>]. However, SIL's Ethnologue
+        [<a href="http://www.sil.org/ethnologue/">Ethnologue</a>] provides a complete system of language identifiers which
+        is openly available on the Web. OLAC will employ the RFC 3166 extension
+        mechanism which permits Ethnologue codes to be incorporated. </p>
+<h2>
+<A name="Ethnologue codes"></A>2. Ethnologue codes</h2>
+<p>The SIL Ethnologue [<a href="http://www.sil.org/ethnologue/">Ethnologue</a>] provides some 6,800
+        three-letter codes, along with detailed information about language names,
+        genetic affiliations and geographical locus, amongst other things. </p>
+<p>There are at least three ways to determine the Ethnologue code for a
+        given language: </p>
+<ol>
+<li>
+<p>Use the form interface provided on the Ethnologue site
+            [<a href="http://www.sil.org/ethnologue/">Ethnologue</a>],</p>
+</li>
+<li>
+<p>Use the LDC's temporary Ethnologue query form, giving simpler
+            output [<a href="http://wave.ldc.upenn.edu/OLAC/ethnologue/form.php3">LDC-Ethnologue</a>],</p>
+</li>
+<li>
+<p>Download an ASCII table of language codes
+            [<a href="http://www.language-archives.org/data/languagecodes.tab">Language-Codes</a>], and load them into a relational database using the schema provided
+            in [<a href="http://www.ldc.upenn.edu/exploration/expl2000/papers/simons/simons.htm">Simons-2000</a>].</p>
+</li>
+</ol>
+<p>A three-letter Ethnologue code <tt>AAA</tt> will be represented
+        as<tt>x-sil-AAA</tt>.</p>
+<h2>
+<A name="Other RFC 1766 codes"></A>3. Other RFC 1766 codes</h2>
+<p>Other RFC 1766 language codes, such as "en" (English) and "en-us" (US
+        English) may be used, however the Ethnologue codes are identified as OLAC Best
+        Practice. </p>
+<h2>
+<A name="Languages for which codes are not assigned"></A>4. Languages for which codes are not assigned</h2>
+<p>The SIL Ethnologue only covers living and recently extinct languages,
+        and no language codes currently exist for ancient languages (e.g. Akkadian),
+        for proto-languages (e.g. Proto-Bantu) or more recent precursors of current
+        languages (e.g. Middle English). Until a coding system is devised, these
+        languages should be identified by their conventional name(s). </p>
+<h2>
+<A name="Mapping to unqualified Dublin Core"></A>5. Mapping to unqualified Dublin Core</h2>
+<p>An OLAC data provider should support a standardized method for
+        representing OLAC metadata in unqualified Dublin Core. For language
+        identifiers, the procedure is as follows: </p>
+<ol>
+<li>
+<p>Drop the language refinement of the subject element and prepend
+            "Language: " to the content.</p>
+</li>
+<li>
+<p>If there is an identifier but no content, look up the language
+            name using the controlled vocabulary server to get a human-readable string, and
+            make that the content.</p>
+</li>
+<li>
+<p>Drop the identifier attribute and append its value, parenthesized,
+            to the content.</p>
+</li>
+</ol>
+</body>
+<hr>
+<h2>
+<font color="red">To do</font>
+</h2>
+<font color="red">
+<p>Create an official controlled vocabulary server for the Ethnologue. </p>
+</font><a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="Country-Codes">Country-Codes</a>]</td><td>Table of Ethnologue Country
+      Codes<br>&lt;<a href="http://www.language-archives.org/data/countrycodes.tab">http://www.language-archives.org/data/countrycodes.tab</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="Ethnologue">Ethnologue</a>]</td><td>Ethnologue: Languages of the
+      World<br>&lt;<a href="http://www.sil.org/ethnologue/">http://www.sil.org/ethnologue/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="ISO-3166">ISO-3166</a>]</td><td>Codes for the representation of names of countries
+      and their subdivisions--Part 1: Country
+      codes<br>&lt;<a href="http://www.din.de/gremien/nas/nabd/iso3166ma/">http://www.din.de/gremien/nas/nabd/iso3166ma/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="ISO-639">ISO-639</a>]</td><td>Codes for the Representation of Names of
+      Languages-Part 2: Alpha-3
+      Code<br>&lt;<a href="http://lcweb.loc.gov/standards/iso639-2/langhome.html">http://lcweb.loc.gov/standards/iso639-2/langhome.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="LDC-Ethnologue">LDC-Ethnologue</a>]</td><td>LDC's Temporary Ethnologue Controlled
+      Vocabulary
+      Server<br>&lt;<a href="http://wave.ldc.upenn.edu/OLAC/ethnologue/form.php3">http://wave.ldc.upenn.edu/OLAC/ethnologue/form.php3</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="Language-Codes">Language-Codes</a>]</td><td>Table of Ethnologue Language
+      Codes<br>&lt;<a href="http://www.language-archives.org/data/languagecodes.tab">http://www.language-archives.org/data/languagecodes.tab</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-MS">OLAC-MS</a>]</td><td>OLAC Metadata
+      Set<br>&lt;<a href="http://www.language-archives.org/OLAC/olacms.html">http://www.language-archives.org/OLAC/olacms.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="RFC-1766">RFC-1766</a>]</td><td>Tags for the Identification of
+      Languages<br>&lt;<a href="http://www.ietf.org/rfc/rfc1766.txt">http://www.ietf.org/rfc/rfc1766.txt</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="RFC-3066">RFC-3066</a>]</td><td>Tags for the Identification of Languages (replaces
+      1766)<br>&lt;<a href="ftp://ftp.isi.edu/in-notes/rfc3066.txt">ftp://ftp.isi.edu/in-notes/rfc3066.txt</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="Simons-2000">Simons-2000</a>]</td><td>Language identification in metadata descriptions
+      of language archive
+      holdings<br>&lt;<a href="http://www.ldc.upenn.edu/exploration/expl2000/papers/simons/simons.htm">http://www.ldc.upenn.edu/exploration/expl2000/papers/simons/simons.htm</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

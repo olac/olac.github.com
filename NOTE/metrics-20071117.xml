@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="../OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "../OLAC_doc.dtd">
+<OLAC_doc>
+   <header>
+      <status code="draft" type="informational"/>
+      <title>OLAC Metadata Quality Metrics</title>
+      <baseName>metrics</baseName>
+      <issued>20071117</issued>
+      <previousIssued/>
+      <abstract>
+         <p>Explains the metrics that are implemented on the OLAC web site for evaluating the
+            quality of metadata records.</p>
+      </abstract>
+      <editors>Gary Simons, SIL International (<url>mailto:gary_simons@sil.org</url>)</editors>
+      <copyright>2007 Gary Simons (SIL International)</copyright>
+      <changes> </changes>
+   </header>
+   <body>
+      <section>
+         <heading>Introduction</heading>
+         <p>The vision of OLAC is that "any user on the Internet should be able to go to a single
+            gateway to find all the language resources available at all participating institutions"
+            (see vision statement in <cit>OLAC-Process</cit>). The ability of a user to discover any
+            relevant language resource is dependent on the quality of the metadata that describe
+            it. Ensuring quality through peer review is a core value that OLAC employs to achieve
+            its vision. "OLAC also conducts automated review based on peer consensus regarding best
+            practice" (see core value statements in <cit>OLAC-Process</cit>). </p>
+         <p>This note explains the automated system that is implemented on the OLAC web site for
+            evaluating the quality of metadata records. The peer consensus regarding best practice
+            is expressed in <cit>OLAC-BPR</cit> and further elucidated in <cit>OLAC-Usage</cit>. </p>
+
+      </section>
+      <section>
+         <heading>The quality score</heading>
+         <p>Many of the best practice recommendations for resource description cannot be
+            automatically checked for conformance; however, there are many that can be. As an aid to
+            creating descriptive metadata that meet the latter set of recommendations, OLAC has
+            implemented an automated metadata quality score. Each metadata record receives a score in the range
+            of 0 to 10 based on the presence or absence of recommended practices. In some contexts
+            the score is reported as a number in this range; in others it is summarized graphically
+            as a rating of 1 to 5 stars. That is, any score above 9 is reported as 5 stars, scores
+            in the range of 7 to 9 are reported as 4 stars, and so on.</p>
+         <p>The practices in focus for the evaluation of metadata quality 
+            are ones that contribute to resource discovery. The score has two
+            major parts: 50% is based on the metadata elements that are present and 50% is based on
+            the use of encoding schemes. The elements provide the breadth and depth of the
+            description, while the encoding schemes provide precision for interoperable searching. </p>
+         <p>The element part of the score consists of 4 points awarded for each of four basic
+            metadata elements that must be present to give the record minimal breadth of coverage,
+            plus a further point awarded for additional elements that add to the depth of
+            description. In the descriptions below, a non-empty metadata element is one that
+            supplies a value, whether through element content or through the <i>olac:code</i>
+            attribute. The element-based components of the score are awarded as follows:</p>
+         <dl>
+            <dt>Title</dt>
+            <dd>
+               <p>One point is awarded for the presence of a non-empty Tittle element. Absence of a
+                  title that is inherent to the resource does not block achieving this point, since
+                  in that case it is recommended best practice for the cataloger to supply a
+                  descriptive title enclosed in square brackets. </p>
+            </dd>
+            <dt>Date</dt>
+            <dd>
+               <p>One point is awarded for the presence of at least one non-empty Date element (or
+                  any of its refinements). Absence of a date in the resource itself does not block
+                  achieving this point, since in that case it is recommended best practice for the
+                  cataloger to supply an
+                  estimated date enclosed in square brackets. </p>
+            </dd>
+            <dt>Agent (Contributor, Creator, or Publisher)</dt>
+            <dd>
+               <p>One point is awarded for the presence of at least one non-empty element that
+                  provides an indication of who is behind the resource, whether as Contributor or
+                  Creator or Publisher.</p>
+            </dd>
+            <dt>About (Subject, Description, or Coverage)</dt>
+            <dd>
+               <p>One point is awarded for the presence of at least one non-empty element that
+                  provides an indication of what the resource is about, whether Subject or
+                  Description or Coverage (or any refinement of the latter two). </p>
+            </dd>
+            <dt>Depth</dt>
+            <dd>
+               <p>One-sixth point (up to a maximum of one point) is awarded for each element that is
+                  present in addition to the 8 that must be present in order to receive the 4 points
+                  above for basic elements and the 4 points that follow for basic encoding schemes.
+                  If the record has fewer than 8 elements, this part of the score is 0; otherwise,
+                  it is (total elements - 8) / 6 or 1, whichever is less.
+                  Note that in order to get the full score on this point, a record must contain at least
+                  14 elements. </p>
+            </dd>
+         </dl>
+         <p>The encoding scheme part of the score consists of 4 points awarded for each of four
+            basic element-plus-scheme pairs that must be present to support high recall and
+            precision in searches for language resources. A further point is awarded for additional
+            use of encoding schemes that add to the precision of resource description. The
+            scheme-based components of the score are awarded as follows:</p>
+
+         <dl>
+            <dt>Content Language</dt>
+            <dd>
+               <p>One point is awarded for the presence of at least one Language element that uses
+                  the <i>olac:ISO639-3</i> encoding scheme <cit>OLAC-Language</cit> to precisely identify the language of
+                  content of the resource. Absence of any natural language content in a resource
+                  (such as in a software tool) does not block achieving this point, since in that
+                  case it is recommended best practice is to use the ISO 639-3 code <tt>zxx</tt>
+                  meaning "No linguistic content." </p>
+            </dd>
+            <dt>Linguistic Type</dt>
+            <dd>
+               <p>One point is awarded for the presence of at least one Type element that uses the
+                  <i>olac:linguistic-type</i> encoding scheme <cit>OLAC-Linguistic-Type</cit> to precisely identify the type
+                  of the resource from a linguistic point of view. Such a metadata element is
+                  relevant to all OLAC records since the vocabulary includes a "not_applicable"
+                  value for items that are not an instance of one of the linguistic data types.</p>
+            </dd>
+            <dt>Subject Language</dt>
+            <dd>
+               <p>One point is awarded for appropriate use of the <i>olac:ISO639-3</i> encoding
+                  scheme <cit>OLAC-Language</cit> with the Subject element to precisely identify the language that the
+                  resource is about. The notion of subject language is not relevant to every
+                  language resource. When the linguistic type of a resource is "primary_text" or
+                  "not_applicable" it is not required to have a subject language, and this point is
+                  awarded automatically. Otherwise, there must be at least one Subject element using
+                  the <i>olac:ISO639-3</i> encoding scheme in order to earn the point. </p>
+            </dd>
+            <dt>DCMI Type</dt>
+            <dd>
+               <p>One point is awarded for the presence of at least one Type element that uses the
+                  <i>dcterms:DCMIType</i> encoding scheme <cit>DCMI-Type</cit>  to identify the generic type of the
+                  resource. The vocabulary is designed to be applicable to any resource and this is
+                  considered mandatory for OLAC metadata in order to support reliable searching for
+                  resources by type (such as audio recordings versus video recordings versus textual
+                  data versus software).</p>
+            </dd>
+            <dt>Precision</dt>
+            <dd>
+               <p>One-third point (up to a maximum of one point) is awarded for each additional
+                  encoding scheme that is used in the metadata record. Thus in order to earn full
+                  points, a record must use at least three encoding schemes in addition to <i>olac:ISO639-3</i>,
+                  <i>olac:linguistic-type</i>, and <i>dcterms:DCMIType</i>. </p>
+            </dd>
+         </dl>
+         <p>The free-standing metadata service <cit>OLAC-Free</cit> can be used to see what quality
+            score will be awarded to a given OLAC metadata record. The XML encoding of a record is
+            pasted into a submission form. The service then validates the record, and if it is valid, a
+            report of its quality score is generated with comments on what must be done to raise the
+            score to 10. The same quality analysis is shown for a sample record from each
+            participating archive by following the "Sample Record" link on the
+            <cit>OLAC-Archives</cit> page. </p>
+         <p>The average quality score for all the records provided by a given participating archive
+            can be seen by following the "Metrics" link on the <cit>OLAC-Archives</cit> page. The
+            metrics report also shows the breakdown across the collection of all the components that
+            go into the quality score.</p>
+      </section>
+      <section>
+         <heading>Other metrics</heading>
+         <p><i>Forthcoming.</i> When the metrics and comparative metrics pages are complete, explain other metrics here.</p>
+      </section>
+
+
+   </body>
+   <todo>
+      <p>Incorporate the Metadata Quality Advisor into the Freestanding Metadata Service.</p>
+      <p>Modify the Linguistic-Type extension to be relevant for all resources by including a "not
+         applicable" member.</p>
+      <p>The guard against empty elements should be built into the harvester so that elements having
+         neither element content nor an olac:code value should simply be ignored and not entered
+         into the aggregated database.</p>
+   </todo>
+   <references>
+      <ref abbrev="DCMI-Type">DCMI Type Vocabulary.
+            <br/>&lt;<url>http://dublincore.org/documents/dcmi-type-vocabulary/</url>&gt;</ref>
+
+      <ref abbrev="OLAC-Language">OLAC Language Extension.<br/>
+            &lt;<url>http://www.language-archives.org/REC/language.html</url>&gt;</ref>
+      <ref abbrev="OLAC-Archives">OLAC: Participating Archives (test version).<br/>
+            &lt;<url>http://www.language-archives.org/archives-new.php4</url>&gt;</ref>
+      <ref abbrev="OLAC-BPR">Best Practice Recommendations for Language Resource Description.<br/>
+            &lt;<url>http://www.language-archives.org/REC/bpr.html</url>&gt;</ref>
+      <ref abbrev="OLAC-Free">Free-standing OLAC Metadata.<br/>
+            &lt;<url>http://www.language-archives.org/tools/metadata/freestanding.html</url>&gt;</ref>
+      <ref abbrev="OLAC-Linguistic-Type">OLAC Linguistic Data Type Vocabulary.<br/>
+            &lt;<url>http://www.language-archives.org/REC/type.html</url>&gt;</ref>
+      <ref abbrev="OLAC-Process">OLAC Process, Section 2, "Governing ideas".<br/>
+            &lt;<url>http://www.language-archives.org/OLAC/process.html#Governing%20ideas</url>&gt;</ref>
+      <ref abbrev="OLAC-Usage">OLAC Metadata Usage Guidelines.<br/>
+            &lt;<url>http://www.language-archives.org/NOTE/usage.html</url>&gt;</ref>
+
+
+   </references>
+
+</OLAC_doc>

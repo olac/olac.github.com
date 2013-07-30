@@ -1,0 +1,1100 @@
+%-12345X@PJL JOB
+@PJL SET RESOLUTION = 600
+@PJL SET BITSPERPIXEL = 2
+@PJL SET ECONOMODE = OFF
+@PJL SET HOLDKEY = "0000"
+@PJL ENTER LANGUAGE = POSTSCRIPT 
+%!PS-Adobe-3.0
+%%Title: Microsoft PowerPoint - outreach
+%%Creator: Windows NT 4.0
+%%CreationDate: 17:19 12/13/2002
+%%Pages: (atend)
+%%BoundingBox: 13 13 599 779
+%%LanguageLevel: 2
+%%DocumentNeededFonts: (atend)
+%%DocumentSuppliedFonts: (atend)
+%%EndComments
+%%BeginProlog
+
+%%BeginResource: procset NTPSOct95
+/NTPSOct95 100 dict dup begin/bd{bind def}bind def/ld{load def}bd/ed{exch def}
+bd/a{currentpoint}bd/c/curveto ld/d/dup ld/e/eofill ld/f/fill ld/tr/translate
+ld/gr/grestore ld/gs/gsave ld/j/setlinejoin ld/L/lineto ld/M/moveto ld/n
+/newpath ld/cp/closepath ld/rm/rmoveto ld/sl/setlinewidth ld/sd/setdash ld/g
+/setgray ld/r/setrgbcolor ld/s/stroke ld/t/show ld/aw/awidthshow ld/im
+/imagemask ld/MS{moveto show}bd/SF{findfont exch scalefont setfont}bd/SM{cmtx
+setmatrix}bd/MF{findfont exch makefont setfont}bd/CM{/cmtx matrix currentmatrix
+def}bd/B{M exch dup 0 rlt exch 0 exch rlt neg 0 rlt}bd/CB{B cp eoclip}bd/EA{1
+index 0/G0 put 4 string 1 1 4 -1 roll{3 copy neg exch cvs dup 0 71 put cvn 3 -1
+roll exch put}for pop}bd/rlt/rlineto ld/L2?/languagelevel where{pop
+languagelevel 2 ge}{false}ifelse def end def 
+%%EndResource
+%%EndProlog
+%%BeginSetup
+[{0
+/languagelevel where{pop languagelevel 2 ge}{false}ifelse
+{1 dict dup/JobTimeout 4 -1 roll put setuserparams}
+{statusdict/setjobtimeout get exec}ifelse
+}stopped cleartomark
+[{120
+/languagelevel where{pop languagelevel 2 ge}{false}ifelse
+{1 dict dup/WaitTimeout 4 -1 roll put setuserparams}
+{statusdict/waittimeout 3 -1 roll put}ifelse
+}stopped cleartomark
+/#copies 1 def
+[{
+%%BeginFeature: *HPPaperPolicy PromptUser
+
+   <</DeferredMediaSelection true>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPHalftone PrinterDefault
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPCollate False
+<</Collate false>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Smoothing True
+
+  << /PostRenderingEnhance true /PostRenderingEnhanceDetails << /REValue 2 /Type 8 >>
+  >> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *PageSize Letter
+
+  <</PageSize [612 792] /ImagingBBox null>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Duplex None
+
+  <</Duplex false>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmTextAngle Deg45
+userdict /HPwmAngle 45 put
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmText None
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmFont HelveticaB
+
+  /Helvetica-Bold findfont dup length dict begin
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    /Encoding ISOLatin1Encoding def currentdict 
+  end
+  /HPwmFont exch definefont pop
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmLocation True
+userdict /HPwmLocation true put
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmTextStyle Medium
+userdict /HPwmStyle .48 put
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmFontSize pt48
+userdict /HPwmSize 48 put
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPNup OneUp
+
+% Copyright (c) Hewlett-Packard Co 1997
+  userdict begin
+  true setglobal /HPwm 5 dict dup begin /HPwmOn true def /HPwmOdd true def end def false setglobal
+
+  userdict /HPwmAngle known not {/HPwmAngle 45 def} if
+  userdict /HPwmSize known not {/HPwmSize 48 def} if
+  userdict /HPwmLocation known not {/HPwmLocation true def} if
+  userdict /HPwmStyle known not {/HPwmStyle .48 def} if
+  userdict /HPwmDuplex known not {/HPwmDuplex 0 def} if
+
+  /HPwmEOP {HPwmDuplex 0 eq {true}{HPwmDuplex 1 eq HPwmOdd eq dup not {erasepage}if
+    true setglobal /HPwmOdd HPwmOdd not def false setglobal}ifelse} bind def
+  end
+
+  <<
+  /EndPage {userdict begin
+  userdict /HPwmText known HPwm /HPwmOn get and
+    {initmatrix
+     0 setgray 1 setlinewidth true setstrokeadjust 0 setlinejoin 0 setlinecap [] 0 setdash
+     currentpagedevice /PageSize get aload pop 2 div exch 2 div exch translate
+     HPwmAngle rotate /HPwmFont userdict /HPppScale known {HPwmSize HPppScale mul}{HPwmSize}ifelse selectfont
+     HPwmText stringwidth 2 div neg exch 2 div neg exch
+       userdict /HPppScale known {HPwmSize HPppScale mul}{HPwmSize}ifelse .25 mul sub moveto
+     HPwmText false charpath userdict /HPwmStyle1 known
+       {gsave 1 setgray HPwmStyle1 HPwmStyle add setlinewidth stroke grestore} if
+     0 setgray HPwmStyle setlinewidth stroke
+     HPwmLocation not {true setglobal HPwm /HPwmOn false put false setglobal} if
+    } if
+    2 eq {pop false}{pop HPwm begin HPwmEOP end} ifelse
+    end } bind
+  >> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPScalePatterns Scale
+/GDIBWPatternDict 18 dict def
+/dtransform {GDIBWPatternDict /Width known {currentpagedevice /HWResolution get 0 get
+150 div mul exch currentpagedevice /HWResolution get 0 get 150 div mul exch dtransform}{dtransform}ifelse} bind def
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *OptionTrays 2Trays
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Option3 False
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Option4 False
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Option5 False
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *VMOption 8MB
+
+%%EndFeature
+} stopped cleartomark
+%%EndSetup
+NTPSOct95 begin
+%%Page: 1 1
+NTPSOct95 /PageSV save put
+13 779.762 translate 72 600 div dup neg scale
+0 0 transform .25 add round .25 sub exch .25 add round .25 sub exch itransform translate
+n
+4499 5999 194 194 B
+1 g
+f
+%%IncludeFont: Times-Roman
+[100 0 0 -100 0 0]/Times-Roman MF
+0 g
+(1)4583 6140 MS
+n
+1758 1319 551 794 B
+1 g
+f
+[134 0 0 -134 0 0]/Times-Roman MF
+0 g
+(O)1184 1394 MS (u)1281 1394 MS (t)1348 1394 MS (r)1385 1394 MS (e)1430 1394 MS (a)1490 1394 MS (c)1549 1394 MS (h)1609 1394 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+(J)1275 1627 MS (e)1306 1627 MS (f)1341 1627 MS (f)1367 1627 MS ( )1393 1627 MS (G)1413 1627 MS (o)1469 1627 MS (o)1508 1627 MS (d)1546 1627 MS
+(U)1225 1739 MS (C)1281 1739 MS ( )1333 1739 MS (B)1353 1739 MS (e)1405 1739 MS (r)1440 1739 MS (k)1466 1739 MS (e)1504 1739 MS (l)1539 1739 MS (e)1561 1739 MS (y)1598 1739 MS
+1 setlinecap
+8 sl
+gs
+n
+1760 1320 551 794 CB
+n
+1752 1312 555 798 B
+cp
+CM [1 0 0 1 551 794] concat
+s
+SM
+gr
+n
+1758 1319 2576 794 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(O)3130 1061 MS (L)3208 1061 MS (A)3274 1061 MS (C)3352 1061 MS (')3424 1061 MS (s)3443 1061 MS ( )3485 1061 MS (N)3511 1061 MS (e)3589 1061 MS (e)3637 1061 MS (d)3684 1061 MS (s)3738 1061 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+/IsChar{exch/CharStrings get exch known}bd/MapCh{3 -1 roll/Encoding get 3 1
+roll put}bd/MapDegree{dup 16#b0 exch/degree IsChar{/degree}{/ring}ifelse MapCh}
+bd/MapBB{dup 16#a6 exch/brokenbar IsChar{/brokenbar}{/bar}ifelse MapCh}bd
+/reencode{findfont begin currentdict dup length dict begin{1 index/FID ne{def}
+{pop pop}ifelse}forall/FontName exch def dup length 0 ne{/Encoding Encoding 256
+array copy def 0 exch{dup type/nametype eq{Encoding 2 index 2 index put pop 1
+add}{exch pop}ifelse}forall}if pop currentdict dup end end/FontName get exch
+definefont dup MapDegree MapBB}bd/LATENC[0/grave/acute/circumflex/tilde/macron
+/breve/dotaccent/dieresis/ring/cedilla/hungarumlaut/ogonek/caron/dotlessi/fi/fl
+/Lslash/lslash/Zcaron/zcaron/minus/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/space/exclam/quotedbl
+/numbersign/dollar/percent/ampersand/quotesingle/parenleft/parenright/asterisk
+/plus/comma/hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight
+/nine/colon/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M
+/N/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum
+/underscore/grave/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft
+/bar/braceright/asciitilde/.notdef/.notdef/.notdef/quotesinglbase/florin
+/quotedblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron
+/guilsinglleft/OE/.notdef/.notdef/.notdef/.notdef/quoteleft/quoteright
+/quotedblleft/quotedblright/bullet/endash/emdash/tilde/trademark/scaron
+/guilsinglright/oe/.notdef/.notdef/Ydieresis/.notdef/exclamdown/cent/sterling
+/currency/yen/brokenbar/section/dieresis/copyright/ordfeminine/guillemotleft
+/logicalnot/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown/Agrave/Aacute
+/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex
+/Edieresis/Igrave/Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute
+/Ocircumflex/Otilde/Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex
+/Udieresis/Yacute/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave/iacute
+/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis
+/divide/oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]def
+LATENC /_Times-Roman /Times-Roman reencode
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)2725 1260 MS
+(M)2791 1260 MS (a)2860 1260 MS (x)2895 1260 MS (i)2934 1260 MS (m)2956 1260 MS (a)3016 1260 MS (l)3051 1260 MS ( )3073 1260 MS (i)3093 1260 MS (n)3115 1260 MS (v)3154 1260 MS (o)3193 1260 MS (l)3231 1260 MS (v)3254 1260 MS (e)3292 1260 MS (m)3328 1260 MS
+(e)3388 1260 MS (n)3423 1260 MS (t)3462 1260 MS ( )3484 1260 MS (f)3504 1260 MS (r)3530 1260 MS (o)3556 1260 MS (m)3595 1260 MS ( )3655 1260 MS (t)3675 1260 MS (h)3697 1260 MS (e)3736 1260 MS ( )3771 1260 MS (w)3790 1260 MS (h)3846 1260 MS (o)3886 1260 MS
+(l)3924 1260 MS (e)3946 1260 MS ( )3981 1260 MS
+(c)2791 1354 MS (o)2826 1354 MS (m)2865 1354 MS (m)2926 1354 MS (u)2986 1354 MS (n)3025 1354 MS (i)3064 1354 MS (t)3086 1354 MS (y)3109 1354 MS
+[68 0 0 -68 0 0]/Times-Roman MF
+LATENC /_Times-Roman /Times-Roman reencode
+[68 0 0 -68 0 0]/_Times-Roman MF
+(\226)2813 1454 MS
+(T)2868 1454 MS (h)2910 1454 MS (e)2944 1454 MS ( )2973 1454 MS (m)2991 1454 MS (o)3044 1454 MS (r)3078 1454 MS (e)3102 1454 MS ( )3131 1454 MS (d)3148 1454 MS (a)3183 1454 MS (t)3213 1454 MS (a)3232 1454 MS ( )3262 1454 MS (p)3279 1454 MS (r)3313 1454 MS
+(o)3337 1454 MS (v)3371 1454 MS (i)3404 1454 MS (d)3424 1454 MS (e)3459 1454 MS (r)3488 1454 MS (s)3511 1454 MS ( )3537 1454 MS (i)3554 1454 MS (n)3574 1454 MS (v)3609 1454 MS (o)3643 1454 MS (l)3677 1454 MS (v)3696 1454 MS (e)3730 1454 MS (d)3760 1454 MS
+( )3794 1454 MS (t)3811 1454 MS (h)3830 1454 MS (e)3865 1454 MS ( )3894 1454 MS (m)3912 1454 MS (o)3965 1454 MS (r)3999 1454 MS (e)4023 1454 MS ( )4052 1454 MS
+(u)2868 1537 MS (s)2902 1537 MS (e)2929 1537 MS (f)2958 1537 MS (u)2982 1537 MS (l)3016 1537 MS ( )3034 1537 MS (t)3051 1537 MS (h)3070 1537 MS (e)3105 1537 MS ( )3135 1537 MS (s)3152 1537 MS (e)3179 1537 MS (r)3209 1537 MS (v)3233 1537 MS (i)3266 1537 MS
+(c)3285 1537 MS (e)3316 1537 MS (s)3346 1537 MS ( )3372 1537 MS (b)3389 1537 MS (e)3424 1537 MS (c)3454 1537 MS (o)3485 1537 MS (m)3519 1537 MS (e)3572 1537 MS
+(\226)2813 1635 MS
+(M)2868 1635 MS (o)2929 1635 MS (r)2962 1635 MS (e)2986 1635 MS ( )3015 1635 MS (d)3033 1635 MS (a)3067 1635 MS (t)3097 1635 MS (a)3116 1635 MS ( )3146 1635 MS (p)3163 1635 MS (r)3197 1635 MS (o)3221 1635 MS (v)3255 1635 MS (i)3289 1635 MS (d)3308 1635 MS
+(e)3343 1635 MS (r)3372 1635 MS (s)3396 1635 MS ( )3422 1635 MS (m)3440 1635 MS (e)3493 1635 MS (a)3522 1635 MS (n)3553 1635 MS ( )3587 1635 MS (m)3605 1635 MS (o)3658 1635 MS (r)3691 1635 MS (e)3715 1635 MS ( )3744 1635 MS (i)3761 1635 MS (n)3781 1635 MS
+(p)3815 1635 MS (u)3849 1635 MS (t)3884 1635 MS ( )3903 1635 MS (o)3920 1635 MS (n)3953 1635 MS ( )3988 1635 MS (h)4005 1635 MS (o)4040 1635 MS (w)4074 1635 MS ( )4123 1635 MS
+(t)2868 1717 MS (o)2887 1717 MS ( )2920 1717 MS (i)2937 1717 MS (m)2957 1717 MS (p)3010 1717 MS (r)3044 1717 MS (o)3068 1717 MS (v)3102 1717 MS (e)3136 1717 MS ( )3165 1717 MS (s)3183 1717 MS (t)3209 1717 MS (a)3228 1717 MS (n)3258 1717 MS (d)3293 1717 MS
+(a)3327 1717 MS (r)3357 1717 MS (d)3380 1717 MS (s)3415 1717 MS ( )3441 1717 MS (a)3458 1717 MS (n)3488 1717 MS (d)3522 1717 MS ( )3556 1717 MS (s)3574 1717 MS (e)3601 1717 MS (r)3630 1717 MS (v)3654 1717 MS (i)3687 1717 MS (c)3707 1717 MS (e)3738 1717 MS
+(s)3767 1717 MS
+gs
+n
+1760 1320 2576 794 CB
+n
+1752 1312 2580 798 B
+cp
+CM [1 0 0 1 2576 794] concat
+s
+SM
+gr
+n
+1758 1318 551 2534 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(T)897 2801 MS (h)963 2801 MS (e)1017 2801 MS ( )1065 2801 MS (a)1092 2801 MS (v)1139 2801 MS (e)1193 2801 MS (r)1241 2801 MS (a)1277 2801 MS (g)1324 2801 MS (e)1378 2801 MS ( )1426 2801 MS (u)1453 2801 MS (s)1507 2801 MS (e)1548 2801 MS (r)1596 2801 MS
+(')1632 2801 MS (s)1651 2801 MS ( )1693 2801 MS (n)1720 2801 MS (e)1773 2801 MS (e)1821 2801 MS (d)1868 2801 MS (s)1922 2801 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+LATENC /_Times-Roman /Times-Roman reencode
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)700 3000 MS
+(D)766 3000 MS (o)823 3000 MS (c)861 3000 MS (u)896 3000 MS (m)935 3000 MS (e)995 3000 MS (n)1030 3000 MS (t)1069 3000 MS (s)1092 3000 MS ( )1122 3000 MS (m)1142 3000 MS (a)1202 3000 MS (k)1238 3000 MS (i)1276 3000 MS (n)1298 3000 MS (g)1338 3000 MS
+( )1376 3000 MS (m)1396 3000 MS (i)1456 3000 MS (n)1478 3000 MS (i)1517 3000 MS (m)1539 3000 MS (a)1599 3000 MS (l)1634 3000 MS ( )1656 3000 MS (u)1676 3000 MS (s)1715 3000 MS (e)1745 3000 MS ( )1781 3000 MS (o)1801 3000 MS (f)1839 3000 MS ( )1865 3000 MS
+(t)766 3094 MS (e)788 3094 MS (c)823 3094 MS (h)858 3094 MS (n)897 3094 MS (i)936 3094 MS (c)958 3094 MS (a)993 3094 MS (l)1028 3094 MS ( )1049 3094 MS (v)1069 3094 MS (o)1107 3094 MS (c)1145 3094 MS (a)1180 3094 MS (b)1215 3094 MS (u)1254 3094 MS
+(l)1293 3094 MS (a)1315 3094 MS (r)1350 3094 MS (y)1378 3094 MS
+(\225)700 3206 MS
+(S)766 3206 MS (e)809 3206 MS (r)844 3206 MS (v)870 3206 MS (i)908 3206 MS (c)930 3206 MS (e)965 3206 MS (s)1000 3206 MS ( )1030 3206 MS (m)1051 3206 MS (a)1111 3206 MS (k)1147 3206 MS (i)1185 3206 MS (n)1207 3206 MS (g)1246 3206 MS ( )1284 3206 MS
+(O)1305 3206 MS (L)1362 3206 MS (A)1409 3206 MS (C)1465 3206 MS ( )1517 3206 MS (p)1537 3206 MS (a)1576 3206 MS (r)1611 3206 MS (t)1637 3206 MS (i)1659 3206 MS (c)1681 3206 MS (i)1716 3206 MS (p)1738 3206 MS (a)1776 3206 MS (t)1811 3206 MS (i)1833 3206 MS
+(o)1855 3206 MS (n)1893 3206 MS ( )1932 3206 MS
+(s)766 3300 MS (t)796 3300 MS (r)818 3300 MS (a)844 3300 MS (i)879 3300 MS (g)901 3300 MS (h)939 3300 MS (t)978 3300 MS (f)1000 3300 MS (o)1027 3300 MS (r)1065 3300 MS (w)1091 3300 MS (a)1147 3300 MS (r)1182 3300 MS (d)1208 3300 MS
+(\225)700 3412 MS
+(A)766 3412 MS ( )822 3412 MS (c)842 3412 MS (e)877 3412 MS (n)912 3412 MS (t)951 3412 MS (r)973 3412 MS (a)999 3412 MS (l)1034 3412 MS ( )1056 3412 MS (l)1075 3412 MS (o)1097 3412 MS (c)1135 3412 MS (a)1170 3412 MS (t)1205 3412 MS (i)1227 3412 MS
+(o)1249 3412 MS (n)1287 3412 MS ( )1326 3412 MS (t)1346 3412 MS (o)1368 3412 MS ( )1406 3412 MS (a)1426 3412 MS (c)1461 3412 MS (c)1496 3412 MS (e)1531 3412 MS (s)1566 3412 MS (s)1596 3412 MS ( )1626 3412 MS (a)1646 3412 MS (l)1681 3412 MS (l)1703 3412 MS
+( )1725 3412 MS (O)1744 3412 MS (L)1801 3412 MS (A)1848 3412 MS (C)1904 3412 MS ( )1956 3412 MS
+(s)766 3506 MS (e)796 3506 MS (r)831 3506 MS (v)857 3506 MS (i)895 3506 MS (c)917 3506 MS (e)952 3506 MS (s)987 3506 MS
+gs
+n
+1760 1319 551 2534 CB
+n
+1752 1311 555 2538 B
+cp
+CM [1 0 0 1 551 2534] concat
+s
+SM
+gr
+n
+1758 1318 2576 2534 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(I)2866 2736 MS (m)2902 2736 MS (p)2985 2736 MS (e)3039 2736 MS (d)3087 2736 MS (i)3141 2736 MS (m)3171 2736 MS (e)3254 2736 MS (n)3302 2736 MS (t)3356 2736 MS (s)3386 2736 MS ( )3428 2736 MS (f)3454 2736 MS (r)3491 2736 MS (o)3527 2736 MS (m)3581 2736 MS
+( )3664 2736 MS (O)3691 2736 MS (L)3769 2736 MS (A)3834 2736 MS (C)3912 2736 MS (')3984 2736 MS (s)4003 2736 MS ( )4045 2736 MS
+(p)3210 2865 MS (e)3264 2865 MS (r)3312 2865 MS (s)3348 2865 MS (p)3390 2865 MS (e)3443 2865 MS (c)3491 2865 MS (t)3539 2865 MS (i)3569 2865 MS (v)3599 2865 MS (e)3652 2865 MS
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)2725 3000 MS
+(O)2791 3000 MS (l)2847 3000 MS (d)2869 3000 MS ( )2908 3000 MS (h)2928 3000 MS (a)2967 3000 MS (b)3002 3000 MS (i)3041 3000 MS (t)3063 3000 MS (s)3085 3000 MS
+(\225)2725 3112 MS
+(L)2791 3112 MS (a)2837 3112 MS (c)2872 3112 MS (k)2908 3112 MS ( )2946 3112 MS (o)2967 3112 MS (f)3005 3112 MS ( )3031 3112 MS (a)3051 3112 MS (w)3086 3112 MS (a)3142 3112 MS (r)3177 3112 MS (e)3203 3112 MS (n)3238 3112 MS (e)3277 3112 MS (s)3312 3112 MS
+(s)3343 3112 MS ( )3373 3112 MS (o)3393 3112 MS (f)3431 3112 MS ( )3457 3112 MS (t)3477 3112 MS (h)3499 3112 MS (e)3538 3112 MS ( )3573 3112 MS (b)3593 3112 MS (a)3632 3112 MS (s)3667 3112 MS (i)3697 3112 MS (c)3719 3112 MS ( )3754 3112 MS (i)3774 3112 MS
+(s)3795 3112 MS (s)3825 3112 MS (u)3855 3112 MS (e)3894 3112 MS (s)3930 3112 MS
+(\225)2725 3225 MS
+(I)2791 3225 MS (d)2816 3225 MS (e)2855 3225 MS (a)2890 3225 MS ( )2925 3225 MS (t)2945 3225 MS (h)2967 3225 MS (a)3006 3225 MS (t)3041 3225 MS ( )3063 3225 MS (i)3083 3225 MS (t)3105 3225 MS ( )3126 3225 MS (i)3146 3225 MS (s)3168 3225 MS ( )3198 3225 MS
+(")3218 3225 MS (s)3250 3225 MS (o)3280 3225 MS (m)3318 3225 MS (e)3378 3225 MS (o)3414 3225 MS (n)3453 3225 MS (e)3492 3225 MS ( )3527 3225 MS (e)3547 3225 MS (l)3582 3225 MS (s)3604 3225 MS (e)3634 3225 MS (')3669 3225 MS (s)3682 3225 MS ( )3712 3225 MS
+(p)3732 3225 MS (r)3771 3225 MS (o)3798 3225 MS (b)3836 3225 MS (l)3875 3225 MS (e)3897 3225 MS (m)3933 3225 MS (")3993 3225 MS
+gs
+n
+1760 1319 2576 2534 CB
+n
+1752 1311 2580 2538 B
+cp
+CM [1 0 0 1 2576 2534] concat
+s
+SM
+gr
+n
+1758 1319 551 4273 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(I)898 4475 MS (m)934 4475 MS (p)1017 4475 MS (e)1071 4475 MS (d)1119 4475 MS (i)1173 4475 MS (m)1203 4475 MS (e)1286 4475 MS (n)1334 4475 MS (t)1388 4475 MS (s)1418 4475 MS ( )1460 4475 MS (f)1486 4475 MS (r)1523 4475 MS (o)1559 4475 MS (m)1613 4475 MS
+( )1696 4475 MS (u)1723 4475 MS (s)1777 4475 MS (e)1819 4475 MS (r)1866 4475 MS (')1902 4475 MS (s)1921 4475 MS ( )1963 4475 MS
+(p)1185 4604 MS (e)1239 4604 MS (r)1287 4604 MS (s)1323 4604 MS (p)1365 4604 MS (e)1418 4604 MS (c)1466 4604 MS (t)1514 4604 MS (i)1544 4604 MS (v)1574 4604 MS (e)1627 4604 MS
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)700 4739 MS
+(T)766 4739 MS (e)813 4739 MS (c)848 4739 MS (h)883 4739 MS (n)922 4739 MS (i)961 4739 MS (c)983 4739 MS (a)1018 4739 MS (l)1053 4739 MS ( )1075 4739 MS (i)1095 4739 MS (s)1117 4739 MS (s)1147 4739 MS (u)1177 4739 MS (e)1216 4739 MS (s)1251 4739 MS
+( )1281 4739 MS (n)1301 4739 MS (o)1340 4739 MS (t)1378 4739 MS ( )1400 4739 MS (d)1420 4739 MS (i)1459 4739 MS (r)1481 4739 MS (e)1507 4739 MS (c)1542 4739 MS (t)1577 4739 MS (l)1599 4739 MS (y)1622 4739 MS ( )1658 4739 MS (r)1678 4739 MS (e)1704 4739 MS
+(l)1739 4739 MS (a)1761 4739 MS (t)1796 4739 MS (e)1818 4739 MS (d)1853 4739 MS ( )1892 4739 MS (t)1912 4739 MS (o)1934 4739 MS ( )1972 4739 MS
+(l)766 4833 MS (i)788 4833 MS (n)810 4833 MS (g)849 4833 MS (u)887 4833 MS (i)926 4833 MS (s)948 4833 MS (t)978 4833 MS (i)1000 4833 MS (c)1022 4833 MS (s)1057 4833 MS ( )1087 4833 MS (\()1107 4833 MS (o)1133 4833 MS (r)1171 4833 MS ( )1197 4833 MS
+(o)1218 4833 MS (t)1256 4833 MS (h)1278 4833 MS (e)1317 4833 MS (r)1352 4833 MS ( )1378 4833 MS (f)1398 4833 MS (i)1424 4833 MS (e)1446 4833 MS (l)1481 4833 MS (d)1503 4833 MS (s)1542 4833 MS ( )1572 4833 MS (o)1592 4833 MS (f)1630 4833 MS ( )1656 4833 MS
+(s)1676 4833 MS (t)1706 4833 MS (u)1728 4833 MS (d)1768 4833 MS (y)1808 4833 MS (\))1845 4833 MS
+(\225)700 4945 MS
+(T)766 4945 MS (i)813 4945 MS (m)835 4945 MS (e)895 4945 MS ( )930 4945 MS (a)950 4945 MS (n)985 4945 MS (d)1024 4945 MS ( )1063 4945 MS (w)1083 4945 MS (o)1140 4945 MS (r)1178 4945 MS (k)1205 4945 MS ( )1243 4945 MS (i)1263 4945 MS (n)1285 4945 MS
+(v)1324 4945 MS (o)1363 4945 MS (l)1401 4945 MS (v)1424 4945 MS (e)1462 4945 MS (d)1497 4945 MS
+gs
+n
+1760 1320 551 4273 CB
+n
+1752 1312 555 4277 B
+cp
+CM [1 0 0 1 551 4273] concat
+s
+SM
+gr
+n
+1758 1319 2576 4273 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(T)2837 4862 MS (h)2903 4862 MS (e)2957 4862 MS ( )3005 4862 MS (c)3032 4862 MS (u)3079 4862 MS (r)3133 4862 MS (r)3169 4862 MS (e)3205 4862 MS (n)3252 4862 MS (t)3306 4862 MS ( )3336 4862 MS (s)3363 4862 MS (t)3405 4862 MS (a)3435 4862 MS (t)3483 4862 MS
+(e)3512 4862 MS ( )3560 4862 MS (o)3587 4862 MS (f)3640 4862 MS ( )3677 4862 MS (o)3703 4862 MS (u)3757 4862 MS (t)3811 4862 MS (r)3840 4862 MS (e)3876 4862 MS (a)3924 4862 MS (c)3972 4862 MS (h)4020 4862 MS
+gs
+n
+1760 1320 2576 4273 CB
+n
+1752 1312 2580 4277 B
+cp
+CM [1 0 0 1 2576 4273] concat
+s
+SM
+gr
+showpage
+%%Page: 2 2
+13 779.762 translate 72 600 div dup neg scale
+0 0 transform .25 add round .25 sub exch .25 add round .25 sub exch itransform translate
+n
+4499 5999 194 194 B
+1 g
+f
+[100 0 0 -100 0 0]/Times-Roman MF
+0 g
+(2)4583 6140 MS
+n
+1758 1319 551 794 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(O)1105 1061 MS (L)1183 1061 MS (A)1249 1061 MS (C)1327 1061 MS (')1399 1061 MS (s)1418 1061 MS ( )1460 1061 MS (N)1486 1061 MS (e)1564 1061 MS (e)1612 1061 MS (d)1659 1061 MS (s)1713 1061 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+/IsChar{exch/CharStrings get exch known}bd/MapCh{3 -1 roll/Encoding get 3 1
+roll put}bd/MapDegree{dup 16#b0 exch/degree IsChar{/degree}{/ring}ifelse MapCh}
+bd/MapBB{dup 16#a6 exch/brokenbar IsChar{/brokenbar}{/bar}ifelse MapCh}bd
+/reencode{findfont begin currentdict dup length dict begin{1 index/FID ne{def}
+{pop pop}ifelse}forall/FontName exch def dup length 0 ne{/Encoding Encoding 256
+array copy def 0 exch{dup type/nametype eq{Encoding 2 index 2 index put pop 1
+add}{exch pop}ifelse}forall}if pop currentdict dup end end/FontName get exch
+definefont dup MapDegree MapBB}bd/LATENC[0/grave/acute/circumflex/tilde/macron
+/breve/dotaccent/dieresis/ring/cedilla/hungarumlaut/ogonek/caron/dotlessi/fi/fl
+/Lslash/lslash/Zcaron/zcaron/minus/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/space/exclam/quotedbl
+/numbersign/dollar/percent/ampersand/quotesingle/parenleft/parenright/asterisk
+/plus/comma/hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight
+/nine/colon/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M
+/N/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum
+/underscore/grave/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft
+/bar/braceright/asciitilde/.notdef/.notdef/.notdef/quotesinglbase/florin
+/quotedblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron
+/guilsinglleft/OE/.notdef/.notdef/.notdef/.notdef/quoteleft/quoteright
+/quotedblleft/quotedblright/bullet/endash/emdash/tilde/trademark/scaron
+/guilsinglright/oe/.notdef/.notdef/Ydieresis/.notdef/exclamdown/cent/sterling
+/currency/yen/brokenbar/section/dieresis/copyright/ordfeminine/guillemotleft
+/logicalnot/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown/Agrave/Aacute
+/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex
+/Edieresis/Igrave/Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute
+/Ocircumflex/Otilde/Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex
+/Udieresis/Yacute/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave/iacute
+/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis
+/divide/oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]def
+LATENC /_Times-Roman /Times-Roman reencode
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)700 1260 MS
+(M)766 1260 MS (a)835 1260 MS (x)870 1260 MS (i)909 1260 MS (m)931 1260 MS (a)991 1260 MS (l)1026 1260 MS ( )1048 1260 MS (i)1068 1260 MS (n)1090 1260 MS (v)1129 1260 MS (o)1168 1260 MS (l)1206 1260 MS (v)1229 1260 MS (e)1267 1260 MS (m)1303 1260 MS
+(e)1363 1260 MS (n)1398 1260 MS (t)1437 1260 MS ( )1459 1260 MS (f)1479 1260 MS (r)1505 1260 MS (o)1531 1260 MS (m)1570 1260 MS ( )1630 1260 MS (t)1650 1260 MS (h)1672 1260 MS (e)1711 1260 MS ( )1746 1260 MS (w)1765 1260 MS (h)1821 1260 MS (o)1861 1260 MS
+(l)1899 1260 MS (e)1921 1260 MS ( )1956 1260 MS
+(c)766 1354 MS (o)801 1354 MS (m)840 1354 MS (m)901 1354 MS (u)961 1354 MS (n)1000 1354 MS (i)1039 1354 MS (t)1061 1354 MS (y)1084 1354 MS
+(\225)700 1466 MS
+(A)766 1466 MS (r)822 1466 MS (c)848 1466 MS (h)883 1466 MS (i)922 1466 MS (v)944 1466 MS (e)982 1466 MS (s)1018 1466 MS ( )1048 1466 MS (h)1068 1466 MS (a)1107 1466 MS (v)1142 1466 MS (e)1180 1466 MS ( )1215 1466 MS (l)1235 1466 MS (a)1257 1466 MS
+(r)1292 1466 MS (g)1318 1466 MS (e)1356 1466 MS (l)1391 1466 MS (y)1415 1466 MS ( )1451 1466 MS (b)1472 1466 MS (e)1511 1466 MS (e)1546 1466 MS (n)1581 1466 MS ( )1620 1466 MS (s)1640 1466 MS (e)1670 1466 MS (l)1705 1466 MS (f)1727 1466 MS
+(-)1753 1466 MS
+(s)1779 1466 MS (e)1809 1466 MS (l)1844 1466 MS (e)1866 1466 MS (c)1901 1466 MS (t)1936 1466 MS (i)1958 1466 MS (n)1980 1466 MS (g)2019 1466 MS (,)2057 1466 MS ( )2077 1466 MS
+(e)766 1560 MS (i)801 1560 MS (t)823 1560 MS (h)845 1560 MS (e)884 1560 MS (r)919 1560 MS ( )945 1560 MS (b)965 1560 MS (y)1005 1560 MS ( )1041 1560 MS (d)1061 1560 MS (i)1100 1560 MS (r)1122 1560 MS (e)1148 1560 MS (c)1183 1560 MS (t)1218 1560 MS
+( )1240 1560 MS (i)1260 1560 MS (n)1282 1560 MS (v)1321 1560 MS (o)1359 1560 MS (l)1397 1560 MS (v)1420 1560 MS (e)1458 1560 MS (m)1494 1560 MS (e)1554 1560 MS (n)1589 1560 MS (t)1628 1560 MS ( )1650 1560 MS (w)1670 1560 MS (i)1726 1560 MS (t)1748 1560 MS
+(h)1770 1560 MS ( )1809 1560 MS (O)1829 1560 MS (L)1886 1560 MS (A)1932 1560 MS (C)1989 1560 MS ( )2041 1560 MS (o)2061 1560 MS (r)2099 1560 MS ( )2125 1560 MS
+(b)766 1654 MS (y)806 1654 MS ( )843 1654 MS (a)863 1654 MS (l)898 1654 MS (r)920 1654 MS (e)946 1654 MS (a)981 1654 MS (d)1016 1654 MS (y)1056 1654 MS ( )1093 1654 MS (m)1114 1654 MS (a)1174 1654 MS (k)1209 1654 MS (i)1247 1654 MS (n)1269 1654 MS
+(g)1309 1654 MS ( )1347 1654 MS (s)1367 1654 MS (o)1398 1654 MS (m)1437 1654 MS (e)1497 1654 MS ( )1532 1654 MS (s)1552 1654 MS (o)1583 1654 MS (r)1621 1654 MS (t)1647 1654 MS ( )1669 1654 MS (o)1690 1654 MS (f)1728 1654 MS ( )1754 1654 MS (m)1774 1654 MS
+(e)1834 1654 MS (t)1869 1654 MS (a)1891 1654 MS (d)1926 1654 MS (a)1965 1654 MS (t)2000 1654 MS (a)2022 1654 MS ( )2057 1654 MS
+(a)766 1748 MS (v)801 1748 MS (a)839 1748 MS (i)874 1748 MS (l)896 1748 MS (a)918 1748 MS (b)953 1748 MS (l)992 1748 MS (e)1014 1748 MS
+1 setlinecap
+8 sl
+gs
+n
+1760 1320 551 794 CB
+n
+1752 1312 555 798 B
+cp
+CM [1 0 0 1 551 794] concat
+s
+SM
+gr
+n
+1758 1319 2576 794 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(T)2922 1061 MS (h)2988 1061 MS (e)3042 1061 MS ( )3090 1061 MS (a)3117 1061 MS (v)3164 1061 MS (e)3218 1061 MS (r)3266 1061 MS (a)3302 1061 MS (g)3349 1061 MS (e)3403 1061 MS ( )3451 1061 MS (u)3478 1061 MS (s)3532 1061 MS (e)3573 1061 MS (r)3621 1061 MS
+(')3657 1061 MS (s)3676 1061 MS ( )3718 1061 MS (n)3745 1061 MS (e)3798 1061 MS (e)3846 1061 MS (d)3893 1061 MS (s)3947 1061 MS
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)2725 1260 MS
+(D)2791 1260 MS (o)2848 1260 MS (c)2886 1260 MS (u)2921 1260 MS (m)2960 1260 MS (e)3020 1260 MS (n)3055 1260 MS (t)3094 1260 MS (s)3117 1260 MS ( )3147 1260 MS (m)3167 1260 MS (a)3227 1260 MS (k)3263 1260 MS (i)3301 1260 MS (n)3323 1260 MS (g)3363 1260 MS
+( )3401 1260 MS (m)3421 1260 MS (i)3481 1260 MS (n)3503 1260 MS (i)3542 1260 MS (m)3564 1260 MS (a)3624 1260 MS (l)3659 1260 MS ( )3681 1260 MS (u)3701 1260 MS (s)3740 1260 MS (e)3770 1260 MS ( )3806 1260 MS (o)3826 1260 MS (f)3864 1260 MS ( )3890 1260 MS
+(t)2791 1354 MS (e)2813 1354 MS (c)2848 1354 MS (h)2883 1354 MS (n)2922 1354 MS (i)2961 1354 MS (c)2983 1354 MS (a)3018 1354 MS (l)3053 1354 MS ( )3074 1354 MS (v)3094 1354 MS (o)3132 1354 MS (c)3170 1354 MS (a)3205 1354 MS (b)3240 1354 MS (u)3279 1354 MS
+(l)3318 1354 MS (a)3340 1354 MS (r)3375 1354 MS (y)3403 1354 MS
+(\225)2725 1466 MS
+(")2791 1466 MS (A)2823 1466 MS ( )2879 1466 MS (g)2899 1466 MS (e)2937 1466 MS (n)2972 1466 MS (t)3011 1466 MS (l)3033 1466 MS (e)3055 1466 MS ( )3090 1466 MS (i)3110 1466 MS (n)3132 1466 MS (t)3171 1466 MS (r)3193 1466 MS (o)3219 1466 MS (d)3257 1466 MS
+(u)3296 1466 MS (c)3335 1466 MS (t)3370 1466 MS (i)3392 1466 MS (o)3414 1466 MS (n)3452 1466 MS ( )3491 1466 MS (t)3511 1466 MS (o)3534 1466 MS ( )3572 1466 MS (m)3592 1466 MS (e)3652 1466 MS (t)3687 1466 MS (a)3709 1466 MS (d)3744 1466 MS (a)3783 1466 MS
+(t)3818 1466 MS (a)3840 1466 MS (")3875 1466 MS
+gs
+n
+1760 1320 2576 794 CB
+n
+1752 1312 2580 798 B
+cp
+CM [1 0 0 1 2576 794] concat
+s
+SM
+gr
+n
+1758 1318 551 2534 B
+1 g
+f
+[68 0 0 -68 0 0]/Times-Roman MF
+0 g
+(A)710 2786 MS (s)759 2786 MS (i)785 2786 MS (d)804 2786 MS (e)839 2786 MS (:)869 2786 MS ( )888 2786 MS (A)906 2786 MS ( )954 2786 MS (g)972 2786 MS (e)1006 2786 MS (n)1036 2786 MS (t)1070 2786 MS (l)1090 2786 MS (e)1109 2786 MS ( )1138 2786 MS
+(i)1155 2786 MS (n)1174 2786 MS (t)1208 2786 MS (r)1227 2786 MS (o)1251 2786 MS (d)1285 2786 MS (u)1319 2786 MS (c)1353 2786 MS (t)1383 2786 MS (i)1402 2786 MS (o)1422 2786 MS (n)1455 2786 MS ( )1489 2786 MS (t)1506 2786 MS (o)1526 2786 MS ( )1560 2786 MS
+(X)1577 2786 MS (M)1627 2786 MS (L)1688 2786 MS ( )1730 2786 MS (\()1747 2786 MS (f)1770 2786 MS (r)1794 2786 MS (o)1817 2786 MS (m)1850 2786 MS ( )1902 2786 MS (t)1919 2786 MS (h)1939 2786 MS (e)1974 2786 MS ( )2003 2786 MS (T)2020 2786 MS (E)2062 2786 MS
+(I)2105 2786 MS (\))2127 2786 MS
+[56 0 0 -56 0 0]/Times-Roman MF
+(X)715 2916 MS (M)755 2916 MS (L)806 2916 MS ( )839 2916 MS (i)854 2916 MS (s)869 2916 MS ( )891 2916 MS (a)905 2916 MS (n)930 2916 MS ( )958 2916 MS (e)972 2916 MS (x)997 2916 MS (t)1025 2916 MS (e)1041 2916 MS (n)1066 2916 MS (s)1094 2916 MS
+(i)1116 2916 MS (b)1131 2916 MS (l)1160 2916 MS (e)1175 2916 MS ( )1200 2916 MS (m)1215 2916 MS (a)1258 2916 MS (r)1283 2916 MS (k)1303 2916 MS (u)1330 2916 MS (p)1358 2916 MS ( )1386 2916 MS (l)1401 2916 MS (a)1416 2916 MS (n)1441 2916 MS (g)1470 2916 MS
+(u)1497 2916 MS (a)1525 2916 MS (g)1551 2916 MS (e)1578 2916 MS ( )1603 2916 MS (u)1617 2916 MS (s)1645 2916 MS (e)1667 2916 MS (d)1692 2916 MS ( )1721 2916 MS (f)1736 2916 MS (o)1755 2916 MS (r)1783 2916 MS ( )1802 2916 MS (t)1816 2916 MS (h)1832 2916 MS
+(e)1860 2916 MS ( )1885 2916 MS
+(d)715 2984 MS (e)743 2984 MS (s)768 2984 MS (c)790 2984 MS (r)815 2984 MS (i)834 2984 MS (p)849 2984 MS (t)877 2984 MS (i)893 2984 MS (o)908 2984 MS (n)936 2984 MS ( )964 2984 MS (o)978 2984 MS (f)1006 2984 MS ( )1025 2984 MS (m)1039 2984 MS
+(a)1083 2984 MS (r)1108 2984 MS (k)1127 2984 MS (e)1154 2984 MS (d)1179 2984 MS
+(-)1208 2984 MS
+(u)1226 2984 MS (p)1254 2984 MS ( )1282 2984 MS (e)1296 2984 MS (l)1322 2984 MS (e)1337 2984 MS (c)1362 2984 MS (t)1387 2984 MS (r)1403 2984 MS (o)1422 2984 MS (n)1450 2984 MS (i)1478 2984 MS (c)1493 2984 MS ( )1518 2984 MS (t)1532 2984 MS (e)1548 2984 MS
+(x)1573 2984 MS (t)1601 2984 MS (.)1617 2984 MS ( )1631 2984 MS (M)1645 2984 MS (o)1695 2984 MS (r)1724 2984 MS (e)1743 2984 MS ( )1768 2984 MS (e)1782 2984 MS (x)1807 2984 MS (a)1835 2984 MS (c)1860 2984 MS (t)1885 2984 MS (l)1901 2984 MS (y)1916 2984 MS
+(,)1943 2984 MS ( )1957 2984 MS (X)1972 2984 MS (M)2012 2984 MS (L)2063 2984 MS ( )2096 2984 MS
+(i)715 3051 MS (s)730 3051 MS ( )752 3051 MS (a)766 3051 MS ( )791 3051 MS
+%%IncludeFont: Times-Italic
+[56 0 0 -56 0 0]/Times-Italic MF
+(m)805 3051 MS (e)845 3051 MS (t)870 3051 MS (a)886 3051 MS (l)914 3051 MS (a)930 3051 MS (n)958 3051 MS (g)986 3051 MS (u)1014 3051 MS (a)1042 3051 MS (g)1070 3051 MS (e)1098 3051 MS
+[56 0 0 -56 0 0]/Times-Roman MF
+(,)1123 3051 MS ( )1138 3051 MS (t)1152 3051 MS (h)1168 3051 MS (a)1196 3051 MS (t)1221 3051 MS ( )1237 3051 MS (i)1251 3051 MS (s)1266 3051 MS (,)1288 3051 MS ( )1302 3051 MS (a)1316 3051 MS ( )1341 3051 MS (m)1355 3051 MS (e)1398 3051 MS (a)1424 3051 MS
+(n)1449 3051 MS (s)1477 3051 MS ( )1499 3051 MS (o)1513 3051 MS (f)1541 3051 MS ( )1560 3051 MS (f)1574 3051 MS (o)1593 3051 MS (r)1621 3051 MS (m)1640 3051 MS (a)1683 3051 MS (l)1708 3051 MS (l)1724 3051 MS (y)1740 3051 MS ( )1767 3051 MS (d)1781 3051 MS
+(e)1809 3051 MS (s)1834 3051 MS (c)1856 3051 MS (r)1881 3051 MS (i)1900 3051 MS (b)1915 3051 MS (i)1944 3051 MS (n)1959 3051 MS (g)1988 3051 MS ( )2015 3051 MS (a)2029 3051 MS ( )2054 3051 MS
+(l)715 3119 MS (a)730 3119 MS (n)755 3119 MS (g)784 3119 MS (u)811 3119 MS (a)839 3119 MS (g)865 3119 MS (e)892 3119 MS (,)917 3119 MS ( )931 3119 MS (i)946 3119 MS (n)961 3119 MS ( )989 3119 MS (t)1003 3119 MS (h)1019 3119 MS (i)1047 3119 MS
+(s)1062 3119 MS ( )1084 3119 MS (c)1098 3119 MS (a)1123 3119 MS (s)1148 3119 MS (e)1171 3119 MS (,)1196 3119 MS ( )1210 3119 MS (a)1224 3119 MS ( )1249 3119 MS
+[56 0 0 -56 0 0]/Times-Italic MF
+(m)1263 3119 MS (a)1304 3119 MS (r)1332 3119 MS (k)1354 3119 MS (u)1379 3119 MS (p)1407 3119 MS
+[56 0 0 -56 0 0]/Times-Roman MF
+(l)1449 3119 MS (a)1464 3119 MS (n)1490 3119 MS (g)1519 3119 MS (u)1546 3119 MS (a)1574 3119 MS (g)1600 3119 MS (e)1627 3119 MS (.)1652 3119 MS ( )1666 3119 MS (H)1681 3119 MS (i)1721 3119 MS (s)1737 3119 MS (t)1759 3119 MS (o)1775 3119 MS (r)1803 3119 MS
+(i)1822 3119 MS (c)1837 3119 MS (a)1862 3119 MS (l)1887 3119 MS (l)1902 3119 MS (y)1918 3119 MS (,)1945 3119 MS ( )1959 3119 MS (t)1973 3119 MS (h)1989 3119 MS (e)2017 3119 MS ( )2042 3119 MS
+(w)715 3186 MS (o)755 3186 MS (r)783 3186 MS (d)802 3186 MS ( )830 3186 MS
+[56 0 0 -56 0 0]/Times-Italic MF
+(m)844 3186 MS (a)884 3186 MS (r)912 3186 MS (k)934 3186 MS (u)959 3186 MS (p)988 3186 MS
+[56 0 0 -56 0 0]/Times-Roman MF
+(h)1030 3186 MS (a)1058 3186 MS (s)1083 3186 MS ( )1105 3186 MS (b)1119 3186 MS (e)1147 3186 MS (e)1172 3186 MS (n)1197 3186 MS ( )1225 3186 MS (u)1239 3186 MS (s)1267 3186 MS (e)1289 3186 MS (d)1315 3186 MS ( )1343 3186 MS (t)1357 3186 MS (o)1373 3186 MS
+( )1401 3186 MS (d)1415 3186 MS (e)1443 3186 MS (s)1468 3186 MS (c)1490 3186 MS (r)1515 3186 MS (i)1534 3186 MS (b)1549 3186 MS (e)1577 3186 MS ( )1602 3186 MS (a)1616 3186 MS (n)1641 3186 MS (n)1669 3186 MS (o)1697 3186 MS (t)1726 3186 MS (a)1742 3186 MS
+(t)1767 3186 MS (i)1783 3186 MS (o)1798 3186 MS (n)1826 3186 MS ( )1854 3186 MS (o)1868 3186 MS (r)1896 3186 MS ( )1915 3186 MS (o)1929 3186 MS (t)1957 3186 MS (h)1973 3186 MS (e)2001 3186 MS (r)2026 3186 MS ( )2045 3186 MS
+(m)715 3254 MS (a)758 3254 MS (r)783 3254 MS (k)802 3254 MS (s)829 3254 MS ( )852 3254 MS (w)867 3254 MS (i)907 3254 MS (t)922 3254 MS (h)938 3254 MS (i)966 3254 MS (n)981 3254 MS ( )1009 3254 MS (a)1023 3254 MS ( )1048 3254 MS (t)1062 3254 MS
+(e)1078 3254 MS (x)1103 3254 MS (t)1131 3254 MS ( )1147 3254 MS (i)1161 3254 MS (n)1176 3254 MS (t)1204 3254 MS (e)1220 3254 MS (n)1245 3254 MS (d)1273 3254 MS (e)1301 3254 MS (d)1326 3254 MS ( )1354 3254 MS (t)1368 3254 MS (o)1384 3254 MS ( )1412 3254 MS
+(i)1427 3254 MS (n)1442 3254 MS (s)1470 3254 MS (t)1492 3254 MS (r)1508 3254 MS (u)1527 3254 MS (c)1555 3254 MS (t)1580 3254 MS ( )1596 3254 MS (a)1610 3254 MS ( )1635 3254 MS (c)1649 3254 MS (o)1674 3254 MS (m)1702 3254 MS (p)1745 3254 MS (o)1773 3254 MS
+(s)1801 3254 MS (i)1823 3254 MS (t)1838 3254 MS (o)1854 3254 MS (r)1882 3254 MS ( )1901 3254 MS (o)1915 3254 MS (r)1943 3254 MS ( )1962 3254 MS (t)1976 3254 MS (y)1992 3254 MS (p)2019 3254 MS (i)2048 3254 MS (s)2063 3254 MS (t)2085 3254 MS ( )2101 3254 MS
+(h)715 3321 MS (o)743 3321 MS (w)772 3321 MS ( )811 3321 MS (a)825 3321 MS ( )850 3321 MS (p)864 3321 MS (a)892 3321 MS (r)917 3321 MS (t)936 3321 MS (i)952 3321 MS (c)967 3321 MS (u)992 3321 MS (l)1021 3321 MS (a)1036 3321 MS (r)1061 3321 MS
+( )1080 3321 MS (p)1094 3321 MS (a)1122 3321 MS (s)1147 3321 MS (s)1169 3321 MS (a)1191 3321 MS (g)1217 3321 MS (e)1244 3321 MS ( )1269 3321 MS (s)1283 3321 MS (h)1305 3321 MS (o)1333 3321 MS (u)1361 3321 MS (l)1390 3321 MS (d)1405 3321 MS ( )1433 3321 MS
+(b)1447 3321 MS (e)1475 3321 MS ( )1500 3321 MS (p)1514 3321 MS (r)1542 3321 MS (i)1562 3321 MS (n)1577 3321 MS (t)1605 3321 MS (e)1621 3321 MS (d)1646 3321 MS ( )1674 3321 MS (o)1688 3321 MS (r)1716 3321 MS ( )1735 3321 MS (l)1749 3321 MS (a)1764 3321 MS
+(i)1789 3321 MS (d)1804 3321 MS ( )1832 3321 MS (o)1847 3321 MS (u)1875 3321 MS (t)1903 3321 MS (.)1919 3321 MS ( )1933 3321 MS
+(E)715 3389 MS (x)749 3389 MS (a)777 3389 MS (m)802 3389 MS (p)845 3389 MS (l)874 3389 MS (e)889 3389 MS (s)914 3389 MS ( )936 3389 MS (i)950 3389 MS (n)966 3389 MS (c)994 3389 MS (l)1019 3389 MS (u)1034 3389 MS (d)1062 3389 MS (e)1090 3389 MS
+( )1116 3389 MS (w)1131 3389 MS (a)1170 3389 MS (v)1196 3389 MS (y)1224 3389 MS ( )1252 3389 MS (u)1266 3389 MS (n)1294 3389 MS (d)1322 3389 MS (e)1350 3389 MS (r)1375 3389 MS (l)1394 3389 MS (i)1410 3389 MS (n)1425 3389 MS (i)1453 3389 MS (n)1469 3389 MS
+(g)1498 3389 MS ( )1525 3389 MS (t)1539 3389 MS (o)1555 3389 MS ( )1583 3389 MS (i)1597 3389 MS (n)1612 3389 MS (d)1640 3389 MS (i)1669 3389 MS (c)1684 3389 MS (a)1709 3389 MS (t)1735 3389 MS (e)1751 3389 MS ( )1776 3389 MS (b)1790 3389 MS (o)1818 3389 MS
+(l)1846 3389 MS (d)1861 3389 MS (f)1889 3389 MS (a)1908 3389 MS (c)1933 3389 MS (e)1958 3389 MS (,)1983 3389 MS ( )1997 3389 MS
+(s)715 3456 MS (p)737 3456 MS (e)765 3456 MS (c)790 3456 MS (i)815 3456 MS (a)830 3456 MS (l)855 3456 MS ( )870 3456 MS (s)884 3456 MS (y)907 3456 MS (m)935 3456 MS (b)978 3456 MS (o)1007 3456 MS (l)1035 3456 MS (s)1050 3456 MS ( )1072 3456 MS
+(f)1086 3456 MS (o)1105 3456 MS (r)1133 3456 MS ( )1152 3456 MS (p)1166 3456 MS (a)1194 3456 MS (s)1219 3456 MS (s)1241 3456 MS (a)1263 3456 MS (g)1289 3456 MS (e)1316 3456 MS (s)1341 3456 MS ( )1363 3456 MS (t)1377 3456 MS (o)1393 3456 MS ( )1421 3456 MS
+(b)1435 3456 MS (e)1463 3456 MS ( )1488 3456 MS (o)1502 3456 MS (m)1531 3456 MS (i)1574 3456 MS (t)1589 3456 MS (t)1605 3456 MS (e)1621 3456 MS (d)1646 3456 MS ( )1674 3456 MS (o)1688 3456 MS (r)1716 3456 MS ( )1736 3456 MS (p)1750 3456 MS (r)1778 3456 MS
+(i)1797 3456 MS (n)1812 3456 MS (t)1840 3456 MS (e)1856 3456 MS (d)1881 3456 MS ( )1909 3456 MS (i)1923 3456 MS (n)1938 3456 MS ( )1966 3456 MS (a)1980 3456 MS ( )2005 3456 MS
+(p)715 3524 MS (a)743 3524 MS (r)768 3524 MS (t)787 3524 MS (i)803 3524 MS (c)818 3524 MS (u)843 3524 MS (l)871 3524 MS (a)886 3524 MS (r)911 3524 MS ( )930 3524 MS (f)944 3524 MS (o)963 3524 MS (n)991 3524 MS (t)1019 3524 MS ( )1035 3524 MS
+(a)1049 3524 MS (n)1074 3524 MS (d)1102 3524 MS ( )1130 3524 MS (s)1144 3524 MS (o)1166 3524 MS ( )1194 3524 MS (f)1208 3524 MS (o)1227 3524 MS (r)1255 3524 MS (t)1274 3524 MS (h)1290 3524 MS (.)1318 3524 MS ( )1332 3524 MS (A)1346 3524 MS (s)1385 3524 MS
+( )1407 3524 MS (t)1421 3524 MS (h)1437 3524 MS (e)1465 3524 MS ( )1490 3524 MS (f)1504 3524 MS (o)1523 3524 MS (r)1551 3524 MS (m)1570 3524 MS (a)1613 3524 MS (t)1638 3524 MS (t)1654 3524 MS (i)1670 3524 MS (n)1685 3524 MS (g)1714 3524 MS ( )1741 3524 MS
+(a)1755 3524 MS (n)1780 3524 MS (d)1808 3524 MS ( )1836 3524 MS (p)1851 3524 MS (r)1879 3524 MS (i)1898 3524 MS (n)1913 3524 MS (t)1941 3524 MS (i)1957 3524 MS (n)1972 3524 MS (g)2001 3524 MS ( )2028 3524 MS (o)2042 3524 MS (f)2070 3524 MS ( )2089 3524 MS
+(t)715 3591 MS (e)731 3591 MS (x)756 3591 MS (t)784 3591 MS (s)800 3591 MS ( )822 3591 MS (w)836 3591 MS (a)875 3591 MS (s)900 3591 MS ( )922 3591 MS (a)936 3591 MS (u)961 3591 MS (t)989 3591 MS (o)1005 3591 MS (m)1034 3591 MS (a)1077 3591 MS
+(t)1102 3591 MS (e)1118 3591 MS (d)1143 3591 MS (,)1171 3591 MS ( )1185 3591 MS (t)1199 3591 MS (h)1215 3591 MS (e)1243 3591 MS ( )1268 3591 MS (t)1282 3591 MS (e)1298 3591 MS (r)1323 3591 MS (m)1342 3591 MS ( )1385 3591 MS (w)1400 3591 MS (a)1439 3591 MS
+(s)1464 3591 MS ( )1486 3591 MS (e)1500 3591 MS (x)1525 3591 MS (t)1553 3591 MS (e)1569 3591 MS (n)1594 3591 MS (d)1622 3591 MS (e)1650 3591 MS (d)1675 3591 MS ( )1703 3591 MS (t)1717 3591 MS (o)1734 3591 MS ( )1762 3591 MS (c)1776 3591 MS (o)1801 3591 MS
+(v)1829 3591 MS (e)1856 3591 MS (r)1881 3591 MS ( )1900 3591 MS (a)1914 3591 MS (l)1940 3591 MS (l)1955 3591 MS ( )1970 3591 MS (s)1984 3591 MS (o)2007 3591 MS (r)2035 3591 MS (t)2054 3591 MS (s)2070 3591 MS ( )2092 3591 MS
+(o)715 3659 MS (f)743 3659 MS ( )762 3659 MS (s)776 3659 MS (p)798 3659 MS (e)826 3659 MS (c)851 3659 MS (i)876 3659 MS (a)891 3659 MS (l)916 3659 MS ( )931 3659 MS (c)945 3659 MS (o)970 3659 MS (d)999 3659 MS (e)1027 3659 MS (s)1052 3659 MS
+( )1074 3659 MS (i)1088 3659 MS (n)1103 3659 MS (s)1131 3659 MS (e)1153 3659 MS (r)1178 3659 MS (t)1197 3659 MS (e)1213 3659 MS (d)1238 3659 MS ( )1266 3659 MS (i)1280 3659 MS (n)1296 3659 MS (t)1324 3659 MS (o)1340 3659 MS ( )1368 3659 MS (e)1382 3659 MS
+(l)1407 3659 MS (e)1422 3659 MS (c)1447 3659 MS (t)1472 3659 MS (r)1488 3659 MS (o)1507 3659 MS (n)1535 3659 MS (i)1563 3659 MS (c)1578 3659 MS ( )1603 3659 MS (t)1617 3659 MS (e)1633 3659 MS (x)1658 3659 MS (t)1686 3659 MS (s)1702 3659 MS ( )1725 3659 MS
+(t)1739 3659 MS (o)1755 3659 MS ( )1783 3659 MS (g)1797 3659 MS (o)1824 3659 MS (v)1853 3659 MS (e)1880 3659 MS (r)1905 3659 MS (n)1924 3659 MS ( )1952 3659 MS
+(f)715 3727 MS (o)734 3727 MS (r)762 3727 MS (m)781 3727 MS (a)824 3727 MS (t)849 3727 MS (t)865 3727 MS (i)881 3727 MS (n)896 3727 MS (g)924 3727 MS (,)951 3727 MS ( )965 3727 MS (p)979 3727 MS (r)1007 3727 MS (i)1027 3727 MS (n)1042 3727 MS
+(t)1070 3727 MS (i)1086 3727 MS (n)1101 3727 MS (g)1130 3727 MS (,)1157 3727 MS ( )1171 3727 MS (o)1185 3727 MS (r)1213 3727 MS ( )1232 3727 MS (o)1246 3727 MS (t)1274 3727 MS (h)1290 3727 MS (e)1318 3727 MS (r)1343 3727 MS ( )1362 3727 MS (p)1376 3727 MS
+(r)1404 3727 MS (o)1423 3727 MS (c)1451 3727 MS (e)1476 3727 MS (s)1501 3727 MS (s)1523 3727 MS (i)1545 3727 MS (n)1560 3727 MS (g)1589 3727 MS (.)1616 3727 MS
+gs
+n
+1760 1319 551 2534 CB
+n
+1752 1311 555 2538 B
+cp
+CM [1 0 0 1 551 2534] concat
+s
+SM
+gr
+n
+1758 1318 2576 2534 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(T)2922 2801 MS (h)2988 2801 MS (e)3042 2801 MS ( )3090 2801 MS (a)3117 2801 MS (v)3164 2801 MS (e)3218 2801 MS (r)3266 2801 MS (a)3302 2801 MS (g)3349 2801 MS (e)3403 2801 MS ( )3451 2801 MS (u)3478 2801 MS (s)3532 2801 MS (e)3573 2801 MS (r)3621 2801 MS
+(')3657 2801 MS (s)3676 2801 MS ( )3718 2801 MS (n)3745 2801 MS (e)3798 2801 MS (e)3846 2801 MS (d)3893 2801 MS (s)3947 2801 MS
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)2725 3000 MS
+(S)2791 3000 MS (e)2834 3000 MS (r)2869 3000 MS (v)2895 3000 MS (i)2933 3000 MS (c)2955 3000 MS (e)2990 3000 MS (s)3025 3000 MS ( )3055 3000 MS (m)3076 3000 MS (a)3136 3000 MS (k)3172 3000 MS (i)3210 3000 MS (n)3232 3000 MS (g)3271 3000 MS ( )3309 3000 MS
+(O)3330 3000 MS (L)3387 3000 MS (A)3434 3000 MS (C)3490 3000 MS ( )3542 3000 MS (p)3562 3000 MS (a)3601 3000 MS (r)3636 3000 MS (t)3662 3000 MS (i)3684 3000 MS (c)3706 3000 MS (i)3741 3000 MS (p)3763 3000 MS (i)3801 3000 MS (t)3823 3000 MS (a)3845 3000 MS
+(t)3880 3000 MS (i)3902 3000 MS (o)3924 3000 MS (n)3962 3000 MS ( )4001 3000 MS
+(s)2791 3094 MS (t)2821 3094 MS (r)2843 3094 MS (a)2869 3094 MS (i)2904 3094 MS (g)2926 3094 MS (h)2964 3094 MS (t)3003 3094 MS (f)3025 3094 MS (o)3052 3094 MS (r)3090 3094 MS (w)3116 3094 MS (a)3172 3094 MS (r)3207 3094 MS (d)3233 3094 MS
+(\225)2725 3206 MS
+(V)2791 3206 MS (i)2847 3206 MS (d)2869 3206 MS (a)2908 3206 MS (,)2943 3206 MS ( )2963 3206 MS (O)2983 3206 MS (R)3039 3206 MS (E)3091 3206 MS (,)3139 3206 MS ( )3159 3206 MS (V)3179 3206 MS (i)3235 3206 MS (s)3257 3206 MS (e)3287 3206 MS (r)3322 3206 MS
+(\225)2725 3319 MS
+(E)2791 3319 MS (M)2839 3319 MS (E)2908 3319 MS (L)2957 3319 MS (D)3003 3319 MS
+gs
+n
+1760 1319 2576 2534 CB
+n
+1752 1311 2580 2538 B
+cp
+CM [1 0 0 1 2576 2534] concat
+s
+SM
+gr
+n
+1758 1319 551 4273 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(T)897 4540 MS (h)963 4540 MS (e)1017 4540 MS ( )1065 4540 MS (a)1092 4540 MS (v)1139 4540 MS (e)1193 4540 MS (r)1241 4540 MS (a)1277 4540 MS (g)1324 4540 MS (e)1378 4540 MS ( )1426 4540 MS (u)1453 4540 MS (s)1507 4540 MS (e)1548 4540 MS (r)1596 4540 MS
+(')1632 4540 MS (s)1651 4540 MS ( )1693 4540 MS (n)1720 4540 MS (e)1773 4540 MS (e)1821 4540 MS (d)1868 4540 MS (s)1922 4540 MS
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)700 4739 MS
+(A)766 4739 MS ( )822 4739 MS (c)842 4739 MS (e)877 4739 MS (n)912 4739 MS (t)951 4739 MS (r)973 4739 MS (a)999 4739 MS (l)1034 4739 MS ( )1056 4739 MS (l)1075 4739 MS (o)1097 4739 MS (c)1135 4739 MS (a)1170 4739 MS (t)1205 4739 MS (i)1227 4739 MS
+(o)1249 4739 MS (n)1287 4739 MS ( )1326 4739 MS (t)1346 4739 MS (o)1368 4739 MS ( )1406 4739 MS (a)1426 4739 MS (c)1461 4739 MS (c)1496 4739 MS (e)1531 4739 MS (s)1566 4739 MS (s)1596 4739 MS ( )1626 4739 MS (a)1646 4739 MS (l)1681 4739 MS (l)1703 4739 MS
+( )1725 4739 MS (O)1744 4739 MS (L)1801 4739 MS (A)1848 4739 MS (C)1904 4739 MS ( )1956 4739 MS
+(s)766 4833 MS (e)796 4833 MS (r)831 4833 MS (v)857 4833 MS (i)895 4833 MS (c)917 4833 MS (e)952 4833 MS (s)987 4833 MS
+(\225)700 4945 MS
+(O)766 4945 MS (L)823 4945 MS (A)870 4945 MS (C)926 4945 MS (?)978 4945 MS ( )1014 4945 MS (L)1034 4945 MS (i)1080 4945 MS (n)1102 4945 MS (g)1142 4945 MS (u)1180 4945 MS (i)1219 4945 MS (s)1241 4945 MS (t)1271 4945 MS ( )1293 4945 MS (L)1314 4945 MS
+(i)1360 4945 MS (s)1382 4945 MS (t)1412 4945 MS (?)1434 4945 MS
+gs
+n
+1760 1320 551 4273 CB
+n
+1752 1312 555 4277 B
+cp
+CM [1 0 0 1 551 4273] concat
+s
+SM
+gr
+n
+1758 1319 2576 4273 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(A)2810 4862 MS (s)2888 4862 MS (s)2930 4862 MS (e)2972 4862 MS (s)3020 4862 MS (s)3062 4862 MS (m)3104 4862 MS (e)3187 4862 MS (n)3235 4862 MS (t)3289 4862 MS ( )3319 4862 MS (o)3345 4862 MS (f)3398 4862 MS ( )3435 4862 MS (w)3462 4862 MS (h)3540 4862 MS
+(a)3593 4862 MS (t)3641 4862 MS ( )3671 4862 MS (i)3698 4862 MS (s)3728 4862 MS ( )3770 4862 MS (n)3796 4862 MS (e)3850 4862 MS (e)3898 4862 MS (d)3946 4862 MS (e)4000 4862 MS (d)4047 4862 MS
+gs
+n
+1760 1320 2576 4273 CB
+n
+1752 1312 2580 4277 B
+cp
+CM [1 0 0 1 2576 4273] concat
+s
+SM
+gr
+showpage
+%%Page: 3 3
+13 779.762 translate 72 600 div dup neg scale
+0 0 transform .25 add round .25 sub exch .25 add round .25 sub exch itransform translate
+n
+4499 5999 194 194 B
+1 g
+f
+[100 0 0 -100 0 0]/Times-Roman MF
+0 g
+(3)4583 6140 MS
+n
+1758 1319 551 794 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(A)785 1061 MS (s)863 1061 MS (s)905 1061 MS (e)947 1061 MS (s)995 1061 MS (s)1037 1061 MS (m)1079 1061 MS (e)1162 1061 MS (n)1210 1061 MS (t)1264 1061 MS ( )1294 1061 MS (o)1320 1061 MS (f)1373 1061 MS ( )1410 1061 MS (w)1437 1061 MS (h)1515 1061 MS
+(a)1568 1061 MS (t)1616 1061 MS ( )1646 1061 MS (i)1673 1061 MS (s)1703 1061 MS ( )1745 1061 MS (n)1771 1061 MS (e)1825 1061 MS (e)1873 1061 MS (d)1921 1061 MS (e)1975 1061 MS (d)2022 1061 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+/IsChar{exch/CharStrings get exch known}bd/MapCh{3 -1 roll/Encoding get 3 1
+roll put}bd/MapDegree{dup 16#b0 exch/degree IsChar{/degree}{/ring}ifelse MapCh}
+bd/MapBB{dup 16#a6 exch/brokenbar IsChar{/brokenbar}{/bar}ifelse MapCh}bd
+/reencode{findfont begin currentdict dup length dict begin{1 index/FID ne{def}
+{pop pop}ifelse}forall/FontName exch def dup length 0 ne{/Encoding Encoding 256
+array copy def 0 exch{dup type/nametype eq{Encoding 2 index 2 index put pop 1
+add}{exch pop}ifelse}forall}if pop currentdict dup end end/FontName get exch
+definefont dup MapDegree MapBB}bd/LATENC[0/grave/acute/circumflex/tilde/macron
+/breve/dotaccent/dieresis/ring/cedilla/hungarumlaut/ogonek/caron/dotlessi/fi/fl
+/Lslash/lslash/Zcaron/zcaron/minus/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/space/exclam/quotedbl
+/numbersign/dollar/percent/ampersand/quotesingle/parenleft/parenright/asterisk
+/plus/comma/hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight
+/nine/colon/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M
+/N/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum
+/underscore/grave/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft
+/bar/braceright/asciitilde/.notdef/.notdef/.notdef/quotesinglbase/florin
+/quotedblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron
+/guilsinglleft/OE/.notdef/.notdef/.notdef/.notdef/quoteleft/quoteright
+/quotedblleft/quotedblright/bullet/endash/emdash/tilde/trademark/scaron
+/guilsinglright/oe/.notdef/.notdef/Ydieresis/.notdef/exclamdown/cent/sterling
+/currency/yen/brokenbar/section/dieresis/copyright/ordfeminine/guillemotleft
+/logicalnot/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown/Agrave/Aacute
+/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex
+/Edieresis/Igrave/Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute
+/Ocircumflex/Otilde/Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex
+/Udieresis/Yacute/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave/iacute
+/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis
+/divide/oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]def
+LATENC /_Times-Roman /Times-Roman reencode
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)700 1260 MS
+(C)766 1260 MS (o)818 1260 MS (n)856 1260 MS (t)895 1260 MS (a)917 1260 MS (c)952 1260 MS (t)987 1260 MS (i)1009 1260 MS (n)1031 1260 MS (g)1070 1260 MS ( )1108 1260 MS (a)1128 1260 MS (r)1163 1260 MS (c)1189 1260 MS (h)1224 1260 MS (i)1263 1260 MS
+(v)1286 1260 MS (e)1324 1260 MS (s)1359 1260 MS
+[68 0 0 -68 0 0]/Times-Roman MF
+LATENC /_Times-Roman /Times-Roman reencode
+[68 0 0 -68 0 0]/_Times-Roman MF
+(\226)788 1361 MS
+(I)843 1361 MS (n)865 1361 MS (d)899 1361 MS (i)933 1361 MS (v)953 1361 MS (i)986 1361 MS (d)1006 1361 MS (u)1040 1361 MS (a)1074 1361 MS (l)1105 1361 MS (l)1124 1361 MS (y)1143 1361 MS ( )1176 1361 MS (b)1194 1361 MS (y)1229 1361 MS ( )1262 1361 MS
+(m)1280 1361 MS (e)1333 1361 MS (m)1363 1361 MS (b)1416 1361 MS (e)1451 1361 MS (r)1480 1361 MS (s)1503 1361 MS ( )1530 1361 MS (o)1548 1361 MS (f)1581 1361 MS ( )1605 1361 MS (O)1622 1361 MS (L)1672 1361 MS (A)1713 1361 MS (C)1762 1361 MS
+(\226)788 1459 MS
+(M)843 1459 MS (o)904 1459 MS (r)937 1459 MS (e)961 1459 MS ( )990 1459 MS (b)1008 1459 MS (r)1042 1459 MS (o)1066 1459 MS (a)1099 1459 MS (d)1129 1459 MS (l)1164 1459 MS (y)1183 1459 MS ( )1216 1459 MS (v)1234 1459 MS (i)1268 1459 MS (a)1287 1459 MS
+( )1317 1459 MS (p)1334 1459 MS (u)1368 1459 MS (b)1403 1459 MS (l)1438 1459 MS (i)1456 1459 MS (c)1475 1459 MS ( )1505 1459 MS (f)1522 1459 MS (o)1546 1459 MS (r)1579 1459 MS (u)1602 1459 MS (m)1637 1459 MS (s)1690 1459 MS ( )1716 1459 MS (\()1733 1459 MS
+(L)1757 1459 MS (S)1798 1459 MS (A)1837 1459 MS (,)1886 1459 MS ( )1903 1459 MS (L)1921 1459 MS (i)1962 1459 MS (n)1981 1459 MS (g)2016 1459 MS (u)2049 1459 MS (i)2083 1459 MS (s)2103 1459 MS (t)2129 1459 MS ( )2148 1459 MS
+(L)843 1541 MS (i)884 1541 MS (s)903 1541 MS (t)929 1541 MS (,)948 1541 MS ( )966 1541 MS (.)983 1541 MS ( )1000 1541 MS (.)1017 1541 MS ( )1034 1541 MS (.)1051 1541 MS (\))1068 1541 MS
+1 setlinecap
+8 sl
+gs
+n
+1760 1320 551 794 CB
+n
+1752 1312 555 798 B
+cp
+CM [1 0 0 1 551 794] concat
+s
+SM
+gr
+n
+1758 1319 2576 794 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(A)2810 1061 MS (s)2888 1061 MS (s)2930 1061 MS (e)2972 1061 MS (s)3020 1061 MS (s)3062 1061 MS (m)3104 1061 MS (e)3187 1061 MS (n)3235 1061 MS (t)3289 1061 MS ( )3319 1061 MS (o)3345 1061 MS (f)3398 1061 MS ( )3435 1061 MS (w)3462 1061 MS (h)3540 1061 MS
+(a)3593 1061 MS (t)3641 1061 MS ( )3671 1061 MS (i)3698 1061 MS (s)3728 1061 MS ( )3770 1061 MS (n)3796 1061 MS (e)3850 1061 MS (e)3898 1061 MS (d)3946 1061 MS (e)4000 1061 MS (d)4047 1061 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+LATENC /_Times-Roman /Times-Roman reencode
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)2725 1260 MS
+(D)2791 1260 MS (o)2848 1260 MS (c)2886 1260 MS (u)2921 1260 MS (m)2960 1260 MS (e)3020 1260 MS (n)3055 1260 MS (t)3094 1260 MS (s)3117 1260 MS
+[68 0 0 -68 0 0]/Times-Roman MF
+LATENC /_Times-Roman /Times-Roman reencode
+[68 0 0 -68 0 0]/_Times-Roman MF
+(\226)2813 1361 MS
+(M)2868 1361 MS (a)2928 1361 MS (k)2958 1361 MS (i)2992 1361 MS (n)3011 1361 MS (g)3046 1361 MS ( )3080 1361 MS (t)3097 1361 MS (h)3116 1361 MS (e)3151 1361 MS ( )3180 1361 MS (p)3198 1361 MS (r)3232 1361 MS (o)3256 1361 MS (d)3289 1361 MS (u)3323 1361 MS
+(c)3357 1361 MS (t)3387 1361 MS (i)3406 1361 MS (o)3426 1361 MS (n)3460 1361 MS ( )3494 1361 MS (o)3512 1361 MS (f)3545 1361 MS ( )3569 1361 MS (a)3586 1361 MS ( )3616 1361 MS (n)3633 1361 MS (o)3668 1361 MS (n)3701 1361 MS
+(-)3735 1361 MS
+(t)3758 1361 MS (e)3778 1361 MS (c)3807 1361 MS (h)3838 1361 MS (n)3873 1361 MS (i)3907 1361 MS (c)3926 1361 MS (a)3956 1361 MS (l)3987 1361 MS ( )4005 1361 MS
+(d)2868 1443 MS (o)2902 1443 MS (c)2936 1443 MS (u)2966 1443 MS (m)3001 1443 MS (e)3054 1443 MS (n)3084 1443 MS (t)3118 1443 MS (s)3137 1443 MS ( )3163 1443 MS (p)3180 1443 MS (a)3215 1443 MS (r)3245 1443 MS (t)3268 1443 MS ( )3287 1443 MS (o)3305 1443 MS
+(f)3338 1443 MS ( )3362 1443 MS (t)3379 1443 MS (h)3398 1443 MS (e)3432 1443 MS ( )3461 1443 MS (O)3479 1443 MS (L)3529 1443 MS (A)3570 1443 MS (C)3619 1443 MS ( )3665 1443 MS (p)3682 1443 MS (r)3716 1443 MS (o)3740 1443 MS (c)3774 1443 MS (e)3805 1443 MS
+(s)3834 1443 MS (s)3861 1443 MS
+(\226)2813 1541 MS
+(P)2868 1541 MS (u)2907 1541 MS (b)2941 1541 MS (l)2975 1541 MS (i)2993 1541 MS (s)3012 1541 MS (h)3038 1541 MS (e)3073 1541 MS (d)3103 1541 MS ( )3137 1541 MS (d)3154 1541 MS (o)3189 1541 MS (c)3223 1541 MS (u)3253 1541 MS (m)3288 1541 MS (e)3341 1541 MS
+(n)3370 1541 MS (t)3404 1541 MS (s)3424 1541 MS ( )3450 1541 MS (i)3467 1541 MS (n)3486 1541 MS ( )3520 1541 MS (j)3537 1541 MS (o)3557 1541 MS (u)3591 1541 MS (r)3625 1541 MS (n)3648 1541 MS (a)3682 1541 MS (l)3713 1541 MS (s)3732 1541 MS ( )3758 1541 MS
+(g)3776 1541 MS (i)3809 1541 MS (v)3829 1541 MS (i)3862 1541 MS (n)3882 1541 MS (g)3916 1541 MS ( )3950 1541 MS (a)3967 1541 MS (n)3997 1541 MS ( )4031 1541 MS
+(o)2868 1624 MS (v)2902 1624 MS (e)2936 1624 MS (r)2966 1624 MS (v)2990 1624 MS (i)3023 1624 MS (e)3043 1624 MS (w)3073 1624 MS ( )3122 1624 MS (o)3140 1624 MS (f)3173 1624 MS ( )3197 1624 MS (O)3214 1624 MS (L)3264 1624 MS (A)3305 1624 MS (C)3354 1624 MS
+( )3399 1624 MS (f)3416 1624 MS (o)3441 1624 MS (r)3474 1624 MS ( )3497 1624 MS (d)3514 1624 MS (i)3548 1624 MS (f)3567 1624 MS (f)3591 1624 MS (e)3615 1624 MS (r)3644 1624 MS (e)3667 1624 MS (n)3696 1624 MS (t)3730 1624 MS ( )3749 1624 MS (c)3766 1624 MS
+(o)3797 1624 MS (m)3831 1624 MS (m)3885 1624 MS (u)3937 1624 MS (n)3972 1624 MS (i)4006 1624 MS (t)4025 1624 MS (i)4044 1624 MS (e)4064 1624 MS (s)4093 1624 MS ( )4119 1624 MS
+(\()2868 1706 MS (L)2892 1706 MS (a)2932 1706 MS (n)2962 1706 MS (g)2997 1706 MS (u)3031 1706 MS (a)3065 1706 MS (g)3096 1706 MS (e)3130 1706 MS (,)3160 1706 MS ( )3177 1706 MS (I)3195 1706 MS (J)3217 1706 MS (A)3245 1706 MS (L)3294 1706 MS (.)3335 1706 MS
+(.)3352 1706 MS (.)3369 1706 MS (\))3386 1706 MS
+(\226)2813 1805 MS
+(A)2868 1805 MS ( )2917 1805 MS (F)2935 1805 MS (A)2973 1805 MS (Q)3022 1805 MS ( )3071 1805 MS (o)3089 1805 MS (n)3122 1805 MS ( )3156 1805 MS (d)3174 1805 MS (a)3208 1805 MS (t)3238 1805 MS (a)3257 1805 MS ( )3287 1805 MS (a)3304 1805 MS (r)3334 1805 MS
+(c)3358 1805 MS (h)3388 1805 MS (i)3422 1805 MS (v)3442 1805 MS (i)3475 1805 MS (n)3494 1805 MS (g)3529 1805 MS (,)3563 1805 MS ( )3580 1805 MS (a)3597 1805 MS (n)3627 1805 MS (n)3661 1805 MS (o)3696 1805 MS (t)3730 1805 MS (a)3749 1805 MS (t)3779 1805 MS
+(i)3798 1805 MS (o)3818 1805 MS (n)3851 1805 MS (,)3886 1805 MS ( )3903 1805 MS (a)3920 1805 MS (n)3950 1805 MS (d)3984 1805 MS ( )4018 1805 MS
+(a)2868 1887 MS (c)2898 1887 MS (c)2928 1887 MS (e)2959 1887 MS (s)2989 1887 MS (s)3015 1887 MS ( )3041 1887 MS (i)3058 1887 MS (n)3077 1887 MS ( )3112 1887 MS (t)3129 1887 MS (h)3148 1887 MS (e)3183 1887 MS ( )3212 1887 MS (d)3229 1887 MS (i)3263 1887 MS
+(g)3283 1887 MS (i)3316 1887 MS (t)3335 1887 MS (a)3355 1887 MS (l)3386 1887 MS ( )3404 1887 MS (a)3421 1887 MS (g)3452 1887 MS (e)3486 1887 MS ( )3515 1887 MS
+[59 0 0 -59 0 0]/Times-Roman MF
+(\()3547 1886 MS (w)3567 1886 MS (i)3610 1886 MS (t)3626 1886 MS (h)3642 1886 MS ( )3671 1886 MS (l)3686 1886 MS (o)3701 1886 MS (t)3730 1886 MS (s)3746 1886 MS ( )3769 1886 MS (o)3784 1886 MS (f)3814 1886 MS ( )3833 1886 MS (e)3848 1886 MS (x)3874 1886 MS
+(a)3903 1886 MS (m)3929 1886 MS (p)3975 1886 MS (l)4005 1886 MS (e)4020 1886 MS (s)4046 1886 MS (\))4069 1886 MS
+gs
+n
+1760 1320 2576 794 CB
+n
+1752 1312 2580 798 B
+cp
+CM [1 0 0 1 2576 794] concat
+s
+SM
+gr
+n
+1758 1318 551 2534 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(A)785 2801 MS (s)863 2801 MS (s)905 2801 MS (e)947 2801 MS (s)995 2801 MS (s)1037 2801 MS (m)1079 2801 MS (e)1162 2801 MS (n)1210 2801 MS (t)1264 2801 MS ( )1294 2801 MS (o)1320 2801 MS (f)1373 2801 MS ( )1410 2801 MS (w)1437 2801 MS (h)1515 2801 MS
+(a)1568 2801 MS (t)1616 2801 MS ( )1646 2801 MS (i)1673 2801 MS (s)1703 2801 MS ( )1745 2801 MS (n)1771 2801 MS (e)1825 2801 MS (e)1873 2801 MS (d)1921 2801 MS (e)1975 2801 MS (d)2022 2801 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+LATENC /_Times-Roman /Times-Roman reencode
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)700 2985 MS
+(S)766 2985 MS (e)809 2985 MS (r)844 2985 MS (v)870 2985 MS (i)908 2985 MS (c)930 2985 MS (e)965 2985 MS (s)1000 2985 MS
+[68 0 0 -68 0 0]/Times-Roman MF
+LATENC /_Times-Roman /Times-Roman reencode
+[68 0 0 -68 0 0]/_Times-Roman MF
+(\226)788 3086 MS
+(I)843 3086 MS (n)865 3086 MS (p)899 3086 MS (u)934 3086 MS (t)968 3086 MS ( )987 3086 MS (f)1004 3086 MS (r)1028 3086 MS (o)1051 3086 MS (m)1085 3086 MS ( )1137 3086 MS (a)1154 3086 MS (s)1185 3086 MS ( )1211 3086 MS (w)1228 3086 MS (i)1277 3086 MS
+(d)1297 3086 MS (e)1332 3086 MS ( )1361 3086 MS (a)1378 3086 MS ( )1408 3086 MS (r)1425 3086 MS (a)1448 3086 MS (n)1479 3086 MS (g)1514 3086 MS (e)1548 3086 MS ( )1577 3086 MS (o)1595 3086 MS (f)1628 3086 MS ( )1652 3086 MS (p)1669 3086 MS (o)1704 3086 MS
+(t)1737 3086 MS (e)1757 3086 MS (n)1786 3086 MS (t)1820 3086 MS (i)1839 3086 MS (a)1859 3086 MS (l)1889 3086 MS ( )1907 3086 MS (u)1925 3086 MS (s)1959 3086 MS (e)1986 3086 MS (r)2015 3086 MS (s)2039 3086 MS ( )2065 3086 MS (a)2082 3086 MS (s)2113 3086 MS
+( )2139 3086 MS
+(p)843 3168 MS (o)877 3168 MS (s)911 3168 MS (s)938 3168 MS (i)964 3168 MS (b)983 3168 MS (l)1018 3168 MS (e)1037 3168 MS
+(\226)788 3267 MS
+(S)843 3267 MS (e)881 3267 MS (r)910 3267 MS (v)934 3267 MS (i)968 3267 MS (c)987 3267 MS (e)1018 3267 MS (s)1048 3267 MS ( )1074 3267 MS (n)1091 3267 MS (o)1126 3267 MS (t)1159 3267 MS ( )1178 3267 MS (m)1196 3267 MS (a)1249 3267 MS (d)1279 3267 MS
+(e)1314 3267 MS ( )1343 3267 MS (p)1360 3267 MS (u)1395 3267 MS (b)1429 3267 MS (l)1464 3267 MS (i)1482 3267 MS (c)1501 3267 MS ( )1531 3267 MS (u)1548 3267 MS (n)1583 3267 MS (t)1617 3267 MS (i)1636 3267 MS (l)1655 3267 MS ( )1674 3267 MS (")1691 3267 MS
+(u)1719 3267 MS (s)1753 3267 MS (e)1780 3267 MS (f)1809 3267 MS (u)1833 3267 MS (l)1867 3267 MS (")1885 3267 MS
+(\226)788 3365 MS
+(A)843 3365 MS ( )892 3365 MS (g)910 3365 MS (r)943 3365 MS (o)967 3365 MS (u)1000 3365 MS (p)1034 3365 MS ( )1069 3365 MS (o)1087 3365 MS (f)1120 3365 MS ( )1144 3365 MS (o)1161 3365 MS (f)1194 3365 MS (f)1218 3365 MS (i)1242 3365 MS (c)1261 3365 MS
+(i)1291 3365 MS (a)1310 3365 MS (l)1340 3365 MS ( )1358 3365 MS (c)1375 3365 MS (o)1406 3365 MS (n)1439 3365 MS (s)1474 3365 MS (u)1500 3365 MS (l)1535 3365 MS (t)1553 3365 MS (a)1572 3365 MS (n)1602 3365 MS (t)1636 3365 MS (s)1656 3365 MS ( )1682 3365 MS
+(f)1699 3365 MS (r)1723 3365 MS (o)1746 3365 MS (m)1780 3365 MS ( )1832 3365 MS (i)1850 3365 MS (m)1869 3365 MS (p)1921 3365 MS (o)1956 3365 MS (r)1989 3365 MS (t)2012 3365 MS (a)2032 3365 MS (n)2062 3365 MS (t)2096 3365 MS ( )2115 3365 MS
+(l)843 3448 MS (i)861 3448 MS (n)880 3448 MS (g)915 3448 MS (u)949 3448 MS (i)983 3448 MS (s)1002 3448 MS (t)1028 3448 MS (i)1047 3448 MS (c)1066 3448 MS (s)1097 3448 MS ( )1123 3448 MS (s)1140 3448 MS (u)1167 3448 MS (b)1201 3448 MS (c)1235 3448 MS
+(o)1266 3448 MS (m)1300 3448 MS (m)1353 3448 MS (u)1406 3448 MS (n)1440 3448 MS (i)1474 3448 MS (t)1493 3448 MS (i)1512 3448 MS (e)1532 3448 MS (s)1562 3448 MS (,)1588 3448 MS ( )1605 3448 MS (p)1622 3448 MS (r)1656 3448 MS (e)1680 3448 MS (f)1709 3448 MS
+(e)1734 3448 MS (r)1763 3448 MS (a)1786 3448 MS (b)1816 3448 MS (l)1851 3448 MS (y)1870 3448 MS ( )1903 3448 MS (p)1920 3448 MS (e)1955 3448 MS (o)1985 3448 MS (p)2019 3448 MS (l)2054 3448 MS (e)2073 3448 MS ( )2102 3448 MS
+(n)843 3530 MS (o)877 3530 MS (t)910 3530 MS ( )929 3530 MS (a)947 3530 MS (l)978 3530 MS (r)996 3530 MS (e)1020 3530 MS (a)1049 3530 MS (d)1079 3530 MS (y)1114 3530 MS ( )1148 3530 MS (c)1165 3530 MS (l)1196 3530 MS (o)1215 3530 MS (s)1249 3530 MS
+(e)1276 3530 MS (l)1306 3530 MS (y)1325 3530 MS ( )1358 3530 MS (i)1375 3530 MS (n)1394 3530 MS (v)1429 3530 MS (o)1463 3530 MS (l)1497 3530 MS (v)1516 3530 MS (e)1550 3530 MS (d)1580 3530 MS ( )1615 3530 MS (w)1632 3530 MS (i)1681 3530 MS (t)1700 3530 MS
+(h)1719 3530 MS ( )1753 3530 MS (O)1771 3530 MS (L)1821 3530 MS (A)1863 3530 MS (C)1912 3530 MS
+gs
+n
+1760 1319 551 2534 CB
+n
+1752 1311 555 2538 B
+cp
+CM [1 0 0 1 551 2534] concat
+s
+SM
+gr
+n
+1758 1318 2576 2534 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(A)2810 2801 MS (s)2888 2801 MS (s)2930 2801 MS (e)2972 2801 MS (s)3020 2801 MS (s)3062 2801 MS (m)3104 2801 MS (e)3187 2801 MS (n)3235 2801 MS (t)3289 2801 MS ( )3319 2801 MS (o)3345 2801 MS (f)3398 2801 MS ( )3435 2801 MS (w)3462 2801 MS (h)3540 2801 MS
+(a)3593 2801 MS (t)3641 2801 MS ( )3671 2801 MS (i)3698 2801 MS (s)3728 2801 MS ( )3770 2801 MS (n)3796 2801 MS (e)3850 2801 MS (e)3898 2801 MS (d)3946 2801 MS (e)4000 2801 MS (d)4047 2801 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+LATENC /_Times-Roman /Times-Roman reencode
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)2725 3000 MS
+(C)2791 3000 MS (e)2843 3000 MS (n)2878 3000 MS (t)2917 3000 MS (r)2939 3000 MS (a)2965 3000 MS (l)3000 3000 MS ( )3022 3000 MS (l)3042 3000 MS (o)3064 3000 MS (c)3102 3000 MS (a)3137 3000 MS (t)3172 3000 MS (i)3194 3000 MS (o)3216 3000 MS (n)3254 3000 MS
+[68 0 0 -68 0 0]/Times-Roman MF
+LATENC /_Times-Roman /Times-Roman reencode
+[68 0 0 -68 0 0]/_Times-Roman MF
+(\226)2813 3101 MS
+(O)2868 3101 MS (L)2918 3101 MS (A)2959 3101 MS (C)3008 3101 MS ( )3053 3101 MS (s)3071 3101 MS (i)3097 3101 MS (t)3116 3101 MS (e)3136 3101 MS ( )3165 3101 MS (f)3182 3101 MS (o)3206 3101 MS (r)3239 3101 MS ( )3262 3101 MS (t)3279 3101 MS (e)3299 3101 MS
+(c)3329 3101 MS (h)3359 3101 MS (n)3393 3101 MS (i)3427 3101 MS (c)3447 3101 MS (a)3477 3101 MS (l)3508 3101 MS ( )3526 3101 MS (r)3543 3101 MS (e)3567 3101 MS (f)3596 3101 MS (e)3620 3101 MS (r)3649 3101 MS (e)3673 3101 MS (n)3703 3101 MS (c)3737 3101 MS
+(e)3768 3101 MS (?)3798 3101 MS
+(\226)2813 3199 MS
+(L)2868 3199 MS (i)2909 3199 MS (n)2928 3199 MS (g)2963 3199 MS (u)2996 3199 MS (i)3030 3199 MS (s)3050 3199 MS (t)3076 3199 MS ( )3095 3199 MS (L)3113 3199 MS (i)3154 3199 MS (s)3173 3199 MS (t)3199 3199 MS ( )3218 3199 MS (f)3235 3199 MS (o)3260 3199 MS
+(r)3293 3199 MS ( )3316 3199 MS (g)3334 3199 MS (e)3368 3199 MS (n)3397 3199 MS (e)3432 3199 MS (r)3462 3199 MS (a)3485 3199 MS (l)3516 3199 MS ( )3534 3199 MS (c)3551 3199 MS (o)3582 3199 MS (m)3616 3199 MS (m)3669 3199 MS (u)3722 3199 MS (n)3756 3199 MS
+(i)3790 3199 MS (t)3809 3199 MS (y)3829 3199 MS ( )3862 3199 MS (r)3880 3199 MS (e)3903 3199 MS (f)3932 3199 MS (e)3956 3199 MS (r)3985 3199 MS (e)4009 3199 MS (n)4039 3199 MS (c)4073 3199 MS (e)4104 3199 MS (?)4134 3199 MS
+gs
+n
+1760 1319 2576 2534 CB
+n
+1752 1311 2580 2538 B
+cp
+CM [1 0 0 1 2576 2534] concat
+s
+SM
+gr
+n
+1758 1319 551 4273 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(O)791 4862 MS (v)869 4862 MS (e)923 4862 MS (r)971 4862 MS (c)1006 4862 MS (o)1054 4862 MS (m)1108 4862 MS (i)1191 4862 MS (n)1221 4862 MS (g)1275 4862 MS ( )1329 4862 MS (t)1356 4862 MS (h)1386 4862 MS (e)1440 4862 MS ( )1488 4862 MS (i)1515 4862 MS
+(m)1545 4862 MS (p)1628 4862 MS (e)1682 4862 MS (d)1730 4862 MS (i)1783 4862 MS (m)1812 4862 MS (e)1895 4862 MS (n)1943 4862 MS (t)1997 4862 MS (s)2027 4862 MS
+gs
+n
+1760 1320 551 4273 CB
+n
+1752 1312 555 4277 B
+cp
+CM [1 0 0 1 551 4273] concat
+s
+SM
+gr
+n
+1758 1319 2576 4273 B
+1 g
+f
+0 g
+(I)2969 4540 MS (m)3005 4540 MS (p)3088 4540 MS (e)3142 4540 MS (d)3190 4540 MS (i)3244 4540 MS (m)3274 4540 MS (e)3357 4540 MS (n)3405 4540 MS (t)3459 4540 MS (s)3489 4540 MS (:)3531 4540 MS ( )3561 4540 MS (O)3588 4540 MS (L)3666 4540 MS (A)3731 4540 MS
+(C)3809 4540 MS (')3881 4540 MS (s)3900 4540 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+LATENC /_Times-Roman /Times-Roman reencode
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)2725 4739 MS
+(O)2791 4739 MS (l)2847 4739 MS (d)2869 4739 MS ( )2908 4739 MS (h)2928 4739 MS (a)2967 4739 MS (b)3002 4739 MS (i)3041 4739 MS (t)3063 4739 MS (s)3085 4739 MS
+(\225)2725 4851 MS
+(?)2791 4851 MS (?)2826 4851 MS
+(\225)2725 4964 MS
+(L)2791 4964 MS (a)2837 4964 MS (c)2872 4964 MS (k)2908 4964 MS ( )2946 4964 MS (o)2967 4964 MS (f)3005 4964 MS ( )3031 4964 MS (a)3051 4964 MS (w)3086 4964 MS (a)3142 4964 MS (r)3177 4964 MS (e)3203 4964 MS (n)3238 4964 MS (e)3277 4964 MS (s)3312 4964 MS
+(s)3343 4964 MS ( )3373 4964 MS (o)3393 4964 MS (f)3431 4964 MS ( )3457 4964 MS (t)3477 4964 MS (h)3499 4964 MS (e)3538 4964 MS ( )3573 4964 MS (b)3593 4964 MS (a)3632 4964 MS (s)3667 4964 MS (i)3697 4964 MS (c)3719 4964 MS ( )3754 4964 MS (i)3774 4964 MS
+(s)3795 4964 MS (s)3825 4964 MS (u)3855 4964 MS (e)3894 4964 MS (s)3930 4964 MS
+(\225)2725 5076 MS
+(D)2791 5076 MS (o)2848 5076 MS (c)2886 5076 MS (u)2921 5076 MS (m)2960 5076 MS (e)3020 5076 MS (n)3055 5076 MS (t)3094 5076 MS (s)3117 5076 MS ( )3147 5076 MS (\()3167 5076 MS (o)3193 5076 MS (n)3231 5076 MS (l)3270 5076 MS (i)3292 5076 MS (n)3314 5076 MS
+(e)3353 5076 MS ( )3388 5076 MS (a)3408 5076 MS (n)3443 5076 MS (d)3482 5076 MS ( )3521 5076 MS (i)3541 5076 MS (n)3563 5076 MS ( )3602 5076 MS (p)3622 5076 MS (r)3661 5076 MS (i)3687 5076 MS (n)3709 5076 MS (t)3748 5076 MS (\))3770 5076 MS
+(\225)2725 5189 MS
+(I)2791 5189 MS (d)2816 5189 MS (e)2855 5189 MS (a)2890 5189 MS ( )2925 5189 MS (t)2945 5189 MS (h)2967 5189 MS (a)3006 5189 MS (t)3041 5189 MS ( )3063 5189 MS (i)3083 5189 MS (t)3105 5189 MS ( )3126 5189 MS (i)3146 5189 MS (s)3168 5189 MS ( )3198 5189 MS
+(")3218 5189 MS (s)3250 5189 MS (o)3280 5189 MS (m)3318 5189 MS (e)3378 5189 MS (o)3414 5189 MS (n)3453 5189 MS (e)3492 5189 MS ( )3527 5189 MS (e)3547 5189 MS (l)3582 5189 MS (s)3604 5189 MS (e)3634 5189 MS (')3669 5189 MS (s)3682 5189 MS ( )3712 5189 MS
+(p)3732 5189 MS (r)3771 5189 MS (o)3798 5189 MS (b)3836 5189 MS (l)3875 5189 MS (e)3897 5189 MS (m)3933 5189 MS (")3993 5189 MS
+(\225)2725 5301 MS
+(E)2791 5301 MS (n)2839 5301 MS (d)2878 5301 MS (o)2917 5301 MS (r)2955 5301 MS (s)2982 5301 MS (e)3012 5301 MS (m)3047 5301 MS (e)3107 5301 MS (n)3142 5301 MS (t)3181 5301 MS ( )3203 5301 MS (\()3223 5301 MS (L)3250 5301 MS (S)3296 5301 MS (A)3340 5301 MS
+( )3396 5301 MS (a)3416 5301 MS (n)3451 5301 MS (d)3490 5301 MS ( )3529 5301 MS (o)3549 5301 MS (t)3587 5301 MS (h)3609 5301 MS (e)3648 5301 MS (r)3683 5301 MS ( )3709 5301 MS (h)3729 5301 MS (i)3768 5301 MS (g)3790 5301 MS (h)3828 5301 MS
+(-)3867 5301 MS
+(p)3893 5301 MS (r)3932 5301 MS (o)3959 5301 MS (f)3997 5301 MS (i)4023 5301 MS (l)4045 5301 MS (e)4067 5301 MS ( )4102 5301 MS
+(o)2791 5395 MS (r)2829 5395 MS (g)2856 5395 MS (a)2894 5395 MS (n)2929 5395 MS (i)2968 5395 MS (z)2990 5395 MS (a)3025 5395 MS (t)3060 5395 MS (i)3082 5395 MS (o)3104 5395 MS (n)3142 5395 MS (s)3182 5395 MS (\))3212 5395 MS
+[61 0 0 -61 0 0]/Times-Roman MF
+(\()3283 5397 MS (c)3303 5397 MS (f)3330 5397 MS (.)3350 5397 MS ( )3365 5397 MS (1)3380 5397 MS (9)3411 5397 MS (9)3442 5397 MS (2)3473 5397 MS ( )3504 5397 MS
+[61 0 0 -61 0 0]/Times-Italic MF
+(L)3519 5397 MS (a)3553 5397 MS (n)3584 5397 MS (g)3614 5397 MS (u)3645 5397 MS (a)3676 5397 MS (g)3706 5397 MS (e)3737 5397 MS
+[61 0 0 -61 0 0]/Times-Roman MF
+(a)3779 5397 MS (r)3806 5397 MS (t)3826 5397 MS (i)3843 5397 MS (c)3860 5397 MS (l)3887 5397 MS (e)3904 5397 MS ( )3931 5397 MS (o)3947 5397 MS (n)3977 5397 MS ( )4008 5397 MS
+(e)3268 5470 MS (n)3295 5470 MS (d)3326 5470 MS (a)3357 5470 MS (n)3384 5470 MS (g)3415 5470 MS (e)3445 5470 MS (r)3472 5470 MS (e)3492 5470 MS (d)3519 5470 MS ( )3550 5470 MS (l)3565 5470 MS (a)3582 5470 MS (n)3609 5470 MS (g)3640 5470 MS (u)3670 5470 MS
+(a)3701 5470 MS (g)3728 5470 MS (e)3758 5470 MS (s)3785 5470 MS (\))3810 5470 MS
+gs
+n
+1760 1320 2576 4273 CB
+n
+1752 1312 2580 4277 B
+cp
+CM [1 0 0 1 2576 4273] concat
+s
+SM
+gr
+showpage
+%%Page: 4 4
+13 779.762 translate 72 600 div dup neg scale
+0 0 transform .25 add round .25 sub exch .25 add round .25 sub exch itransform translate
+n
+4499 5999 194 194 B
+1 g
+f
+[100 0 0 -100 0 0]/Times-Roman MF
+0 g
+(4)4583 6140 MS
+n
+1758 1319 551 794 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(I)989 1061 MS (m)1025 1061 MS (p)1108 1061 MS (e)1162 1061 MS (d)1210 1061 MS (i)1264 1061 MS (m)1294 1061 MS (e)1377 1061 MS (n)1425 1061 MS (t)1479 1061 MS (s)1509 1061 MS (:)1551 1061 MS ( )1581 1061 MS (U)1608 1061 MS (s)1686 1061 MS (e)1728 1061 MS
+(r)1775 1061 MS (')1811 1061 MS (s)1830 1061 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+/IsChar{exch/CharStrings get exch known}bd/MapCh{3 -1 roll/Encoding get 3 1
+roll put}bd/MapDegree{dup 16#b0 exch/degree IsChar{/degree}{/ring}ifelse MapCh}
+bd/MapBB{dup 16#a6 exch/brokenbar IsChar{/brokenbar}{/bar}ifelse MapCh}bd
+/reencode{findfont begin currentdict dup length dict begin{1 index/FID ne{def}
+{pop pop}ifelse}forall/FontName exch def dup length 0 ne{/Encoding Encoding 256
+array copy def 0 exch{dup type/nametype eq{Encoding 2 index 2 index put pop 1
+add}{exch pop}ifelse}forall}if pop currentdict dup end end/FontName get exch
+definefont dup MapDegree MapBB}bd/LATENC[0/grave/acute/circumflex/tilde/macron
+/breve/dotaccent/dieresis/ring/cedilla/hungarumlaut/ogonek/caron/dotlessi/fi/fl
+/Lslash/lslash/Zcaron/zcaron/minus/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/space/exclam/quotedbl
+/numbersign/dollar/percent/ampersand/quotesingle/parenleft/parenright/asterisk
+/plus/comma/hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight
+/nine/colon/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M
+/N/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum
+/underscore/grave/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft
+/bar/braceright/asciitilde/.notdef/.notdef/.notdef/quotesinglbase/florin
+/quotedblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron
+/guilsinglleft/OE/.notdef/.notdef/.notdef/.notdef/quoteleft/quoteright
+/quotedblleft/quotedblright/bullet/endash/emdash/tilde/trademark/scaron
+/guilsinglright/oe/.notdef/.notdef/Ydieresis/.notdef/exclamdown/cent/sterling
+/currency/yen/brokenbar/section/dieresis/copyright/ordfeminine/guillemotleft
+/logicalnot/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown/Agrave/Aacute
+/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex
+/Edieresis/Igrave/Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute
+/Ocircumflex/Otilde/Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex
+/Udieresis/Yacute/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave/iacute
+/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis
+/divide/oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]def
+LATENC /_Times-Roman /Times-Roman reencode
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)700 1260 MS
+(T)766 1260 MS (e)813 1260 MS (c)848 1260 MS (h)883 1260 MS (n)922 1260 MS (i)961 1260 MS (c)983 1260 MS (a)1018 1260 MS (l)1053 1260 MS ( )1075 1260 MS (i)1095 1260 MS (s)1117 1260 MS (s)1147 1260 MS (u)1177 1260 MS (e)1216 1260 MS (s)1251 1260 MS
+( )1281 1260 MS (n)1301 1260 MS (o)1340 1260 MS (t)1378 1260 MS ( )1400 1260 MS (d)1420 1260 MS (i)1459 1260 MS (r)1481 1260 MS (e)1507 1260 MS (c)1542 1260 MS (t)1577 1260 MS (l)1599 1260 MS (y)1622 1260 MS ( )1658 1260 MS (r)1678 1260 MS (e)1704 1260 MS
+(l)1739 1260 MS (a)1761 1260 MS (t)1796 1260 MS (e)1818 1260 MS (d)1853 1260 MS ( )1892 1260 MS (t)1912 1260 MS (o)1934 1260 MS ( )1972 1260 MS
+(l)766 1354 MS (i)788 1354 MS (n)810 1354 MS (g)849 1354 MS (u)887 1354 MS (i)926 1354 MS (s)948 1354 MS (t)978 1354 MS (i)1000 1354 MS (c)1022 1354 MS (s)1057 1354 MS ( )1087 1354 MS (\()1107 1354 MS (o)1133 1354 MS (r)1171 1354 MS ( )1197 1354 MS
+(o)1218 1354 MS (t)1256 1354 MS (h)1278 1354 MS (e)1317 1354 MS (r)1352 1354 MS ( )1378 1354 MS (f)1398 1354 MS (i)1424 1354 MS (e)1446 1354 MS (l)1481 1354 MS (d)1503 1354 MS (s)1542 1354 MS ( )1572 1354 MS (o)1592 1354 MS (f)1630 1354 MS ( )1656 1354 MS
+(s)1676 1354 MS (t)1706 1354 MS (u)1728 1354 MS (d)1768 1354 MS (y)1808 1354 MS (\))1845 1354 MS
+(\225)700 1466 MS
+(C)766 1466 MS (l)818 1466 MS (e)840 1466 MS (a)875 1466 MS (r)910 1466 MS ( )936 1466 MS (s)956 1466 MS (e)986 1466 MS (p)1021 1466 MS (a)1060 1466 MS (r)1095 1466 MS (a)1121 1466 MS (t)1156 1466 MS (i)1178 1466 MS (o)1200 1466 MS (n)1238 1466 MS
+( )1277 1466 MS (o)1297 1466 MS (f)1335 1466 MS ( )1361 1466 MS (g)1381 1466 MS (e)1419 1466 MS (n)1454 1466 MS (e)1493 1466 MS (r)1528 1466 MS (a)1554 1466 MS (l)1589 1466 MS ( )1611 1466 MS (a)1631 1466 MS (u)1666 1466 MS (d)1705 1466 MS (i)1744 1466 MS
+(e)1766 1466 MS (n)1801 1466 MS (c)1840 1466 MS (e)1875 1466 MS ( )1910 1466 MS
+(d)766 1560 MS (o)805 1560 MS (c)843 1560 MS (u)878 1560 MS (m)918 1560 MS (e)978 1560 MS (n)1013 1560 MS (t)1052 1560 MS (s)1074 1560 MS ( )1104 1560 MS (f)1124 1560 MS (r)1150 1560 MS (o)1177 1560 MS (m)1216 1560 MS ( )1276 1560 MS (t)1296 1560 MS
+(e)1318 1560 MS (c)1353 1560 MS (h)1388 1560 MS (n)1427 1560 MS (i)1466 1560 MS (c)1488 1560 MS (a)1523 1560 MS (l)1558 1560 MS ( )1579 1560 MS (d)1599 1560 MS (o)1638 1560 MS (c)1676 1560 MS (u)1711 1560 MS (m)1750 1560 MS (e)1810 1560 MS (n)1845 1560 MS
+(t)1884 1560 MS (s)1906 1560 MS
+(\225)700 1672 MS
+(T)766 1672 MS (i)813 1672 MS (m)835 1672 MS (e)895 1672 MS ( )930 1672 MS (a)950 1672 MS (n)985 1672 MS (d)1024 1672 MS ( )1063 1672 MS (w)1083 1672 MS (o)1140 1672 MS (r)1178 1672 MS (k)1205 1672 MS ( )1243 1672 MS (i)1263 1672 MS (n)1285 1672 MS
+(v)1324 1672 MS (o)1363 1672 MS (l)1401 1672 MS (v)1424 1672 MS (e)1462 1672 MS (d)1497 1672 MS
+(\225)700 1785 MS
+(B)766 1785 MS (e)818 1785 MS (t)853 1785 MS (t)875 1785 MS (e)897 1785 MS (r)932 1785 MS ( )958 1785 MS (t)978 1785 MS (o)1000 1785 MS (o)1038 1785 MS (l)1076 1785 MS (s)1098 1785 MS (,)1128 1785 MS ( )1148 1785 MS (s)1168 1785 MS (e)1198 1785 MS
+(r)1233 1785 MS (v)1260 1785 MS (i)1298 1785 MS (c)1320 1785 MS (e)1355 1785 MS (s)1390 1785 MS
+(\225)700 1897 MS
+(C)766 1897 MS (h)818 1897 MS (a)857 1897 MS (n)892 1897 MS (g)931 1897 MS (e)969 1897 MS ( )1004 1897 MS (o)1025 1897 MS (f)1063 1897 MS ( )1089 1897 MS (c)1109 1897 MS (u)1144 1897 MS (l)1183 1897 MS (t)1205 1897 MS (u)1227 1897 MS (r)1266 1897 MS
+(e)1292 1897 MS
+1 setlinecap
+8 sl
+gs
+n
+1760 1320 551 794 CB
+n
+1752 1312 555 798 B
+cp
+CM [1 0 0 1 551 794] concat
+s
+SM
+gr
+n
+1758 1319 2576 794 B
+1 g
+f
+[108 0 0 -108 0 0]/Times-Roman MF
+0 g
+(P)3252 1319 MS (r)3312 1319 MS (o)3348 1319 MS (p)3402 1319 MS (o)3456 1319 MS (s)3510 1319 MS (a)3551 1319 MS (l)3599 1319 MS (:)3629 1319 MS
+(O)2903 1448 MS (u)2981 1448 MS (t)3035 1448 MS (r)3065 1448 MS (e)3101 1448 MS (a)3148 1448 MS (c)3196 1448 MS (h)3244 1448 MS ( )3298 1448 MS (W)3325 1448 MS (o)3426 1448 MS (r)3480 1448 MS (k)3515 1448 MS (i)3569 1448 MS (n)3599 1448 MS (g)3653 1448 MS
+( )3707 1448 MS (G)3733 1448 MS (r)3811 1448 MS (o)3847 1448 MS (u)3900 1448 MS (p)3954 1448 MS
+gs
+n
+1760 1320 2576 794 CB
+n
+1752 1312 2580 798 B
+cp
+CM [1 0 0 1 2576 794] concat
+s
+SM
+gr
+n
+1758 1318 551 2534 B
+1 g
+f
+0 g
+(O)902 2801 MS (u)980 2801 MS (t)1034 2801 MS (r)1064 2801 MS (e)1100 2801 MS (a)1147 2801 MS (c)1195 2801 MS (h)1243 2801 MS ( )1297 2801 MS (w)1323 2801 MS (o)1401 2801 MS (r)1455 2801 MS (k)1491 2801 MS (i)1545 2801 MS (n)1574 2801 MS (g)1628 2801 MS
+( )1682 2801 MS (g)1709 2801 MS (r)1763 2801 MS (o)1798 2801 MS (u)1852 2801 MS (p)1905 2801 MS
+[78 0 0 -78 0 0]/_Times-Roman MF
+(\225)700 3000 MS
+(C)766 3000 MS (o)818 3000 MS (n)856 3000 MS (t)895 3000 MS (a)917 3000 MS (c)952 3000 MS (t)987 3000 MS ( )1009 3000 MS (a)1029 3000 MS (r)1064 3000 MS (c)1090 3000 MS (h)1125 3000 MS (i)1164 3000 MS (v)1186 3000 MS (e)1224 3000 MS (s)1259 3000 MS
+(\225)700 3112 MS
+(O)766 3112 MS (v)823 3112 MS (e)861 3112 MS (r)896 3112 MS (s)922 3112 MS (e)952 3112 MS (e)987 3112 MS ( )1022 3112 MS (c)1042 3112 MS (r)1077 3112 MS (e)1103 3112 MS (a)1138 3112 MS (t)1173 3112 MS (i)1195 3112 MS (o)1217 3112 MS (n)1255 3112 MS
+( )1294 3112 MS (o)1314 3112 MS (f)1352 3112 MS ( )1378 3112 MS (n)1398 3112 MS (o)1438 3112 MS (n)1476 3112 MS
+(-)1515 3112 MS
+(t)1541 3112 MS (e)1563 3112 MS (c)1598 3112 MS (h)1633 3112 MS (n)1672 3112 MS (i)1711 3112 MS (c)1733 3112 MS (a)1768 3112 MS (l)1803 3112 MS ( )1825 3112 MS
+(d)766 3206 MS (o)805 3206 MS (c)843 3206 MS (u)878 3206 MS (m)918 3206 MS (e)978 3206 MS (n)1013 3206 MS (t)1052 3206 MS (s)1074 3206 MS
+(\225)700 3319 MS
+(W)766 3319 MS (o)840 3319 MS (r)878 3319 MS (k)905 3319 MS ( )943 3319 MS (t)963 3319 MS (o)985 3319 MS (w)1024 3319 MS (a)1080 3319 MS (r)1115 3319 MS (d)1141 3319 MS (s)1180 3319 MS ( )1210 3319 MS (g)1231 3319 MS (a)1269 3319 MS (i)1304 3319 MS
+(n)1326 3319 MS (i)1365 3319 MS (n)1387 3319 MS (g)1427 3319 MS ( )1465 3319 MS (e)1485 3319 MS (n)1520 3319 MS (d)1559 3319 MS (o)1598 3319 MS (r)1636 3319 MS (s)1663 3319 MS (e)1693 3319 MS (m)1729 3319 MS (e)1789 3319 MS (n)1824 3319 MS (t)1863 3319 MS
+(s)1885 3319 MS
+gs
+n
+1760 1319 551 2534 CB
+n
+1752 1311 555 2538 B
+cp
+CM [1 0 0 1 551 2534] concat
+s
+SM
+gr
+showpage
+PageSV restore
+%%Trailer
+%%DocumentNeededFonts:
+%%+ Times-Italic
+%%+ Times-Roman
+%%DocumentSuppliedFonts:
+end
+%%Pages: 4
+%%EOF
+%-12345X@PJL EOJ

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olac-archive
+    xmlns="http://www.language-archives.org/OLAC/0.4/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.language-archives.org/OLAC/0.4/
+                  http://www.language-archives.org/OLAC/0.4/olac-archive.xsd"
+    type="institutional">
+   <archiveURL>http://www.ethnologue.com</archiveURL>
+   <curator>Raymond G. Gordon, Jr.</curator>
+   <curatorTitle>Ethnologue Editor</curatorTitle>
+   <curatorEmail>mailto:editor_ethnologue@sil.org</curatorEmail>
+   <institution>SIL International</institution>
+   <institutionURL>http://www.sil.org</institutionURL>
+   <location>7500 W. Camp Wisdom Rd., Dallas, TX 75236, U.S.A.</location>
+   <synopsis>The Ethnologue data provider gives a metadata record for every
+   language entry in the Web edition of the Ethnologue.  The latter
+   provides
+   basic information about each of the 7,000+ modern language of the world
+   (both living and recently extinct).</synopsis>
+   <access>Every resource described by the Ethnologue data provider is a
+   public Web page that may be accessed without restriction. Reuse of 
+   material on the site is subject to the Terms of Use that are
+   posted.</access>
+</olac-archive>
+

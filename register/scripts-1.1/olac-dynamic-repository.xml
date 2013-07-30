@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!--
+  Schematron schema for OLAC repositories, Steven Bird 2002-12-14
+
+  This schema tests for the presence of XML elements, according to the
+  OLAC Repository document.  Validation of the content of 
+  these elements is tested elsewhere.
+
+  ChangeLog:
+
+  2005-11-29  Haejoong Lee  <haejoong@ldc.upenn.edu>
+        * Changed drafts/repositories.html to OLAC/repositories.html
+  2003-02-28  Haejoong Lee  <haejoong@ldc.upenn.edu>
+	* ListRecords pattern: removed some <report> elements as Steven
+	advised - those generates too many reports
+  2003-02-27  Haejoong Lee  <haejoong@ldc.upenn.edu>
+	* Bug fixes: <schema> tag is missing.  Reponse containers such as
+	<Identify>, <ListRecords>, etc. shouldn't be top-level elements.
+	* Namespace processing: added <ns> elements so that namespaces can
+	be processed properly - no need to remove namespace-related
+	attributes from testee xml files.
+	* ListRecord pattern: added a rule for existence of <record> element.
+	added <report> elements, which all other patterns already have.
+
+-->
+	
+<schema xmlns="http://www.ascc.net/xml/schematron">
+
+  <ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema-instance"/>
+  <ns prefix="oai" uri="http://www.openarchives.org/OAI/2.0/"/>
+  <ns prefix="olac" uri="http://www.language-archives.org/OLAC/1.1/"/>
+  <ns prefix="olac-archive" uri="http://www.language-archives.org/OLAC/1.1/olac-archive"/>
+  <ns prefix="dc" uri="http://purl.org/dc/elements/1.1/"/>
+  <ns prefix="dcterms" uri="http://purl.org/dc/terms/"/>
+
+  <pattern name="OLAC-PMH Identify requirement"
+           see="http://www.language-archives.org/OLAC/repositories.html#Identify">
+    <rule context="oai:Identify">
+      <assert test="//oai:description/olac-archive:olac-archive">ERROR: Identify: description element has no olac-archive element</assert>
+      <report test="//oai:description/olac-archive:olac-archive">Identify: description element has an olac-archive element - OK</report>
+    </rule>
+    <rule context="oai:Identify/oai:adminEmail">
+      <assert test="../oai:description/olac-archive:olac-archive/olac-archive:participant/@email=normalize-space(.)">
+        ERROR: Identify: adminEmail <value-of select="."/> doesn't appear in a participant element.
+      </assert>
+      <report test="../oai:description/olac-archive:olac-archive/olac-archive:participant/@email=normalize-space(.)">
+        Identify: adminEmail <value-of select="."/> appears in a participant element with role	<value-of select="../oai:description/olac-archive:olac-archive/olac-archive:participant[@email=normalize-space(current())]/@role"/> - OK
+      </report>
+    </rule>
+  </pattern>
+
+  <pattern name="OLAC-PMH ListMetadataFormats requirement"
+           see="http://www.language-archives.org/OLAC/repositories.html#ListMetadataFormats">
+    <rule context="oai:ListMetadataFormats">
+      <assert test="//oai:metadataFormat/oai:metadataPrefix[normalize-space(.) ='olac']">ERROR: ListMetadataFormats: olac missing</assert>
+      <report test="//oai:metadataFormat/oai:metadataPrefix[normalize-space(.) = 'olac']">ListMetadataFormats: olac present - OK</report>
+    </rule>
+    <rule context="oai:ListMetadataFormats/oai:metadataFormat">
+      <assert test="count(oai:metadataPrefix) = 1">ERROR: ListMetadataFormats: incorrect number of metadataPrefix elements</assert>
+      <report test="count(oai:metadataPrefix) = 1">ListMetadataFormats: correct number of metadataPrefix elements - OK</report>
+    </rule>
+  </pattern>
+
+  <pattern name="OLAC-PMH ListRecords requirement"
+           see="http://www.language-archives.org/OLAC/repositories.html#ListRecords">
+    <rule context="oai:ListRecords">
+      <assert test="//oai:record">ERROR: ListRecords: no record element was found</assert>
+      <report test="//oai:record">ListRecords: at least one record was found - OK</report>
+    </rule>
+    <rule context="oai:ListRecords/oai:record">
+      <assert test="count(oai:metadata) = 1">ERROR: ListRecords: a record does not have exactly one metadata element</assert>
+    </rule>
+    <rule context="oai:ListRecords/oai:record/oai:metadata">
+      <assert test="olac:olac">ERROR: ListRecords: a metadata element has no olac sub-element</assert>
+    </rule>
+  </pattern>
+
+</schema>

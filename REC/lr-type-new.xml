@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="../OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "../OLAC_doc.dtd">
+<OLAC_doc>
+  <header>
+     <status code="draft" type="recommendation"/>
+    <title>OLAC Language Resource Type Vocabulary</title>
+    <baseName>type</baseName>
+    <issued>20090105</issued>
+    <previousIssued>none</previousIssued>
+    <abstract><p>
+      This document specifies the codes, or controlled vocabulary, for the Language Resouce Type extension of the DCMI Type element. These codes describe the content of a resource from the standpoint of its use in language development or in linguistic research, including the recognized structural types of linguistic information that were a part of the OLAC 1.1 extension for Linguistic Data Type. 
+    </p></abstract>
+    <editors>
+      Gary Simons (<url>mailto:gary_simons@sil.org</url>),
+      Joan Spanne (<url>mailto:joan_spanne@sil.org</url>)
+    </editors>
+    <!-- Not sure how to treat this, since I did build on the existing Linguistic Data Type document  -->
+    <copyright>
+      Helen Aristar Dry (Eastern Michigan University),
+      Heidi Johnson (University of Texas at Austin)
+    </copyright>
+    <changes>
+      <p>This is the first release of this new vocabulary.</p>
+    </changes>
+  </header>
+
+  <body>
+    <section>
+    <heading>Introduction</heading>
+      <p>The Language Resource Type vocabulary, like its predecessor, the Linguistic Data Type vocabulary, is an extension of the Dublin Core Type element. Experience gained in applying the OLAC Linguistic Data Type extension during the 1.x stage of OLAC development showed that this conception of linguistic data type was too restrictive for many kinds of resources that need a similar kind of broad categorization, but are targeting a somwhat wider user group that includes, but is not limited to, linguistic researchers. Workers in the areas of language development, and language and culture revitalization, especially among endangered languages, have need of easy identification of resources of interest in and about such languages, that goes beyond the three basic linguistic data types, into areas of language and other educational instruction, cultural description, and development planning. </p>
+<p>Though the Language Resource Type vocabulary contains a wider array of terms than was included in Linguistic Data Type, it is still expected that it will not apply to many items described using the OLAC metadata format. Language Resource Type should be omitted if none of the following vocabulary terms applies. However, the element may be repeated if a resource represents more than one language resource type. So, for example, a primary text accompanied by a lexicon of vocabulary items would be described as both a primary text and a lexicon. A dictionary designed for language learners can be described as both lexicon and language instruction.</p>
+
+<p>
+In some cases, adequate description of a linguistic resource, particularly those of type Primary_text, will benefit from using both the Language Resource Type extension and the Discourse Type extension of the Type element. For example, a narrative text might be described as both a primary text (OLAC Linguistic Type) and a narrative (OLAC Discourse Type). The Linguistic Field vocabulary (extension for the Subject element) is also helpful for adding greater specificity. For example, a phonological description resource would be described using Language_description in the Type element (using OLAC Language Resource Type extension) and Phonology in the Subject element (using OLAC Linguistic Field extension).
+</p>
+
+<p>
+Note that a kind of resource being in a particular form, such as a machine readable structured dataset, is not specified by the Language Resource Type extension, but  should be specified using a separate instance of the Type element, applying the DCMI Type vocabulary, e.g. Dataset.  See: <cit>DC-TYPE</cit>.
+</p>
+    </section>
+<!-- These definitions are just a first attempt at the concept, not a polished definition. No attempt to separate out definition, comment, and example right now. The three existing Linguistic Data Type definitions are retained without changes, for now. -->
+<section>
+<heading>Language Resource Type</heading>
+  <p>Each term in the controlled vocabulary is described in the following subsections. The heading gives the encoded value for the term that is to be used as the value of the code attribute of the "OLAC-LanguageResource-Type" extension of the Type metadata element <cit>OLAC-MS</cit>. Under the heading, the term is described in four ways. <i>Name</i> gives a descriptive label for the term. <i>Definition</i> is a one-line summary of what the term means. <i>Comments</i> offers more details on what the term represents. Examples may also be given to illustrate how the term is meant to be applied. </p>
+  <term>
+    <code>analyzed_text</code>
+    <name>Analyzed Text</name>
+    <definition>A speechor signed language event in a form that incorporates analytical notation of the linguistic content, whether at a morphosyntactic level or a discourse level.</definition>
+  </term>
+  <term>
+    <code>basic_education</code>
+    <name>Basic Education</name>
+    <definition>A resource intended to be used for instruction in basic education subjects apart from instruction in speaking, reading, or writing the language itself, e.g. mathematics, civics, science, geography, history, health (SHOULD HEALTH BE ITS OWN?). Need to say something about why these may constitute a "language resource" for a minority / endangered language, where we would not generally want to encourage the inclusion of things like classroom textbooks in majority languages.</definition>
+  </term>
+  <term>
+    <code>language_description</code>
+    <name>Language Description</name>
+    <definition>The resource describes a language or some aspect(s) of a language via a systematic documentation of linguistic structures.</definition>
+    <comment>
+      <p> Not every resource commonly termed 'descriptive' should be described with this code; for example, a description of Zamenhof, the creator of Esperanto, would not be classified using this code. Instead, the code should be reserved for a resource that describes a language or some aspect of a language, typically in prose with interspersed examples.</p>
+      <p>The similarly named code, Language Documentation (in the Linguistic Subject extension) refers to a field of study. This category, Language Description, refers to recognized structural types of linguistic information, which are the products of the field of study, e.g., grammars and field notes.</p>
+    </comment>
+    <examples><p>Examples of descriptions include a formal grammar, a sketch grammar, field notes, a phonological sketch.</p></examples>
+  </term>
+  <term>
+    <code>language_instruction</code>
+    <name>Language Instruction</name>
+    <definition>How to learn the subject language of the resource intended for people who do not already know how to speak or read that language e.g., instruction in English as a foreign language.</definition>
+  </term>
+  <term>
+  <code>lexicon</code>
+  <name>Lexicon</name>
+  <definition>The resource includes a systematic listing of lexical items.</definition>
+  <comment><p> Lexicon may be used to describe any resource which includes a systematic listing of lexical items. Each lexical item may, but need not, be accompanied by a definition, a description of the referent (in the case of proper names), or an indication of the item's semantic relationship to other lexical items.
+  </p></comment>
+  <examples><p>Examples include word lists (including comparative word lists), thesauri,  wordnets, framenets, and dictionaries, including specialized dictionaries such as bilingual and multilingual dictionaries, dictionaries of terminology, and dictionaries of proper names. Non-word-based examples include phrasal lexicons and lexicons of intonational tunes. </p> </examples>
+  </term>
+  <term>
+    <code>literacy_instruction</code>
+    <name>Literacy Instruction</name>
+    <definition>Instructional materials designed to teach people who already know how to speak a language how also to read and write their language.</definition>
+  </term>
+  <term>
+  <code>primary_text</code>
+  <name>Primary Text</name>
+  <definition>Linguistic material which is itself the object of study, typically material in the subject language which is a performance of a speech event, or the written analog of such an event.</definition>
+  <comment>
+    <p>Primary Text is used to describe material in the subject language; it reflects a speech event, or is the written analog, and embodies linguistic features  which make it an object of analysis or research.  Typically, a primary text has temporal structure.  Most often in a primary text, the timecourse of some real or fictional linguistic event, e.g., a conversation, elicitation session, or imagined scene, is carried over into the archived artifact.</p>
+    <p>Note:  Primary_text describes the content of the resource, not the physical format.  A primary text may be recorded in different physical media, e.g. as videotaped, audiotaped, or written text.  Physical format is described using the Format element.</p>
+  </comment>
+  <examples><p>Examples of primary texts include transcribed interlinear texts, letters, (audiotaped) elicitation sessions, (videotaped) rituals or story-telling sessions, and any other recorded speech or writing which exemplifies language structure or use in such a way as to become an object of study.  When a corpus is a collection of primary texts, it should be described both as a primary text (OLAC Linguistic Type) and as a collection (DC Type).
+  </p></examples>
+  </term>
+  <term>
+    <code>transcribed_text</code>
+    <name>Transcribed Text</name>
+    <definition>The transcription (whether in written form or in oral form as an audio/video recording) of a speech event.</definition>
+  </term>
+  <term>
+    <code>translated_work</code>
+    <name>Translated Work</name>
+    <definition>A work that was not originally created in the content language of the resource, but has been translated into that language for the use of speakers of the language of translation. For example, the Universal Declaration of Human Rights of 1948 has been translated into hundreds of languages, but was originally composed with official versions in English, French and Spanish. For those hundreds of other languages, the text is a translated work.</definition>
+  </term>
+  
+</section>
+</body>
+
+<references>
+  <ref abbrev="DC-TYPE">Dublin Core Type Vocabulary.<br/>
+    &lt;<url>http://dublincore.org/usage/terms/dcmitype/</url>&gt;</ref>
+
+  <ref abbrev="OLAC-MS">OLAC Metadata Set.<br/>
+    &lt;<url>http://www.language-archives.org/OLAC/olacms.html</url>&gt;</ref>
+</references>
+</OLAC_doc>

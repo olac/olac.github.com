@@ -1,0 +1,196 @@
+<!--XML DTD for an OLAC repository. In a single XML document, the
+repository is identified and all the metadata records are supplied.
+
+G. Simons, 28 June 2001
+
+(For a reason I don't understand, my DTD editor has decided to output
+all the ATTLISTs in alphabetical order, and then the ELEMENT declarations.)
+-->
+
+<!ATTLIST contributor
+               lang  CDATA    #IMPLIED 
+               refine (Author | Editor | Transcriber | Sponsor | Informant)  
+                #IMPLIED  >
+
+<!ATTLIST coverage
+               lang  CDATA    #IMPLIED  >
+
+<!ATTLIST creator
+               lang  CDATA    #IMPLIED 
+               refine (Author | Editor | Transcriber | Sponsor | Informant)  
+                #IMPLIED  >
+
+<!ATTLIST date
+               lang  CDATA    #IMPLIED 
+               refine (Created | Valid | Available | Issued | Modified)   #IMPLIED 
+               code  CDATA    #IMPLIED  >
+
+<!ATTLIST description
+               lang  CDATA    #IMPLIED  >
+
+<!ATTLIST format
+               lang  CDATA    #IMPLIED 
+               code  CDATA    #IMPLIED  >
+
+<!ATTLIST format.cpu
+               lang  CDATA    #IMPLIED 
+               code (x86 | mips | alpha | ppc | sparc | 680x0)   #IMPLIED  >
+
+<!ATTLIST format.encoding
+               lang  CDATA    #IMPLIED 
+               code  CDATA    #IMPLIED  >
+
+<!ATTLIST format.markup
+               lang  CDATA    #IMPLIED  >
+
+<!ATTLIST format.os
+               lang  CDATA    #IMPLIED 
+               code  CDATA    #IMPLIED  >
+
+<!ATTLIST format.sourcecode
+               lang  CDATA    #IMPLIED 
+               code (C | BASIC | Prolog | Pascal | Java | Perl | Python | Tcl | 
+               Fortran | SmallTalk | COBOL | shell | Lisp | Modula | SNOBOL | SQL)  
+                #IMPLIED  >
+
+<!ATTLIST identifier
+               lang  CDATA    #IMPLIED  >
+
+<!ATTLIST language
+               lang  CDATA    #IMPLIED 
+               code (AAA)   #IMPLIED  >
+
+<!ATTLIST olac
+               lang  CDATA    #IMPLIED  >
+
+<!ATTLIST publisher
+               lang  CDATA    #IMPLIED  >
+
+<!ATTLIST relation
+               lang  CDATA    #IMPLIED 
+               refine  CDATA    #IMPLIED  >
+
+<!ATTLIST rights
+               lang  CDATA    #IMPLIED 
+               code  CDATA    #IMPLIED  >
+
+<!ATTLIST source
+               lang  CDATA    #IMPLIED  >
+
+<!ATTLIST subject
+               lang  CDATA    #IMPLIED  >
+
+<!ATTLIST subject.language
+               lang  CDATA    #IMPLIED 
+               code  CDATA    #IMPLIED  >
+
+<!ATTLIST title
+               lang  CDATA    #IMPLIED  >
+
+<!ATTLIST type
+               lang  CDATA    #IMPLIED 
+               code  CDATA    #IMPLIED  >
+
+<!ATTLIST type.data
+               lang  CDATA    #IMPLIED 
+               code  CDATA    #IMPLIED  >
+
+<!ATTLIST type.functionality
+               lang  CDATA    #IMPLIED 
+               code  CDATA    #IMPLIED  >
+
+<!ATTLIST spec
+               lang  CDATA    #IMPLIED  >
+
+
+<!--XML DTD for an OLAC repository. In a single XML document, the
+repository is identified and all the metadata records are supplied.
+
+G. Simons, 28 June 2001
+-->
+<!ELEMENT OLAC-Repository  (identity,sets,records) >
+
+<!ELEMENT adminEmail  (#PCDATA) >
+
+<!ELEMENT collectionDescription  (#PCDATA) >
+
+<!ELEMENT contributor  (#PCDATA) >
+
+<!ELEMENT coverage  (#PCDATA) >
+
+<!ELEMENT creator  (#PCDATA) >
+
+<!ELEMENT date  (#PCDATA) >
+
+<!ELEMENT datestamp  (#PCDATA) >
+
+<!ELEMENT description  (#PCDATA) >
+
+<!ELEMENT format  (#PCDATA) >
+
+<!ELEMENT format.cpu  (#PCDATA) >
+
+<!ELEMENT format.encoding  (#PCDATA) >
+
+<!ELEMENT format.markup  (#PCDATA) >
+
+<!ELEMENT format.os  (#PCDATA) >
+
+<!ELEMENT format.sourcecode  (#PCDATA) >
+
+<!ELEMENT header  (recordId,datestamp) >
+
+<!ELEMENT identifier  (#PCDATA) >
+
+<!ELEMENT identity  (repositoryIdentifier,repositoryName,adminEmail,
+               collectionDescription) >
+
+<!ELEMENT language  (#PCDATA) >
+
+<!ELEMENT metadata  (olac) >
+
+<!ELEMENT olac  (contributor* | coverage* | creator* | date* | description* | 
+               format* | format.cpu* | format.encoding* | format.markup* | 
+               format.os* | format.sourcecode* | identifier* | language* | 
+               publisher* | relation* | rights* | source* | subject* | 
+               subject.language* | title* | type* | type.data* | type.functionality*)* >
+
+<!ELEMENT publisher  (#PCDATA) >
+
+<!ELEMENT record  (header,metadata) >
+
+<!ELEMENT recordId  (#PCDATA) >
+
+<!ELEMENT records  (record*) >
+
+<!ELEMENT relation  (#PCDATA) >
+
+<!ELEMENT repositoryIdentifier  (#PCDATA) >
+
+<!ELEMENT repositoryName  (#PCDATA) >
+
+<!ELEMENT rights  (#PCDATA) >
+
+<!ELEMENT set  (setSpec,setName)* >
+
+<!ELEMENT setName  (#PCDATA) >
+
+<!ELEMENT setSpec  (#PCDATA) >
+
+<!ELEMENT sets  (set*) >
+
+<!ELEMENT source  (#PCDATA) >
+
+<!ELEMENT subject  (#PCDATA) >
+
+<!ELEMENT subject.language  (#PCDATA) >
+
+<!ELEMENT title  (#PCDATA) >
+
+<!ELEMENT type  (#PCDATA) >
+
+<!ELEMENT type.data  (#PCDATA) >
+
+<!ELEMENT type.functionality  (#PCDATA) >
+
+

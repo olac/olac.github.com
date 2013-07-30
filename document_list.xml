@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="document_headers.xsl" type="text/xsl"?>
+
+<!-- OLAC Document List
+       Last updated: 4 Feb 2012 
+
+This list must now maintain latest dates, just like the MAKEFILEs.
+-->
+<documents>
+  <list>
+      <!-- Now adopted but soon to be superseded.  Remove when superseded -->
+      <!--document href="OLAC/metadata-20060405.xml"/-->
+      <!--document href="OLAC/repositories-20030917.xml"/-->
+     <!-- When an adopted document is in the process of being
+        superseded, we must list the adopted version and the latest
+        version in the process -->
+      
+      <document href="OLAC/metadata-20080531.xml"/>
+      <document href="OLAC/repositories-20080728.xml"/>
+      <document href="OLAC/process-20060405.xml"/>
+      <document href="OLAC/olacms-20011022.xml"/>
+      <document href="OLAC/protocol-20021209.xml"/>
+      
+      <document href="REC/access-20021119.xml"/>
+      <document href="REC/bpr-20080711.xml"/>
+      <document href="REC/discourse-20120204.xml"/>
+      <document href="REC/field-20060406.xml"/>
+      <document href="REC/language-20080222.xml"/>
+      <document href="REC/olac-extensions-20080222.xml"/>
+      <document href="REC/role-20060406.xml"/>
+      <document href="REC/type-20060406.xml"/>
+
+      <document href="NOTE/metrics-20090629.xml"/>
+      <document href="NOTE/olac_display-20090723.xml"/>
+      <document href="NOTE/query-20030729.xml"/>
+      <document href="NOTE/third-party-extensions-20021204.xml"/>
+      <document href="NOTE/toolbox-20060928.xml"/>
+      <document href="NOTE/usage-20080711.xml"/>
+      <document href="NOTE/viser-20030729.xml"/>
+
+  </list>
+  <textBlocks>
+    <typeIntro>
+      <p>This index lists all documents that are current within the OLAC document process. They are listed by type. See also <a href="documents_by_status.html">OLAC documents by status</a> and <a href="documents_by_date.html">OLAC documents by date</a>, which include documents that have been retired or withdrawn.</p>
+    </typeIntro>
+    <statusIntro>
+      <p>This index lists all documents that have come under the OLAC document process. They are listed by current status in the process. See also <a href="documents.html">OLAC documents by type</a> and <a href="documents_by_date.html">OLAC documents by date</a>.</p>
+    </statusIntro>
+    <dateIntro>
+      <p>This index lists all documents that have come under the OLAC document process. They are listed by latest date of revision, beginning with the most recent. See also <a href="documents.html">OLAC documents by type</a> and <a href="documents_by_status.html">OLAC documents by status</a>.</p>
+    </dateIntro>
+    <processRef>
+      <p>
+        <small>N.B. See the <a href="OLAC/process.html">OLAC Process</a> document for an explanation of the document types, status levels, and review process.</small>
+      </p>
+    </processRef>
+  </textBlocks>
+  <byType>
+    <section>
+      <heading>Standards</heading>
+      <intro>OLAC Standards specify how the Open Language Archives Community operates.</intro>
+    </section>
+    <section>
+      <heading>Recommendations</heading>
+      <intro>OLAC Recommendations express the consensus of members of the Open Language Archives Community regarding various aspects of language resource archiving.</intro>
+    </section>
+    <section>
+      <heading>Notes</heading>
+      <intro>OLAC Notes offer background information and helps for implementors of language archives.</intro>
+    </section>
+  </byType>
+  <byStatus>
+    <section>
+      <heading>Adopted</heading>
+      <intro>An adopted document has run all the way through the 
+OLAC document review process and been accepted for publication as an OLAC
+document by the OLAC Council.</intro>
+    </section>
+    <section>
+      <heading>Candidate</heading>
+      <intro>A candidate document has been accepted in principle by the
+OLAC Council but is currently in a period of implementation and testing by the community.
+Final adoption awaits the successful outcome of implementation. </intro>
+    </section>
+    <section>
+      <heading>Proposed</heading>
+      <intro>A proposed document is considered ready for publication by its
+developers and is now in the midst of open peer review by the entire community.</intro>
+    </section>
+    <section>
+      <heading>Draft</heading>
+      <intro>A draft document is still in the process of being written by its
+original developers and has not yet been put forward for review by the community.</intro>
+    </section>
+    <section>
+      <heading>Retired</heading>
+      <intro>A retired document is one that once had Adopted status, but has 
+now become obsolete (such as by being superseded by a newer document).</intro>
+    </section>
+    <section>
+      <heading>Withdrawn</heading>
+      <intro>A withdrawn document is one that was removed from the document
+process before attaining Adopted status, either because it was superseded 
+by a newer document or failed to gain final acceptance.</intro>
+    </section>
+  </byStatus>
+  <pageBanner>
+    <div>
+      <!-- BEGIN BANNER -->
+      <table border="0" cellpadding="5" cellspacing="0" width="100%" class="banner">
+        <tr>
+          <!-- main olac icon -->
+          <td align="left">
+            <img src="images/olac100.gif"/>
+          </td>
+          <!-- rest of banner -->
+          <td>
+            <table class="banner" cellspacing="0" width="100%">
+              <!-- title: spans banner -->
+              <tr>
+                <td class="title" colspan="2">
+                  <b>
+                    <big>
+                      <big>OLAC: Open Language Archives Community</big>
+                    </big>
+                  </b>
+                </td>
+              </tr>
+              <!-- underneath: the navigation block and search function -->
+              <tr>
+                <td/>
+              </tr>
+              <tr>
+                <!-- navigation block -->
+                <td align="center">
+                  <table class="banner">
+                    <tr>
+                      <td class="sec">
+                        <a href="index.html">HOME</a>
+                      </td>
+                      <td>|</td>
+                      <td class="sec">
+                        <font color="#ff9090">
+                          <b>DOCUMENTS</b>
+                        </font>
+                      </td>
+                      <td>|</td>
+                      <td class="sec">
+                        <a href="about.html">ABOUT</a>
+                      </td>
+                      <td>|</td>
+                      <td class="sec">
+                        <a href="archives.php4">ARCHIVES</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="sec">
+                        <a href="news.html">NEWS</a>
+                      </td>
+                      <td>|</td>
+                      <td class="sec">
+                        <a href="organization.html">ORGANIZATION</a>
+                      </td>
+                      <td>|</td>
+                      <td class="sec">
+                        <a href="tools.html">TOOLS</a>
+                      </td>
+                      <td>|</td>
+                      <td class="sec">
+                        <a href="services.php4">SERVICES</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <!-- search function -->
+                <td class="sec" align="right" valign="top">
+                  <form method="get" action="http://www.google.com/search">
+                    <table class="banner">
+                      <tr>
+                        <td class="sec">SEARCH THIS SITE:<br/>
+                          <font size="-1">
+                            <input type="text" size="20" maxlength="40" name="q" value=""/>
+                          </font>
+                          <input type="hidden" name="sitesearch" value="www.language-archives.org"/>
+                        </td>
+                      </tr>
+                    </table>
+                  </form>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END OF BANNER -->
+    </div>
+  </pageBanner>
+</documents>

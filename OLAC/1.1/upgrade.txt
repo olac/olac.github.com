@@ -1,0 +1,23 @@
+
+NOTES ON UPGRADING FROM OLAC 1.0 to 1.1
+
+G. Simons, 26 Jan 2008
+
+We will need a proper document to give people guidance. This file just contains notes about waht that document needs to contain.
+
+In <Repository> for a static repository, change
+xmlns:olac="http://www.language-archives.org/OLAC/1.0/" to 1.1
+Also in <olac-archive>
+Twice in the <oai:metadataFormat> description
+
+In the schemaLocation attribute there are three instance of 1.0 to change to 1.1.
+
+
+
+THINGS TO FIX TO FINALIZE the SCHEMAS
+
+The svn repository schemaLocation is multiple times in:
+    static-repository.xml
+    OLAC-PMH.xsd
+    static-repository.xsd
+

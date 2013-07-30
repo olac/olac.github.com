@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc>
+  <header>
+    <status code="draft" type="implementation"/>
+    <title>Creating OLAC Records and Repositories in Toolbox</title>
+    <baseName>toolbox</baseName>
+    <issued>20060928</issued>
+    <previousIssued/>
+    <abstract>
+      <p>This Note presents a framework for creating OLAC static repositories from a collections of records created and maintained as a Toolbox database.</p>
+    </abstract>
+    <editors>Tom Myers, N-Topus Software
+        (<url>mailto:mailto:tom@n-topus.com</url>)<br/>
+Alexander Nakhimovsky, Colgate University (<url>mailto:adnakhimovsky@colgate.edu</url>)</editors>
+    <copyright>2006 Tom Myers and Alexander Nakhimovsky
+      </copyright>
+    <changes/>
+  </header>
+  <body>
+    <section>
+      <heading>Overview</heading>
+      <p>This Note presents a framework
+for creating OLAC records and static
+repositories in Toolbox. The framework consists of the following
+components:</p>
+      <ul>
+        <li>
+          <p>A
+Toolbox project (<url>http://localhost:8080/tbox/OLAC_in_Toolbox_Generic.zip</url>), created
+by Joan Spanne of SIL, that can serve
+as a template for creating OLAC records.</p>
+        </li>
+        <li>
+          <p>A program called BoxReader
+that converts Toolbox files into XML
+(XHTML, to be precise) without loss of information. BoxReader can
+operate on a wide range of Toolbox data files, as long as they are
+accompanied by the matching .typ files.</p>
+        </li>
+        <li>
+          <p>XSLT stylesheets that
+convert the output of BoxReader into an
+OLAC repository.</p>
+        </li>
+        <li>
+          <p>An HTML file, index.html,
+with forms for submitting Toolbox files
+and running the software (BoxReader and XSLT files). This file also
+serves as the User Guide. The User-Guide portion of the page is
+reproduced in the final section of this Note.</p>
+        </li>
+      </ul>
+      <p>To create OLAC metadata in
+Toolbox, you only need to download Joan
+Spanne's project. The software
+can be run remotely from <url>http://csproj2.colgate.edu:8080/tbox</url> or you can run it on your own
+computer after installing the Tomcat
+web server. (Note that the computer <i>does
+not to have to be
+connected to the
+Internet</i>, but it does need
+Tomcat installed.) Both Tomcat and
+BoxReader are written in Java, so Java also needs to be installed.
+After installing Java and Tomcat, download and install the
+that
+contains all the software. The rest
+of this Note provides
+installation instructions and a user
+guide. If you would like to see the
+transformations of Joan Spanne's example, go directly to <url>http://csproj2.colgate.edu:8080/tbox20060906/</url>
+and run it as a demo.</p>
+    </section>
+    <section>
+      <heading>The Computing Platform</heading>
+      <p>The platform consists of two
+big enabling components: Java and
+Tomcat.</p>
+      <subsection>
+        <subheading>Java</subheading>
+        <p>Start by checking whether you
+have Java on your computer, and if so,
+what version.</p>
+        <p> On Windows. go Start -
+Settings - Control Panel. If there is no
+Java control panel, you need to install Java. If there is such a panel,
+open it, select the General tab, click About. If the version is earlier
+than 1.5.0, you do have to install Java.</p>
+        <p>Java installers can be
+downloaded from the
+Sun J2SE download page (<url>http://java.sun.com/javase/downloads/index.jsp</url>). The page
+has a help
+link at <url>http://java.sun.com/downloads/faq.html</url>.
+Since we use JSP (JavaServer Pages) in our code, you must download and
+install the JDK, not JRE. Install the latest update, but probably not
+the one that included Netbeans or JavaEE.
+</p>
+        <p>Once you have installed Java or
+established that you already have an
+adequate version, you need to create the JAVA_HOME environment
+variable, pointing to the directory where you have installed Java.</p>
+      </subsection>
+      <subsection>
+        <subheading>Tomcat</subheading>
+        <p>Tomcat's main web page is <url>http://tomcat.apache.org/</url>.
+It has links to both
+Download and Documentation pages. Within the current documentation (August 2006, version 5.5, <url>http://tomcat.apache.org/tomcat-5.5-doc/setup.html</url>) there is a setup section
+giving setup directions for Windows
+and several versions of Unix. Follow the directions so that Tomcat
+starts automatically every time your restart your computer.</p>
+        <p>Installing Tomcat on the OS X
+Macintosh is slightly more involved.
+Official but seriously dated instructions can be found at Java
+and Tomcat on Mac OS X, Part I (<url>http://developer.apple.com/internet/java/tomcat1.html</url>) and Java
+and Tomcat on Mac OS X, Part II (<url>http://developer.apple.com/internet/java/tomcat2.html</url>). One problem is that a version of Java adequate for Tomcat is not
+necessarily adequate for the OLAC webapp; so far as we know, you cannot
+upgrade your Java to 1.5.0 or better (confusingly known as J2SE 5.0) unless your OS X is upgraded to 10.4 or better. If you have OS 10.4 but not Java 1.5.0, you can download the
+Java upgrade from Apple's Developer Connection Java
+downloads (<url>http://developer.apple.com/java/download/</url>). We used Ben Slade's Instructions for Installing Java, Tomcat, and MySQL on Mac OS X 10.4.x (<url>http://www.benslade.com/projects/java/tomcat/InstallingJavaTomcatMySQLOnMacOSX/</url>) without great difficulty.</p>
+      </subsection>
+      <subsection>
+        <subheading>BoxReader</subheading>
+        <p>Once Tomcat is installed, place
+the tbox.war file into Tomcat's
+subdirectory called webapps. Tomcat will automatically recognize it and
+unpack it into a subdirectory of webapps called tbox. This completes
+the installation.</p>
+      </subsection>
+    </section>
+    <section>
+      <heading>Instructions on Use</heading>
+      <p>The process of converting
+metadata created in Toolbox
+into an OLAC static repository goes through two steps. In
+the first step, Toolbox-created metadata is converted into
+an XML document containing a collection of metadata records.
+The records are in the correct OLAC format, but the entire
+collection is not an OLAC-conformant repository. We make
+this a separate step in case you want to copy and paste the
+records into a repository that already exists. In the second
+step, the output of the first step is converted into a full-fledged
+static repository. An important part of the second step is the process
+of entering your OLAC headers, such as the repository name, its base
+URL, the name of the curator(s), and so on. (See below subsection on
+Customizations.)</p>
+      <p>At <url>http://csproj2.colgate.edu:8080/tbox</url>
+we provide a form for each step so you can specify the
+input files. They can be specified in two ways: by providing
+a URL or by pasting the contents of the input file into a
+text area. If the URL input box is not empty then the URL is
+used, otherwise the contents of the text area are used.</p>
+      <p>If you simply click the submit
+buttons of Forms 1 and 2, you
+will see the demo we have prepared. If you want to use the software
+to create and convert your own metadata files, there are three
+options:</p>
+      <ul>
+        <li>
+          <p>Create your own Tomcat
+installation as explained above.</p>
+        </li>
+        <li>
+          <p>Place your data files on a
+web server and provide URLs.</p>
+        </li>
+        <li>
+          <p>If you only want to make
+changes in the Toolbox project, you can open your .db and/or .typ files
+in a text editor and copy-paste into the appropriate text areas of the
+forms.</p>
+        </li>
+      </ul>
+      <p>For additional detail and a demo, go to the csproj2.colgate.edu
+site. As the site explains, an important part of the process is</p>
+    </section>
+    <section>
+      <heading>Customizations</heading>
+      <p>The example we show in our demo identifies
+the static repository as belonging to
+N-topus Software, with our own email addresses. These values are
+defined within a listing of lookup:strings at the top of the <tt>repository.xsl</tt> file,
+and can easily be edited in a plain text editor. (Only the values, not
+markup, need to be changed.) Here are the lines to be edited:</p>
+      <eg>&lt;lookup:strings&gt;<br/>  &lt;lookup:string id='repositoryName'&gt;Virtual Toolbox-Sample Archive&lt;/lookup:string&gt;<br/>  &lt;lookup:string id='baseURL'&gt;http://www.n-topus.com/nsf/toolbox/sample/olac-records.xml&lt;/lookup:string&gt;<br/>  &lt;lookup:string id='protocolVersion'&gt;2.0&lt;/lookup:string&gt;<br/>  &lt;lookup:string id='adminEmail'&gt;mailto:tom@n-topus.com&lt;/lookup:string&gt;<br/>  &lt;lookup:string id='earliestDatestamp'&gt;2006-05-03&lt;/lookup:string&gt;<br/>  &lt;lookup:string id='deletedRecord'&gt;no&lt;/lookup:string&gt;<br/>  &lt;lookup:string id='granularity'&gt;YYYY-MM-DD&lt;/lookup:string&gt;<br/>  &lt;lookup:string id='repositoryIdentifier'&gt;sample.toolbox.nsf.n-topus.com&lt;/lookup:string&gt;<br/>  &lt;lookup:string id='sampleIdentifier'&gt;oai:sample.toolbox.nsf.n-topus.com:01&lt;/lookup:string&gt;<br/>  &lt;lookup:string id='archiveURL'&gt;http://www.n-topus.com/nsf/toolbox/sample/&lt;/lookup:string&gt;<br/>  &lt;lookup:string id="curator"&gt;Tom Myers, Alexander D. Nakhimovsky&lt;/lookup:string&gt;<br/>  &lt;lookup:string id="curatorTitle"&gt;&lt;/lookup:string&gt;<br/>  &lt;lookup:string id="curatorEmail"&gt;mailto:tom@n-topus.com&lt;/lookup:string&gt;<br/>  &lt;lookup:string id="institution"&gt;N-Topus Software&lt;/lookup:string&gt;<br/>  &lt;lookup:string id="institutionURL"&gt;http://www.n-topus.com/&lt;/lookup:string&gt;<br/>  &lt;lookup:string id="shortLocation"&gt;Hamilton, NY, USA&lt;/lookup:string&gt;<br/>  &lt;lookup:string id="location"&gt;56 Payne Street, Hamilton NY 13346, USA &lt;/lookup:string&gt;<br/>  &lt;lookup:string id="synopsis"&gt;This Virtual Toolbox-Sample Archive contains materials assembled from<br/>    Toolbox projects within subdirectories of a web application.<br/>  &lt;/lookup:string&gt;<br/>  &lt;lookup:string id="access"&gt;Access control is determined by server configuration (e.g., web.xml files). &lt;/lookup:string&gt;<br/>&lt;/lookup:strings&gt;</eg>
+      <p>One further customization concerns the value of the baseURL string.
+This value can be replaced with the dynamic URL that invokes the
+repository.xsl program. When you click the CreateOLAC button, it
+connects to this dynamic URL:</p>
+      <eg>http://csproj2.colgate.edu:8080/tbox20060904/xslt.jsp?<br/>xml=olac%2FOLAC_naskapi_db.xml&amp;xsl=repository.xsl&amp;<br/>mimeType=text%2Fxml%3Bcharset%3DUTF-8
+</eg>
+      <p>The hostname on that URL will naturally be your hostname, where
+you're running Tomcat.
+Consider the segment of the URL between the ? and the first &amp;
+character. It specifies the subdirectory name and the name of your XML
+file that you saved in Step 1. If you replace this segment with your
+own values, and further replace the baseURL value with the revised
+dynamic URL, the static repository
+will change automatically any time the underlying XML file changes.
+(The underlying
+XML presumably will change when you edit your Toolbox .db file and go
+through Step 1, replacing the
+previous XML file.)</p>
+    </section>
+    <section>
+      <heading>Acknowledgements</heading>
+      <p>We are grateful to Joan
+Spanne's of SIL for sharing her work with us
+and to Gary Simons of SIA for comment and advice. Work on this paper
+was partially supported by the NSF grant #0553546 under the Documenting
+Endangered Languages program. </p>
+    </section>
+  </body>
+</OLAC_doc>

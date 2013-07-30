@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="../OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "../OLAC_doc.dtd">
+<OLAC_doc>
+   <header>
+      <status code="draft" type="implementation"/>
+      <title>A MARC-to-OLAC Crosswalk</title>
+      <baseName>marc</baseName>
+      <issued>20090428</issued>
+      <previousIssued/>
+      <abstract>
+         <p>Describes the installation, configuration, and operation
+            of a crosswalk for converting a MARC record collection
+            into a static repository that complies with the
+            <cit>OLAC-Repositories</cit> standard.</p>
+      </abstract>
+      
+      <editors>Christopher Hirt, SIL International and Graduate Institute of Applied Linguistics
+         (<url>mailto:chris_hirt@sil.org</url>) <br/>Gary Simons, SIL International and Graduate Institute of Applied Linguistics
+         (<url>mailto:gary_simons@sil.org</url>) <br/>Joan Spanne, SIL International
+         (<url>mailto:joan_spanne@sil.org</url>)</editors>
+      <copyright>2009 Christopher Hirt (SIL International and Graduate Institute of Applied Linguistics),
+         Gary Simons (SIL International and Graduate Institute of Applied Linguistics), and Joan Spanne (SIL International)</copyright>
+      <changes> </changes>
+   </header>
+   <body>
+      <section>
+         <heading>Introduction</heading>
+         <p>This note describes a system for transforming the MARC21
+            catalog for a library or archive into a static repository
+            that holds an OLAC metadata record for each MARC record
+            identified as describing a language resource. The
+            MARC-to-OLAC crosswalk adds two tasks to a general
+            MARC-to-DC crosswalk. First, we require a filtering step
+            to determine whether a record describes a language
+            resource. Second, if it does, we must extract the
+            specialized metadata that facilitates language resource
+            discovery. A fairly narrow subset of Library of Congress
+            Subject Headings (LCSH) is used in cataloging language
+            resources. The simple existence of the word “language” in
+            subfield $a of an entry element is the main clue;
+            institution-specific cata¬loging policies may also prove
+            relevant. If it contains one or more of these clues, a
+            record passes through the filter stage. Then a
+            transformation stage applies specialized mappings for
+            identifying languages and the type of a language resource.
+            OLAC metadata uses ISO 639-2/3
+            [http://www.sil.org/iso639-3/] as an encoding scheme for
+            precise identification of languages We have thus mapped
+            LCSH “language names” to their corresponding ISO 639
+            identifiers for use with DC:Language and OLAC’s “language
+            as subject” extension of DC:Subject. Specific LCSH terms
+            are also mapped to OLAC’s linguistic resource type
+            vocabulary applied as an extension to DC:Type. </p>
+         <p>The crosswalk is implemented with a series of XSL
+            transforma¬tions driven by a Python wrapper script. The
+            Python script applies the transformations in batches and
+            is thereby able to process gigabytes of MARC data with
+            minimal memory requirements. The preliminary filtering
+            step is configured by specifying tests on any MARC field
+            or subfield with simple string comparison. We use a
+            two-stage filtering process in which the first stage (the
+            “select stage”) uses tests to select the maximal set of
+            MARC records to be considered for inclusion in the OLAC
+            repository, while the second stage (the “reject stage”)
+            uses tests to reject records that are in fact not wanted.
+            The resulting record set is then transformed from MARC XML
+            to OLAC’s XML-based format by means of an XSL stylesheet
+            that defines an &lt;xsl:template> for each MARC field.
+            An optional stylesheet is called to apply overriding
+            institution-specific mappings. The complete source code
+            and data tables for the crosswalk (including the LCSH to
+            ISO 639-3 mappings) are being shared on an open-source
+            basis.</p>
+      </section>
+      <section>
+         <heading>Installation</heading>
+         <p></p>
+      </section>
+      <section>
+         <heading>Configuring the language resource filter</heading>
+         <p>
+         </p>
+      </section>
+      <section>
+         <heading>Configuring the OLAC archive description</heading>
+         <p> </p>
+      </section>
+      <section>
+         <heading>Configuring the MARC-to-OLAC mapping</heading>
+         <p> </p>
+      </section>
+      <section>
+         <heading>Running the crosswalk</heading>
+         <p> </p>
+      </section>
+      
+
+   </body>
+   <references>
+     
+      <ref abbrev="HSS_2009">Building a MARC-to-OLAC Crosswalk: 
+         Repurposing Library Catalog Data for the 
+         Language Resources Community, by Christopher Hirt, Gary
+         Simons, and Joan Spanne. <i>Proceedings of the Joint
+            Conference on Digital Libraries, 15–19 June 2009, Austin, Texas, USA</i>
+         <br/>
+         &lt;<url>http://www.oxygenxml.com/download.html</url>&gt;</ref>
+      
+      <ref abbrev="OLAC-Repositories">OLAC Repositories.
+         <br/>&lt;<url>http://www.language-archives.org/OLAC/repositories.html</url>&gt;</ref>
+      
+   </references>
+
+</OLAC_doc>

@@ -1,0 +1,44 @@
+#
+# CVS Info: $Header: /cvsroot/olac/olac_suite/mu_tools/lib/searchTables.sql,v 1.2 2004/12/06 00:22:11 badenh Exp $
+#
+
+
+CREATE TABLE TAG_USAGE (
+	Tag_ID int(11) not null,
+	Percent double(3,2) default null,
+	Rank int(2) not null,
+	PRIMARY KEY(Tag_ID)
+);
+
+CREATE TABLE ITEM_SCORES
+(
+	Item_ID int(11) not null,
+	Item_Score int(1) default '0',
+	PRIMARY KEY (Item_ID)
+);
+
+CREATE TABLE SOUNDEX_TABLE (
+   SoundexValue varchar(25) NOT NULL,
+   Word varchar(40) NOT NULL,
+   PRIMARY KEY (SoundexValue, Word)
+);
+
+
+CREATE INDEX SOUNDEX_INDEX ON SOUNDEX_TABLE(SoundexValue);
+
+CREATE TABLE LanguageSoundex 
+SELECT li.*, SUBSTRING(SOUNDEX(li.Name) , 1, 4) as SoundexValue
+FROM LanguageIndex li;
+
+CREATE INDEX LangSoundexIndex on LanguageSoundex(SoundexValue);
+
+CREATE TABLE METADATA_ELEM_MYISAM CHARSET=UTF8 SELECT * from METADATA_ELEM;
+ALTER TABLE METADATA_ELEM_MYISAM ADD PRIMARY KEY (Element_ID);
+CREATE INDEX METADATA_ELEM_INDEX on METADATA_ELEM_MYISAM (Item_ID, Tag_ID);
+CREATE INDEX METADATA_ELEM_INDEX_EX on METADATA_ELEM_MYISAM (Extension_ID);
+CREATE INDEX METADATA_ELEM_INDEX_CODE on METADATA_ELEM_MYISAM (Code);
+CREATE INDEX METADATA_ELEM_INDEX_TYPE on METADATA_ELEM_MYISAM (Type);
+CREATE INDEX METADATA_ELEM_INDEX_TAGNAME on METADATA_ELEM_MYISAM (TagName);
+CREATE FULLTEXT INDEX METADATA_ELEM_INDEX_CONTENT on METADATA_ELEM_MYISAM (Content);
+
+ALTER TABLE LanguageSoundex ADD FULLTEXT langSoundexNameIndex (Name);

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:olac="http://www.language-archives.org/OLAC/0.4/"
+        targetNamespace="http://www.language-archives.org/OLAC/0.4/"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+
+  <annotation>
+    <documentation>
+      Schema for the OLAC Repository in XML (ORyX) Format
+      Steven Bird, 2002-01-10
+
+      Schema validated at http://www.w3.org/2001/03/webdata/xsv
+      XSV 1.204/1.109 of 2001/10/03 21:06:42
+
+      Added sampleIdentifier element and removed repositoryIdentifier
+      2002-03-01
+
+      Based on the olacrep DTD by Gary Simons (2001-06-28)
+
+    </documentation>
+  </annotation>
+
+  <include schemaLocation="http://www.language-archives.org/OLAC/0.4/olac.xsd"/>
+  <include schemaLocation="http://www.language-archives.org/OLAC/0.4/olac-archive.xsd"/>
+
+
+  <simpleType name="OAI-Id">
+    <restriction base="string">
+      <pattern value="[a-zA-Z0-9]+"/>  <!-- OAI identifier -->
+    </restriction>
+  </simpleType>
+
+
+  <element name="OLAC-Repository" type="olac:ORyX"/>
+
+  <complexType name="ORyX">
+    <complexContent>
+      <restriction base="anyType">
+        <sequence>
+          <element name="identity" type="olac:identity"/>
+          <element name="sets" type="olac:sets"/>
+          <element name="records" type="olac:records"/>
+        </sequence>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+  <complexType name="identity">
+    <complexContent>
+      <restriction base="anyType">
+        <sequence>
+          <element name="repositoryName" type="string"/>
+          <element name="repositoryIdentifier" type="olac:OAI-Id"/>
+          <element name="adminEmail" type="olac:mailto"/>
+          <element name="sampleIdentifier" type="olac:OAI-Ref"/>
+          <element name="olac-archive" type="olac:olac-archive"/>
+        </sequence>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+  <complexType name="sets">
+    <complexContent>
+      <restriction base="anyType">
+        <choice minOccurs="0" maxOccurs="unbounded">
+          <element name="set" type="olac:set"/>
+        </choice>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+  <complexType name="set">
+    <complexContent>
+      <restriction base="anyType">
+        <sequence>
+          <element name="setSpec" type="NMTOKEN"/>
+          <element name="setName" type="string"/>
+        </sequence>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+  <complexType name="records">
+    <complexContent>
+      <restriction base="anyType">
+        <choice minOccurs="0" maxOccurs="unbounded">
+          <element name="record" type="olac:record"/>
+        </choice>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+  <complexType name="record">
+    <complexContent>
+      <restriction base="anyType">
+        <sequence>
+          <element name="header" type="olac:header"/>
+          <element name="metadata" type="olac:metadata"/>
+        </sequence>
+        <attribute name="spec" use="optional" type="NMTOKEN"/>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+  <complexType name="header">
+    <complexContent>
+      <restriction base="anyType">
+        <sequence>
+          <element name="recordId" type="string"/>
+          <element name="datestamp" type="date"/>
+        </sequence>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+  <complexType name="metadata">
+    <complexContent>
+      <restriction base="anyType">
+        <sequence>
+          <element name="olac" type="olac:OLACMS"/>
+        </sequence>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+</schema>

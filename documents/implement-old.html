@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad//DTD HoTMetaL PRO 5.0::19980907::extensions to HTML 4.0//EN" "hmpro5.dtd">
+ 
+<HTML>
+ 
+<HEAD>
+<TITLE>How to Become an OLAC Data Provider</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<LINK REL="stylesheet" TYPE="text/css" HREF="../olac.css"> 
+</HEAD>
+ 
+<BODY>
+<HR>
+<TABLE CELLPADDING="10">
+<TR>
+<TD> <A HREF="http://www.language-archives.org/"><IMG
+SRC="http://www.language-archives.org/images/olac100.gif" BORDER="0"></A></TD>
+<TD> <H1><FONT COLOR="0x00004a"> How to Become an OLAC Data Provider </FONT>
+</H1>
+</TD>
+</TR>
+</TABLE>
+<HR>
+<P> The Open Language Archives Community seeks to embrace all members of the
+language resources community, from well-established institutional archives to
+individuals who want to share research results. Would-be participants thus
+operate in a wide variety of circumstances. In order to ensure that the barrier
+to participation should be as low as possible, OLAC provides three approaches
+to becoming an OLAC data provider. The following table summarizes the three
+approaches and the circumstances each is designed for:</P>
+<TABLE CELLPADDING="6">
+<TR>
+<TD VALIGN="TOP"><I>Approach</I></TD>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>Description</I></TD>
+<TD VALIGN="TOP" ALIGN="CENTER"><I>Circumstances</I></TD>
+</TR>
+<TR>
+<TD VALIGN="TOP"><A HREF="#conventional">Conventional</A>&nbsp;&nbsp;&nbsp;
+</TD>
+<TD VALIGN="TOP">The data provider implements a software interface to an
+existing catalog database that permits metadata to be harvested via an
+HTTP-based protocol.</TD>
+<TD VALIGN="TOP"><UL>
+<LI>The collection is already cataloged in a database</LI>
+<LI>The provider has a web server</LI>
+<LI>The provider has access to a programmer who can implement a metadata
+harvester for the database</LI>
+</UL>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP"><A HREF="#Vida">Vida</A></TD>
+<TD VALIGN="TOP">The Virtual Data Provider is an OLAC service that provides the
+harvesting protocol for metadata repositories that are expressed as XML
+documents.</TD>
+<TD VALIGN="TOP"><UL>
+<LI>There is no existing catalog database</LI>
+<LI>The provider can upload to a local web site</LI>
+<LI>The provider can use an XML editor</LI>
+</UL>
+</TD>
+</TR>
+<TR>
+<TD VALIGN="TOP"><A HREF="#ORE">ORE</A></TD>
+<TD VALIGN="TOP">The OLAC Repository Editor is a form-based editor on the OLAC
+Web site that allows a user to construct a small metadata repository that will
+be serviced by Vida.</TD>
+<TD VALIGN="TOP"><UL>
+<LI>There is no existing catalog database</LI>
+<LI>The provider has no local web site or XML capacity</LI>
+</UL>
+</TD>
+</TR>
+</TABLE>
+<P>The sections below describe each of the three approaches in more detail. A
+final section discusses <A HREF="#Migration">migrating</A> from one approach to
+another.</P>
+
+<H2><A NAME="conventional"></A>Using the conventional approach</H2>
+
+<P>If your archive has the metadata for its collection in an existing database
+and if your institution has a Web server, then the best approach is to
+implement a software interface that gives access to the metadata records
+through the <A HREF="/OLAC/protocol.html"> OLAC Protocol for Metadata
+Harvesting</A>. The advantage of this approach is that you need not maintain a
+second version of your metadata in OLAC format; rather, the software you
+implement will query the existing database to get the metadata information and
+then dynamically return it in the format required by the OLAC standard. In
+order to take full advantage of the OLAC standards and services it may be
+desirable to add new information to the existing database (such as a way to
+identify languages according the standard identifiers used by OLAC), but it
+should not be necessary to maintain a duplicate version of any information in a
+different format. </P>
+<P>In order to pursue this approach, you will need to talk with the system
+administrator for your institution's web server. Refer your system
+administrator to the OLAC <A HREF="../tools.html">Tools</A> page for a list of
+existing implementations in various programming languages.</P>
+<P>When your metadata harvesting interface has been implemented, follow the
+<A HREF="http://www.openarchives.org/data/registerasprovider.html">OAI
+registration procedure</A> to ensure that you have correctly implemented the
+harvesting protocol. Once you are successfully registered as an OAI data
+provider, proceed to the <A HREF="/register/archive.html">OLAC registration procedure</A>.</P>
+
+
+<H2><A NAME="Vida"></A>Using Vida: the Virtual Data Provider</H2>
+
+<P> Vida, the OLAC <I>virtual data provider,</I> offers an OLAC-compliant
+metadata harvesting interface to a metadata repository that is expressed as an
+XML document. When your archive does not already have a metadata catalog in a
+database, then you can use an XML editor with the DTD for an OLAC metadata
+repository in order to construct such a catalog. Once you have created the XML
+metadata repository, post it on a publicly accessible web site.</P>
+<P>Once you repository file is web accessible, Vida is trivial to use.
+Construct the baseURL of the metadata harvester by appending the URL of the XML
+file to the URL of Vida, as follows: </P>
+<PRE>
+http://www.language-archives.org/vida/<FONT COLOR="red">yoursite.domain/path/yourfile.xml</FONT>
+\________________ __________________/ \_______________ _______________/
+                 V                                    V
+           URL of virtual                        location of
+           data provider                       your repository
+</PRE>
+<P>For instance, appending &quot;?verb=Identify&quot; to the above URL will
+cause Vida to execute the Identify request against your metadata repository.
+</P>
+<P>In order to set up a data provider using this approach, you will need to
+download this Document Type Definition:</P>
+<UL>
+<LI>The XML Schema for OLAC repositories:<BR>
+<A HREF="http://www.language-archives.org/OLAC/0.4/oryx.xsd">http://www.language-archives.org/OLAC/0.4/oryx.xsd</A> </LI>
+<LI>An example XML file using this schema:<BR>
+<A HREF="http://www.language-archives.org/OLAC/0.4/oryx.xml">http://www.language-archives.org/OLAC/0.4/oryx.xml</A> </LI>
+</UL>
+<P>and use it with an XML editor of your
+choice to build the XML representation of your metadata.
+See, for instance, the
+<A HREF="http://wdvl.com/Software/XML/editors.html">XML Software Guide</A>,
+the <A HREF="http://www.oasis-open.org/cover/xml.html#xmlEditing">XML Cover Pages</A>,
+or <A HREF="http://www.garshol.priv.no/download/xmltools/cat_ix.html#C_Editing">free
+XML editors</A>.
+</P>
+<P>Once your repository file is posted at a publicly accessible URL,
+proceed to the
+<A HREF="http://www.language-archives.org/register/archive.html">
+OLAC registration page</A>.</P>
+<P> Here are some examples of XML metadata repositories: </P>
+<UL>
+<LI> <A HREF="http://www.language-archives.org/data/ldc.xml">LDC</A> -
+Linguistic Data Consortium (~200 records) </LI>
+<LI> <A HREF="http://www.language-archives.org/data/ota.xml">OTA</A> - Oxford
+Text Archive (~4000 records) </LI>
+<LI> <A HREF="http://www.language-archives.org/data/tdproject.xml">TDProject</A>
+- Typology Project (~10 records) </LI>
+<LI> <A HREF="http://www.language-archives.org/data/tractor.xml">TRACTOR</A> -
+TELRI archive (~100 records) </LI>
+</UL>
+<P>View these archives using the repository explorer on the
+<a href="/community.php4">COMMUNITY</a> page.
+</P>
+
+<P>Questions about Vida should be addressed to
+<a href="mailto:vida@language-archives.org">vida@language-archives.org</a>.</P>
+
+<H2><A NAME="ORE"></A>Using ORE: the OLAC Repository Editor</H2>
+
+<P> A centralized forms-based service permits people to create and manage XML
+repositories. This service is provided for those who do not have the capacity
+to use an XML editor or to post an XML file to a local web site.  For
+further information please see
+the <A HREF="ore.html">ORE documentation</a>.
+
+<P>During the editing process, the metadata repository is stored in a
+relational database on the OLAC site. At any point, the repository can be
+exported as an XML file, and <I>activated</I> to make it available for
+harvesting. </P>
+
+<P>Questions about ORE should be addressed to
+<a href="mailto:ore@language-archives.org">ore@language-archives.org</a>.</P>
+
+<H2><A NAME="Migration"></A>Migration strategy</H2>
+
+<P>As the circumstances of your archive change over time, it is easy to migrate
+your implementation from one approach to another. The only constraint on
+migration is that you should not change the unique identifier of your
+repository. What will change as you migrate is the base URL for your data
+provider. When you have a new implementation ready to go at a different base
+URL, all you have to do to effect the migration is to re-<A
+HREF="http://www.openarchives.org/data/registerasprovider.html">register at
+OAI</A> with the new base URL, and then
+re-<A HREF="http://www.language-archives.org/register/archive.html">register at OLAC</A>.
+</P>
+<HR>
+<P> <A HREF="http://www.language-archives.org/">OLAC</A> </P>
+</BODY>
+</HTML>
+ 

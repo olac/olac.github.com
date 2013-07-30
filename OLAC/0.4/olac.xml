@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olac
+  xmlns="http://www.language-archives.org/OLAC/0.4/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.language-archives.org/OLAC/0.4/
+                http://www.language-archives.org/OLAC/0.4/olac.xsd"
+  langs="en x-sil-LLU">
+  <contributor>Smith, John L.</contributor>
+  <contributor refine="sponsor">National Science
+    Foundation</contributor>
+  <contributor>Smith, John L. (format conversion)</contributor>
+  <subject.language code="en"/>
+  <coverage>India</coverage>
+  <coverage scheme="TGN">Guadalcanal (island)</coverage>
+  <coverage>19th century</coverage>
+  <creator>Bloomfield, Leonard</creator>
+  <creator>Linguistic Society of America</creator>
+  <creator refine="editor">Sapir, Edward</creator>
+  <date code="1992"/>
+  <date refine="modified" code="1996-10-16"/>
+  <date code="1950">circa 1950</date>
+  <description>The CALLHOME Japanese corpus of telephone speech consists
+    of 120 unscripted telephone conversations between native speakers
+    of Japanese. All calls, which lasted up to 30 minutes, originated
+    in North America and were placed to locations overseas (typically
+    Japan). Most participants called family members or close friends.
+    This corpus contains speech data files ONLY, along with the
+    minimal amount of documentation needed to describe the contents
+    and format of the speech files and the software packages needed to
+    uncompress the speech data. </description>
+  <description>http://www.ldc.upenn.edu/Catalog/LDC96S37.html
+  </description>
+  <format code="text/xml">5,237 entries in a 1.2M XML
+    file.</format>
+  <format code="audio/wav">Duration: 153 seconds. Size: 3.3M.
+    Sampling: 1 channel, 22 KHz, 8 bits.</format>
+  <format.cpu code="ppc"/>
+  <format.cpu code="x86">At least 64M memory</format.cpu>
+  <format.os code="OS2"/>
+  <format.os code="MSWindows">NT 4.0 or higher</format.os>
+  <format.sourcecode code="C"/>
+  <format.sourcecode code="Java">Version 1.2 library</format.sourcecode>
+  <identifier>http://arxiv.org/abs/cs.CL/0010033</identifier>
+  <identifier>Shelf 12, Box 7</identifier>
+  <language code="en"/>
+  <subject.language code="x-sil-SKY"/>
+  <language code="fr"/>
+  <subject.language code="x-sil-BAN">Dschang</subject.language>
+  <subject.language>Ancient Sumerian</subject.language>
+  <publisher>Oxford University Press</publisher>
+  <publisher>http://www.oup.com/</publisher>
+  <relation refine="requires">oai:sil:software/ipafont</relation>
+  <relation refine="hasPart">oai:somearchive:holding126</relation>
+  <relation refine="hasPart">oai:somearchive:holding127</relation>
+  <relation refine="hasPart">oai:somearchive:holding128</relation>
+  <relation refine="hasPart">oai:somearchive:holding129</relation>
+  <relation refine="hasPart">oai:somearchive:holding130</relation>
+  <relation refine="isPartOf">In Joel Sherzer and Greg Urban (eds.),
+    Native South American discourse , 237-306. Berlin: Mouton.
+  </relation>
+  <source>oai:somearchive:holding1023</source>
+  <source>Kwara'ae flora vocabulary extracted from Guide to the
+    Forests of the British Solomon Islands, by T. C. Whitmore.
+    Oxford University Press, 1966.</source>
+  <subject scheme="LCSH">African languages</subject>
+  <title>A Dictionary of the Nggela Language</title>
+  <title lang="x-sil-LLU">Na tala 'uria na idulaa diana</title>
+  <title refine="alternative" lang="en">The road to good reading</title>
+  <type code="Image"/>
+  <type.linguistic code="description/grammar"/>
+  <type.linguistic code="transcription/orthographic"/>
+</olac>

@@ -1,0 +1,855 @@
+<html>
+<head>
+<title>OLAC Overview</title>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<link rel="stylesheet" type="text/css" href="../olac.css">
+</head>
+<body bgcolor=white>
+<hr>
+<table cellpadding=10><tr><td><a href="/"><img src="/images/olac100.gif" border=0></a></td>
+<td>
+<h1>
+<font color=0x00004a>
+OLAC Overview
+</font>
+</h1>
+
+<table><tr>
+  <td><b>Steven Bird</b><br>University of Pennsylvania</td>
+  <td>&nbsp;</td>
+  <td><b>Gary Simons</b><br>SIL International</td>
+</tr></table>
+
+</td></tr>
+</table>
+<hr>
+
+<h2>1. Introduction</h2>
+
+<p>
+Today, language technology and the linguistic sciences are
+confronted with a vast array of <i>language resources</i>,
+richly structured, large and diverse.
+Texts, recordings, dictionaries, annotations, software, protocols,
+data models, file formats, newsgroups and web indexes are just some of
+these resources.
+The resources are growing in size, in number, in diversity.
+
+<p>
+Today, multiple <i>communities</i> depend on language resources, including
+linguists, engineers, teachers and actual speakers.
+Many individuals and institutions provide key pieces of the infrastructure,
+including archivists, software developers, and publishers.
+The sponsors and promoters of language technology and the linguistic
+sciences -- professional associations, government funding agencies,
+and non-governmental organizations - also need to access and deploy
+language resources.
+These communities are large.  For example, the LinguistList network
+counts over 13,000 members.  The Linguistic Data Consortium produces
+linguistic databases for some 1,000 organizations.  The number of
+individuals having an immediate interest in language resources numbers
+in the tens of thousands.
+These communities are growing in size, in number, in diversity.
+
+<p>
+And today, we have unprecedented opportunities to <i>connect</i>
+these communities to the language resources they need.
+First, inexpensive mass storage technology permits large resources to
+be stored in digital form, while
+the Extensible Markup Language (XML) and Unicode provide flexible
+ways to represent structured data and ensure its long-term survival.
+Second, digital publication - both on and off the world wide web -
+is the most practical and efficient means of sharing language resources.
+Finally, a standard resource classification model, the Dublin Core Metadata
+Set, together with an interchange method provided by the Open Archives
+Initiative, make it possible to construct a union catalog over multiple
+repositories and archives.
+This infrastructure is a new invention;
+it has the bottom-up, distributed character of the web,
+while simultaneously having the efficient, structured
+nature of a centralized database.  This combination is well-suited to
+the language resource community, where the available data is growing
+rapidly and where a large user-base is consistent in how it describes
+its resource needs.
+
+<p>
+In December 2000,
+an NSF-sponsored workshop on Web-Based Language Documentation and
+Description brought together a
+a group of nearly 100 language software developers, linguists, and archivists
+who are responsible for creating language resources in North America, South
+America, Europe, Africa, the Middle East, Asia and Australia.
+Over four days of presentations, panel sessions, and working groups,
+the participants explored the opportunities listed above.  The
+outcome of the workshop was the founding of the
+Open Language Archives Community (OLAC),
+an application of the Open Archives Initiative to digital archives of
+language resources.  An advisory board was established and alpha-testers
+identified.
+This project will provide technical infrastructure for the
+Open Language Archives Community.
+
+<h2>2. The Vision for an Open Language Archives Community</h2>
+
+<p>
+Before presenting the technical background to the project, it would
+be instructive to give a hypothetical example to illustrate what
+the Open Language Archives Community will be like.  Suppose that a
+user goes to an OLAC ``service provider'' website, which presents
+a form that permits focused searching on OLAC metadata fields.
+
+<p>
+In this imaginary interaction, a user is searching for data from
+a Quechua language.
+The system discovers that ``Quechua'' actually
+denotes 59 different languages, and
+the user is taken to a controlled vocabulary server which permits the
+identifier for the language or interest, in this case
+Hu&aacute;nuco Quechua, to be entered.
+Search continues and the resulting display - which looks like the summary
+of hits produced by a web search engine - lists
+field notes, a dictionary and a grammar.  From this page, the user
+navigates to the full metadata record for the dictionary, shown in
+Figure 1.
+
+<p>
+<table align="center" border=1><tr><td>
+<table cellspacing=0 cellpadding=1>
+<tr><td align=right><b>Title:</b></td><td>Hu&aacute;nuco Dictionary</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Creator:</b></td><td>David Weber</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Date:</b></td><td>1998</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Identifier:</b></td><td><a href="">ftp://ftp.sil.org/pub/corpus/19980137</a></td><td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Identifier.ISBN:</b></td><td>0 521 28071 0</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Publisher:</b></td><td>SIL</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Subject.language:</b></td><td>x-sil-QEM</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Rights.openness:</b></td><td>published</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Type.data:</b></td><td>lexicon</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Type.data:</b></td><td>annotated text</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Format.openness:</b></td><td>open</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Format.markup:</b></td><td>sil-sf</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+<tr><td align=right><b>Description:</b></td><td>A bilingual Hu&aacute;nuco/Spanish
+dictionary,<br> including example sentences and grammatical notes.</td>
+  <td>[<a href="">DEFN</a>|<a href="">DATA</a>|<a href="">TOOLS</a>]</td></tr>
+</table>
+</td></tr>
+<tr><td>
+Figure 1: An example metadata record for a Hu&aacute;nuco Dictionary
+</td></tr></table>
+
+<p>
+The record consists of a list of optional, repeatable
+metadata elements.  Some elements can only take a
+restricted range of values, so called <i>controlled vocabularies</i>.
+For example, <b>Subject.language</b> has values defined by RFC 1766.
+<b>Format.markup</b> will have values defined by OLAC, consisting of a namespace
+and a name.
+
+<p>
+The imaginary user continues the exploration, now wanting to find out
+if there are any tools which understand the format sil-sf.  The query
+is launched by clicking on the TOOLS hyperlink for the Format.markup field.
+The result is a summary listing of tools, including Shoebox, HyperLex,
+EUDICO and CLAN, which are archived in four different repositories.
+The user pulls up the full metadata record for Shoebox, and sees a display
+much like the one above, but including <b>Rights.openness</b>
+for the level of availability of
+the software, <b>Relation.requires</b> for the documentation, and
+Identifier for the external URL to the software.  Some additional fields
+specifically for software are
+<b>Type.os</b> for the supported operating systems and
+<b>Type.functionality</b> for the functions this software can perform.
+
+<p>
+Finally, the user seeks advice on the appropriateness of this software for the
+task at hand, and clicks on an ADVICE hyperlink.  Some 150 hits are displayed,
+with such titles as:
+``Analyzing data with Shoebox,''
+``Identifying the primary audience dictionary,''
+``Data-entry templates in Shoebox,''
+``Organizing a dictionary by roots vs lexemes.''
+As before, the user navigates to a full metadata record for a particular
+choice, and this provides the entry point to the resource.
+
+<p>
+Standing back from this particular interaction,
+we can observe that the
+individuals who use and create language resources
+are looking for three things: data, tools, and advice.
+Figure 2 diagrams this situation.
+
+<p>
+<table cellspacing="8" align="center"><tr><td>
+<img src="vision1.gif" alt="{Figure 2}" border="1">
+</td></tr><tr><td>
+Figure 2: Ideally the user has access as needed
+</td></tr></table>
+
+<p>
+By <b>DATA</b> we mean any information that documents or describes a language,
+such as a published monograph, a computer data file, or
+even a shoebox full of hand-written index cards. The information could range
+in content from unanalyzed sound recordings to fully transcribed and annotated
+texts to a complete descriptive grammar. 
+By <b>TOOLS</b> we mean computational resources that facilitate creating, viewing,
+querying, or otherwise using language data. Tools include not just software
+programs, but also the digital resources that the programs depend on, such as
+fonts, stylesheets, and document type definitions.
+By <b>ADVICE</b> we mean any information about
+what data sources are reliable, what tools are appropriate in a given
+situation, what practices to follow when creating new data, and so forth.
+
+<p>
+Unfortunately, today's user does not have ready access to the data, tools,
+and advice that are needed. Figure 3
+offers a diagrammatic view of the reality.
+Some archives (e.g. Archive 1) do have a site on the Internet which the user is
+able to find, so the resources of that archive are accessible. Other archives
+(e.g. Archive 2) are on the Internet, so the user could access them in theory,
+but the user has no idea they exist so they are not accessible in practice.
+Still other archives (e.g. Archive 3) are not even on the Internet. And there
+are potentially hundreds of archives (e.g. Archive <i>n</i>) that the user
+needs to know about. Tools and advice are out there as well, but are at many
+different sites.
+
+<p>
+<table cellspacing="8" align="center"><tr><td>
+<img src="vision2.gif" alt="{Figure 3}" border="1">
+</td></tr><tr><td>
+Figure 3: In reality the user can't always get there from here
+</td></tr></table>
+
+<p>
+There are many other problems inherent
+in the current situation. For instance, the user may not be able to find all
+the existing data about the language of interest because different sites have
+called it by different names. The user may not be able to use an accessible
+data file for lack of being able to match it with the right tools. The user may
+locate advice that seems relevant but have no basis for judging its merits.
+
+<p>
+In order to bridge the gap, the individuals who use and create language
+documentation and description need a community that provides four things: a
+gateway, metadata, reviews, and standards:
+
+<ul>
+<li> <b>GATEWAY:</b>
+A single portal through which users can access all available data, tools,
+and advice, regardless of its physical location.
+<li> <b>METADATA:</b>
+Uniform descriptions of all available data, tools, and advice, including a
+link to the full item or instructions on how to access it.
+<li> <b>REVIEWS:</b>
+Peer evaluations of available data, tools, and advice.
+<li> <b>STANDARDS:</b>
+Processes and protocols underlying all of the above, such as the metadata
+schema, and the harvesting protocol.
+</ul>
+
+<p>
+Figure 4
+gives a diagram showing the ``Seven Pillars of Open Language Archiving''
+and how they relate. In a
+graphical form it summarizes how a community would function to bridge the gap
+between the individual user and all the data, tools, and advice that are out
+there on the Internet.  Note that STANDARDS here concern the computational
+infrastructure of the community.  Particular formats for linguistic
+content (such as the TEI),
+would be considered tools with associated advice,
+and fall outside of the scope of the standards we are talking about here.
+
+<p>
+<table cellspacing="8" align="center"><tr><td>
+<img src="vision3.gif" alt="{Figure 4}" border="1">
+</td></tr><tr><td>
+Figure 4: Bridging the gap through community infrastructure
+</td></tr></table>
+
+<h2>3. Background of the Open Language Archives Community</h2>
+
+<h3>3.1. Language Resources</h3>
+
+<p>
+<b>DATA.</b>
+As explained in section 2,
+DATA refers to any information that documents or describes a language,
+such as a published monograph, a computer data file, or
+even a shoebox full of hand-written index cards. The information could range
+in content from unanalyzed sound recordings to fully transcribed and annotated
+texts to a complete descriptive grammar.  Although much language data is never
+published, it is often archived so that future scholars can access the work.
+Unfortunately, there is no international register of language archives, and no
+way to discover what most archives hold except by visiting them in person.
+
+<p>
+Recently, in an attempt to document these language archives, Bird,
+Simons and Liberman conducted a survey.  The survey and preliminary
+results are available online
+[<a href="http://www.ldc.upenn.edu/exploration/survey/">http://www.ldc.upenn.edu/exploration/survey/</a>], as are
+prose descriptions of each archive
+[<a href="http://www.ldc.upenn.edu/exploration/archives.html">http://www.ldc.upenn.edu/exploration/archives.html</a>].
+Most of the surveyed archives have a partial
+digital catalog, and about
+25% have a complete digital catalog. A couple of them use
+MARC or TEI.
+We also found that a wide variety of
+catalog fields are used (or proposed) by these archives,
+and that no two archives use the same set of fields.
+The following list contains fields used by at least one of the archives.
+It gives a glimpse of the kinds of materials which are held, and
+also illustrates the need for consistency.
+
+<ol>
+<li> title of the resource, transliterated title
+<li> catalog number (local, ISBN, ...)
+<li> date, location (e.g. of creation, encoding, publication)
+<li> language id (for the resource and for its subject,
+      alternative language names, language group)
+<li> resource type (e.g. lexicon, text, signal, ...)
+<li> modality (e.g. text, audio, video, physiological, ...)
+<li> file format, sample rate, number of tracks, size;
+      recording details (e.g. microphone type)
+<li> media type, dimensions (of book), number (of CD-ROMs)
+<li> genre (e.g. narrative, instructional, greeting, ...);
+      register (e.g. formal, informal, honorific, collaborative, ...)
+<li> participant description (e.g. name, age, gender, education, ...)
+<li> interviewer, recorder, transcriber, ...
+<li> transcription type (e.g. phonetic, orthographic, gesture, musical, ...)
+<li> translation type (e.g. morpheme-level, word-level, sentence-level, ...)
+<li> access rights, use restrictions, copyrights, licenses, price
+<li> URL for an online version of the resource, or for documentation
+<li> provenance of the resource (e.g. geographical origin);
+      historical period covered by the resource
+<li> contact person/institution, address
+</ol>
+
+<p>
+<b>TOOLS.</b>
+By TOOLS we mean computational resources that facilitate creating, viewing,
+querying, or otherwise using language data. Tools include not just software
+programs, but also the digital resources that the programs depend on, such as
+fonts, stylesheets, and document type definitions.
+Over the past decade, researchers in human language technology have
+created a vast array of tools, many of which are made openly
+available.  The Association for Computational Linguistics together with
+the German Research Center for Artificial Intelligence has created
+the ``Natural Language Software Registry''
+[<a href="http://registry.dfki.de/">http://registry.dfki.de/</a>].
+This is a database that describes 130 language software tools.
+Its metadata includes license type, functionality, operating system,
+and the language(s) the tool works with.
+Interest in this repository has been stimulated recently by a workshop
+at last year's meeting of the ACL
+[<a href="http://elsnet.let.uu.nl/acl2000workshop.html">http://elsnet.let.uu.nl/acl2000workshop.html</a>].  A follow-up workshop
+will be held at the 2001 meeting.
+
+<p>
+<b>ADVICE.</b>
+Many internet mailing lists are concerned with language resources.
+Chief among them is the <i>Corpora</i> mailing list
+[<a href="http://www.hit.uib.no/corpora/">http://www.hit.uib.no/corpora/</a>].
+Apart from conference and
+job announcements, the majority of postings on this mailing list
+are queries about the existence of a certain kind of resource,
+requests for advice about the
+suitability of resources for particular tasks, and
+summaries of the pointers and suggestions that were communicated directly to
+the person who posted the original request.
+A centralized version of the same process is exemplified by the
+LTG Helpdesk [<a href="http://www.ltg.ed.ac.uk/helpdesk/">http://www.ltg.ed.ac.uk/helpdesk/</a>].
+Links pages which contain commentary about the resources they
+reference also constitute a kind of advice.  For example,
+the <i>Linguistic Exploration Page</i>
+[<a href="http://www.ldc.upenn.edu/exploration/">http://www.ldc.upenn.edu/exploration/</a>]
+surveys and classifies some 60 resources available on the web.
+
+<p>
+People needing advice typically resort to posting a query on one or more
+lists, sorting through the responses, and possibly posting a summary of
+responses back to the lists.  However, it is often difficult to decide a
+good course of action, when the primary information is an uncoordinated set
+of suggestions originating from strangers on a mailing list.  In a period
+of rapidly evolving technology, a wrong choice can wind up in a dead end,
+and painstakingly collected data ends up being unusable.  Numerous
+experiences of this community attest to this reality.
+
+<p>
+<i>
+The size and complexity of language resources, of data, tools, and advice,
+is growing rapidly, and yet the way we locate these resources is completely
+haphazard.  While the World-Wide Web holds the promise of unprecedented
+access to language resources, we also see the specter of frustration and
+chaos on an unprecedented scale.
+Coordination is urgently needed, before individual projects develop
+more needlessly incompatible standards, protocols, interfaces and
+methods.
+</i>
+
+
+<h3>3.2. The Language Resources Community</h3>
+
+<p>
+The community appears to be arranged into three main groups.
+The first group is engaged in the core activity of generating and using
+language resources.  The second group provides the technical foundation for
+this core activity, while the third group constitutes the administrative
+umbrella.  For full details, see Figure 5.
+
+<p>
+<table cellspacing="8" align="center" border=1><tr><td>
+<table border=0 cellspacing=0 cellpadding=5 width="100%">
+<tr><td>
+<b>
+1. CREATORS AND USERS OF LANGUAGE RESOURCES
+- <i>THE CORE ACTIVITY</i>
+</b>
+
+<table width=100% cellspacing=5><tr><td width=30%>
+<b>Speakers</b><br>
+using and learning languages;
+providing primary materials and commentary;
+promoting language use and teaching.
+
+</td><td width=20%>
+<b>Descriptivists</b><br>
+linguists, sociolinguists, and linguistic anthropologists
+documenting language structure and use.
+
+</td><td width=20%>
+<b>Educators</b><br>
+teaching specific languages,
+and the linguistic structure of specific languages.
+
+</td><td width=15%>
+<b>Theorists</b><br>
+developing new models of the human language faculty.
+
+</td><td width=15%>
+<b>Technologists</b><br>
+developing new human language technologies.
+
+</td></tr></table>
+
+</td></tr><tr><td>
+<b>2. IMMEDIATE INFRASTRUCTURE
+- <i>THE TECHNICAL FOUNDATION</i>
+</b>
+
+<table width=100% cellspacing=5><tr><td width=33%>
+<b>Archivists</b><br>
+digital archivists and librarians
+providing storage and access for language resources.
+
+</td><td width=33%>
+<b>Developers</b><br>
+computer scientists developing models, formats, architectures and
+tools for creating and searching digital language data.
+
+</td><td width=33%>
+<b>Publishers</b><br>
+disseminating language resources in paper and digital form.
+</td></tr></table>
+
+
+</td></tr><tr><td>
+<b>3. SPONSORS AND PROMOTERS
+- <i>THE UMBRELLA</i>
+</b><br>
+
+<table width=100% cellspacing=5><tr><td width=33%>
+<b>Professional Associations</b><br>
+promoting language resources, and
+the adoption of best-practices for digital archives.
+   
+</td><td width=33%>
+<b>Government Funding Agencies</b><br>
+establishing funding priorities,
+and evaluating and enabling language resources.
+
+</td><td width=33%>
+<b>Non-Governmental Organizations</b><br>
+promoting and funding language resources.
+</td></tr></table>
+
+</td></tr></table>
+</td></tr><tr><td>
+Figure 5: The Language Resources Community
+</td></tr></table>
+
+
+<p>
+<i>
+The community is diverse, but is united by its common interest in
+creating, accessing and/or deploying language resources.
+However, when it comes to finding relevant resources,
+people are regularly reduced
+to sifting through the results returned by web search engines,
+then further sifting through free-form prose descriptions of holdings.
+Only by using agreed metadata can these communities be connected
+with the resources they need.
+</i>
+
+<h3>3.3. Bridging the Gap</h3>
+
+<h4>Why improved web-indexing is not enough</h4>
+
+<p>
+As the internet grows and web-indexing technologies improve one might hope
+that a general-purpose search engine should be sufficient to bridge the gap
+between people and the resources they need, but this is a vain hope.
+The first reason is that many language resources, such as audio files
+and software, are not text-based.  The second
+reason concerns language identification, the single most important
+classification for language resources.  If a language has a canonical name
+which is distinctive as a character string, then the user has a chance of
+finding any online resources with a search engine.
+However, the language may have
+multiple names, possibly due to the vagaries of Romanization, such as a
+language known variously as Fadicca, Fadicha, Fedija, Fadija, Fiadidja,
+Fiyadikkya, and Fedicca.  The language name may collide with a word which has
+other interpretations that are vastly more frequent, e.g. the language
+names Mango and Santa Cruz.
+
+<p>
+The third reason why general-purpose search engines are inadequate is
+the simple fact that much of the material is not,
+and will not, be documented in free prose on the web.  The cataloging
+work will be done either systematically or not at all.
+Of course, one can always export a back-end database
+as HTML and let the search engines index the materials.
+Indeed, encouraging people to document resources and make them
+accessible to search engines is part of our vision.
+However, despite the power of web search engines, there remain many
+instances where people still prefer to use more formal databases to
+house their data.
+
+<p>
+This last point bears further consideration.  The challenge is to
+build a system for ``bringing like things together and differentiating among
+them'' [Svenonius00].
+There are two dominant storage
+and indexing paradigms, one exemplified by traditional databases and one
+exemplified by the web.  In the case of language resources, the metadata is
+coherent enough to be stored in a formal database, but sufficiently
+distributed and dynamic that it is impractical to maintain it centrally.
+Language resources occupy the middle ground between the two paradigms, neither of which
+will serve adequately.  A new framework is required that permits the best of
+both worlds, namely bottom-up, distributed initiatives, along with consistent,
+centralized finding aids.  The Dublin Core and the Open Archives Initiative
+provide the framework we need.
+
+<h4>The Dublin Core Metadata Initiative</h4>
+
+<p>
+The Dublin Core Metadata Initiative began in 1995 to develop
+conventions for resource discovery on the web
+[<a href="http://purl.org/DC/">http://purl.org/DC/</a>].
+The Dublin Core metadata elements represent a broad, interdisciplinary
+consensus about
+the core set of elements that are likely to be widely useful to support
+resource discovery.  The Dublin Core consists of 15 metadata elements,
+where each element is optional and repeatable: <b>Title, Creator, Subject,
+Description, Publisher, Contributor, Date, Type, Format, Identifier, Source,
+Language, Relation, Coverage, Rights</b>.
+This metadata set can be used to describe resources that
+exist in digital or traditional formats.
+
+<p>
+In ``Dublin Core Qualifiers''
+two kinds of qualifications are allowed: encoding schemes and refinements
+[<a href="http://purl.org/dc/documents/rec/dcmes-qualifiers-20000711.htm">http://purl.org/dc/documents/rec/dcmes-qualifiers-20000711.htm</A>].
+An <i>encoding scheme</i> specifies a particular controlled vocabulary or notation
+for expressing the value of an element. The encoding scheme serves to aid a
+client system in interpreting the exact meaning of the element content. A
+<i>refinement</i> makes the meaning of the element more specific.
+For example,
+a <b>Subject</b> element can be given a language <i>refinement</i>
+to restrict its interpretation to concern the
+``subject language'' of the resource.
+A <b>Language</b> element can be <i>encoded</i>
+using the conventions of RFC 1766 to unambiguously identify the language is
+written (or spoken).
+
+<h4>The Open Archives Initiative</h4>
+
+<p>
+The Open Archives initiative (OAI)
+was launched in October 1999 to provide a common framework across
+electronic preprint archives
+[<a href="http://www.openarchives.org">http://www.openarchives.org</a>],
+and it has since been broadened
+to include digital repositories of scholarly materials regardless
+of their type.
+
+<p>
+In the OAI infrastructure, each participating archive implements a
+repository, a network accessible server offering public access
+to archive holdings. The primary object in an OAI-conformant
+repository is called an <i>item</i>, having a unique identifier
+and being associated with one or more metadata records.
+Each metadata record describes an archive holding, which is any
+kind of primary resource such as a document, data, software, a
+recording, a physical artifact, a digital surrogate, and so forth.
+Each metadata record will usually contain a reference to an entry
+point for the holding, such as a URL or a physical location,
+as shown in Figure 6.
+
+<p>
+<table cellspacing="8" align="center"><tr><td>
+<img src="white-paper1.gif" alt="{Figure 6}" border="1">
+</td></tr><tr><td>
+Figure 6: The Relationship Between an OAI Repository and an Archive
+</td></tr></table>
+
+<p>
+To implement the OAI infrastructure, a participating archive must comply
+with two standards: the <i>OAI shared metadata set</i> (Dublin Core), which
+facilitates interoperability across all communities participating in the
+OAI, and the <i>OAI metadata harvesting protocol</i>, which allows
+software services to query a repository using HTTP requests.
+
+<p>
+OAI archives are called ``data providers,'' though they are strictly just
+<i>metadata</i> providers. Typically, data providers will also have a
+submission procedure, together with a long-term storage system, and a
+mechanism permitting users to obtain materials from the archive. An OAI
+``service provider'' is a third party that provides end-user services (such
+as search functions over union catalogs) based on metadata harvested from
+one or
+more OAI data providers.  Figure 7 illustrates a
+single service provider accessing three data providers. End-users only
+interact with service providers.
+
+<p>
+<table cellspacing="8" align="center"><tr><td>
+<img src="white-paper2.gif" alt="{Figure 7}" border="1">
+</td></tr><tr><td>
+Figure 7: A Service Provider Accessing Multiple Data Providers
+</td></tr></table>
+
+<h3>3.4. Applying the OAI to Language Resources</h3>
+
+<p>
+The OAI infrastructure is a new invention;
+it has the bottom-up, distributed character of the web,
+while simultaneously having the efficient, structured
+nature of a centralized database.  This combination is well-suited to
+the language resource community, where the available data is growing
+rapidly and where a large user-base is fairly consistent in how it describes
+its resource needs.
+
+<p>
+In December 2000, an NSF-sponsored workshop on Web-Based Language Documentation and
+Description brought together a
+group of some 100 linguists, archivists, software developers, publishers
+and funding agencies,
+who are responsible for creating language resources in North America, South
+America, Europe, Africa, the Middle East, Asia and Australia.
+The outcome of the workshop was the founding of the
+<i>Open Language Archives Community</i> (OLAC), which extends
+the Open Archives Initiative to archives of language resources.
+An advisory board was established and alpha-testers identified.
+This section reports on the workshop and its primary outcome.
+
+<h4>The Philadelphia Workshop</h4>
+
+<p>
+In December 2000, the University of Pennsylvania hosted a four-day
+workshop involving language resource experts from all over the world,
+organized by Steven Bird and Gary Simons
+[<a href="http://www.ldc.upenn.edu/exploration/expl2000/">http://www.ldc.upenn.edu/exploration/expl2000/</a>].
+The goal of the workshop was as follows:
+
+<blockquote>
+  This workshop will lay the foundation of an open, web-based infrastructure
+  for collecting, storing and disseminating the primary materials which
+  document and describe human languages, including wordlists, lexicons,
+  annotated signals, interlinear texts, paradigms, field notes, and linguistic
+  descriptions, as well as the metadata which indexes and classifies these
+  materials. The infrastructure will support the modeling, creation, archiving
+  and access of these materials, using centralized repositories of metadata,
+  data, best practice guidelines, and open software tools.
+</blockquote>
+
+<p>
+Albert Bickford (SIL), described the shared
+concerns which united the extremely diverse group of participants as
+follows:
+
+<ol>
+<li> a primary concern for descriptive (as distinguished from theoretical)
+  linguistics;
+<li> a desire to make language materials available, to communities of
+  speakers and the general public as well as scholars;
+<li> an interest in taking advantage of the internet, which provides a means
+  of publishing such materials that bypasses the limitations of traditional
+  publication (since the costs are so much lower, and thus appropriate for
+  materials that have smaller audiences);
+<li> awareness that many materials may be less than fully-polished yet still
+  valuable to some people and worth archiving;
+<li> a sense of frustration with the currently confused state of the art in
+  data formats, especially fonts and character encoding, and the lack of good
+  information about how best to archive and publish on the web;
+<li> awareness of the large amount of data that is in data formats which will
+  be obsolete in a few years (and thus a willingness to accept data in
+  whatever form it is in, while also seeing a need for software to help
+  convert data to newer formats); and
+<li> a strong suspicion toward and distrust of rigid requirements, yet a
+  willingness to adopt standards voluntarily when their usefulness has been
+  demonstrated.
+</ol>
+
+<p>
+The workshop itself consisted of about 40 presentations, 3 panel sessions,
+and several working group sessions
+(all materials, including the program, papers, presentation materials
+and biographical information about the participants are available
+online from the above URL).
+The presentations covered various aspects of the OLAC model,
+the Open Archives Initiative, metadata for describing language resources,
+the concerns of various stake-holders, descriptions of projects
+and demonstrations of systems.
+The starting point for working group sessions was a
+<a href="requirements.html">requirements document</a>,
+a comprehensive and compact
+statement of the needs that unite the various communities.
+
+<h4>The Open Language Archives Community</h4>
+
+<p>
+The primary outcome of the workshop was the founding of the Open Language
+Archives Community, and with it the identification of an advisory board, alpha
+testers and member archives.  Details of these groups are available from
+the OLAC Gateway [<a href="/">http://www.language-archives.org</a>].
+
+<p>
+Recall that the OAI Community is defined by the archives which
+comply with the OAI Metadata Harvesting Protocol
+and that register with the OAI.
+Any compliant repository can register as an Open Archive, and
+the metadata provided by an Open Archive is open to the public.
+Now, OAI data providers may support metadata standards in addition to the
+Dublin Core.  Thus, a specialist community can define a metadata format which is
+specific to its domain.  Service providers, data providers and users that
+employ this specialized metadata format constitute an OAI \emph{subcommunity}.
+The workshop participants agreed unanimously that the
+OAI provides a significant piece of the infrastructure
+needed for the language resources community.
+
+<p>
+In the same way that OLAC represents a specialized
+subcommunity with respect to the entire Open Archives community, there are
+specialized subcommunities within the scope of OLAC.  For
+instance, the ISLE Meta Data Initiative is developing a detailed metadata
+scheme for corpora of recorded speech events and their associated descriptions
+\cite{IMDI00}.
+For archived language resources that of this kind, such a metadata scheme would
+give much richer description.  This specialized subcommunity can implement its own
+service provider that offers focused searching based on its own rich metadata
+set.
+
+<p>
+<b>The LDC Prototype.</b>
+The Linguistic Data Consortium has harvested the catalogs of
+three language resource
+archives (LDC, ELRA, DFKI) and created a demonstration prototype, available
+online.
+A search for `language=Bulgarian' returns records from all three archives,
+as shown in Figure 8.
+
+<p>
+<table cellspacing="8" align="center" border=1><tr><td>
+<table cellspacing=0 cellpadding=1>
+<tr><td colspan=2><b>Record oai:ldc:LDC94T5</b></td></tr>
+<tr><td align=right><b>Date: </b></td>
+    <td>1994</td></tr>
+<tr><td align=right><b>Title: </b></td>
+    <td>ECI Multilingual Text</td></tr>
+<tr><td align=right><b>Type:</b></td>
+    <td>text</td></tr>
+<tr><td align=right><b>Identifier: </b></td>
+    <td>1-58563-033-3</td></tr>
+<tr><td align=right><b>Subject.Language:</b></td><td>Albanian</td></tr>
+<tr><td align=right><b>Subject.Language:</b></td><td><font color=red>Bulgarian</font></td></tr>
+<tr><td align=right><b>Subject.Language:</b></td><td>Chinese</td></tr>
+<tr><td align=right><b>Subject.Language:</b></td><td>Czech</td></tr>
+<tr><td align=right><b>Subject.Language:</b></td><td>Dutch</td></tr>
+<tr><td align=right><b>Subject.Language:</b></td><td>English</td></tr>
+<tr><td align=right><b>Description: </b></td>
+    <td>[<a href="http://www.ldc.upenn.edu/Catalog/LDC94T5.html">http://www.ldc.upenn.edu/Catalog/LDC94T5.html</a>] </td></tr>
+<tr><td align=right><b>Description: </b></td>
+    <td>Recommended Applications:
+information retrieval, machine translation, language modeling</td></tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td colspan=2><b>Record oai:elra:L0030</b></td></tr>
+<tr><td align=right><b>Title:</b></td>
+    <td>Bulgarian Morphological Dictionary </td></tr>
+<tr><td align=right><b>Date: </b></td>
+    <td>1998 </td></tr>
+<tr><td align=right><b>Subject.Language:</b></td>
+    <td><font color=red>Bulgarian</font> </td></tr>
+<tr><td align=right><b>Description: </b></td>
+    <td>67,500 entries divided into 242 inflectional types
+(including proper nouns), morphosyntactic information for each
+entry, and a morphological engine (MS DOS and WINDOWS 95/NT) for
+morphological analysis and generation </td></tr>
+<tr><td align=right><b>Description:</b></td>
+    <td><a href="http://www.icp.inpg.fr/ELRA/cata/text_det.html#bulmodic">http://www.icp.inpg.fr/ELRA/cata/text_det.html#bulmodic</a> </td></tr>
+<tr><td>&nbsp;</td></tr>
+
+<tr><td colspan=2><b>Record oai:dfki:KPML</b></td></tr>
+
+<tr><td align=right><b>Title:</b></td>
+    <td>KPML </td></tr>
+<tr><td align=right><b>Creator: </b></td>
+    <td>Bateman and many others </td></tr>
+<tr><td align=right><b>Subject.Language: </b></td><td>Spanish</td></tr>
+<tr><td align=right><b>Subject.Language: </b></td><td>Russian</td></tr>
+<tr><td align=right><b>Subject.Language: </b></td><td>Japanese</td></tr>
+<tr><td align=right><b>Subject.Language: </b></td><td>Greek</td></tr>
+<tr><td align=right><b>Subject.Language: </b></td><td>German</td></tr>
+<tr><td align=right><b>Subject.Language: </b></td><td>French</td></tr>
+<tr><td align=right><b>Subject.Language: </b></td><td>English</td></tr>
+<tr><td align=right><b>Subject.Language: </b></td><td>Czech</tr>
+<tr><td align=right><b>Subject.Language: </b></td><td><font color=red>Bulgarian</font></td></tr>
+<tr><td align=right><b>Type.os:</b></td>
+    <td>Windows NT, Windows 98, Windows 95/98, Solaris </td></tr>
+<tr><td align=right><b>Type.functionality: </b></td>
+    <td>Software: Annotation Tools, Grammars, Lexica, Development Tools,
+  Formalisms, Theories, Deep Generation, Morphological Generation,
+  Shallow Generation </td></tr>
+<tr><td align=right><b>Description: </b></td>
+    <td>Natural Language Generation Linguistic Resource Development and
+Maintenance workbench for large scale generation grammar development,
+teaching, and experimental generation. Based on systemic-functional
+linguistics. Descendent of the Penman NLG system. </td></tr>
+<tr><td align=right><b>Description: </b></td>
+    <td><a href="http://www.purl.org/net/kpml">http://www.purl.org/net/kpml</a> </td></tr>
+<tr><td align=right><b>Description: </b></td>
+    <td>Contact: mailto:bateman@uni-bremen.de bateman@uni-bremen.de </td></tr>
+<tr><td align=right><b>Relation.requires:</b></td>
+    <td>Windows: none; Solaris: CommonLisp + CLIM</td></tr>
+</table>
+
+</td></tr><tr><td>
+Figure 8: Querying the Prototype Service Provider for Bulgarian Resources
+</td></tr></table>
+
+<hr>
+<a href="mailto:sb@ldc.upenn.edu,Gary_Simons@sil.org">Steven Bird and
+Gary Simons</a> (2001)
+
+</body>
+</html>
+

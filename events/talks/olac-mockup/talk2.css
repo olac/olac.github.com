@@ -1,0 +1,217 @@
+BODY {
+  font-family: lucida;
+  color: white;
+  background: navy;
+  font-size: 24pt;
+}
+
+P {
+  font-family: lucida;
+  color: white;
+  font-size: 24pt;
+}
+
+BLOCKQUOTE {
+  font-family: lucida;
+  color: #ffff88;
+  font-size: 24pt;
+}
+
+H1 {
+  font-family: lucida;
+  text-align: center;
+  font-size: 32pt;
+  color: #ffff88;
+}
+
+H2 {
+  font-family: lucida;
+  text-align: center;
+  font-size: 32pt;
+  color: #99ff99;
+}
+
+H3 {
+  font-family: lucida;
+  text-align: center;
+  font-size: 24pt;
+  color: #ffbbbb;
+}
+
+H4 {
+  font-family: lucida;
+  text-align: left;
+  font-size: 24pt;
+  color: #ffff77;
+}
+
+.link {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 24pt;
+  color: white;
+}
+
+TD {
+  font-family: sans-serif;
+  font-size: 24pt;
+  vertical-align: top;
+  color: white;
+}
+
+FORM TD {
+  font-family: sans-serif;
+  font-size: 24pt;
+  color: navy;
+}
+
+FORM P {
+  font-family: sans-serif;
+  font-size: 24pt;
+  color: navy;
+}
+
+FORM LI {
+  font-family: lucida;
+  font-size: 24pt;
+  color: #449944;
+}
+
+TH {
+  font-family: lucida;
+  font-size: 18pt;
+  color: #ffffaa;
+}
+
+UL {
+  font-family: lucida;
+  font-size: 24pt;
+  color: white;
+}
+
+OL {
+  font-family: lucida;
+  font-size: 24pt;
+  color: white;
+}
+
+LI {
+  font-family: lucida;
+  font-size: 24pt;
+  color: #99ff99;
+}
+
+PRE {
+  font-family: fixed;
+  font-size: 30pt;
+  color: white;
+}
+
+FORM {
+  font-family: fixed;
+  font-size: 30pt;
+  color: navy;
+}
+
+SELECT {
+  font-family: fixed;
+  font-size: 30pt;
+  color: navy;
+}
+
+OPTION {
+  font-family: fixed;
+  font-size: 30pt;
+  color: navy;
+}
+
+INPUT {
+  font-family: fixed;
+  font-size: 30pt;
+  color: navy;
+}
+
+.note {
+  font-family: lucida;
+  text-align: center;
+  font-size: 32pt;
+  color: #ffffaa;
+}
+
+.url {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 32pt;
+  color: #ffffaa;
+}
+
+.index {
+  font-family: sans-serif;
+  font-size: 16pt;
+  color: #9999dd;
+}
+
+.small {
+  font-family: lucida;
+  font-size: 24pt;
+}
+
+.comment {
+  font-family: lucida;
+  font-size: 18pt;
+  color: yellow;
+  background: black;
+}
+
+.data {
+  font-family: serif;
+  color: brown;
+  font-size: 24pt;
+}
+
+.gloss2 {
+  font-family: serif;
+  color: #204060;
+  font-size: 24pt;
+}
+
+.cat {
+  font-family: sans-serif;
+  color: black;
+  font-size: 24pt;
+  background: #A0CDB8;
+}
+
+.menubar {
+  font-family: sans-serif;
+  font-size: 16pt;
+  background: #ffffaa;
+  color: navy;
+}
+
+.menubar_rv {
+  font-family: sans-serif;
+  font-size: 16pt;
+  background: navy;
+  color: #ffffaa;
+}
+
+.banner {
+  font-family: sans-serif;
+  font-size: 24pt;
+  background: white;
+  color: navy;
+}
+
+.colhead {
+  font-family: lucida;
+  font-size: 24pt;
+  background: silver;
+  color: navy;
+}
+
+.doc {
+  font-family: sans-serif;
+  font-size: 16pt;
+}
+

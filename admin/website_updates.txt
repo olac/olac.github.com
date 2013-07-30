@@ -1,0 +1,32 @@
+*** The files on the right were created, updating the files on the left.
+
+/register/archive_review.php4	-->	/register/archive_review-OLAC1.0.php4
+/register/archive_list.php4	-->	/register/archive_list-OLAC1.0.php4
+/register/register.php4		-->	/register/register_archive-OLAC1.0.php4
+/register/archive.html		-->	/register/register_archive-OLAC1.0.html
+/tools/lookup.php4		-->	/tools/lookup/lookup-OLAC1.0.php4
+/tools/search.php4		-->	/tools/search-OLAC1.0.php4
+/tools/olac_schema.sql		-->	/tools/olac_schema-OLAC1.0.sql
+
+/index.html			-->	/index-OLAC1.0.html
+/organization.html		-->	/organization-OLAC1.0.html
+/documents.html			-->	/documents-OLAC1.0.html
+/news.html			-->	/news-OLAC1.0.html
+/events.html			-->	/events-OLAC1.0.html
+/tools.html			-->	/tools-OLAC1.0.html
+/archives.php4			-->	/archives-OLAC1.0.php4
+/services.php4			-->	/services-OLAC1.0.php4
+/archive.php4			-->	/archive-OLAC1.0.php4
+
+
+*** The following commands will instantly switch the old site to the new one:
+
+	$ mv index.html index-OLAC0.4.html
+	$ ln -s index-OLAC1.0.html index.html
+
+*** New db configuration
+
+        /tools/olac_schema-OLAC1.0.sql is the new (latest) db schema
+	"olac2" is the new db
+	"olac2.ARCHIVES" is the registry database for OLAC 1.0 repositories
+

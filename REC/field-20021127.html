@@ -1,0 +1,773 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>OLAC Linguistic Field Vocabulary</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="OLAC Linguistic Field Vocabulary">
+<meta name="Creator" content=" Helen Aristar Dry (mailto:hdry@linguistlist.org) &#10;Michael Appleby (mailto:michael@linguistlist.org) &#10;">
+<meta name="Description" content="&#10;This document specifies the codes, or controlled vocabulary, for &#10;the 'linguistic-field' value of the xsi:type attribute of the OLAC Subject element. &#10;These codes describe the content of a resource as relevant to a particular&#10;subfield of linguistic science. &#10;">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20021127">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>OLAC Linguistic Field Vocabulary</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2002-11-27</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Recommendation. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/REC/field-20021127.html">http://www.language-archives.org/REC/field-20021127.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/REC/field.html">http://www.language-archives.org/REC/field.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td>None.</td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>This document specifies the codes, or controlled vocabulary, for 
+the 'linguistic-field' value of the xsi:type attribute of the OLAC Subject element. 
+These codes describe the content of a resource as relevant to a particular
+subfield of linguistic science. </p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors> Helen Aristar Dry (<a href="mailto:hdry@linguistlist.org">mailto:hdry@linguistlist.org</a>) 
+Michael Appleby (<a href="mailto:michael@linguistlist.org">mailto:michael@linguistlist.org</a>) 
+</editors>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy;  
+Helen Aristar Dry (Eastern Michigan University),
+Michael Appleby (Eastern Michigan University) 
+. This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Linguistic Field">Linguistic Field</A>
+<UL>
+<LI>
+<A href="#anthropological_linguistics">anthropological_linguistics</A>
+</LI>
+<LI>
+<A href="#applied_linguistics">applied_linguistics</A>
+</LI>
+<LI>
+<A href="#cognitive_science">cognitive_science</A>
+</LI>
+<LI>
+<A href="#computational_linguistics">computational_linguistics</A>
+</LI>
+<LI>
+<A href="#discourse_analysis">discourse_analysis</A>
+</LI>
+<LI>
+<A href="#general_linguistics">general_linguistics</A>
+</LI>
+<LI>
+<A href="#historical_linguistics">historical_linguistics</A>
+</LI>
+<LI>
+<A href="#history_of_linguistics">history_of_linguistics</A>
+</LI>
+<LI>
+<A href="#language_description">language_description</A>
+</LI>
+<LI>
+<A href="#lexicography">lexicography</A>
+</LI>
+<LI>
+<A href="#linguistics_and_literature">linguistics_and_literature</A>
+</LI>
+<LI>
+<A href="#linguistic_theories">linguistic_theories</A>
+</LI>
+<LI>
+<A href="#morphology">morphology</A>
+</LI>
+<LI>
+<A href="#neurolinguistics">neurolinguistics</A>
+</LI>
+<LI>
+<A href="#philosophy_of_language">philosophy_of_language</A>
+</LI>
+<LI>
+<A href="#phonetics">phonetics</A>
+</LI>
+<LI>
+<A href="#phonology">phonology</A>
+</LI>
+<LI>
+<A href="#pragmatics">pragmatics</A>
+</LI>
+<LI>
+<A href="#psycholinguistics">psycholinguistics</A>
+</LI>
+<LI>
+<A href="#semantics">semantics</A>
+</LI>
+<LI>
+<A href="#sociolinguistics">sociolinguistics</A>
+</LI>
+<LI>
+<A href="#syntax">syntax</A>
+</LI>
+<LI>
+<A href="#text_and_corpus_linguistics">text_and_corpus_linguistics</A>
+</LI>
+<LI>
+<A href="#translation">translation</A>
+</LI>
+<LI>
+<A href="#typology">typology</A>
+</LI>
+<LI>
+<A href="#writing_systems">writing_systems</A>
+</LI>
+</UL>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p> The Linguistic Field extension of the Subject Element is used to describe 
+  the content of a resource as relevant to a particular subfield of linguistic 
+  science. In many cases, it may be that more than one subfield is relevant; in 
+  such cases, all relevant subfields should be chosen. Like other OLAC descriptors, 
+  the Linguistic Field descriptor is both optional and repeatable.</p>
+<p> Every effort has been made to correlate the OLAC Linguistic Field definitions 
+  with current practice in the linguistics community. However, in some cases, 
+  the definition may be wider or narrower than some linguists might expect. For 
+  example, 'Applied Linguistics' may be narrower, as it applies only to linguistic 
+  applications in the classroom, and 'Semantics' might be wider, encompassing 
+  as it does Lexical Semantics. Where the OLAC definition is narrower, there will 
+  be another, more appropriate subfield for the residual meaning, so, for example, 
+  'Computational Linguistics' is more appropriate than 'Applied Linguistics' for 
+  computer applications. </p>
+<h2>
+<A name="Linguistic Field"></A>2. Linguistic Field</h2>
+<p> Each term in the controlled vocabulary is described in one of the following 
+subsections. The heading gives the encoded value for the term that is to be used 
+as the value of the code attribute of the Subject metadata element when the xsi:type 
+attribute is "OLAC:linguistic-field" [<a href="http://www.language-archives.org/OLAC/olacms.html">OLAC-MS</a>]. Under the heading, the 
+term is described in four ways. Name gives a descriptive label for the term. Definition 
+is a one-line summary of what the term means. Comments offers more details on 
+what the term represents. Examples may also be given to illustrate how the term 
+is meant to be applied. </p>
+<h3>
+<A name="anthropological_linguistics"></A>anthropological_linguistics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Anthropological Linguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The study of language with particular reference to the society and culture of the speakers.  </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p> Anthropological linguistics often concerns less well-documented 
+languages.  The definition includes 'ethnolinguistics.' </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p> The SIL Ethnologue, which collects data on the number on speakers of a 
+language and the geographical region in which it is spoken. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="applied_linguistics"></A>applied_linguistics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Applied Linguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The use of linguistic methods in solving real world problems, especially
+problems of literacy or language learning. 
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The definition includes TESOL, ESL, Second 
+Language Teaching, Second Language Learning and Contrastive Linguistics. </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Teaching materials, guides for language teachers, and studies of adult 
+language learning. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="cognitive_science"></A>cognitive_science</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Cognitive Science</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>In terms of linguistics, theories of language that attempt to show language 
+to be a product of general cognitive functions. 
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p> A paper on iconicity. 
+</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="computational_linguistics"></A>computational_linguistics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Computational Linguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The use of computer science in the study of language. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p> The definition includes Artificial Intelligence, Natural 
+Language Processing, and Mathematical Linguistics. </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Books and papers dealing with Machine 
+Translation, Text to Speech software, and algorithms to parse sentences. 
+</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="discourse_analysis"></A>discourse_analysis</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Discourse Analysis</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The study of the patterns and meanings behind connected speech.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The definition includes Humor Studies, Conversation 
+Analysis, Interactional Sociolinguistics, and studies of language use in special 
+circumstances, e.g. Courtroom Language.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Transcripts of discourse, perhaps with turn taking 
+and speaker overlap highlighted; papers on Discourse Representation Theory or on 
+different talk types such as doctor/patient interaction; and audio and video tapes of 
+interactive discourse which might serve as an object of study.
+</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="general_linguistics"></A>general_linguistics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>General Linguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The 
+broad study of linguistics without specialization in any subfield.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Resources that cover many subfields in depth, perhaps a dissertation 
+on an endangered language with a detailed syntactic and phonological analysis, 
+should be classified under all the relevant subfields instead of 'General Linguistics'. </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>
+Broad, often introductory textbooks such as The Cambridge Encyclopaedia 
+of Language (Crystal, 1987), and glossaries of linguistic terminology. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="historical_linguistics"></A>historical_linguistics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Historical Linguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The diachronic study of language change.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The definition includes Etymology.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Papers on phonological shifts and data exemplifying such shifts. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="history_of_linguistics"></A>history_of_linguistics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>History of Linguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>Study of the history and development of linguistic science, usually pre-20th century.
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A biography of Ferdinand de Saussure, or an analysis of Plato's discussions on language. 
+</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_description"></A>language_description</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Language Description</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>
+The report and/or analysis of data from a language, usually previously uncirculated.
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>
+Usually, the major purpose of resources classified as Language Description is to 
+provide information on language structure, rather than to critique or support a specific
+linguistic theory.  However, if a descriptive drammar or analysis has a particular 
+theoretical bent it may also be classified under Linguistic Theory.
+</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>
+A grammar, a PhD dissertation 
+on an endangered language, a collection of field notes and recordings. 
+</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="lexicography"></A>lexicography</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Lexicography</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The creation of dictionaries, monolingual or multilingual, for linguistic purposes.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Swadesh word lists, a reverse dictionary of English, and a collection 
+of legal terms in a particular language. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="linguistics_and_literature"></A>linguistics_and_literature</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Linguistics and Literature</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The application of linguistic analysis to bellettristic texts, such as fiction, drama or poetry.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The definition includes Stylistics and Poetics.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>An analysis of lexical patterns characteristic of a particular author or syntactic
+constructions used to create specific literary effects. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="linguistic_theories"></A>linguistic_theories</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Linguistic Theories</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>Theories 
+(argued to be) fundamental to linguistic science, often spanning more than one 
+subfield such as phonology and syntax.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Papers arguing 
+for or against Universal Grammar, Transformational Grammar, or Montague Grammar. 
+</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="morphology"></A>morphology</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Morphology</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The study of the structure and constituency of individual words.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>A resource consisting primarily of data from a morphologically complex 
+language should be classifed as 'Language Description' if the primary purpose is to describe
+the structure of the language in question. </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A paper on 
+morphological theory, Word Grammar (Hudson). </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="neurolinguistics"></A>neurolinguistics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Neurolinguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The study of brain structure and the 
+physical representation of language in the brain.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A 
+study of brain damage with respect to language impairment, a study of the neurological 
+development of the brain during first language acquisition. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="philosophy_of_language"></A>philosophy_of_language</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Philosophy of Language</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The application of philosophy to linguistic theory.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A 
+paper on the Sapir-Whorf hypothesis, a comparative study of verbal and non-verbal 
+thought. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="phonetics"></A>phonetics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Phonetics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The study and classification of the structure, articulation and perception 
+of speech sounds.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The definition includes both articulatory 
+phonetics and acoustic phonetics.  Datasets, lexicons, and graphic representations of experimental
+results should be classified under Phonetics if they have particular relevance to the sounds
+of the language.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A sound inventory 
+of a language, a study of the variation of articulation of a particular sound. 
+</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="phonology"></A>phonology</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Phonology</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The 
+study of the patterns and principles behind the sound system of a language, or 
+languages in general.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>
+The classification is not limited to phonological analyses.
+Datasets, lexicons, and graphic representations of experimental
+results should be classified under Phonology if they have particular relevance to the sound system
+of the language.
+</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Phonological theories applied 
+to a particular language; that is, a study of the syllable structure of a language, 
+or the rules behind sound alternations. Also to be included under 'Phonology' 
+are phoneme datasets, field notes on the phonology of a language, and papers on phonological theories themselves, such as a critique of Optimality 
+Theory. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="pragmatics"></A>pragmatics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Pragmatics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The study of the use of language in terms of the context in which 
+it is spoken.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The definition includes Non-verbal Communication.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A study of politeness phenomena, honorifics, deixis or speech acts. 
+</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="psycholinguistics"></A>psycholinguistics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Psycholinguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The application of Psychology to linguistics, in terms of the development 
+of child language (Developmental Psycholinguistics), or in terms of psychological 
+mechanisms behind language, such as memory and intelligence (Experimental Psycholinguistics).</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A cross-linguistic study of acquisition of a particular syntactic 
+constraint, a study of aphasic children's language development. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="semantics"></A>semantics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Semantics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The study 
+of linguistic meaning.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The study of meaning in conversation 
+should be classified as 'Discourse Analysis' and not 'Semantics'. The Linguistic 
+Field of 'Semantics' includes meaning at the word level ('lexical semantics').</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A paper on semantic theory, such as Truth Conditional Semantics. 
+A paper on color lexemes in a particular language. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="sociolinguistics"></A>sociolinguistics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Sociolinguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The study 
+of language in context of the society that speaks it.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Multilingualism, 
+Folklore, Pidgins and Creoles, Dialectology, Language Planning, and Gender Studies should 
+all be classified under 'Sociolinguistics'.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A study 
+of language variation according to such factors as the speakers' gender, age, 
+and/or social class. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="syntax"></A>syntax</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Syntax</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>'The study of grammatical relations between words and other units 
+within a sentence' (Concise Oxford Dictionary of Linguistics). To be distinguished 
+from morphology, which applies to units smaller than the word.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A 
+syntactic description of a language, using a particular syntactic theory. A paper 
+using language data to criticize a syntactic theory. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="text_and_corpus_linguistics"></A>text_and_corpus_linguistics</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Text and Corpus Linguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The study of the structure of an extended passage, text, or set of texts. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The definition includes Semiotics and Genre Analysis. The text 
+itself should be classified under 'Text and Corpus Linguistics,' as well as any analyses
+of the text.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>The British National Corpus. A statistical analysis of the British National Corpus, 
+on the use of modal verbs in spoken and written English. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="translation"></A>translation</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Translation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The 
+act of converting one language into another, and the issues that thereby arise.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The definition includes 'Terminology' and 'Transliteration'. The translated 
+text itself may be better classified under 'Language Description' if the purpose 
+of the translation is to exemplify the structure of a language.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A study of the relative merits of different levels of translation 
+(that is, literal translation, word-for-word translation and so on). </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="typology"></A>typology</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Typology</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The study 
+of the similarites and differences between languages, regardless of any genetic 
+relation, and the resulting categorization of language into 'types'.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The definition includes the descriptive and comparative study of Universals.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A paper 
+using data from multiple languages as an argument for or against Universal Grammar. An analysis of 
+a poorly documented language in terms of Greenberg's Universals. </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="writing_systems"></A>writing_systems</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Writing Systems</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The 
+visual representation of spoken language on paper or other media, and the issues 
+involved in writing and creating a writing system.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Resources dealing with literacy may be classified as Writing Systems or Applied Linguistics
+or both, depending on whether the resource has substantial pedagogic content (Applied Linguistics) or
+includes an analysis of the graphemic system per se (Writing Systems).</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A paper examining issues in a linguist's development of a writing system for 
+a previously unwritten language. An examination of pictographic 
+writing systems. </p>
+</td>
+</tr>
+</table>
+</body>
+<a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="OLAC-MS">OLAC-MS</a>]</td><td>OLAC Metadata Set.<br>
+
+    &lt;<a href="http://www.language-archives.org/OLAC/olacms.html">http://www.language-archives.org/OLAC/olacms.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

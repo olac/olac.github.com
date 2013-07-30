@@ -1,0 +1,95 @@
+<?
+# VISER: The Virtual Service Provider
+# Gary Simons and Steven Bird
+# 28 October 2002
+# Updated to call olaca3.pl: 29 July 2003
+#
+# See: http://www.language-archives.org/viser
+#
+# This version of the script performs the XSL transformation
+# on the server and returns an HTML page.
+
+# Parameters in the calling URL
+#    elements -- Number of metadata elements in query
+#    sql      -- URL encoded WHERE-clause expression
+#    count    -- (Opt) Number of records per batch (default 20)
+#    title    -- (Opt) Title for the resulting HTML page
+#    xsl      -- (Opt) URL of stylesheet
+#    resumptionToken -- Exclusive of first three params
+#    start    -- Number of first item in a resumption page
+
+# If there is no query, display the documentation
+
+  if (!$sql and !$resumptionToken)
+     {
+     $documentation = "http://www.language-archives.org/NOTE/viser.html";
+     header("Content-Type: text/html");
+     readfile($documentation);
+     exit;
+     }
+
+
+# Construct the URL to fetch the query results from OLACA
+
+  $OLACA = "http://www.language-archives.org/cgi-bin/olaca3.pl?verb=Query";
+  $sql = ereg_replace("\\\'", "'", $sql);
+  $sql = ereg_replace("%", "%25", $sql);
+  $sql = ereg_replace("=", "%3D", $sql);
+  $sql = ereg_replace(" ", "%20", $sql);
+
+  if ($resumptionToken != '') {
+     $query = "$OLACA&resumptionToken=$resumptionToken"; }
+  else {
+     $query = "$OLACA&elements=$elements&sql=$sql";
+     if ($count) {
+        $query = "$query&count=$count"; }
+     $start = 1; }
+
+# Run query
+
+  $fd = fopen($query, 'r');
+  $xmlDecl = fgets($fd);
+  $data = fread($fd, 500000);
+  if (!feof($fd)) {
+     $xmlDecl = "<html>\n";
+     $data = "<p>Response exceeds size limit of 500,000 bytes. Use a smaller value of <i>count.</i></p></html>";
+     }
+  fclose($fd);
+
+# Write query result to a temporary file
+
+  $tmpfile = tempnam("tmp", '');
+  $tmpfile = "$tmpfile.xml";
+
+  $fd = fopen($tmpfile, 'w');
+  fputs($fd, $xmlDecl);
+  fputs($fd, "<?title $title?>\n");
+  fputs($fd, "<?start $start?>\n");
+  fputs($fd, $data);
+  fclose($fd);
+  chmod($tmpfile, 0644);
+
+# Use the default stylesheet if no argument was given
+
+  if (!$xsl) {
+     $xsl = "http://www.language-archives.org/tools/viser/basic_service.xsl"; }
+
+# Set up the XSLT processor
+
+  $java    = "/pkg/j/j2sdk1.4.0/bin/java";
+  $xalan   = "/mnt/unagi/ldc/wwwhome/jakarta-tomcat-3.2.3-sb/lib/xalan.jar";
+  $xerces  = "/pkg/x/xerces-2_0_1/xercesImpl.jar";
+  $xslt    = "$java -classpath $xalan:$xerces org.apache.xalan.xslt.Process -xsl $xsl";
+
+# Transform output
+
+  $command = "$xslt -IN $tmpfile -PARAM title \"$title\"";
+  exec($command, $result);
+
+# Return the HTML page
+
+  header("Content-Type: text/html"); 
+  print join("\n", $result);
+
+?>
+

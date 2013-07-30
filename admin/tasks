@@ -1,0 +1,124 @@
+TASKS
+
+SB = Steven Bird
+GS = Gary Simons
+HL = Haejoong Lee
+
+
+*** OLAC Repositories - OLAC-1.0 / OAI-2.0 Migration
+
+Sourceforge setup
+- CVS tree [HL]
+- task list [SB]
+
+ORyX Migration {HL TASK 1}
+  http://www.language-archives.org/OLAC/1.0/oryx/
+- create static repo schema and example for OLAC 1.0 [SB]
+- write XSL transform from ORyX 0.4 to 1.0 [GS]
+  # XSL file location: private/vida/ORyX_to_sr.xsl
+  # (ORyX_to_sr.xsl depends on olac_04_to_10.xsl)
+- transform existing ORyX files [HL]
+  # done (devel/sr/*.xml) (including external static repositories)
+- test using static repository software [HL]
+  # done
+- adapt OAI static repo software to insist on: [HL]
+  + olac metadata from static repository
+  + no friends
+  + (libtest.lanl.gov, hochsten@lanl.gov)
+  # 100% ("friends" to be removed + need to test the updated gateway)
+
+New OLAC database schema [GS,SB,HL] {HL TASK 2}
+- draft new database schema [SB,GS]
+- study new OLAC 1.0 metadata format [HL]
+  http://www.language-archives.org/OLAC/1.0/
+- port harvester to new schema [HL]
+  # 100% (rewriting from the scratch - oai harvester gives little benefit)
+  # + (basically working, need to clean up)
+- revise schema as necessary [HL]
+  # OLAC_EXTENSION --> EXTENSION (olac2_schema-HL.sql)
+  # <olac-extension> is harvested
+- communicate with LINGUIST [SB]
+
+Update OLACA [HL] {HL TASK 3}
+# http://www.language-archives.org/cgi-bin/olaca3.pl
+- include query verb
+  # done
+- incorporate DC crosswalk and OLAC_display metadata format
+  http://www.language-archives.org/NOTE/olac_display.html
+  # done
+- transformation of codes to labels (vocab definition language?) [GS,SB]
+- register with OAI [HL]
+  # done
+- web crawler gateway
+  + install OAI-2.0 version of DP9 [HL]
+    # done
+      + http://www.language-archives.org:8082/dp9
+      + http://www.language-archives.org:8082/dp9-1.1  (old one)
+  + write new DP9 stylesheets [GS]
+    # done [HL]
+
+Update registration script [HL] {HL TASK 4}
+- validate OAI-2.0 repositories
+  # done
+- use new OLAC Repository standard
+  # done
+- local schema validation with xerces
+  # done (using both xsv and xerces-j)
+- get archives.php4 to use shortLocation
+  # done
+- update OLAC website to use new db
+  # done  (see /admin/website_updates.txt)
+
+Change code attribute to olac:code,
+and attributeFormDefault="qualified"
+- Fixing olac.xsd is not enough -- fixed all extension schemas
+- Fix static-repository-OLAC.xml for this change [SB]
+
+
+Finalize OLAC Repositories document [GS]
+- provide validation pointer and an example repository [SB]
+- investigate possibility of individuals providing single records [GS]
+- OLAC service to validate a repository or a record? [SB]
+- how to form repository identifiers with personal data repositories?
+
+Efficiency [SB]
+- what database does LINGUIST use?  does it have indexing?
+- does MySQL support indexing on words in text fields?
+
+Update viser [GS]
+- new default stylesheet for OLAC-1.0
+- transformation of codes to labels
+
+LINGUIST updates [SB]
+- forewarn LINGUIST folks about upgrading service provider
+- plan for upgrading ORE to new schema
+- what became of their own ORE implementation?
+
+Granularity recommendation (Heidi, Alexis, Baden, Joan)
+- to go in new BCP document
+- find Gary's document listing recommendations pulled out of olacms document
+
+
+*** OLAC Process
+
+Finish list of potential council members
+Approach potential council members
+Contact advisory board to approve process document and council members
+
+
+*** OLAC Metadata
+
+Soon ready for community review (proposed status):
+Language [Gary, Anthony] - write Language document [Gary]
+Discourse-Type [Helen]
+Linguistic-Type [Helen]
+Linguistic-Fields [Helen] - minor definitions to fix, choice of host element
+Role [Heidi] - decision about MARC locators
+
+Follow up with Baden
+
+
+*** Miscellaneous
+
+Rights discussion (blick definition) - Heidi
+Submit DC application profile registration - later, with Elaine Westbrooks

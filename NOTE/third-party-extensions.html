@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Third Party Extensions</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="Third Party Extensions">
+<meta name="Creator" content="Gary Simons, SIL International&#10;        (mailto:gary_simons@sil.org)Steven Bird, University of&#10;        Melbourne (mailto:sb@csse.unimelb.edu.au)">
+<meta name="Description" content="This document lists third-party metadata extensions that are known&#10;to be compatible with the OLAC Metadata standards.  They have not attained the status of OLAC Recommendations, but data providers are encouraged to try any that seem relevant to the nature of their collection.">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20021204">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>Third Party Extensions</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2002-12-04</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Informational Note. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/NOTE/third-party-extensions-20021204.html">http://www.language-archives.org/NOTE/third-party-extensions-20021204.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/NOTE/third-party-extensions.html">http://www.language-archives.org/NOTE/third-party-extensions.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td>None.</td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>This document lists third-party metadata extensions that are known
+to be compatible with the OLAC Metadata standards.  They have not attained the status of OLAC Recommendations, but data providers are encouraged to try any that seem relevant to the nature of their collection.</p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>Gary Simons, SIL International
+        (<a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>)<br>Steven Bird, University of
+        Melbourne (<a href="mailto:sb@csse.unimelb.edu.au">mailto:sb@csse.unimelb.edu.au</a>)</editors>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 2002 Gary Simons (SIL International) and Steven Bird (University of Melbourne). This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Third party extensions">Third party extensions</A>
+</LI>
+<LI>
+<A href="#Hypothetical third party extensions">Hypothetical third party extensions</A>
+<UL>
+<LI>
+<A href="#language"></A> [as:language]</LI>
+<LI>
+<A href="#participant"></A> [childes:participant]</LI>
+<LI>
+<A href="#hlt-field"></A> [ltworld:hlt-field]</LI>
+<LI>
+<A href="#role"></A> [example:role]</LI>
+<LI>
+<A href="#price"></A> [netdc:price]</LI>
+<LI>
+<A href="#distribution"></A> [netdc:distribution]</LI>
+<LI>
+<A href="#memberyear"></A> [netdc:memberyear]</LI>
+<LI>
+<A href="#license"></A> [netdc:license]</LI>
+<LI>
+<A href="#speechformat"></A> [netdc:speechformat]</LI>
+<LI>
+<A href="#cpu"></A> [software:cpu]</LI>
+<LI>
+<A href="#os"></A> [software:os]</LI>
+<LI>
+<A href="#sourcecode"></A> [software:sourcecode]</LI>
+</UL>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>The OLAC Metadata standard [<a href="http://www.language-archives.org/OLAC/metadata.html">OLAC-Metadata</a>] follows the generic
+resource description standard known as "Qualified Dublin Core"
+[<a href="http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/">DCQ</a>], and supports a powerful extension mechanism described
+in [<a href="http://www.language-archives.org/drafts/olac-extensions.html">OLAC-Extensions</a>].
+Any party may develop their own metadata extension and use it in OLAC metadata
+records.  This document lists the third-party extensions which are known to
+work with OLAC Metadata. Each
+extension is described in terms of a title and the following five
+attributes:</p>
+<blockquote>
+<dl>
+<dt>
+<b>Name</b>
+</dt>
+<dd>
+<p>The symbolic name that is used as the value of the <tt>xsi:type</tt> attribute to indicate that the extension is being used in a metadata element.</p>
+</dd>
+<dt>
+<b>Date</b>
+</dt>
+<dd>
+<p>The latest revision date of the extension or its controlled vocabulary.</p>
+</dd>
+<dt>
+<b>Applies to</b>
+</dt>
+<dd>
+<p>The Dublin Core elements with which the extension may be used.</p>
+</dd>
+<dt>
+<b>Description</b>
+</dt>
+<dd>
+<p>A summary description of what the extension is used for.</p>
+</dd>
+<dt>
+<b>Documentation</b>
+</dt>
+<dd>
+<p>A link to a complete document that defines and exemplifies the extension. If the extension involves a controlled vocabulary, the document should also enumerate and define the terms of the vocabulary.</p>
+</dd>
+</dl>
+</blockquote>
+<h2>
+<A name="Third party extensions"></A>2. Third party extensions</h2>
+<p>There are currently no third-party extensions.</p>
+<h2>
+<A name="Hypothetical third party extensions"></A>3. Hypothetical third party extensions</h2>
+<p>The following hypothetical third party extensions are provided as examples:</p>
+</body>
+<a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="DCQ">DCQ</a>]</td><td>Dublin Core Qualifiers.<br>&lt;<a href="http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/">http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Extensions">OLAC-Extensions</a>]</td><td>Recommended metadata extensions<br>&lt;<a href="http://www.language-archives.org/drafts/olac-extensions.html">http://www.language-archives.org/drafts/olac-extensions.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Metadata">OLAC-Metadata</a>]</td><td>OLAC Metadata.<br>&lt;<a href="http://www.language-archives.org/OLAC/metadata.html">http://www.language-archives.org/OLAC/metadata.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

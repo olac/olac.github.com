@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.language-archives.org/OLAC/0.4/">
+
+  <annotation>
+    <documentation>
+      OLAC Schema for DC types, Steven Bird, 5/7/01
+    </documentation>
+  </annotation>
+
+  <simpleType name="DC-Type-Code">
+    <restriction base="string">
+      <enumeration value="Collection"/>
+      <enumeration value="Dataset"/>
+      <enumeration value="Event"/>
+      <enumeration value="Image"/>
+      <enumeration value="Interactive Resource"/>
+      <enumeration value="Service"/>
+      <enumeration value="Software"/>
+      <enumeration value="Sound"/>
+      <enumeration value="Text"/>
+    </restriction>
+  </simpleType>
+
+</schema>
+
+
+
+
+
+

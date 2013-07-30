@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olac:olac xmlns="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:olac="http://www.language-archives.org/OLAC/1.0b1/olac.xsd"
+           xmlns:ltworld="http://www.lt-world.org/ltworld-hlt-field.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.lt-world.org/ltworld-hlt-field.xsd ltworld-hlt-field.xsd">
+
+<!-- language technology fields:
+     subject element - an HLT thesis about this field
+     type element - an HLT system of this type -->
+
+  <subject xsi:type="ltworld:hlt-field" code="spoken_input"/>
+  <type xsi:type="ltworld:hlt-field" code="spoken_input"/>
+
+<!-- OLAC extensions -->
+
+  <subject xsi:type="olac:linguistic-field" code="phonology"/>
+  <contributor xsi:type="olac:role" code="editor">Sapir, Edward</contributor>
+  <language xsi:type="olac:language" code="x-sil-BAN">Dschang</language>
+  <subject xsi:type="olac:language" code="x-sil-SKY"/>
+  <type xsi:type="olac:linguistic-type" code="lexicon">thesaurus</type>
+  <date xsi:type="olac:date" code="created" date="1963-09-14"/>
+
+<!-- DC elements, refinements and encodings -->
+
+  <title>TITLE</title>
+  <dcterms:alternative>ALTERNATIVE</dcterms:alternative>
+  <date xsi:type="dcterms:W3CDTF">1963-09-14</date>
+  <relation xsi:type="dcterms:URI">http://oai.grainger.uiuc.edu</relation>
+
+</olac:olac>

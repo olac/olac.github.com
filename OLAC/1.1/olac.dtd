@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+     DTD for the OLAC Metadata Set, version 1.1
+     Gary Simons and Steven Bird, 26 July 2008
+     
+     The definitive definition for an OLAC metadata record is the XML schema
+     at:  http://www.language-archives.org/OLAC/1.1/olac.xsd
+     See usage guidelines at: http://www.language-archives.org/NOTE/usage.html
+     
+     This DTD is offered for the convenience of users who need to use DTD-based 
+     software.  However, since schemas have more functionality than DTDs, validation
+     with this DTD does not guarantee that the document is valid with respect to the schema.
+
+-->
+    
+<!-- DOCTYPE olac:olac -->
+<!--The content model ANY overgenerates since it allows recursion of olac:olac -->
+<!ELEMENT olac:olac ANY>
+<!ATTLIST olac:olac
+    xmlns:olac CDATA #FIXED "http://www.language-archives.org/OLAC/1.1/"
+    xmlns:dc CDATA #FIXED "http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms CDATA #FIXED "http://purl.org/dc/terms/"
+>
+
+<!ENTITY % attributes1  
+   "xml:lang CDATA #IMPLIED"
+ >
+ <!ENTITY % attributes2  
+   "xml:lang CDATA #IMPLIED
+    xsi:type CDATA #IMPLIED"
+ >
+ <!ENTITY % attributes3  
+   "xml:lang CDATA #IMPLIED
+    xsi:type CDATA #IMPLIED
+    olac:code CDATA #IMPLIED"
+ >
+<!ELEMENT dc:contributor (#PCDATA)>
+<!ATTLIST dc:contributor
+	%attributes3;
+>
+<!ELEMENT dc:coverage (#PCDATA)>
+<!ATTLIST dc:coverage
+	%attributes2;
+>
+<!ELEMENT dc:creator (#PCDATA)>
+<!ATTLIST dc:creator
+	%attributes1;
+>
+<!ELEMENT dc:date (#PCDATA)>
+<!ATTLIST dc:date
+	%attributes2;
+>
+<!ELEMENT dc:description (#PCDATA)>
+<!ATTLIST dc:description
+	%attributes2;
+>
+<!ELEMENT dc:format (#PCDATA)>
+<!ATTLIST dc:format
+	%attributes2;
+>
+<!ELEMENT dc:identifier (#PCDATA)>
+<!ATTLIST dc:identifier
+	%attributes2;
+>
+<!ELEMENT dc:language (#PCDATA)>
+<!ATTLIST dc:language
+	%attributes3;
+>
+<!ELEMENT dc:publisher (#PCDATA)>
+<!ATTLIST dc:publisher
+	%attributes2;
+>
+<!ELEMENT dc:relation (#PCDATA)>
+<!ATTLIST dc:relation
+	%attributes2;
+>
+<!ELEMENT dc:rights (#PCDATA)>
+<!ATTLIST dc:rights
+	%attributes2;
+>
+<!ELEMENT dc:source (#PCDATA)>
+<!ATTLIST dc:source
+	%attributes2;
+>
+<!ELEMENT dc:subject (#PCDATA)>
+<!ATTLIST dc:subject
+	%attributes3;
+>
+<!ELEMENT dc:title (#PCDATA)>
+<!ATTLIST dc:title
+	%attributes1;
+>
+<!ELEMENT dc:type (#PCDATA)>
+<!ATTLIST dc:type
+	%attributes3;
+>
+<!ELEMENT dcterms:abstract (#PCDATA)>
+<!ATTLIST dcterms:abstract
+	%attributes2;
+>
+<!ELEMENT dcterms:alternative (#PCDATA)>
+<!ATTLIST dcterms:alternative
+	%attributes1;
+>
+<!ELEMENT dcterms:audience (#PCDATA)>
+<!ATTLIST dcterms:audience
+	%attributes2;
+>
+<!ELEMENT dcterms:available (#PCDATA)>
+<!ATTLIST dcterms:available
+	%attributes2;
+>
+<!ELEMENT dcterms:conformsTo (#PCDATA)>
+<!ATTLIST dcterms:conformsTo
+	%attributes2;
+>
+<!ELEMENT dcterms:created (#PCDATA)>
+<!ATTLIST dcterms:created
+	%attributes2;
+>
+<!ELEMENT dcterms:dateAccepted (#PCDATA)>
+<!ATTLIST dcterms:dateAccepted
+	%attributes2;
+>
+<!ELEMENT dcterms:dateCopyrighted (#PCDATA)>
+<!ATTLIST dcterms:dateCopyrighted
+	%attributes2;
+>
+<!ELEMENT dcterms:dateSubmitted (#PCDATA)>
+<!ATTLIST dcterms:dateSubmitted
+	%attributes2;
+>
+<!ELEMENT dcterms:educationLevel (#PCDATA)>
+<!ATTLIST dcterms:educationLevel
+	%attributes2;
+>
+<!ELEMENT dcterms:extent (#PCDATA)>
+<!ATTLIST dcterms:extent
+	%attributes2;
+>
+<!ELEMENT dcterms:hasFormat (#PCDATA)>
+<!ATTLIST dcterms:hasFormat
+	%attributes2;
+>
+<!ELEMENT dcterms:hasPart (#PCDATA)>
+<!ATTLIST dcterms:hasPart
+	%attributes2;
+>
+<!ELEMENT dcterms:hasVersion (#PCDATA)>
+<!ATTLIST dcterms:hasVersion
+	%attributes2;
+>
+<!ELEMENT dcterms:isFormatOf (#PCDATA)>
+<!ATTLIST dcterms:isFormatOf
+	%attributes2;
+>
+<!ELEMENT dcterms:isPartOf (#PCDATA)>
+<!ATTLIST dcterms:isPartOf
+	%attributes2;
+>
+<!ELEMENT dcterms:isReferencedBy (#PCDATA)>
+<!ATTLIST dcterms:isReferencedBy
+	%attributes2;
+>
+<!ELEMENT dcterms:isReplacedBy (#PCDATA)>
+<!ATTLIST dcterms:isReplacedBy
+	%attributes2;
+>
+<!ELEMENT dcterms:isRequiredBy (#PCDATA)>
+<!ATTLIST dcterms:isRequiredBy
+	%attributes2;
+>
+<!ELEMENT dcterms:isVersionOf (#PCDATA)>
+<!ATTLIST dcterms:isVersionOf
+	%attributes2;
+>
+<!ELEMENT dcterms:issued (#PCDATA)>
+<!ATTLIST dcterms:issued
+	%attributes2;
+>
+<!ELEMENT dcterms:mediator (#PCDATA)>
+<!ATTLIST dcterms:mediator
+	%attributes2;
+>
+<!ELEMENT dcterms:medium (#PCDATA)>
+<!ATTLIST dcterms:medium
+	%attributes2;
+>
+<!ELEMENT dcterms:modified (#PCDATA)>
+<!ATTLIST dcterms:modified
+	%attributes2;
+>
+<!ELEMENT dcterms:references (#PCDATA)>
+<!ATTLIST dcterms:references
+	%attributes2;
+>
+<!ELEMENT dcterms:replaces (#PCDATA)>
+<!ATTLIST dcterms:replaces
+	%attributes2;
+>
+<!ELEMENT dcterms:requires (#PCDATA)>
+<!ATTLIST dcterms:requires
+	%attributes2;
+>
+<!ELEMENT dcterms:spatial (#PCDATA)>
+<!ATTLIST dcterms:spatial
+	%attributes2;
+>
+<!ELEMENT dcterms:tableOfContents (#PCDATA)>
+<!ATTLIST dcterms:tableOfContents
+	%attributes2;
+>
+<!ELEMENT dcterms:temporal (#PCDATA)>
+<!ATTLIST dcterms:temporal
+	%attributes2;
+>
+<!ELEMENT dcterms:valid (#PCDATA)>
+<!ATTLIST dcterms:valid
+	%attributes2;
+>

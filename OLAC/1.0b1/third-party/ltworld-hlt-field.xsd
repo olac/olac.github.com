@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns="http://www.lt-world.org/ltworld-hlt-field.xsd"
+           targetNamespace="http://www.lt-world.org/ltworld-hlt-field.xsd"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:annotation>
+    <xs:documentation>
+       A hypothetical 3rd party extension for the LT-World inventory of fields
+       in Human Language Technology (i.e. the HLT Survey chapter headings).
+       For definitions please see http://www.lt-world.org/
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:import namespace="http://purl.org/dc/elements/1.1/"
+             schemaLocation="http://www.ukoln.ac.uk/metadata/dcmi/xmlschema/20021007/dc.xsd"/>
+
+  <xs:complexType name="hlt-field">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="ltworld-hlt-field" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="ltworld-hlt-field">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="extraction"/>
+      <xs:enumeration value="retrieval"/>
+      <xs:enumeration value="authoring"/>
+      <xs:enumeration value="analysis"/>
+      <xs:enumeration value="understanding"/>
+      <xs:enumeration value="knowledge_representation"/>
+      <xs:enumeration value="spoken_input"/>
+      <xs:enumeration value="written_input"/>
+      <xs:enumeration value="generation"/>
+      <xs:enumeration value="spoken_output"/>
+      <xs:enumeration value="multilinguality"/>
+      <xs:enumeration value="multimodality"/>
+      <xs:enumeration value="coding"/>
+      <xs:enumeration value="methods"/>
+      <xs:enumeration value="resources"/>
+      <xs:enumeration value="evaluation"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

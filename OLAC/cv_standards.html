@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>OLAC Controlled Vocabulary Standards</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="OLAC Controlled Vocabulary Standards">
+<meta name="Creator" content="Gary Simons, SIL International (
+      mailto:gary_simons@sil.org)Steven Bird, University of
+      Pennsylvania (mailto:sb@ldc.upenn.edu) ">
+<meta name="Description" content="Lists the community's requirements with respect to the use of
+        controlled vocabularies, and then describes standards for documenting,
+        distributing, and managing controlled vocabularies in such a way as to meet
+        those requirements.">
+<meta name="Publisher" content="OLAC (Open Language Archives Community)">
+<meta name="Date" content="20010519">
+<STYLE>
+          BODY       { MARGIN:10px; BACKGROUND: white; COLOR: navy; 
+                              FONT-FAMILY: sans-serif; FONT-SIZE: 12pt }
+          H1    {FONT-SIZE: 24pt }
+          H2    {FONT-SIZE: 18pt }
+          H3    {FONT-SIZE: 16pt }
+
+        </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>OLAC Controlled Vocabulary Standards</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th width="100" align="left">Date issued:</th><td>2001-05-19</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Standard. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/OLAC/cv_standards-20010519.html">http://www.language-archives.org/OLAC/cv_standards-20010519.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/OLAC/cv_standards.html">http://www.language-archives.org/OLAC/cv_standards.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous version:</th><td>None.</td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td><abstract>
+<p>Lists the community's requirements with respect to the use of
+        controlled vocabularies, and then describes standards for documenting,
+        distributing, and managing controlled vocabularies in such a way as to meet
+        those requirements.</p>
+</abstract></td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td><editors>Gary Simons, SIL International (
+      <a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>)<br>Steven Bird, University of
+      Pennsylvania (<a href="mailto:sb@ldc.upenn.edu">mailto:sb@ldc.upenn.edu</a>) </editors></td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright © 2001
+    Gary Simons (SIL International) and Steven Bird (University of
+    Pennsylvania). This material may be distributed only subject to the terms and conditions set forth in the Open Publication License, v1.0 or later (the latest version is presently available at <a href="http://www.opencontent.org/openpub/">http://www.opencontent.org/openpub/</a>).</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Requirements">Requirements</A>
+</LI>
+<LI>
+<A href="#Documenting controlled vocabularies">Documenting controlled vocabularies</A>
+</LI>
+<LI>
+<A href="#Distributing controlled vocabularies">Distributing controlled vocabularies </A>
+</LI>
+<LI>
+<A href="#File naming conventions">File naming conventions</A>
+</LI>
+<LI>
+<A href="#Managing controlled vocabularies">Managing controlled vocabularies</A>
+</LI>
+</ol>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>The OLAC metadata set [<a href="#OLAC-MS">OLAC-MS</a>] uses approximately a dozen
+        controlled vocabularies to enumerate possible element refinements and possible
+        coded values for elements. This document lists the community's requirements
+        with respect to the use of controlled vocabularies, and then describes
+        standards for documenting, distributing, and managing controlled vocabularies
+        in such a way as to meet those requirements.</p>
+<h2>
+<A name="Requirements"></A>2. Requirements</h2>
+<p>There are three main uses of controlled vocabularies:</p>
+<ul>
+<li>
+<p>Users consult them in order to select the right term for a
+            particular purpose, such as when specifying search terms or when creating the
+            metadata for a resource.</p>
+</li>
+<li>
+<p>Automated processes consult them in order to verify the validity
+            of metadata that use them.</p>
+</li>
+<li>
+<p>Data providers and service providers consult them (when new
+            versions of controlled vocabularies are released) in order to discover what has
+            changed and thus to learn what may need to change in existing metadata or
+            services. </p>
+</li>
+</ul>
+<p>From the standpoint of selecting the right term, these are the main
+        requirements on a controlled vocabulary:</p>
+<ol>
+<li>
+<p>There needs to be a standard coded value for each term.</p>
+</li>
+<li>
+<p>When the coded value for a term is too cryptic to stand on its own
+            in a user interface, users also need to be able to see and choose from brief
+            descriptions.</p>
+</li>
+<li>
+<p>When the brief description is not enough to clarify what the term
+            represents, users also need to be able to consult an extended definition (often
+            including examples).</p>
+</li>
+</ol>
+<p>From the standpoint of validating coded data, there is just one basic
+        requirement:</p>
+<ol start="4">
+<li>
+<p>There needs to be a complete list of the standard coded values for
+            all the terms in a vocabulary.</p>
+</li>
+</ol>
+<p>From the standpoint of keeping coded data up-to-date with the latest
+        version of a controlled vocabulary, these are the main requirements for dealing
+        with changes to the controlled vocabulary:</p>
+<ol start="5">
+<li>
+<p>Persons who use the controlled vocabulary to assign coded values
+            in metadata records need to be able to get a list of all changes to it (such as
+            additions, deletions, shifts in meaning) so that they can learn what needs to
+            change in their coding practice.</p>
+</li>
+<li>
+<p>Data providers need an automated way to find all the metadata
+            records that may may no longer be correctly coded (such as when codes are
+            retired or shift in their range of meaning). For each affected coded value,
+            there should be an indication of how existing data may need to be changed.</p>
+</li>
+<li>
+<p>Data providers need for the activity of updating existing data to
+            be an infrequent one. Thus changes to controlled vocabularies need to be
+            gathered up into infrequent version releases, rather than being made whenever a
+            change is decided upon.</p>
+</li>
+</ol>
+<p>The remaining sections describe a set of standards for managing
+        controlled vocabularies that are designed to meet the above requirements. These
+        standards are followed within OLAC so as to ensure that the requirements are
+        met in a consistent way for all OLAC controlled vocabularies.</p>
+<h2>
+<A name="Documenting controlled vocabularies"></A>3. Documenting controlled vocabularies</h2>
+<p>Any controlled vocabulary used by the OLAC metadata set
+        [<a href="#OLAC-MS">OLAC-MS</a>] must be explained in a document that is publicly accessible
+        over the World Wide Web.</p>
+<p>Such a document will typically give an overview of what the vocabulary
+        is used for and how it is organized, and then give a complete listing of the
+        terms in the vocabulary with definitions and even examples. It should also
+        document what has changed in the controlled vocabulary whenever a new version
+        is released. </p>
+<p>The documentation of the individual terms need not be in the overall
+        document; it could, for instance, be stored in a database with a CGI interface.
+        When the terms are not defined in the controlled vocabulary document, it is
+        required that each term have a unique URL by means of which its definition can
+        be retrieved. In the case of vocabulary terms defined in the overall controlled
+        vocabulary document, it is recommended best practice to offer direct access to
+        individual terms by means of named anchors in an HTML document.</p>
+<p>A separate implementation note [<a href="#CV-Impl">CV-Impl</a>] describes an XML
+        application for documenting and distributing controlled vocabularies in
+        conformance to this standard.</p>
+<h2>
+<A name="Distributing controlled vocabularies"></A>4. Distributing controlled vocabularies </h2>
+<p>Every controlled vocabulary used in the OLAC metadata set
+        [<a href="#OLAC-MS">OLAC-MS</a>] is distributed in two forms:</p>
+<ul>
+<li>
+<p>as an XML schema fragment</p>
+</li>
+<li>
+<p>as a pair of tables that can be loaded into a database</p>
+</li>
+</ul>
+<p>The schema for the OLAC metadata set has an <tt>&lt;include&gt;</tt>
+        directive for each of the controlled vocabularies it uses. The following, for
+        instance, is the content of the file which holds the schema fragment for the
+        Dublin Core Type vocabulary [<a href="#DC-Type">DC-Type</a>]:</p>
+<pre style="margin-left: 12pt">&lt;schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:olac="http://www.language-archives.org/OLAC/0.3/"
+        targetNamespace="http://www.language-archives.org/OLAC/0.3/"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified"&gt;
+
+  &lt;annotation&gt;
+    &lt;documentation&gt;
+      OLAC Schema for DC types, Steven Bird, 5/7/01
+    &lt;/documentation&gt;
+  &lt;/annotation&gt;
+
+  &lt;simpleType name="DC-Type-Code"&gt;
+    &lt;restriction base="string"&gt;
+      &lt;enumeration value="Collection"/&gt;
+      &lt;enumeration value="Dataset"/&gt;
+      &lt;enumeration value="Event"/&gt;
+      &lt;enumeration value="Image"/&gt;
+      &lt;enumeration value="Interactive Resource"/&gt;
+      &lt;enumeration value="Service"/&gt;
+      &lt;enumeration value="Software"/&gt;
+      &lt;enumeration value="Sound"/&gt;
+      &lt;enumeration value="Text"/&gt;
+    &lt;/restriction&gt;
+  &lt;/simpleType&gt;
+
+&lt;/schema&gt;
+</pre>
+<p>The purpose of this file is to enumerate all the possible coded values
+        in the controlled vocabulary so that schema validation software can ensure that
+        the values provided in OLAC metadata records are valid. </p>
+<p>OLAC data providers (at least the larger ones) typically use
+        relational database technology to build and maintain the catalog of their
+        holdings; this database then serves as the source of the OLAC metadata records.
+        For these providers, selection, validation, and maintenance of coded values
+        needs to take place in the database. In order to support these data providers,
+        every OLAC controlled vocabulary is also made available in a pair of text files
+        that can be loaded as tables into a relational database. They are in
+        tab-delimited format; that is, each row is on a separate line and a tab
+        character separates the columns. </p>
+<p>The first file is the code table itself. There is one row for each
+        term in the controlled vocabulary. Each row has three columns: one for the
+        coded value, another to give a label or brief description that can be used in a
+        user interface, and a third to give the URL that will retrieve the detailed
+        definition of that term. For instance, the first seven rows of the code table
+        for the OLAC-Language controlled vocabulary [<a href="#OLAC-Language">OLAC-Language</a>] is as
+        follows:</p>
+<pre style="margin-left: 12pt">x-sil-AAA   Ghotuo      http://www.ethnologue.com/show_language.asp?code=AAA
+x-sil-AAB   Arum-tesu   http://www.ethnologue.com/show_language.asp?code=AAB
+x-sil-AAC   Ari         http://www.ethnologue.com/show_language.asp?code=AAC
+x-sil-AAD   Amal        http://www.ethnologue.com/show_language.asp?code=AAD
+x-sil-AAE   Albanian, Arbereshe   http://www.ethnologue.com/show_language.asp?code=AAE
+x-sil-AAF   Aranadan    http://www.ethnologue.com/show_language.asp?code=AAF
+x-sil-AAG   Are         http://www.ethnologue.com/show_language.asp?code=AAG
+</pre>
+<p>The second file is a change history table. Three kinds of changes are
+        tracked: new codes that are added to the vocabulary, codes that change in
+        meaning, and codes that are retired from the vocabulary. There is one row for
+        every change to the controlled vocabulary. Each row has four columns: the code
+        that is affected, the date the change was effective, a one-letter code to
+        represent which of the three kinds of change is involved, and a bit of text
+        describing what needs to be done in order to update existing data. By
+        performing a SQL JOIN between a coded column in the data provider's database
+        and the code column of the change history table, a data provider may
+        automatically detect all database records that may need to be updated. </p>
+<p>In summary, the structure of the two tables is as follows:</p>
+<pre style="margin-left: 12pt">CODE TABLE
+   Code         -- The standardized form of the term
+   Description  -- Brief description of what it represents
+   URL          -- URL for retrieving detailed definition
+
+CHANGE HISTORY TABLE
+   Code         -- A code that is different
+   Date         -- The date of the change
+   Action       -- N(ew), C(hanged), R(etired)
+   Remedy       -- Description of how to update existing data
+</pre>
+<p>The code table always holds the most current version of the complete
+        set of coded values. The change history table always holds the complete history
+        of all changes. That is, rows are never removed from the table; they are only
+        added as codes change. </p>
+<h2>
+<A name="File naming conventions"></A>5. File naming conventions</h2>
+<p>All files relating to controlled vocabularies are named following the
+        same conventions. All such file names are formed from a hyphenated
+        <i>basename</i> that identifies the promulgating authority and the topic of the
+        vocabulary, for instance, <i>DC-Type</i> and <i>OLAC-Language</i>. Apart from
+        the hyphen, the basename contains only alphabetic characters.</p>
+<p>The official version of all controlled vocabulary files is to be found
+        on the OLAC web site (<tt>http://www.language-archives.org</tt>). They are to
+        be found with the following names and locations:</p>
+<pre style="margin-left: 12pt">/OLAC/basename.html             -- Documentation
+/OLAC/src/basename.xsd          -- XML schema fragment
+/OLAC/src/basename.tab          -- tab-delimited code table
+/OLAC/src/basename-Changes.tab  -- change history table</pre>
+<h2>
+<A name="Managing controlled vocabularies"></A>6. Managing controlled vocabularies</h2>
+<p>Once a controlled vocabulary goes into service, it needs to be as
+        stable as possible. Thus, the OLAC Coordinators are to observe the following
+        constraints on updates to the controlled vocabularies:</p>
+<ol>
+<li>
+<p>Updates to the documents or data files that clarify definitions or
+            explanations may be made at any time without requiring community review.</p>
+</li>
+<li>
+<p>Updates that add codes, change what codes mean, or retire codes
+            must be run through the OLAC document process [<a href="#OLAC-Process">OLAC-Process</a>] as a
+            proposed revision to a standard. Thus the revisions to the vocabulary must be
+            reviewed and approved by the group of Participating Archives and Services.</p>
+</li>
+</ol>
+</body>
+<hr>
+<h2>
+<font color="red">To do</font>
+</h2>
+<font color="red">
+<p>Section 3. Require a document on our site? I didn't, thinking of DC-Type
+      and elements of DC-Q that are documented on the DCMI site. However, I'm
+      starting to think that we might need a document on our site in all cases (which
+      can then point to another document for its guts) that would offer links to the
+      xsd and two tab files, and that would give the column declarations for the tab
+      files (e.g. tell how wide to declare the columns). Anything else needed in the
+      document?</p>
+<p>Section 5. I don't have the subdirectories right. What did we decide for
+      these? And what about versions of schema fragments and code tables? By
+      following our document standards, we will keep old versions of the document. Do
+      we also keep old versions of the schema fragment and the code tables? Note that
+      the change history table gives us complete version history.</p>
+<p>Section 6. We need to figure out how to handle forks in the version tree
+      when there is an adopted version that is already in use, and a proposed
+      revision is going through the document process with the aim of superseding the
+      current version. The obvious options are to either put the proposed set of four
+      files (without changing their names) in a folder for pending revisions, or to
+      leave them in the same folder but add a suffix to the basename like -REV.</p>
+</font>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td>[<a name="CV-Impl">CV-Impl</a>]</td><td>An XML application for implementing controlled
+      vocabularies.<br>&lt;<a href="http://www.language-archives.org/NOTE/cv_implementation.html
+      ">http://www.language-archives.org/NOTE/cv_implementation.html
+      </a>&gt;</td>
+</tr>
+<tr valign="top">
+<td>[<a name="DC-Type">DC-Type</a>]</td><td>DCMI Type
+      Vocabulary.<br>&lt;<a href="http://dublincore.org/documents/2000/07/11/dcmi-type-vocabulary/">http://dublincore.org/documents/2000/07/11/dcmi-type-vocabulary/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td>[<a name="OLAC-MS">OLAC-MS</a>]</td><td>OLAC Metadata
+      Set.<br>&lt;<a href="http://www.language-archives.org/OLAC/olacms.html">http://www.language-archives.org/OLAC/olacms.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td>[<a name="OLAC-Process">OLAC-Process</a>]</td><td>OLAC
+      Process.<br>&lt;<a href="http://www.language-archives.org/OLAC/process.html">http://www.language-archives.org/OLAC/process.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

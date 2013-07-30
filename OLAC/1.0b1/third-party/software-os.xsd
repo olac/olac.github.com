@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.compuling.net/projects/olac/software-os.xsd"
+           targetNamespace="http://www.compuling.net/projects/olac/software-os.xsd"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:annotation>
+    <xs:documentation>
+      1.0 OLAC Schema for operating system types, Steven Bird, 4/27/01
+      1.1 draft OLAC Schema for operating system types, Baden Hughes, 19/09/02
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:simpleType name="software-os">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unix"/>
+      <xs:enumeration value="Unix/Linux"/>
+      <xs:enumeration value="Unix/Solaris"/>
+      <xs:enumeration value="Unix/SunOS"/>
+      <xs:enumeration value="Unix/SCO"/>
+      <xs:enumeration value="Unix/AIX"/>
+      <xs:enumeration value="Unix/BSD"/>
+      <xs:enumeration value="Unix/FreeBSD"/>
+      <xs:enumeration value="Unix/OpenBSD"/>
+      <xs:enumeration value="Unix/NetBSD"/>
+      <xs:enumeration value="Unix/DECAlpha"/>
+      <xs:enumeration value="Unix/GNU-Hurd"/>
+      <xs:enumeration value="Unix/HPBLS"/>
+      <xs:enumeration value="Unix/HPUX"/>
+      <xs:enumeration value="Unix/IRIX"/>
+      <xs:enumeration value="Unix/AIX"/>
+      <xs:enumeration value="Unix/UnixWare"/>
+      <xs:enumeration value="Unix/Xenix"/>
+      <xs:enumeration value="Unix/VMS"/>
+      <xs:enumeration value="SonyClieOS"/>
+      <xs:enumeration value="Amiga"/>
+      <xs:enumeration value="PalmOS"/>
+      <xs:enumeration value="BeOS"/>
+      <xs:enumeration value="NextSTEP"/>
+      <xs:enumeration value="MacOS"/>
+      <xs:enumeration value="MacOS/OSX"/>
+      <xs:enumeration value="OS2"/>
+      <xs:enumeration value="MSDOS"/>
+      <xs:enumeration value="4DOS"/>
+      <xs:enumeration value="MSWindows"/>
+      <xs:enumeration value="MSWindows/win31"/>
+      <xs:enumeration value="MSWindows/win95"/>
+      <xs:enumeration value="MSWindows/winNT"/>
+      <xs:enumeration value="MSWindows/win98"/>
+      <xs:enumeration value="MSWindows/win2k"/>
+      <xs:enumeration value="MSWindows/winCE"/>
+      <xs:enumeration value="MSWindows/winME"/>
+      <xs:enumeration value="MSWindows/winXP"/>
+      <xs:enumeration value="MSWindows/PocketPC"/>
+      <xs:enumeration value="MSWindows/PocketPC2002"/>
+      <xs:enumeration value="MSWindows/.NET"/> 	 
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>
+  

@@ -1,0 +1,665 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+ 
+<HTML>
+ 
+<HEAD>
+<TITLE>OLAC Requirements</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252"> 
+<STYLE TYPE="text/css">BODY {
+	FONT-SIZE: 12pt; BACKGROUND: white; COLOR: navy; FONT-FAMILY: sans-serif
+}
+P {
+	FONT-SIZE: 12pt; COLOR: navy; FONT-FAMILY: sans-serif
+}
+H1 {
+	FONT-SIZE: 18pt; COLOR: navy; FONT-FAMILY: sans-serif; TEXT-ALIGN: left
+}
+H2 {
+	FONT-SIZE: 16pt; COLOR: navy; FONT-FAMILY: sans-serif; TEXT-ALIGN: left
+}
+H3 {
+	FONT-SIZE: 14pt; COLOR: navy; FONT-FAMILY: sans-serif; TEXT-ALIGN: left
+}
+TD {
+	FONT-SIZE: 11pt; BACKGROUND: white; VERTICAL-ALIGN: top; COLOR: navy; FONT-FAMILY: sans-serif
+}
+TH {
+	FONT-SIZE: 12pt; BACKGROUND: white; VERTICAL-ALIGN: top; COLOR: navy; FONT-FAMILY: sans-serif
+}
+UL {
+	FONT-SIZE: 12pt; COLOR: navy; FONT-FAMILY: sans-serif
+}
+DL {
+	FONT-SIZE: 12pt; COLOR: navy; FONT-FAMILY: sans-serif
+}
+OL {
+	FONT-SIZE: 12pt; COLOR: navy; FONT-FAMILY: sans-serif
+}
+BLOCKQUOTE {
+	FONT-SIZE: 12pt; BACKGROUND: white; VERTICAL-ALIGN: top; COLOR: navy; FONT-FAMILY: sans-serif
+}
+.frame {
+	BACKGROUND: silver
+}
+.outline {
+	BACKGROUND: silver
+}
+.number {
+	TEXT-ALIGN: right
+}
+.arch {
+	FONT-SIZE: 10pt
+}
+</STYLE>
+<META CONTENT="MSHTML 5.50.4134.600" NAME="GENERATOR">
+</HEAD>
+ 
+<BODY>
+ <H1>Requirements on the Infrastructure for Open Language Archiving</H1>
+<H2>Gary Simons and Steven Bird<BR>
+Draft: 7 December 2000 </H2>
+<HR>
+<P><I><B>About this document.</B> This document has been prepared in
+conjunction with the workshop on Web-Based Language Documentation and
+Description, held in Philadelphia on 12-15 December 2000. It lists the
+requirements on language archiving infrastructure that informed the design of
+the proposed Open Language Archives Community. It also explains how each of the
+requirements is addressed by the resulting OLAC design.</I> </P>
+<HR>
+<H2>Table of Contents</H2>
+<A
+ HREF="http://www.ldc.upenn.edu/exploration/expl2000/requirements.html#1."><B>1.
+INTRODUCTION</B></A><BR>
+<A
+ HREF="http://www.ldc.upenn.edu/exploration/expl2000/requirements.html#2."><B>2.
+REQUIREMENTS</B></A><BR>
+&nbsp;&nbsp;<A
+HREF="http://www.ldc.upenn.edu/exploration/expl2000/requirements.html#2.1.">2.1.
+User Requirements</A><BR>
+&nbsp;&nbsp;<A
+HREF="http://www.ldc.upenn.edu/exploration/expl2000/requirements.html#2.2.">2.2.
+Creator Requirements</A><BR>
+&nbsp;&nbsp;<A
+HREF="http://www.ldc.upenn.edu/exploration/expl2000/requirements.html#2.3.">2.3.
+Archivist Requirements</A><BR>
+&nbsp;&nbsp;<A
+HREF="http://www.ldc.upenn.edu/exploration/expl2000/requirements.html#2.4.">2.4.
+Developer Requirements</A><BR>
+&nbsp;&nbsp;<A
+HREF="http://www.ldc.upenn.edu/exploration/expl2000/requirements.html#2.5.">2.5.
+Sponsor Requirements</A><BR>
+&nbsp;<BR>
+<HR>
+<BR>
+<H2><A NAME="1.">1. INTRODUCTION</A></H2>
+<P>Recent years have witnessed dramatic advances in digital storage and digital
+publication technologies, making it possible to house virtually unlimited
+quantities of linguistic data online, and to disseminate this data in digital
+form on CD-ROM/DVD and over the web for negligible cost. The development of XML
+and Unicode greatly facilitate the interchange and reuse of structured
+multimodal and multilingual data and the development of interoperating software
+tools. These developments are having a pervasive influence on the way primary
+linguistic data are gathered, stored, analyzed and disseminated, as part of
+projects to document and describe languages, and they present major new
+challenges for modeling, creating, archiving and accessing this data. </P>
+<P>So far, these challenges are being addressed by the &quot;language
+documentation community&quot; in a fragmentary manner. Given the scarcity of
+resources and the scale of the challenges, the best approach would seem to be
+one in which the whole community collaborated on designing and constructing a
+shared infrastructure. </P>
+<P>In moving towards this shared infrastructure, we envision three stages of
+increasingly substantive agreement on the nature of the infrastructure: </P>
+<OL>
+<LI><B>Requirements.</B> What properties would the ideal digital infrastructure
+possess? </LI>
+<LI><B>State of the Art.</B> What is the current state of the art, and how well
+does it meet these requirements? </LI>
+<LI><B>Best Practices.</B> In light of the above, what are the recommended best
+practices for modeling, creating, archiving and accessing language
+documentation? </LI>
+</OL>
+<P>The present document focuses on the first of these, the requirements. </P>
+<H2>2. REQUIREMENTS</H2>
+<P>We can identify at least five special interest groups that would want to
+levy requirements on the enterprise: </P>
+<TABLE>
+<TBODY>
+<TR>
+<TD><B>users</B></TD>
+<TD>The people who want to access language materials which have been stored
+away in archives.</TD>
+</TR>
+<TR>
+<TD><B>creators</B></TD>
+<TD>The people who create the language materials that get archived.</TD>
+</TR>
+<TR>
+<TD><B>archivists</B></TD>
+<TD>The people who manage the process of acquiring, maintaining, and accessing
+the information resources stored in archives.</TD>
+</TR>
+<TR>
+<TD><B>developers</B></TD>
+<TD>The people who create data models, tools and formats for storing and
+manipulating digital language documentation. </TD>
+</TR>
+<TR>
+<TD><B>sponsors</B></TD>
+<TD>The organizations that fund the creation of information resources and their
+maintenance in archives.</TD>
+</TR>
+</TBODY>
+</TABLE>
+<P>In this document we attempt to enumerate the requirements for each of these
+groups with respect to the total infrastructure required to support digital
+language documentation and description. </P>
+<P>We have stated these requirements at a high level. Each requirement could
+itself be expanded into a set of more detailed requirements; however, this can
+be left to a later stage. </P>
+<P>We have stated each requirement both positively and negatively. That is, the
+first column describes the desired state of things, while the second column
+describes the situation we want to avoid. In the third column of each table we
+make note of how the proposed Open Language Archives Community (see the
+<A HREF="http://www.language-archives.org/docs/white-paper.html">white
+paper</A>) would meet that particular requirement.</P>
+<H3><A NAME="2.1.">2.1. User Requirements</A></H3>
+<P>While online language archives hold the promise of unparalleled access to
+information, it also presents the specter of unparalleled chaos as information
+resources pop up in every corner of the world-wide web. The following
+statements describe the state of the world that users of online language
+archives would like to see, as opposed to the contrasting chaotic state that
+might be more likely to be realized in the absence of deliberate efforts to
+prevent it. </P>
+<TABLE CELLSPACING="10" WIDTH="100%">
+<TBODY>
+<TR>
+<TH CLASS="number" WIDTH="4%">&nbsp;</TH>
+<TH WIDTH="32%">What users want</TH>
+<TH WIDTH="32%">What users don't want</TH>
+<TH WIDTH="32%">How OLAC meets the requirement</TH>
+</TR>
+<TR>
+<TD CLASS="number">1.</TD>
+<TD>There is a single site on the Web where any user can go to discover what
+language information resources are available, regardless of where they may be
+archived. </TD>
+<TD>The only way to discover language resources on the Web is to visit all the
+individual archives or to hope that the resources one is interested in have
+been indexed in an intuitive way by one's favorite general-purpose search
+engine. </TD>
+<TD>Linguist List (www.linguistlist.org) will host a combined catalog of all
+participating archives. </TD>
+</TR>
+<TR>
+<TD CLASS="number">2.</TD>
+<TD>All language resources (regardless of where they may be archived) are
+catalogued with a consistent set of metadata descriptions, so that the user can
+ascertain all the basic facts about a resource without having to download it. 
+</TD>
+<TD>The only way to get a good idea about what a resource contains, who is
+responsible for it, or what are its terms of availability is to retrieve it. 
+</TD>
+<TD>Every holding in the combined catalog is described using the OLAC metadata
+set. Since that metadata set includes all the elements of the Dublin Core, it
+offers enough breadth to handle all the basic facts about a resource.</TD>
+</TR>
+<TR>
+<TD CLASS="number">3.</TD>
+<TD>Uniform metadata descriptions can be used to perform focussed searching of
+language resources by metadata categories regardless of where on the Web they
+may actually be archived. </TD>
+<TD>There is no way to reliably search on metadata categories for language
+resources since there is no standardized framework for describing resources. 
+</TD>
+<TD>The search interface to the combined catalog at Linguist List will allow
+searching by particular metadata elements, either singly or in combination. 
+</TD>
+</TR>
+<TR>
+<TD CLASS="number">4.</TD>
+<TD>All language resources (regardless of where they may be archived) are
+tagged in a consistent way to identify the languages they relate to, so that a
+single search for a particular language will retrieve all relevant resources on
+the Web. </TD>
+<TD>The only way to find resources in or about a particular language is to
+depend on keyword searching. This will fail when the language a resource is in
+is not identified by a keyword, or when different submitters supply different
+names for the same language. </TD>
+<TD>The OLAC metadata set uses the SIL language codes to give a unique
+identifier to each living (and recently extinct) language of the world.</TD>
+</TR>
+<TR>
+<TD CLASS="number">5.</TD>
+<TD>When a user discovers the existence of a resource, full information is
+available on how to obtain the resource, and on any restrictions concerning the
+format of the resource and rights to its use. </TD>
+<TD>The user requests the resource, and after taking shipment of it discovers
+that it is in a proprietary format and is thus not really useful, or after some
+delay discovers that the owner of the resource is not prepared for this
+particular user to have the resource, or that the owner places previously
+undisclosed restrictions on the use of the resource. </TD>
+<TD>The OLAC metadata set has special elements to document the openness of the
+resource (both in terms of format and of rights) in a consistent way for all
+holdings. The generic rights element can be used to supply specific details. 
+</TD>
+</TR>
+<TR>
+<TD CLASS="number">6.</TD>
+<TD>For a resource in a digital format, the archived information documents how
+it is electronically encoded. </TD>
+<TD>There is no obvious way to find out what format a binary file is in, or in
+the case of a text file, what the encoded characters or the markup tags
+represent. </TD>
+<TD>For digital resources, the OLAC metadata set has special elements for
+documenting the file format and the character encoding. </TD>
+</TR>
+<TR>
+<TD CLASS="number">7.</TD>
+<TD>When users obtain a digital resource, they see the same thing that the
+submitter originally saw. </TD>
+<TD>The user cannot properly view the resource for lack of fonts, stylesheets,
+or the right rendering software. </TD>
+<TD>When a digital resource requires the use of other resources that are not
+packaged within it, the <I>relation.required</I> metadata element must be used
+to document this fact and the value is a URI of a resource that has also been
+archived.</TD>
+</TR>
+<TR>
+<TD CLASS="number">8.</TD>
+<TD>For any given resource, it is possible to find the software tools that are
+appropriate for querying it or for converting it to another format. </TD>
+<TD>Users cannot do anything with resources they download since they are not in
+a format they can use. </TD>
+<TD>Linguist List will also host a catalog of software tools that will use the
+same metadata element for format that the language archive holdings use. The
+search interface for language archives will offer a link to look up available
+tools for the format of the language resource.</TD>
+</TR>
+<TR>
+<TD CLASS="number">9.</TD>
+<TD>For any given resource, there is a unique and durable method for citing it.
+</TD>
+<TD>Users may refer to a resource in a variety of ways, and none of these
+references is guaranteed to work indefinitely. </TD>
+<TD>Following the standards of the Open Archives Initiative, every archived
+resource has a persistent and globally unique identifier which is a URI
+beginning with &quot;oai:&quot;. The gateway for the OLAC community will be
+able to resolve a unique identifier to a metadata record for any holding of a
+participating archive.</TD>
+</TR>
+<TR>
+<TD CLASS="number">10.</TD>
+<TD>When a user seeks to obtain a resource discovered via its metadata, the
+resource can actually be obtained in a timely fashion, and when it arrives it
+is found to meet expectations of content as indicated by the metadata. </TD>
+<TD>The user finds the metadata for resources that look promising, but then
+find the archive to be uncooperative in terms of actually providing the
+resource, or finds that the actual resource is of inferior quality or does not
+live up to its metadata description. </TD>
+<TD>The gateway for the OLAC community will host a &quot;peer review&quot;
+service which will allow users to post their evaluations, both good and bad,
+concerning the content and service of participating archives. The archives and
+other users will be able to post their responses.</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H3><A NAME="2.2.">2.2. Creator Requirements</A></H3>
+<P>While inexpensive and powerful computers have dramatically lowered the bar
+for would-be creators of digital language documentation, only limited software
+support is presently available for the special needs of this user community.
+The following statements describe the state of the world that the creators of
+digital language documentation would ideally like to see, in contrast to the
+frustrating state which is all too familiar to this community. </P>
+<TABLE CELLSPACING="10" WIDTH="100%">
+<TBODY>
+<TR>
+<TH CLASS="number" WIDTH="4%">&nbsp;</TH>
+<TH WIDTH="32%">What creators of language documentation want</TH>
+<TH WIDTH="32%">What creators of language documentation don't want</TH>
+<TH WIDTH="32%">How OLAC meets the requirement</TH>
+</TR>
+<TR>
+<TD CLASS="number">1.</TD>
+<TD>For each of the descriptive and analytical practices widely used in
+language documentation, inexpensive software is available which provides a
+suitable user interface and which ensures data integrity. </TD>
+<TD>Unsuitable general-purpose software tools, such as word processors and
+spreadsheets, must be purchased at a significant cost. There is no built-in
+support for the particular task and data consistency must be checked manually. 
+</TD>
+<TD>When such software tools exist, the OLAC gateway will make it possible for
+the whole language documentation community to find them. However, developing
+such tools falls outside the scope of OLAC.</TD>
+</TR>
+<TR>
+<TD CLASS="number">2.</TD>
+<TD>The language documentation created with the software is in a form suitable
+for immediate archiving, so that archiving digital data is essentially no more
+difficult than making a particular kind of backup. </TD>
+<TD>Non-trivial reformatting is required before the language documentation can
+be archived, with the result that users often don't get around to archiving
+their work. </TD>
+<TD>Software developers will build data export facilities that follow the
+best-practice recommendations developed by OLAC.</TD>
+</TR>
+<TR>
+<TD CLASS="number">3.</TD>
+<TD>Incomplete or uncertain information representing the state of the
+investigator's current knowledge about the language under study can be
+archived. </TD>
+<TD>Language documentation can only be archived when it meets certain quality
+requirements. </TD>
+<TD>The OLAC standards specify requirements to which the metadata for a holding
+must conform, but do not put constraints on the content itself.</TD>
+</TR>
+<TR>
+<TD CLASS="number">4.</TD>
+<TD>It is straightforward to convert existing language documentation that is in
+one format into a different format so that it can be reused when generating new
+documentation or new descriptive works. </TD>
+<TD>Creators of language data must manually reformat and restructure the
+existing archived language documentation before they can use it in creating new
+documentation. </TD>
+<TD>The OLAC metadata set has a special category for data conversion tools and
+records the formats it can handle. The query interface for the combined catalog
+can use this information to link a data resource with appropriate conversion
+tools.</TD>
+</TR>
+<TR>
+<TD CLASS="number">5.</TD>
+<TD>There are easy-to-use and up-to-date guidelines on what hardware, software,
+and formats to use for a given data gathering situation and budget. </TD>
+<TD>There is a bewildering array of options available to would-be creators of
+digital language documentation, and there is no way to good advice on what
+choices to make. </TD>
+<TD>Would-be creators of digital language documentation can come to the OLAC
+gateway to search for all such advice, especially to find what is recommended
+as best practice.</TD>
+</TR>
+<TR>
+<TD CLASS="number">6.</TD>
+<TD>The creator of the language documentation has moral obligations to the
+speakers and the language community. When archiving the data, it is possible to
+select from a range of contracts with the digital archive which establish
+appropriate access and usage rights in perpetuity. </TD>
+<TD>The descriptivist is unable to constrain access or usage once the material
+is archived, and a subsequent undesired use results in the descriptivist being
+denied access to the language community. </TD>
+<TD>OLAC has best-practice recommendations concerning these issues (see 2.3.5)
+and participating archives follow them. The OLAC peer review mechanism gives
+added incentive for participating archives to follow the guidelines. </TD>
+</TR>
+</TBODY>
+</TABLE>
+<H3><A NAME="2.3.">2.3. Archivist Requirements</A></H3>
+<P>While digital archiving holds the promise to archivists of offering
+unparalleled access to the information they curate, the range of issues
+involved in doing the job well is so wide, and for many archivists so
+technical, that it is virtually impossible for any one archive to master them
+all. The following statements describe the state of the world that archivists
+would like to see, as opposed to the contrasting state that might be more
+likely to be realized in the absence of deliberate efforts to prevent it. </P>
+<TABLE CELLSPACING="10" WIDTH="100%">
+<TBODY>
+<TR>
+<TH CLASS="number" WIDTH="4%">&nbsp;</TH>
+<TH WIDTH="32%">What digital language archivists want</TH>
+<TH WIDTH="32%">What digital language archivists don't want</TH>
+<TH WIDTH="32%">How OLAC meets the requirement</TH>
+</TR>
+<TR>
+<TD CLASS="number">1.</TD>
+<TD>There is a set of best-practice guidelines in use by the
+language archiving community that can be followed to ensure that the digital
+data stored in the archive will be encoded in such a way as to be maximally
+useful. </TD>
+<TD>Each archive must study the issues of character encoding, data markup, and
+file formats and develop its own standards. </TD>
+<TD>OLAC provides a process for developing best-practice guidelines and a
+single gateway through which to find them.</TD>
+</TR>
+<TR>
+<TD CLASS="number" >2.</TD>
+<TD>There is a repository where the archivist can find an
+off-the-shelf software system for implementing the archive catalog. Such a
+system would allow for entering and maintaining catalog records, supporting a
+public-access catalog viewer on the Internet, and sharing of metadata records
+with services that provide union catalogs of multiple archives. </TD>
+<TD>Every archive is on its own to find or develop the software needed to build
+and disseminate its catalog. </TD>
+<TD>The OLAC metadata set for tools will include a category for archive
+infrastructure software so that archivists can use the OLAC gateway to find
+software that will help them implement a participating archive.</TD>
+</TR>
+<TR>
+<TD CLASS="number" >3.</TD>
+<TD>There is a repository of off-the-shelf software tools that
+archivists can use to test items they accession for conformance to the
+best-practice encoding guidelines. </TD>
+<TD>Each archive must hunt for tools that will help them maintain encoding
+standards in their collection. Failing that, they would either develop their
+own tools or do without. </TD>
+<TD>A best-practice recommendation would instruct archives in how to test
+submissions for conformance to best-practice encoding, and software tools for
+doing this are accessible through the gateway.</TD>
+</TR>
+<TR>
+<TD CLASS="number" >4.</TD>
+<TD>There is a standard that all archives can follow to devise and
+maintain a public identifier for each archived item that is guaranteed to be
+globally unique and globally persistent (even when the URL for where an item is
+stored may change). </TD>
+<TD>Every archive must work out its own system for building unique identifiers
+and for guaranteeing persistence. The resulting identifier has meaning only
+within the context of the particular archive, but not on a global scale. </TD>
+<TD>The Open Archives Initiative has already developed a standard for building
+such public identifiers and OLAC will follow it.</TD>
+</TR>
+<TR>
+<TD CLASS="number" >5.</TD>
+<TD>There are community-wide best-practice guidelines all archives
+can follow in matters of ensuring informed consent, upholding intellectual
+property rights, and addressing other ethical issues, as these relate to
+contributing researchers, language communities, funding agencies and
+institutional review boards. </TD>
+<TD>Each archive must study these issues on its own and develop its own
+guidelines. In some cases, institutional paranoia prevents any dissemination of
+digital holdings. </TD>
+<TD>The archives participating in OLAC develop best-practice recommendations
+concerning these legal and ethical issues.</TD>
+</TR>
+<TR>
+<TD CLASS="number" >6.</TD>
+<TD>A straightforward way to provide finding aids to local and
+remote users, and other archives, exporting metadata records from an in-house
+database to an external, widely used format. </TD>
+<TD>Maintaining finding aids in a plethora of formats overburdens the resources
+of the institution. </TD>
+<TD>The OLAC (and Dublin Core) metadata sets coupled with the OAI metadata
+harvesting protocol address this.</TD>
+</TR>
+<TR>
+<TD CLASS="number" >7.</TD>
+<TD>Linguists can deliver digital data and documents in a form that
+is immediately archivable and disseminable. </TD>
+<TD>New materials require considerable manual processing before they are in a
+format that will be accessible in future, once current versions of the software
+used to create the data no longer exist. </TD>
+<TD>The OLAC best-practice guidelines will tell linguists what form they should
+deliver their data in. Software developers will follow these guidelines to make
+software that exports these forms.</TD>
+</TR>
+<TR>
+<TD CLASS="number" >8.</TD>
+<TD>An archive can make its whole collection known to the user
+community.</TD>
+<TD>Only holdings in digital format can be shared via the Internet.</TD>
+<TD>The OAI framework (that OLAC is built on) allows that a metadata record may
+describe a holding that is not digital.</TD>
+</TR>
+<TR>
+<TD CLASS="number" >9.</TD>
+<TD>Technical support (both software and documentation) is
+available for converting old archive holdings into digital form. The solution
+is economical, making it easier for archives to bid for funds to digitize their
+holdings. </TD>
+<TD>Each archive must study these issues on its own and develop its own
+solutions. Pitfalls with newly acquired technology lead to costly delays and
+possible abandonment of the process. </TD>
+<TD>The archives participating in OLAC develop best-practice recommendations
+concerning the digitization of legacy holdings.</TD>
+</TR>
+<TR>
+<TD CLASS="number" >10.</TD>
+<TD>Archives can get useful and timely feedback and evaluation from
+remote users concerning archive services. </TD>
+<TD>Archives learn indirectly that remote users are dissatisfied with the
+archive services, and are unable to respond effectively. </TD>
+<TD>The peer review mechanism provided by the OLAC gateway addresses this.</TD>
+</TR>
+<TR>
+<TD CLASS="number" >11.</TD>
+<TD>Tools exist to convert parochial 8-bit character codings to
+Unicode, and to convert markup into the best-practice formats. </TD>
+<TD>Legacy data requires expensive and time-consuming manual processing. </TD>
+<TD>Archivists can use the OLAC gateway to find the appropriate software tools.
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H3>2.4. Developer Requirements</H3>
+<P>Developers often work in relative isolation from the wider community,
+serving the needs of a particular descriptivist. While the descriptivist
+understands the linguistic domain, he or she typically has only limited
+understanding of data modeling and software development. The specification for
+the software tool may be too vague, or else too specific, thereby limiting the
+software in unnecessary ways. The following statements describe the state of
+the world that the developers of software for language documentation would
+ideally like to see, in contrast to the unproductive state they often find
+themselves in.</P>
+<TABLE CELLSPACING="10" WIDTH="100%">
+<TBODY>
+<TR>
+<TH CLASS="number" WIDTH="4%">&nbsp;</TH>
+<TH WIDTH="32%">What developers want</TH>
+<TH WIDTH="32%">What developers don't want</TH>
+<TH WIDTH="32%">How OLAC meets the requirement</TH>
+</TR>
+<TR>
+<TD CLASS="number">1.</TD>
+<TD>Explicit, widely-accepted data models exist for the different types of
+documentation. </TD>
+<TD>Each programming task requires a developer to investigate the full range of
+cases likely to be encountered, depending on a descriptivist who does not know
+which aspects of representation are likely to cause problems for a
+computational model. </TD>
+<TD>Developers can use the OLAC gateway to find the best-practice
+recommendations of the language archiving community.</TD>
+</TR>
+<TR>
+<TD CLASS="number">2.</TD>
+<TD>Re-usable low-level components exist for standard kinds of media display
+and data creation. Public application programming interfaces (APIs) make it
+easy to develop tools on top of these components. </TD>
+<TD>Every component of the system must be assembled from scratch. </TD>
+<TD>When such software components exist, the OLAC gateway will make it possible
+for developers to find them. However, developing such software falls outside
+the scope of OLAC.</TD>
+</TR>
+<TR>
+<TD CLASS="number">3.</TD>
+<TD>Standard formats exist for data storage and interchange, and come with
+standard APIs. </TD>
+<TD>For each data type it is necessary to craft a new format. For each pair of
+programs needing to exchange data it is necessary to create a format conversion
+tool. </TD>
+<TD>Such standard formats are specified in the OLAC best-practice
+recommendations. An API that supports such a standard would be a tool whose
+metadata specified that format.</TD>
+</TR>
+<TR>
+<TD CLASS="number">4.</TD>
+<TD>Suitable web delivery mechanisms exist, including stylesheets, conversion
+tools, indexing methods, query languages, streaming media technologies, and so
+on, and these encompass the needs for security and privacy. </TD>
+<TD>Language materials cannot be disseminated on the web, since the delivery
+and rendering methods are non-existent or ineffective. </TD>
+<TD>To the extent that such software tools exists, the OLAC gateway will make
+it possible for developers to find them. However, developing such software
+falls outside the scope of OLAC.</TD>
+</TR>
+<TR>
+<TD CLASS="number">5.</TD>
+<TD>Developers can easily discover and obtain any existing data models, formats
+and tools that support a particular kind of language documentation. </TD>
+<TD>The state of the art is undocumented, and developers waste resources
+reinventing pieces of the common infrastructure. </TD>
+<TD>The OLAC gateway will offer a search facility based on these kinds of
+metadata elements.</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H3><A NAME="2.5.">2.5. Sponsor Requirements</A></H3>
+<P>While government funding agencies and non-governmental organizations have
+long sponsored language documentation projects, they face new challenges as
+they develop priorities and programs concerning digital language documentation.
+Funded initiatives need to be cost effective, and the resources they create
+need to be disseminated and reused by the community. The following statements
+describe the state of the world that the sponsors of language documentation
+work would ideally like to see, in contrast to an opposite state in which they
+are not able to meet their goals.</P>
+<TABLE CELLSPACING="10" WIDTH="100%">
+<TBODY>
+<TR>
+<TH CLASS="number" WIDTH="4%">&nbsp;</TH>
+<TH WIDTH="32%">What sponsors want</TH>
+<TH WIDTH="32%">What sponsors don't want</TH>
+<TH WIDTH="32%">How OLAC meets the requirement</TH>
+</TR>
+<TR>
+<TD CLASS="number">1.</TD>
+<TD>An institution that sponsors the creation of language resources may want to
+host those resources on its own Internet site. </TD>
+<TD>Any resource that is to be made available to the public in a uniform way
+through a common catalog must be hosted at a single site. </TD>
+<TD>The OAI framework (on which OLAC is built) permits each sponsoring
+institution to serve as its own data provider.</TD>
+</TR>
+<TR>
+<TD CLASS="number">2.</TD>
+<TD>The resources a sponsor has helped to develop are being widely used by the
+community. </TD>
+<TD>The funding was in vain, since the community cannot discover that the
+resources exist, or if they happen to find them, they cannot use them for lack
+of documentation, proper encoding practice, fonts, software, and the like. 
+</TD>
+<TD>Once cataloged in a participating archive, a resource is available to the
+entire language documentation through the single OLAC gateway.</TD>
+</TR>
+<TR>
+<TD CLASS="number">3.</TD>
+<TD>Software tools which were developed under a funded project have been
+thoroughly documented and distributed with an open source license, and have
+been successfully adapted for new projects. </TD>
+<TD>Expensive programmer time was partially wasted, since the software
+generated by the project was never made available, and new funded projects had
+to repeat the same work. </TD>
+<TD>Software resources developed by projects can similarly be made available to
+the entire community by depositing them in a participating archive.</TD>
+</TR>
+<TR>
+<TD CLASS="number">4.</TD>
+<TD>There is an online peer-review process for language archives and
+documentation projects, concerning the quality and availability of the
+materials. </TD>
+<TD>It is difficult to determine the extent to which the language documentation
+community values and uses the materials provided by language archives and
+documentation projects. </TD>
+<TD>The peer review mechanism provided by the OLAC gateway addresses this.</TD>
+</TR>
+</TBODY>
+</TABLE>
+</BODY>
+</HTML>
+ 

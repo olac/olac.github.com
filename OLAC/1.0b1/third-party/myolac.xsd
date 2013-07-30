@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns="http://www.myolac.org/myolac.xsd"
+            targetNamespace="http://www.myolac.org/myolac.xsd"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+  <xs:annotation>
+    <xs:documentation>
+      This is a hypothetical set of extensions for an individual archive.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:import namespace="http://purl.org/dc/elements/1.1/"
+             schemaLocation="http://www.ukoln.ac.uk/metadata/dcmi/xmlschema/20021007/dc.xsd"/>
+
+  <!-- Type for my linguistic-type encoding scheme -->
+  <xs:complexType name="linguistic-type">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="my-linguistic-type" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Type for my role refinement -->
+  <xs:complexType name="role">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="my-role" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- my linguistic type vocabulary -->
+  <xs:simpleType name="my-linguistic-type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="mydataset"/>
+      <xs:enumeration value="mydescription"/>
+      <xs:enumeration value="mylexicon"/>
+      <xs:enumeration value="mytext"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- my role vocabulary -->
+  <xs:simpleType name="my-role">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="translator"/>
+      <xs:enumeration value="illustrator"/>
+      <xs:enumeration value="annotator"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

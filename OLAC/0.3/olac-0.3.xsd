@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:olac="http://www.language-archives.org/OLAC/0.3/"
+        targetNamespace="http://www.language-archives.org/OLAC/0.3/"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+
+  <annotation>
+    <documentation>
+      Schema for the OLAC Metadata Set, Version 0.3
+      Steven Bird, 2001-05-22
+      Schema validated at http://www.w3.org/2001/03/webdata/xsv
+      XSV 1.190/1.95 of 2001/05/07 08:38:12
+
+      OLAC Metadata Set semantics available at:
+      http://www.language-archives.org/OLAC/olacms-20010425.html
+      Dublin Core semantics available at:
+      http://dublincore.org/documents/1999/07/02/dces/
+
+      Naming scheme:
+      XXX:              the name of the vocabulary
+      (YYY.)XXX:        the name of the element
+      OLAC-XXX.xsd:     the XML Schema defining an OLAC vocabulary
+      OLAC-XXX-Element: type of the XML element (inherits OLAC-Element)
+      OLAC-XXX-Refine:  type of a CV for a refine attribute
+      OLAC-XXX-Code:    type of a CV for a code attribute
+    </documentation>
+  </annotation>
+
+<!-- include schemas for the controlled vocabularies -->
+
+  <include schemaLocation="OLAC-CPU.xsd"/>
+  <include schemaLocation="OLAC-Data.xsd"/>
+  <include schemaLocation="OLAC-Date.xsd"/>
+  <include schemaLocation="OLAC-Encoding.xsd"/>
+  <include schemaLocation="OLAC-Format.xsd"/>
+  <include schemaLocation="OLAC-Functionality.xsd"/>
+  <include schemaLocation="OLAC-Language.xsd"/>
+  <include schemaLocation="OLAC-OS.xsd"/>
+  <include schemaLocation="OLAC-Relation.xsd"/>
+  <include schemaLocation="OLAC-Rights.xsd"/>
+  <include schemaLocation="OLAC-Role.xsd"/>
+  <include schemaLocation="OLAC-Sourcecode.xsd"/>
+  <include schemaLocation="DC-Type.xsd"/>
+
+<!--
+  <include schemaLocation="MIME.xsd"/>
+-->
+
+<!-- the top-level element and its associated type -->
+
+  <element name="olac" type="olac:OLACMS"/>
+
+  <complexType name="OLACMS">
+    <complexContent>
+      <restriction base="anyType">
+        <choice minOccurs="0" maxOccurs="unbounded">
+          <element name="Contributor" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Creator-Element"/>  <!-- same as creator -->
+          <element name="Coverage" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Element"/>
+          <element name="Creator" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Creator-Element"/>
+          <element name="Date" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Date-Element"/>
+          <element name="Description" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Element"/>
+          <element name="Format" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Format-Element"/>
+          <element name="Format.cpu" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-CPU-Element"/>
+          <element name="Format.encoding" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Encoding-Element"/>
+          <element name="Format.markup" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-RefElement"/>
+          <element name="Format.os" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-OS-Element"/>
+          <element name="Format.sourcecode" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Sourcecode-Element"/>
+          <element name="Identifier" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Element"/>
+          <element name="Language" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Language-Element"/>
+          <element name="Publisher" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Element"/>
+          <element name="Relation" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Relation-Element"/>
+          <element name="Rights" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Rights-Element"/>
+          <element name="Source" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Element"/>
+          <element name="Subject" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Element"/>
+          <element name="Subject.language" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Language-Element"/>
+          <element name="Title" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Element"/>
+          <element name="Type" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Type-Element"/>
+          <element name="Type.data" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Data-Element"/>
+          <element name="Type.functionality" minOccurs="0" maxOccurs="unbounded"
+            type="olac:OLAC-Functionality-Element"/>
+        </choice>
+        <attribute name="lang" type="string" default="en"/>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+  <!-- OLAC-Element: the base type for all elements, enforcing string
+    content and permitting a lang attribute defaulting to English.
+    NB the English code is RFC 1766 in line with OLACMS document -->
+
+  <complexType name="OLAC-Element">
+    <simpleContent>
+      <extension base="string">
+        <attribute name="lang" type="string" default="en"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <!-- Version of OLAC-Element where the content is an OAI reference -->
+
+  <simpleType name="OAI-Ref">
+    <restriction base="string">
+      <pattern value="oai:[^:]+:.+"/>  <!-- OAI identifier -->
+    </restriction>
+  </simpleType>
+
+  <complexType name="OLAC-RefElement">
+    <simpleContent>
+      <extension base="olac:OAI-Ref">
+        <attribute name="lang" type="string" default="en"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <!-- Extensions of OLAC-Element for the individual elements -->
+
+  <complexType name="OLAC-CPU-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="code" type="olac:OLAC-CPU-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Creator-Element">  <!-- shared by contributor -->
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="refine" type="olac:OLAC-Role-Refine"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Data-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="code" type="olac:OLAC-Data-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Date-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="refine" type="olac:OLAC-Date-Refine"/>
+        <attribute name="code" type="olac:OLAC-Date-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Format-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="code" type="olac:OLAC-Format-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Encoding-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="code" type="olac:OLAC-Encoding-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Functionality-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="code" type="olac:OLAC-Functionality-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-OS-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="code" type="olac:OLAC-OS-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Language-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="code" type="olac:OLAC-Language-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Relation-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="refine" type="olac:OLAC-Relation-Refine"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Rights-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="code" type="olac:OLAC-Rights-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Sourcecode-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="code" type="olac:OLAC-Sourcecode-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="OLAC-Type-Element">
+    <simpleContent>
+      <extension base="olac:OLAC-Element">
+        <attribute name="code" type="olac:DC-Type-Code"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+</schema>

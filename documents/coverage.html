@@ -1,0 +1,51 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta content="text/html; charset=UTF-8"
+            http-equiv="content-type"/>
+        <title>OLAC Coverage</title>
+        <script type="text/javascript" src="/js/gatrack.js"></script>
+        <link href="../olac.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">H3 {font-style:italic; }</style>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="/js/XMLHttpRequest.js"></script>
+	<script type="text/javascript" src="/js/coverage/main.js"></script>
+	<script>Coverage.init2("tab1","tab2");</script>
+    </head>
+    <body bgcolor="white">
+        <hr/>
+        <table cellpadding="10">
+            <tr>
+                <td>
+                    <a href="/">
+                        <img border="0" alt="OLAC logo"
+                            src="/images/olac100.gif"
+                        />
+                    </a>
+                </td>
+                <td valign="middle">
+                    <h1>
+                        <font color="0x00004a">OLAC Coverage</font>
+                    </h1>
+                </td>
+            </tr>
+        </table>
+        <hr/>
+        <p>Click on the column headers to sort the columns in ascending or
+        descending order. <i>Languages</i> is the total number of languages
+        in the given population range (from <a
+        href="http://www.ethnologue.com/ethno_docs/distribution.asp?by=size"
+        >Ethnologue</a>). <i>OLAC has data</i> is the number of those languages
+        that is represented by at least one resource in the OLAC collection
+        (excluding the <i>Ethnologue</i> pages) and the next column,
+        <i>(%)</i>, expresses that as a percentage of the total for that
+        population range. <i>Items</i> is the total number of language
+        resources for languages in the given population range (again,
+        excluding the <i>Ethnologue</i> pages).</p>
+
+        <h3>OLAC Coverage in Relation to Language Size</h3>
+	<div id="tab1"></div>
+        <h3>Online Resources in Relation to Language Size</h3>
+	<div id="tab2"></div>
+    </body>
+</html>

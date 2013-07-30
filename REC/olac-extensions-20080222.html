@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Recommended metadata extensions</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="Recommended metadata extensions">
+<meta name="Creator" content="Gary Simons, SIL International and Graduate Institute of Applied&#10;         Linguistics (mailto:gary_simons@sil.org) Steven Bird, University&#10;         of Melbourne and University of Pennsylvania&#10;         (mailto:sb@csse.unimelb.edu.au)">
+<meta name="Description" content="&#10;         This document lists all the metadata extensions that are recommended by the&#10;            Open Language Archives Community for use in describing language resources.&#10;            &#10;      ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20080222">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>Recommended metadata extensions</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2008-02-22</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Recommendation. </i>This document embodies an OLAC consensus concerning best current practice.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/REC/olac-extensions-20080222.html">http://www.language-archives.org/REC/olac-extensions-20080222.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/REC/olac-extensions.html">http://www.language-archives.org/REC/olac-extensions.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td><a href="http://www.language-archives.org/REC/olac-extensions-20021130.html">http://www.language-archives.org/REC/olac-extensions-20021130.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>This document lists all the metadata extensions that are recommended by the
+            Open Language Archives Community for use in describing language resources.
+            </p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>Gary Simons, SIL International and Graduate Institute of Applied
+         Linguistics (<a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>) <br>Steven Bird, University
+         of Melbourne and University of Pennsylvania
+         (<a href="mailto:sb@csse.unimelb.edu.au">mailto:sb@csse.unimelb.edu.au</a>)</editors>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Changes since previous version:</th><td>
+<p>Minor changes to bring the extension descriptions and the references up
+         to date for OLAC metadata version 1.1.</p>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 2008 Gary Simons (SIL International and Graduate Institute of Applied
+         Linguistics) and Steven Bird (University of Melbourne and University of
+         Pennsylvania). This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Recommended extensions">Recommended extensions</A>
+<UL>
+<LI>
+<A href="#discourse-type">Code for Discourse Types</A> [olac:discourse-type]</LI>
+<LI>
+<A href="#language">Code for Identifying Languages</A> [olac:language]</LI>
+<LI>
+<A href="#linguistic-field">Code for Linguistic Field</A> [olac:linguistic-field]</LI>
+<LI>
+<A href="#linguistic-type">Code for Linguistic Data Types</A> [olac:linguistic-type]</LI>
+<LI>
+<A href="#role">Code for Participant Roles</A> [olac:role]</LI>
+</UL>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>The OLAC metadata standard [<a href="http://www.language-archives.org/OLAC/metadata.html">OLAC-Metadata</a>] follows the generic
+            resource description standard known as "Qualified Dublin Core" [<a href="http://dublincore.org/documents/2003/04/02/dc-xml-guidelines/">DCQ</a>].
+            In order to meet the specific needs of the language resources community, the
+            OLAC metadata standard incorporates an extension mechanism that makes it
+            possible to describe language resources with greater precision. The mechanism
+            uses the <tt>xsi:type</tt> attribute to override the basic definition of a
+            Dublin Core metadata element with a definition that has a more precise
+            semantics. For instance, the following subject description,</p>
+<pre style="margin-left: 18pt">&lt;dc:subject&gt;Dschang language&lt;/dc:subject&gt;</pre>
+<p>can be formally identified as pertaining to a language and as relating to the
+            specific language identified by the ISO 639-3 code <tt>ybb</tt>
+            by employing an OLAC extension: as follows:</p>
+<pre style="margin-left: 18pt">&lt;dc:subject xsi:type="olac:language" olac:code="ybb"/&gt;</pre>
+<p>Details on how the extension mechanism works may be found in the last two
+            sections of [<a href="http://www.language-archives.org/OLAC/metadata.html">OLAC-Metadata</a>].</p>
+<p>Any party may develop a metadata extension and use it in OLAC metadata
+            records. When an extension is proven to work and is judged to have wide
+            relevance across the language resources community, then it may be put forward
+            to the community as a recommended best practice. If, after following the
+            process described in [<a href="http://www.language-archives.org/OLAC/process.html">OLAC-Process</a>], the community reaches consensus
+            that the extension should indeed be used where applicable by all OLAC member
+            archives, then the extension achieves the status of an OLAC Recommendation.</p>
+<p>This document provides the complete list of all extensions that have been
+            adopted as OLAC Recommendations. Each extension is described in terms of a
+            title and the following six descriptors:</p>
+<blockquote>
+<dl>
+<dt>
+<b>Name</b>
+</dt>
+<dd>
+<p>The symbolic name that is used as the value of the <tt>xsi:type</tt>
+                  attribute to indicate that the extension is being used in a metadata
+                  element.</p>
+</dd>
+<dt>
+<b>Date</b>
+</dt>
+<dd>
+<p>The latest revision date of the extension or its controlled
+               vocabulary.</p>
+</dd>
+<dt>
+<b>Applies to</b>
+</dt>
+<dd>
+<p>The Dublin Core elements with which the extension may be used.</p>
+</dd>
+<dt>
+<b>Description</b>
+</dt>
+<dd>
+<p>A summary description of what the extension is used for.</p>
+</dd>
+<dt>
+<b>Documentation</b>
+</dt>
+<dd>
+<p>A link to a complete document that defines and exemplifies the
+                  extension. If the extension involves a controlled vocabulary, the
+                  document should also enumerate and define the terms of the
+               vocabulary.</p>
+</dd>
+<dt>
+<b>Schema</b>
+</dt>
+<dd>
+<p>A link to the XML schema that formally defines the extension.</p>
+</dd>
+</dl>
+</blockquote>
+<h2>
+<A name="Recommended extensions"></A>2. Recommended extensions</h2>
+<p>The Open Language Archives Community recommends that all participating data
+            providers use the following metadata extensions for describing language
+            resources whenever they are applicable: </p>
+<h3>
+<A name="discourse-type"></A>Code for Discourse Types</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name:</i></td><td>olac:discourse-type</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Date:</i></td><td>2002-11-21</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Applies to:</i></td><td>dc:type, dc:subject</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Description:</i></td><td>Provides a controlled vocabulary for
+               identifying approximately ten discourse types. It is
+               used with Type to identify the genre of a language
+               resource (particularly a primary text). It may also be
+               used with Subject to identify a work as being about a
+               particular genre.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Documentation:</i></td><td><a href="http://www.language-archives.org/REC/discourse.html">http://www.language-archives.org/REC/discourse.html</a></td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schema:</i></td><td><a href="http://www.language-archives.org/OLAC/1.1/olac-discourse-type.xsd">http://www.language-archives.org/OLAC/1.1/olac-discourse-type.xsd</a></td>
+</tr>
+</table>
+<h3>
+<A name="language"></A>Code for Identifying Languages</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name:</i></td><td>olac:language</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Date:</i></td><td>2008-02-22</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Applies to:</i></td><td>dc:language, dc:subject</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Description:</i></td><td>Provides codes for identifying all known languages, both living and
+           extinct, from the ISO 639 family of international standards (Parts 1, 2, and 3).
+        It is used with Language to indicate a language the resource is written or spoken
+        in. It is used with Subject to indicate a language the resource is about.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Documentation:</i></td><td><a href="http://www.language-archives.org/REC/language.html">http://www.language-archives.org/REC/language.html</a></td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schema:</i></td><td><a href="http://www.language-archives.org/OLAC/1.1/olac-language.xsd">http://www.language-archives.org/OLAC/1.1/olac-language.xsd</a></td>
+</tr>
+</table>
+<h3>
+<A name="linguistic-field"></A>Code for Linguistic Field</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name:</i></td><td>olac:linguistic-field</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Date:</i></td><td>2003-01-21</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Applies to:</i></td><td>dc:subject</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Description:</i></td><td>Provides a controlled vocabulary for
+               describing the subject matter of a resource as relevant
+               to a particular subfield of linguistics.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Documentation:</i></td><td><a href="http://www.language-archives.org/REC/field.html">http://www.language-archives.org/REC/field.html</a></td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schema:</i></td><td><a href="http://www.language-archives.org/OLAC/1.1/olac-linguistic-field.xsd">http://www.language-archives.org/OLAC/1.1/olac-linguistic-field.xsd</a></td>
+</tr>
+</table>
+<h3>
+<A name="linguistic-type"></A>Code for Linguistic Data Types</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name:</i></td><td>olac:linguistic-type</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Date:</i></td><td>2002-12-12</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Applies to:</i></td><td>dc:type</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Description:</i></td><td>Provides a broad classification of the nature of the resource from a linguistic point of view (namely, as a lexicon, a primary text, or a language description).</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Documentation:</i></td><td><a href="http://www.language-archives.org/REC/type.html">http://www.language-archives.org/REC/type.html</a></td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schema:</i></td><td><a href="http://www.language-archives.org/OLAC/1.1/olac-linguistic-type.xsd">http://www.language-archives.org/OLAC/1.1/olac-linguistic-type.xsd</a></td>
+</tr>
+</table>
+<h3>
+<A name="role"></A>Code for Participant Roles</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name:</i></td><td>olac:role</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Date:</i></td><td>2003-08-27</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Applies to:</i></td><td>dc:contributor</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Description:</i></td><td>Provides a controlled vocabulary for identifying the role of a Contributor more precisely. The vocabulary identifies approximately twenty roles that are common in the development of language resources.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Documentation:</i></td><td><a href="http://www.language-archives.org/REC/role.html">http://www.language-archives.org/REC/role.html</a></td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schema:</i></td><td><a href="http://www.language-archives.org/OLAC/1.1/olac-role.xsd">http://www.language-archives.org/OLAC/1.1/olac-role.xsd</a></td>
+</tr>
+</table>
+<p></p>
+</body>
+<a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="DCQ">DCQ</a>]</td><td>"5. Qualified Dublin Core," in Guidelines for Implementing Dublin
+         Core in
+            XML.<br>&lt;<a href="http://dublincore.org/documents/2003/04/02/dc-xml-guidelines/">http://dublincore.org/documents/2003/04/02/dc-xml-guidelines/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Metadata">OLAC-Metadata</a>]</td><td>OLAC Metadata.<br>&lt;<a href="http://www.language-archives.org/OLAC/metadata.html">http://www.language-archives.org/OLAC/metadata.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Process">OLAC-Process</a>]</td><td>OLAC
+            Process.<br>&lt;<a href="http://www.language-archives.org/OLAC/process.html">http://www.language-archives.org/OLAC/process.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

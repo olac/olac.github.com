@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>OLAC Linguistic Data Type Vocabulary</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="OLAC Linguistic Data Type Vocabulary">
+<meta name="Creator" content="&#10;      Helen Aristar Dry (mailto:hdry@linguistlist.org),&#10;      Heidi Johnson (mailto:ailla@ailla.org)&#10;    ">
+<meta name="Description" content="&#10;              This document specifies the codes, or controlled vocabulary, for the Linguistic Data Type extension of the DCMI Type element. These codes describe the content of a resource from the standpoint of recognized structural types of linguistic information. &#10;    ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20060406">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>OLAC Linguistic Data Type Vocabulary</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2006-04-06</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Recommendation. </i>This document embodies an OLAC consensus concerning best current practice.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/REC/type-20060406.html">http://www.language-archives.org/REC/type-20060406.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/REC/type.html">http://www.language-archives.org/REC/type.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td><a href="http://www.language-archives.org/REC/type-20021212.html">http://www.language-archives.org/REC/type-20021212.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>
+              This document specifies the codes, or controlled vocabulary, for the Linguistic Data Type extension of the DCMI Type element. These codes describe the content of a resource from the standpoint of recognized structural types of linguistic information. 
+    </p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>
+      Helen Aristar Dry (<a href="mailto:hdry@linguistlist.org">mailto:hdry@linguistlist.org</a>),
+      Heidi Johnson (<a href="mailto:ailla@ailla.org">mailto:ailla@ailla.org</a>)
+    </editors>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Changes since previous version:</th><td>
+<p>Promoted to candidate status, with a call for review by
+        those who have put the document into practice.</p>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 
+      Helen Aristar Dry (Eastern Michigan University),
+      Heidi Johnson (University of Texas at Austin)
+    . This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Linguistic Data Type">Linguistic Data Type</A>
+<UL>
+<LI>
+<A href="#lexicon">lexicon</A>
+</LI>
+<LI>
+<A href="#primary_text">primary_text</A>
+</LI>
+<LI>
+<A href="#language_description">language_description</A>
+</LI>
+</UL>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>
+Like all elements in the OLAC metadata standard, the Type element is both optional and repeatable. Since it is optional, the Linguistic Type extension of the Type element should only be used if a resource contains a significant amount of primary data and represents one of the structural types described below.  Many linguistic papers and analyses thus will not be described using this element.  However, the element may be repeated if a resource represents more than one linguistic type. So, for example, a primary text accompanied by a lexicon of vocabulary items would be described as both a primary text and a lexicon. 
+
+</p>
+<p>
+In many cases, adequate description of a linguistic resource will require that the Linguistic Type extension be used in conjunction with the Discourse Type extension of the Type element, or the Linguistic extension of the Subject element. For example, a narrative text might be described as both a primary text (OLAC Linguistic Type) and a narrative (OLAC Discourse Type).
+</p>
+<p>
+Note that a dataset should be described using the DCMI Type vocabulary, e.g. Dataset, Collection.  See: [<a href="http://dublincore.org/usage/terms/dcmitype/">DC-TYPE</a>].
+</p>
+<h2>
+<A name="Linguistic Data Type"></A>2. Linguistic Data Type</h2>
+<p>
+Each term in the controlled vocabulary is described in one of the
+following subsections. The heading gives the encoded value for the
+term that is to be used as the value of the code attribute of the
+"OLAC-Linguistic-Type" extension of the Type metadata element
+[<a href="http://www.language-archives.org/OLAC/olacms.html">OLAC-MS</a>]. Under the heading, the term is described in four
+ways. <i>Name</i> gives a descriptive label for the term.
+<i>Definition</i> is a one-line summary of what the term
+means. <i>Comments</i> offers more details on what the term
+represents. Examples may also be given to illustrate how the term is
+meant to be applied.
+</p>
+<h3>
+<A name="lexicon"></A>lexicon</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Lexicon</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes a systematic listing of lexical items.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>
+    Lexicon may be used to describe any resource which
+    includes a systematic listing of lexical items. Each
+    lexical item may, but need not,  be accompanied by a
+    definition, a description of the referent (in the case
+    of proper names), or an indication of the item's
+    semantic relationship to other lexical items.
+  </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>
+    Examples include word lists (including comparative word
+    lists), thesauri,  wordnets, framenets, and
+    dictionaries, including specialized dictionaries such
+    as bilingual and multilingual dictionaries,
+    dictionaries of terminology, and dictionaries of proper
+    names. Non-word-based examples include phrasal lexicons
+    and lexicons of intonational tunes.
+  </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="primary_text"></A>primary_text</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Primary Text</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>Linguistic material which is itself the object of study, typically material in the subject language which is a performance of a speech event, or the written analog of such an event.  </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>
+    Primary Text is used to describe material in the subject language; it reflects a speech event, or is the written analog, and embodies linguistic features  which make it an object of analysis or research.  Typically, a primary text has temporal structure.  Most often in a primary text, the timecourse of some real or fictional linguistic event, e.g., a conversation, elicitation session, or imagined scene, is carried over into the archived artifact.</p>
+<p>Note:  Primary_text describes the content of the
+    resource, not the physical format.  A primary text may
+    be recorded in different physical media, e.g. as
+    videotaped, audiotaped, or written text.  Physical
+    format is described using the Format element.
+  </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>
+    Examples of primary texts include transcribed interlinear texts, letters, (audiotaped) elicitation sessions, (videotaped) rituals or story-telling sessions, and any other recorded speech or writing which exemplifies language structure or use in such a way as to become an object of study.  When a corpus is a collection of primary texts, it should be described both as a primary text (OLAC Linguistic Type) and as a collection (DC Type).
+  </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_description"></A>language_description</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Language Description</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource describes a language or some aspect(s) of a language via a systematic documentation of linguistic structures.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>
+Not every resource commonly termed 'descriptive' should be described with this code; for example, a description of Zamenhof, the creator of Esperanto, would not be classified using this code. Instead, the code should be reserved for a resource that describes a language or some aspect of a language, typically in prose with interspersed examples. 
+  </p>
+<p>
+The similarly named code, Language Documentation (in the Linguistic Subject extension) refers to a field of study. This category, Language Description, refers to recognized structural   types of linguistic information, which are the products of the field of study, e.g., grammars and field notes.
+   </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>
+Examples of descriptions include a formal grammar, a sketch grammar, field notes, a phonological sketch. 
+  </p>
+</td>
+</tr>
+</table>
+</body>
+<a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="DC-TYPE">DC-TYPE</a>]</td><td>Dublin Core Type Vocabulary.<br>
+    &lt;<a href="http://dublincore.org/usage/terms/dcmitype/">http://dublincore.org/usage/terms/dcmitype/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-MS">OLAC-MS</a>]</td><td>OLAC Metadata Set.<br>
+    &lt;<a href="http://www.language-archives.org/OLAC/olacms.html">http://www.language-archives.org/OLAC/olacms.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

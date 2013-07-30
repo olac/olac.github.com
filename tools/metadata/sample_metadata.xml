@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olac:olac
+     xmlns:olac="http://www.language-archives.org/OLAC/1.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dc:title>Language: An introduction to the study of speech</dc:title>
+  <dcterms:created xsi:type="dcterms:W3CDTF">1921</dcterms:created>
+  <dcterms:issued xsi:type="dcterms:W3CDTF">2000</dcterms:issued>
+  <dc:creator xsi:type="olac:role" olac:code="author">Sapir, Edward</dc:creator>
+  <dc:description>The noted linguist and anthropologist Edward Sapir
+wrote this work to show language in relation to other fundamental 
+interests--the problem of thought, the nature of the historical 
+process, race, culture, art. This book is not only a study of language 
+and culture, but ultimately on the world of relations and influence.
+</dc:description>
+  <dc:language xsi:type="olac:language" olac:code="en"/>
+  <dc:subject xsi:type="olac:linguistic-field" olac:code="general_linguistics"/>
+  <dc:type xsi:type="dcterms:DCMIType">Text</dc:type>
+  <dc:publisher>New York: Bartleby.com</dc:publisher>
+  <dc:identifier xsi:type="dcterms:URI">http://www.bartleby.com/186/</dc:identifier>
+</olac:olac>

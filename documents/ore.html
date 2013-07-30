@@ -1,0 +1,449 @@
+<html>
+ 
+<head>
+<title>ORE: The OLAC Repository Editor</title>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<LINK REL="stylesheet" TYPE="text/css" HREF="../olac.css"> 
+</head>
+ 
+<body>
+<hr>
+<table cellpadding="10">
+<tr>
+<td> <a href="/"><img src="images/olac100.gif" BORDER="0"></a></td>
+<td> <h1><font color="0x00004a"> ORE: The OLAC Repository Editor </font>
+</h1>
+</td>
+</tr>
+</table>
+<hr>
+
+<p><font color=green>
+This document describes a version of ORE which is no longer supported.
+Please see <a href="http://www.linguistlist.org/ore">http://www.linguistlist.org/ore</a>
+for the current system and documentation.
+</font>
+
+<h4>(I) Introduction:</h4>
+<p>
+The OLAC Repository Editor (ORE) is an online tool designed for
+language archivists who wish to create an OLAC data provider.  ORE is a
+particularly suitable option for potential data providers who have no existing catalog
+database and who do not have a local website or XML capacity.
+<p>
+Before using ORE, the archivist
+should become familiar with the goals of OLAC, and the notions of metadata,
+OLAC Data Provider, and OLAC Service Provider.  The following items will be helpful:
+
+<ul>
+<li>
+<a href="/docs/overview.html">OLAC overview</a>
+</li>
+<li>
+<a href="/docs/implement.html">How to become an
+OLAC Data Provider</a>
+</li>
+<li>
+<a href="/OLAC/olacms.html">OLAC metadata
+set</a>
+</li>
+<li>
+<a href="/docs/faq.html">OLAC Frequent Asked
+Questions</a>
+</li>
+</ul>
+
+<p>
+The interaction between the archivist and ORE may be broken down into three primary stages:
+<p>
+<ol>
+<li>
+The archivist uses a simple forms-based editor provided by ORE to enter
+information about their holdings.  The metadata is saved in a
+database maintained by ORE, so the archivist may edit and modify the metadata as often as necessary.
+</li>
+<li>
+At any time, the archivist may choose to "dump" the metadata into
+an XML file.  Dumping simply involves clicking on a link; ORE does the
+transformation of the metadata into an OLAC-compliant XML file automatically. 
+</li>
+<li>
+Finally, the archivist may choose to <i>activate</i> an XML file that was
+created in step (2), making it available for harvesting.  After harvesting, the
+metadata of a repository will
+be public and available to the OLAC community.
+</li>
+</ol>
+<p>
+The prototype of ORE is located at:
+<p>
+<a href="/tools/ore/">
+http://www.language-archives.org/tools/ore/</a>
+<p>
+The rest of this help page will guide the user through the various pages found
+in ORE.  It is recommended that the user have ORE running while reading through this guide.
+<p>
+<br>
+<a name = login><h4>(II) Login</h4></a>
+<p>
+The login page is displayed at each fresh entry into the ORE web page (when
+the web browser is restarted).  To use ORE, each user must have
+a unique email address and password.  
+<p>
+A new user needing to register an email address and password should click on the "please
+register first" link on the login page.
+<p>
+<br>
+<a name = registerform><h4>(III) Registration</h4></a>
+To register with ORE, provide a Contact email, Contact person and password.  Note: Since ORE repositories cannot
+be shared between users, multiple maintainers of a single repository must share
+the same account, and must avoid editing the same record simultaneously.
+<p>
+Once a user has registered, a confirmation notice will be sent to the address
+provided as the Contact email.  At the same time, the newly registered user will be
+redirected back to the login page and may then log in.
+<p>
+<br>
+<a name = home><h4>(IV) ORE Main Page</h4></a>
+<p>
+The ORE Main Page is the "home" page which a registered ORE user sees
+upon logging in.  The Main Page lists all the repositories (if any) for a particular
+user, and provides a link for reserving a new <i>repository identifier</i> (see
+below for explanation).  
+<p>
+The various links and buttons accessible from the Main Page are as follows
+(but note that only the first item will appear if there has been no repository created):
+<p>
+<ul>
+<li>
+<a name=reserverepoid><b>Click here to reserve a new repository identifier</b></a><br>
+To begin creating a repository, a repository identifier must first be reserved.
+This will allow OLAC to uniquely identify the repository.  The user will be
+directed to a form to select a repository idenfier.  ORE
+maintains a record of all identifiers and will provide error messages should
+the user select an existing identifier.
+<p>
+</li>
+
+<li>
+<b>View</b><br>
+Provides a view of the XML file of an activated repository (this link will only
+appear if a repository has been activated).
+<p>
+</li>
+
+<li>
+<b>Save</b><br>
+Prompts the user to save the XML file of an activated repository to the user's local hard disk (this link will only appear if a repository has been activated).
+<p>
+</li>
+
+<li>
+<b>Activation</b><br>
+Goes to the <a href=#activaterepo>ORE Activation Area</a> for the
+selected repository.  From the Activation Area, the user may choose to activate
+one of the XML files that has been created, or to deactivate an active file. 
+<p>
+</li>
+
+<li>
+<b>Work Area</b><br>
+Goes to the <a href=#repoworkarea>ORE Work Area</a> for the
+selected repository.  From that page, users may create, edit or delete records
+within the repository, edit metadata information about the repository, or dump records into an
+XML file.
+<p>
+</li>
+
+<li>
+<b>Delete Repo</b><br>
+Removes the repository from the ORE database.  Note that the
+repository must be EMPTY before it can be deleted.
+<p>
+</li>
+
+</ul>
+<p>
+<br>
+<a name=repoworkarea><h4>(V) ORE Work Area</h4></a>
+The ORE Work Area is accessed by clicking on one of the "Work Area"
+buttons for a particular repository identifer listed on the Main page.  
+<p>
+If a newly-created identifier is selected, the Work Area will provide a "Click
+here to create a repository for this identifier" link.  By clicking on this
+link, the user will be forwarded to a <a href=#createeditrepo>Create/Edit
+Repository Information</a> page. This page contains a form which the user fills out,
+providing metadata information about the repository to be created.  
+<p>
+Once the form is submitted, the user is returned to the Work Area.  The Work
+Area wil now provide more options for the user:
+<p>
+
+<ul>
+
+<li>
+<b>Create/Edit Records</b><br>
+Sends the user to the
+<a href=#createeditrecord>Create/Edit Records</a> page.  From
+there, the user will have various options of working on the records within the
+selected repository.
+<p>
+</li>
+
+<li>
+<b>Edit Repository Information</b><br>
+Sends the user to the <a href=#createeditrepo>Create/Edit
+Repository Information</a> page, where metadata information about the
+repository may be edited.
+<p>
+</li>
+
+<li>
+<b>Dump Repository in XML</b><br>
+Writes repository metadata into an XML file.  The user will then be
+automatically forwarded to the <a href=#activaterepo>ORE Activation
+Page</a>, where the recently dumped XML file may be activated if so desired.
+<p>
+</li>
+
+<li>
+<b>Upload XML File into Repository</b></a></br>
+Allows users to upload an OLAC-compliant XML file into the repository.  The
+metadata will be parsed and stored in the ORE database.  All subsequent
+metadata editing and activation may be done within ORE.
+<p>
+</li>
+
+</ul>
+
+<p>
+<br>
+<h4><a name=createeditrepo>(VI) Create/Edit Repository Information</a></h4>
+This page provides a form which a user fills out in order to create a
+repository.  Elements marked * are mandatory, as required by OLAC.  The user may
+subsequently edit the information on this page from the Work Area page by
+clicking on the "Edit Repository Information" link.
+<p>
+Short explanation for each field is provided and the names of most elements are
+also clickable links which will pop open a description help page explaining the
+expected information for each element.
+<p>
+<br>
+
+
+
+<h4><a name=createeditrecord>(VII) Create/Edit Records</a></h4>
+From the Create/Edit Records page, the user may choose to carry out various
+<i>record level</i> operations for the selected repository.  This includes
+creating, editing, copying, renaming and deleting records within the repository:
+
+<ul>
+
+<li>
+<b>Create</b><br>
+Creates a new record for the repository.  Each record must have a <i>Record
+Id</i> that is unique to the repository.  The user may choose to enter a unique
+personalized Record Id in the text field provided, and then clicking the "Create" button.
+Alternatively, the field may be left blank, in which case ORE will
+automatically assign a unique numerical Record ID when the "Create" button is clicked.
+Clicking the "Create" button will send the user to the <a
+href=#recordeditor>Record Editor</a> page. 
+<p>
+</li>
+
+<li>
+<b>Edit</b><br>
+Enters the <a href=#recordeditor>Record Editor</a> page to edit the
+metadata for the selected record.
+<p>
+</li>
+
+
+<li>
+<a name = copyrenamedeleterecord><b>Copy</b><br></a>
+Sends the user to the <b>Copy Record</b> page.  To copy a record, provide a new
+unique record ID to copy to.  Alternatively, leave the field blank and a
+numerical Record ID will be automatically assigned.
+<p>
+</li>
+
+<li>
+<b>Rename</b><br>
+Sends the user to the <b>Rename Record ID</b> page. To rename a record ID, provide a
+new unique record ID.
+<p>
+</li>
+
+<li>
+<b>Delete</b><br> 
+Sends the user to the <b>Delete Record</b> page.  Confirm the deletion by pressing the
+"Delete" button, or press the "Cancel" button to return to the Create/Edit
+Records page without any changes.
+<p>
+</li>
+
+</ul>
+
+<p>
+<br>
+<a name=recordeditor><h4>(VIII) Record Editor</h4></a><br>
+The ORE Record Editor page provides a form which allows the user to create and edit metadata information
+for a record within a repository.  The fields on the form correspond to the
+OLAC metadata elements.  Read more about OLAC metadata set <a href="/OLAC/olacms.html">here</a>.
+<p>
+None of the elements are mandatory and may be left blank.
+Multiple entries are permitted for every element.  To key in multiple entries
+for an element, fill in the information for one entry, then click on the
+corresponding "More" button provided on the right hand side.  An additional blank
+field will appear immediately below.
+<p>
+Each element name is clickable and will pop open a description help page explaining
+the expected information for each element.
+<p>
+The buttons below the form serve the following functions:
+<p>
+
+<ul>
+
+<li>
+<b>SAVE AND EXIT</b><br>
+Saves all form data to the ORE database, and
+returns the user to the Create/Edit Records page.
+<p>
+</li>
+
+<li>
+<b>EXIT WITHOUT SAVING</b><br>
+Returns to the Create/Edit Records page without saving.
+<p>
+</li>
+
+<li>
+<b>CLEAR FORM</b><br>
+Clears all values from the form.
+<p>
+</li> 
+
+<li>
+<b>[VIEW XML]</b><br>
+Sends the user to the View Record in XML page.  
+<p>
+<a name = viewsavexmlrecord><b>View Record in XML</b>:<br></a>
+This page displays an XML version of the
+information entered on the form (This is intended solely for users interested
+in viewing the XML output of their records.  Knowledge of XML is however not
+required for using ORE.  It should be noted that the
+XML displayed here is only for one record, and is not a full representation of
+the XML file that ORE will generate for the entire repository).
+<p>
+To return to the Record Editor page without saving, click on the "Back to Form"
+button.
+<p>
+</li>
+
+</ul>
+
+
+<p>
+<br>
+
+<a name = importxml><h4>(IX) Upload XML file into Repository</h4></a>
+<p>
+The upload facility is designed for users who have their own OLAC-compliant XML files
+but who might wish to edit and activate the files through ORE.  This page
+provides the user with an upload form.  The appropriate XML file on a local server
+may be selected by clicking on the "Browse" button.  Assuming that the file is
+valid, ORE will parse the XML and store the metadata on the ORE database, and
+the user will be forwarded to the <a href="#createeditrecord">Create/Edit
+Record page</a>.  The user may then edit the uploaded repository in the usual
+way through ORE.
+<p>
+To upload an XML file, the user must have already reserved a Repository
+Identifier through ORE.  See the <a href ="#reserverepoid">Reserve Repository
+Identifer</a> section for further details.  The &lt;repositoryIdentifier&gt;
+element in the XML file MUST be the same as the reserved identifier in order
+for the upload to succeed.
+<p>
+Furthermore, ORE will validate all XML files uploaded to make sure that they are
+OLAC-compliant.  Non-compliant files will be flagged and the upload aborted.
+
+<p>
+<br>
+
+<a name=activaterepo><h4>(X) ORE Activation Area</h4></a>
+The ORE Activation Area is accessed by clicking on one of the "Activation Area"
+buttons for a particular repository listed on the Main page.  A user is also
+automatically directed to the Activation Area after "dumping" a repository in
+XML, an operation which is done from the Work Area.
+<p>
+If the user has yet to dump any repositories into XML, the Activation Area will be empty.
+<p>
+Otherwise, the user will see a table listing all the XML files that have been
+created for the particular repository.  Also listed are: 
+<ul>
+<li>
+<b>Date and Time of Dump</b><br>
+This lists the date and time of the XML dumps for each file.
+</li>
+
+<li>
+<b>Date and Time of the latest record update</b><br>
+This lists the last 
+time one of the records belonging to the repository was updated using the 
+ORE Record Editor
+</li>
+
+<li>
+<b>Status</b><br>
+- A file is listed as UP TO DATE if the XML dump is 
+more recent than th latest record update<br>
+-A file is listed as ACTIVE if it is the activated file
+</li>
+
+<li>
+<b>View</b><br>
+Sends the user to the <a name = viewxmlrepo><b>View Repository in XML</b></a> page.<br>
+This page displays the OLAC-compliant XML file for the repository.  
+</li>
+
+<li>
+<b>Save</b><br>
+Prompts the user to save the XML file to the local hard disk.</a>
+</li>
+
+<li>
+<b>Delete</b><br>
+Deletes the corresponding XML file.  An active file cannot be deleted.
+</li>
+
+</ul>
+
+<p>
+The user may select a file to activate by clicking on the radio button next to
+a particular file, and then pressing Submit.  The selected XML file will then be
+flagged as the "active repository" and displayed above the table.
+<p>
+ORE permits users to "harvest" an active repository on demand.  After
+harvesting, the metadata of the active repository can be searched alongside
+metadata from other active repositories, using an OLAC service provider
+(see the <a href="/tools.html">TOOLS</a> page).  Note that each OLAC
+service provider will harvest the active repository according to its own
+harvesting schedule.  It may take a day or two before the metadata appears in
+these service providers. 
+<p>
+To harvest the active repository, simply click on the "Harvest Active
+Repository" button that is provided.  Once a harvest is complete, a link will be provided to the OLAC Service
+Provider at U.Penn.
+<p>
+Note that this on-demand harvesting is slow, and users will usually not need to
+do this more than once or twice.
+<p>
+<br>
+Please address comments and questions to:
+<a href="mailto:ore@language-archives.org">ore@language-archives.org</a>.
+
+</body>
+
+</html>
+
+  

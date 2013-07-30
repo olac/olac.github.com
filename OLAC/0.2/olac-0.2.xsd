@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2000/10/XMLSchema"
+        xmlns:olac="http://www.language-archives.org/OLAC/0.2/"
+        targetNamespace="http://www.language-archives.org/OLAC/0.2/"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+
+  <annotation>
+    <documentation>
+      Schema for DC with qualifiers for language codes.
+      Steven Bird, 2/1/01
+      Schema validated at http://www.w3.org/2000/09/webdata/xsv
+      XSV 1.173.2.15.2.5/1.74.2.26 of 2001/01/15 14:18:55
+      Dublin Core semantics available at http://purl.org/DC/documents/rec-dces-19990702.htm
+    </documentation>
+  </annotation>
+
+  <element name="olac" type="olac:olacType"/>
+
+  <complexType name="olacType">
+    <choice minOccurs="0" maxOccurs="unbounded">
+
+      <!-- Unqualified Dublin Core Elements -->
+
+      <element name="title" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="creator" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="subject" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="description" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="contributor" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="publisher" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="date" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="type" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="format" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="identifier" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="source" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="relation" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="coverage" minOccurs="0" maxOccurs="unbounded" type="string"/>
+      <element name="rights" minOccurs="0" maxOccurs="unbounded" type="string"/>
+
+      <!-- Qualified Dublin Core Elements -->
+
+      <element name="language" minOccurs="0" maxOccurs="unbounded" type="olac:languageType"/>
+      <element name="subject.language" minOccurs="0" maxOccurs="unbounded" type="olac:languageType"/>
+
+    </choice>
+  </complexType>
+
+  <complexType name="languageType">
+    <simpleContent>
+      <extension base="string">
+        <attribute name="identifier" use="optional" type="olac:rfc1766"/>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <simpleType name="rfc1766">
+    <restriction base="string">
+      <pattern value="[a-zA-Z]+(-[a-zA-Z]+(-[a-zA-Z]+))"/>
+    </restriction>
+  </simpleType>
+
+</schema>

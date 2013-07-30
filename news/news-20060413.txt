@@ -1,0 +1,115 @@
+News from the Open Language Archives Community (OLAC)
+
+Dear Community,
+
+Here is a summary of the developments in the Open Language Archives
+Community over the last year.  Full details are available at:
+  http://www.language-archives.org/
+
+
+OLAC SEARCH ENGINE HANDLES 2000 QUERIES PER DAY
+
+In 2005, the OLAC Search Engine handled 824,676 queries, an average of
+2259 per day or an average 68273 per month.  The most popular
+languages searched for in 2005 were Dutch, English, Quechua, Arabic,
+Greek, German, Chinese, and Malay.  Only 35% of queries specified a
+particular archive, the majority were generic searches across all
+archives. The most commonly searched repository was SIL-LCA, followed
+by PARADISEC and SCOIL.  Thanks to Baden Hughes for his analysis of
+the server logs.
+
+OLAC Search Engine:
+  http://www.language-archives.org/tools/search
+SIL Language and Culture Archives:
+  http://www.language-archives.org/archive.php4?id=35
+Pacific And Regional Archive for Digital Sources in Endangered Cultures:
+ http://www.language-archives.org/archive.php4?id=18
+Survey for California and Other Indian Languages:
+  http://www.language-archives.org/archive.php4?id=21
+
+
+EMELD WORKSHOP ON DIGITAL LANGUAGE DOCUMENTATION
+
+The 2006 E-MELD workshop will focus on 'Tools and Standards: the State
+of the Art.'  This annual workshop marks the culmination of the 5-year
+E-MELD project; one goal of the workshop is to review digital
+standards ratified by the community in prior workshops on text,
+lexicons, databases, and annotation.  The workshop will be held in
+June, in conjunction with the LSA Summer Meeting at Michigan State
+University.
+
+Workshop website:
+  http://emeld.org/workshop/2006/
+
+
+OLAC TUTORIAL AT THE LSA ANNUAL MEETING
+
+A tutorial organized by the OLAC Outreach working group was held at 
+the Annual Meeting of the Linguistic Society of America in January.
+The focus of the presentations was on audio and video recording.  
+The event was officially sponsored by the LSA's Committee for 
+Endangered Languages and their Preservation.
+
+Tutorial website:
+  http://www.ailla.utexas.org/site/lsa_olac06.html
+
+
+NEW OLAC REPOSITORIES IN 2005
+
+Four repositories joined OLAC in 2005:
+- the *Audio Archive of Linguistic Fieldwork* at the Berkeley 
+  Language Center, UC Berkeley, USA;
+- the *Comparative Corpus of Spoken Portuguese* at IEL Unicamp,
+  Campinas, Brazil;
+- *The Online Database of Interlinear Text (ODIN)* at California 
+  State University, Fresno, USA; and 
+- *Pacific And Regional Archive for Digital Sources in Endangered 
+  Cultures (PARADISEC)*, at the Universities of Melbourne, Sydney,
+  New England, and Australian National University.
+
+Full list of OLAC Archives:
+  http://www.language-archives.org/archives.php4
+
+
+EMELD WORKSHOP ON DIGITAL LANGUAGE DOCUMENTATION
+
+The 2005 E-MELD workshop focussed on linguistic ontologies and data
+categories as aids in linguistic annotation and as tools for the
+fine-grained search and retrieval of language documentation.  It was
+be held in July 2005, in conjunction with the LSA Institute at MIT.
+
+Workshop website:
+  http://emeld.org/workshop/2005/
+
+
+LSA TUTORIAL ON ARCHIVING AND LINGUISTIC RESOURCES
+
+This tutorial provided a forum where people who are compiling documentary
+linguistic resources could learn about current best practices for
+creating and conserving those resources.  The tutorial was organized
+by Jeff Good (MPI Leipzig) and Heidi Johnson (University of Texas,
+Austin and AILLA) and held at the annual meeting of the Linguistic
+Society of America, in Oakland, California, in January 2005.
+
+Tutorial abstracts and slides:
+  http://www.language-archives.org//events/olac05/
+
+
+RECENT OLAC PUBLICATIONS
+
+Baden Hughes and Amol Kamat (2005). A Metadata Search Engine for
+  Digital Language Archives.  D-Lib Magazine 11(2).
+  http://www.dlib.org/dlib/february05/hughes/02hughes.html
+
+Baden Hughes (2004). Metadata Quality Evaluation: Experience from the
+  Open Language Archives Community.  Proc 7th Intl Conf on Asian Digital
+  Libraries, Shanghai.  http://eprints.unimelb.edu.au/archive/00001408/
+
+
+
+Best wishes,
+Steven & Gary
+_______
+Steven Bird, University of Melbourne
+Gary Simons, SIL International
+OLAC Coordinators (www.language-archives.org)

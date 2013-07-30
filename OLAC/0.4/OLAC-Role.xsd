@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.language-archives.org/OLAC/0.4/">
+
+  <annotation>
+    <documentation>
+      OLAC Schema for creator/contributor role, Steven Bird, 5/7/01
+      This vocabulary is incomplete.
+    </documentation>
+  </annotation>
+
+  <simpleType name="OLAC-Role-Refine">
+    <restriction base="string">
+      <enumeration value="author"/>
+      <enumeration value="editor"/>
+      <enumeration value="transcriber"/>
+      <enumeration value="sponsor"/>
+      <enumeration value="informant"/>
+      <!-- others? -->
+    </restriction>
+  </simpleType>
+ 
+</schema>
+  

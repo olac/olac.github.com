@@ -1,0 +1,488 @@
+<?xml version="1.0"?> 
+<?xml-stylesheet href="../OLAC_doc.xsl" type="text/xsl"?> 
+<!DOCTYPE OLAC_doc SYSTEM "../OLAC_doc.dtd">
+<OLAC_doc> 
+  <header> 
+     <status code="adopted" type="recommendation"/> 
+     <!-- Promoted to Adopted on 2008-12-19 -->
+    <title>OLAC Linguistic Subject Vocabulary</title> 
+    <baseName>field</baseName> 
+    <issued>20060406</issued> 
+    <previousIssued>20030121</previousIssued> 
+    <abstract>
+      <p>This document specifies the codes, or suggested vocabulary, for the 'linguistic' value of the xsi:type attribute of the OLAC Subject element. These codes describe the content of a resource as about a particular subfield of linguistic science, or about the level of linguistic structure which is the primary concern of a given subfield. </p>
+    </abstract> 
+    <editors> Helen Aristar Dry (<url>mailto:hdry@linguistlist.org</url>), 
+      Michael Appleby (<url>mailto:michael@linguistlist.org</url>) 
+    </editors> 
+    <copyright> 
+      Helen Aristar Dry (Eastern Michigan University), Michael Appleby (Eastern Michigan University) 
+    </copyright> 
+    <changes>
+      <p>Promoted to candidate status, with a call for review by
+        those who have put the document into practice.</p>
+    </changes> 
+  </header> 
+
+  <body> 
+    <section> 
+      <heading>Introduction</heading> 
+      <p>The OLAC:Linguistic extension of the Subject Element is used to
+      describe the content of a resource as about a particular subfield of
+      linguistic science.  By extension, it may be used to describe a
+      resource which is about the level of linguistic structure or the
+      linguistic artifact which is the primary concern of that subfield; so,
+      for example, the code "syntax" may be used for resources about
+      syntactic structure, and the code "text_and_corpus_linguistics" may be
+      used for resources which are about corpora. In many cases, it may be
+      that a resource is about more than one subfield; in such cases, all
+      relevant subfields should be chosen. Like other OLAC descriptors, the
+      Linguistic extension of the DCMI element Subject is both optional and
+      repeatable.</p>
+        
+      <p>Every effort has been made to correlate the OLAC Linguistic
+      definitions with current practice in the linguistics
+      community. However, in some cases, the definition may be wider or
+      narrower than some linguists might expect. For example, 'Applied
+      Linguistics' may be narrower, as it applies only to linguistic
+      applications in the classroom, and 'Semantics' might be wider,
+      encompassing as it does Lexical Semantics. Where the OLAC definition
+      is narrower, there will be another, more appropriate subfield for the
+      residual meaning.  For example, 'Computational Linguistics' is more
+      appropriate than 'Applied Linguistics' for computer applications. </p>
+    </section>
+
+    <section> 
+    <heading>Linguistic Subject</heading> 
+
+    <p> Each term in the controlled vocabulary is described in one of
+    the following subsections. The heading gives the encoded value for
+    the term that is to be used as the value of the code attribute of
+    the Subject metadata element when the xsi:type attribute is
+    'OLAC:linguistic' <cit>OLAC-MS</cit>. Under the heading, the term
+    is described in four ways. Name gives a descriptive label for the
+    term. Definition is a one-line summary of what the term
+    means. Comments offers more details on what the term
+    represents. Examples may also be given to illustrate how the term
+    is meant to be applied. </p>
+
+    <term> 
+	<code>anthropological_linguistics</code> 
+	<name>Anthropological Linguistics</name> 
+	<definition>
+	The study of language with particular reference to the society and culture of the speakers.  
+	</definition> 
+	<comment>
+		<p> Anthropological linguistics often concerns less well-documented languages.  The definition includes 'ethnolinguistics.' </p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment> 
+	<examples>
+		<p> The SIL Ethnologue, which collects data on the number on speakers of a language and the geographical region in which it is spoken. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>applied_linguistics</code> 
+	<name>Applied Linguistics</name> 
+	<definition>
+	The use of linguistic methods as applied to language and education, for example to literacy or language learning. 
+	</definition>
+	<comment>
+		<p>The definition includes TESOL, ESL, Second Language Teaching, Second Language Learning and Contrastive Linguistics. </p>
+		<p>This category is equivalent to the Library of Congress subject heading 'Language and Education,' not the LCSH category 'Applied Linguistics,' which includes computer applications of linguistics.  In the 'OLAC-Linguistic' extension of the DCMI Subject element, computer applications should be classified as Computational Linguistics. </p>
+	</comment> 
+	<examples>
+	<p>Teaching materials, guides for language teachers, and studies of adult language learning. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>cognitive_science</code> 
+	<name>Cognitive Science</name> 
+	<definition>
+	The study of human cognition, particularly as it relates to language.
+	</definition> 
+	<comment>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment>
+	<examples>
+		<p>An experiment on language and vision or a book on the study of mind.</p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>computational_linguistics</code> 
+	<name>Computational Linguistics</name> 
+	<definition>
+	The use of computer science in the study of language. 
+	</definition> 
+	<comment>
+		<p>The definition includes Artificial Intelligence and Natural Language Processing, but not  Mathematical Linguistics. </p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment> 
+	<examples>
+		<p>Books and papers dealing with Machine Translation, Text to Speech software, and algorithms to parse sentences. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>discourse_analysis</code> 
+	<name>Discourse Analysis</name> 
+	<definition>
+	The study of the patterns and meanings behind connected speech.
+	</definition> 	
+	<comment>
+		<p>The definition includes Humor Studies, Conversation Analysis, Interactional Sociolinguistics, and studies of language use in special circumstances, e.g. Courtroom Language.</p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment>
+	<examples>
+		<p>Transcripts of discourse, perhaps with turn taking and speaker overlap highlighted; papers on Discourse Representation Theory or on different talk types such as doctor/patient interaction; and audio and video tapes of interactive discourse which might serve as an object of study.</p>
+	</examples> 
+    </term> 
+
+    <term>
+	<code>forensic_linguistics</code>
+	<name>Forensic Linguistics</name>
+	<definition>
+  	Applications of linguistic science to the domain of law.
+  	</definition>
+	<comment>
+		<p>Forensic linguistics refers to the use of linguistic methodology to make legal determinations.  Analyses of courtroom language are best classified as Discourse Analysis. </p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment>
+  	<examples>
+  		<p>Papers on issues in dispute in court cases, e.g., authorship identification, assessment of ambiguity in texts, voice attribution.</p>
+	</examples>
+    </term>
+
+    <term> 
+	<code>general_linguistics</code> 
+	<name>General Linguistics</name> 
+	<definition>
+	The broad study of linguistics without specialization in any subfield or particular reference to a specific linguistic theory.
+	</definition> 
+	<comment>
+		<p>Resources that cover many subfields in depth, perhaps a dissertation on an endangered language with a detailed syntactic and phonological analysis, should be classified under all the relevant subfields instead of 'General Linguistics'. </p>
+	</comment> 
+	<examples>
+		<p> Broad, often introductory textbooks such as The Cambridge Encyclopaedia 
+of Language (Crystal, 1987), and glossaries of linguistic terminology. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>historical_linguistics</code> 
+	<name>Historical Linguistics</name> 
+	<definition>
+	The diachronic study of language change.
+	</definition> 
+	<comment>
+		<p>The definition includes Comparative Historical Linguistics, Genetic Classification, and philological and etymological study.   The last may also be classified as Lexicography. </p>
+		<p>The category Historical Linguistics is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment> 
+	<examples>
+		<p>A study of the diachronic development of vowels in Romance.</p>
+	</examples> 
+    </term>
+
+    <term> 
+	<code>history_of_linguistics</code> 
+	<name>History of Linguistics</name>
+	<definition>
+	Study of the history and development of linguistic science. 
+	</definition> 
+	<examples>
+		<p>A biography of Ferdinand de Saussure, or an analysis of Plato's discussions on language. </p>
+	</examples> 
+    </term> 
+
+    <term>
+	<code>language_acquisition</code>
+	<name>Language Acquisition</name>
+	<definition>The study of the process of acquiring human language.</definition>
+	<comment> 
+		<p>Language Acquisition may be used to describe materials relating to either adult or child language acquisition, and to either first or later language acquisition.  However, if the materials deal specifically with language teaching, or with the process of language learning from a pedagogical point of view, they may be best classified as Applied Linguistics.</p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment>
+	<examples>
+		<p>Studies of first language acquisition, audio or video tapes of language acquisition experiments, and guides to experimental techniques in eliciting acquisition data.</p>
+	</examples>
+    </term>
+
+    <term> 
+	<code>language_documentation</code> 
+	<name>Language Documentation</name> 
+	<definition>
+	The theory, methodology, and process of language description and documentation, including linguistic field methods and fieldwork techniques.
+	</definition>
+	<examples>
+		<p>A manual on fieldwork techniques. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>lexicography</code> 
+	<name>Lexicography</name> 
+	<definition>
+	The process of compiling or studying lexical resources and dictionaries, either monolingual or multilingual.
+	</definition> 
+	<comment>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment>
+	<examples>
+		<p>Books and papers about creating dictionaries.  Swadesh word lists, a bilingual Avestan-Engliah dictionary, and a collection of legal terms in a particular language. </p>
+	</examples>
+    </term> 
+ 
+    <term> 
+	<code>linguistics_and_literature</code> 
+	<name>Linguistics and Literature</name> 
+	<definition>The application of linguistic analysis to literary texts, e.g., fiction, drama, or poetry.</definition> 
+	<comment>
+		<p>The definition includes Stylistics and Poetics. Resources classified under this category would also be classified under the Library of Congress subject heading of the same name; however, the LCSH does not include Poetics and Stylistics, which are separate LCSH fields.</p>
+	</comment> 
+	<examples>
+		<p>An analysis of lexical patterns characteristic of a particular author or syntactic constructions used to create specific literary effects. </p>
+	</examples>
+    </term> 
+
+    <term> 
+	<code>linguistic_theories</code> 
+	<name>Linguistic Theories</name> 
+	<definition>Theories (argued to be) fundamental to linguistic science, often spanning more than one subfield such as phonology and syntax.
+	</definition> 
+	<examples>
+		<p>Papers arguing for or against Universal Grammar, Transformational Grammar, or Montague Grammar. </p>
+	</examples> 
+    </term> 
+
+    <term>
+	<code>mathematical_linguistics</code>
+	<name>Mathematical Linguistics</name>
+	<definition>
+	The field of study which treats the mathematical properties of language.
+	</definition>
+	<comment>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment>
+	<examples>
+		<p>A linguistic paper about the formal properties of grammars.</p>
+	</examples>
+    </term>
+
+    <term> 
+	<code>morphology</code> 
+	<name>Morphology</name> 
+	<definition>
+	The study of the structure and constituency of individual words.
+	</definition> 
+	<comment>
+		<p>A resource consisting primarily of data from a morphologically complex language should be classifed as 'Language Description' if the primary purpose is to describe the structure of the language in question. </p>
+		<p>Use of the Library of Congress Subject Heading "Morphophonemics" is deprecated.</p>
+	</comment> 
+	<examples>
+		<p>A paper on morphological theory, Word Grammar (Hudson). </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>neurolinguistics</code> 
+	<name>Neurolinguistics</name> 
+	<definition>
+	The study of brain structure and the physical representation of language in the brain.
+	</definition> 
+	<comment>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment>
+	<examples>
+		<p>A study of brain damage with respect to language impairment, a study of the neurological development of the brain during first language acquisition.   The latter should also be classified as Language Acquisition.</p>
+	</examples>
+    </term> 
+
+    <term> 
+	<code>philosophy_of_language</code> 
+	<name>Philosophy of Language</name> 
+	<definition>The application of philosophy to language and linguistic theory.</definition> 
+	<comment>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment>
+	<examples>
+		<p>A paper on the Sapir-Whorf hypothesis, a comparative study of verbal and non-verbal thought. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>phonetics</code> 
+	<name>Phonetics</name> 
+	<definition>
+	The study and classification of the structure, articulation and perception of speech sounds.
+	</definition> 
+	<comment>
+		<p>The definition includes both articulatory phonetics and acoustic phonetics.  Datasets, lexicons, and graphic representations of experimental results should be classified under Phonetics if they have particular relevance to the sounds of the language.</p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment> 
+	<examples>
+		<p>A sound inventory of a language, a study of the variation of articulation of a particular sound. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>phonology</code> 
+	<name>Phonology</name> 
+	<definition>
+	The study of the patterns and principles behind the sound system of a language, or languages in general.
+	</definition> 
+	<comment> 
+		<p>The classification is not limited to phonological analyses.  Datasets, lexicons, and graphic representations of experimental results should be classified under Phonology if they have particular relevance to the sound system of the language.</p>
+		<p>Use of the Library of Congress subject heading "Morphophonemics" is deprecated.</p>
+	</comment>
+	<examples>
+		<p>Phonological theories applied to a particular language; that is, a study of the syllable structure of a language, or the rules behind sound alternations. Also to be included under 'Phonology' are phoneme datasets, field notes on the phonology of a language, and papers on phonological theories themselves, such as a critique of Optimality Theory. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>pragmatics</code> 
+	<name>Pragmatics</name> 
+	<definition>
+	The study of the use of language in terms of the context in which it is spoken.
+	</definition> 
+	<comment>
+		<p>The definition includes Non-verbal Communication.</p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment> 
+	<examples>
+		<p>A study of politeness phenomena, honorifics, deixis or speech acts. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>psycholinguistics</code> 
+	<name>Psycholinguistics</name> 
+	<definition>
+The application of psychology to linguistics, in terms of the psychological mechanisms behind language, such as memory and intelligence (Experimental Psycholinguistics).
+	</definition> 
+	<comment>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment>
+	<examples>
+		<p>A cross-linguistic study of acquisition of a particular syntactic constraint, a study of aphasic children's language development. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>semantics</code> 
+	<name>Semantics</name> 
+	<definition>
+The study of the meaning of linguistic structures.
+	</definition> 
+	<comment>
+		<p>The study of meaning in conversation should be classified as Discourse Analysis and not Semantics. The Linguistic Field of Semantics includes meaning at the word level ('lexical semantics').</p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment> 
+	<examples>
+		<p>A paper on a semantic theory, such as Truth Conditional Semantics. A paper on color lexemes in a particular language.</p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>sociolinguistics</code> 
+	<name>Sociolinguistics</name> 
+	<definition>
+The study of language in context of the society that speaks it.
+	</definition> 
+	<comment>
+		<p>Multilingualism, Folklore, Pidgins and Creoles, Dialectology, Language Planning, and Gender Studies should all be classified under 'Sociolinguistics'.</p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment> 
+	<examples>
+		<p>A study of language variation according to such factors as the speakers' gender, age, and/or social class. </p>
+	</examples> 
+     </term>
+ 
+    <term> 
+	<code>syntax</code> 
+	<name>Syntax</name> 
+	<definition>
+'The study of grammatical relations between words and other units within a sentence' (Concise Oxford Dictionary of Linguistics). To be distinguished from morphology, which applies to units smaller than the word.
+	</definition> 
+	<comment>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment>
+	<examples>
+		<p>A syntactic description of a language, using a particular syntactic theory. A paper using language data to criticize a syntactic theory. 
+		</p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>text_and_corpus_linguistics</code> 
+	<name>Text and Corpus Linguistics</name> 
+	<definition>
+The study of the linguistic properties of an extended passage, text, or corpus of texts. 
+	</definition> 
+	<comment>
+		<p>The definition includes Semiotics and Genre Analysis, as well as the computational analysis of text corpora. </p>
+	</comment> 
+	<examples>
+		<p>A statistical analysis of the British National Corpus, on the use of modal verbs in spoken and written English. </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>translating_and_interpreting</code> 
+	<name>Translating and Interpreting</name> 
+	<definition>
+The study of the act of converting one language into another, either via speech or writing.
+	</definition> 
+	<comment>
+		<p>The definition includes theoretical discussions of the best translation and interpreting methods, and practical aids to interpreting languages. The translated text itself may be better classified under 'Language Description' if the purpose of the translation is to exemplify the structure of a language.</p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment> 
+	<examples>
+		<p>A study of the relative merits of different levels of translation (that is, literal translation, word-for-word translation and so on). </p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>typology</code> 
+	<name>Typology</name> 
+	<definition>
+The study of the similarites and differences between languages, regardless of any genetic relation, and the resulting categorization of language into 'types'.
+	</definition> 
+	<comment>
+		<p>The definition includes the descriptive and comparative study of Universals.</p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment> 
+	<examples>
+		<p>A paper using data from multiple languages as an argument for or against Universal Grammar. An analysis of a poorly documented language in terms of Greenberg's Universals. 
+		</p>
+	</examples> 
+    </term> 
+
+    <term> 
+	<code>writing_systems</code> 
+	<name>Writing Systems</name> 
+	<definition>
+The visual representation of spoken language on paper or other media, and the issues involved in writing and creating a writing system.
+	</definition> 
+	<comment>
+		<p>Resources dealing with literacy may be classified as Writing Systems or Applied Linguistics or both, depending on whether the resource has substantial pedagogic content (Applied Linguistics) or includes an analysis of the graphemic system per se (Writing Systems).</p>
+		<p>The category is equivalent to the Library of Congress subject heading of the same name.</p>
+	</comment> 
+	<examples>
+		<p>A paper examining issues in a linguist's development of a writing system for a previously unwritten language. An examination of pictographic writing systems.  A book on the decipherment of Linear B.</p>
+	</examples> 
+    </term> 
+
+  </section> 
+</body>
+
+<references>
+	<ref abbrev="OLAC-MS">OLAC Metadata Set.<br/>
+	&lt;<url>http://www.language-archives.org/OLAC/olacms.html</url>&gt;
+	</ref>
+</references>
+
+</OLAC_doc>
+

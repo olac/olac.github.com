@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc>
+  <header>
+    <status code="draft" type="recommendation" endDate="20030618"/>
+    <title>OLAC Access Vocabulary</title>
+    <baseName>access</baseName>
+    <issued>20021119</issued>
+    <previousIssued></previousIssued>
+    <abstract>
+      <p>Access is an attribute of the Rights element.  It provides a broad classification of
+      the ways in which a resource may be used.  Users may have to seek more detailed information
+      about a given resource, if Access = restricted, or if they wish to use the resource in
+      a non-standard fashion.  Users are always advised to review the specific policies of the
+      data provider before making use any resource.
+      If the Rights element is absent, no assumptions can be made about the status of these and 
+      other rights with respect to the resource.</p>
+    </abstract>
+    <editors>
+      Heidi Johnson (<url>mailto:ailla@ailla.org</url>)
+    </editors>
+    <copyright>
+      Heidi Johnson (University of Texas at Austin)
+    </copyright>
+    <changes></changes>
+  </header>
+  
+  <body>
+    <section>
+    <heading>Introduction</heading>
+     <p>The information in the Rights element is intended as a guide for potential users of
+      the resource. Since intellectual property rights laws and customs can be expected to vary widely across countries 
+      and within sub-communities, data providers must make individual arrangements concerning 
+      the rights that control access to and use of their resources. A controlled vocabulary can 
+      only provide a coarse classification of the types of use to which a resource may be put.  
+      Details of the rights and restrictions associated with the resource, such as a copyright
+      notice or reference to the specific policies of a data provider, should be specified
+      in the element content.</p>
+    </section>
+    
+    <section>
+    <heading>Access</heading>
+    <p>Each term of the controlled vocabulary is described in one of the
+    following subsections. The heading gives the encoded value for the term that is
+    to be used as the value of the <i>Access</i> attribute of the <i>Rights</i>
+    metadata element <cit>OLAC-MS</cit>. Under the heading, the term is described in four ways. 
+    <i>Name</i> gives a descriptive label for the term.
+    <i>Definition</i> is a one-line summary of what the term means. <i>Comments</i>
+    offers more details on what the term represents, and may also include examples
+    given to illustrate how the term is meant to be applied.</p>
+
+    <term>
+      <code>restricted</code>
+      <name>Restricted</name>
+      <definition>Access to the resource is restricted.</definition>
+      <comment>
+      <p>The specific nature of the restriction is not defined by means of a controlled
+      vocabulary. Data providers should supply a brief description in the Rights element content.</p>
+      </comment>
+      <examples>
+      <eg>
+      &lt;rights xsi:type="olac:access" code="restricted">Permission from the depositor is required.&lt;/rights> 
+      </eg>
+      </examples>
+    </term>
+    <term>
+      <code>standard</code>
+      <name>Standard</name>
+      <definition>Access to the resource is standard.</definition>
+      <comment>
+        <p>Standard access means that the resource can be used like any published work (book, article,
+        music cd, etc.); that is, standard laws and policies governing the fair use of the work apply.
+        Such policies generally prohibit wholesale incorporation of the resource into another work or 
+        copying and distribution of the resource.  They generally allow quotation of small portions 
+        of the resource, and summaries, critiques, or analyses, provided that the resource is properly
+        cited.</p>
+      </comment>
+    </term>
+    <term>
+      <code>non-profit</code>
+      <name>Non-profit</name>
+      <definition>The resource can be used for any non-profit purpose.</definition>
+      <comment>
+        <p>This level is intended to allow broader use of the resource than standard access allows.
+        For example, the resource could be copied and distributed free of charge, for academic
+        purposes, or it could be used to create derivative works, such as transcriptions, for 
+        non-profit purposes.</p>
+      </comment>
+    </term>
+    <term>
+      <code>commercial</code>
+      <name>Commercial</name>
+      <definition>The resource can be used for commercial purposes.</definition>
+      <comment>
+        <p>The resource can be freely used for any purpose without explicit permission from the
+        creators or data providers, including copying and distribution for profit, incorporation
+        into commercial products, and the creation of derivative works.</p>
+      </comment>
+    </term>
+    </section>
+  </body>
+ 
+  <todo>
+    <p>Identify a good expression of standard access that we can cite or link to. What we really
+    need is a repository of such expressions from different countries and sub-disciplines.</p>
+    <p>Provide a standard for citing resources in an accessible place.</p>
+  </todo>
+  
+  <references>
+    <ref abbrev="OLAC-MS">OLAC Metadata Set.<br/>
+      &lt;<url>http://www.language-archives.org/OLAC/olacms.html</url>&gt;</ref>
+  </references>
+  
+</OLAC_doc>

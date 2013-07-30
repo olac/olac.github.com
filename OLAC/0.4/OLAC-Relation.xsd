@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.language-archives.org/OLAC/0.4/">
+
+  <annotation>
+    <documentation>
+      OLAC Schema for refinements to relation, from DC Qualifiers
+      5/7/01, Steven Bird
+    </documentation>
+  </annotation>
+
+  <simpleType name="OLAC-Relation-Refine">
+    <restriction base="string">
+      <enumeration value="isVersionOf"/>
+      <enumeration value="hasVersion"/>
+      <enumeration value="isReplacedBy"/>
+      <enumeration value="replaces"/>
+      <enumeration value="isRequiredBy"/>
+      <enumeration value="requires"/>
+      <enumeration value="isPartOf"/>
+      <enumeration value="hasPart"/>
+      <enumeration value="isReferencedBy"/>
+      <enumeration value="references"/>
+      <enumeration value="isFormatOf"/>
+      <enumeration value="hasFormat"/>
+    </restriction>
+  </simpleType>
+
+</schema>
+

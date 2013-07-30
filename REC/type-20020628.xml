@@ -1,0 +1,599 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc>
+  <header>
+    <status code="withdrawn" type="recommendation"/>
+    <title>OLAC Linguistic Data Type Vocabulary</title>
+    <baseName>type</baseName>
+    <issued>20020628</issued>
+    <previousIssued>20020612</previousIssued>
+    <abstract>
+      <p>This document specifies the controlled vocabulary of language
+         resource types used by OLAC.  The linguistic data type vocabulary
+         describes the nature of the content of a resource from a
+         linguistic standpoint.</p>
+    </abstract>
+    <editors>
+      Heidi Johnson (<url>mailto:ailla@ailla.org</url>)<br/>
+      Helen Aristar Dry (<url>mailto:hdry@linguistlist.org</url>)
+    </editors>
+    <copyright>
+      Heidi Johnson (University of Texas at Austin),
+      Helen Aristar Dry (Eastern Michigan University)
+    </copyright>
+    <changes>
+<p>
+Adds:
+transcription/phonemic,
+transcription/kinesic,
+annotation/translation,
+annotation/phonological,
+annotation/semantic,
+annotation/eye-gaze,
+annotation/facial-expression,
+description/phonological,
+description/kinesic,
+description/pedagogical,
+description/comparative,
+dataset/kinesic.
+</p>
+<p>
+Deletes:
+transcription/eye-gaze,
+transcription/facial-expression,
+transcription/translation,
+transcription/phonological,
+transcription/semantic,
+description/eye-gaze,
+description/facial-expression,
+dataset/eye-gaze,
+dataset/facial-expression.
+Genre Type section.
+</p>
+    </changes>
+  </header>
+  <body>
+    <section>
+      <heading>Introduction</heading>
+<p>
+Key points: two-level systems, multiple categories for a single resource,
+parallelism of the transcription and annotation subcategories.
+</p>
+    </section>
+    <section>
+      <heading>Linguistic Data Type</heading>
+      <p>Each term of the controlled vocabulary is described in one of the
+        following subsections. The heading gives the encoded value for the term that is
+        to be used as the value of the <i>code</i> attribute of the <i>Type.linguistic</i>
+        metadata element <cit>OLAC-MS</cit>. Under the heading, the term is described
+        in four ways. <i>Name</i> gives a descriptive label for the term.
+        <i>Definition</i> is a one-line summary of what the term means. <i>Comments</i>
+        offers more details on what the term represents. <i>Examples</i> may also be
+        given to illustrate how the term is meant to be applied.</p>
+      <p>A further label, <i>Subterms,</i> appears when the term permits more
+        specific refinements. In such cases, the generic (top-level) terms may be
+        chosen, or one of its more specific refinements.</p>
+      <term>
+        <code>transcription</code>
+        <name>Transcription</name>
+        <definition>A transcription is a written representation of an audio or visual signal.</definition>
+        <comment>
+            <p>A resource can be identified as a transcription if it includes a type of
+               transcription as part of the content; for example, the first line of an 
+               interlinear analysis is often some type of transcription.</p>
+        </comment>
+        <term>
+          <code>transcription/phonetic</code>
+          <name>Phonetic transcription</name>
+          <definition>A phonetic transcription represents the signal at the phonetic level.</definition>
+          <comment>
+            <p>Phonetic transcription may be narrow or broad, and will typically
+               use the International Phonetic Alphabet <cit>IPA</cit> in a
+               standard encoding (e.g. <cit>Unicode-IPA</cit>, <cit>SAMPA</cit>).
+               Phonological transcriptions are also classified here.</p>
+           </comment>
+         </term>
+         <term>
+          <code>transcription/phonemic</code>
+          <name>Phonemic transcription</name>
+          <definition>A phonemic transcription represents the signal at the level of the phoneme.</definition>
+          <comment>
+            <p>Phonemic transcription may use the International Phonetic Alphabet 
+               <cit>IPA</cit> or a practical orthography. </p>
+           </comment>
+         </term>
+        <term>
+          <code>transcription/prosodic</code>
+          <name>Prosodic transcription</name>
+          <definition>The resource includes prosodic transcription.</definition>
+          <comment>
+            <p>A prosodic transcription is a symbolic record of
+               intonation, stress, tone or other suprasegmental features
+               that is expressed independently of regular phonetic transcription.</p>
+          </comment>
+        </term>
+        <term>
+          <code>transcription/orthographic</code>
+          <name>Orthographic transcription</name>
+          <definition>An orthographic transcription uses a standard or conventional orthography.</definition>
+          <comment>
+            <p>Orthographic transcriptions differ from phonemic transcriptions that use a
+               practical orthography in that they include orthographic conventions for
+               punctuation, capitalization, etc.</p>
+           </comment>
+        </term>
+        <term>
+          <code>transcription/gestural</code>
+          <name>Gestural transcription</name>
+          <definition>The resource includes gestural transcription.</definition>
+        </term>
+        <term>
+          <code>transcription/kinesic</code>
+          <name>Kinesic transcription</name>
+          <definition>A kinesic transcription represents eye, face, and body movements.</definition>
+          <comment>
+            <p>Kinesic transcriptions represent systematic uses of facial expressions,
+               body language, and eye gaze that are used to communicate meaning. </p>
+          </comment>
+        </term>
+        <term>
+          <code>transcription/musical</code>
+          <name>Musical transcription</name>
+          <definition>A musical transcription represents music.</definition>
+        </term>
+      </term>
+      <term>
+        <code>annotation</code>
+        <name>Annotation</name>
+        <definition>The resource includes information which annotates some
+          other linguistic record.</definition>
+        <comment> 
+          <p>A linguistic annotation is defined as structured linguistic
+             information that is explicitly aligned to some spatial and/or
+             temporal extent of some other linguistic record.</p>
+        </comment>
+        <term>
+          <code>annotation/phonetic</code>
+          <name>Phonetic annotation</name>
+          <definition>The resource includes phonetic annotation.</definition>
+          <comment>
+            <p>An example of a phonetic annotation is the TIMIT database, in
+               which each element of phonetic transcription is associated with
+               a range of samples in a digital audio file <cit>TIMIT</cit>.</p>
+           </comment>
+        </term>
+        <term>
+          <code>annotation/phonological</code>
+          <name/>
+          <definition/>
+        </term>
+        <term>
+          <code>annotation/prosodic</code>
+          <name>Prosodic annotation</name>
+          <definition>The resource includes prosodic annotation.</definition>
+        </term>
+        <term>
+          <code>annotation/gestural</code>
+          <name>Gestural annotation</name>
+          <definition>The resource includes gestural annotation.</definition>
+        </term>
+        <term>
+          <code>annotation/kinesic</code>
+          <name/>
+          <definition>The resource includes aligned representations of eye, face, and body movements.</definition>
+        </term>
+        <term>
+          <code>annotation/morphological</code>
+          <name>Morphological annotation</name>
+          <definition>The resource includes morphological annotation.</definition>
+          <comment>
+            <p>A morphological annotation is a morphological transcription
+               where the component morphemes are aligned with some other
+               linguistic record, such as an orthographic transcription or
+               a speech signal.  An example of morphological annotation is
+               interlinear text with aligned morphemic glosses.</p>
+           </comment>
+        </term>
+        <term>
+          <code>annotation/part-of-speech</code>
+          <name>Part-of-speech annotation</name>
+          <definition>The resource includes aligned part-of-speech tags.</definition>
+        </term>
+        <term>
+          <code>annotation/syntactic</code>
+          <name>Syntactic annotation</name>
+          <definition>The resource includes aligned syntactic transcription.</definition>
+          <comment>
+            <p>A syntactic annotation might include supra-lexical features such as
+               word order or auxiliary phrase constructions.  They may thus be aligned
+               with phrases or clauses rather than smaller segments of the annotated record.</p>
+           </comment>
+        </term>
+        <term>
+          <code>annotation/semantic</code>
+          <name/>
+          <definition/>
+        </term>
+        <term>
+          <code>annotation/discourse</code>
+          <name>Discourse annotation</name>
+          <definition>The resource includes aligned discourse transcription.</definition>
+        </term>
+        <term>
+          <code>annotation/translation</code>
+          <name>Translation</name>
+          <definition>A translation is a version of the resource in another language.</definition>
+          <comment>
+            <p>Translations may align with different linguistic levels of the resource:
+               morpheme-by-morpheme translation, word-by-word translation, sentence-level free
+               translation, or discourse-level free translation.</p>
+           </comment>
+        </term>
+        <term>
+          <code>annotation/musical</code>
+          <name>Musical annotation</name>
+          <definition>The resource includes musical annotation.</definition>
+        </term>
+
+      </term>
+      <term>
+        <code>dataset</code>
+        <name>Dataset</name>
+        <definition>The resource is a structured set of data items.</definition>
+        <comment>
+          <p>A dataset is a collection of items organized in a structured format for some
+          specific research purpose.  Examples of datasets are: a database of
+          sentences illustrating deictic terms; an inflectional affix paradigm; a list of utterance
+          tokens in a uniform context (e.g. "Say [pat] now.").</p>
+         </comment>
+        <term>
+          <code>dataset/phonetic</code>
+          <name>Phonetic dataset</name>
+          <definition>The dataset is comprised of phonetic data.</definition>
+        </term>
+        <term>
+          <code>dataset/phonological</code>
+          <name>Phonological dataset</name>
+          <definition/>
+        </term>
+        <term>
+          <code>dataset/prosodic</code>
+          <name>Prosodic dataset</name>
+          <definition>The dataset is comprised of prosodic data.</definition>
+        </term>
+        <term>
+          <code>dataset/orthographic</code>
+          <name>Orthographic dataset</name>
+          <definition>The dataset is comprised of orthographic data.</definition>
+        </term>
+        <term>
+          <code>dataset/gestural</code>
+          <name>Gestural dataset</name>
+          <definition>The dataset is comprised of gestural data.</definition>
+        </term>
+        <term>
+          <code>dataset/kinesic</code>
+          <name>Kinesic dataset</name>
+          <definition>The dataset is comprised of kinesic data.</definition>
+        </term>
+        <term>
+          <code>dataset/morphological</code>
+          <name>Morphological dataset</name>
+          <definition>The dataset is comprised of morphological data.</definition>
+        </term>
+        <term>
+          <code>dataset/part-of-speech</code>
+          <name>Part-of-speech dataset</name>
+          <definition>The dataset is comprised of part-of-speech data.</definition>
+        </term>
+        <term>
+          <code>dataset/syntactic</code>
+          <name>Syntactic dataset</name>
+          <definition>The dataset is comprised of syntactic data.</definition>
+        </term>
+        <term>
+          <code>dataset/semantic</code>
+          <name>Semantic dataset</name>
+          <definition>The dataset is comprised of semantic data.</definition>
+        </term>
+        <term>
+          <code>dataset/discourse</code>
+          <name>Discourse dataset</name>
+          <definition>The dataset is comprised of discourse data.</definition>
+        </term>
+        <term>
+          <code>dataset/musical</code>
+          <name>Musical dataset</name>
+          <definition>The dataset is comprised of musical data.</definition>
+        </term>
+      </term>
+      <term>
+        <code>description</code>
+        <name>Description</name>
+        <definition>The resource is a linguistic description.</definition>
+        <comment> 
+          <p>A description is any description or analysis of a language.
+             Unlike a transcription or an annotation, the structure of a
+             description is independent of the structure of the linguistic
+             events that it describes.</p>
+        </comment>
+        <term>
+          <code>description/phonetic</code>
+          <name>Phonetic description</name>
+          <definition>The resource includes description of phonetic characteristics.</definition>
+        </term>
+        <term>
+          <code>description/phonological</code>
+          <name>Phonological description</name>
+          <definition>The resource includes descriptionof phonological characteristics.</definition>
+        </term>
+        <term>
+          <code>description/prosodic</code>
+          <name>Prosodic description</name>
+          <definition>The resource includes description of prosodic characteristics.</definition>
+        </term>
+        <term>
+          <code>description/orthographic</code>
+          <name>Orthographic description</name>
+          <definition>The resource includes documentation of a writing system.</definition>
+        </term>
+        <term>
+          <code>description/gestural</code>
+          <name>Gestural description</name>
+          <definition>The resource includes description of gestural characteristics.</definition>
+        </term>
+        <term>
+          <code>description/kinesic</code>
+          <name>Kinesic description</name>
+          <definition>The resource includes description of kinesic characteristics.</definition>
+        </term>
+        <term>
+          <code>description/morphological</code>
+          <name>Morphological description</name>
+          <definition>The resource includes description of morphological characteristics.</definition>
+        </term>
+        <term>
+          <code>description/part-of-speech</code>
+          <name>Part-of-speech description</name>
+          <definition>The resource includes description of part-of-speech characteristics.</definition>
+        </term>
+        <term>
+          <code>description/syntactic</code>
+          <name>Syntactica description</name>
+          <definition>The resource includes description of syntactic characteristics.</definition>
+        </term>
+        <term>
+          <code>description/semantic</code>
+          <name>Semantic description</name>
+          <definition>The resource includes description of semantic characteristics.</definition>
+        </term>
+        <term>
+          <code>description/discourse</code>
+          <name>Discourse description</name>
+          <definition>The resource includes description of discourse characteristics.</definition>
+        </term>
+        <term>
+          <code>description/pedagogical</code>
+          <name>Pedagogical description</name>
+          <definition>The resource includes pedagogical description.</definition>
+          <comment>
+            <p>A pedagogical description is a style of presentation intended
+               for use in teaching people to use the language.</p>
+          </comment>
+        </term>
+        <term>
+          <code>description/comparative</code>
+          <name>Comparative description</name>
+          <definition>The resource includes comparative or typological description.</definition>
+        </term>
+      </term>
+      <term>
+        <code>lexicon</code>
+        <name>Lexicon</name>
+        <definition>The resource includes a systematic listing of lexical items.</definition>
+        <term>
+          <code>lexicon/dictionary</code>
+          <name>Dictionary</name>
+          <definition>The resource includes a dictionary.</definition>
+          <comment>
+            <p>This includes any resource that lists words or morphemes and
+              defines them. It contrasts with a word list in that the definitions are complex
+              (rather than being one-word equivalents) and the entries may include other
+              information like part of speech, related words, and illustrative sentences.</p>
+          </comment>
+        </term>
+        <term>
+          <code>lexicon/wordlist</code>
+          <name>Word list</name>
+          <definition>The resource includes a word list.</definition>
+          <comment>
+            <p>A word list is a list of reference words in a major language for
+              which the nearest equivalent word in a target language has been elicited (for
+              instance, the Swadesh 100-word list). </p>
+          </comment>
+        </term>
+        <term>
+          <code>lexicon/wordnet</code>
+          <name>WordNet</name>
+          <definition>The resource includes a semantic wordnet.</definition>
+          <comment>
+            <p>Whereas a dictionary documents the meanings of words by means of
+              definitions, a word net documents meanings by building a web of semantic
+              relationships <cit>WordNet</cit>.</p>
+          </comment>
+        </term>
+        <term>
+          <code>lexicon/thesaurus</code>
+          <name>Thesaurus</name>
+          <definition>The resource includes a thesaurus.</definition>
+          <comment>
+            <p>A thesaurus is a list of words or concepts arranged according to sense.</p>
+          </comment>
+        </term>
+        <term>
+          <code>lexicon/terminology</code>
+          <name>Terminology</name>
+          <definition>The resource includes a terminological lexicon.</definition>
+          <comment>
+            <p>A terminological lexicon is a glossary of domain-specific terms.
+              Examples are technical terminology, kinship terms, color terms,
+              acronyms, ...</p>
+          </comment>
+        </term>
+        <term>
+          <code>lexicon/proper-names</code>
+          <name>Name Dictionary</name>
+          <definition>The resource includes only proper names sa dictionary headwords.</definition>
+        </term>
+        <term>
+          <code>lexicon/bilingual</code>
+          <name>Bilingual Lexicon</name>
+          <definition>The resource includes definitions in another language.</definition>
+        </term>
+        <term>
+          <code>lexicon/etymological</code>
+          <name>Etymological Lexicon</name>
+          <definition>The lexicon contains etymological information.</definition>
+        </term>
+        <term>
+          <code>lexicon/phonetic</code>
+          <name>Phonetic Lexicon</name>
+          <definition>The lexicon contains phonetic information, including
+             pronunciation, phonology, stress, rhymes.</definition>
+        </term>
+        <term>
+          <code>lexicon/frequency</code>
+          <name>Frequency Lexicon</name>
+          <definition>The lexicon contains frequency information.</definition>
+        </term>
+        <term>
+          <code>lexicon/analytical</code>
+          <name>Analytical Lexicon</name>
+          <definition>The lexicon contains analytical information.</definition>
+          <comment>
+            <p>Analytical information includes such things as morphological
+              derivation, grammatically related forms, argument structure, ...</p>
+          </comment>
+        </term>
+      </term>
+      <term>
+        <code>text</code>
+        <name>Text</name>
+        <definition>This is a primary resource: the object of study.</definition>
+        <comment>
+          <p>A text is defined as any primary resource or research material, such as a
+		literary work, film, or recording of natural discourse.</p>
+        </comment>
+        <term>
+          <code>text/narrative</code>
+          <name>Narrative</name>
+          <definition>A monologic discourse which represents temporally organized events.</definition>
+          <comment>
+            <p>Types of narratives include historical, traditional, and 
+            personal narratives, myths, folktales, fables, and humorous stories.</p>
+          </comment>
+        </term>
+        <term>
+          <code>text/oratory</code>
+          <name>Oratory</name>
+          <definition>"The art of public speaking, or of speaking eloquently according to rules or conventions.</definition>
+          <comment>
+            <p>Examples of oratory include sermons, lectures, political
+            speeches, and invocations.</p>
+          </comment>
+        </term>
+        <term>
+          <code>text/dialogue</code>
+          <name>Dialogue</name>
+          <definition>An interactive discourse with two or more participants.</definition>
+          <comment>
+            <p>Examples of dialogues include conversations, interviews,
+              correspondence, consultations, greetings and leave-takings.</p>
+          </comment>
+        </term>
+        <term>
+          <code>text/singing</code>
+          <name>Singing</name>
+          <definition>"Words or sounds [articulated] in succession with musical inflections 
+               or modulations of the voice" <cit>OED</cit>.</definition>
+          <comment>
+            <p>Examples of singing include chants, songs, and choruses.</p>
+          </comment>
+        </term>
+        <term>
+          <code>text/drama</code>
+          <name>Drama</name>
+          <definition>A planned, creative, rendition of discourse with two or more
+            participants.</definition>
+        </term>
+        <term>
+          <code>text/formulaic</code>
+          <name>Formulaic</name>
+          <definition>The resource is a ritually or conventionally structured 
+            discourse.</definition>
+          <comment>
+            <p>Examples of formulaic discourse are prayers, curses,
+               blessings, charms, curing rituals, marriage vows, and oaths.</p>
+          </comment>
+        </term>
+        <term>
+          <code>text/procedural</code>
+          <name>Procedural</name>
+          <definition>An explanation or description of a method, process, or situation having ordered steps.</definition>
+          <comment>
+            <p>Examples of procedural discourses include recipes,
+               instructions, and plans.</p>
+          </comment>
+        </term>
+        <term>
+          <code>text/report</code>
+          <name>Report</name>
+          <definition>A factual account of some event or circumstance.</definition>
+          <comment>
+            <p>Examples of reports include news reports, essays, and commentaries.</p>
+          </comment>
+        </term>
+        <term>
+          <code>text/ludic</code>
+          <name>Ludic</name>
+          <definition>Ludic discourse is language whose primary function is to
+            be part of play, or a style of speech that involves a creative
+            manipulation of the structures of the language.</definition>
+          <comment>
+            <p>Examples of ludic discourse are play languages, jokes,
+               secret languages, and speech disguises.</p>
+          </comment>
+        </term>
+        <term>
+          <code>text/unintelligible speech</code>
+          <name>Unintelligible speech</name>
+          <definition>The resource consists of utterances that are not intended to 
+            be interpretable as ordinary language.</definition>
+          <comment>
+            <p>Examples of unintelligible speech include sacred languages,
+               speaking in tongues, and singing syllables (fa-la-la).</p>
+          </comment>
+        </term>
+      </term>
+    </section>
+  </body>
+  <todo><p>
+    Write the introduction.
+    Explain that typical resources will contain multiple types.
+  </p></todo>
+  <references>
+    <ref abbrev="OLAC-MS">OLAC Metadata Set.<br/>
+      &lt;<url>http://www.language-archives.org/OLAC/olacms.html</url>&gt;</ref>
+    <ref abbrev="Unicode-IPA">Unicode IPA Extensions<br/>
+      &lt;<url>http://www.unicode.org/unicode/uni2book/ch07.pdf</url>&gt;</ref>
+    <ref abbrev="SAMPA">Speech Assessment Methods Phonetic Alphabet<br/>
+      &lt;<url>http://www.phon.ucl.ac.uk/home/sampa/home.htm</url>&gt;</ref>
+    <ref abbrev="TIMIT">TIMIT Acoustic-Phonetic Continuous Speech Corpus<br/>
+      &lt;<url>http://www.ldc.upenn.edu/Catalog/LDC93S1.html</url>&gt;</ref>
+    <ref abbrev="WordNet">WordNet - a Lexical Database for English<br/>
+      &lt;<url>http://www.cogsci.princeton.edu/~wn/</url>&gt;</ref>
+    <ref abbrev="OED">Oxford English Dictionary<br/>
+      &lt;<url>http://dictionary.oed.com/entrance.dtl</url>&gt;</ref>
+  </references>
+</OLAC_doc>

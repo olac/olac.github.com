@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>OLAC Access Vocabulary</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="OLAC Access Vocabulary">
+<meta name="Creator" content="&#10;      Heidi Johnson (mailto:ailla@ailla.org)&#10;    ">
+<meta name="Description" content="&#10;      Access is an attribute of the Rights element.  It provides a broad classification of&#10;      the ways in which a resource may be used.  Users may have to seek more detailed information&#10;      about a given resource, if Access = restricted, or if they wish to use the resource in&#10;      a non-standard fashion.  Users are always advised to review the specific policies of the&#10;      data provider before making use any resource.&#10;      If the Rights element is absent, no assumptions can be made about the status of these and &#10;      other rights with respect to the resource.&#10;    ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20021119">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>OLAC Access Vocabulary</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2002-11-19</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Former Draft Recommendation. </i>This document was withdrawn from the OLAC document process.</td>
+</tr>
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;withdrawn:</th><td>2003-06-18</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/REC/access-20021119.html">http://www.language-archives.org/REC/access-20021119.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td>None.</td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>Access is an attribute of the Rights element.  It provides a broad classification of
+      the ways in which a resource may be used.  Users may have to seek more detailed information
+      about a given resource, if Access = restricted, or if they wish to use the resource in
+      a non-standard fashion.  Users are always advised to review the specific policies of the
+      data provider before making use any resource.
+      If the Rights element is absent, no assumptions can be made about the status of these and 
+      other rights with respect to the resource.</p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>
+      Heidi Johnson (<a href="mailto:ailla@ailla.org">mailto:ailla@ailla.org</a>)
+    </editors>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 
+      Heidi Johnson (University of Texas at Austin)
+    . This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Access">Access</A>
+<UL>
+<LI>
+<A href="#restricted">restricted</A>
+</LI>
+<LI>
+<A href="#standard">standard</A>
+</LI>
+<LI>
+<A href="#non-profit">non-profit</A>
+</LI>
+<LI>
+<A href="#commercial">commercial</A>
+</LI>
+</UL>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>The information in the Rights element is intended as a guide for potential users of
+      the resource. Since intellectual property rights laws and customs can be expected to vary widely across countries 
+      and within sub-communities, data providers must make individual arrangements concerning 
+      the rights that control access to and use of their resources. A controlled vocabulary can 
+      only provide a coarse classification of the types of use to which a resource may be put.  
+      Details of the rights and restrictions associated with the resource, such as a copyright
+      notice or reference to the specific policies of a data provider, should be specified
+      in the element content.</p>
+<h2>
+<A name="Access"></A>2. Access</h2>
+<p>Each term of the controlled vocabulary is described in one of the
+    following subsections. The heading gives the encoded value for the term that is
+    to be used as the value of the <i>Access</i> attribute of the <i>Rights</i>
+    metadata element [<a href="http://www.language-archives.org/OLAC/olacms.html">OLAC-MS</a>]. Under the heading, the term is described in four ways. 
+    <i>Name</i> gives a descriptive label for the term.
+    <i>Definition</i> is a one-line summary of what the term means. <i>Comments</i>
+    offers more details on what the term represents, and may also include examples
+    given to illustrate how the term is meant to be applied.</p>
+<h3>
+<A name="restricted"></A>restricted</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Restricted</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>Access to the resource is restricted.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The specific nature of the restriction is not defined by means of a controlled
+      vocabulary. Data providers should supply a brief description in the Rights element content.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<pre style="margin-left: 18pt">
+      &lt;rights xsi:type="olac:access" code="restricted"&gt;Permission from the depositor is required.&lt;/rights&gt; 
+      </pre>
+</td>
+</tr>
+</table>
+<h3>
+<A name="standard"></A>standard</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Standard</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>Access to the resource is standard.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Standard access means that the resource can be used like any published work (book, article,
+        music cd, etc.); that is, standard laws and policies governing the fair use of the work apply.
+        Such policies generally prohibit wholesale incorporation of the resource into another work or 
+        copying and distribution of the resource.  They generally allow quotation of small portions 
+        of the resource, and summaries, critiques, or analyses, provided that the resource is properly
+        cited.</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="non-profit"></A>non-profit</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Non-profit</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource can be used for any non-profit purpose.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>This level is intended to allow broader use of the resource than standard access allows.
+        For example, the resource could be copied and distributed free of charge, for academic
+        purposes, or it could be used to create derivative works, such as transcriptions, for 
+        non-profit purposes.</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="commercial"></A>commercial</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Commercial</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource can be used for commercial purposes.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>The resource can be freely used for any purpose without explicit permission from the
+        creators or data providers, including copying and distribution for profit, incorporation
+        into commercial products, and the creation of derivative works.</p>
+</td>
+</tr>
+</table>
+</body>
+<hr>
+<h2>
+<font color="red">To do</font>
+</h2>
+<font color="red">
+<p>Identify a good expression of standard access that we can cite or link to. What we really
+    need is a repository of such expressions from different countries and sub-disciplines.</p>
+<p>Provide a standard for citing resources in an accessible place.</p>
+</font><a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="OLAC-MS">OLAC-MS</a>]</td><td>OLAC Metadata Set.<br>
+      &lt;<a href="http://www.language-archives.org/OLAC/olacms.html">http://www.language-archives.org/OLAC/olacms.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

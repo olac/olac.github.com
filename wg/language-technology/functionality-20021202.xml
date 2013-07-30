@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Baden Hughes (.) -->
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<?xml-stylesheet type="text/xsl" href="OLAC_doc.xsl"?>
+<OLAC_doc>
+	<header>
+		<status code="draft" type="standard"/>
+		<title>OLAC Vocabulary for Language Technology Functionality</title>
+		<baseName>functionality</baseName>
+		<issued>20021202</issued>
+		<previousIssued>20021118</previousIssued>
+		<abstract>
+			<p>This document specifies the controlled vocabulary used by OLAC in the description of language technology functionality. The vocabulary describes the functionality in particular of software according to the functional categories provided by the HLT Survey.</p>
+		</abstract>
+		<editors>Baden Hughes <url>mailto:baden@compuling.net</url>
+		</editors>
+		<copyright>Baden Hughes</copyright>
+		<changes><P>20021202: compliance with OLAC_doc.dtd</P>
+		</changes>
+	</header>
+	<body>
+		<section>
+			<heading>Introduction</heading>
+			<p>This document specifies the controlled vocabulary used by OLAC in the description of language technology functionality. The vocabulary describes the functionality in particular of software according to the functional categories provided by the HLT Survey.</p>
+		
+		</section>
+		<section>
+			<heading>Information Extraction</heading>
+		<term>
+<code>functionality/information_extraction</code>
+<name>Information Extraction</name>
+<definition>The goal of informtion extraction (IE) is to build systems that find and link relevant information from natural language text ignoring irrelevant information. The information of interest is typically pre-specified in form of uninstantiated frame-like structures also called templates. The templates are domain and task specific. The major task of an IE-system is then the identification of the relevant parts of the text which are used to fill a template's slots.</definition>
+<comment> </comment>
+</term>
+
+<term>
+<code>functionality/relation_extraction</code>
+<name>Relation Extraction</name>
+<definition>Automated or human-assisted acquisition of relations between concepts from textual or other data, usu. within a selected domain.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/text_data_mining</code>
+<name> Text Data Mining (TM)</name>
+<definition> Text data mining concerns the application of data mining (knowledge discovery in databases, KDD) to unstructured textual data. The goal of data mining is to discover or derive new information from data, finding patterns across datasets, and/or separating signal from noise. Core text mining algorithms decompose text in meaningful chunks that can then be used for true data mining purposes.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/summarization</code>
+<name>Summarization</name>
+<definition> Text summarization is the process of distilling the most important information from a source (or sources) to produce an abridged version for a particular user (or users) and task (or tasks).</definition> 
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/answer_extraction</code>
+<name> Answer Extraction (Textual Question Answering)</name>
+<definition> Answer extraction (AE) aims at retrieving those exact passages of a document that directly answer a given user question. AE is more ambitious than information retrieval and information extraction in that the retrieval results are phrases, not entire documents, and in that the queries may be arbitrarily specific. It is less ambitious than full-fledged question answering in that the answers are not generated from a knowledge base but looked up in the text of documents.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/named_entity_recognition</code>
+<name> Named Entity Recognition (NERC)</name>
+<definition>Named entity (NE) recognition is a form of information extraction in which the major task is to identify and classify from NL text every word or sequence of words as being a person-name, organizaton, location, date, time, monetary value, percentage expression. NE recognition has a high impact for a number of applications, like e.g., InterNet search enginges, text data mining or answer extraction.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/multimedia_information_extraction</code>
+<name>Multimedia Information Extraction</name>
+<definition> Multimedia Multimedia Information Extraction is extraction of useful information from multimedia document collections.</definition>
+<comment></comment>
+</term>
+		</section>
+
+		<section>
+			<heading>Information Retrieval</heading>
+<term>
+<code>functionality/information_retrieval</code>
+<name>Information Retrieval (IR)</name>
+<definition> Information Retrieval is the process of locating information that fits a user's requirements, where the requirements are usually expressed as a search query. The fit of the retrieved information with the information need is referred to as "relevance". The information can be retrieved from databases (data retrieval) or from document collections (document retrieval), where documents can either be text documents or other media (audio, video, semi-structured data, multimedia). Success in information retrieval is generally defined by retrieving as much relevant information as possible (measured by "recall")while minimising the irrelevant information retrieved (measured by "precision"). The most widely used information retrieval systems today are Internet search engines.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/topic_detection</code>
+<name> Topic Detection (TD)</name>
+<definition> Detection of the topic of a document or of a segment in a stream of natural language data.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/multilingual_information_retrieval</code>
+<name> Multilingual Information Retrieval (CLIR)</name>
+<definition> Cross-language information retrieval means using queries in one language to search for documents in a different language. Multilingual information retrieval is a broader term, which includes the case where queries in different languages are used, but only for searching documents in the same language. </definition>
+<comment>Synonyms: cross-language information retrieval, translingual information retrieval, sprachubergreifendes Information Retrieval</comment>
+</term>
+
+<term>
+<code>functionality/categorization</code>
+<name> Categorization</name>
+<definition> The categorization task is to assign a new data type (e.g. a document) to one, or more, of a pre-existing set of classes (e.g. document classes). By contrast, the task of clustering (e.g. document clustering) is to create, or discover, a reasonable set of clusters for a given set of data types (e.g. documents).</definition>
+<comment>Synonyms: Classifikation, Kategorisierung, Klassifizierung</comment>
+</term>
+
+<term>
+<code>functionality/relevance_ranking</code>
+<name> Relevance Ranking</name>
+<definition> Queries given to search engines or other retrieval systems are often not very specific, and lead to a large number of matching documents. In these cases the retrieval system should have a good estimate of the relevance of the documents to the user's needs, so that "good" documents show up early in the enumeration. A large number of factors should enter into a good ranking method, including the positions of the query terms in the document, linguistic context of the matches, link popularity, classification of the documents, user models etc.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/speech_retrieval</code>
+<name> Speech Retrieval</name>
+<definition> Speech Retrieval is the process of retrieving spoken audio material (documents)in response to a search query. Search queries can be spoken or textual. Speech retrieval makes use of techniques from speech recognition, natural language understanding and information retrieval. Possible applications are the indexing of archives of broadcast material, and monitoring of telephone conversations.</definition>
+<comment>Synonyms: Spoken Document Retrieval, Audio Retrieval, Audio Mining, Speech Mining</comment>
+</term>
+
+<term>
+<code>functionality/clustering</code>
+<name>Clustering</name>
+<definition> Clustering algorithms partition a set of objects into groups or clusters. The task of clustering (e.g. document clustering) is to create, or discover, a reasonable set of clusters for a given set of data types (e.g. documents). By contrast, the categorization task is to assign a new data type (e.g. a document) to one, or more, of a pre-existing set of classes (e.g. document classes).</definition>
+<comment>Synonyms: grouping, category induction, Clustering-Verfahren, Klassifikationsverfahren</comment>
+</term>
+
+<term>
+<code>functionality/presentation_and_visualisation</code>
+<name> Presentation and Visualisation</name>
+<definition>TBD</definition>
+<comment>Synonyms: Visualisierung</comment>
+</term>
+
+<term>
+<code>functionality/multimedia_retrieval</code>
+<name> Multimedia Retrieval</name>
+<definition> Multimedia Retrieval is a variant of information retrieval on multimedia document collections.</definition>
+<comment></comment>
+</term>
+
+</section>
+
+	<section>
+<heading>Authoring Tools</heading>
+
+<term>
+<code>functionality/spell_checking</code>
+<name> Spell Checking</name>
+<definition> Techniques for the identification of spelling or typing errors in textual documents, which may be applied interactively during the creation of the document, or off-line for existing documents. Spelling correction is an extension in which for each assumed error one or several hypothetical corrections are suggested.</definition>
+<comment>Synonyms: Spelling Correction, Rechtschreibkorrektur</comment>
+</term>
+
+<term>
+<code>functionality/automatic_hyperlinking</code>
+<name> Automatic Hyperlinking</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/language_checking</code>
+<name> Language Checking (LC)</name>
+<definition> Language Checking comprises technologies used to detect and/or correct erroneous or inconsistent language use in documents. The scope of language checking technology ranges from general error correction, as performed by spell checkers and grammar checkers, to the implementation of corporate styles and terminology control (controlled language). Benefits of controlled languages are the enhancement of consistency within and across documents and the reduction of ambiguity and vagueness, yielding documents which are easier to process by both humans and machines.</definition>
+<comment><P>Synonyms: controlled language checking, grammar checking</P></comment>
+</term>
+
+<term>
+<code>functionality/structure-based_authoring_assistants</code>
+<name> Structure-based Authoring Assistants (CL)</name>
+<definition> Structure-based authoring assistants: Software for supporting the distributed creation of consistent, high-quality information on an industrial scale. Key components include terminology extraction for legacy information,terminology checking and hyperlinking integrated in standard authoring environments, as well as structural (syntactic) checking of texts to ensure readability, consistency and translatability.</definition>
+<comment>Synonyms: controlled language tools</comment>
+</term>
+
+	</section>
+
+		<section>
+			<heading>Language Analysis</heading>
+<term>
+<code>functionality/tokenization_and_segmentation</code>
+<name>Tokenization and Segmentation</name>
+<definition> Tokenization is commonly seen as an independent process of linguistic analysis, in which the input stream of characters is segmented into an ordered sequence of word-like units, usually called tokens, which function as input items for subsequent steps of linguistic processing. Tokens may correspond to words, numbers, punctuation marks or even proper names.The recognized tokens are usually classified according to their syntax. Since the notion of tokenization seems to have different meanings to different people, some tokenization tools fulfil additional tasks like for instance isolation of sentences, handling of end-line hyphenations or conjoined clitics and contractions.</definition>
+<comment><P>Synonyms: Word boundary detection, Tokenisierung</P>
+</comment>
+</term>
+
+<term>
+<code>functionality/shallow_parsing</code>
+<name>Shallow Parsing</name>
+<definition>TBD</definition>
+<comment><P>Synonyms: Chunk Parsing, Partial Parsing, (NP) Chunking</P>
+</comment>
+</term>
+
+<term>
+<code>functionality/grammar_models_and_formalisms</code>
+<name>Grammar Models and Formalisms</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/head-driven_phrase_structure_grammar</code>
+<name>Head-driven Phrase Structure Grammar (HPSG)</name>
+<definition> HPSG is a constraint-based, lexicalist approach to grammatical theory that seeks to model human languages as systems of constraints on typed feature structures. Lexical information is organized in terms of multiple inheritance hierarchies that allow complex properties of words to be derived from the logic of the lexicon. Phrasal types are also treated in terms of multiple inheritance hierarchies that allow generalizations about diverse construction types to be factored into various cross-cutting dimensions. See also the corresponding pages of the HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-3.pdf</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/government_and_binding_theory_minimalist_framework</code>
+<name>Government and Binding Theory / Minimalist Framework (GB Theory / Minimalism)</name>
+Synonyms: Principles and Parameters Theory of Syntax, Generative Syntax, Minimalismus
+<definition> Minimalism is the latest development of Transformational Generative Grammar, which was initiated by Chomsky in the 1950s, and further developed into the Principles and Parameters (or Government and Binding) Theory of Syntax in the 1980s. The fundamental idea of Transformational Generative Syntax is that a sentence is produced from an abstract structural representation, which is sequentially altered by structure-dependent derivations, following universal principles and language-specific parameter settings. The Minimalist Program maintains that derivations and representations be minimal, according to principles of economy.</definition>
+<comment><P>Synonyms: Principles and Parameters Theory of Syntax, Generative Syntax, Minimalismus</P></comment>
+</term>
+
+<term>
+<code>functionality/lexicons_for_constraint-based_grammars</code>
+<name>Lexicons for Constraint-Based Grammars (CbG-Lex)</name>
+<definition> lexicons which provide rich information about morphological syntactic and semantic properties of words and are developed in unification- and constraint- based grammar formalisms which encode lexical descriptions as feature structures which have a clear mathematical and computational interpretation and constitute ideal data structures for complex word knowledge information encoding. See also the related HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-4.pdf</definition>
+<comment><P>Synonyms: lexicons in unification-based grammar formalisms, lexicons in lexicalist theories</P></comment>
+</term>
+
+<term>
+<code>functionality/part-of-speech_tagging</code>
+<name>Part-of-speech Tagging (POS Tagging)</name>
+<definition> The technologies for or the process of determining the correct part-of-speech tag for a word given its local context. The task comprises disambiguation of multiple part-of-speech tags and guessing of the correct part-of-speech tag for unknown words. Part-of-speech tagging is frequently used as a preprocessing step for shallow and deep parsers. See also the related HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-2.pdf</definition>
+<comment><P>Synonyms: Wortartenzuweisung, Etiqueteurs de Parties du Discours</P></comment>
+</term>
+
+<term>
+<code>functionality/probabilistic-context-free_grammars</code>
+<name>Probabilistic Context-free Grammars (PCFG)</name>
+<definition> A context-free grammar augmented with non-negative weights for all grammar rules resulting in a probability distribution for both the syntax trees and the language of the grammar. Probabilistic context-free grammars may be used (i) to disambiguate the analyses of a given sentence, and (ii) in language modeling. See also the related HLT-Survey Section on Robust Parsing: http://www.lt-world.org/HLT_Survey/ltw-chapter3-7.pdf</definition>
+<comment><P>Synonyms: stochastic context-free grammars, probabilistische kontextfreie Grammatiken, stochstische kontextfreie Grammatiken</P></comment>
+</term>
+
+<term>
+<code>functionality/categorial_grammar</code>
+<name>Categorial Grammar (CG)</name>
+<definition> Categorial Grammar is a lexical approach in which expressions are assigned categories that specify how to combine with expressions to create larger expressions. An analysis of an expression proceeds by inference over the categories assigned to its individuatable parts, trying to assign a given goal-category to the expression. In the type-logical variant of categorial grammar, a semantic representation is built compositionally in parallel to the categorial inference. See also the corresponding pages in the HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-6.pdf</definition>
+<comment><P>Synonyms: type-logical grammar, multimodal logical grammar, categorial type logic</P></comment>
+</term>
+
+<term>
+<code>functionality/Lexical-functional_grammar</code>
+<name>Lexical-Functional Grammar (LFG)</name>
+<definition> Lexical-Functional Grammar is a lexicalist, nontransformational theory of grammar which is built on a powerful and mathematically well-defined grammar formalism, designed for typologically diverse, configurational and non-configurational languages. LFG models different levels of linguistic description in a functional correspondence architecture. C-structure encodes constituency and surface order, which radically differ across typologically distinct languages. F-structure encodes functional syntactic information, which is largely shared between typologically distinct languages. LFG grammars are declarative, and therefore reversible for generation.</definition>
+<comment><P>Synonyms: Lexikalisch-funktionale Grammatik</P></comment>
+</term>
+
+<term>
+<code>functionality/systemic_functional_linguistics</code>
+<name>Systemic Functional Linguistics (SFL)</name>
+<definition> Systemic-Functional Linguistics (SFL) is a theory of language centred around the notion of language function. While SFL accounts for the syntactic structure of language, it places the, function of language as central (what language does, and how it does it), in preference to more structural approaches, which place the elements of language and their combinations as, central. SFL starts at social context, and looks at how language both acts upon, and is constrained by, this social context., A central notion is 'stratification', such that language is analysed in terms of four strata: Context, Semantics, Lexico-Grammar and Phonology-Graphology.</definition>
+<comment><P>Synonyms: Systemic Functional Grammar, Systemic Grammar, SFG, Systemisch Funktionale Grammatik, Systemisch Funktionale Linguistik, Linguistique Systemique Fonctionelle</P></comment>
+</term>
+
+<term>
+<code>functionality/morphological_analysis</code>
+<name>Morphological Analysis</name>
+<definition> The technologies for or the process of tracing the inflectional, derivational, and compounding processes in the formation of a given word in order to determine properties such as stem form, part-of-speech and inflectional information. As a crucial preprocessing step, morphological analysis is used in virtually all fields of natural language processing. See also the corresponding pages in the HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-2.pdf</definition>
+<comment><P>Synonyms: morphology, morphologische Analyse, analyse morphologique</P></comment>
+</term>
+
+<term>
+<code>functionality/natural_language_parsing</code>
+<name>Natural Language Parsing (NL Parsing)</name>
+<definition> Parsing (from Latin "pars orationis" = parts of speech) is the syntactic analysis of languages. Natural Language Parsing is the syntactic analysis of natural languages, such as Finnish or Chinese. The objective of Natural Language is to determine parts of sentences (such as verbs, noun phrases, or relative clauses), and the relationships between then (such as subject or object). Unlike parsing of formally defined artificial languages (such as Java or predicate logic), parsing of natural languages presents problems due to ambiguity, and the productive and creative use of language. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-6.pdf</definition>
+<comment><P>Synonyms: syntactic analysis</P></comment>
+</term>
+
+<term>
+<code>functionality/dependency_grammar</code>
+<name>Dependency Grammar (DG)</name>
+<definition> Dependency Grammar" stands for a collection of approaches to natural language grammar sharing the following fundamental characteristics: The distinction between heads and dependents; the immediate modification of a head by a dependent (i.e. without intervening nonterminals like in phrase-structure grammar); and, the naming of the relation between a head and a dependent. Approaches can be differentiated mainly according to whether they consider grammatical or semantic relations (e.g. "subject" vs. "Actor"), and whether the grammar describes tree-structures or graphs. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-3.pdf</definition>
+<comment><P>Synonyms: Dependenzgrammatik, Afhankelijkheidsgrammatika</P></comment>
+</term>
+
+<term>
+<code>functionality/tree_adjoining_grammar</code>
+<name>Tree Adjoining Grammar (TAG)</name>
+<definition> Tree-Adjoining Grammars (TAGs) are tree rewriting systems. The grammar components are (lexicalised) elementary trees, which are composed by substitution and adjunction operations. The syntactic representation consists of the constituent tree built by composition of elementary trees, and a derivation tree, which records the dependencies between elementary trees as established by substitution and adjunction operations. A basic linguistic assumption underlying TAG is that elementary trees encode basic predicate-argument structure. This extends to long-distance dependencies, which are "localised" in (lexicalised) elementary trees.</definition>
+<comment><P>Synonyms: LTAG, FTAG, MCTAG</P></comment>
+</term>
+
+<term>
+<code>functionality/optimality_theory_in_syntax</code>
+<name>Optimality Theory in Syntax (OT in Syntax)</name>
+<definition> Optimality Theory (OT) is a recent development in theoretical linguistics. OT deviates from more traditional linguistic frameworks in that it assumes grammatical constraints to be (a) universal, (b) violable, and (c) ranked. Assumption (a) means that constraints are maximally general, i.e., they contain no exceptions or disjunctions, and there is no parametrization across languages. Highly general constraints will inevitably conflict, therefore assumption (b) allows constraints to be violated, even in a grammatical structure, while assumption (c) stipulates that some constraint violations are more relevant than others. In this setting, a structure is grammatical if it is optimal in the sense of violating the least highly ranked constraints compared with other possible candidate structures. Which candidate is optimal depends on how the constraints in the grammar are ranked, thus crosslinguistic variation can be accounted for via variation in the constraint ranks. Optimality Theory is widely used in phonology, based on Prince and Smolensky's (1993) seminal work. In syntax, the OT paradigm is less popular, but there have been interesting attempts to combine OT with LFG. The OT literature also includes important computational contributions (especially as regards OT models of language acquisition).</definition>
+<comment><P>Synonyms: OT Syntax</P></comment>
+</term>
+		</section>
+		<section>
+			<heading>Language Understanding</heading>
+<term>
+<code>functionality/word_sense_disambiguation</code>
+<name>Word Sense Disambiguation (WSD)</name>
+<definition> Word Sense Disambiguation is a subtask of semantic tagging, which consists of assigning a semantic class (sense) to a lexical item as specified by a semantic lexicon. If the semantic lexicon specifies more than one sense for a particular lexical item, a disambiguation procedure is needed to decide upon the most appropriate sense(s) for any given instance of the lexical item in text. WSD is not a self-contained application, but it may be included as an integrated part of a semantic processor.</definition>
+<comment><P>Synonyms: lexical sense resolution, sense discrimination, Lesartdesambiguierung</P></comment>
+</term>
+
+<term>
+<code>functionality/computational_psycholinguistics</code>
+<name>Computational Psycholinguistics</name>
+<definition> Computational models of the architectures and mechanisms which underly human language processing. Computational psycholinguistics aims to develop predictive computational theories of mind that explicitly characterize how people both use and acquire knowledge of language. Models are evaluated in terms of their ability to account for human linguistic performance in tasks such as incremental ambiguity resolution, language acquisition, and production.</definition>
+<comment><P>Synonyms: sentence processing</P></comment>
+</term>
+
+<term>
+<code>functionality/computational_semantics</code>
+<name>Computational Semantics</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/computational_pragmatics</code>
+<name>Computational Pragmatics</name>
+<definition> Pragmatics studies language use in relation to context, and particularly linguistic communication. For communication to work, hearers must recognize speakers' communicative intentions, whereby the connection between intentions and sentences relies on a shared system of beliefs and inferences. Communication is also a social affair, relying on a shared conception of the context situation. Current computational applications are mostly dialogue systems and text generation systems.</definition>
+<comment><P>Synonyms: computational discourse processing</P></comment>
+</term>
+
+		</section>
+		<section>
+			<heading>Knowledge Representation and Discovery</heading>
+<term>
+<code>functionality/ontologies</code>
+<name> Ontologies</name>
+<definition> What are Ontologies? And why are they important for NLP? From a theoretical point of view, ontology is the metaphysical study of the nature of being and existence. In practice, an ontology is normally viewed as a formal representation of all semantic objects and their connections in a Universe of Discourse. Mapping these semantic objects onto language units (words, phrases, text segments, etc.) is the task of semantic processing in NLP.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/automatic_hyperlinking</code>
+<name> Automatic Hyperlinking</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/knowledge_discovery</code>
+<name> Knowledge Discovery</name>
+<definition> Generally, knowledge discovery / data mining is the process of analyzing data from different perspectives and summarizing it into useful information - information that can be used to increase revenue, cuts costs, or both. Data mining software is one of a number of analytical tools for analyzing data. It allows users to analyze data from many different dimensions or angles, categorize it, and summarize the relationships identified. Technically, data mining is the process of finding correlations or patterns among dozens of fields in large relational databases.</definition>
+<comment><P>Synonyms: Data Mining</P></comment>
+</term>
+
+<term>
+<code>functionality/semantic_web</code>
+<name> Semantic Web</name>
+<definition> The Semantic Web is a W3C-based initiative for representing knowledge on the World Wide Web in a machine-readable fashion, such that it can be understood and used by machines for intelligent applications.</definition>
+<comment></comment>
+</term>
+
+		</section>
+		<section>
+			<heading>Spoken Language Input</heading>
+<term>
+<code>functionality/speech_recognition</code>
+<name> Speech Recognition (ASR)</name>
+<definition> Automatic Speech Recognition deals with automatic transcribing spoken language as text which is further processed in application dependent ways. Important applications are dictation, control of machines and devices by speech, information systems, speech translation, aids for disabled persons</definition>
+<comment><P>Synonyms: Spracherkennung</P></comment>
+</term>
+
+<term>
+<code>functionality/acoustic_modelling_in_speech_recognition</code>
+<name> Acoustic Modelling in Speech Recognition</name>
+<definition> Modelling of basic recognition units in the microphone signal. These units are often phones (esp. if a large vocabulary is used), while systems with a small vocabulary sometimes use larger units like words. The acoustic signal is not used directly, but represented by spectral parameters derived from it. Spectral parameters that are often used are mel-frequency cepstral coefficients (MFCC's) or RASTA PLP coefficients (noise-robust linear predictive coding parameters), although many other parameter types, including parameters based on auditory processing or phonetic features, are also used sometimes. The models in most state-of-the-art systems are obtained through hidden Markov modelling (HMM), although dynamic time warping and neural nets are also used for acoustic modelling (the latter also in combination with HMM). A limited number of systems exist in which the acoustic modelling is not stochastic, but knowledge-based.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/spoken_language_understanding</code>
+<name> Spoken Language Understanding</name>
+<definition> The analysis of spoken language for an application. Spoken language understanding can involve dealing with multiple recognition hypotheses from ASR, taking prosodic properties of utterances into account and having to deal with fragmentary and grammatically incorrect utterances. Commercial ASR products often are accompanied by analysis tools. </definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/signal_analysis_and_representation</code>
+<name> Signal Analysis and Representation</name>
+<definition> In acoustic phonetics, the speech signal is represented as a waveform (amplitude curve over time). Through subsequent frequency analysis (e.g., using an FFT), a spectrogram (frequency distribution over time) is generated. For automatic speech processing (e.g., recognition, synthesis), further derived and discretised representations are required, e.g. mel-cepstrum coefficients (see also DSP Techniques).,</definition>
+<comment><P>Synonyms: Signalanalyse und Reprasentation, Analyse et representation du signal</P></comment>
+</term>
+
+<term>
+<code>functionality/language_modelling</code>
+<name> Language Modelling</name>
+<definition> Statistical Language Models define probability distributions over sequences of words, and can be used to select the best transcription of an utterance in a speech recognizer. Other applications include spelling correction, natural language generation, and machine translation. The parameters of statistical language models are estimated from a set of training examples. Useful techniques range from simple models based on trigram frequencies up to hybrid models that involve linguistic and world knowledge that may be optimized using sophisticated machine learning approaches. </definition>
+<comment><P>Synonyms: Language Modeling, Statistical Language Modelling</P></comment>
+</term>
+
+<term>
+<code>functionality/emotion_recognition</code>
+<name> Emotion Recognition</name>
+<definition> The recognition of emotions from text, speech, facial expressions, gestures and/or physiological measures. A key challenge is the appropriate representation of emotional states.</definition>
+<comment><P>Synonyms: Emotionserkennung, Reconnaissance des emotions, Reconocimiento de las emociones</P></comment>
+</term>
+
+<term>
+<code>functionality/prosody_information_processing</code>
+<name> Prosody Information Processing </name>
+<definition> Prosody can be defined as a feature of speech which extends over more than one segment and is often synonymous with 'suprasegmentals'. Prosodic features include fundamental frequency (F0),relative duration and intensity, and spectral quality. They determine the rhythm and intonation of utterances. </definition>
+<comment><P>Synonyms: Prosodic Analysis, Prosodie</P></comment>
+</term>
+
+<term>
+<code>functionality/speaker_recognition</code>
+<name> Speaker Recognition</name>
+<definition> Speaker recognition, which can be classified into identification and verification, is the process of automatically recognizing who is speaking on the basis of individual information included in speech waves. This technique makes it possible to use the speaker's voice to verify their identity and control access to services such as voice dialing, banking by telephone, telephone shopping, database access services, information services, voice mail, security control for confidential information areas, and remote access to computers.</definition>
+<comment><P>Synonyms: speaker verification, speaker identification, voice recognition</P></comment>
+</term>
+
+		</section>
+		<section>
+			<heading>Written Language Input</heading>
+<term>
+<code>functionality/document_image_analysis</code>
+<name> Document Image Analysis (DIA) </name>
+<definition>TBD</definition> 
+<comment><P>Synonyms: Document Image Decoding</P></comment>
+</term>
+
+<term>
+<code>functionality/ocr_print</code>
+<name> OCR: Print (OCR)</name>
+<definition> Automatic transformation of bitmap images of printed textual documents into machine editable text documents. </definition>
+<comment><P>Synonyms: Optical Character Recognition</P></comment>
+</term>
+
+<term>
+<code>functionality/ocr_handwriting</code>
+<name> OCR: Handwriting (ICR) </name>
+<definition> Automatic transformation of hand-written text into machine editable text.</definition> 
+<comment><P>Synonyms: Handwriting recognition, Cursive character recognition, Intelligent character recognition</P></comment>
+</term>
+
+		</section>
+		<section>
+			<heading>Natural Language Generation</heading>
+<term>
+<code>functionality/natural_language_generation</code>
+<name> Natural Language Generation (NLG)</name>
+<definition> The field of Natural Language Generation (NLG) is concerned with building computer software systems which can produce meaningful texts in human languages from some underlying non-linguistic representation of information. For document production, NLG systems use knowledge about human languages and possibly the application domain. NLG components are used for e.g. automatic report generation, authoring, concept-to-speech and machine translation systems. </definition>
+<comment><P>Synonyms: Human Language Generation, natuerlichsprachliche Generierung, generation du language naturel</P></comment>
+</term>
+
+<term>
+<code>functionality/deep_generation</code>
+<name> Deep Generation</name>
+<definition> A knowledge-based approach to natural language generation that stresses theoretical motivation and re-usability of technology and knowledge sources.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/shallow_generation</code>
+<name> Shallow Generation</name>
+<definition> An approach to natural language generation in which the generator is specifically taylored around the specific needs of the given application.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/syntactic_generation</code>
+<name> Syntactic Generation (how-to-say) </name>
+<definition> Generation of a syntactically well-formed natural language utterance from a given representation of its meaning, typically guided by a grammar that encodes the relevant syntactic and semantic constraints.</definition>
+<comment><P>Synonyms: NLG, syntaktische Generierung</P></comment>
+</term>
+
+		</section>
+
+		<section>
+			<heading>Spoken Output Technologies</heading>
+<term>
+<code>functionality/text-to-speech_synthesis</code>
+<name> Text-to-speech Synthesis (TTS)</name>
+<definition> The generation of synthetic speech from text. Typically, a text-to-speech synthesis system performs a text analysis using natural language processing techniques; determines the appropriate phonetic string and prosodic features; and generates a speech signal by employing a concatenative or rule-based synthesis method. </definition>
+<comment><P>Synonyms: speech synthesis, synthetic speech generation, Sprachsynthese, Text-to-Speech Synthese, Synthese de la parole, Habla sintetica</P></comment>
+</term>
+
+<term>
+<code>functionality/spoken_language_generation</code>
+<name> Spoken Language Generation</name>
+<definition> Whereas the generation of spoken language from semantic representations can be sequentialized into generation of text followed by text-to-speech, using text as an intermediate representation may lose information that was available in the original input. An integrated solution can avoid this problem and thereby lead to improved quality and/or simpler system architecture. </definition>
+<comment><P>Synonyms: Concept-to-Speech Generation, Meaning-to-Speech System</P></comment>
+</term>
+
+
+		</section>
+
+		<section>
+			<heading>Multilinguality</heading>
+<term>
+<code>functionality/machine_translation</code>
+<name>Machine Translation (MT)</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/multilingual_information_retrieval</code>
+<name>Multilingual Information Retrieval (CLIR)</name>
+<definition> Cross-language information retrieval means using queries in one language to search for documents in a different language. Multilingual information retrieval is a broader term, which includes the case where queries in different languages are used, but only for searching documents in the same language. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter8-5.pdf</definition>
+<comment><P>Synonyms: cross-language information retrieval, translingual information retrieval, sprachubergreifendes Information Retrieval</P></comment>
+</term>
+
+<term>
+<code>functionality/example-based_translation_and_translation_memories</code>
+<name>Example-Based Translation and Translation Memories (TM)</name>
+<definition> Translation memories and example-based MT are techniques that reuse parts of existing translations to simplify the translation of new text from the same domain. Whereas translation memories concentrate on the reuse of translated sentences, example-based MT applies this idea to finer units like phrases, terms, and constructions.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/human-aided_machine_translation</code>
+<name>Human Aided Machine Translation (HAMT)</name>
+<definition> We call Human-aided Machine Translation all systems and techniques which rely on real automation of the translation function when porting a text from one language to another. As opposed to full Machine Translation, human-aided MT does not fully rely on computational translation, but assists this process by pre-editing and post-editing steps, possibly also interactive human intervention to steer or select from alternative translations. Translation of real-time spoken language, by contrast, does not allow for human intervention, except for negotiation functions, such as clarification dialogues. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter8-2.pdf</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/multilingual_speech_processing</code>
+<name>Multilingual Speech Processing</name>
+<definition> Speech systems able to understand more than one language. Either the speakers' language is recognised automatically by a language identifier or multiple language specific input channels can be employed.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/statistical_machine_translation</code>
+<name>Statistical Machine Translation (SMT)</name>
+<definition> Techniques for machine translation that combine a stochastic model of the target language with a stochastic relation between target and source language. Translation is seen as a decoding task similar to speech recognition. Both types of models can be build automatically from suitable training data.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/machine-aided_human_translation</code>
+<name>Machine-Aided Human Translation (MAHT)</name>
+<definition> Techniques that help to increase the productivity of human translators via suitable computational infrastructure, including translation memories, terminology management, partial machine translation, online lexicons, or other techniques that automate parts of the translator's work, such as speech recognition or accelerated typing techniques applied to human translations. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter8-4.pdf</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/automatic_language_identification</code>
+<name>Automatic Language Identification (LI)</name>
+<definition> Automatic Language Identification (LID) is the problem of identifying the language of a sample of speech or written text by an unknown person. Several important applications already exist for LID, viz., as a front-end to, e.g., a call router in a telephone-based application or a multi-lingual speech recognition system. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter8-7.pdf</definition>
+<comment><P>Synonyms: language identification, Sprachenidentifizierung, Automatic Language Identification (speech and text)</P></comment>
+</term>
+
+<term>
+<code>functionality/multilingual_generation</code>
+<name>Multilingual Generation</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+		</section>
+
+		<section>
+			<heading>Multimodality</heading>
+<term>
+<code>functionality/representations of_space_and_time</code>
+<name>Representations of Space and Time</name>
+<definition> Semantic representation and logic of temporal and spatial expressions and concepts in natural languages.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/modality_integration_facial_movement_and_speech</code>
+<name>Modality Integration: Facial Movement and Speech</name>
+<definition> Multimodal fusion combines the output of speech understanding, gestures and mimic recognition (if available) to an uniform representation of the user intention.</definition>
+<comment><P>Synonyms: multimedia fusion, multimodal fusion</P></comment>
+</term>
+
+		</section>
+
+<section>
+<heading> Coding and Compression</heading>
+<term>
+<code>functionality/speech_coding</code>
+<name>Speech Coding</name>
+<definition> Coding algorithms seek to minimize the bit rate in the digital representation of a signal without an objectionable loss of signal quality in the process. High quality is attained at low bit rates by exploiting signal redundancy as well as the knowledge that certain types of coding distortion are imperceptible because they are masked by the signal. Models of signal redundancy and distortion masking are becoming increasingly more sophisticated, leading to continuing improvements in the quality of low bit rate signals. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter10-2.pdf</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/text_compression</code>
+<name>Text Compression</name>
+<definition> Methods for text compression identify and exploit redundancy in text documents in order to obtain a more condensed representation of the information, from which the original data can be recovered without modification (lossless compression). In theory, there is a close relation between compression and prediction: The better a statistical language model can estimate the probability of a word, given some context, the more the text as a whole can be compressed.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/speech_nhancement</code>
+<name>Speech Enhancement</name>
+<definition> The improvement of speech intelligibility by removing background noise from the speech signal. Due to the complexity of speech acoustics and perception, no simple mathematical error criterion can be applied instead, algorithms and measures need to be developed which accomodate human perception. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter10-3.pdf</definition>
+<comment><P>Synonyms: noise cancellation, noise removal</P></comment>
+</term>
+
+<term>
+<code>functionality/text_encryption</code>
+<name>Text Encryption</name>
+<definition> A cryptosystem or cipher system is a method of disguising messages so that only certain people can see through the disguise. Cryptography is the art of creating and using cryptosystems. Cryptanalysis is the art of breaking cryptosystems---seeing through the disguise even when you're not supposed to be able to. Cryptology is the study of both cryptography and cryptanalysis.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/speech_encryption</code>
+<name>Speech Encryption</name>
+<definition> Application of encryption technology to the transmission of speech signals in real time.</definition>
+<comment><P>Synonyms: Voice Encryption, Voice Scrambling, Speech Scrambling</P></comment>
+</term>
+
+</section>
+
+		<section>
+			<heading>Mathematical Methods</heading>
+<term>
+<code>functionality/natural_language_parsing</code>
+<name>Natural Language Parsing (NL Parsing)</name>
+<definition> Parsing (from Latin "pars orationis" = parts of speech) is the syntactic analysis of languages. Natural Language Parsing is the syntactic analysis of natural languages, such as Finnish or Chinese. The objective of Natural Language is to determine parts of sentences (such as verbs, noun phrases, or relative clauses), and the relationships between then (such as subject or object). Unlike parsing of formally defined artificial languages (such as Java or predicate logic), parsing of natural languages presents problems due to ambiguity, and the productive and creative use of language. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-6.pdf</definition>
+<comment><P>Synonyms: syntactic analysis</P></comment>
+</term>
+
+<term>
+<code>functionality/statistical_modeling_and_classification</code>
+<name>Statistical Modeling and Classification</name>
+<definition> In most applications of human language technology some tasks cannot be solved by purely deductive (rule-based) approaches, but need quantitative mechanisms to pick the most plausible out of a larger set of potential outcomes, or rank a set of possibilities. Often, the required preferences can be extracted from training examples by suitable statistical techniques. Statistical language modeling for speech recognition and text retrieval and categorization have been among the earliest applications. Recent work in many subfields of HLT focusses on the integration of statistical (implicit) and rule-based (explicit) knowledge. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter11-2.pdf</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/optimization_and_search_in_speech_and_language_processing</code>
+<name>Optimization and Search in Speech and Language Processing</name>
+<definition> Optimization and search are vital to modern speech and natural language processing systems, as speech recognition and parsing are combinatorial optimization problems, in which from a large number of potential analyses the best ones (those with highest overall probability, smallest number of assumed errors, best fit with contextual expectation...) need to be identified. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter11-7.pdf</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/maximum_entropy_methods</code>
+<name>Maximum Entropy Methods (ME, MEM, MEMD, MaxEnt)</name>
+<definition> Maximum entropy methods are techniques for the estimation of probability distributions that pick the "most uniform" distribution compatible with the observed statistics. The maximum entropy formulation has a unique solution which can be found by iterative scaling algorithms. Maximum entropy models have been applied to NLP-related task like text segmentation and classification, language modeling, part-of-speech tagging, parsing, and machine translation.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/latent_semantic_analysis</code>
+<name>Latent Semantic Analysis (LSA)</name>
+<definition> Latent Semantic Analysis is a technique for indexing and retrieval that takes advantage of implicit higher-order structure in the association of terms with documents ("semantic structure") in order to improve the detection of relevant documents on the basis of terms found in queries. Uses statistical techniques for dimensionality reduction such as singular-value decomposition or unsupervised soft clustering.</definition>
+<comment><P>Synonyms: Latent Semantic Indexing</P></comment>
+</term>
+
+<term>
+<code>functionality/language_modeling</code>
+<name>Language Modelling</name>
+<definition> Statistical Language Models define probability distributions over sequences of words, and can be used to select the best transcription of an utterance in a speech recognizer. Other applications include spelling correction, natural language generation, and machine translation. The parameters of statistical language models are estimated from a set of training examples. Useful techniques range from simple models based on trigram frequencies up to hybrid models that involve linguistic and world knowledge that may be optimized using sophisticated machine learning approaches. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter1-5.pdf</definition>
+<comment><P>Synonyms: Language Modeling, Statistical Language Modelling</P></comment>
+</term>
+
+<term>
+<code>functionality/dsp_techniques</code>
+<name>DSP Techniques</name>
+<definition> A collective term for algorithms analysing, modifying, or coding a signal. DSP techniques are employed in most speech technology applications analysing, generating or transmitting a speech signal. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter11-3.pdf</definition>
+<comment><P>Synonyms: Digital Signal Processing, Digitale Signalverarbeitung</P></comment>
+</term>
+
+<term>
+<code>functionality/conditional_random_fields</code>
+<name>Conditional Random Fields (CRF)</name>
+<definition> A framework for building probabilistic models to segment and label sequence data. According to their inventors, CRFs offer advantages over hidden markov models, stochastic grammars, and maximum entropy markov models.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/support_vector_machines</code>
+<name>Support Vector Machines (SVM)</name>
+<definition> Support Vector Machines are machine learning algorithms for binary classification based on recent advances in statistical learning theory. The input is mapped into a high dimensional feature space, in which a linear classifier is constructed that maximizes the margin between the classes and hence generalizes well to unseen data. Learning requires only information about the relative distances of the training instances, so it can be performed for arbitrary distance metrics (called kernels) that may be specific to the application domain. These generalized SVMs are called kernel machines.</definition>
+<comment><P>Synonyms: Kernel Machines</P></comment>
+</term>
+
+<term>
+<code>functionality/emerging_computing_paradigms</code>
+<name>Emerging Computing Paradigms</name>
+<definition> Emergent computaion is a type of computation that is bottom-up and not globally nor totally programmed. Only local information or very limited amount of information is used for a unit of computation. However, certain global information structure, which is often unexpected, is emerged from this computation. For the field of natural language processing, researchers are concerned with the question of the origin and evolution of language.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/finite_state_technology</code>
+<name>Finite State Technology (FST)</name>
+<definition> Finite-state devices such as finite-state automata and finite-state transducers have been known since the emergence of computer science and are recently extensively used in many areas of natural language processing. Their use is motivated by their time and space efficiency and the fact that many relevant local language phenomena can be easily and intuitively expressed as finite-state devices. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter11-5.pdf</definition>
+<comment><P>Synonyms: Finite-State Technology</P></comment>
+</term>
+
+<term>
+<code>functionality/connectionist_techniques</code>
+<name>Connectionist Techniques (PDP)</name>
+<definition> Connectionist techniques are modelled on biological brains, whose higher-order cognitive processes appear to emerge from the interplay of large numbers of simple processing units, the neurons. Rather than being used as a substrate in which to implement known elements playing known roles, neural networks are let to evolve by themselves: they gradually adapt to the environment through a modification of inter-neural connection strengths, which come to reflect the neurons' history of co-activities. Typically, the emerging network represents objects, symbols, attributes, etc. (if at all) in states, involving larger numbers of neurons. Connectionism is a field of machine learning and has an affinity to statistics, fuzzy logic, and genetic programming. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter11-5.pdf</definition>
+<comment><P>Synonyms: connectionism, parallel distributed processing, neurocomputing, neural networks, Konnektionismus, Neuronale Netzwerke, Neurale Netzwerke</P></comment>
+</term>
+
+<term>
+<code>functionality/hmm_methods</code>
+<name>HMM Methods (HMM)</name>
+<definition> Probabilistic modeling of sequential data by assuming underlying (hidden) state sequences that produce observed (visible) sequences. See also the related HLT-Survey Section on HMM Methods in Speech Recognition: http://www.lt-world.org/HLT_Survey/ltw-chapter1-5.pdf</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/inductive_logic_programming</code>
+<name>Inductive Logic Programming (ILP)</name>
+<definition> Inductive Logic Programming (ILP) is a research area formed at the intersection of Machine Learning and Logic Programming. ILP systems develop predicate descriptions from examples and background knowledge. The examples, background knowledge and final descriptions are all described as logic programs. A unifying theory of Inductive Logic Programming is being built up around lattice-based concepts such as refinement, least general generalisation, inverse resolution and most specific corrections. In addition to a well established tradition of learning-in-the-limit results, some results within Valiant's PAC-learning framework have been demonstrated for ILP systems. U-learnabilty, a new model of learnability, has also been developed.</definition>
+<comment><P>Synonyms: induktive Logikprogrammierung</P></comment>
+</term>
+		</section>
+
+<section>
+	<heading>Discourse and Dialogue</heading>
+<term>
+<code>functionality/discourse_and_dialogue</code>
+<name> Discourse and Dialogue</name>
+<definition> A Discourse is a piece of language including more than one sentence. A Dialogue is a linguistic exchange involving more than one participant. Discourse and dialogue therefore encompasses almost all non-local phenomena in language, but in particular discourse coherence, anaphoric dependencies, dialogue structure and the relation between questions and answers. The most obvious practical application in this area is dialogue systems and, more recently, spoken dialogue systems.</definition>
+<comment><P>Synonyms: Dialogue and Discourse, Diskurs und Dialog</P></comment>
+</term>
+
+<term>
+<code>functionality/spoken_language_dialogue</code>
+<name> Spoken Language Dialogue (SLD) </name>
+<definition> Spoken Language Dialogue covers man-machine dialog systems using speech as main means of user interaction as well as systems analysing spoken dialogues between humans. Such systems presuppose speech recognition, speech synthesis and spoken language understanding.</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/discourse_modeling</code>
+<name> Discourse Modeling</name>
+<definition> Discourse modeling describes all aspects of the relations between groups of sentences in monologue (text) or dialogue, e.g. text coherence, rhetorical relations, intentional and attentional state, centering, dialogue moves,dialogue acts, and reference phenomena, to name just a few. </definition>
+<comment><P>Synonyms: Discourse Modelling, Diskursmodellierung</P></comment>
+</term>
+
+<term>
+<code>functionality/spoken_dialogue_systems</code>
+<name> Spoken Dialogue Systems (SDS) </name>
+<definition> Spoken Dialogue Systems are automatic systems that interact with humans (or other systems) by accepting spoken language input and producing spoken language output. Spoken language input is handled by speech recognition, and language analysis and understanding components. Spoken language output is achieved by playback of recorded human speech, or by speech synthesis. Spoken dialogue systems include a component for dialogue control, which may make use of artificial intelligence techniques. Spoken dialogue systems are widely used for information and transaction systems, such as stock market information or travel reservation.</definition>
+<comment><P>Synonyms: speech dialogue systems</P></comment>
+</term>
+
+<term>
+<code>functionality/dialogue_modeling</code>
+<name> Dialogue Modeling</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+</section>
+		<section>
+			<heading>Language Resources</heading>
+<term>
+<code>functionality/written_language_corpora</code>
+<name> Written Language Corpora</name>
+<definition> Any collection of more than one text can be called a corpus, (corpus being Latin for "body", hence a corpus is any body of text). But the term "corpus" when used in the context of modern linguistics means a machine-readable text collection which is representative for the language use under investigation. </definition> 
+<comment><P>Synonyms: written language resources, text corpora, Korpora der geschriebenen Sprache, Textkorpora, corpus de la langue ecrite, corpus textuel</P></comment>
+</term>
+
+<term>
+<code>Linguistically Annotated Corpora</code>
+<name> Linguistically Annotated Corpora</name>
+<definition> Linguistically annotated corpora are text collections which are enriched with linguistic information.</definition>
+<comment><P>Synonyms: annotated corpora, linguistically interpreted corpora, linguistically enriched corpora, annotierte Korpora, linguistisch annotierte Korpora, corpus annote, corpus linguistiquement annote</P></comment>
+</term>
+
+<term>
+<code>functionality/thesauri_wordnets</code>
+<name> Thesauri WordNets</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/spoken_language_corpora</code>
+<name> Spoken Language Corpora</name>
+<definition> Spoken language corpora are collections of recorded spoken language, generally associated with transcriptions of speech and noises, and with annotations at different linguistic levels. Speech corpora can contain read speech, spontaneous speech, dialogues and may be recorded under different conditions with regard to microphones, environment (e.g., lab, office, background noise), and transmission channel (e.g., telephone, broadcast). Speech corpora are used for different purposes, including training and evaluation of speech recognisers, phonetic and phonological research, dialect research, dialogue research, and speech synthesis.</definition>
+<comment><P>Synonyms: speech corpora</P></comment>
+</term>
+
+
+<term>
+<code>functionality/lexicons</code>
+<name>Lexicons</name>
+<definition>TBD</definition> 
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/grammars</code>
+<name> Grammars </name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/multilingual_corpora</code>
+<name> Multilingual Corpora</name>
+<definition> Any collection of more than one text in more than one language can be called a multilingual corpus, (corpus being Latin for "body", hence a multilingual corpus is any body of multilingual texts). But the term "multilingual corpus" when used in the context of modern linguistics means a machine-readable text collection of multilingual texts which are representative for the language use under investigation.</definition>
+<comment><P>Synonyms: multilinguale Korpora, corpus multilingue</P></comment>
+</term>
+
+<term>
+<code>functionality/terminology</code>
+<name> Terminology </name>
+<definition>TBD </definition> 
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/standards</code>
+<name> Standards</name>
+<definition> Standards provide a common framework for the creation, maintenance and exchangeability of linguistic resources.</definition>
+<comment><P>Synonyms: Standards, standards</P></comment>
+</term>
+
+		</section>
+
+		<section>
+			<heading>Evaluation</heading>
+<term>
+<code>functionality/evaluation_of_machine_translation_and_translation_tools</code>
+<name> Evaluation of Machine Translation and Translation Tools</name>
+<definition> Evaluation of MT systems depends strongly on whether such a system is used for information dissemination, assimilation, or in a conversational context, the types of texts to be translated, whether there is a well-defined and limited application domain and many more factors. The growing number of MT systems on the market that span a wide range of quality along these dimensions has motivated activities towards evaluation standards from national and international organizations. </definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/human_factors_and_user_acceptability</code>
+<name> Human Factors and User Acceptability</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/usability_and_interface_design</code>
+<name> Usability and Interface Design</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/evaluation_of_broad-coverage_natural-language_parsers</code>
+<name> Evaluation of Broad-Coverage Natural-Language Parsers</name>
+<definition> Measuring the success of (stochastic or symbolic) parsers.</definition>
+<comment><P>Synonyms: Parser Evaluation, Parser-Evaluierung</P></comment>
+</term>
+
+<term>
+<code>functionality/speech_input_assessment_and_evaluation</code>
+<name> Speech Input - Assessment and Evaluation</name>
+<definition> Assessment and evaluation are concerned with the global quantification and detailed measurement of system performance. Assessment is the process of system appraisal which leads to global, overall, quantification of performance. Evaluation involves the analytic description of system performance in terms of defined factors.</definition>
+<comment><P>Synonyms: ASR Evaluation</P></comment>
+</term>
+
+<term>
+<code>functionality/information_retrieval_evaluation</code>
+<name> Information Retrieval Evaluation</name>
+<definition>TBD</definition>
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/deep_parser_performance_evaluation</code>
+<name> Deep Parser Performance Evaluation</name>
+<definition>TBD</definition> 
+<comment></comment>
+</term>
+
+<term>
+<code>functionality/speech_synthesis_evaluation</code>
+<name> Speech Synthesis Evaluation</name>
+<definition> Evaluation of speech synthesis traditionally considers intelligibility and naturalness. More recently, expressivity has become an issue with the increasing demand for expressive voices. Due to the multitude of aspects involved, there is no agreed standard for evaluation of speech synthesis systems. </definition>
+<comment><P>Synonyms: Evaluation von Sprachsynthese, Evaluation de systemes de synthese de la parole, Evaluacion de sistemas de sintetizacion del habla</P></comment>
+</term>
+
+		</section>
+		<section>
+			<heading>Conclusion</heading>
+		</section>
+
+		<section>
+			<heading>References</heading>
+
+
+
+
+		</section>
+	</body>
+</OLAC_doc>

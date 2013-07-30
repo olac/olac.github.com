@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+<HTML>
+ 
+<HEAD>
+<TITLE>Freestanding OLAC Metadata </TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252"> 
+<LINK HREF="/olac.css" TYPE="text/css" REL="stylesheet"> 
+<META NAME="Keywords" CONTENT="language resource metdata; freestanding metadata; OLAC metadata; Dublin Core metadata; validate metadata; format metadata" > 
+<META NAME="Description" CONTENT="The OLAC metadata standard may be used to create a
+freestanding XML document that describes a particular language resource. 
+Such a freestanding metadata document may be archived with the
+resource; it may also be formatted for display and posted on the web. This page describes
+how to create freestanding metadata documents and provides a service for
+validating and formatting them." > 
+</HEAD>
+ 
+<BODY>
+<HR>
+<TABLE CELLPADDING="10">
+<TBODY>
+<TR>
+<TD><A HREF="/"><IMG
+SRC="/images/olac100.gif" BORDER="0"
+ALT="OLAC Logo"> </A> </TD>
+<TD> <H1>Freestanding OLAC Metadata </H1>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<HR>
+<H2>What is freestanding metadata? </H2>
+<P>The main focus of OLAC is on developing repositories of metadata records
+that document the language resource holdings of institutions. However, the
+<A HREF="/OLAC/metadata.html">OLAC metadata
+standard</A>
+may also be used by individual researchers to create a
+freestanding XML document that describes a particular language resource they
+have developed. Such a freestanding metadata document may be archived with the
+resource; it may also be formatted for display and posted on the web. This page describes
+how to create freestanding metadata documents and provides a service for
+validating and formatting them.</P>
+<H2>Creating freestanding metadata</H2>
+<P>A freestanding OLAC metadata document is an XML document that has a root
+element of <TT>&lt;olac:olac&gt;</TT> and conforms to the
+<A HREF="/OLAC/1.1/olac.xsd">XML schema for
+OLAC metadata</A>. For instance,</P>
+<UL>
+<LI>Here is a <A HREF="sample_metadata.xml">sample freestanding OLAC metadata
+document</A>.</LI>
+<LI>Here is the same document <A HREF="sample_metadata.html">formatted for
+display</A> on the web.</LI>
+</UL>
+<P>A freestanding metadata document can be created with a simple text editor
+(like Notepad). You could, for instance, make a copy of the sample metadata
+document above and edit it to match the information needed for your resource.
+Consult the <A HREF="/OLAC/metadata.html">OLAC
+    metadata standard</A> and the
+<A HREF="/NOTE/usage.html">OLAC Metadata Usage Guidelines</A>
+for details on the
+metadata elements and encoding schemes that may be used. Once you have a draft
+metadata document, submit it to the validation service below to ensure that it
+is valid.</P>
+<P>If you have an XML editor, you may use it with the
+<A HREF="/OLAC/1.1/olac.xsd">XML Schema</A> or
+the <A HREF="/OLAC/1.1/olac.dtd">XML DTD</A>
+for OLAC metadata. Note that the XML Schema is the authoritative definition of
+the OLAC standard. The DTD defines all the elements and attributes that are
+possible in an OLAC metadata document, but it does not embody all the value
+constraints. Use the validation service below to perform a final check of
+validity.</P>
+<H2>A validation and formatting service</H2>
+<P>The form below offers a service for validating and formatting
+freestanding OLAC metadata.  Paste your XML document into the text
+area below, and click the "Format" button. First your submission is 
+validated against the XML schema for OLAC metadata by the Xerces-J parser.
+If validation errors are found, a page reporting the errors is returned.
+If there are no errors, the process invokes the 
+second step of generating an HTML page that displays the metadata in a human readable
+form. The generated form by the "Format" button conforms to the
+<A href="/NOTE/olac_display.html">OLAC Display Format</A>.
+Simply use the Save As function of your web browser to save the resulting page so that you can
+post it on your own web site.  Alternatively, you can download the
+<A href="/metadata_record.xsl">XSLT stylesheet</A> and modify it for use
+on your site.</P>
+<H2>A metadata quality analysis service</H2>
+<P>Click the "Analyze" button to perform an analysis of metadata
+    quality for the record entered into the form. The result displays the metadata quality score
+    for the record (as defined in 
+    <A HREF="/NOTE/metrics.html">OLAC Metadata Metrics</A>)
+    along with recommendations on changes that would improve the
+    quality score.
+</P>
+<FORM method="post" action="freestanding_validate.php" name="service">
+<P><TEXTAREA NAME="metadata" ROWS="15" COLS="70">&lt;?xml version="1.0" encoding="UTF-8"?>
+<olac:olac
+     xmlns:olac="http://www.language-archives.org/OLAC/1.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <dc:title>Language: An introduction to the study of speech</dc:title>
+  <dcterms:created xsi:type="dcterms:W3CDTF">1921</dcterms:created>
+  <dcterms:issued xsi:type="dcterms:W3CDTF">2000</dcterms:issued>
+  <dc:creator xsi:type="olac:role" olac:code="author">Sapir, Edward</dc:creator>
+  <dc:description>The noted linguist and anthropologist Edward Sapir
+wrote this work to show language in relation to other fundamental 
+interests--the problem of thought, the nature of the historical 
+process, race, culture, art. This book is not only a study of language 
+and culture, but ultimately on the world of relations and influence.
+</dc:description>
+  <dc:language xsi:type="olac:language" olac:code="en"/>
+  <dc:subject xsi:type="olac:linguistic-field" olac:code="general_linguistics"/>
+  <dc:type xsi:type="dcterms:DCMIType">Text</dc:type>
+  <dc:publisher>New York: Bartleby.com</dc:publisher>
+  <dc:identifier xsi:type="dcterms:URI">http://www.bartleby.com/186/</dc:identifier>
+</olac:olac></TEXTAREA></P>
+<INPUT TYPE="SUBMIT" size="23" NAME="action" VALUE="Format"> 
+<INPUT TYPE="SUBMIT" size="23" NAME="action" VALUE="Analyze"> 
+<input type="button" size="23" value="Clear the text area"
+  onclick="document.service.metadata.value=''" />
+<input type="reset" size="23" value="Restore original example" name="Reset" /> 
+</FORM>
+<BR>
+</BODY>
+</HTML>
+ 

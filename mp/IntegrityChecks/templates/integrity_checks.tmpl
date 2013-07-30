@@ -1,0 +1,100 @@
+#import re
+#import string
+#def resource_anchor($s)
+$re.sub(r"((?:http|https|ftp)://\S+)", r'<a href="\1">\1</a>', $s)
+#end def
+#def item_anchor($s)
+<a href="/item/$s">$s</a>
+#end def
+<html>
+<header>
+<title>Archive Integrity Checks</title>
+<link rel="stylesheet" type="text/css" href="/olac.css">
+</header>
+<body>
+<hr>
+<table cellpadding=10>
+<tr><td><a href="/"><img src="/images/olac100.gif" border=0></a></td>
+<td><h1>Integrity Checks
+#if $getVar('repoid',None)
+: $repoid
+#end if
+</h1></td></tr>
+</table>
+<hr>
+
+#if $getVar('repoid',None)
+<p>Use the following form to check other archives.</p>
+#else
+<p>Select an archive to check from the list and click on the 'Submit Query'
+button.</p>
+#end if
+
+<script>
+function redirect() {
+  var list = document.getElementById('list');
+  window.location = '$baseurl/' + list.value;
+}
+</script>
+
+<p>
+<select id="list">
+#for rid in $repoids
+#if $getVar('repoid',None)==rid
+<option value="$rid" selected>$rid</option>
+#else
+<option value="$rid">$rid</option>
+#end if
+#end for
+</select>
+<button onclick="redirect();">Submit Query</button>
+</p>
+<hr>
+
+#if $getVar('errors',None) or $getVar('warnings',None)
+<p>(Click <a href="$repoid/download">here</a> to download as a file.)
+#elif $getVar('repoid',None)
+<p>There are no errors for this archive.</p>
+#end if
+#if $getVar('errors',None)
+<h2>Errors:</h2>
+<p>The following errors have been detected in the metadata for this archive. Their presence counts against the Overall Rating for the archive.<p>
+<table border=1>
+<tr><th>Error</th><th>Offending Value</th><th>Record ID</th></tr>
+#for $row in $errors
+<tr>
+<td>$row[0]</td>
+#if $row[3]
+<td>$resource_anchor($row[3])</td>
+#else
+<td></td>
+#end if
+<td>$item_anchor($row[4])</td>
+</tr>
+#end for
+</table>
+#end if
+#if $getVar('warnings',None)
+<h2>Warnings:</h2>
+<p>The following potential problems have been detected and should be looked into. They are not severe enough to count against the archive's Overall Rating.</p>
+<table border=1>
+<tr><th>Warning</th><th>Offending Value</th><th>Record ID</th></tr>
+#for $row in $warnings
+<tr>
+<td>$row[0]</td>
+#if $row[1] in ('RLC','SIL')
+#set $code = $row[3].split()[0]
+#set $remedy = ' '.join($row[3].split()[1:])
+<td><a href='http://www.sil.org/iso639-3/documentation.asp?id=$code'>$code</a> $remedy</td>
+#elif $row[3]
+<td>$resource_anchor($row[3])</td>
+#else
+<td></td>
+#end if
+<td>$item_anchor($row[4])</td>
+</tr>
+#end for
+</table>
+#end if
+</body>
+</html>

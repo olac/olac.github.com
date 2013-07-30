@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository xmlns="http://www.openarchives.org/OAI/2.0/static-repository" 
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/" 
+            xmlns:olac="http://www.language-archives.org/OLAC/1.1/"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/static-repository 
+            http://www.language-archives.org/OLAC/1.1/static-repository.xsd
+                http://www.language-archives.org/OLAC/1.1/
+                http://www.language-archives.org/OLAC/1.1/olac.xsd
+                http://purl.org/dc/elements/1.1/
+                http://dublincore.org/schemas/xmls/qdc/2006/01/06/dc.xsd
+                http://purl.org/dc/terms/
+                http://dublincore.org/schemas/xmls/qdc/2006/01/06/dcterms.xsd">
+
+  <!-- This document is valid according to both of the following schemas:
+       http://www.openarchives.org/OAI/2.0/static-repository.xsd
+       http://www.language-archives.org/OLAC/1.1/static-repository.xsd
+  -->
+
+
+  <Identify>
+    <oai:repositoryName>Virtual Kayardild Archive</oai:repositoryName>
+    <oai:baseURL>http://www.language-archives.org/OLAC/1.1/static-repository.xml</oai:baseURL>
+    <oai:protocolVersion>2.0</oai:protocolVersion>
+    <oai:adminEmail>badenh@cs.mu.oz.au</oai:adminEmail>
+    <oai:earliestDatestamp>2004-01-01</oai:earliestDatestamp>
+    <oai:deletedRecord>no</oai:deletedRecord>
+    <oai:granularity>YYYY-MM-DD</oai:granularity>
+    <oai:description>
+      <oai-identifier
+        xmlns="http://www.openarchives.org/OAI/2.0/oai-identifier"
+        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai-identifier
+          http://www.openarchives.org/OAI/2.0/oai-identifier.xsd">
+        <scheme>oai</scheme>
+        <repositoryIdentifier>kayardild.lt.cs.mu.oz.au</repositoryIdentifier>
+        <delimiter>:</delimiter>
+        <sampleIdentifier>oai:kayardild.lt.cs.mu.oz.au:01</sampleIdentifier>
+      </oai-identifier>
+    </oai:description>
+    <oai:description>
+      <olac-archive
+        type="personal"
+        currentAsOf="2007-04-19"
+        xmlns="http://www.language-archives.org/OLAC/1.1/olac-archive"
+        xsi:schemaLocation="http://www.language-archives.org/OLAC/1.1/olac-archive
+           http://www.language-archives.org/OLAC/1.1/olac-archive.xsd">
+        <archiveURL>http://www.cs.mu.oz.au/research/lt/kayardild/</archiveURL>
+        <participant name="Baden Hughes" role="Compiler"
+              email="badenh@cs.mu.oz.au"/>
+        <institution>University of Melbourne</institution>
+        <institutionURL>http://www.unimelb.edu.au/</institutionURL>
+         <shortLocation>Melbourne, Australia</shortLocation>
+        <location>Department of Linguistics and Applied Linguistics, Department of Computer Science and
+          Software Engineering, and Baillieu Library, University of Melbourne, Parkville VIC 3010, Australia</location>
+        <synopsis>The Virtual Kayardild Archive contains materials from the Australian language
+          Kayardild (Ethnologue code GYD), a Tangkic language (non-Pama-Nyungan) of Bentinck Island, north west Queensland, Australia.
+          Kayardild has fewer than ten fluent speakers remaining. The language has complex and unusual case morphology, and a dictionary and comprehensive grammar are available.
+        </synopsis>
+        <access>Access to web based content is open. Access to original materials is by arrangement only. </access>
+      </olac-archive>
+    </oai:description>
+  </Identify>
+    
+  <ListMetadataFormats>
+    
+    <oai:metadataFormat>
+    	<oai:metadataPrefix>olac</oai:metadataPrefix>
+    	<oai:schema>http://www.language-archives.org/OLAC/1.1/olac.xsd</oai:schema>
+    	<oai:metadataNamespace>http://www.language-archives.org/OLAC/1.1/ </oai:metadataNamespace>
+    </oai:metadataFormat>
+    
+  </ListMetadataFormats>
+    
+  <ListRecords metadataPrefix="olac">
+    <oai:record>
+      <oai:header>
+        <oai:identifier>oai:kayardild.lt.cs.mu.oz.au:01</oai:identifier>
+        <oai:datestamp>2004-07-06</oai:datestamp>
+      </oai:header>
+      <oai:metadata>
+        <olac:olac>
+          <dc:title>A grammar of Kayardild. With comparative notes on Tangkic.</dc:title>
+          <dc:creator>Evans, Nicholas D.</dc:creator>
+          <dc:subject>Kayardild grammar</dc:subject>
+           <dc:subject xsi:type="olac:language" olac:code="gyd"/>
+           <dc:subject xsi:type="olac:linguistic-field" olac:code="syntax"/>
+           <dc:subject xsi:type="olac:discourse-type" olac:code="narrative"/>
+          <dc:language xsi:type="olac:language" olac:code="eng"/>
+          <dc:description>Kayardild Grammar (ISBN 3110127954)</dc:description>
+          <dc:publisher>Berlin - Mouton de Gruyter</dc:publisher>
+          <dc:contributor xsi:type="olac:role" olac:code="author">Nicholas Evans</dc:contributor>
+          <dc:format>hardcover, 837 pages</dc:format>
+          <dc:relation>related to ISBN 0646119966</dc:relation>
+          <dc:coverage>Australia</dc:coverage>
+           <dc:type xsi:type="olac:linguistic-type" olac:code="language_description"/>
+           <dc:type xsi:type="dcterms:DCMIType">Text</dc:type>
+        </olac:olac>
+      </oai:metadata>
+    </oai:record>
+          
+    <oai:record>
+      <oai:header>
+        <oai:identifier>oai:kayardild.lt.cs.mu.oz.au:02</oai:identifier>
+        <oai:datestamp>2004-07-06</oai:datestamp>
+      </oai:header>
+      <oai:metadata>
+        <olac:olac>
+          <dc:title>Kayardild dictionary and thesaurus : a vocabulary of the language of the Bentinck Islanders, North-West Queensland </dc:title>
+          <dc:creator>Nicholas Evans</dc:creator>
+          <dc:subject>Kayardild dictionary and thesaurus</dc:subject>
+          <dc:subject xsi:type="olac:language" olac:code="gyd"/>
+          <dc:description>Kayardild dictionary and thesaurus (ISBN 0646119966) </dc:description>
+          <dc:publisher>Parkville, Vic., Australia. University of Melbourne, Dept. of Linguistics and Language Studies.</dc:publisher>
+          <dc:contributor xsi:type="olac:role" olac:code="researcher">Nicholas Evans</dc:contributor>
+          <dc:contributor xsi:type="olac:role" olac:code="researcher">Penny Johnson</dc:contributor>
+          <dc:contributor xsi:type="olac:role" olac:code="researcher">Marbuk Kohler</dc:contributor>
+          <dc:contributor xsi:type="olac:role" olac:code="researcher">Ken Hale</dc:contributor>
+          <dc:format>format: xiv, 334 p. : ill. ; 24 cm</dc:format>
+          <dc:relation>related to ISBN 3110127954</dc:relation>
+          <dc:coverage>Australia</dc:coverage>
+        </olac:olac>
+      </oai:metadata>
+    </oai:record>
+            
+  </ListRecords>
+</Repository>
+

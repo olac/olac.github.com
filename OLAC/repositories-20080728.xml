@@ -1,0 +1,503 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="../OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "../OLAC_doc.dtd">
+<OLAC_doc>
+   <header>
+      <status code="adopted" type="standard"/>
+      <!-- Promoted to Candidate on 2008-07-16 -->
+      <!-- Promoted to Adopted on 2008-12-19 -->
+      <title>OLAC Repositories</title>
+      <baseName>repositories</baseName>
+      <issued>20080728</issued>
+       <previousIssued>20080531</previousIssued>
+       <supersedes>20030917</supersedes>
+      <abstract>
+         <p>This document defines the standards OLAC archives must follow in implementing a metadata repository. </p>
+      </abstract>
+      <editors>Gary Simons, SIL International and Graduate Institute of Applied Linguistics
+            (<url>mailto:gary_simons@sil.org</url>) <br/>Steven Bird, University of Melbourne and University of
+         Pennsylvania (<url>mailto:sb@ldc.upenn.edu</url>) </editors>
+      <copyright>2008 Gary Simons (SIL International and Graduate Institute of Applied Linguistics) and Steven Bird
+         (University of Melbourne and University of Pennsylvania)</copyright>
+      <changes>
+         <p>This update to the standard describes the version 1.1 revision of the OLAC repository schemas. In
+            addition to changing the version number from 1.0 to 1.1 throughout, the substantive changes are in the
+               <xref>OLAC archive description</xref> and are as follows: the attribute for <tt>currentAsOf</tt> is
+            added; the elements for <tt>&lt;curator&gt;</tt>, <tt>&lt;curatorTitle&gt;</tt>, and
+               <tt>&lt;curatorEmail&gt;</tt> are replaced by a single, repeatable
+               <tt>&lt;participant&gt;</tt> element; and an optional
+               <tt>&lt;archivalSubmissionPolicy&gt;</tt> element is added. One of these changes manifests itself
+            in a new requirement 2 in the requirements on both static and dynamic repositories, namely, that the person
+            associated with the <tt>&lt;adminEmail&gt;</tt> must be identified in a
+               <tt>&lt;participant&gt;</tt> element. Finally, the guidelines concerning relevance and 
+            granularity have been revised to define the standard for
+            granularity in terms of shared provenance. (This version
+            also incorporates corrections that were made in response
+            to feedback during the Candidate testing phase.)</p>
+      </changes>
+   </header>
+   <body>
+      <section>
+         <heading>Introduction</heading>
+         <p>This OLAC standard on metadata repositories is based on the Open Archives Initiative protocol for metadata
+            harvesting <cit>OAI-PMH</cit>. This document assumes familiarity with the OAI protocol. A metadata
+            repository may take the form of a dynamic repository that implements a CGI interface to query a live
+            database in response to protocol requests, or it may take the form of a static repository that has no
+            interface of its own but is serviced through a static repository gateway <cit>OAI-SR</cit>.</p>
+         <p>An OLAC metadata repository (whether static or dynamic) must answer two special description elements as part
+            of the response to the <tt>Identify</tt> request. It must:</p>
+         <ul>
+            <li>
+               <p>Supply an <xref>OAI identifier description</xref>
+               </p>
+            </li>
+            <li>
+               <p>Supply an <xref>OLAC archive description</xref>
+               </p>
+            </li>
+         </ul>
+         <p>These elements are described in the next two sections. The final sections of the document describe:</p>
+         <ul>
+            <li>
+               <p>
+                  <xref>Requirements on static repositories</xref>
+               </p>
+            </li>
+            <li>
+               <p>
+                  <xref>Requirements on dynamic repositories</xref>
+               </p>
+            </li>
+            <li>
+               <p>
+                  <xref>Guidelines concerning relevance and granularity</xref>
+               </p>
+            </li>
+         </ul>
+
+      </section>
+      <section>
+         <heading>OAI identifier description</heading>
+         <p> The resource identifiers supplied by an OLAC metadata repository must comply with the OAI specification for
+            the format of OAI identifiers as defined in <cit>OAI-Ids</cit>. The metadata repository must document its
+            compliance with this format by including an <tt>&lt;oai-identifier&gt;</tt> element within a
+               <tt>&lt;description&gt;</tt> container in the <tt>Identify</tt> response.</p>
+         <p>The schema for validating an OAI identifier description is found at:</p>
+         <blockquote>
+            <p>
+               <url>http://www.openarchives.org/OAI/2.0/oai-identifier.xsd</url>
+            </p>
+         </blockquote>
+         <p>The target namespace is: <tt>http://www.openarchives.org/OAI/2.0/oai-identifier</tt></p>
+         <p>The schema specifies fixed values of <i>oai</i> for the <tt>scheme</tt> element and <i>:</i> (colon) for the
+               <tt>delimiter</tt> element. In addition to being valid with respect to the schema, OLAC places these
+            further requirements on the content of the OAI identifier description:</p>
+         <ul>
+            <li>
+               <p>The <tt>repositoryIdentifier</tt> must be unique among all registered OLAC archives.</p>
+            </li>
+            <li>
+               <p>The <tt>repositoryIdentifier</tt> must be based on a registered domain name, typically of the
+                  sponsoring institution. A single institution may use subdomain names to distinguish metadata
+                  repositories that are internally distinct. A host institution may also use subdomain names to create
+                  identifiers for personal repositories.</p>
+            </li>
+            <li>
+               <p>The <tt>sampleIdentifier</tt> must be of an existing item in the repository, and not a hypothetical
+                  item.</p>
+            </li>
+         </ul>
+         <p>For example,</p>
+         <eg>&lt;description&gt;
+   &lt;oai-identifier
+         xmlns="http://www.openarchives.org/OAI/2.0/oai-identifier"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai-identifier
+             http://www.openarchives.org/OAI/2.0/oai-identifier.xsd"&gt;
+      &lt;scheme&gt;oai&lt;/scheme&gt;
+      &lt;repositoryIdentifier&gt;ethnologue.com&lt;/repositoryIdentifier&gt;
+      &lt;delimiter&gt;:&lt;/delimiter&gt;
+      &lt;sampleIdentifier&gt;oai:ethnologue.com:aaa&lt;/sampleIdentifier&gt;
+   &lt;/oai-identifier&gt;
+&lt;/description&gt;
+</eg>
+      </section>
+      <section>
+         <heading>OLAC archive description</heading>
+         <p>The basic <tt>Identify</tt> request supplies minimal information about an archive, namely, its name, base
+            URL, and administrator email. An OLAC metadata repository must augment the <tt>Identify</tt> response by
+            including an <tt>&lt;olac-archive&gt;</tt> element within a <tt>&lt;description&gt;</tt>
+            container. This element gives additional information that makes it possible for an OLAC service provider to
+            supply its users with a basic description of a participating archive. </p>
+         <p>The schema for validating an OLAC archive description is found at:</p>
+         <blockquote>
+            <p>
+               <url>http://www.language-archives.org/OLAC/1.1/olac-archive.xsd</url>
+            </p>
+         </blockquote>
+         <p>The target namespace is: <tt>http://www.language-archives.org/OLAC/1.1/olac-archive</tt></p>
+         <p>The <tt>&lt;olac-archive&gt;</tt> element has two obligatory attributes, <tt>type</tt> and
+               <tt>currentAsOf</tt>. The <tt>type</tt> attribute must have one of two values:</p>
+         <ul>
+            <li>
+               <p><tt>type="institutional"</tt> indicates that the repository is operated by an institution that is
+                  committed to maintaining it in the future, even after the individuals currently associated with it are
+                  no longer involved.</p>
+            </li>
+            <li>
+               <p><tt>type="personal"</tt> indicates that the repository is being operated by an individual (or a group
+                  of individuals) without the commitment of an institution for maintenance far into the future. </p>
+            </li>
+         </ul>
+         <p>The <tt>currentAsOf</tt> attribute records the date on which this <tt>&lt;olac-archive&gt;</tt>
+            description was last updated or, if no changes needed to be made, the date on which it was verified as
+            holding current information. The attribute is obligatory and takes a date in the W3C date format
+            <cit>W3CDTF</cit> which is a ten character string in the following format: <tt>YYYY-MM-DD</tt> (e.g.,
+            2008-04-19). </p>
+         <p>These are the elements that occur within an OLAC archive description, listed in the order in which they must
+            appear:</p>
+         <dl>
+            <dt>archiveURL</dt>
+            <dd>
+               <p><i>Optional.</i> The home page of the archive on the Web. It may be omitted only if the archive does not
+                  have a web page. This is the home page for human visitors, not the base URL for harvesting.</p>
+            </dd>
+
+            <dt>participant</dt>
+            <dd>
+               <p><i>Obligatory and repeatable.</i> Use an instance of this element for each of the persons who plays a
+                  significant role with respect to the repository. This must include the system administrator whose
+                  email address is given in the <tt>&lt;oai:adminEmail&gt;</tt> element of the <tt>Identify</tt>
+                  response. It should also include the curator of the archive, and may include any others who play some
+                  role. Identifying a participant in the archive description has two functions: it provides contact
+                  information for the OLAC community and it creates a subscription to the automatically generated report
+                  on usage and quality metrics for the archive that is emailed quarterly. Thus anyone at the institution
+                  who wishes to receive this report should be listed as a participant. </p>
+               <dl style="table">
+                  <dt>name</dt>
+                  <dd>
+                     <p>The name of the person who is associated in some way with the repository. Use the normal name
+                        form (i.e., uninverted).</p>
+                  </dd>
+                  <dt>role</dt>
+                  <dd>
+                     <p>The job title of the participant, or a label for the role the person plays with respect to the
+                        repository.</p>
+                  </dd>
+                  <dt>email</dt>
+                  <dd>
+                     <p>The email address for the participant.</p>
+                  </dd>
+               </dl>
+            </dd>
+             <dt>institution</dt>
+             <dd>
+                 <p><i>Obligatory.</i> The name of the sponsoring institution (for an institutional archive) or the
+                     institution of affiliation (for a personal archive). If the curator of a personal archive has no
+                     affiliation, then a value of <i>Unaffiliated</i> should be given.</p>
+             </dd>
+             <dt>institutionURL</dt>
+             <dd>
+                 <p><i>Optional.</i> A URL for the home page of the institution.</p>
+             </dd>
+            <dt>shortLocation</dt>
+            <dd>
+               <p><i>Obligatory.</i> A brief statement (not to exceed 50 characters) of the location of the institution
+                  or the person providing the metadata following the format "City, Country". Multiple locations may be
+                  connected with "and". This information is shown in the location column of the table of participating
+                  archives at <url>http://www.language-archives.org/archives.php</url>.</p>
+            </dd>
+            <dt>location</dt>
+            <dd>
+               <p><i>Optional.</i> A single paragraph (of arbitrary length) describing where an archive that houses a
+                  collection of physical holdings is located (for instance, include building name, room number, street
+                  address). Other information relevant to visiting the collection, such as opening hours or restrictions
+                  on access, may also be described. If the archive is purely an on-line repository, do not use this
+                  element.</p>
+            </dd>
+            <dt>synopsis</dt>
+            <dd>
+               <p><i>Obligatory.</i> A single paragraph (of arbitrary length) summarizing the purpose, scope, coverage,
+                  and so on of the archive.</p>
+            </dd>
+            <dt>access</dt>
+            <dd>
+               <p><i>Obligatory.</i> A single paragraph (of arbitrary length) summarizing terms of access to the
+                  materials described in the metadata repository. The statement can describe restrictions on access,
+                  licensing requirements, costs, and so on. Individual metadata records should use the Rights element to
+                  document such things for particular archive holdings. The purpose of <tt>&lt;access&gt;</tt>
+                  is to broadly characterize the entire archive.</p>
+            </dd>
+            <dt>archivalSubmissionPolicy</dt>
+            <dd>
+               <p><i>Optional.</i> A single paragraph (of arbitrary length) describing the institution's policy toward
+                  accepting archival submissions. The presence of this element indicates that the repository is an
+                  archive that accepts submissions of materials for long-term preservation. The element content should
+                  describe the collection policy of the archive (e.g., what kinds of materials are accepted from whom
+                  under what terms) so that a person looking for a place to archive a set of language resources may
+                  determine whether it would be appropriate to contact the curator about making a submission. A
+                  repository that does not accept materials for long-term preservation must not use this element. All
+                  institutions that provide an archival submission policy are listed with their policy statement in a
+                  page aimed at assisting those looking for a place to archive language resources:
+                     <url>http://www.language-archives.org/submission-policies.php</url>.</p>
+            </dd>
+         </dl>
+         <p>For example,</p>
+          <eg>&lt;description&gt;
+   &lt;olac-archive type="institutional" currentAsOf="2008-04-19"
+         xmlns="http://www.language-archives.org/OLAC/1.1/olac-archive"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.language-archives.org/OLAC/1.1/olac-archive
+         http://www.language-archives.org/OLAC/1.1/olac-archive.xsd"&gt;
+      &lt;archiveURL&gt;http://www.ethnologue.com/bibliography.asp&lt;/archiveURL&gt;
+      &lt;participant name="Vurnell Cobbey" title="Archives director (acting)"
+         email="archive_dallas@sil.org"/&gt;
+      &lt;participant name="Joan Spanne" title="Database administrator"
+         email="joan_spanne@sil.org"/&gt;
+      &lt;institution&gt;SIL International&lt;/institution&gt;
+      &lt;institutionURL&gt;http://www.sil.org&lt;/institutionURL&gt;
+      &lt;shortLocation&gt;Dallas, USA&lt;/shortLocation&gt;
+      &lt;location&gt;7500 W. Camp Wisdom Rd., Dallas, TX 75236, U.S.A.&lt;/location&gt;
+      &lt;synopsis&gt;The SIL International Language and Culture Archives holds 
+         works authored or edited by members of SIL International or produced by
+         a publishing unit of SIL. It houses over 13,000 books, journal articles, book
+         chapters, dissertations, and other academic papers about languages and 
+         cultures. It also has about 8,000 items written in the languages studied, 
+         such as literacy primers, books on basic education topics (health, math, 
+         social studies), story books, and translated works. The vast majority of 
+         works are published. The materials date from 1935 to the present.
+      &lt;/synopsis&gt;
+      &lt;access&gt;Links are given to publications that are directly accessible 
+         via the Internet. Recent SIL publications may be purchased from the 
+         International Academic Bookstore (Academic_Books AT sil.org), either 
+         in paper or in electronic form. Out-of-print SIL publications may be
+         obtained by special order. All materials may be viewed by visiting the 
+         Archives by appointment during normal business hours.
+      &lt;/access&gt;
+      &lt;archivalSubmissionPolicy&gt;The SIL International Language and 
+         Culture Archives accepts submissions from active and retired SIL staff 
+         in the areas of language and culture documentation and description, 
+         and language-based development. Under some circumstances, the 
+         Archives will also accept materials from former staff and persons 
+         more casually associated with SIL language work, if such materials 
+         relate to research done with the assistance of SIL or its staff, and there
+         is not a more appropriate institution able to accept and curate the 
+         materials long-term. Please address any questions to the Archives 
+         by sending email to archive_dallas AT sil.org.
+      &lt;archivalSubmissionPolicy&gt;
+   &lt;/olac-archive&gt;
+&lt;/description&gt;</eg>
+      </section>
+      <section>
+         <heading>Requirements on static repositories</heading>
+         <p>A static repository is an XML document that describes the resources made available by a particular
+            institution or individual. It is a convenient way to create a metadata repository for a relatively small
+            collection (say, up to a couple thousand records). Such a document may be created and maintained manually by
+            means of an XML editor. Alternatively, it might be generated periodically by a script that extracts
+            information from an existing database. </p>
+         <p> The OAI specification for a static repository is given in <cit>OAI-SR</cit>. The schema for validating a
+            static repository is found at:</p>
+         <blockquote>
+            <p>
+               <url>http://www.openarchives.org/OAI/2.0/static-repository.xsd</url>
+            </p>
+         </blockquote>
+         <p>In addition to being valid with respect to this schema, an OLAC static repository must also:</p>
+         <ol>
+            <li>
+               <p>Include an <tt>&lt;oai-identifier&gt;</tt> description and an
+                  <tt>&lt;olac-archive&gt;</tt> description in its <tt>&lt;Identify&gt;</tt>
+               element.</p>
+            </li>
+            <li>
+               <p>Include a <tt>&lt;participant&gt;</tt> element within the
+                  <tt>&lt;olac-archive&gt;</tt> description with an email address that exactly matches the
+                     <tt>&lt;adminEmail&gt;</tt> within the <tt>&lt;Identify&gt;</tt> element.</p>
+            </li>
+            <li>
+               <p>Contain the following element within its <tt>&lt;ListMetadataFormats&gt;</tt> element:</p>
+               <eg>&lt;oai:metadataFormat&gt;
+   &lt;oai:metadataPrefix&gt;olac&lt;/oai:metadataPrefix&gt;
+   &lt;oai:schema&gt;http://www.language-archives.org/OLAC/1.1/olac.xsd&lt;/oai:schema&gt;
+   &lt;oai:metadataNamespace&gt;http://www.language-archives.org/OLAC/1.1/&lt;/oai:metadataNamespace&gt;
+&lt;/oai:metadataFormat&gt;</eg>
+            </li>
+            <li>
+               <p>Contain a <tt>&lt;ListRecords&gt;</tt> element that specifies an attribute and value of
+                     <tt>metadataPrefix="olac"</tt> that contains at least one record, and in which every embedded
+                  record has a metadata description that conforms to the OLAC metadata standard
+                  <cit>OLAC-Metadata</cit>.</p>
+            </li>
+         </ol>
+         <p>A service for validating a repository for conformance to these requirements is found at:</p>
+         <blockquote>
+            <p>
+               <url>http://www.language-archives.org/register/register.php4</url>
+            </p>
+         </blockquote>
+         <p>An example of a complete OLAC static repository that conforms to these requirements is found at:</p>
+         <blockquote>
+            <p>
+               <url>http://www.language-archives.org/OLAC/1.1/static-repository.xml</url>
+            </p>
+         </blockquote>
+
+      </section>
+
+      <section>
+         <heading>Requirements on dynamic repositories</heading>
+         <p>A dynamic repository is harder to implement since it requires the implementation of a CGI interface for the
+            complete OAI protocol for metadata harvesting <cit>OAI-PMH</cit>. This is necessary, however, when the
+            collection is large and needs to implement flow control to keep protocol responses to a reasonable size. The
+            OAI community considers half a megabyte to be a reasonable response size. If the <tt>ListRecords</tt>
+            response for all records in a repository would substantially exceed that size, then it may be necessary to
+            implement a dynamic repository with flow control.</p>
+         <p>The implementation of a dynamic OLAC metadata repository has all the features of a minimal OAI repository
+            implementation (as defined in <cit>OAI-GRI</cit>), except that a dynamic OLAC repository need not support
+            the <tt>oai_dc</tt> metadata format. This is because the OLAC Aggregator <cit>OLACA</cit> provides that
+            service for repositories that comply with this standard; see <cit>OLAC-Display</cit> for the specification
+            of the <tt>olac</tt> to <tt>oai_dc</tt> crosswalk that is implemented by the Aggregator. In fact, unless the
+            institution has reasons of its own to function independently as an OAI data provider, OLAC recommends that a
+            dynamic repository not implement the <tt>oai_dc</tt> metadata format so that the translation of OLAC
+            metadata to the <tt>oai_dc</tt> format will be done consistently across the community.</p>
+         <p>In addition to the requirements of a minimal OAI repository implementation, a dynamic OLAC metadata
+            repository must comply with the following additional requirements. </p>
+         <ol>
+            <li>
+               <p>The <tt>Identify</tt> response must include an <tt>&lt;oai-identifier&gt;</tt> description and
+                  an <tt>&lt;olac-archive&gt;</tt> description.</p>
+            </li>
+            <li>
+               <p>Include a <tt>&lt;participant&gt;</tt> element within the
+                  <tt>&lt;olac-archive&gt;</tt> description with an email address that exactly matches the
+                     <tt>&lt;adminEmail&gt;</tt> within the <tt>Identify</tt> response.</p>
+            </li>
+            <li>
+               <p>The <tt>ListMetadataFormats</tt> response (when made with no additional parameters) must contain a
+                  specification for the <tt>olac</tt> metadata prefix that declares the schema and namespace for the
+                  version of OLAC metadata that is being used. For example,</p>
+               <eg>&lt;oai:metadataFormat&gt;
+   &lt;oai:metadataPrefix&gt;olac&lt;/oai:metadataPrefix&gt;
+   &lt;oai:schema&gt;http://www.language-archives.org/OLAC/1.1/olac.xsd&lt;/oai:schema&gt;
+   &lt;oai:metadataNamespace&gt;http://www.language-archives.org/OLAC/1.1/&lt;/oai:metadataNamespace&gt;
+&lt;/oai:metadataFormat&gt;</eg>
+            </li>
+            <li>
+               <p>When the <tt>metadataPrefix</tt> argument to <tt>ListIdentifiers</tt> is specified as <tt>olac</tt>,
+                  the request must respond with at least one record.</p>
+            </li>
+            <li>
+               <p>When the <tt>metadataPrefix</tt> argument to <tt>GetRecord</tt> is specified as <tt>olac</tt>, the
+                     <tt>&lt;oai:metadata&gt;</tt> element of the response must either be empty (when no OLAC
+                  metadata is available for the given identifier) or it must contain an
+                  <tt>&lt;olac:olac&gt;</tt> element that conforms to some version of the XML schema for OLAC
+                  metadata <cit>OLAC-Metadata</cit>. That element must contain an <tt>xmlns</tt> attribute specifying
+                  the URI that identifies the namespace for the version of the OLAC metadata schema that is being
+               used.</p>
+            </li>
+            <li>
+               <p>When the <tt>metadataPrefix</tt> argument to <tt>ListRecords</tt> is specified as <tt>olac</tt>, every
+                     <tt>&lt;oai:metadata&gt;</tt> element in the response must contain an
+                     <tt>&lt;olac:olac&gt;</tt> element that conforms to some version of the XML schema for OLAC
+                  metadata <cit>OLAC-Metadata</cit>. Each such element must contain an <tt>xmlns</tt> attribute
+                  specifying the URI that identifies the namespace for the version of the metadata schema that is being
+                  used.</p>
+            </li>
+         </ol>
+
+      </section>
+        <section>
+            <heading>Guidelines concerning relevance and granularity</heading>
+            <p>When a request is made to register a metadata
+                repository with OLAC, it is first tested for
+                conformance to the requirements listed in the sections
+                above. When these are met, the registration request is
+                reviewed by the OLAC Council (see
+                <cit>OLAC-Process</cit>) before final acceptance. The
+                role of the Council in the registration process is to
+                ensure that all registered archives meet the following
+                guidelines concerning relevance and granularity.</p>
+            <p>Regarding relevance, in order to be eligible for
+                registration as an OLAC archive:</p>
+            <ul>
+                <li>
+                    <p>The metadata repository must catalog language
+                        resources.</p>
+                </li>
+            </ul>
+            <p>Regarding the granularity of repositories, a repository
+                is meant to catalog all the holdings of an archive,
+                rather than having separate repositories for each of
+                the collections within an archive. Thus,</p>
+            <ul>
+                <li>
+                    <p>A given institution or individual should
+                        typically publish the metadata for all its
+                        resources in a single repository. </p>
+                </li>
+                <li>
+                    <p>An exception is appropriate when distinct
+                        collections are managed in separate databases
+                        and because of this require distinct software
+                        for implementing separate repositories.</p>
+                </li>
+            </ul>
+            <p>Regarding the granularity of the records in a
+                repository, the basic guideline is this:</p>
+            <ul>
+                <li>
+                    <p>A metadata repository should treat resources
+                        with a single provenance as constituting a single
+                        unit with respect to OLAC metadata and should,
+                        therefore, describe them within a single
+                        record.</p>
+                </li>
+            </ul>
+            <p>For published resources, the publication unit typically
+                constitutes the appropriate unit for the OLAC metadata
+                record. For
+                unpublished papers presenting findings of research,
+                these closely parallel typical published works, and
+                can be treated at a comparable level in an OLAC
+                metadata record. For primary
+                source materials (<i>e.g.,</i> recordings,
+                transcriptions, annotations, notes, data sets), the
+                typical practice of archivists is to gather such
+                materials into collections based on shared
+                provenance&#x2014;this is, based on having a common origin and
+                history. These collections are then the
+                primary units for description  in  OLAC
+                metadata records.</p>
+            <p>See Section 5 of the OLAC Metadata Usage Guidelines
+                    <cit>OLAC-Usage</cit>, for a more in-depth
+                discussion of the principle of provenance as applied
+                to collections and metadata within the OLAC
+            context.</p>
+        </section>
+
+
+
+   </body>
+   <references>
+      <ref abbrev="OAI-PMH">The Open Archives Initiative Protocol for Metadata Harvesting, Version 2.0 (2002-06-14).
+            <br/>&lt;<url>http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm</url>&gt;</ref>
+      <ref abbrev="OAI-SR">Specification for an OAI Static Repository and an OAI Static Repository
+            Gateway.<br/>&lt;<url>http://www.openarchives.org/OAI/2.0/guidelines-static-repository.htm</url>&gt;</ref>
+      <ref abbrev="OAI-Ids">Specification and XML Schema for the OAI Identifier Format, Document Version 2002/06/21.
+            <br/>&lt;<url>http://www.openarchives.org/OAI/2.0/guidelines-oai-identifier.htm</url>&gt;</ref>
+      <ref abbrev="OAI-GRI">Guidelines for Repository Implementers, Document Version 2002/06/09.
+            <br/>&lt;<url>http://www.openarchives.org/OAI/2.0/guidelines-repository.htm</url>&gt;</ref>
+      <ref abbrev="OLAC-Metadata">OLAC
+         Metadata.<br/>&lt;<url>http://www.language-archives.org/OLAC/metadata.html</url>&gt;</ref>
+      <ref abbrev="OLAC-Process">OLAC
+         Process.<br/>&lt;<url>http://www.language-archives.org/OLAC/process.html</url>&gt;</ref>
+      <ref abbrev="OLAC-Usage">OLAC
+         Metadata Usage Guidelines.<br/>&lt;<url>http://www.language-archives.org/NOTE/usage.html</url>&gt;</ref>
+      <ref abbrev="OLACA">OLAC
+         Aggregator.<br/>&lt;<url>http://www.language-archives.org/cgi-bin/olaca.pl</url>&gt;</ref>
+      <ref abbrev="OLAC-Display">Specifications for an OLAC metadata display format and an OLAC-to-OAI_DC
+            crosswalk.<br/>&lt;<url>http://www.language-archives.org/NOTE/olac_display.html</url>&gt;</ref>
+      <ref abbrev="W3CDTF">Date and Time Formats, W3C
+         Note.<br/>&lt;<url>http://www.w3.org/TR/NOTE-datetime</url>&gt;</ref>
+   </references>
+</OLAC_doc>

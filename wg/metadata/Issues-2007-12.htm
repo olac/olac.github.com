@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad//DTD HoTMetaL PRO 5.0::19980907::extensions to HTML 4.0//EN" "hmpro5.dtd">
+ 
+<HTML>
+ 
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252"> 
+<META NAME="Generator" CONTENT="Microsoft Word 11 (filtered)"> 
+<TITLE>This is the title</TITLE>
+</HEAD>
+ 
+<BODY LANG="EN-US" LINK="blue" VLINK="purple">
+<DIV CLASS="Section1">
+<P><I>OLAC Metadata Working Group</I></P>
+<H1>Dec 2007 review of three draft documents</H1>
+<P>The following documents were reviewed:</P>
+<UL>
+<LI>OLAC Metadata Usage Guidelines<BR>
+<A
+ HREF="http://www.language-archives.org/NOTE/usage-20071115.html">http://www.language-archives.org/NOTE/usage-20071115.html</A>
+</LI>
+<LI>Best Practice Recommendations for Language Resource Description<BR>
+<A
+ HREF="http://www.language-archives.org/REC/bpr-20071115.html">http://www.language-archives.org/REC/bpr-20071115.html</A>
+</LI>
+<LI>OLAC Metadata Quality Metrics<BR>
+<A
+ HREF="http://www.language-archives.org/NOTE/metrics-20071117.html">http://www.language-archives.org/NOTE/metrics-20071117.html</A>
+</LI>
+</UL>
+<P>This document compiles the full thread of discussion on each issue raised in
+feedback (see
+<A
+ HREF="http://listserv.linguistlist.org/cgi-bin/wa?A1=ind0712&amp;L=metadata">METADATA
+archives &#150; December 2007</A> for original messages). It then reports, on
+each issue, the conclusion of the document editors on changes to be made in the
+next version of the documents.</P>
+<P>Issues raised during the review:</P>
+<UL>
+<LI> <A HREF="#Creator">Creator vs. Contributor</A> [<A
+HREF="#ConcluCreator">Conclusion</A>]</LI>
+<LI> <A HREF="#Relation">Relation</A> [<A
+HREF="#ConcluRelation">Conclusion</A>]</LI>
+   <LI> <A HREF="#Enhancements">Enhancements to Linguistic Type</A> [<A
+HREF="#ConcluEnhancements">Conclusion</A>]</LI>
+<LI> <A HREF="#Granularity">Granularity Recommendation</A> [<A
+HREF="#ConcluGranularity">Conclusion</A>]</LI>
+<LI> <A HREF="#SubjectLanguage">Element Content of Subject Language</A> [<A
+HREF="#ConcluSubjectLanguage">Conclusion</A>]</LI>
+<LI> <A HREF="#SubjLginLangAttribute">Reference to Subject Language in Lang
+Attribute</A> [<A HREF="#ConcluSubjLginLangAttribute">Conclusion</A>]</LI>
+<LI> <A HREF="#Coverage">Coverage</A> [<A
+HREF="#ConcluCoverage">Conclusion</A>]</LI>
+<LI> <A HREF="#Place">Proposal for Place Element</A> [<A
+HREF="#ConcluPlace">Conclusion</A>]</LI>
+<LI> <A HREF="#Typos">Typos</A></LI>
+</UL>
+<H2>1. <A NAME="Creator"></A>Creator vs. Contributor </H2>
+<P>If we have roles already why do we separate out contributor and creator and
+not just list them as we do all other roles? Is this a way of enforcing that
+each item must have a creator and contributor? (Nicholas Thieberger 4-Dec-2007)
+</P>
+<P>I would like to add my support&#133; If use of Creator is deprecated, as the
+guidelines imply, why keep mentioning it? Let's drop it and make sure the
+examples for Contributor include obvious 'creators', like 'author' and
+'performer'. (Heidi Johnson 5-Dec-2007)</P>
+<P>I too am still confused by the distinction between creator and contributor.
+Our db distinguishes roles, so we have no easy way to map these. We instead map
+all of them to contributor, as in the alternate usage schema. However, in terms
+of resource discovery, the is probably not an issue. (Gary Holton 5-Dec-2007)
+</P>
+<P>[I agree] with Heidi on deprecating &quot;creator&quot; -- at least that is
+what we have done at LACITO. Among &quot;contributors&quot; our documents have
+a &quot;depositor&quot; and usually a &quot;researcher&quot; (often the same
+person) and a &quot;speaker&quot;, etc. (Boyd Michailovsky 10-Dec-2007)</P>
+<P><A NAME="ConcluCreator"></A><I>Conclusion: Creator vs. Contributor</I></P>
+<P>We seem to have a consensus that the Creator vs. Contributor distinction is
+confusing and that our usage notes need to do better at explaining. The DCMI
+has also run into this problem. They have not deprecated Creator, so in order
+to maintain compatibility with the mainstream, we don't think that we should
+either.&#160; However, they have come to the conclusion that Creator is a kind
+of Contributor (as indicated in the latest version of the
+<A HREF="http://dublincore.org/documents/dcmi-terms/">DCMI Metadata Terms</A>,
+issued 2008-01-14) and that a vocabulary to refine roles is applicable only to
+Contributor (as indicated in the
+<A HREF="http://dublincore.org/documents/library-application-profile/">Library
+Application Profile</A>). Our usage notes have therefore been revised to permit
+<i>olac:role</i> only on Contributor and to explain that Creator should be used only when
+   the role vocabulary has no suitable more specific role.  The OLAC-to-Simple-DC
+   crosswalk in the OLAC Aggregator will be updated to map Contributor roles like <i>author</i> to a Creator
+   element (so as to maintain interoperability with more general metadata standards like
+ the
+<A
+ HREF="http://www.ukoln.ac.uk/repositories/digirep/index/Eprints_Application_Profile">Eprints
+Application Profile</A>).</P>
+<H2>2. <A NAME="Relation"></A>Relation</H2>
+<P>While a transcript could be considered under some of these refinements
+(<I>requires</I>, <I>haspart</I>, <I>hasversion</I>), none of them is specific
+enough. As discussed on the Olac-Implementers list in December 2005, could OLAC
+extend its metadata to include the following relation pair: </P>
+<P STYLE="margin-left:.5in;text-autospace:none"> hasTranscript <BR>
+IsTranscriptOf </P>
+<P> (Nicholas Thieberger 4-Dec-2007) </P>
+<P>Let me second Nick's suggestion to add <I>isTranscriptOf</I> and
+<I>hasTranscript</I> for Relation. I've been puzzled by their absence for quite
+some time. I imagine that there may be a few others relations linguists might
+ultimately need, but these two seem like pretty basic and necessary additions
+to me right now. (Jeff Good 4-Dec-2007)</P>
+<P>I third the vote to add <I>hasTranscript</I> and <I>isTranscriptOf</I>. I
+doubt most linguists would regard a transcription as a format variant. (Heidi
+Johnson 5-Dec-2007)</P>
+<P>I want to 'fourth' the recommendation that we add <I>hasTranscript</I> and
+<I>isTranscriptOf</I>. (Helen Aristar-Dry 5-Dec-2007) </P>
+<P>I agree with Nick et seqq. on &quot;hasTranscript&quot; and
+&quot;isTranscriptOf&quot;. (Boyd Michailovsky 10-Dec-2007)</P>
+<P>Also, what relation should be used for annotation files, like interlinear
+text? It's not a format variant or a version. The current list of relations was
+taken directly from <I>dcterms</I> without, to the best of my recollection, any
+review or revision by us. I think we should take this opportunity to revisit
+the whole list. We should at least have straightforward terms to characterize
+relations among components in a typical language documentation bundle:
+recording, annotation, photograph. (Heidi Johnson 5-Dec-2007)</P>
+<P><I> hasTranscript</I> and <I>isTranscriptOf</I> are definitely needed. I use
+these for all types of annotations, whether IT or not. That would include
+transcriber, shoebox, and ELAN. Is that not BP? This is the large view of
+annotation, where plain-text transcription as simply one point on a continuum.
+Perhaps <I>hasAnnotation</I> would be more appropriate? Either way, we
+certainly want to distinguish the transcript/annotation from the resource
+itself. As Heidi points out, the transcription is not just a format variant.
+Indeed, a single resource may have multiple different transcripts by different
+creators (er .. contributors). (Gary Holton 5-Dec-2007)</P>
+<P><A NAME="ConcluRelation"></A><I>Conclusion: Relation</I></P>
+<P>Agreed that we need the <I>hasTranscript</I> and <I>isTranscriptOf </I>pair.
+The trick is how to implement it.&#160; Since these are refinements, we would
+be adding to the set of markup elements defined by the DC schema for expressing
+qualified Dublin Core in XML (which is what we are following).&#160; To this
+point, all of our metadata extensions have been as encoding schemes that are
+used in attribute values.&#160; We therefore could not implement this without a
+significant departure from the constraints we have followed to this point. The
+DCMI is working on a
+<A
+ HREF="http://dublincore.org/architecturewiki/DCXMLRevision/DCXMLFGuidelines/2006-09-18">major
+revision of their guidelines for expressing qualified DC in XML</A> which will
+provide an easy way for us to add refinements. Thus we want to hold off and
+handle this kind of change in a future round of more radical changes in which
+we would align with the DCMI&#146;s new guidelines after they come out. We are
+thinking of that as a version 2.0 revision of OLAC metadata. In the meantime,
+our immediate goal is a version 1.1 revision which will have minimal
+disruption.</P>
+<H2>3. <A NAME="Enhancements"></A>Enhancements to Linguistic Type</H2>
+<P>Is this the right time to suggest an enhancement of OLAC-linguistic-type to
+include more fine-grained details, e.g. Extensive dictionary/ large wordlist/
+wordlist Grammatical description/ grammar sketch Making this distinction will
+help as we may be looking to establish a documentation index from these
+metadata, in order to know that language XXX has YYY amount of information
+available about it. (Nicholas Thieberger 4-Dec-2007) </P>
+<P>I'm glad he remembered to bring this up, because it's very important. We
+should do whatever we can to support the development of a documentation index;
+that could turn out to be the single most useful thing OLAC has ever done.
+(Heidi Johnson 5-Dec-2007)</P>
+   <P><A NAME="ConcluEnhancements"></A><I>Conclusion: Enhancements to Linguistic Type</I></P>
+<P>Agreed. This will take the form of a new version of the Recommendation on
+<A HREF="http://www.language-archives.org/REC/type.html">OLAC Linguistic Data
+Type Vocabulary</A>. That is too extensive a change for version 1.1, and so we
+are listing that among the goals of version 2.0. </P>
+<H2>4. <A NAME="Granularity"></A>Granularity Recommendation</H2>
+<P>I would like to see recommendation on the so-called &quot;granularity&quot;
+issue. That is, from OLAC's perspective, what is the appropriate unit on which
+a metadata record should be based. From Rosetta's perspective (whose OAI server
+has been defunct for a while, and for that my apologies), for example, our own
+worldview is that our database consists of language nodes with resources
+attached. However, I think the general OLAC worldview is that the world
+consists of linguistic resources. Rosetta can serve metadata on our worldview
+or OLAC's, and I don't have any strong feelings about this. But, I would like
+to see an OLAC recommendation on this topic. (To bring up another example, is
+an IMDI session the appropriate thing to expose to OLAC? Or should it be the
+more fine-grained components of the session? I imagine the corpus is too big.)
+(Jeff Good 4-Dec-2007)</P>
+<P>I would like to see that, too. There was talk, once upon a time, of
+returning data at some kind of 'collection' level, but I don't remember any
+resolution on this issue. As AILLA's collection grows, I can clearly see that
+it would be more useful to searchers to retrieve summaries of collections than
+scores of repetitive results for individual files. (Heidi Johnson 5-Dec-2007) 
+</P>
+<P>There are three levels: the file, the bundle (IMDI session), and the
+collection (e.g. the Joel Sherzer Kuna language collection.) Can't there be a
+way for users or archives to specify which level they want to expose? (Heidi
+Johnson 5-Dec-2007)</P>
+<P>I second Jeff's comments--especially the suggestion that the usage document
+discuss suggested granularity.&#160; We have found that this is the most
+difficult decision that anyone has to make (whether archive or individual) when
+attempting to describe their collection.&#160; We tell individual linguists
+(who don't want to write too many metadata descriptions) to simply list a
+corpus of documentation treating a single language as a single resource.&#160;
+On the other hand, this procedure leaves IMDI listed as having only 15 (?)
+resources.&#160; Guidance would be helpful. (Helen Aristar-Dry 5-Dec-2007)</P>
+<P>Regarding the granularity issue, I seem to recall us batting this around
+quite a bit in early OLAC discussions, with no general consensus. Archivists
+relentlessly complain to me that we language folks are too granular. Some have
+suggested that there should be just 20 items in the ANLC archive -- one for
+each language! Well, that's a bit extreme, but collections are useful. ANLC
+maintains a subcollection field which is useful for searching. This is often a
+donor, say Irene Reed or Knut Bergsland. Materials within those subcollections
+also show up in subject.language searches, of course, but often the
+subcollection is of interest. Indeed, this is the classic type of organization
+for traditional archives. Other subcollections identify funded projects, or
+particular speakers.&#160; Maybe this is an archive-internal issue and not one
+which is relevant to resource discovery. However, as Heidi points out, it would
+be useful OLAC service providers to be able to offer more or less granular
+search opportunities, so that users could have the option of not having to wade
+through hundreds of very closely related records. (Gary Holton 5-Dec-2007)</P>
+<P>Certainly it would be nice to be able to access metadata by collection.
+(Boyd Michailovsky 10-December-2007)</P>
+<P>The granularity issue is addressed in section 6, &#147;Guidelines concerning
+relevance and granularity&#148; of our Standard,
+<A HREF="http://www.language-archives.org/OLAC/repositories.html">OLAC
+Repositories</A>. It points out that too fine a level of granularity degrades
+the signal-to-noise ratio in searching and that this is legitimate grounds for
+rejecting the registration application of a repository. It specifically says
+that creating a separate record for each file that makes up the documentation
+of a single speech event is not appropriate.&#160; Going to the other extreme
+of having a single record to describe an entire collection is in fact
+considered good practice at the resource discovery level, since the thing
+people will be using OLAC search for is primarily to discover the existence of
+the corpus, rather than to select individual items from within the
+corpus.&#160; The latter is typically done after entering the corpus. (Gary
+Simons 14-Dec-2007)</P>
+<P>I agree with the intuition that 500 [records for individual files in a
+corpus] is too many, but one seems like too few. Under a scenario where I'm
+looking for anything on language X, this might seem reasonable but what if, for
+example, I'm looking for extensive materials from some particular genre. Then,
+I would want those 500 texts broken down by genre and I would want to have them
+all bunched together. I don't know what the right balance is here, but this
+strikes me as shifting the balance too much towards the language-based search.
+But, I wonder what people who run big archives think about this. ... Something
+I would find useful here is specific recommendations for mapping records using
+the IMDI session-corpus model to the OLAC model. </P>
+<P>... To sum up, I wonder if somewhere there shouldn't be (i) an enumeration
+of representative example search scenarios for the data and service provider to
+consult as a kind of &quot;cheat sheet&quot; guiding them as to how to approach
+granularity, (ii) a discussion of what the canonical service provider is in the
+OLAC context, and (iii) a discussion of what kinds of records a service
+provider should expect from a data provider. (Jeff Good 16-Dec-2007)</P>
+<P><A NAME="ConcluGranularity"></A><I>Conclusion: Granularity
+Recommendation</I></P>
+<P>This issue is clearly relevant for OLAC Metadata Usage Guidelines. We have
+added a new section to the document on &#147;<A
+HREF="http://www.language-archives.org/NOTE/usage.html#Granularity%20of%20resources">Granularity
+of Resources</A>.&#148;</P>
+<H2>5. <A NAME="SubjectLanguage"></A>Element Content of Subject Language</H2>
+<P>Should we try to come up with some way of specifying how to interpret the
+element content of Subject Language when it's there? Right now, two use cases
+are given: (i) dialect and (ii) alternate name. Since these two cases are so
+common and have very different semantics, shouldn't there be an (optional) way
+of specifying what that element content means? It shouldn't be too hard to come
+up with a way of expressing this. (Jeff Good 4-Dec-2007) </P>
+<P>I would like to add my support&#133; (Heidi Johnson 5-Dec-2007) </P>
+<P STYLE="margin-left:.5in;text-autospace:none"> &quot;For a work of literature
+or other monolingual document aimed at the speakers of a particular language,
+use Language to identify that language. ... For an annotated text, use Language
+for the language in which the annotations are made; use Subject.language for
+the language of the base text that is being annotated.&quot;</P>
+<P>This is clear.&#160; But, concerning text documents (and not text embedded
+in a language description), it seems odd to list an annotated text under the
+language of annotation and the same text unannotated under its own language.
+Could this cause users searching across OLAC and other documents to fail to
+find texts in a language they are interested in? Would it not be better to
+explicitly distinguish annotation language from source text language and to
+code both right here under DC &quot;Language&quot;, which is the first place a
+user would look?&#160; We can maintain our convention (professional
+deformation?) of&#160; considering the &quot;Subject&quot; -- specifically
+&quot;Subject.language&quot; -- of a text to be the language it is in -- after
+all, OLAC is primarily for linguists, and languages are our subject.&#160; (I
+recognize that this means having the same information in two places for this
+type of resource. This is bad, but maybe not too bad if it improves access to
+our documents.) (Boyd Michailovsky 10-Dec-2007)</P>
+<P>We want to show people how to add narrowing or clarifying notes about
+specific language varieties. I get this sort of note often at AILLA - people
+will pick the closest ISO code, but add a note explaining how the code is quite
+right. We all know the codes need to be revised, but that will take a long
+time. It is good for people to make these notes a part of their OLAC records,
+though, both to encourage their colleagues to think about them and so that code
+revisers can find them. Maybe something like this:</P>
+<BLOCKQUOTE><PRE>
+&#160;&#160;&lt;dc:subject xsi:type=&quot;olac:ISO639-3&quot; olac:code=&quot;zab&quot;&gt;
+&#160;&#160;&#160;&#160; Tlacolula de Matamoros Zapotec. Ethnologue designation: San Juan Guelav&iacute;a 
+&#160;&#160;&#160;&#160; Zapotec (zab), but this includes many varieties, including Tlacolula de 
+&#160;&#160;&#160;&#160; Matamoros Zapotec. Also known as: Valley Zapotec, Tlacolula Valley Zapotec, 
+&#160;&#160;&#160;&#160; but these names also include other language varieties.
+&#160;&#160;&lt;/dc:subject&gt;</PRE>
+</BLOCKQUOTE>
+<P>The note is one that Brook Danielle Lillehaugen, one of my model depositors,
+pastes into every metadata form. (Heidi Johnson 8-Jan-2008) </P>
+<P><A NAME="ConcluSubjectLanguage"></A><I>Conclusion: Element Content of
+Subject Language</I></P>
+<P>There are two different issues here.&#160; The first regards clarifying the nature of
+   the text content. The first comment points out that there are two main uses of the text
+   content (for an alternate
+   name or for a variety name) and asks if there should be a way to distinguish these
+   two cases. This can be done by means of the wording of the text content; the
+   most straightforward approach is to add the word "dialect" after the name in the case
+   of a variety name.  An example like this is given in the document.
+   Other cases of indicating a variety, such as "Women's speech,"
+   don't involve a name at all and so do not pose a problem.  Still other cases of using
+   the content (like the note that Heidi Johnson gives above as an example)
+   can include multiple names, including both alternate names and variety
+   names.
+</P>
+<P>The second issue has to do with when to identify a language with Language versus
+    with Subject. The usage note for Language has been substantially expanded to clarify
+    various cases. </P>
+<H2>6. <A NAME="SubjLginLangAttribute"></A>Reference to Subject Language in
+xml:lang Attribute</H2>
+<P>In the opening discussion of practices that apply to all elements, the
+<I>xml:lang</I> attribute is discussed without any reference to Subject
+Language.&#160; I think it wouldn't be a bad idea to distinguish the two
+immediately, if only in a parentheses. (Helen Aristar-Dry 5-Dec-2007) </P>
+<P><A NAME="ConcluSubjLginLangAttribute"></A><I>Conclusion: Reference to
+Subject Language in Lang Attribute</I></P>
+<P>Agreed.&#160; Both Language and Subject are now mentioned in the discussion
+of <I>xml:lang</I> in order to distinguish the three places in which language
+codes can be used.</P>
+<H2>7. <A NAME="Coverage"></A>Coverage</H2>
+<P>I was pleased to see the emphasis on geographical coverage in the usage
+notes.&#160; But--from working with LL-MAP, I have several questions with
+regard to the following paragraph under 'Coverage': </P>
+<P STYLE="margin-left:.5in;text-autospace:none"> &quot;In the OLAC context,
+service providers already have a database that maps languages to the countries
+in which they are spoken [OLAC-Language]. Coverage should not be used to
+duplicate this information; rather service providers will support searches
+concerning languages spoken in a given country by referring to the language
+database. Coverage should be used geographically only when the language
+involved has a wide distribution and the resource focuses on its use in a
+particular region or geopolitical jurisdiction, or conversely, when the
+resource deals with a topic of study in which the region itself is in focus,
+e.g., multilingualism, language polilcy, languages in contact, in a given
+locale.&quot; </P>
+<P>Isn't the phrasing of this recommendation rather too restrictive?&#160; It
+seems to enforce use of the Ethnologue/GMI polygons to identify language
+locales and to discourage collection of any other language locale data. LL (and
+LL-MAP) do in fact use these polygons and language/country match-ups.&#160; But
+do we want the OLAC usage guidelines to suggest that this is what all service
+providers should do?&#160; What would be the consequences of such
+standardization?&#160; And even if service providers do want to construct their
+services around a standard set of language locales, what would be the harm in
+collecting more specific information from archives and individuals?&#160;
+Perhaps we need to discuss this before deciding one way or another. (Helen
+Aristar-Dry 5-Dec-2007)</P>
+<P>I agree with Helen's reservations about relying on Ethnologue for coverage
+information on specific documents. (Boyd Michailovsky 10-Dec-2007) </P>
+<P>The examples in this section don't seem parallel; the second two leave out
+the Subject element.&#160; A small point, but in a usage document the examples
+should probably be as clear and complete as possible. (Helen Aristar-Dry
+5-Dec-2007)</P>
+<P>A good example illustrated the difference between coverage and the place
+created is a map of Mexico (what is covered) that was produced in California
+(not coverage). (Heidi Johnson 8-Jan-2008)</P>
+<P><A NAME="ConcluCoverage"></A><I>Conclusion: Coverage</I></P>
+<P>We agree with Helen&#146;s comments and have removed the mention of service
+providers making inferences based on known language-to-country mappings.&#160;
+We have also expanded the examples to include more elements.</P>
+<H2>8. <A NAME="Place"></A>Proposal for Place Element</H2>
+<P>There is no obvious way to specify the place where a resource was created.
+People have told me to use Coverage for this, but first, it's a completely
+non-transparent interpretation of the term, and second, the guidelines
+specifically state that Coverage pertains to the intellectual content of the
+resource:</P>
+<P STYLE="margin-left:.5in;text-autospace:none"> &quot;Definition: The spatial
+or temporal topic of the resource, the spatial applicability of the resource,
+or the jurisdiction under which the resource is relevant.&quot; </P>
+<P>We should either add a Place element that is parallel in every way to the
+Date element, or change the definition of Coverage to include this
+counter-intuitive usage with supporting examples. (Heidi Johnson 5-Dec-2007) 
+</P>
+<P>This gap exposes the publication bias of Dublin Core. Nobody cares where a
+journal article is written, but we do very much care where field recordings are
+made. Collecting Zapotec vocabulary in Los Angeles is quite different from
+collecting it in Oaxaca. If we're going to recommend OLAC elements as an
+adequate basic-level documentation of resources, we have to include all the
+essential data points. (Heidi Johnson 5-Dec-2007)</P>
+<P>A side-question:&#160; What about the collection point of a piece of
+documentation?&#160; This isn't &quot;coverage&quot; in the sense of what the
+subject covers, but it's something we would very much want to know, and
+sometimes the distinction between subject and collection point blurs (e.g., for
+Arienne's collection of Mon La songs, where the collection point is part of a
+map layer whose 'subject' is places where this ceremonial type persists).&#160;
+Is there a place in the OLAC metadata to record the geographic coordinates of
+the place where a song was collected?&#160; Should it be mentioned here, if
+only as a parentheses?&#160; (I think that cross referencing to emphasize
+distinctions is helpful to the user, cf. the reference to &quot;Date&quot; as
+distinguished from temporal coverage.) (Helen Aristar-Dry 5-Dec-2007) </P>
+<P>Interesting that we both thought of the collection point problem:&#160;
+point of collection doesn't seem to go in 'Coverage' but we do want to know
+it.&#160; Where should it be indicated? (Helen Aristar-Dry 5-Dec-2007)</P>
+<P>I also want to second Heidi's point about Location. We currently map this to
+OLAC Description, but that's not a very satisfactory solution. Location can be
+extremely important in sorting out issues such as dialect variation. But an
+even more important use of this element is for distinguishing displaced
+language resources, as Heidi points out about Zapotec in Los Angeles. (Although
+perhaps Zapotec in Paris would be clearer -- there may actually be some Zapotec
+speaking communities in LA.) The point is that we need a way to exclude these
+displaced field methods recordings from the search. Coverage does not work
+because Heidi's Zapotec example still has Oaxaca as its Coverage. (Gary Holton
+5-Dec-2007)</P>
+<P>I agree with Heidi that place of recording is important, and that it clearly
+does not belong in the coverage category as defined. But I would keep
+&quot;coverage&quot; as it is. A &quot;Place&quot; category parallel to the
+&quot;Date&quot; category would work, but it would mean a new DC
+category.&#160; That leaves &quot;Description&quot; (Gary).&#160; This is
+currently used for free-text information, but could it be stretched to include
+an OLAC extension for place of recording? (Boyd Michailovsky 10-Dec-2007) </P>
+<P>As the DC definitions say, Coverage is for &quot;the spatial or temporal
+topic of what the resource.&quot;.&#160; Thus, when the value is a geocode
+(like the geospatial coordinates), it is saying that the resource is
+&#147;about&#148; (in some sense) that place on earth.&#160; When the resource
+is an example of how they talk in that place, then I think that using a geocode
+as the value of Coverage is completely appropriate.&#160; When the place where
+the resource was collected also happens to be the place where people talk that
+way, then the Coverage coincides with the place of collection, and since this
+is the default case, it does not seem necessary to specifically talk about
+point of collection in the descriptive metadata.</P>
+<P>But consider the exceptional case, in which a lifelong resident of X, where
+an endangered language is spoken, flies to a far away place Y where recordings
+are made of that language.&#160; The Coverage should still be reported as
+location X, but in this case the collection point is location Y .&#160; People
+who want to find the resource are going to be looking for X, not Y, which is
+why Coverage should be X.&#160; If the cataloger felt it was necessary to say
+something about the circumstances of the recording event (including where it
+took place).&#160; That would fall under the umbrella of the Description
+element.&#160; But for the purpose of resource discovery, the record would not
+even need to mention the collection point.&#160; It would be sufficient for
+this fact to be documented inside the resource, such as in an introduction to
+the corpus, in much the same way that an author uses the Preface to explain
+where the book was written. Thus, I think the answer for this issue is to
+include some discussion like the above in the usage notes for Coverage. (Gary
+Simons 14-Dec-2007)</P>
+<P>There needs to be an example of using the Description field for the Place
+Created data, in the cases where that's relevant (e.g. recordings.) Or could we
+get an extension of Description for this? (Heidi Johnson 8-Jan-2008) </P>
+<P><A NAME="ConcluPlace"></A><I>Conclusion: Proposal for Place Element</I></P>
+<P>We have added to the usage notes for Coverage to explain how it relates to
+point of collection, and how Description can be used to add location-related
+details that do not relate to spatial topic.</P>
+<H1>9. <A NAME="Typos"></A>Typos</H1>
+<P>'informaiton' (Nicholas Thieberger 4-Dec-2007) </P>
+</DIV>
+</BODY>
+</HTML>
+ 

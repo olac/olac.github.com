@@ -1,0 +1,95 @@
+--------------------------------------------------------------------
+
+                         OLAC Archive Review Form
+
+--------------------------------------------------------------------
+
+Date due:  22 November 2002
+
+Return to: joan_spanne@sil.org, olac-admin@language-archives.org
+
+Instructions:
+
+Find the archives you are reviewing in the web page at
+http://www.language-archives.org/events/olac02/reviews.html
+For each of them, follow the "repository" link.
+
+To answer question 1, review the archive description information
+that is presented (out of the Identify response) on this page. The 
+standard that describes these fields of information is section 3 of:
+   http://www.language-archives.org/OLAC/protocol.html
+
+To answer questions 2 through 5, click on the Explore link at the
+end of the archive description.  In the Display options on the 
+Repository Explorer, click "Both". Then click the List Identifiers
+link to generate a list of records. Randomly choose 5 to 8 records
+to inspect. 
+
+To inspect a record, click on "[display metadata formats]". Find 
+"Prefix=[olac]" in the returned list of formats, and click on
+the "display record" link for the Olac format. On the left you will
+see a parsed form of the record. Scroll to the right to see the 
+actual XML encoding. When you are done looking at this record, hit
+the Back button on your browser twice to go back to the record list.
+
+If, instead of getting a display of the record, you get a validation
+error report, make note of the error under question 2 on the form.
+Then hit the Back button on your browser twice to go back to the 
+record list.  Scroll to the bottom of the page and click the "None" 
+option under Schema Validation.  Repeat the instructions in the
+preceding paragraph for inspecting a record.
+
+For questions 2 and 3 the standard to compare the records against is:
+   http://www.language-archives.org/OLAC/olacms.html
+For question 3, the main guidelines are summarized in:
+   http://www.language-archives.org/OLAC/olacms_recs.html
+   
+To complete your review, save the template below to a file named with the
+repository id (the word preceding the archive name on the review
+assignments page) plus your surname, e.g. "AILLA-Cheng", then mail the
+completed form to the addresses listed above.
+
+Thanks,
+Joan Spanne, Gary Simons, and Steven Bird.
+
+--------------------------------------------------------------------
+
+
+Archive being reviewed:
+
+Date of review:
+
+
+1. Is the archive description information satisfactory?  Are any
+   fields of information missing?  Can you suggest any improvements?
+
+
+
+2. Do you observe any errors in the use of metadata elements (for
+   instance, there is a validation error, or the wrong element was 
+   chosen for a particular kind of information)?
+
+
+
+3. In what ways do the metadata descriptions fall short of what the 
+   OLAC metadata guidelines recommend as best practice?
+
+
+
+4. Did you observe anything else that could be improved?
+
+
+
+5. Did you observe anything about the practices followed in these
+   metadata descriptions that stands out as a good example that
+   others should take note of? 
+
+
+
+6. What feedback do you have for the OLAC guidelines based on this
+   review? Is there a best practice recommendation you would suggest
+   be added? Was there something in an OLAC document you could not
+   understand or did not agree with?
+
+
+

@@ -1,0 +1,319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE> OLAC Protocol for Metadata Harvesting</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content=" OLAC Protocol for Metadata Harvesting">
+<meta name="Creator" content="Gary Simons, SIL International (mailto:gary_simons@sil.org)Steven Bird, University of Melbourne and University of Pennsylvania  (mailto:sb@csse.unimelb.edu.au)">
+<meta name="Description" content=" &#10;        This document defines the protocol OLAC service providers use to harvest metadata from OLAC data providers. It  defines the responses that OLAC data providers must make to the requests of the protocol. &#10;      ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20021209">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1> OLAC Protocol for Metadata Harvesting</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2002-12-09</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Former Proposed Standard. </i>This document was withdrawn from the OLAC document process.</td>
+</tr>
+<tr valign="top">
+<th align="left" width="100">Superseded&nbsp;by:</th><td><a href="http://www.language-archives.org/OLAC/repositories-20021211.html">http://www.language-archives.org/OLAC/repositories-20021211.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/OLAC/protocol-20021209.html">http://www.language-archives.org/OLAC/protocol-20021209.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td><a href="http://www.language-archives.org/OLAC/protocol-20011210.html">http://www.language-archives.org/OLAC/protocol-20011210.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>This document defines the protocol OLAC service providers use to harvest metadata from OLAC data providers. It  defines the responses that OLAC data providers must make to the requests of the protocol.</p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>Gary Simons, SIL International (<a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>)<br>Steven Bird, University of Melbourne and University of Pennsylvania  (<a href="mailto:sb@csse.unimelb.edu.au">mailto:sb@csse.unimelb.edu.au</a>)</editors>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Changes since previous version:</th><td>
+<p>The following changes were introduced to effect the upgrade from the  development phase of OLAC to the operational phase :</p>
+<ol>
+<li>
+<p>The base OAI protocol is upgraded from version 1.1 to 2.0.</p>
+</li>
+<li>
+<p>The OLAC schemas and namespace identifiers are upgraded from version 0.4 to 1.0.</p>
+</li>
+<li>
+<p>The requirement to support <tt>oai_dc</tt> metadata format is removed.</p>
+</li>
+<li>
+<p>A new section on "OAI identifier description" explains, among other things,  the new requirement (based on OAI 2.0) that repository identifiers must be based on a registered Internet domain.</p>
+</li>
+<li>
+<p>The shortLocation element is added to the OLAC archive description.</p>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 2002 Gary Simons
+      (SIL International) and Steven Bird (University of Melbourne and University of Pennsylvania). This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#OAI identifier description">OAI identifier description</A>
+</LI>
+<LI>
+<A href="#OLAC archive description">OLAC archive description</A>
+</LI>
+<LI>
+<A href="#Responses to OAI requests">Responses to OAI requests</A>
+<UL>
+<LI>
+<A href="#GetRecord">GetRecord</A>
+</LI>
+<LI>
+<A href="#Identify">Identify</A>
+</LI>
+<LI>
+<A href="#ListIdentifiers">ListIdentifiers</A>
+</LI>
+<LI>
+<A href="#ListMetadataFormats">ListMetadataFormats</A>
+</LI>
+<LI>
+<A href="#ListRecords">ListRecords</A>
+</LI>
+<LI>
+<A href="#ListSets">ListSets</A>
+</LI>
+</UL>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>The OLAC protocol for metadata harvesting  is based on the  protocol developed by the Open Archives Initiative [<a href="http://www.openarchives.org/OAI/1.1/openarchivesprotocol.htm">OAI-PMH</a>]. This document assumes familiarity with the OAI protocol.</p>
+<p>The implementation of an OLAC data provider  has all the features of a minimal repository implementation [<a href="http://www.openarchives.org/OAI/2.0/guidelines-repository.htm">OAI-GRI</a>], except that an OLAC data provider need not support the <tt>oai_dc</tt> metadata format (since the OLAC Aggregator [<a href="http://www.language-archives.org/cgi-bin/olaca.pl">OLACA</a>] provides that service for data providers that comply with this standard. In addition to the requirements of a minimal repository implementation, an OLAC data provider must comply with three additional requirements. It must:</p>
+<ul>
+<li>
+<p>supply an <a href="#OAI identifier description">OAI identifier description</a>
+</p>
+</li>
+<li>
+<p>supply an <a href="#OLAC archive description">OLAC archive description</a>
+</p>
+</li>
+<li>
+<p>support the OLAC metadata standard in <a href="#Responses to OAI requests">Responses to OAI requests</a>
+</p>
+</li>
+</ul>
+<p> The remaining sections of this standard describe these additional requirements.</p>
+<h2>
+<A name="OAI identifier description"></A>2. OAI identifier description</h2>
+<p>  The resource identifiers supplied by an OLAC data provider must comply with the OAI specification for the format of OAI identifiers as defined in [<a href="http://www.openarchives.org/OAI/2.0/guidelines-oai-identifier.htm">OAI-Ids</a>]. The  data provider must also return a description of its identifiers in an <tt>&lt;oai-identifier&gt;</tt> element in the response to <tt>Identify</tt>.  In addition to being valid with respect to its schema, these are further requirements on the <tt>&lt;oai-identifier&gt;</tt> description:</p>
+<ul>
+<li>
+<p>The <tt>repositoryIdentifier</tt> must be unique among all registered OLAC data providers.</p>
+</li>
+<li>
+<p>The <tt>repositoryIdentifier</tt> must be based on a registered domain name, typically of the sponsoring institution. A single institution may use subdomain names to distinguish data providers that are internally distinct.</p>
+</li>
+<li>
+<p>The <tt>sampleIdentifier</tt> must be of an existing item in the data provider, and not a hypothetical item.</p>
+</li>
+</ul>
+<h2>
+<A name="OLAC archive description"></A>3. OLAC archive description</h2>
+<p>The <tt>Identify</tt> request supplies minimal information about an archive, namely, its name, base URL, and administrator email. An OLAC data provider must also return an <tt>&lt;olac-archive&gt;</tt> element in the response to <tt>Identify</tt>. This element gives additional information that makes it possible for an OLAC service provider to supply  its users with a basic description of a participating archive. </p>
+<p>The <tt>&lt;olac-archive&gt;</tt> element has an obligatory attribute, <tt>type</tt>, which must have one of two values:</p>
+<ul>
+<li>
+<p>
+<tt>type="personal"</tt> indicates that the archive is sponsored and operated by an individual (or a group of individuals)</p>
+</li>
+<li>
+<p>
+<tt>type="institutional"</tt> indicates that the archive is sponsored and operated by an institution</p>
+</li>
+</ul>
+<p>These are the elements within an OLAC archive description:</p>
+<blockquote>
+<dl>
+<dt>
+<b>archiveURL</b>
+</dt>
+<dd>
+<p>
+<i>Optional.</i> The home page of the archive on the Web. This is the home page for human visitors, not the base URL for harvesting.</p>
+</dd>
+<dt>
+<b>curator</b>
+</dt>
+<dd>
+<p>The name of the person who curates the  archive collection. If more than one person has collaborated as  personal sponsors of the archive, then this element should contain all the names in the order and format the collaborators want to be cited. </p>
+</dd>
+<dt>
+<b>curatorTitle</b>
+</dt>
+<dd>
+<p>
+<i>Optional.</i> The job title of the curator within the sponsoring institution (for an institutional archive) or within the institution of affiliation (for a personal archive).</p>
+</dd>
+<dt>
+<b>curatorEmail</b>
+</dt>
+<dd>
+<p>
+<i>Optional.</i> A <tt>mailto:</tt> URI giving the email address for contacting the curator of the archive. (Note that this is distinct from the <tt>&lt;adminEmail&gt;</tt> in the <tt>Identify</tt> response which is the contact address for the maintainer of the  data provider.)</p>
+</dd>
+<dt>
+<b>institution</b>
+</dt>
+<dd>
+<p>The name of the sponsoring institution (for an institutional archive) or the institution of affiliation (for a personal archive). The field is obligatory. If the curator of a personal archive has no affiliation, then a value of <i>Unaffiliated</i> should be given.</p>
+</dd>
+<dt>
+<b>institutionURL</b>
+</dt>
+<dd>
+<p>
+<i>Optional.</i> A URL for the home page of the institution.</p>
+</dd>
+<dt>
+<b>shortLocation</b>
+</dt>
+<dd>
+<p>
+<i>Obligatory.</i> A brief statement of the location  of the institution or the person providing the metadata following the format "City, Country". Multiple locations may be connected with "and".  This information is shown in the location column of the table of participating archives at 
+  <a href="http://www.language-archives/archives.php4">http://www.language-archives/archives.php4</a>.</p>
+</dd>
+<dt>
+<b>location</b>
+</dt>
+<dd>
+<p>
+<i>Optional.</i> A single paragraph (not to exceed 1000 characters)  describing where an archive that houses a collection of physical holdings is located (for instance, include building name, room number, street address). Other information relevant to visiting the collection, such as opening hours or restrictions on access, may also be described. If the archive is purely an on-line repository,  do not use this element.</p>
+</dd>
+<dt>
+<b>synopsis</b>
+</dt>
+<dd>
+<p>A single paragraph (not to exceed 1000 characters) summarizing the purpose, scope,  coverage, and so on of the archive.</p>
+</dd>
+<dt>
+<b>access</b>
+</dt>
+<dd>
+<p>A single paragraph (not to exceed 1000 characters) summarizing terms of access to the materials described in the published metadata. The statement should mention restrictions on access, licensing
+requirements, costs, and so on.  Individual metadata records should use the Rights element to document such things for particular archive holdings. The purpose of <tt>&lt;access&gt;</tt> is to broadly characterize the entire archive.</p>
+</dd>
+</dl>
+</blockquote>
+<p>For example,</p>
+<pre style="margin-left: 18pt">&lt;olac-archive
+      xmlns="http://www.language-archives.org/OLAC/1.0/"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.language-archives.org/OLAC/1.0/
+                 http://www.language-archives.org/OLAC/1.0/olac-archive.xsd"
+      type="institutional"&gt;
+   &lt;archiveURL&gt;http://www.ethnologue.com&lt;/archiveURL&gt;
+   &lt;curator&gt;Raymond G. Gordon, Jr.&lt;/curator&gt;
+   &lt;curatorTitle&gt;Ethnologue Editor&lt;/curatorTitle&gt;
+   &lt;curatorEmail&gt;mailto:editor_ethnologue@sil.org&lt;/curatorEmail&gt;
+   &lt;institution&gt;SIL International&lt;/institution&gt;
+   &lt;institutionURL&gt;http://www.sil.org&lt;/institutionURL&gt;
+   &lt;shortLocation&gt;Dallas, USA&lt;/shortLocation&gt;
+   &lt;location&gt;7500 W. Camp Wisdom Rd., Dallas, TX 75236, U.S.A.&lt;/location&gt;
+   &lt;synopsis&gt;The Ethnologue data provider gives a metadata record for every
+   language entry in the Web edition of the Ethnologue.  The latter provides
+   basic information about each of the 7,000+ modern language of the world
+   (both living and recently extinct).&lt;/synopsis&gt;
+   &lt;access&gt;Every resource described by the Ethnologue data provider is a
+   public Web page that may be accessed without restriction. Reuse of 
+   material on the site is subject to the Terms of Use that are
+   posted.&lt;/access&gt;
+&lt;/olac-archive&gt;
+</pre>
+<p>The schema for validating an OLAC archive description is at <a href="http://www.language-archives.org/OLAC/1.0/olac-archive.xsd">http://www.language-archives.org/OLAC/1.0/olac-archive.xsd</a>.</p>
+<h2>
+<A name="Responses to OAI requests"></A>4. Responses to OAI requests</h2>
+<p>The OAI protocol for metadata harvesting  [<a href="http://www.openarchives.org/OAI/1.1/openarchivesprotocol.htm">OAI-PMH</a>] supports six requests. An OLAC-compliant data provider must support the above two descriptions and the OLAC metadata format [<a href="http://www.language-archives.org/OLAC/metadata.html">OLAC-Metadata</a>] in its responses to the these six requests. The additional features of the OLAC protocol for metadata harvesting  are described below under the request to which they are relevant.</p>
+<h3>
+<A name="GetRecord"></A>GetRecord</h3>
+<p>When the <tt>metadataPrefix</tt> is specified as <tt>olac</tt>, the <tt>&lt;metadata&gt;</tt> element of the response must contain an <tt>&lt;olac&gt;</tt> element that conforms to some  version of the XML schema for OLAC metadata [<a href="http://www.language-archives.org/OLAC/metadata.html">OLAC-Metadata</a>]. The <tt>&lt;olac&gt;</tt> element must contain an <tt>xmlns</tt> attribute specifying the URI that identifies the namespace for the version of the OLAC metadata schema that is being used.</p>
+<h3>
+<A name="Identify"></A>Identify</h3>
+<p>An OLAC data provider must conform to the OAI format for building unique identifiers of records and it must supply an OLAC-specific archive description. These requirements are met in the response to the <tt>Identify</tt> request.  The response must contain at least two <tt>&lt;description&gt;</tt> elements, one containing an <tt>&lt;oai-identifier&gt;</tt> element to describe the  unique identifier format and another containing an <tt>&lt;olac-archive&gt;</tt> element to describe the archive. The schema for <tt>&lt;oai-identifier&gt;</tt> is given in [<a href="http://www.openarchives.org/OAI/2.0/guidelines-oai-identifier.htm">OAI-Ids</a>]. The schema for <tt>&lt;olac-archive&gt;</tt> is given below in <a href="#OLAC archive description">OLAC archive description</a>.</p>
+<h3>
+<A name="ListIdentifiers"></A>ListIdentifiers</h3>
+<p>When the <tt>metadataPrefix</tt> is specified as <tt>olac</tt>, this request must respond with at least one  record identifier.</p>
+<h3>
+<A name="ListMetadataFormats"></A>ListMetadataFormats</h3>
+<p>This request (when made with no additional parameters) must respond with at least two <tt>&lt;metadataFormat&gt;</tt> elements, one for the <tt>oai_dc</tt> prefix required by OAI and another for the <tt>olac</tt> prefix required by OLAC. The specification for the <tt>olac</tt> prefix must also contain the   URL (at <tt>www.language-archives.org</tt>) for the canonical version of the OLAC metadata schema that is being used and the URI for its corresponding namespace. For instance,</p>
+<pre style="margin-left: 18pt">&lt;metadataFormat&gt;
+   &lt;metadataPrefix&gt;olac&lt;/metadataPrefix&gt;
+   &lt;schema&gt;http://www.language-archives.org/OLAC/1.0/olac.xsd&lt;/schema&gt;
+   &lt;metadataNamespace&gt;http://www.language-archives.org/OLAC/1.0/&lt;/metadataNamespace&gt;
+&lt;/metadataFormat&gt;
+</pre>
+<h3>
+<A name="ListRecords"></A>ListRecords</h3>
+<p>When the <tt>metadataPrefix</tt> is specified as <tt>olac</tt>, every <tt>&lt;metadata&gt;</tt> element in the response must contain an <tt>&lt;olac&gt;</tt> element that conforms to some  version of the XML schema for OLAC metadata [<a href="http://www.language-archives.org/OLAC/metadata.html">OLAC-Metadata</a>]. Each <tt>&lt;olac&gt;</tt> element must contain an <tt>xmlns</tt> attribute specifying the URI that identifies the namespace for the version of the metadata schema that is being used.</p>
+<h3>
+<A name="ListSets"></A>ListSets</h3>
+<p>The OLAC metadata harvesting protocol places no additional requirements on this request. The data provider may supply any response that is valid with respect to the OAI specification.</p>
+</body>
+<hr>
+<h2>
+<font color="red">To do</font>
+</h2>
+<font color="red">
+<p>The strategy for forming repository identifiers with personal data repositories needs to be addressed.</p>
+</font><a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="OAI-GRI">OAI-GRI</a>]</td><td>Guidelines for Repository Implementers, Document Version 2002/06/09.
+	 <br>&lt;<a href="http://www.openarchives.org/OAI/2.0/guidelines-repository.htm">http://www.openarchives.org/OAI/2.0/guidelines-repository.htm</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OAI-Ids">OAI-Ids</a>]</td><td>Specification and XML Schema for the OAI Identifier Format, Document Version 2002/06/21.
+	 <br>&lt;<a href="http://www.openarchives.org/OAI/2.0/guidelines-oai-identifier.htm">http://www.openarchives.org/OAI/2.0/guidelines-oai-identifier.htm</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OAI-PMH">OAI-PMH</a>]</td><td>The Open Archives Initiative Protocol for Metadata Harvesting, Version 1.1 (2001-07-02).
+	 <br>&lt;<a href="http://www.openarchives.org/OAI/1.1/openarchivesprotocol.htm">http://www.openarchives.org/OAI/1.1/openarchivesprotocol.htm</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Metadata">OLAC-Metadata</a>]</td><td>OLAC Metadata.<br>&lt;<a href="http://www.language-archives.org/OLAC/metadata.html">http://www.language-archives.org/OLAC/metadata.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLACA">OLACA</a>]</td><td>OLAC Aggregator.<br>&lt;<a href="http://www.language-archives.org/cgi-bin/olaca.pl">http://www.language-archives.org/cgi-bin/olaca.pl</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

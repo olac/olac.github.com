@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>OLAC Linguistic Data Type Vocabulary</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="OLAC Linguistic Data Type Vocabulary">
+<meta name="Creator" content="&#10;      Heidi Johnson (mailto:ailla@ailla.org)&#10;      Helen Aristar Dry (mailto:hdry@linguistlist.org)&#10;    ">
+<meta name="Description" content="&#10;              This document specifies the codes, or controlled vocabulary,&#10;              for the Linguistic Data Type extension of the OLAC Type&#10;              element.  These codes describe the content of a resource&#10;              from the standpoint of recognized structural types of&#10;              linguistic information.&#10;    ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20021121">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>OLAC Linguistic Data Type Vocabulary</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2002-11-21</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Recommendation. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/REC/type-20021121.html">http://www.language-archives.org/REC/type-20021121.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/REC/type.html">http://www.language-archives.org/REC/type.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td><a href="http://www.language-archives.org/REC/type-20020628.html">http://www.language-archives.org/REC/type-20020628.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>
+              This document specifies the codes, or controlled vocabulary,
+              for the Linguistic Data Type extension of the OLAC Type
+              element.  These codes describe the content of a resource
+              from the standpoint of recognized structural types of
+              linguistic information.
+    </p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>
+      Heidi Johnson (<a href="mailto:ailla@ailla.org">mailto:ailla@ailla.org</a>)
+      Helen Aristar Dry (<a href="mailto:hdry@linguistlist.org">mailto:hdry@linguistlist.org</a>)
+    </editors>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Changes since previous version:</th><td>
+<p>Adds: Grammar, Primary_Text</p>
+<p>
+              Deletes: Transcription section,  Annotation section, Text
+              section (changed to Primary_Text), subtypes of Dataset,
+              subtypes of Lexicon, subtypes of Description.
+      </p>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 
+      Heidi Johnson (University of Texas at Austin)
+      Helen Aristar Dry (Eastern Michigan University)
+    . This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Linguistic Data Type">Linguistic Data Type</A>
+<UL>
+<LI>
+<A href="#dataset">dataset</A>
+</LI>
+<LI>
+<A href="#lexicon">lexicon</A>
+</LI>
+<LI>
+<A href="#primary_text">primary_text</A>
+</LI>
+<LI>
+<A href="#description">description</A>
+</LI>
+</UL>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>
+Like all OLAC elements, the Type element is both optional  and repeatable.
+Since it is optional, the Linguistic Data Type extension of the Type element
+should only be used if a resource represents a recognized linguistic data
+type. However, if a resource represents more than one linguistic data type,
+the element may be repeated.  So, for example, a primary text accompanied by
+a lexicon of vocabulary items would be described as both a primary text and
+a lexicon.
+</p>
+<p>
+In many cases, adequate description of a linguistic resource will require
+that the Linguistic Data Type extension be used in conjunction with the
+Discourse Type extension of the Type element, or the Linguistic Field
+extension of the Subject element.    For example, a narrative text might  be
+described as both a primary text (OLAC Linguistic Type) and a narrative
+(OLAC Discourse Type). And a phoneme dataset might be describedboth as a
+dataset (OLAC Linguistic Type) and as relevant to phonology (OLAC Linguistic
+Field).
+</p>
+<h2>
+<A name="Linguistic Data Type"></A>2. Linguistic Data Type</h2>
+<p>
+Each term in the controlled vocabulary is described in one of the
+following subsections. The heading gives the encoded value for the
+term that is to be used as the value of the code attribute of the
+"OLAC-Linguistic-Type" extension of the Type metadata element
+[<a href="http://www.language-archives.org/OLAC/olacms.html">OLAC-MS</a>]. Under the heading, the term is described in four
+ways. <i>Name</i> gives a descriptive label for the term.
+<i>Definition</i> is a one-line summary of what the term
+means. <i>Comments</i> offers more details on what the term
+represents. Examples may also be given to illustrate how the term is
+meant to be applied.
+</p>
+<h3>
+<A name="dataset"></A>dataset</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Dataset</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource is a structured set of data items.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>
+     A dataset is a collection of items organized in a
+     structured format for some specific research purpose.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>
+     Examples of datasets are: a set of sentences
+     illustrating deictic terms; an inflectional affix
+     paradigm; a list of utterance tokens in a uniform
+     context (e.g. "Say [pat] now."); a chart giving a
+     phonemic inventory classified by place/manner; an audio
+     recording of minimal pairs.
+  </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="lexicon"></A>lexicon</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Lexicon</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes a systematic listing of lexical items.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>
+    Lexicon may be used to describe any resource which
+    includes a systematic listing of lexical items. Each
+    lexical item may, but need not,  be accompanied by a
+    definition, a description of the referent (in the case
+    of proper names), or an indication of the item's
+    semantic relationship to other lexical items.
+  </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>
+    Examples include word lists (including comparative word
+    lists), thesauri,  wordnets, framenets, and
+    dictionaries, including specialized dictionaries such
+    as bilingual and multilingual dictionaries,
+    dictionaries of terminology, and dictionaries of proper
+    names. Non-word-based examples include phrasal lexicons
+    and lexicons of intonational tunes.
+  </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="primary_text"></A>primary_text</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Primary Text</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>Linguistic material which is itself the object of study.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>
+    Primary Text is used to describe material in the
+    subject language which embodies linguistic or cultural
+    features which make it an object of analysis or
+    research. What distinguishes a primary text from a
+    lexicon, dataset, or description is its temporal
+    structure. In a primary text, the timecourse of some
+    external linguistic event, e.g., a conversation or
+    elicitation session, is carried over into the archived
+    artefact.</p>
+<p>Note:  Primary_text describes the content of the
+    resource, not the physical format.  A primary text may
+    be recorded in different physical media, e.g. as
+    videotaped, audiotaped, or written text.  Physical
+    format is described using the Format element.
+  </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>
+    Examples of primary texts include transcribed
+    interlinear texts, (audiotaped) elicitation sessions,
+    (videotaped) rituals or story-telling sessions, and any
+    other recorded speech or writing which exemplifies
+    language structure or use in such a way as to become an
+    object of study.
+  </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="description"></A>description</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Description</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource is a linguistic description of a language
+              or some aspect(s) of a language.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>
+    Not every resource with descriptive content should be
+    described with this code. Instead, it should be
+    reserved for a work that describes some aspect of a
+    particular language, typically in prose with
+    interspersed examples.
+  </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>
+    Examples of descriptions include a grammar, a sketch
+    grammar, a phonological sketch.
+  </p>
+</td>
+</tr>
+</table>
+</body>
+<a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="OLAC-MS">OLAC-MS</a>]</td><td>OLAC Metadata Set.<br>
+    &lt;<a href="http://www.language-archives.org/OLAC/olacms.html">http://www.language-archives.org/OLAC/olacms.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

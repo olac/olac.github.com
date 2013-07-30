@@ -1,0 +1,168 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <HEAD>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+      <TITLE>A MARC-to-OLAC Crosswalk</TITLE>
+      <script type="text/javascript" src="/js/gatrack.js"></script>
+      <meta name="Title" content="A MARC-to-OLAC Crosswalk">
+      <meta name="Creator" content="Christopher Hirt, SIL International and Graduate Institute of Applied Linguistics&#xA;         (mailto:chris_hirt@sil.org) Gary Simons, SIL International and Graduate Institute of Applied Linguistics&#xA;         (mailto:gary_simons@sil.org) Joan Spanne, SIL International&#xA;         (mailto:joan_spanne@sil.org)">
+      <meta name="Description" content="Describes the installation, configuration, and operation&#xA;            of a crosswalk for converting a MARC record collection&#xA;            into a static repository that complies with the&#xA;            OLAC-Repositories standard.">
+      <meta content="OLAC (Open Language Archives Community)" name="Publisher">
+      <meta name="Date" content="20090428"><STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE></HEAD>
+   <BODY>
+      <hr>
+      <H1>A MARC-to-OLAC Crosswalk</H1>
+      <table cellspacing="10">
+         <tr valign="top">
+            <th align="left" width="100">Date&nbsp;issued:</th>
+            <td>2009-04-28</td>
+         </tr>
+         <tr valign="top">
+            <th align="left">Status of document:</th>
+            <td><i>Draft Implementation Note. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for
+               review.
+            </td>
+         </tr>
+         <tr valign="top">
+            <th align="left">This version:</th>
+            <td><a href="http://www.language-archives.org/NOTE/marc-20090428.html">http://www.language-archives.org/NOTE/marc-20090428.html</a></td>
+         </tr>
+         <tr valign="top">
+            <th align="left">Latest version:</th>
+            <td><a href="http://www.language-archives.org/NOTE/marc.html">http://www.language-archives.org/NOTE/marc.html</a></td>
+         </tr>
+         <tr valign="top">
+            <th align="left">Previous&nbsp;version:</th>
+            <td>None.</td>
+         </tr>
+         <tr valign="top">
+            <th align="left">Abstract:</th>
+            <td>
+               <p>Describes the installation, configuration, and operation
+                  of a crosswalk for converting a MARC record collection
+                  into a static repository that complies with the
+                              [<a href="#OLAC-Repositories">OLAC-Repositories</a>] standard.
+               </p>
+            </td>
+         </tr>
+         <tr valign="top">
+            <th align="left">Editors:</th>
+            <td>
+               <editors>Christopher Hirt, SIL International and Graduate Institute of Applied Linguistics
+                           (<a href="mailto:chris_hirt@sil.org">mailto:chris_hirt@sil.org</a>) <br>Gary Simons, SIL International and Graduate Institute of Applied Linguistics
+                           (<a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>) <br>Joan Spanne, SIL International
+                           (<a href="mailto:joan_spanne@sil.org">mailto:joan_spanne@sil.org</a>)
+               </editors>
+            </td>
+         </tr>
+      </table>
+      <blockquote><small>Copyright &copy; 2009 Christopher Hirt (SIL International and Graduate Institute of Applied Linguistics),
+                     Gary Simons (SIL International and Graduate Institute of Applied Linguistics), and Joan Spanne (SIL International). This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small></blockquote>
+      <hr>
+      <h3>Table of contents</h3>
+      <ol>
+         <LI><A href="#Introduction">Introduction</A></LI>
+         <LI><A href="#Installation">Installation</A></LI>
+         <LI><A href="#Configuring the language resource filter">Configuring the language resource filter</A></LI>
+         <LI><A href="#Configuring the OLAC archive description">Configuring the OLAC archive description</A></LI>
+         <LI><A href="#Configuring the MARC-to-OLAC mapping">Configuring the MARC-to-OLAC mapping</A></LI>
+         <LI><A href="#Running the crosswalk">Running the crosswalk</A></LI>
+      </ol>
+      <blockquote><a href="#References">References</a><br></blockquote>
+      <hr>
+      <body>
+         <h2><A name="Introduction"></A>1. Introduction
+         </h2>
+         <p>This note describes a system for transforming the MARC21
+            catalog for a library or archive into a static repository
+            that holds an OLAC metadata record for each MARC record
+            identified as describing a language resource. The
+            MARC-to-OLAC crosswalk adds two tasks to a general
+            MARC-to-DC crosswalk. First, we require a filtering step
+            to determine whether a record describes a language
+            resource. Second, if it does, we must extract the
+            specialized metadata that facilitates language resource
+            discovery. A fairly narrow subset of Library of Congress
+            Subject Headings (LCSH) is used in cataloging language
+            resources. The simple existence of the word &#8220;language&#8221; in
+            subfield $a of an entry element is the main clue;
+            institution-specific cata&not;loging policies may also prove
+                        relevant. If it contains one or more of these clues, a
+                        record passes through the filter stage. Then a
+                        transformation stage applies specialized mappings for
+                        identifying languages and the type of a language resource.
+                        OLAC metadata uses ISO 639-2/3
+                        [http://www.sil.org/iso639-3/] as an encoding scheme for
+                        precise identification of languages We have thus mapped
+                        LCSH &#8220;language names&#8221; to their corresponding ISO 639
+                        identifiers for use with DC:Language and OLAC&#8217;s &#8220;language
+                        as subject&#8221; extension of DC:Subject. Specific LCSH terms
+                        are also mapped to OLAC&#8217;s linguistic resource type
+                        vocabulary applied as an extension to DC:Type. 
+         </p>
+         <p>The crosswalk is implemented with a series of XSL
+                        transforma&not;tions driven by a Python wrapper script. The
+                        Python script applies the transformations in batches and
+                        is thereby able to process gigabytes of MARC data with
+                        minimal memory requirements. The preliminary filtering
+                        step is configured by specifying tests on any MARC field
+                        or subfield with simple string comparison. We use a
+                        two-stage filtering process in which the first stage (the
+                        &#8220;select stage&#8221;) uses tests to select the maximal set of
+                        MARC records to be considered for inclusion in the OLAC
+                        repository, while the second stage (the &#8220;reject stage&#8221;)
+                        uses tests to reject records that are in fact not wanted.
+                        The resulting record set is then transformed from MARC XML
+                        to OLAC&#8217;s XML-based format by means of an XSL stylesheet
+                        that defines an &lt;xsl:template&gt; for each MARC field.
+                        An optional stylesheet is called to apply overriding
+                        institution-specific mappings. The complete source code
+                        and data tables for the crosswalk (including the LCSH to
+                        ISO 639-3 mappings) are being shared on an open-source
+                        basis.
+         </p>
+         <h2><A name="Installation"></A>2. Installation
+         </h2>
+         <p></p>
+         <h2><A name="Configuring the language resource filter"></A>3. Configuring the language resource filter
+         </h2>
+         <p></p>
+         <h2><A name="Configuring the OLAC archive description"></A>4. Configuring the OLAC archive description
+         </h2>
+         <p></p>
+         <h2><A name="Configuring the MARC-to-OLAC mapping"></A>5. Configuring the MARC-to-OLAC mapping
+         </h2>
+         <p></p>
+         <h2><A name="Running the crosswalk"></A>6. Running the crosswalk
+         </h2>
+         <p></p>
+      </body><a name="References"></a><hr>
+      <h2>References</h2>
+      <table cellspacing="10">
+         <tr valign="top">
+            <td width="150">[<a name="HSS_2009">HSS_2009</a>]
+            </td>
+            <td>Building a MARC-to-OLAC Crosswalk: 
+                        Repurposing Library Catalog Data for the 
+                        Language Resources Community, by Christopher Hirt, Gary
+                        Simons, and Joan Spanne. <i>Proceedings of the Joint
+                              Conference on Digital Libraries, 15&#8211;19 June 2009, Austin, Texas, USA</i><br>
+                        &lt;<a href="http://www.oxygenxml.com/download.html">http://www.oxygenxml.com/download.html</a>&gt;
+            </td>
+         </tr>
+         <tr valign="top">
+            <td width="150">[<a name="OLAC-Repositories">OLAC-Repositories</a>]
+            </td>
+            <td>OLAC Repositories.
+                        <br>&lt;<a href="http://www.language-archives.org/OLAC/repositories.html">http://www.language-archives.org/OLAC/repositories.html</a>&gt;
+            </td>
+         </tr>
+      </table>
+   </BODY>
+</HTML>

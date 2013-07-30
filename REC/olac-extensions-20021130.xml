@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc>
+<header>
+<status code="proposed" type="recommendation"/>
+<title>Recommended metadata extensions</title>
+<baseName>olac-extensions</baseName>
+<issued>20021130</issued>
+<previousIssued></previousIssued>
+<abstract><p>This document lists all  the metadata extensions that are
+recommended  by the Open Language Archives Community for  use in
+describing language resources.
+(The date issued for this document is the revision date for the text
+in section 1 and the list of extensions included in section 2. The
+information about a particular extension may be more recent than this
+date; see the specific revision date given for each extension.)
+</p></abstract>
+<editors>Gary Simons, SIL International
+        (<url>mailto:gary_simons@sil.org</url>)<br/>Steven Bird, University of
+        Melbourne (<url>mailto:sb@csse.unimelb.edu.au</url>)</editors>
+<copyright>2002 Gary Simons (SIL International) and Steven Bird (University of Melbourne)</copyright>
+<changes></changes>
+</header>
+<body><section><heading>Introduction</heading>
+<p>The OLAC metadata standard <cit>OLAC-MS</cit> follows the generic resource description standard known as "Qualified Dublin Core" <cit>DCQ</cit>. In order to meet the specific needs of the language resources community, the OLAC metadata standard incorporates an extension mechanism that makes it possible to describe language resources with greater precision. The mechanism uses the <tt>xsi:type</tt> attribute to override the basic definition of a Dublin Core metadata element with a definition that has a more precise semantics. For instance, the following subject description,</p><eg>&lt;dc:subject&gt;Dschang language&lt;/dc:subject&gt;</eg><p>can be formally identified as pertaining to language and as relating to the specific language associated with a standardized language identification code by employing an OLAC extension:</p><eg>&lt;dc:subject xsi:type="olac:language" code="x-sil-BAN"/&gt;</eg><p>Details on how the extension mechanism works may be found in the last two sections of <cit>OLAC-MS</cit>.</p><p>Any party may develop a metadata extension and use it in OLAC metadata records. When an extension is proven to work and is judged to have wide relevance across the language resources community, then it may be put forward to the community as a recommended best practice. If, after following the process described in <cit>OLAC-Process</cit>, the community reaches consensus that  the extension should indeed be used where applicable by all OLAC member archives, then the extension achieves the status of an OLAC Recommendation.</p><p>This document provides the complete list of all extensions that have been adopted as OLAC Recommendations. Each extension is described in terms of a title and the following five attributes:</p>
+<dl style="list">
+<dt>Name</dt><dd><p>The symbolic name that is used as the value of the <tt>xsi:type</tt> attribute to indicate that the extension is being used in a metadata element.</p></dd>
+<dt>Date</dt><dd><p>The latest revision date of the extension or its controlled vocabulary.</p></dd><dt>Applies to</dt><dd><p>The Dublin Core elements with which the extension may be used.</p></dd>
+<dt>Description</dt><dd><p>A summary description of what the extension is used for.</p></dd>
+<dt>Documentation</dt><dd><p>A link to a complete document that defines and exemplifies the extension. If the extension involves a controlled vocabulary, the document should also enumerate and define the terms of the vocabulary.</p></dd></dl></section>
+<section><heading>Recommended extensions</heading>
+<p>The Open Language Archives Community recommends that all participating data providers use the following metadata extensions for describing  language resources whenever they are applicable: </p>
+<extensions>
+
+<extension name="discourse-type" ns="olac" href="http://www.language-archives.org/OLAC/1.0/olac-discourse-type.xsd"/>
+<extension name="language" ns="olac" href="http://www.language-archives.org/OLAC/1.0/olac-language.xsd"/>
+<extension name="linguistic-field" ns="olac" href="http://www.language-archives.org/OLAC/1.0/olac-linguistic-field.xsd"/>
+<extension name="linguistic-type" ns="olac" href="http://www.language-archives.org/OLAC/1.0/olac-linguistic-type.xsd"/>
+<extension name="role" ns="olac" href="http://www.language-archives.org/OLAC/1.0/olac-role.xsd"/>
+
+</extensions><p></p></section>
+</body>
+<references><ref abbrev="DCQ">Dublin Core
+      Qualifiers.<br/>&lt;<url>http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/</url>&gt;</ref><ref abbrev="OLAC-MS">OLAC Metadata Standard.<br/>&lt;<url>http://www.language-archives.org/OLAC/metadata.html</url>&gt;</ref><ref abbrev="OLAC-Process">OLAC Process.<br/>&lt;<url>http://www.language-archives.org/OLAC/process.html</url>&gt;</ref></references></OLAC_doc>

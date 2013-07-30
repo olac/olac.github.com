@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Viser: A virtual service provider for displaying selected OLAC metadata</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="Viser: A virtual service provider for displaying selected OLAC metadata">
+<meta name="Creator" content="Gary Simons, SIL International&#10;        (mailto:gary_simons@sil.org)">
+<meta name="Description" content=" &#10;        Documents a service named Viser, hosted on the OLAC web site, that allows language resource sites to post services based on OLAC metadata without having to implement a conventional service provider. Viser works in conjunction with the query facility of the OLAC Aggregator to selectively harvest OLAC metadata and then provide HTML displays of records that match a query. The  service returns an XML document with processing instructions to invoke an XSL stylesheet and set certain display parameters; the actual rendering to HTML happens in the client's browser. &#10;      ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20030729">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>Viser: A virtual service provider for displaying selected OLAC metadata</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2003-07-29</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Implementation Note. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/NOTE/viser-20030729.html">http://www.language-archives.org/NOTE/viser-20030729.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/NOTE/viser.html">http://www.language-archives.org/NOTE/viser.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td><a href="http://www.language-archives.org/NOTE/viser-20021102.html">http://www.language-archives.org/NOTE/viser-20021102.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>Documents a service named Viser, hosted on the OLAC web site, that allows language resource sites to post services based on OLAC metadata without having to implement a conventional service provider. Viser works in conjunction with the query facility of the OLAC Aggregator to selectively harvest OLAC metadata and then provide HTML displays of records that match a query. The  service returns an XML document with processing instructions to invoke an XSL stylesheet and set certain display parameters; the actual rendering to HTML happens in the client's browser.</p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>Gary Simons, SIL International
+        (<a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>)</editors>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Changes since previous version:</th><td>
+<p>Updated to reflect changes from version 0.4 of the OLAC metadata standard to version 1.0.</p>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 2003 Gary Simons
+      (SIL International). This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#The CGI interface">The CGI interface</A>
+</LI>
+<LI>
+<A href="#The result format">The result format</A>
+</LI>
+<LI>
+<A href="#Using Viser to provide a service">Using Viser to provide a  service</A>
+</LI>
+<LI>
+<A href="#Implementation">Implementation</A>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>A key feature of the openness of the Open Archives Initiative protocol  for metadata harvesting [<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm">OAI-PMH</a>] on which OLAC is based is that any site on the web is free to become a service provider. That is, it may harvest metadata from the participating data providers and offer a service based on the harvested metadata. In general, it is complicated to implement and operate a complete harvester with the result that few sites rise to the challenge of becoming a service provider.</p>
+<p>The Open Language Archives Community is seeking to change this by offering services that make it easy for would-be service providers to selectively harvest and present the metadata records that are relevant for their area of interest. The central service in this respect is the query facility of the OLAC Aggregator [<a href="http://www.language-archives.org/NOTE/query.html">OLACA-Query</a>]. It provides a CGI interface through which a would-be service provider may query the complete database of harvested OLAC metadata records. The result is an XML document containing just the metadata records that match the query.</p>
+<p>Viser, the virtual service provider, takes this one step further. It offers a CGI interface that not only processes a query, but also returns the results in such a way that they can be rendered in HTML on the end user's browser. Viser was developed as the counterpart to Vida, OLAC's virtual data provider [<a href="http://www.language-archives.org/vida">Vida</a>], which made it possible for a language resource provider to become an OLAC (and OAI) data provider without implementing the OAI protocol.  In a similar way, Viser makes it possible for a language resource site to become an OLAC service provider without implementing the OAI protocol.</p>
+<p>The purpose of this document is to document Viser and to illustrate how it can be used.</p>
+<h2>
+<A name="The CGI interface"></A>2. The CGI interface</h2>
+<p>Viser is a process with a CGI interface. It is located at the following URL. If Viser is invoked without any arguments, it simply returns the page of documentation you are currently reading.</p>
+<blockquote>
+<p>
+<a href="http://www.language-archives.org/viser">http://www.language-archives.org/viser</a>
+</p>
+</blockquote>
+<p>Viser, like [<a href="http://www.language-archives.org/NOTE/query.html">OLACA-Query</a>] on which it is based,  uses the OAI flow control mechanism [<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#FlowControl">OAI-FC</a>] to deal with queries that generate multiple pages of results. This means  the arguments that are valid for the initial request to Viser are different from the arguments on  follow-up requests to get the second and following pages of a multi-page result.</p>
+<p>The interface for an initial query to Viser supports the following five arguments:</p>
+<blockquote>
+<dl>
+<dt>
+<b>elements</b>
+</dt>
+<dd>
+<p>A required argument that specifies the number of metadata elements that are referred to in the selection criterion.</p>
+</dd>
+<dt>
+<b>sql</b>
+</dt>
+<dd>
+<p>A required argument that specifies the selection criterion expressed as the content of a WHERE clause in MySQL syntax. </p>
+</dd>
+<dt>
+<b>count</b>
+</dt>
+<dd>
+<p>An optional argument that specifies the number of metadata records to return in a single response.  If this argument is not specified, a default value of 20 is assumed. Viser enforces a limit of 500,000 bytes for the length of a response. If this limit is exceeded, one must specify a lower value for this argument. </p>
+</dd>
+<dt>
+<b>title</b>
+</dt>
+<dd>
+<p>An optional argument that specifies the title for the HTML page of results. If this argument is not specified, no title value will be given to the stylesheet.  In the default stylesheet, this generates a  title of <i>Untitled Query Results.</i>
+</p>
+</dd>
+<dt>
+<b>xsl</b>
+</dt>
+<dd>
+<p>An optional argument that specifies the URL of the XSL stylesheet to use for formatting the results on the end user's browser.  If this argument is not specified, the following default stylesheet is used:</p>
+<p>
+<a href="http://www.language-archives.org/tools/viser/basic_service.xsl">http://www.language-archives.org/tools/viser/basic_service.xsl</a>
+</p>
+</dd>
+</dl>
+</blockquote>
+<p>The first three arguments above are passed directly to the OLACA query facility. See [<a href="http://www.language-archives.org/NOTE/query.html">OLACA-Query</a>] for documentation on how to use these arguments.</p>
+<p>The arguments for the follow-up requests to get the second and following pages of a multi-page result are as follows:</p>
+<blockquote>
+<dl>
+<dt>
+<b>resumptionToken</b>
+</dt>
+<dd>
+<p>A required argument    that specifies the flow control token [<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#FlowControl">OAI-FC</a>] returned in the <tt>&lt;resumptionToken&gt;</tt> element of the previous Viser request. It instructs OLACA to pick up where it left off in returning the results of the original query.</p>
+</dd>
+<dt>
+<b>start</b>
+</dt>
+<dd>
+<p>A required argument  that specifies the sequence number of the first record to be returned on the resulting page.  For instance, if the initial request returned 20 records, then the request to retrieve the second page of results should specify a start value of 21. </p>
+</dd>
+<dt>
+<b>title</b>
+</dt>
+<dd>
+<p>An optional argument that specifies the title for the HTML page of results. If this argument is not specified, no title value will be given to the stylesheet.  In the default stylesheet, this generates a  title of <i>Untitled Query Results.</i>
+</p>
+</dd>
+<dt>
+<b>xsl</b>
+</dt>
+<dd>
+<p>An optional argument that specifies the URL of the XSL stylesheet to use for formatting the results on the end user's browser.  If this argument is not specified, the following default stylesheet is used:</p>
+<p>
+<a href="http://www.language-archives.org/tools/viser/basic_service.xsl">http://www.language-archives.org/tools/viser/basic_service.xsl</a>
+</p>
+</dd>
+</dl>
+</blockquote>
+<h2>
+<A name="The result format"></A>3. The result format</h2>
+<p>The result returned to the end user's browser by a Viser request is an XML document. It consists of the ListRecords response [<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#ListRecords">OAI-LR</a>] returned by the corresponding OLACA request [<a href="http://www.language-archives.org/NOTE/query.html">OLACA-Query</a>] with XML processing instructions added at the beginning  to pass  needed parameters to the end user's browser. An XSL stylesheet reads the value of  <i>title,</i> for instance, by executing <tt>&lt;xsl:value-of select="/processing-instruction('title')"/&gt;</tt>. The result format is thus as follows:</p>
+<pre style="margin-left: 18pt">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="value-of-xsl-or-default"?&gt;
+&lt;?title value-of-title?&gt;
+&lt;?start value-of-Start?&gt;
+&lt;OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"&gt;
+   &lt;responseDate&gt; ... &lt;/responseDate&gt;
+   &lt;request verb="Query" ...&gt; ... &lt;/request&gt;
+   &lt;ListRecords&gt;
+      &lt;!-- A &lt;record&gt; element for each returned record --&gt;
+      &lt;!-- A &lt;resumptionToken&gt; if there are more results --&gt;
+   &lt;/ListRecords&gt;
+&lt;/OAI-PMH&gt;</pre>
+<p> The individual metadata records are returned  in OLAC  format [<a href="#OLAC-MS">OLAC-MS</a>]. They are in order of their OAI identifiers. If more records match the selection criterion than the number indicated by the <i>count</i> parameter, a resumption token is returned at the end of the response as described in [<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#FlowControl">OAI-FC</a>].</p>
+<p>The <tt>&lt;?xml-stylesheet?&gt;</tt> processing instruction invokes client-side XSL processing on the user's browser. Thus, Viser works only with browsers that implement the [<a href="http://www.w3.org/TR/xslt">XSLT</a>] standard. It has been verified to work with current versions of Internet Explorer and Opera.</p>
+<h2>
+<A name="Using Viser to provide a service"></A>4. Using Viser to provide a  service</h2>
+<p>To create a service, a language resource site needs only to create a link that accesses Viser on their own web page. This involves following the specification in [<a href="http://www.language-archives.org/NOTE/query.html">OLACA-Query</a>] to formulate the query and supplying a title for the page of language resources that is returned.  For instance, here are  examples of URLs that create two simple services:</p>
+<ul>
+<li>
+<p>All resources  in or about the Swahili language:</p>
+<p>
+<a href="http://www.language-archives.org/viser?%0Aelements=1&amp;sql=e1.code%3D'x-sil-SWA'&amp;title=Swahili+Language+Resources">http://www.language-archives.org/viser?
+elements=1&amp;sql=e1.code%3D'x-sil-SWA'&amp;title=Swahili+Language+Resources</a>
+</p>
+</li>
+<li>
+<p>A catalog of resources in the LDC repository:</p>
+<p>
+<a href="http://www.language-archives.org/viser?%0Aelements=0&amp;sql=OaiIdentifier+like+'oai:www.ldc.upenn.edu:%25'&amp;title=Resources+Available+Through+LDC">http://www.language-archives.org/viser?
+elements=0&amp;sql=OaiIdentifier+like+'oai:www.ldc.upenn.edu:%25'&amp;title=Resources+Available+Through+LDC</a>
+</p>
+</li>
+</ul>
+<p>These URLs exemplify the kind of service that can be created without any knowledge of XSL.  The default stylesheet displays the title, creators, and publication date for all records that match the selection criterion.  In addition, the OAI identifier for the record is formatted as a link to the lookup service at:</p>
+<pre style="margin-left: 18pt">http://www.language-archives.org/tools/lookup.php4?identifier=</pre>
+<p>This results in a page that gives an HTML representation of all the information in the OLAC metadata record. If there are additional records that match the selection criterion, a link at the bottom of the page labeled "More resources ..." makes another call to Viser with the resumption token that will retrieve the next batch of records.</p>
+<p>When a site has XSL expertise, it may develop its own stylesheet and use the <i>xsl</i> argument to pass it to Viser. A customized stylesheet could be used to give the service a look and feel that is consistent with the rest of the site. Or a customized stylesheet could  take advantage of more of the information in the metadata records and provide greater functionality with respect to the special interest of the site. One may begin developing a customized stylesheet by downloading the default stylesheet from:</p>
+<blockquote>
+<p>
+<a href="http://www.language-archives.org/tools/viser/basic_service.xsl">http://www.language-archives.org/tools/viser/basic_service.xsl</a>
+</p>
+</blockquote>
+<h2>
+<A name="Implementation"></A>5. Implementation</h2>
+<p>Viser is implemented as a PHP4 script [<a href="http://www.php.net/manual/en/">PHP</a>]. The script may be downloaded at the following URL:</p>
+<blockquote>
+<p>
+<a href="http://www.language-archives.org/tools/viser/viser.php4.txt">http://www.language-archives.org/tools/viser/viser.php4.txt</a>
+</p>
+</blockquote>
+<p>This version of the script returns an XML document as described in <a href="#The result format">The result format</a> so that the rendering to HTML can be done by the end user's browser.  This strategy of client-side XSL processing was required in order to prevent overloading the server that is hosting the OLAC site. There is another version of the script at the following URL that includes code to perform the XSL transformation  on the server. The advantage of server-side transformation is, of course, that any browser will be able to render the  result; it does not depend on the end user having a browser that can perform the XSL transformation:</p>
+<blockquote>
+<p>
+<a href="http://www.language-archives.org/tools/viser/viser_transform.php4.txt">http://www.language-archives.org/tools/viser/viser_transform.php4.txt</a>
+</p>
+</blockquote>
+<p>This version is not enabled for execution on the OLAC site, but could be downloaded  and configured to run on another site. It may also serve as a source of ideas for sites that want to implement a customized service provider that is based on selective harvesting through the OLAC Aggregator.</p>
+</body>
+<a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="OAI-FC">OAI-FC</a>]</td><td>"Flow Control," section 3.5 of     <i>The Open Archives Initiative Protocol for Metadata Harvesting, Version 2.0</i> (2002-06-14).
+<br>&lt;<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#FlowControl">http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#FlowControl</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OAI-LR">OAI-LR</a>]</td><td>"ListRecords," section 4.5 of     <i>The Open Archives Initiative Protocol for Metadata Harvesting, Version 2.0</i> (2002-06-14).
+<br>&lt;<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#ListRecords">http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#ListRecords</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OAI-PMH">OAI-PMH</a>]</td><td>The Open Archives Initiative Protocol for Metadata Harvesting, Version 2.0 (2002-06-14).
+.<br>&lt;<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm">http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLACA-Query">OLACA-Query</a>]</td><td>A query facility for selective harvesting of OLAC metadata.<br>&lt;<a href="http://www.language-archives.org/NOTE/query.html">http://www.language-archives.org/NOTE/query.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="PHP">PHP</a>]</td><td>PHP Manual.<br>&lt;<a href="http://www.php.net/manual/en/">http://www.php.net/manual/en/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="Vida">Vida</a>]</td><td>OLAC Virtual Data Provider.<br>&lt;<a href="http://www.language-archives.org/vida">http://www.language-archives.org/vida</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="XSLT">XSLT</a>]</td><td>XSL Transformations (XSLT)
+Version 1.0.
+W3C Recommendation 16 November 1999.<br>&lt;<a href="http://www.w3.org/TR/xslt">http://www.w3.org/TR/xslt</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

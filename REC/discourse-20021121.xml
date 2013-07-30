@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc>
+  <header>
+    <status code="draft" type="recommendation"/>
+    <title>OLAC Discourse Type Vocabulary</title>
+    <baseName>discourse</baseName>
+    <issued>20021121</issued>
+    <previousIssued></previousIssued>
+    <abstract><p>
+      This document specifies the codes, or controlled vocabulary,
+      for the Discourse Type extension of the OLAC Type element.
+      These codes describe the content of a resource as structured
+      in such a way as to represent a particular type of discourse.
+    </p></abstract>
+    <editors>
+      Heidi Johnson (<url>mailto:ailla@ailla.org</url>)
+      Helen Aristar Dry (<url>mailto:hdry@linguistlist.org</url>)
+    </editors>
+    <copyright>
+      Heidi Johnson (University of Texas at Austin)
+      Helen Aristar Dry (Eastern Michigan University)
+    </copyright>
+    <changes>
+    </changes>
+  </header>
+
+  <body>
+    <section>
+    <heading>Introduction</heading>
+<p>
+The Discourse Type extension of the Type element is used to describe the
+content of a resource as representing discourse of a particular structural
+type. It will typically be used when the resource is itself an object of
+study, as, for example, when the resource is a primary text. So it will
+usually occur in conjunction with the Linguistic Data Type extension.   For
+example, a narrative text would  be described as both a primary text (OLAC
+Linguistic Type) and a narrative (OLAC Discourse Type).
+</p>
+</section>
+
+<section>
+<heading>Discourse Type</heading>
+
+<p>
+Each term in the controlled vocabulary is described in one of the following
+subsections. The heading gives the encoded value for the term that is to be
+used as the value of the code attribute of the "OLAC-Discourse-Type"
+extension of the Type metadata element <cit>OLAC-MS</cit>. Under the heading, the
+term is described in four ways. Name gives a descriptive label for the term.
+Definition is a one-line summary of what the term means. Comments offers
+more details on what the term represents. Examples may also be given to
+illustrate how the term is meant to be applied.
+</p>
+
+<term>
+  <code>dialogue</code>
+  <name>Dialogue</name>
+  <definition>An interactive discourse with two or more participants.</definition>
+  <examples><p>
+    Examples of dialogues include conversations,
+    interviews, correspondence, consultations, greetings
+    and leave-takings.
+  </p></examples>
+</term>
+
+<term>
+  <code>drama</code>
+  <name>Drama</name>
+  <definition>A planned, creative, rendition of discourse involving
+              two or more participants.</definition>
+  <comment><p>Usually a drama involves mimesis of events, either real
+              or imagined.
+  </p></comment>
+  <examples><p>Examples of drama include plays, skits, and enacted
+                 scenes.
+  </p></examples>
+</term>
+
+<term>
+  <code>formulaic</code>
+  <name>Formulaic</name>
+  <definition>The resource is a ritually or conventionally structured
+                 discourse.</definition>
+  <examples><p>Examples of formulaic discourse are prayers, curses,
+                 blessings, charms, curing rituals, marriage vows, and
+                 oaths.
+  </p></examples>
+</term>
+
+<term>
+  <code>ludic</code>
+  <name>Ludic</name>
+  <definition>Ludic discourse is language whose primary function is
+                 to be part of play, or a style of speech that involves
+                 a creative manipulation of the structures of the
+                 language.
+  </definition>
+  <examples><p>Examples of ludic discourse are play languages, jokes,
+                 secret languages, and speech disguises.
+  </p></examples>
+</term>
+
+<term>
+  <code>oratory</code>
+  <name>Oratory</name>
+  <definition>The art of public speaking, or of speaking eloquently
+                 according to rules or conventions.</definition>
+  <examples><p>Examples of oratory include sermons, lectures,
+                 political speeches, and invocations.
+  </p></examples>
+</term>
+
+<term>
+  <code>narrative</code>
+  <name>Narrative</name>
+  <definition>A monologic discourse which represents temporally
+                 organized events.</definition>
+  <examples><p> Types of narratives include historical, traditional,
+                 and personal narratives, myths, folktales, fables, and
+                 humorous stories.
+  </p></examples>
+</term>
+
+<term>
+  <code>procedural</code>
+  <name>Procedural</name>
+  <definition>An explanation or description of a method, process, or
+                 situation having ordered steps.
+  </definition>
+  <examples><p>Examples of procedural discourses include recipes,
+                 instructions, and plans.
+  </p></examples>
+</term>
+
+<term>
+  <code>report</code>
+  <name>Report</name>
+  <definition>A factual account of some event or circumstance.</definition>
+  <examples><p>Examples of reports include news reports, essays, and
+                 commentaries.
+  </p></examples>
+</term>
+
+
+<term>
+  <code>singing</code>
+  <name>Singing</name>
+  <definition>"Words or sounds [articulated] in succession with
+                 musical inflections or modulations of the voice" OED.
+  </definition>
+  <examples><p>Examples of singing include chants, songs, and choruses.
+  </p></examples>
+</term>
+
+
+<term>
+  <code>unintelligible_speech</code>
+  <name>Unintelligible speech</name>
+  <definition>The resource consists of utterances that are not
+                 intended to be interpretable as ordinary language.</definition>
+  <examples><p>Examples of unintelligible speech include sacred
+                 languages, speaking in tongues, and singing syllables
+                 (fa-la-la).
+  </p></examples>
+</term>
+
+</section>
+</body>
+
+<references>
+  <ref abbrev="OLAC-MS">OLAC Metadata Set.<br/>
+    &lt;<url>http://www.language-archives.org/OLAC/olacms.html</url>&gt;</ref>
+</references>
+</OLAC_doc>

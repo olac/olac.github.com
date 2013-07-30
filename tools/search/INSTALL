@@ -1,0 +1,92 @@
+----------------
+INSTALLATION
+----------------
+
+  1. Set up the OLAC harvester (available from olac.sf.net) to store data in 
+	a MySQL database.
+
+  2. Change the value of $dbName on line 7 of ./search/lib/olacdb.php to name 
+	of the OLAC database. 
+	
+     Change $username, $password and $hostname on lines 9 to 11 of 
+	./search/lib/olacdb.php to the appropriate values for connecting to 
+	the OLAC database.
+
+     Change $URLBASE in ./search/searchInclude.php on line 2 to the base URL of
+	the directory where the files in search/ are stored. 
+
+  3. Create Ethnologue tables:
+
+	Move the following files into the database directory:
+		LanguageIndex.tab
+		LanguageCodes.tab
+		ChangeHistory.tab
+		CountryCodes.tab
+
+	Then run:
+	mysql> source ./search/lib/ethnologue.sql
+	
+		[ NOTE: 
+			The .tab files need to reside in the database directory
+			for the above command to work.
+			Else, make all files readable by all and submit each
+			command below using full file names
+
+		mysql> source ethnologueTables.sql
+		mysql> LOAD DATA INFILE "ChangeHistory.tab" INTO TABLE
+        		ChangeHistory(LangID, Action, Date, Description);
+
+		mysql> LOAD DATA INFILE "LanguageCodes.tab" 
+			INTO TABLE LanguageCodes;
+
+		mysql> LOAD DATA INFILE "LanguageIndex.tab" 
+			INTO TABLE LanguageIndex;
+
+		mysql> LOAD DATA INFILE "CountryCodes.tab" 
+			INTO TABLE CountryCodes;
+		]
+
+  4. Create Google, soundex and ranking tables:
+
+	To create and populate the Google search term table, run:
+	?> php lib/createGoogleTable.php
+	
+	To create the soundex and ranking tables:
+	mysql> source lib/searchTables.sql
+
+		[ Creates the tables:
+			SOUNDEX_TABLE
+			TAG_USAGE
+			ITEM_SCORES
+			LanguageSoundex - and populates with soundex values
+
+		  Creates the indices:
+			SOUNDEX_INDEX on SOUNDEX_TABLE
+			LangSoundexIndex on LanguageSoundex
+			METADATA_ELEM_INDEX_CONTENT - FULLTEXT index 
+					       on METADATA_ELEM_MYISAM(Content)
+		]
+
+  5. Populate soundex and ranking tables:
+
+	Run the following scripts found in lib:
+	?> php createTagUsageTable.php
+	?> php createSoundexTable.php
+	?> php createItemScoresTable.php
+			[ depends on metadataScoring.php ]
+
+	These scripts can be set to run at the time of harvesting to update
+	the tables which search.php depends upon.
+
+	The createSoundexTable.php script is very expensive to run, as it looks
+	through all of the content tags in the database. Since the
+	probability of finding new distinct words in newly harvested
+	records is low with a large database, this script may not need to be
+	run after every harvest.
+
+
+  6. If moving the lib directory, change the value of LIB in 
+	search/searchInclude.php to the new path of the lib directory. 
+	
+	Similarly, to move the 'style' directory, change $STYLE
+	in search/searchInclude.php.

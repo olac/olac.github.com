@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.compuling.net/projects/olac/software-cpu.xsd"
+           targetNamespace="http://www.compuling.net/projects/olac/software-cpu.xsd"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:annotation>
+    <xs:documentation>
+      1.0 draft OLAC Schema for CPU, Baden Hughes, 2002-09-19
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:simpleType name="software-cpu">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="x86"/>
+      <xs:enumeration value="MIPS"/>
+      <xs:enumeration value="Alpha"/>
+      <xs:enumeration value="Sparc"/>
+      <xs:enumeration value="680x0"/>
+      <xs:enumeration value="PA-RISC"/>
+      <xs:enumeration value="ARM"/>
+      <xs:enumeration value="ARM32"/>
+      <xs:enumeration value="Itanium"/>
+      <xs:enumeration value="IBM_System_360/370/390"/>
+      <xs:enumeration value="Clipper"/>
+      <xs:enumeration value="i370"/>
+      <xs:enumeration value="i860"/>
+      <xs:enumeration value="i960"/>
+      <xs:enumeration value="Power4"/>
+      <xs:enumeration value="Cray"/>
+      <xs:enumeration value="m68k"/>
+      <xs:enumeration value="m88k"/>
+      <xs:enumeration value="ns32k"/>
+      <xs:enumeration value="IBM_rs6000"/>
+      <xs:enumeration value="IBM_rs10000"/>
+      <xs:enumeration value="s390"/>
+      <xs:enumeration value="VAX"/>
+      <xs:enumeration value="PowerPC"/>
+      <xs:enumeration value="DragonBall"/>
+      <xs:enumeration value="StrongARM"/>
+      <xs:enumeration value="Intel_8088"/>
+      <xs:enumeration value="Intel_8080"/>
+      <xs:enumeration value="Intel_8008"/>
+      <xs:enumeration value="Intel_IA-64"/>
+      <xs:enumeration value="Motorola_6502"/>
+      <xs:enumeration value="Motorola_6800"/>
+      <xs:enumeration value="Motorola_ColdFire"/>
+      <xs:enumeration value="Zilog_Z80"/>
+      <xs:enumeration value="Transmeta_Caruso"/>
+      <xs:enumeration value="SH3"/>
+      <xs:enumeration value="x86_64"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

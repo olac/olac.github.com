@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olac
+  xmlns="http://www.language-archives.org/OLAC/0.3/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.language-archives.org/OLAC/0.3/
+                http://www.language-archives.org/OLAC/olac-0.3.xsd"
+  lang="en">
+  <Identifier>http://www.sapir.com/</Identifier>
+  <Language code="x-sil-AAA"/>
+  <Publisher>Cambridge University Press</Publisher>
+  <Subject.language code="x-sil-AAA">my version of the name</Subject.language>
+  <Format.os code="Unix">not all flavors</Format.os>
+  <Format.cpu code="x86"/>
+  <Format.encoding code="ISO-10646-UTF-1"/>
+  <Format.markup>oai:ldc:schemas/fieldnotes.xsd</Format.markup>
+  <Date code="2005-10-2" refine="Modified"/>
+  <Date code="1995-12-4" refine="Issued"/>
+  <Date code="1926-1932" refine="Created" lang="en">circa</Date>
+  <Creator refine="Editor">Sapir, Edward</Creator>
+  <Contributor refine="Sponsor">Linguistic Society of America</Contributor>
+  <Description>notes found in an attic c.1952</Description>
+  <Type code="Dataset"/>
+  <Relation refine="Requires">oai:sil:software/ipafont</Relation>
+</olac>
+

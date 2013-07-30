@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad//DTD HoTMetaL PRO 5.0::19980907::extensions to HTML 4.0//EN" "hmpro5.dtd">
+<html>
+<head>
+  <title>How to Become an OLAC Data Provider</title>
+  <script type="text/javascript" src="/js/gatrack.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="../olac.css">
+</head>
+<body>
+ 
+<hr> 
+<table cellpadding="10">
+ <tbody>
+    <tr>
+ <td> <a href="/"><img
+ src="/images/olac100.gif" border="0">
+      </a></td>
+ <td> 
+      <h1><font color="0x00004a"> How to Become an OLAC Data Provider </font> 
+      </h1>
+ </td>
+ </tr>
+ 
+  </tbody>
+</table>
+ 
+<hr> 
+<p> The Open Language Archives Community seeks to embrace all members of
+the language resources community, from well-established institutional archives
+to individuals who want to share research results. Would-be participants
+thus operate in a wide variety of circumstances. In order to ensure that
+the barrier to participation should be as low as possible, OLAC provides
+three approaches to becoming an OLAC data provider. The following table summarizes
+the three approaches and the circumstances each is designed for. &nbsp;The
+most widely used option at the present time is the second (Static Repositories).</p>
+ 
+<table cellpadding="6">
+ <tbody>
+    <tr>
+ <td valign="top"><i>Approach</i></td>
+ <td valign="top" align="center"><i>Description</i></td>
+ <td valign="top" align="center"><i>Circumstances</i></td>
+ </tr>
+ <tr>
+ <td valign="top"><a href="#conventional">Conventional Repositories</a> &nbsp;&nbsp; 
+      </td>
+ <td valign="top">The data provider implements a software interface to an 
+existing catalog database that permits metadata to be harvested via an HTTP-based
+protocol.</td>
+ <td valign="top">
+      <ul>
+ <li>The collection is already cataloged in a database</li>
+ <li>The provider has a web server</li>
+ <li>The provider has access to a programmer who can implement a metadata 
+harvester for the database</li>
+ 
+      </ul>
+ </td>
+ </tr>
+ <tr>
+ <td valign="top"><a href="#Static">Static Repositories</a></td>
+ <td valign="top">The Static Repository Gateway is an OLAC service that provides
+the harvesting protocol for metadata repositories that are expressed as XML 
+documents.</td>
+ <td valign="top">
+      <ul>
+ <li>There is no existing catalog database and the provider can use an XML
+editor to create one</li>
+        <li>OR there is an existing catalog database and the provider can
+export it to XML<br>
+        </li>
+ <li>The provider can upload to a local web site</li>
+  
+      </ul>
+ </td>
+ </tr>
+ <tr>
+ <td valign="top"><a href="#ORE">ORE</a></td>
+ <td valign="top">The OLAC Repository Editor is a form-based editor on the
+OLAC Web site that allows a user to construct a small metadata repository
+that will be served by the static repository gateway.</td>
+ <td valign="top">
+      <ul>
+ <li>There is no existing catalog database</li>
+ <li>The provider has no local web site or XML capacity</li>
+ 
+      </ul>
+ </td>
+ </tr>
+ 
+  </tbody>
+</table>
+ 
+<p>The sections below describe each of the three approaches in more detail.
+A final section discusses <a href="#Migration">migrating</a> from one approach
+to another.</p>
+  
+<h2><a name="conventional"></a>Using the conventional approach</h2>
+  
+<p>If your archive has the metadata for its collection in an existing database 
+and if your institution has a Web server, then the best approach is to implement
+a software interface that gives access to the metadata records through the
+<a href="/OLAC/protocol.html"> OLAC Protocol
+for Metadata Harvesting</a>. The advantage of this approach is that you need
+not maintain a second version of your metadata in OLAC format; rather, the
+software you implement will query the existing database to get the metadata
+information and then dynamically return it in the format required by the
+OLAC standard. In order to take full advantage of the OLAC standards and
+services it may be desirable to add new information to the existing database
+(such as a way to identify languages according the standard identifiers used
+by OLAC), but it should not be necessary to maintain a duplicate version
+of any information in a different format. </p>
+ 
+<p>In order to pursue this approach, you will need to talk with the system 
+administrator for your institution's web server. Refer your system administrator
+to the OLAC <a href="/tools.html">Tools</a>
+page for a list of existing implementations in various programming languages.</p>
+ 
+<p>When your metadata harvesting interface has been implemented, follow the 
+<a href="http://www.openarchives.org/data/registerasprovider.html">OAI registration
+procedure</a> to ensure that you have correctly implemented the harvesting
+protocol. Once you are successfully registered as an OAI data provider, proceed
+to the <a href="/register/archive.html">OLAC
+registration procedure</a>.</p>
+   
+<h2><a name="Static"></a>Setting up static repositories</h2>
+  
+<p>The OLAC Static Repository Gateway offers an OLAC-compliant metadata harvesting
+interface to a metadata repository that is expressed as an XML document.
+When your archive does not already have a metadata catalog in a database,
+then you can use an XML editor to construct such a catalog. On the other
+hand, if your archive does already have a metadata catalog in a database,
+you may want to export this data to a single XML file for harvesting by OLAC.
+&nbsp;Once you have created the required static repository file, simply post
+it on a publicly accessible web site.</p>
+ 
+<p>Once you repository file is web accessible, the OLAC Static Repository
+Gateway is trivial to use. Construct the baseURL of the metadata harvester
+by appending the URL of the XML file to the URL of the
+gateway as follows: </p>
+ 
+<pre>http://www.language-archives.org/sr/<font color="red">yoursite.domain/path/yourfile.xml</font>
+\_______________ _________________/ \_______________ _______________/
+                V                                   V
+           URL of static                       location of
+        repository gateway                   your repository
+</pre>
+ 
+<p>For instance, appending "?verb=Identify" to the above URL will cause the
+gateway to execute the Identify request against your static repository file.
+&nbsp;Full details about static repositories and examples of existing static
+repositories are available on the <a
+ href="/tools.html">OLAC Tools</a> page.
+&nbsp;Several existing OLAC static repositories can be browsed using the
+<a href="/archives.php4">OLAC Archives</a>
+page. &nbsp;For information about available XML editors, please see the <a
+ href="http://wdvl.com/Software/XML/editors.html">XML Software Guide</a>, 
+the <a href="http://www.oasis-open.org/cover/xml.html#xmlEditing">XML Cover
+Pages</a>, or <a
+ href="http://www.garshol.priv.no/download/xmltools/cat_ix.html#C_Editing">free 
+XML editors</a>. </p>
+ 
+<p>Once your repository file is posted at a publicly accessible URL, proceed
+to the <a href="/register/archive.html"> OLAC
+registration page</a>.</p>
+   
+<p>Questions about static repositories should be addressed to <a
+ href="mailto:admin@language-archives.org">admin@language-archives.org</a>.</p>
+  
+<h2><a name="ORE"></a>Using ORE: the OLAC Repository Editor</h2>
+  
+<p> A centralized forms-based service permits people to create and manage
+XML repositories. This service is provided for those who do not have the
+capacity to use an XML editor or to post an XML file to a local web site.
+ For further information please see the ORE page on the LINGUIST site at:
+<a href="http://www.linguistlist.org/ore/">http://www.linguistlist.org/ore/</a>.
+&nbsp;During the editing process, the metadata repository is stored in a relational
+database on the LINGUIST site. At any point, the repository can be exported
+as an XML file, and <i>registered</i> with OLAC to make it available for harvesting.
+</p>
+  
+<p>Questions about ORE should be addressed to <a
+ href="mailto:ore@language-archives.org">ore@language-archives.org</a>.</p>
+  
+<h2><a name="Migration"></a>Migration strategy</h2>
+  
+<p>As the circumstances of your archive change over time, it is easy to migrate 
+your implementation from one approach to another. The only constraint on migration
+is that you should not change the unique identifier of your repository. What
+will change as you migrate is the base URL for your data provider. When you
+have a new implementation ready to go at a different base URL, all you have
+to do to effect the migration is to re-<a
+ href="http://www.openarchives.org/data/registerasprovider.html">register
+at OAI</a> with the new base URL, and then re-<a
+ href="/register/archive.html">register at
+OLAC</a>. </p>
+ 
+<hr> 
+<p> <a href="/">OLAC</a> </p>
+ <br>
+</body>
+</html>

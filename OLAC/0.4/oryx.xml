@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OLAC-Repository
+  xmlns="http://www.language-archives.org/OLAC/0.4/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.language-archives.org/OLAC/0.4/
+                      http://www.language-archives.org/OLAC/0.4/oryx.xsd">
+  <identity>
+    <repositoryName>Linguistic Data Consortium</repositoryName>
+    <repositoryIdentifier>ldc</repositoryIdentifier>
+    <adminEmail>mailto:ldc@ldc.upenn.edu</adminEmail>
+    <sampleIdentifier>oai:ldc:LDC98S3</sampleIdentifier>
+    <olac-archive type="institutional">
+      <archiveURL>http://www.ldc.upenn.edu</archiveURL>
+      <curator>curator</curator>
+      <curatorTitle></curatorTitle>
+      <curatorEmail>mailto:ldc@ldc.upenn.edu</curatorEmail>
+      <institution>LDC</institution>
+      <institutionURL>http://www.ldc.upenn.edu</institutionURL>
+      <location>3615 Market street, Suite 200, Philadelphia, PA 19104</location>
+      <synopsis>List of corpora published by LDC</synopsis>
+      <access>access</access>
+    </olac-archive>
+  </identity>
+
+<sets>
+  <set><setSpec>lexicon</setSpec><setName>Lexicon</setName></set>
+  <set><setSpec>speech</setSpec><setName>Speech</setName></set>
+  <set><setSpec>text</setSpec><setName>Text</setName></set>
+  <set><setSpec>eval</setSpec><setName>Eval</setName></set>
+</sets>
+
+<records>
+
+<record spec="speech">
+  <header>
+    <recordId>LDC93S7</recordId>
+    <datestamp>1993-01-01</datestamp>
+  </header>
+  <metadata>
+    <olac langs="en">
+      <identifier>LDC93S7</identifier>
+      <title>SWITCHBOARD</title>
+      <type>speech</type>
+      <date>1993</date>
+      <identifier>http://morph.ldc.upenn.edu/Catalog/LDC93S7.html</identifier>
+      <creator>John J. Godfrey</creator>
+      <creator>Ed Holliman</creator>
+      <publisher>LDC</publisher>
+      <subject.language code="x-sil-ENG">English</subject.language>
+      <description>telephone</description>
+      <description>Hub5-LVCSR</description>
+      <description>10000</description>
+      <description>Number of CDs: 23</description>
+      <description>speech, text</description>
+      <description>Recommended applications: speech recognition, speaker identification</description>
+      <description>Member license: http://www.ldc.upenn.edu/Catalog/mem_agree/</description>
+      <description>Nonmember license: http://www.ldc.upenn.edu/Catalog/nonmem_agree/generic.license.html</description>
+      <description>Online documentation:  http://www.ldc.upenn.edu/Catalog/docs/switchboard/</description>
+    </olac>
+  </metadata>
+</record>
+
+</records>
+</OLAC-Repository>

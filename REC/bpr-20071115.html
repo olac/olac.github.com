@@ -1,0 +1,403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Best Practice Recommendations for Language Resource Description</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="Best Practice Recommendations for Language Resource Description">
+<meta name="Creator" content="Gary Simons, SIL International (mailto:gary_simons@sil.org)&#10;         Steven Bird, University of Pennsylvania (mailto:sb@ldc.upenn.edu)&#10;         Joan Spanne, SIL International (mailto:joan_spanne@sil.org)">
+<meta name="Description" content="&#10;         This document expresses the consensus of the Open Language Archives Community on best&#10;            practice recommendations for language resource description using the OLAC metadata&#10;            standard OLAC-Metadata.&#10;      ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20071115">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>Best Practice Recommendations for Language Resource Description</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2007-11-15</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Recommendation. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/REC/bpr-20071115.html">http://www.language-archives.org/REC/bpr-20071115.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/REC/bpr.html">http://www.language-archives.org/REC/bpr.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td>None.</td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>This document expresses the consensus of the Open Language Archives Community on best
+            practice recommendations for language resource description using the OLAC metadata
+            standard [<a href="http://www.language-archives.org/OLAC/metadata.html">OLAC-Metadata</a>].</p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>Gary Simons, SIL International (<a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>)
+         <br>Steven Bird, University of Pennsylvania (<a href="mailto:sb@ldc.upenn.edu">mailto:sb@ldc.upenn.edu</a>)
+         <br>Joan Spanne, SIL International (<a href="mailto:joan_spanne@sil.org">mailto:joan_spanne@sil.org</a>)</editors>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 2007 Gary Simons (SIL International), Steven Bird (University of Pennsylvania), and
+      Joan Spanne (SIL International). This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Recommendations">Recommendations</A>
+<UL>
+<LI>
+<A href="#All elements">All elements</A>
+</LI>
+<LI>
+<A href="#Contributor">Contributor</A>
+</LI>
+<LI>
+<A href="#Coverage">Coverage</A>
+</LI>
+<LI>
+<A href="#Creator">Creator</A>
+</LI>
+<LI>
+<A href="#Date">Date</A>
+</LI>
+<LI>
+<A href="#Description">Description</A>
+</LI>
+<LI>
+<A href="#Format">Format</A>
+</LI>
+<LI>
+<A href="#Identifier">Identifier</A>
+</LI>
+<LI>
+<A href="#Language">Language</A>
+</LI>
+<LI>
+<A href="#Publisher">Publisher</A>
+</LI>
+<LI>
+<A href="#Relation">Relation</A>
+</LI>
+<LI>
+<A href="#Source">Source</A>
+</LI>
+<LI>
+<A href="#Subject">Subject</A>
+</LI>
+<LI>
+<A href="#Title">Title</A>
+</LI>
+<LI>
+<A href="#Type">Type</A>
+</LI>
+</UL>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>This document expresses the consensus of the Open Language Archives Community on best
+            practices for describing language resources using the OLAC metadata standard
+               [<a href="http://www.language-archives.org/OLAC/metadata.html">OLAC-Metadata</a>]. The standard itself specifies the formal constraints on the
+            syntax of valid descriptions, but does not set requirements on the content of the
+            metadata elements (beyond general conformance to the definitions of the qualified Dublin
+            Core metadata set [<a href="http://dublincore.org/documents/dcmi-terms/">DCMT</a>]). This document provides more detailed guidance about
+            the content of specific metadata elements.</p>
+<p>This document does not provide a complete set of advice about what the metadata elements
+            mean or about how they should be used. Such advice is supplied in an OLAC informational
+            note [<a href="http://www.language-archives.org/NOTE/usage.html">OLAC-Usage</a>]. This document lists the specific metadata usage guidelines
+            that have been agreed upon by the OLAC community as representing best practice. It is
+            not a requirement of participation that OLAC data providers follow these
+            recommendations. However, these recommendations are used as the standard for evaluating
+            the quality of the metadata records supplied by an OLAC data provider. </p>
+<h2>
+<A name="Recommendations"></A>2. Recommendations</h2>
+<p>The following are the OLAC recommendations on best practices for describing language
+            resources.  Follow the "more"
+            link to see the fuller discussion of an element in
+            [<a href="http://www.language-archives.org/NOTE/usage.html">OLAC-Usage</a>] including definition, usage notes, and examples.</p>
+<h3>
+<A name="All elements"></A>All elements<small> (<a href="../NOTE/usage.html#All elements">more</a>)</small>
+</h3>
+<OL START="1">
+<LI>
+<p>Recommended best practice is for the value of each metadata element to conform to the definition of
+                  that element as given in [<a href="http://dublincore.org/documents/dcmi-terms/">DCMT</a>].</p>
+</LI>
+</OL>
+<OL START="2">
+<LI>
+<p>When the meaning of a particular element in a metadata record fits the definition of a refinement,
+                  recommended best practice is to use the refinement rather than the generic element.</p>
+</LI>
+</OL>
+<OL START="3">
+<LI>
+<p>When applicable, recommended best practice is to use the <i>xsi:type</i> attribute to specify an
+                  encoding scheme so as to express the value of the element with precision.</p>
+</LI>
+</OL>
+<OL START="4">
+<LI>
+<p>Whenever the language of the element content is other than English, recommended best practice is to
+                  use the <i>xml:lang</i> attribute with a value from [<a href="http://www.language-archives.org/REC/language.html">OLAC-Language</a>] to identify the language.</p>
+</LI>
+</OL>
+<OL START="5">
+<LI>
+<p>When a resource has more than one value for a particular metadata element or refinement, recommended
+                  best practice is to use a separate instance of the element or refinement for each value rather than
+                  listing all the values in a single instance.</p>
+</LI>
+</OL>
+<h3>
+<A name="Contributor"></A>Contributor<small> (<a href="../NOTE/usage.html#Contributor">more</a>)</small>
+</h3>
+<OL START="6">
+<LI>
+<p>Recommended best practice is to identify a Contributor by means of a name in a form that is ready for
+                  sorting within an alphabetical index. </p>
+</LI>
+</OL>
+<OL START="7">
+<LI>
+<p>Recommended best practice is to use a value from the <i>olac:role</i> scheme to indicate the role of the
+                  Contributor.</p>
+</LI>
+</OL>
+<h3>
+<A name="Coverage"></A>Coverage<small> (<a href="../NOTE/usage.html#Coverage">more</a>)</small>
+</h3>
+<OL START="8">
+<LI>
+<p>Recommended best practice is that a metadata record should contain at least one Coverage (or one of
+                  its refinements) or Description (or one of its refinements) or Subject element in order to give the
+                  prospective user some idea of the content of the resource that goes beyond the informative potential
+                  of just a title alone. Using all of these elements is encouraged.</p>
+</LI>
+</OL>
+<OL START="9">
+<LI>
+<p>In the case of spatial coverage, recommended best
+                   practice is to use a value from an encoding scheme to give
+                  precise geocoding of the resource.</p>
+</LI>
+</OL>
+<h3>
+<A name="Creator"></A>Creator<small> (<a href="../NOTE/usage.html#Creator">more</a>)</small>
+</h3>
+<OL START="10">
+<LI>
+<p>Recommended best practice is to use the Contributor element instead of Creator, except in cases where
+                  there is significant creative involvement by the person or organization and there is no suitable
+                  refinement term from the <i>olac:role</i> scheme to use with Contributor.</p>
+</LI>
+</OL>
+<h3>
+<A name="Date"></A>Date<small> (<a href="../NOTE/usage.html#Date">more</a>)</small>
+</h3>
+<OL START="11">
+<LI>
+<p>Recommended best practice is that a record have at least one instance of Date (or one of its
+                  refinements).</p>
+</LI>
+</OL>
+<OL START="12">
+<LI>
+<p>Recommended best practice is that every instance of
+                   Date (or one of its refinements) use a value
+                   matching the
+                     <i>dcterms:W3CDTF</i> scheme, or enclose the element value in square brackets if the value does not
+                  conform to the encoding scheme (<i>e.g.,</i> if it is supplied by the cataloger, is approximate, or is
+                  in some doubt). </p>
+</LI>
+</OL>
+<h3>
+<A name="Description"></A>Description<small> (<a href="../NOTE/usage.html#Description">more</a>)</small>
+</h3>
+<OL START="13">
+<LI>
+<p>Recommended best practice is that a metadata record should contain at least one Description (or one of
+                  its refinements) or Coverage (or one of its refinements) or Subject element in order to give the
+                  prospective user some idea of the content of the resource that goes beyond the informative potential
+                  of just a title alone. Using all of these elements is encouraged.</p>
+</LI>
+</OL>
+<h3>
+<A name="Format"></A>Format<small> (<a href="../NOTE/usage.html#Format">more</a>)</small>
+</h3>
+<OL START="14">
+<LI>
+<p>In the case of a digital resource, recommended best practice is to express the Format using a MIME
+                  type value from the <i>dcterms:IMT</i> scheme. </p>
+</LI>
+</OL>
+<h3>
+<A name="Identifier"></A>Identifier<small> (<a href="../NOTE/usage.html#Identifier">more</a>)</small>
+</h3>
+<OL START="15">
+<LI>
+<p>When the value of Identifier is a Uniform Resource Locator (URL), recommended best practice is to
+                  specify the <i>dcterms:URI</i> scheme.</p>
+</LI>
+</OL>
+<h3>
+<A name="Language"></A>Language<small> (<a href="../NOTE/usage.html#Language">more</a>)</small>
+</h3>
+<OL START="16">
+<LI>
+<p>Recommended best practice is that every record contain at least one Language element. For a resource
+                  that does not include language content, include a Language element containing the code <tt>zxx</tt>
+                  for &ldquo;No linguistic content.&rdquo;</p>
+</LI>
+</OL>
+<OL START="17">
+<LI>
+<p>Recommended best practice is to use a value from the <i>olac:language</i> scheme with the Language element to
+                  identify an individual language precisely. </p>
+</LI>
+</OL>
+<h3>
+<A name="Publisher"></A>Publisher<small> (<a href="../NOTE/usage.html#Publisher">more</a>)</small>
+</h3>
+<OL START="18">
+<LI>
+<p>Recommended best practice is to identify a Publisher by means of a name in a form that is ready for
+                  sorting within an index.</p>
+</LI>
+</OL>
+<h3>
+<A name="Relation"></A>Relation<small> (<a href="../NOTE/usage.html#Relation">more</a>)</small>
+</h3>
+<OL START="19">
+<LI>
+<p>When the related resource is also held in a participating archive, recommended best practice is to
+                  identify the related resource by means of its OAI identifier. A Relation that begins with &ldquo;oai:&rdquo; will
+                  typically be presented by service providers as an active link that retrieves the metadata for that
+                  resource.</p>
+</LI>
+</OL>
+<OL START="20">
+<LI>
+<p>If the related resource is not cataloged in the system of a participating archive, recommended best
+                  practice is to identify the related resource through a standard unique identifier. If the related
+                  resource is available online, specify the <i>dcterms:URI</i> scheme and give a stable Uniform Resource
+                  Locator (URL).</p>
+</LI>
+</OL>
+<h3>
+<A name="Source"></A>Source<small> (<a href="../NOTE/usage.html#Source">more</a>)</small>
+</h3>
+<OL START="21">
+<LI>
+<p>Recommended best practice is as for the Relation element above. </p>
+</LI>
+</OL>
+<h3>
+<A name="Subject"></A>Subject<small> (<a href="../NOTE/usage.html#Subject">more</a>)</small>
+</h3>
+<OL START="22">
+<LI>
+<p>Recommended best practice is that a metadata record should contain at least one Subject or Coverage
+                  (or one of its refinements) or Description element (or one of its refinements) in order to give the
+                  prospective user some idea of the content of the resource that goes beyond the informative potential
+                  of just a title alone. Using all of these elements is encouraged.</p>
+</LI>
+</OL>
+<OL START="23">
+<LI>
+<p>When the subject is a human language, recommended
+                   best practice is to use a value from the <i>olac:language</i>
+                  scheme with the Subject element to identify an individual language precisely. </p>
+</LI>
+</OL>
+<OL START="24">
+<LI>
+<p>When the subject matter falls within the field of
+                   linguistics, recommended best practice is to use a
+                   value from the
+                     <i>olac:linguistic-field</i> scheme to identify the subfield.</p>
+</LI>
+</OL>
+<h3>
+<A name="Title"></A>Title<small> (<a href="../NOTE/usage.html#Title">more</a>)</small>
+</h3>
+<OL START="25">
+<LI>
+<p>Recommended best practice is that every record must have an instance of the Title element. When the
+                  resource does not have a formal title, the cataloger should supply a descriptive title and enclose it
+                  in square brackets.</p>
+</LI>
+</OL>
+<OL START="26">
+<LI>
+<p>Recommended best practice is that there be only one instance of the unqualified Title element, namely,
+                  for the original title (except in the case of parallel titles on a diglot work). All other titles
+                     (<i>e.g.,</i> translations) should be specified as the <i>dcterms:alternative</i> refinement.</p>
+</LI>
+</OL>
+<h3>
+<A name="Type"></A>Type<small> (<a href="../NOTE/usage.html#Type">more</a>)</small>
+</h3>
+<OL START="27">
+<LI>
+<p>Recommended best practice is that every record
+                   should contain at least one Type element that uses
+                   a value from the
+                     <i>dcterms:DCMIType</i> scheme to identify the
+                    nature or genre of the content of the resource.</p>
+</LI>
+</OL>
+<OL START="28">
+<LI>
+<p>Recommended best practice is that every record for which it is applicable should contain at least one
+                  Type element that uses a value from the <i>olac:linguistic-type</i> scheme to identify its linguistic data type.
+               </p>
+</LI>
+</OL>
+</body>
+<a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="DCMT">DCMT</a>]</td><td>DCMI Metadata
+            Terms.<br>&lt;<a href="http://dublincore.org/documents/dcmi-terms/">http://dublincore.org/documents/dcmi-terms/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="ISO639-3">ISO639-3</a>]</td><td>ISO 639: Codes for the representation of names of languages - Part 3:
+         Alpha-3 code for comprehensive coverage of languages.<br>
+            &lt;<a href="http://www.sil.org/iso639-3/">http://www.sil.org/iso639-3/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Metadata">OLAC-Metadata</a>]</td><td>OLAC
+            Metadata.<br>&lt;<a href="http://www.language-archives.org/OLAC/metadata.html">http://www.language-archives.org/OLAC/metadata.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Usage">OLAC-Usage</a>]</td><td>OLAC Metadata Usage
+            Guidelines.<br>&lt;<a href="http://www.language-archives.org/NOTE/usage.html">http://www.language-archives.org/NOTE/usage.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

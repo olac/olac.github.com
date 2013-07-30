@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:olac="http://www.language-archives.org/OLAC/0.4/"
+        targetNamespace="http://www.language-archives.org/OLAC/0.4/"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+
+  <annotation>
+    <documentation>
+
+      Schema for the OLAC Archive Description, Version 0.4-2
+      Steven Bird, 2001-01-23
+
+      Schema validated at http://www.w3.org/2001/03/webdata/xsv
+      XSV 1.203.2.38/1.106.2.21 of 2001/12/07 20:43:15
+
+      OLAC Archive Description semantics available at:
+      http://www.language-archives.org/OLAC/protocol-20011210.html
+
+    </documentation>
+  </annotation>
+
+  <element name="olac-archive" type="olac:olac-archive"/>
+
+  <complexType name="olac-archive">
+    <complexContent>
+      <restriction base="anyType">
+        <sequence>
+          <element name="archiveURL" minOccurs="0" type="anyURI"/>
+          <element name="curator" type="string"/>
+          <element name="curatorTitle" minOccurs="0" type="string"/>
+          <element name="curatorEmail" minOccurs="0" type="olac:mailto"/>
+          <element name="institution" type="string"/>
+          <element name="institutionURL" minOccurs="0" type="anyURI"/>
+          <element name="location" minOccurs="0" type="olac:block"/>
+          <element name="synopsis" type="olac:block"/>
+          <element name="access" type="olac:block"/>
+          <element name="copyright" type="olac:block"/>
+          <element name="license" type="olac:block" fixed="All metadata harvested from this data provider may be distributed only subject to the terms and conditions set forth in the OLAC License, available at http://www.language-archives.org/docs/license.html."/>
+          <element name="licenseRestriction" type="olac:restriction"/>
+        </sequence>
+        <attribute name="type" use="required" type="olac:OAT"/>
+      </restriction>
+    </complexContent>
+  </complexType>
+
+<!-- OLAC Archive Type -->
+
+  <simpleType name="OAT">
+    <restriction base="string">
+      <enumeration value="institutional"/>
+      <enumeration value="personal"/>
+    </restriction>
+  </simpleType>
+
+  <complexType name="restriction">
+    <simpleContent>
+      <extension base="olac:block">
+        <attribute name="type">
+          <simpleType>
+            <restriction base="string">
+              <enumeration value="non-commercial"/>
+              <enumeration value="other"/>
+            </restriction>
+          </simpleType>
+        </attribute>
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <simpleType name="mailto">
+    <restriction base="anyURI">
+      <pattern value="mailto:.*"/>
+    </restriction>
+  </simpleType>
+
+  <simpleType name="block">
+    <restriction base="string">
+      <maxLength value="1000"/>
+    </restriction>
+  </simpleType>
+
+</schema>
+

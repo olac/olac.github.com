@@ -1,0 +1,64 @@
+img {
+    border: 0px;
+}
+
+#world-map {
+    margin: 10px;
+}
+
+#result-box {
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+}
+
+#result-box hr {
+    border: none 0px;
+    border-top: 1px dashed;
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+    width: 25em;
+}
+
+#search-box {
+    width: 560px;
+}
+
+.gs-watermark {
+    display: none;
+}
+
+.gs-visibleUrl, .gs-visibleUrl-short {
+    display: none;
+}
+
+.gs-webResult {
+    //margin-bottom: 1em;
+    padding: 0.25em;
+}
+
+.pageindex {
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline;
+    margin-right: 8px;
+}
+
+.pageindex-current {
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.searchtitle {
+    font-size: 24px;
+    font-color: #00004a;
+}
+
+.bottomsign {
+    font-size: 14px;
+    font-color: #00004a;
+}
+
+.narrow-p {
+    width: 80%;
+}

@@ -1,0 +1,139 @@
+<!-- edited with XML Spy v4.3 (http://www.xmlspy.com) by Gary Simons (SIL International) -->
+<!--<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE OLAC_doc [
+
+DTD for OLAC documents
+Gary Simons, SIL International, 16 Feb 2001
+Last modified: 3 Dec 2002
+-->
+<!ELEMENT OLAC_doc (header, body, todo?, references?)>
+<!--Header information for the document-->
+<!ELEMENT header (status, title, baseName, issued, previousIssued, abstract, editors, copyright, changes)>
+<!--The status of the document. When the OLAC document process is fully defined,
+this will use a closed list of values.-->
+<!ELEMENT status EMPTY>
+<!ATTLIST status
+	code (draft | proposed | candidate | adopted | superseded | withdrawn) #REQUIRED
+	type (standard | recommendation | experimental | informational | implementation) #REQUIRED
+>
+<!--Title of document-->
+<!ELEMENT title (#PCDATA)>
+<!--Base name of file (that is, without path or .html extension)-->
+<!ELEMENT baseName (#PCDATA)>
+<!ATTLIST baseName
+	cv (Code | Refine) #IMPLIED
+>
+<!--Date document was issued (yyyy-mm-dd)-->
+<!ELEMENT issued (#PCDATA)>
+<!--Date issued for previous version-->
+<!ELEMENT previousIssued (#PCDATA)>
+<!--An abstract for the document-->
+<!ELEMENT abstract (p)>
+<!--Paragraph-->
+<!ELEMENT p (#PCDATA | i | tt | url | cit | xref)*>
+<!--Italic-->
+<!ELEMENT i (#PCDATA)>
+<!--Teletype (i.e. Fixed pitch font)-->
+<!ELEMENT tt (#PCDATA)>
+<!--The content is a URL. The stylesheet will format it as a link.-->
+<!ELEMENT url (#PCDATA)>
+<!--Citation (used as a link to a work in the list of references)
+The element content is the abbrev of a ref in the references section.
+The stylesheet will make it a link and add [ ] around it.-->
+<!ELEMENT cit (#PCDATA)>
+<!--Cross-reference to something else in the document.
+The content of the xref is the content of a <heading> or of the <tag> of
+an <element> or the <code> of a <term>. The stylesheet will format it is a link to the
+cross-referenced item.-->
+<!ELEMENT xref (#PCDATA)>
+<!--The editors of the document-->
+<!ELEMENT editors (#PCDATA | url | br)*>
+<!--Explicit line break-->
+<!ELEMENT br EMPTY>
+<!ELEMENT copyright (#PCDATA)>
+<!--A description of the changes since the version named in <previousVersion>.
+(The reader can follow that link to see the description of the previous set of
+changes, and so on.)-->
+<!ELEMENT changes (p | ul | ol)*>
+<!--Unordered (i.e. bulleted) list-->
+<!ELEMENT ul (li*)>
+<!--List item-->
+<!ELEMENT li (p | ul | ol | dl | blockquote | eg)*>
+<!ELEMENT ol (li*)>
+<!ATTLIST ol
+	start CDATA #IMPLIED
+>
+<!--Definition list-->
+<!ELEMENT dl (dt, dd)+>
+<!ATTLIST dl
+	style (list | table) "list"
+>
+<!--Defined term-->
+<!ELEMENT dt (#PCDATA)>
+<!--Definition-->
+<!ELEMENT dd (p | ul | ol | dl | blockquote | eg)*>
+<!ELEMENT blockquote (p | ul | ol | dl | blockquote | eg)*>
+<!--A coded example. The stylesheet will format it in fixed-pitch type with a block
+indent on the left. Use <br> within for line breaks.-->
+<!ELEMENT eg (#PCDATA | br)*>
+<!--Body of document-->
+<!ELEMENT body (section+)>
+<!--A section of the document. -->
+<!ELEMENT section (heading, (p | ul | ol | dl | blockquote | eg | extensions)*, (subsection+ | element+ | term+)?)>
+<!ELEMENT subsection (subheading, (p | ul | ol | dl | blockquote | eg)*)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT subheading (#PCDATA)>
+<!--The documentation for an element of the metadata set. This is used only
+in the OLAC Metadata Set document.-->
+<!ELEMENT element (tag, name, definition, comment, attributes?, examples?, todo?)>
+<!--The XML tag used for this metadata element.-->
+<!ELEMENT tag (#PCDATA)>
+<!--The name of the metadata element or controlled vocabulary term-->
+<!ELEMENT name (#PCDATA)>
+<!--One-line definition of what the element is used for or what the
+conttrolled vaculary term represents.-->
+<!ELEMENT definition (#PCDATA)>
+<!--Comments on how the element of term is meant to be used.-->
+<!ELEMENT comment (p | ul | ol)*>
+<!--Describesany attributes which the element may have-->
+<!ELEMENT attributes (p+)>
+<!--Examples of appropriate uses of the element or term-->
+<!ELEMENT examples (p | eg)*>
+<!--List of things remaining to do in order to complete the document, or
+the definition of a particular element or term.-->
+<!ELEMENT todo (p*)>
+<!--The documentation for a term in a controlled vocabulary. This is used only
+in a document that defines a controlled vocabulary. Note that this element is
+recursive so that a controlled vocabulary can encode a taxonomic hierarchy.-->
+<!ELEMENT term (code, name, definition, comment?, examples?, history?, todo?, term*)>
+<!ATTLIST term
+	status (proposed | active | retired) "proposed"
+>
+<!--The coded value for this term. This is the string used as the value of
+the code attributed in a metadata element. If includes the full path if it
+is at a lower level in a hierarchy.-->
+<!ELEMENT code (#PCDATA)>
+<!ELEMENT history (event+)>
+<!ELEMENT event (date, remedy?, comment?)>
+<!ATTLIST event
+	type (proposed | changed | retired | created) #REQUIRED
+>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT remedy (#PCDATA)>
+<!--A set of XDC extensions. Information from the xdc-extension-defn referenced by the href is placed in the current document.-->
+<!ELEMENT extensions (extension+)>
+<!ELEMENT extension EMPTY>
+<!ATTLIST extension
+	name CDATA #REQUIRED
+	ns   CDATA #REQUIRED
+	href CDATA #REQUIRED
+>
+<!--List of work cited in the document-->
+<!ELEMENT references (ref*)>
+<!--Reference for a cited work. The abbrev attribute is the label used to make
+citations in the text (as the content of <cit>).-->
+<!ELEMENT ref (#PCDATA | i | url | br)*>
+<!ATTLIST ref
+	abbrev ID #REQUIRED
+>
+<!ENTITY nbsp "">

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.language-archives.org/OLAC/0.3/">
+
+  <annotation>
+    <documentation>
+      OLAC Schema for software functionality (stub)
+    </documentation>
+  </annotation>
+
+  <simpleType name="OLAC-Functionality-Code">
+    <restriction base="string">
+      <pattern value=".*"/>
+    </restriction>
+  </simpleType>
+  
+</schema>
+  

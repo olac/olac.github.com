@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc><header><status code="draft" type="informational"/>
+<title>Third Party Extensions</title>
+<baseName>third-party-extensions</baseName>
+<issued>20021204</issued>
+<previousIssued></previousIssued>
+<abstract><p>This document lists third-party metadata extensions that are known
+to be compatible with the OLAC Metadata standards.  They have not attained the status of OLAC Recommendations, but data providers are encouraged to try any that seem relevant to the nature of their collection.</p></abstract>
+<editors>Gary Simons, SIL International
+        (<url>mailto:gary_simons@sil.org</url>)<br/>Steven Bird, University of
+        Melbourne (<url>mailto:sb@csse.unimelb.edu.au</url>)</editors>
+<copyright>2002 Gary Simons (SIL International) and Steven Bird (University of Melbourne)</copyright>
+<changes></changes>
+</header>
+<body>
+
+<section>
+
+<heading>Introduction</heading>
+
+<p>The OLAC Metadata standard <cit>OLAC-Metadata</cit> follows the generic
+resource description standard known as "Qualified Dublin Core"
+<cit>DCQ</cit>, and supports a powerful extension mechanism described
+in <cit>OLAC-Extensions</cit>.
+Any party may develop their own metadata extension and use it in OLAC metadata
+records.  This document lists the third-party extensions which are known to
+work with OLAC Metadata. Each
+extension is described in terms of a title and the following five
+attributes:</p>
+
+<dl style="list">
+<dt>Name</dt><dd><p>The symbolic name that is used as the value of the <tt>xsi:type</tt> attribute to indicate that the extension is being used in a metadata element.</p></dd>
+<dt>Date</dt><dd><p>The latest revision date of the extension or its controlled vocabulary.</p></dd><dt>Applies to</dt><dd><p>The Dublin Core elements with which the extension may be used.</p></dd>
+<dt>Description</dt><dd><p>A summary description of what the extension is used for.</p></dd>
+<dt>Documentation</dt><dd><p>A link to a complete document that defines and exemplifies the extension. If the extension involves a controlled vocabulary, the document should also enumerate and define the terms of the vocabulary.</p></dd></dl></section>
+
+<section><heading>Third party extensions</heading>
+
+<p>There are currently no third-party extensions.</p>
+
+<!--
+<p>The following extensions are known to be compatible with OLAC Metadata <cit>OLAC-Metadata</cit>:</p>
+-->
+
+</section>
+
+<section><heading>Hypothetical third party extensions</heading>
+
+<p>The following hypothetical third party extensions are provided as examples:</p>
+
+
+<extensions>
+<extension ns="as" name="language" href="http://www.language-archives.org/devel/third-party/as-formosan.xsd"/>
+<extension ns="childes" name="participant" href="http://www.language-archives.org/devel/third-party/childes.xsd"/>
+<extension ns="ltworld" name="hlt-field" href="http://www.language-archives.org/devel/third-party/ltworld-hlt-field.xsd"/>
+<extension ns="example" name="role" href="http://www.language-archives.org/devel/third-party/example.xsd"/>
+<extension ns="netdc" name="price" href="http://www.language-archives.org/devel/third-party/netdc.xsd"/>
+<extension ns="netdc" name="distribution" href="http://www.language-archives.org/devel/third-party/netdc.xsd"/>
+<extension ns="netdc" name="memberyear" href="http://www.language-archives.org/devel/third-party/netdc.xsd"/>
+<extension ns="netdc" name="license" href="http://www.language-archives.org/devel/third-party/netdc.xsd"/>
+<extension ns="netdc" name="speechformat" href="http://www.language-archives.org/devel/third-party/netdc.xsd"/>
+<extension ns="software" name="cpu" href="http://www.language-archives.org/devel/third-party/software-cpu.xsd"/>
+<extension ns="software" name="os" href="http://www.language-archives.org/devel/third-party/software-os.xsd"/>
+<extension ns="software" name="sourcecode" href="http://www.language-archives.org/devel/third-party/software-sourcecode.xsd"/>
+</extensions>
+
+</section>
+
+</body>
+<references>
+<ref abbrev="DCQ">Dublin Core Qualifiers.<br/>&lt;<url>http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/</url>&gt;</ref>
+<ref abbrev="OLAC-Extensions">Recommended metadata extensions<br/>&lt;<url>http://www.language-archives.org/drafts/olac-extensions.html</url>&gt;</ref>
+<ref abbrev="OLAC-Metadata">OLAC Metadata.<br/>&lt;<url>http://www.language-archives.org/OLAC/metadata.html</url>&gt;</ref>
+</references></OLAC_doc>
+

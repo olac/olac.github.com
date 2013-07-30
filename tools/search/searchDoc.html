@@ -1,0 +1,208 @@
+<html>
+<head>
+    <link rel=stylesheet type=text/css href="docStyle.css">
+
+    <title>Searching of OLAC Metadata: User Guide</title>
+    <script type="text/javascript" src="/js/gatrack.js"></script>
+</head>
+<body>
+
+<!-- CVS Info: $Header: /cvsroot/olac/olac_suite/mu_tools/search/searchDoc.html,v 1.3 2005/03/21 19:44:50 badenh Exp $ -->
+
+<a name="top"></a>
+<hr>
+<h1>Searching of OLAC Metadata: User Guide</h1>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<li><a href="#Introduction">Introduction</a></li>
+<li><a href="#Matching_Records">Matching records</a></li>
+	<ul>
+		<li><a href="#Exact_Word_Matching">
+			2.1 Exact Word Matching</a></li>
+		<li><a href="#Ethnologue_Data">
+			2.4 Ethnologue Data</a></li>
+		<li><a href="#Soundex_Approximate_Matching">
+			2.5 Soundex Approximate Matching</a></li>
+	</ul>
+
+<li><a href="#Metadata_Ranking">Metadata Ranking</a>
+	<ul>
+		<li><a href="#Results_Ordering">
+			3.1 Results Ordering</a></li>
+	</ul>
+</li>
+<li><a href="#To_Do_List">To Do List</a></li>
+<li><a href="#Credits">Credits</a></li>
+<br />
+<li><a href="#References">References</a></li>
+</ol>
+<hr>
+
+<h2><a name="Introduction"></a>1. Introduction</h2>
+<p>
+The purpose of a keywords search facility over OLAC data is to provide a
+simplified means of finding information, without requiring a user to 
+have knowledge of the underlying database (metadata) structure. The ordering
+of matching records is based upon a system of ranking metadata according to
+its observance of best practice guidelines, as well as statistics about the
+usage of metadata tags in records across all OLAC metadata.
+</p>
+
+<h2><a name="Matching_Records"></a>2. Matching records</h2>
+<p>
+The keyword search uses exact word matching using a fulltext index on metadata
+tag content, soundex 
+values for approximate string matching and Ethnologue data providing 
+information on alternate language names.
+</p>
+
+<h4><a name="Exact_Word_Matching"></a>2.1 Exact Word Matching</h4>
+<p>
+The default behaviour of the search is to match exact words in the search
+string and to return records which contain all words, using a fulltext index
+on the content of metadata elements.
+</p>
+
+<h4><a name="Ethnologue_Data"></a>2.2 Ethnologue Data</h4>
+<p>
+If the search string is a language or country name, this is detected (by use
+of the Ethnologue data on alternate language and dialect names) and the user
+is presented with links to launch queries related to that language or country. 
+Where the original search is for a language name, a link is available to view 
+records which use an alternate name for that language or records which provide
+information on a dialect of the originally searched language. Similarly, if
+the original search string is a country name, a list of languages which are 
+spoken in that country can be viewed. Recognising language and country names 
+allows a link to the Ethnologue entry on that search term to be presented where 
+relevant.
+</p>
+<p>
+[This functionality may make the assumption that these are the two most 
+likely/popular types of search on a linguistic database]
+</p>
+
+<h4><a name="Soundex_Approximate_Matching"></a>
+	2.3 Soundex Approximate Matching</h4>
+<p>
+When a search yields no matches, the aim is to minimize mouse clicks to find
+information on either correct spellings of the search term, or information
+on topics related to the original search.
+</p>
+<p>
+Where there are no matching records found in the database, the query string
+is first checked to determine whether it is a language name. If it is the case
+that there are no records about an input language name, it is assumed to be 
+more helpful to present alternate names for the language, rather than similarly 
+spelt words.
+</p>
+<p>
+Where this is not the case, similiarly spelt words are suggested to the user. 
+These words are retrieved from a table of words and their soundex values, the 
+vocabulary consisting of all distinct words found in the content of all OLAC 
+metadata elements. The table is indexed on the soundex value, to provide faster 
+lookup. The words with soundex equal to that of the search term are retrieved 
+and sorted according to their levenshtein edit distance from the search term. 
+Similarly, language names from the Ethnologue tables which have identical 
+soundex values are ranked by levenshtein distance and displayed as possible 
+corrections to the original query string. Again, this separation of similarly 
+spelt words and similarly spelt language names makes an assumption that 
+language names are most frequently searched.
+</p>
+
+<h2><a name="Metadata_Ranking"></a>3. Metadata Ranking</h2>
+<p>
+The scoring of metadata is used in results ordering, taking into account
+the usage of tags across all archives and the code usage within records.
+</p>
+<p>
+Please see the
+<a href="/tools/reports/ExplainReport.html">
+documentation of the archive report cards</a> for details
+of the metadata quality formula.
+</p>
+
+
+<h4><a name="Results_Ordering">3.1 Results Ordering</h4>
+
+<p>
+Records which match the search term are grouped together according to their
+archive. The ordering of the archives depends upon the metadata 
+quality and the number of matching records from that archive.
+</p>
+<p>
+The score of a matched record is given by:
+<br /><br />
+&nbsp; &nbsp; &nbsp;
+Score = (5/10) * (record quality out of 10)
+<br /><br />
+converted into a rating out of five stars for display. [Use of the tag usage
+rank of the tag containing the matching term could be introduced in order
+to rank more highly records which contain the matched term in more popular
+fields.]
+</p>
+<p>
+These record scores are aggregated for each archive, and the archives with
+matching records are ordered based on this aggregate quality score.
+</p>
+
+<h2><A name="feedback">5. Feedback</h2>
+The developers of the OLAC Search Engine welcome your feedback by email
+to <A HREF="mailto:olac-search-dev@cs.mu.oz.au">olac-search-dev@cs.mu.oz.au</A>.
+
+<h2><a name="Credits"/>6. Credits</h2>
+
+<p>The Search service was developed by Amol Kamat, Baden Hughes, and Steven
+Bird at the University of Melbourne, with sponsorship from the Department of
+Computer Science and Software Engineering, and the Linguistic Data
+Consortium.</p>
+
+<p>The Archive Reports service was developed by Amol Kamat, Baden Hughes, and
+Steven Bird at the University of Melbourne, with sponsorship from the
+Department of Computer Science and Software Engineering and the Linguistic
+Data Consortium.</p>
+
+<hr>
+<h2><a name="References"></a>6. References</h2>
+
+<table>
+
+<tr>
+	<td>&nbsp;</td>
+	<td><b>Recommended metadata extensions</b><br />
+	<a href="/REC/olac-extensions.html">
+		http://www.language-archives.org/REC/olac-extension.html</a>
+	</td>
+</tr>
+
+<tr><td></td><td></td></tr>
+
+<tr>
+	<td>&nbsp;</td>
+	<td>Baden Hughes, 2004. <b>Metadata Quality Evaluation: Experience
+	from the Open Language Archives Community.</b> Proceedings of the 7th
+	International Conference on Asian Digital Libraries (ICADL 2004).
+	Lecture Notes on Computer Science 3334. pp 320-329. Springer-Verlag.
+	</td>
+</tr>
+
+<tr>
+	<td>&nbspl</td>
+	<td>Baden Hughes and Amol Kamat, 2005.
+	<b>A Metadata Search Engine for Digital Language Archives.</b> 
+	DLib Magazine 11(2), February 2005. [<A HREF="http://www.dlib.org/dlib/february05/hughes/02hughes.html">Online</A>]
+	</td>
+
+</tr>
+
+</table>
+<hr>
+<a href="#top">Back to top</a>
+
+</body>
+</html>
+
+
+
+
+

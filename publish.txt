@@ -1,0 +1,14 @@
+*.css
+*.doc
+*.dtd
+*.html
+*.pdf
+*.sdd
+*.sql
+*.txt
+*.xml
+*.xsd
+*.xsl
+Makefile
+README
+document_build

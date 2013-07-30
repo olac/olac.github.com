@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns="http://www.ling.sinica.edu.tw/Formosan/as-formosan.xsd"
+           targetNamespace="http://www.ling.sinica.edu.tw/Formosan/as-formosan.xsd"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:annotation>
+    <xs:documentation>
+       A hypothetical 3rd party extension for the Academia Sinica scheme for
+       identifying Formosan languages.  This list is incomplete, and has not
+       been adopted by Academia Sinica.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:import namespace="http://purl.org/dc/elements/1.1/"
+             schemaLocation="http://www.ukoln.ac.uk/metadata/dcmi/xmlschema/20021007/dc.xsd"/>
+
+  <xs:complexType name="language">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="formosan" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- incomplete list -->
+  <xs:simpleType name="formosan">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Amis"/>
+      <xs:enumeration value="Atayal"/>
+      <xs:enumeration value="Bunun"/>
+      <xs:enumeration value="Mantauran"/>
+      <xs:enumeration value="Paiwan"/>
+      <xs:enumeration value="Puyuma"/>
+      <xs:enumeration value="Rukai"/>
+      <xs:enumeration value="Saisiyat"/>
+      <xs:enumeration value="Tsou"/>
+      <xs:enumeration value="Yami"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

@@ -1,0 +1,31 @@
+#logo-box {
+    width: 100px;
+    background: url(/images/olac100.gif) no-repeat;
+}
+
+#result-box {
+    font-family: Arial,sans-serif;
+    font-size: 13px;
+}
+
+.gs-watermark {
+    display: none;
+}
+
+.gs-webResult {
+    margin-bottom: 1em;
+    padding: 0.25em;
+}
+
+.pageindex {
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline;
+    margin-right: 8px;
+}
+
+.pageindex-current {
+    text-decoration: none;
+    color: #ff0000;
+    font-weight: bold;
+}

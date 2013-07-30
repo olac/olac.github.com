@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../OLAC_doc.xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "../OLAC_doc.dtd">
+<OLAC_doc>
+   <header>
+       <status code="adopted" type="recommendation"/>
+      <!-- Promoted to Candidate on 2008-07-16 -->
+      <!-- Promoted to Adopted on 2008-12-19 -->
+      <title>Best Practice Recommendations for Language Resource Description</title>
+      <baseName>bpr</baseName>
+      <issued>20080711</issued>
+       <!-- N.B. The HREF in the <recommendations> element needs to be
+       updated to usage-new.xml to generate a version based on work in
+       progress. -->
+       <previousIssued>20080229</previousIssued>
+      <abstract>
+         <p>This document expresses the consensus of the Open Language Archives Community on best
+            practice recommendations for language resource description using the OLAC metadata
+            standard <cit>OLAC-Metadata</cit>.</p>
+      </abstract>
+      <editors>Gary Simons, SIL International and Graduate Institute of Applied Linguistics
+            (<url>mailto:gary_simons@sil.org</url>) <br/>Steven Bird, University of Melbourne and
+         University of Pennsylvania (<url>mailto:sb@ldc.upenn.edu</url>) <br/>Joan Spanne, SIL
+         International (<url>mailto:joan_spanne@sil.org</url>)</editors>
+      <copyright>2008 Gary Simons (SIL International and Graduate Institute of Applied Linguistics),
+         Steven Bird (University of Melbourne and University of Pennsylvania), and Joan Spanne (SIL
+         International)</copyright>
+      <changes><p>Fixes problem in numbering and clarifies that using
+          an encoding scheme means using a value from the scheme.</p> </changes>
+   </header>
+    <body>
+        
+        <section>
+         <heading>Introduction</heading>
+         <p>This document expresses the consensus of the Open Language Archives Community on best
+            practices for describing language resources using the OLAC metadata standard
+               <cit>OLAC-Metadata</cit>. The standard itself specifies the formal constraints on the
+            syntax of valid descriptions, but does not set requirements on the content of the
+            metadata elements (beyond general conformance to the definitions of the qualified Dublin
+            Core metadata set <cit>DCMT</cit>). This document provides more detailed guidance about
+            the content of specific metadata elements.</p>
+         <p>This document does not provide a complete set of advice about what the metadata elements
+            mean or about how they should be used. Such advice is supplied in an OLAC informational
+            note <cit>OLAC-Usage</cit>. This document lists the specific metadata usage guidelines
+            that have been agreed upon by the OLAC community as representing best practice. It is
+            not a requirement of participation that OLAC data providers follow these
+            recommendations. However, these recommendations are used as the standard for evaluating
+            the quality of the metadata records supplied by an OLAC data provider. </p>
+      </section>
+      <section>
+         <heading>Recommendations</heading>
+         <p>The following are the OLAC recommendations on best practices for describing language
+            resources. Follow the "more" link to see the fuller discussion of an element in
+               <cit>OLAC-Usage</cit> including definition, usage notes, and examples.</p>
+         <recommendations href="../NOTE/usage-20080711.xml"/>
+      </section>
+
+
+   </body>
+
+   <references>
+
+      <ref abbrev="DCMT">DCMI Metadata
+            Terms.<br/>&lt;<url>http://dublincore.org/documents/dcmi-terms/</url>&gt;</ref>
+
+      <ref abbrev="OLAC-Language">OLAC Language
+         Extension.<br/>&lt;<url>http://www.language-archives.org/REC/language.html</url>&gt;</ref>
+      
+      <ref abbrev="OLAC-Metadata">OLAC
+            Metadata.<br/>&lt;<url>http://www.language-archives.org/OLAC/metadata.html</url>&gt;</ref>
+
+      <ref abbrev="OLAC-Usage">OLAC Metadata Usage
+            Guidelines.<br/>&lt;<url>http://www.language-archives.org/NOTE/usage.html</url>&gt;</ref>
+
+   </references>
+</OLAC_doc>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           elementFormDefault="qualified"
+           attributeFormDefault="qualified">
+
+   <xs:include schemaLocation="LanguageCodes.xsd"/> 
+
+  <xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/2006/01/06/dc.xsd"/>
+
+  <xs:annotation>
+    <xs:appinfo>
+      <olac-extension xmlns="http://www.language-archives.org/OLAC/1.0/olac-extension.xsd">
+        <shortName>language</shortName>
+        <longName>Code for Language Identification</longName>
+        <versionDate>2003-07-01</versionDate>
+        <description>Provides codes for identifying all known languages, both living and extinct.</description>
+        <appliesTo>language</appliesTo>
+        <appliesTo>subject</appliesTo>
+        <documentation>http://www.language-archives.org/REC/language.html</documentation>
+      </olac-extension>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:complexType name="language">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="olac-language" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+<!-- The enumeration of the codes is incorporated by the <xs:include> at the beginning of this file
+
+  <xs:simpleType name="olac-language">
+    <xs:restriction base="xs:string">
+       ...
+    </xs:restriction>
+  </xs:simpleType>
+
+-->  
+
+</xs:schema>
+

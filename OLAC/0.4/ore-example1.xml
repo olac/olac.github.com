@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OLAC-Repository>
+<identity>
+	<repositoryName>hjhjh</repositoryName>
+	<repositorydentifier>jhjhjh</repositorydentifier>
+	<adminEmail>mailto:aleewk@babel.ling.upenn.edu</adminEmail>
+	<sampleIdentifier>oai:jhjhjh:mytest</sampleIdentifier>
+	<olac-archive type="institutional">
+		<archiveURL>fhgj</archiveURL>
+		<curator>fhgj</curator>
+		<curatorTitle>fhj</curatorTitle>
+		<curatorEmail>mailto:fghjfh</curatorEmail>
+		<institution>fhjfhj</institution>
+		<institutionURL>fhjfhj</institutionURL>
+		<location>fhjfhjfg</location>
+		<synopsis>fhjfhjfhgj</synopsis>
+		<access>fhgjfhjg</access>
+	</olac-archive>
+</identity>
+<sets>
+</sets>
+<records>
+	<record>
+		<header>
+			<recordId>mytest</recordId>
+			<datestamp>2002-05-10</datestamp>
+		</header>
+		<metadata>
+			<olac>
+				<title>this is a test</title>
+				<creator refine="author">la la la la</creator>
+				<identifier>la la la la</identifier>
+			</olac>
+		</metadata>
+	</record>
+</records>
+</OLAC-Repository>

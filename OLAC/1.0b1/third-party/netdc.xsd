@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns="http://www.ldc.upenn.edu/Projects/netdc/netdc.xsd"
+            targetNamespace="http://www.ldc.upenn.edu/Projects/netdc/netdc.xsd"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+  <xs:annotation>
+    <xs:documentation>
+NET-DC: Networking Data Centers
+
+The netdc schema extends OLAC metadata by adding support for the special needs
+of the Linguistic Data Consortium and the European Language Resources Association.
+This example is for illustrative purposes only, and has not been adopted by either
+organization.
+
+The following extensions are provided (extension name and attributes):
+
+1. price
+   - value (decimal)
+   - currency (USD, EUR)
+   - membership (commercial, noncommercial, nonmember)
+   - content (free text comment)
+
+2. distribution
+   - method (CD-ROM, FTP)
+   - size (decimal)
+   - content (free text content)
+
+3. license
+   - membership (commercial, noncommercial, nonmember)
+   - content (URL)
+
+4. speechformat
+   - rate (decimal)
+   - channels (integer)
+   - coding (PCM, ULAW, ALAW)
+
+    </xs:documentation>
+  </xs:annotation>
+
+
+  <xs:import namespace="http://purl.org/dc/elements/1.1/"
+             schemaLocation="http://www.ukoln.ac.uk/metadata/dcmi/xmlschema/20021007/dc.xsd"/>
+  <xs:import namespace="http://purl.org/dc/terms/"
+             schemaLocation="http://www.ukoln.ac.uk/metadata/dcmi/xmlschema/20021007/dcterms.xsd"/>
+
+  <!-- price element - no DC element is suitable, but we're forced to pick one, rights? -->
+  <xs:complexType name="price">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="value" type="xs:decimal" use="required"/>
+        <xs:attribute name="currency" type="currency" use="required"/>
+        <xs:attribute name="membership" type="membership" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- currency vocabulary: terms from ISO 4217 -->
+  <xs:simpleType name="currency">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="USD"/> <!-- US dollars, for LDC -->
+      <xs:enumeration value="EUR"/> <!-- Euros, for ELRA -->
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- membership category vocabulary -->
+  <xs:simpleType name="membership">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="commercial"/>
+      <xs:enumeration value="noncommercial"/>
+      <xs:enumeration value="nonmember"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- distribution method, an extension of format -->
+  <xs:complexType name="distribution">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="method" type="method" use="required"/>
+        <xs:attribute name="size" type="xs:decimal" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- distribution vocabulary -->
+  <xs:simpleType name="method">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CD-ROM"/>
+      <xs:enumeration value="FTP"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- LDC membership year -->
+  <xs:complexType name="memberyear">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="year" type="xs:decimal" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Licenses -->
+  <xs:complexType name="license">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dcterms:URI">
+        <xs:attribute name="membership" type="membership" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Speech file format -->
+  <xs:complexType name="speechformat">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="rate" type="xs:decimal" use="required"/>
+        <xs:attribute name="channels" type="xs:integer" use="required"/>
+        <xs:attribute name="coding" type="coding" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Speech coding vocabulary -->
+  <xs:simpleType name="coding">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PCM"/>
+      <xs:enumeration value="ULAW"/>
+      <xs:enumeration value="ALAW"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+</xs:schema>
+

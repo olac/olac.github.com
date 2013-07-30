@@ -1,0 +1,230 @@
+<html>
+<head>
+<title>OLAC 0.2</title>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<link rel="stylesheet" type="text/css" href="../olac.css">
+</head>
+<body bgcolor=white>
+<h1>OLAC 0.2: DC qualified with language codes</h1>
+
+<table>
+<tr><th align=right>Date:</th>
+    <td>1 February 2001</td></tr>
+<tr><th align=right>Schema:</th>
+    <td><a href="http://www.language-archives.org/OLAC/olac-0.2.xsd">http://www.language-archives.org/OLAC/olac-0.2.xsd</a></td></tr>
+<tr><th align=right>Example:</th>
+    <td><a href="http://www.language-archives.org/OLAC/olac-0.2.xml">http://www.language-archives.org/OLAC/olac-0.2.xml</a></td></tr>
+</table>
+
+<h2>Overview</h2>
+
+<p>
+The agreement in Philadelphia was to use RFC 1766 with its extension
+mechanism to permit Ethnologue codes of the form x-sil-AAA, replacing
+AAA with the three letter code.  If/when the IETF endorses Ethnologue
+codes the form will change to n-sil-AAA which will be a trivial switch
+to make.  Another agreement was to add a language qualifier to the
+subject element, allowing focused searching on the language that is
+*described* by a resource (as opposed to the language the resource is in).
+When a resource describes multiple languages, we would use multiple
+instances of the element.
+
+<p>
+This gives us four possibilities:
+
+<p>
+<table border=1 cellpadding=2>
+<tr><th>ELEMENT</th>
+    <th>REFINEMENT</th>
+    <th>QUALIFICATION</th>
+    <th>CONTENT</th></tr>
+<tr><td>language</td><td>&nbsp;</td><td>&nbsp;</td>
+    <td>a string (language of the resource)</td></tr>
+<tr><td>language</td><td>&nbsp;</td><td>rfc1766</td>
+    <td>an RFC 1766 code</td></tr>
+<tr><td>subject</td><td>language</td><td>&nbsp;</td>
+    <td>a string (the language described)</td></tr>
+<tr><td>subject</td><td>language</td><td>rfc1766</td>
+    <td>an RFC 1766 code</td></tr>
+</table>
+
+<p>
+In supporting this language information, there would be a two-stage
+process for data providers:
+
+<ol>
+<li>
+Provide unqualified Language and Subject.language elements.
+Often the language name appears in the Subject and/or
+Description elements, and needs to be pulled out.
+
+<li>
+Add new language code fields to the back-end database,
+populate these fields, and export them in the OLAC format.
+A table with the SIL codes will be provided.
+</ol>
+
+<p>
+To sum up, this approach is:
+easy (since you can do nothing and conform);
+non-parochial (since it uses RFC 1766);
+full-coverage (since it includes Ethnologue codes);
+extensible (you can include your own scheme with codes
+of the form x-SCHEME-CODE)
+
+<h2>The XML Schema</h2>
+
+<table border=1 width=100%><tr><td>
+<pre>
+&lt;schema xmlns="http://www.w3.org/2000/10/XMLSchema"
+        xmlns:olac="http://www.language-archives.org/OLAC/0.2/"
+        targetNamespace="http://www.language-archives.org/OLAC/0.2/"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified"&gt;
+
+  &lt;annotation&gt;
+    &lt;documentation&gt;
+      Schema for DC with qualifiers for language codes.
+      Steven Bird, 2/1/01
+      Schema validated at http://www.w3.org/2000/09/webdata/xsv
+      XSV 1.173.2.15.2.5/1.74.2.26 of 2001/01/15 14:18:55
+      Dublin Core semantics available at http://purl.org/DC/documents/rec-dces-19990702.htm
+    &lt;/documentation&gt;
+  &lt;/annotation&gt;
+
+  &lt;element name="olac" type="olac:olacType"/&gt;
+
+  &lt;complexType name="olacType"&gt;
+    &lt;choice minOccurs="0" maxOccurs="unbounded"&gt;
+
+      &lt;!-- Unqualified Dublin Core Elements --&gt;
+
+      &lt;element name="title" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="creator" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="subject" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="description" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="contributor" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="publisher" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="date" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="type" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="format" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="identifier" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="source" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="relation" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="coverage" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+      &lt;element name="rights" minOccurs="0" maxOccurs="unbounded" type="string"/&gt;
+
+      &lt;!-- Qualified Dublin Core Elements --&gt;
+
+      &lt;element name="language" minOccurs="0" maxOccurs="unbounded" type="olac:languageType"/&gt;
+      &lt;element name="subject.language" minOccurs="0" maxOccurs="unbounded" type="olac:languageType"/&gt;
+
+    &lt;/choice&gt;
+  &lt;/complexType&gt;
+
+  &lt;complexType name="languageType"&gt;
+    &lt;simpleContent&gt;
+      &lt;extension base="string"&gt;
+        &lt;attribute name="identifier" use="optional" type="olac:rfc1766"/&gt;
+      &lt;/extension&gt;
+    &lt;/simpleContent&gt;
+  &lt;/complexType&gt;
+
+  &lt;simpleType name="rfc1766"&gt;
+    &lt;restriction base="string"&gt;
+      &lt;pattern value="[a-zA-Z]+(-[a-zA-Z]+(-[a-zA-Z]+))"/&gt;
+    &lt;/restriction&gt;
+  &lt;/simpleType&gt;
+
+&lt;/schema&gt;
+</pre>
+</td></tr></table>
+
+
+<h2>Example</h2>
+
+<table border=1 width=100%><tr><td>
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;olac
+  xmlns="http://www.language-archives.org/OLAC/0.2/"
+  xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+  xsi:schemaLocation="http://www.language-archives.org/OLAC/0.2/
+                http://www.language-archives.org/OLAC/olac-0.2.xsd"&gt;
+  &lt;title&gt;ECI Multilingual Text&lt;/title&gt;
+  &lt;type&gt;text&lt;/type&gt;
+  &lt;identifier&gt;http://morph.ldc.upenn.edu/Catalog/LDC94T5.html&lt;/identifier&gt;
+  &lt;date&gt;1994-01-01&lt;/date&gt;
+  &lt;description&gt;Applications: information retrieval, machine translation, language modeling&lt;/description&gt;
+  &lt;subject.language identifier="x-sil-BLG"/&gt;   &lt;!-- OLAC best practice --&gt;
+  &lt;subject.language identifier="x-sil-CHN"&gt;Chinese&lt;/subject.language&gt;  &lt;!-- redundant --&gt;
+  &lt;subject.language identifier="EN"&gt;English&lt;/subject.language&gt;  &lt;!-- ISO 639 --&gt;
+  &lt;subject.language&gt;Danish&lt;/subject.language&gt;  &lt;!-- low-barrier for entry --&gt;
+&lt;/olac&gt;
+</pre>
+</td></tr></table>
+
+<p>
+<i>
+Note that, as of early February 2001, XSV does not validate pattern restrictions.
+</i>
+
+<h2>Recommended Best Practice</h2>
+
+<p>
+The OLAC recommended best practice for the identification of living and
+recently dead languages is to use language and subject.language
+elements with empty content, and with an identifier of the form x-sil-AAA
+where AAA is an Ethnologue language code.
+
+<h2>Mapping to Unqualified Dublin Core</h2>
+
+<ol>
+<li> Drop the language refinement of the subject element and
+  prepend "Language: " to the content.
+<li> If there is an identifier but no content, look up the language
+  name using the controlled vocabulary server to get a human-readable
+  string, and make that the content.
+<li> Drop the identifier attribute and append its value, parenthesized,
+  to the content.
+</ol>
+
+<h2>Support</h2>
+
+<p>
+Look up ethnologue codes using the search interface at
+<a href="http://www.ethnologue.com/">http://www.ethnologue.com/</a>
+
+<p>
+The files are available here.  See Gary Simons' paper for the schemas.
+
+<ol>
+<li> <a href="../data/languagecodes.tab">languagecodes.tab</a>
+<li> <a href="../data/countrycodes.tab">countrycodes.tab</a>
+</ol>
+
+<p>
+
+
+<h2>References</h2>
+
+<ul>
+<li>RFC 1766: Tags for the Identification of Languages<br>
+<a href="http://www.ietf.org/rfc/rfc1766.txt">http://www.ietf.org/rfc/rfc1766.txt</a>
+
+<li>RFC 3066: Tags for the Identification of Languages (replaces 1766)<br>
+<a href="ftp://ftp.isi.edu/in-notes/rfc3066.txt">ftp://ftp.isi.edu/in-notes/rfc3066.txt</a>
+
+<li>ISO 639: Codes for the Representation of Names of Languages-Part 2: Alpha-3 Code<br>
+<a href="http://lcweb.loc.gov/standards/iso639-2/langhome.html">http://lcweb.loc.gov/standards/iso639-2/langhome.html</a>
+
+<li>Gary Simons (2000). Language identification in metadata descriptions of language archive holdings<br>
+<a href="http://www.ldc.upenn.edu/exploration/expl2000/papers/simons/simons.htm">http://www.ldc.upenn.edu/exploration/expl2000/papers/simons/simons.htm</a>
+
+<li>Ethnologue: Languages of the World<br>
+<a href="http://www.sil.org/ethnologue/">http://www.sil.org/ethnologue/</a>
+</ul>
+
+
+</body>
+</html>

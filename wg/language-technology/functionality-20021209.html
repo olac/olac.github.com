@@ -1,0 +1,2150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>OLAC Vocabulary for Language Technology Functionality</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="OLAC Vocabulary for Language Technology Functionality">
+<meta name="Creator" content="Baden Hughes mailto:baden@compuling.net">
+<meta name="Description" content="This document specifies the controlled vocabulary used by OLAC in the description of language technology functionality. The vocabulary describes the functionality in particular of software according to the functional categories provided by the HLT Survey version 2.">
+<meta name="Publisher" content="OLAC (Open Language Archives Community)">
+<meta name="Date" content="20021209">
+<STYLE>
+          BODY       { MARGIN:10px; BACKGROUND: white; COLOR: navy; 
+                              FONT-FAMILY: sans-serif; FONT-SIZE: 12pt }
+          H1    {FONT-SIZE: 24pt }
+          H2    {FONT-SIZE: 18pt }
+          H3    {FONT-SIZE: 16pt }
+
+        </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>OLAC Vocabulary for Language Technology Functionality</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th width="100" align="left">Date issued:</th><td>2002-12-09</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Standard. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="/OLAC/functionality-20021209.html">http://www.language-archives.org/OLAC/functionality-20021209.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="/OLAC/functionality.html">http://www.language-archives.org/OLAC/functionality.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous version:</th><td><a href="/OLAC/functionality-20021202.html">http://www.language-archives.org/OLAC/functionality-20021202.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>This document specifies the controlled vocabulary used by OLAC in the description of language technology functionality. The vocabulary describes the functionality in particular of software according to the functional categories provided by the HLT Survey version 2.</p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td><editors>Baden Hughes <a href="mailto:baden@compuling.net">mailto:baden@compuling.net</a></editors></td>
+</tr>
+<tr valign="top">
+<th align="left">Changes since previous version:</th><td>
+<p>20021209: added  some synonyms and definitions; divided elements by section; added references to HLT Survey website for elements</p>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright © Baden Hughes. This material may be distributed only subject to the terms and conditions set forth in the Open Publication License, v1.0 or later (the latest version is presently available at <a href="http://www.opencontent.org/openpub/">http://www.opencontent.org/openpub/</a>).</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Information Extraction">Information Extraction</A>
+<UL>
+<LI>
+<A href="#information_extraction/information_extraction">information_extraction/information_extraction</A>
+</LI>
+<LI>
+<A href="#information_extraction/relation_extraction">information_extraction/relation_extraction</A>
+</LI>
+<LI>
+<A href="#information_extraction/text_data_mining">information_extraction/text_data_mining</A>
+</LI>
+<LI>
+<A href="#information_extraction/summarization">information_extraction/summarization</A>
+</LI>
+<LI>
+<A href="#information_extraction/answer_extraction">information_extraction/answer_extraction</A>
+</LI>
+<LI>
+<A href="#information_extraction/named_entity_recognition">information_extraction/named_entity_recognition</A>
+</LI>
+<LI>
+<A href="#information_extraction/multimedia_information_extraction">information_extraction/multimedia_information_extraction</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Information Retrieval">Information Retrieval</A>
+<UL>
+<LI>
+<A href="#information_retrieval/information_retrieval">information_retrieval/information_retrieval</A>
+</LI>
+<LI>
+<A href="#information_retrieval/topic_detection">information_retrieval/topic_detection</A>
+</LI>
+<LI>
+<A href="#information_retrieval/multilingual_information_retrieval">information_retrieval/multilingual_information_retrieval</A>
+</LI>
+<LI>
+<A href="#information_retrieval/categorization">information_retrieval/categorization</A>
+</LI>
+<LI>
+<A href="#information_retrieval/relevance_ranking">information_retrieval/relevance_ranking</A>
+</LI>
+<LI>
+<A href="#information_retrieval/speech_retrieval">information_retrieval/speech_retrieval</A>
+</LI>
+<LI>
+<A href="#information_retrieval/clustering">information_retrieval/clustering</A>
+</LI>
+<LI>
+<A href="#information_retrieval/presentation_and_visualisation">information_retrieval/presentation_and_visualisation</A>
+</LI>
+<LI>
+<A href="#information_retrieval/multimedia_retrieval">information_retrieval/multimedia_retrieval</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Authoring Tools">Authoring Tools</A>
+<UL>
+<LI>
+<A href="#authoring_tools/spell_checking">authoring_tools/spell_checking</A>
+</LI>
+<LI>
+<A href="#authoring_tools/automatic_hyperlinking">authoring_tools/automatic_hyperlinking</A>
+</LI>
+<LI>
+<A href="#authoring_tools/language_checking">authoring_tools/language_checking</A>
+</LI>
+<LI>
+<A href="#authoring_tools/structure-based_authoring_assistants">authoring_tools/structure-based_authoring_assistants</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Language Analysis">Language Analysis</A>
+<UL>
+<LI>
+<A href="#language_analysis/tokenization_and_segmentation">language_analysis/tokenization_and_segmentation</A>
+</LI>
+<LI>
+<A href="#language_analysis/shallow_parsing">language_analysis/shallow_parsing</A>
+</LI>
+<LI>
+<A href="#language_analysis/grammar_models_and_formalisms">language_analysis/grammar_models_and_formalisms</A>
+</LI>
+<LI>
+<A href="#language_analysis/head-driven_phrase_structure_grammar">language_analysis/head-driven_phrase_structure_grammar</A>
+</LI>
+<LI>
+<A href="#language_analysis/government_and_binding_theory_minimalist_framework">language_analysis/government_and_binding_theory_minimalist_framework</A>
+</LI>
+<LI>
+<A href="#language_analysis/lexicons_for_constraint-based_grammars">language_analysis/lexicons_for_constraint-based_grammars</A>
+</LI>
+<LI>
+<A href="#language_analysis/part-of-speech_tagging">language_analysis/part-of-speech_tagging</A>
+</LI>
+<LI>
+<A href="#language_analysis/probabilistic-context-free_grammars">language_analysis/probabilistic-context-free_grammars</A>
+</LI>
+<LI>
+<A href="#language_analysis/categorial_grammar">language_analysis/categorial_grammar</A>
+</LI>
+<LI>
+<A href="#language_analysis/lexical_functional_grammar">language_analysis/lexical_functional_grammar</A>
+</LI>
+<LI>
+<A href="#language_analysis/systemic_functional_linguistics">language_analysis/systemic_functional_linguistics</A>
+</LI>
+<LI>
+<A href="#language_analysis/morphological_analysis">language_analysis/morphological_analysis</A>
+</LI>
+<LI>
+<A href="#language_analysis/natural_language_parsing">language_analysis/natural_language_parsing</A>
+</LI>
+<LI>
+<A href="#language_analysis/dependency_grammar">language_analysis/dependency_grammar</A>
+</LI>
+<LI>
+<A href="#language_analysis/tree_adjoining_grammar">language_analysis/tree_adjoining_grammar</A>
+</LI>
+<LI>
+<A href="#language_analysis/optimality_theory_in_syntax">language_analysis/optimality_theory_in_syntax</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Language Understanding">Language Understanding</A>
+<UL>
+<LI>
+<A href="#language_understanding/word_sense_disambiguation">language_understanding/word_sense_disambiguation</A>
+</LI>
+<LI>
+<A href="#language_understanding/computational_psycholinguistics">language_understanding/computational_psycholinguistics</A>
+</LI>
+<LI>
+<A href="#language_understanding/computational_semantics">language_understanding/computational_semantics</A>
+</LI>
+<LI>
+<A href="#language_understanding/computational_pragmatics">language_understanding/computational_pragmatics</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Knowledge Representation and Discovery">Knowledge Representation and Discovery</A>
+<UL>
+<LI>
+<A href="#knowledge_representation_and_discovery/ontologies">knowledge_representation_and_discovery/ontologies</A>
+</LI>
+<LI>
+<A href="#knowledge_representation_and_discovery/automatic_hyperlinking">knowledge_representation_and_discovery/automatic_hyperlinking</A>
+</LI>
+<LI>
+<A href="#knowledge_representation_and_discovery/knowledge_discovery">knowledge_representation_and_discovery/knowledge_discovery</A>
+</LI>
+<LI>
+<A href="#knowledge_representation_and_discovery/semantic_web">knowledge_representation_and_discovery/semantic_web</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Spoken Language Input">Spoken Language Input</A>
+<UL>
+<LI>
+<A href="#spoken_language_input/speech_recognition">spoken_language_input/speech_recognition</A>
+</LI>
+<LI>
+<A href="#spoken_language_input/acoustic_modelling_in_speech_recognition">spoken_language_input/acoustic_modelling_in_speech_recognition</A>
+</LI>
+<LI>
+<A href="#spoken_language_input/spoken_language_understanding">spoken_language_input/spoken_language_understanding</A>
+</LI>
+<LI>
+<A href="#spoken_language_input/signal_analysis_and_representation">spoken_language_input/signal_analysis_and_representation</A>
+</LI>
+<LI>
+<A href="#spoken_language_input/language_modelling">spoken_language_input/language_modelling</A>
+</LI>
+<LI>
+<A href="#spoken_language_input/emotion_recognition">spoken_language_input/emotion_recognition</A>
+</LI>
+<LI>
+<A href="#spoken_language_input/prosody_information_processing">spoken_language_input/prosody_information_processing</A>
+</LI>
+<LI>
+<A href="#spoken_language_input/speaker_recognition">spoken_language_input/speaker_recognition</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Written Language Input">Written Language Input</A>
+<UL>
+<LI>
+<A href="#written_language_input/document_image_analysis">written_language_input/document_image_analysis</A>
+</LI>
+<LI>
+<A href="#written_language_input/ocr_print">written_language_input/ocr_print</A>
+</LI>
+<LI>
+<A href="#written_language_input/ocr_handwriting">written_language_input/ocr_handwriting</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Natural Language Generation">Natural Language Generation</A>
+<UL>
+<LI>
+<A href="#natural_language_generation/natural_language_generation">natural_language_generation/natural_language_generation</A>
+</LI>
+<LI>
+<A href="#natural_language_generation/deep_generation">natural_language_generation/deep_generation</A>
+</LI>
+<LI>
+<A href="#natural_language_generation/shallow_generation">natural_language_generation/shallow_generation</A>
+</LI>
+<LI>
+<A href="#natural_language_generation/syntactic_generation">natural_language_generation/syntactic_generation</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Spoken Output Technologies">Spoken Output Technologies</A>
+<UL>
+<LI>
+<A href="#spoken_output_technologies/text-to-speech_synthesis">spoken_output_technologies/text-to-speech_synthesis</A>
+</LI>
+<LI>
+<A href="#spoken_output_technologies/spoken_language_generation">spoken_output_technologies/spoken_language_generation</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Multilinguality">Multilinguality</A>
+<UL>
+<LI>
+<A href="#multilinguality/machine_translation">multilinguality/machine_translation</A>
+</LI>
+<LI>
+<A href="#multilinguality/multilingual_information_retrieval">multilinguality/multilingual_information_retrieval</A>
+</LI>
+<LI>
+<A href="#multilinguality/example-based_translation_and_translation_memories">multilinguality/example-based_translation_and_translation_memories</A>
+</LI>
+<LI>
+<A href="#multilinguality/human-aided_machine_translation">multilinguality/human-aided_machine_translation</A>
+</LI>
+<LI>
+<A href="#multilinguality/multilingual_speech_processing">multilinguality/multilingual_speech_processing</A>
+</LI>
+<LI>
+<A href="#multilinguality/statistical_machine_translation">multilinguality/statistical_machine_translation</A>
+</LI>
+<LI>
+<A href="#multilinguality/machine-aided_human_translation">multilinguality/machine-aided_human_translation</A>
+</LI>
+<LI>
+<A href="#multilinguality/automatic_language_identification">multilinguality/automatic_language_identification</A>
+</LI>
+<LI>
+<A href="#multilinguality/multilingual_generation">multilinguality/multilingual_generation</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Multimodality">Multimodality</A>
+<UL>
+<LI>
+<A href="#multimodality/representations of_space_and_time">multimodality/representations of_space_and_time</A>
+</LI>
+<LI>
+<A href="#multimodality/modality_integration_facial_movement_and_speech">multimodality/modality_integration_facial_movement_and_speech</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Coding and Compression"> Coding and Compression</A>
+<UL>
+<LI>
+<A href="#coding_and_compression/speech_coding">coding_and_compression/speech_coding</A>
+</LI>
+<LI>
+<A href="#coding_and_compression/text_compression">coding_and_compression/text_compression</A>
+</LI>
+<LI>
+<A href="#coding_and_compression/speech_nhancement">coding_and_compression/speech_nhancement</A>
+</LI>
+<LI>
+<A href="#coding_and_compression/text_encryption">coding_and_compression/text_encryption</A>
+</LI>
+<LI>
+<A href="#coding_and_compression/speech_encryption">coding_and_compression/speech_encryption</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Mathematical Methods">Mathematical Methods</A>
+<UL>
+<LI>
+<A href="#mathematical_methods/natural_language_parsing">mathematical_methods/natural_language_parsing</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/statistical_modeling_and_classification">mathematical_methods/statistical_modeling_and_classification</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/optimization_and_search_in_speech_and_language_processing">mathematical_methods/optimization_and_search_in_speech_and_language_processing</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/maximum_entropy_methods">mathematical_methods/maximum_entropy_methods</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/latent_semantic_analysis">mathematical_methods/latent_semantic_analysis</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/language_modeling">mathematical_methods/language_modeling</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/dsp_techniques">mathematical_methods/dsp_techniques</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/conditional_random_fields">mathematical_methods/conditional_random_fields</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/support_vector_machines">mathematical_methods/support_vector_machines</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/emerging_computing_paradigms">mathematical_methods/emerging_computing_paradigms</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/finite_state_technology">mathematical_methods/finite_state_technology</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/connectionist_techniques">mathematical_methods/connectionist_techniques</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/hmm_methods">mathematical_methods/hmm_methods</A>
+</LI>
+<LI>
+<A href="#mathematical_methods/inductive_logic_programming">mathematical_methods/inductive_logic_programming</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Discourse and Dialogue">Discourse and Dialogue</A>
+<UL>
+<LI>
+<A href="#discourse_and_dialogue/discourse_and_dialogue">discourse_and_dialogue/discourse_and_dialogue</A>
+</LI>
+<LI>
+<A href="#discourse_and_dialogue/spoken_language_dialogue">discourse_and_dialogue/spoken_language_dialogue</A>
+</LI>
+<LI>
+<A href="#discourse_and_dialogue/discourse_modeling">discourse_and_dialogue/discourse_modeling</A>
+</LI>
+<LI>
+<A href="#discourse_and_dialogue/spoken_dialogue_systems">discourse_and_dialogue/spoken_dialogue_systems</A>
+</LI>
+<LI>
+<A href="#discourse_and_dialogue/dialogue_modeling">discourse_and_dialogue/dialogue_modeling</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Language Resources">Language Resources</A>
+<UL>
+<LI>
+<A href="#language_resources/written_language_corpora">language_resources/written_language_corpora</A>
+</LI>
+<LI>
+<A href="#language_resources/linguistically_annotated_corpora">language_resources/linguistically_annotated_corpora</A>
+</LI>
+<LI>
+<A href="#language_resources/thesauri_wordnets">language_resources/thesauri_wordnets</A>
+</LI>
+<LI>
+<A href="#language_resources/spoken_language_corpora">language_resources/spoken_language_corpora</A>
+</LI>
+<LI>
+<A href="#language_resources/lexicons">language_resources/lexicons</A>
+</LI>
+<LI>
+<A href="#language_resources/grammars">language_resources/grammars</A>
+</LI>
+<LI>
+<A href="#language_resources/multilingual_corpora">language_resources/multilingual_corpora</A>
+</LI>
+<LI>
+<A href="#language_resources/terminology">language_resources/terminology</A>
+</LI>
+<LI>
+<A href="#language_resources/standards">language_resources/standards</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Evaluation">Evaluation</A>
+<UL>
+<LI>
+<A href="#evaluation/evaluation_of_machine_translation_and_translation_tools">evaluation/evaluation_of_machine_translation_and_translation_tools</A>
+</LI>
+<LI>
+<A href="#evaluation/human_factors_and_user_acceptability">evaluation/human_factors_and_user_acceptability</A>
+</LI>
+<LI>
+<A href="#evaluation/usability_and_interface_design">evaluation/usability_and_interface_design</A>
+</LI>
+<LI>
+<A href="#evaluation/evaluation_of_broad-coverage_natural-language_parsers">evaluation/evaluation_of_broad-coverage_natural-language_parsers</A>
+</LI>
+<LI>
+<A href="#evaluation/speech_input_assessment_and_evaluation">evaluation/speech_input_assessment_and_evaluation</A>
+</LI>
+<LI>
+<A href="#evaluation/information_retrieval_evaluation">evaluation/information_retrieval_evaluation</A>
+</LI>
+<LI>
+<A href="#evaluation/deep_parser_performance_evaluation">evaluation/deep_parser_performance_evaluation</A>
+</LI>
+<LI>
+<A href="#evaluation/speech_synthesis_evaluation">evaluation/speech_synthesis_evaluation</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Conclusion">Conclusion</A>
+</LI>
+</ol>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>This document specifies the controlled vocabulary used by OLAC in the description of language technology functionality. The vocabulary describes the functionality in particular of software according to the functional categories provided by the HLT Survey.</p>
+<p>Any single piece of language technology software may have one or more functionality descriptions, these will usually be closely related items.</p>
+<h2>
+<A name="Information Extraction"></A>2. Information Extraction</h2>
+<h3>
+<A name="information_extraction/information_extraction"></A>information_extraction/information_extraction</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Information Extraction</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The goal of informtion extraction (IE) is to build systems that find and link relevant information from natural language text ignoring irrelevant information. The information of interest is typically pre-specified in form of uninstantiated frame-like structures also called templates. The templates are domain and task specific. The major task of an IE-system is then the identification of the relevant parts of the text which are used to fill a template's slots.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="information_extraction/relation_extraction"></A>information_extraction/relation_extraction</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Relation Extraction</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>Automated or human-assisted acquisition of relations between concepts from textual or other data, usu. within a selected domain.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="information_extraction/text_data_mining"></A>information_extraction/text_data_mining</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Text Data Mining (TM)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Text data mining concerns the application of data mining (knowledge discovery in databases, KDD) to unstructured textual data. The goal of data mining is to discover or derive new information from data, finding patterns across datasets, and/or separating signal from noise. Core text mining algorithms decompose text in meaningful chunks that can then be used for true data mining purposes.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="information_extraction/summarization"></A>information_extraction/summarization</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Summarization</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Text summarization is the process of distilling the most important information from a source (or sources) to produce an abridged version for a particular user (or users) and task (or tasks).</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="information_extraction/answer_extraction"></A>information_extraction/answer_extraction</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Answer Extraction (Textual Question Answering)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Answer extraction (AE) aims at retrieving those exact passages of a document that directly answer a given user question. AE is more ambitious than information retrieval and information extraction in that the retrieval results are phrases, not entire documents, and in that the queries may be arbitrarily specific. It is less ambitious than full-fledged question answering in that the answers are not generated from a knowledge base but looked up in the text of documents.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="information_extraction/named_entity_recognition"></A>information_extraction/named_entity_recognition</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Named Entity Recognition (NERC)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>Named entity (NE) recognition is a form of information extraction in which the major task is to identify and classify from NL text every word or sequence of words as being a person-name, organizaton, location, date, time, monetary value, percentage expression. NE recognition has a high impact for a number of applications, like e.g., InterNet search enginges, text data mining or answer extraction.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="information_extraction/multimedia_information_extraction"></A>information_extraction/multimedia_information_extraction</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Multimedia Information Extraction</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Multimedia Multimedia Information Extraction is extraction of useful information from multimedia document collections.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h2>
+<A name="Information Retrieval"></A>3. Information Retrieval</h2>
+<h3>
+<A name="information_retrieval/information_retrieval"></A>information_retrieval/information_retrieval</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Information Retrieval (IR)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Information Retrieval is the process of locating information that fits a user's requirements, where the requirements are usually expressed as a search query. The fit of the retrieved information with the information need is referred to as "relevance". The information can be retrieved from databases (data retrieval) or from document collections (document retrieval), where documents can either be text documents or other media (audio, video, semi-structured data, multimedia). Success in information retrieval is generally defined by retrieving as much relevant information as possible (measured by "recall")while minimising the irrelevant information retrieved (measured by "precision"). The most widely used information retrieval systems today are Internet search engines.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="information_retrieval/topic_detection"></A>information_retrieval/topic_detection</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Topic Detection (TD)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Detection of the topic of a document or of a segment in a stream of natural language data.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="information_retrieval/multilingual_information_retrieval"></A>information_retrieval/multilingual_information_retrieval</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Multilingual Information Retrieval (CLIR)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Cross-language information retrieval means using queries in one language to search for documents in a different language. Multilingual information retrieval is a broader term, which includes the case where queries in different languages are used, but only for searching documents in the same language. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: cross-language information retrieval, translingual information retrieval, sprachubergreifendes Information Retrieval</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="information_retrieval/categorization"></A>information_retrieval/categorization</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Categorization</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> The categorization task is to assign a new data type (e.g. a document) to one, or more, of a pre-existing set of classes (e.g. document classes). By contrast, the task of clustering (e.g. document clustering) is to create, or discover, a reasonable set of clusters for a given set of data types (e.g. documents).</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Classifikation, Kategorisierung, Klassifizierung</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="information_retrieval/relevance_ranking"></A>information_retrieval/relevance_ranking</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Relevance Ranking</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Queries given to search engines or other retrieval systems are often not very specific, and lead to a large number of matching documents. In these cases the retrieval system should have a good estimate of the relevance of the documents to the user's needs, so that "good" documents show up early in the enumeration. A large number of factors should enter into a good ranking method, including the positions of the query terms in the document, linguistic context of the matches, link popularity, classification of the documents, user models etc.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="information_retrieval/speech_retrieval"></A>information_retrieval/speech_retrieval</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Speech Retrieval</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Speech Retrieval is the process of retrieving spoken audio material (documents)in response to a search query. Search queries can be spoken or textual. Speech retrieval makes use of techniques from speech recognition, natural language understanding and information retrieval. Possible applications are the indexing of archives of broadcast material, and monitoring of telephone conversations.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Spoken Document Retrieval, Audio Retrieval, Audio Mining, Speech Mining</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="information_retrieval/clustering"></A>information_retrieval/clustering</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Clustering</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Clustering algorithms partition a set of objects into groups or clusters. The task of clustering (e.g. document clustering) is to create, or discover, a reasonable set of clusters for a given set of data types (e.g. documents). By contrast, the categorization task is to assign a new data type (e.g. a document) to one, or more, of a pre-existing set of classes (e.g. document classes).</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: grouping, category induction, Clustering-Verfahren, Klassifikationsverfahren</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="information_retrieval/presentation_and_visualisation"></A>information_retrieval/presentation_and_visualisation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Presentation and Visualisation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Visualisierung</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="information_retrieval/multimedia_retrieval"></A>information_retrieval/multimedia_retrieval</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Multimedia Retrieval</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Multimedia Retrieval is a variant of information retrieval on multimedia document collections.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h2>
+<A name="Authoring Tools"></A>4. Authoring Tools</h2>
+<h3>
+<A name="authoring_tools/spell_checking"></A>authoring_tools/spell_checking</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Spell Checking</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Techniques for the identification of spelling or typing errors in textual documents, which may be applied interactively during the creation of the document, or off-line for existing documents. Spelling correction is an extension in which for each assumed error one or several hypothetical corrections are suggested.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Spelling Correction, Rechtschreibkorrektur</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="authoring_tools/automatic_hyperlinking"></A>authoring_tools/automatic_hyperlinking</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Automatic Hyperlinking</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="authoring_tools/language_checking"></A>authoring_tools/language_checking</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Language Checking (LC)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Language Checking comprises technologies used to detect and/or correct erroneous or inconsistent language use in documents. The scope of language checking technology ranges from general error correction, as performed by spell checkers and grammar checkers, to the implementation of corporate styles and terminology control (controlled language). Benefits of controlled languages are the enhancement of consistency within and across documents and the reduction of ambiguity and vagueness, yielding documents which are easier to process by both humans and machines.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: controlled language checking, grammar checking</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="authoring_tools/structure-based_authoring_assistants"></A>authoring_tools/structure-based_authoring_assistants</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Structure-based Authoring Assistants (CL)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Structure-based authoring assistants: Software for supporting the distributed creation of consistent, high-quality information on an industrial scale. Key components include terminology extraction for legacy information,terminology checking and hyperlinking integrated in standard authoring environments, as well as structural (syntactic) checking of texts to ensure readability, consistency and translatability.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: controlled language tools</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Language Analysis"></A>5. Language Analysis</h2>
+<h3>
+<A name="language_analysis/tokenization_and_segmentation"></A>language_analysis/tokenization_and_segmentation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Tokenization and Segmentation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Tokenization is commonly seen as an independent process of linguistic analysis, in which the input stream of characters is segmented into an ordered sequence of word-like units, usually called tokens, which function as input items for subsequent steps of linguistic processing. Tokens may correspond to words, numbers, punctuation marks or even proper names.The recognized tokens are usually classified according to their syntax. Since the notion of tokenization seems to have different meanings to different people, some tokenization tools fulfil additional tasks like for instance isolation of sentences, handling of end-line hyphenations or conjoined clitics and contractions.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Word boundary detection, Tokenisierung</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/shallow_parsing"></A>language_analysis/shallow_parsing</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Shallow Parsing</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Chunk Parsing, Partial Parsing, (NP) Chunking</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/grammar_models_and_formalisms"></A>language_analysis/grammar_models_and_formalisms</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Grammar Models and Formalisms</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/head-driven_phrase_structure_grammar"></A>language_analysis/head-driven_phrase_structure_grammar</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Head-driven Phrase Structure Grammar (HPSG)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> HPSG is a constraint-based, lexicalist approach to grammatical theory that seeks to model human languages as systems of constraints on typed feature structures. Lexical information is organized in terms of multiple inheritance hierarchies that allow complex properties of words to be derived from the logic of the lexicon. Phrasal types are also treated in terms of multiple inheritance hierarchies that allow generalizations about diverse construction types to be factored into various cross-cutting dimensions. See also the corresponding pages of the HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-3.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/government_and_binding_theory_minimalist_framework"></A>language_analysis/government_and_binding_theory_minimalist_framework</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Government and Binding Theory / Minimalist Framework (GB Theory / Minimalism)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Minimalism is the latest development of Transformational Generative Grammar, which was initiated by Chomsky in the 1950s, and further developed into the Principles and Parameters (or Government and Binding) Theory of Syntax in the 1980s. The fundamental idea of Transformational Generative Syntax is that a sentence is produced from an abstract structural representation, which is sequentially altered by structure-dependent derivations, following universal principles and language-specific parameter settings. The Minimalist Program maintains that derivations and representations be minimal, according to principles of economy.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Principles and Parameters Theory of Syntax, Generative Syntax, Minimalismus</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/lexicons_for_constraint-based_grammars"></A>language_analysis/lexicons_for_constraint-based_grammars</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Lexicons for Constraint-Based Grammars (CbG-Lex)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> lexicons which provide rich information about morphological syntactic and semantic properties of words and are developed in unification- and constraint- based grammar formalisms which encode lexical descriptions as feature structures which have a clear mathematical and computational interpretation and constitute ideal data structures for complex word knowledge information encoding. See also the related HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-4.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: lexicons in unification-based grammar formalisms, lexicons in lexicalist theories</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/part-of-speech_tagging"></A>language_analysis/part-of-speech_tagging</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Part-of-speech Tagging (POS Tagging)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> The technologies for or the process of determining the correct part-of-speech tag for a word given its local context. The task comprises disambiguation of multiple part-of-speech tags and guessing of the correct part-of-speech tag for unknown words. Part-of-speech tagging is frequently used as a preprocessing step for shallow and deep parsers. See also the related HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-2.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Wortartenzuweisung, Etiqueteurs de Parties du Discours</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/probabilistic-context-free_grammars"></A>language_analysis/probabilistic-context-free_grammars</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Probabilistic Context-free Grammars (PCFG)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> A context-free grammar augmented with non-negative weights for all grammar rules resulting in a probability distribution for both the syntax trees and the language of the grammar. Probabilistic context-free grammars may be used (i) to disambiguate the analyses of a given sentence, and (ii) in language modeling. See also the related HLT-Survey Section on Robust Parsing: http://www.lt-world.org/HLT_Survey/ltw-chapter3-7.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: stochastic context-free grammars, probabilistische kontextfreie Grammatiken, stochstische kontextfreie Grammatiken</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/categorial_grammar"></A>language_analysis/categorial_grammar</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Categorial Grammar (CG)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Categorial Grammar is a lexical approach in which expressions are assigned categories that specify how to combine with expressions to create larger expressions. An analysis of an expression proceeds by inference over the categories assigned to its individuatable parts, trying to assign a given goal-category to the expression. In the type-logical variant of categorial grammar, a semantic representation is built compositionally in parallel to the categorial inference. See also the corresponding pages in the HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-6.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: type-logical grammar, multimodal logical grammar, categorial type logic</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/lexical_functional_grammar"></A>language_analysis/lexical_functional_grammar</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Lexical-Functional Grammar (LFG)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Lexical-Functional Grammar is a lexicalist, nontransformational theory of grammar which is built on a powerful and mathematically well-defined grammar formalism, designed for typologically diverse, configurational and non-configurational languages. LFG models different levels of linguistic description in a functional correspondence architecture. C-structure encodes constituency and surface order, which radically differ across typologically distinct languages. F-structure encodes functional syntactic information, which is largely shared between typologically distinct languages. LFG grammars are declarative, and therefore reversible for generation.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Lexikalisch-funktionale Grammatik</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/systemic_functional_linguistics"></A>language_analysis/systemic_functional_linguistics</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Systemic Functional Linguistics (SFL)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Systemic-Functional Linguistics (SFL) is a theory of language centred around the notion of language function. While SFL accounts for the syntactic structure of language, it places the, function of language as central (what language does, and how it does it), in preference to more structural approaches, which place the elements of language and their combinations as, central. SFL starts at social context, and looks at how language both acts upon, and is constrained by, this social context., A central notion is 'stratification', such that language is analysed in terms of four strata: Context, Semantics, Lexico-Grammar and Phonology-Graphology.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Systemic Functional Grammar, Systemic Grammar, SFG, Systemisch Funktionale Grammatik, Systemisch Funktionale Linguistik, Linguistique Systemique Fonctionelle</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/morphological_analysis"></A>language_analysis/morphological_analysis</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Morphological Analysis</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> The technologies for or the process of tracing the inflectional, derivational, and compounding processes in the formation of a given word in order to determine properties such as stem form, part-of-speech and inflectional information. As a crucial preprocessing step, morphological analysis is used in virtually all fields of natural language processing. See also the corresponding pages in the HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-2.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: morphology, morphologische Analyse, analyse morphologique</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/natural_language_parsing"></A>language_analysis/natural_language_parsing</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Natural Language Parsing (NL Parsing)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Parsing (from Latin "pars orationis" = parts of speech) is the syntactic analysis of languages. Natural Language Parsing is the syntactic analysis of natural languages, such as Finnish or Chinese. The objective of Natural Language is to determine parts of sentences (such as verbs, noun phrases, or relative clauses), and the relationships between then (such as subject or object). Unlike parsing of formally defined artificial languages (such as Java or predicate logic), parsing of natural languages presents problems due to ambiguity, and the productive and creative use of language. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-6.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: syntactic analysis</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/dependency_grammar"></A>language_analysis/dependency_grammar</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Dependency Grammar (DG)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Dependency Grammar" stands for a collection of approaches to natural language grammar sharing the following fundamental characteristics: The distinction between heads and dependents; the immediate modification of a head by a dependent (i.e. without intervening nonterminals like in phrase-structure grammar); and, the naming of the relation between a head and a dependent. Approaches can be differentiated mainly according to whether they consider grammatical or semantic relations (e.g. "subject" vs. "Actor"), and whether the grammar describes tree-structures or graphs. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-3.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Dependenzgrammatik, Afhankelijkheidsgrammatika</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/tree_adjoining_grammar"></A>language_analysis/tree_adjoining_grammar</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Tree Adjoining Grammar (TAG)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Tree-Adjoining Grammars (TAGs) are tree rewriting systems. The grammar components are (lexicalised) elementary trees, which are composed by substitution and adjunction operations. The syntactic representation consists of the constituent tree built by composition of elementary trees, and a derivation tree, which records the dependencies between elementary trees as established by substitution and adjunction operations. A basic linguistic assumption underlying TAG is that elementary trees encode basic predicate-argument structure. This extends to long-distance dependencies, which are "localised" in (lexicalised) elementary trees.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: LTAG, FTAG, MCTAG</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_analysis/optimality_theory_in_syntax"></A>language_analysis/optimality_theory_in_syntax</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Optimality Theory in Syntax (OT in Syntax)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Optimality Theory (OT) is a recent development in theoretical linguistics. OT deviates from more traditional linguistic frameworks in that it assumes grammatical constraints to be (a) universal, (b) violable, and (c) ranked. Assumption (a) means that constraints are maximally general, i.e., they contain no exceptions or disjunctions, and there is no parametrization across languages. Highly general constraints will inevitably conflict, therefore assumption (b) allows constraints to be violated, even in a grammatical structure, while assumption (c) stipulates that some constraint violations are more relevant than others. In this setting, a structure is grammatical if it is optimal in the sense of violating the least highly ranked constraints compared with other possible candidate structures. Which candidate is optimal depends on how the constraints in the grammar are ranked, thus crosslinguistic variation can be accounted for via variation in the constraint ranks. Optimality Theory is widely used in phonology, based on Prince and Smolensky's (1993) seminal work. In syntax, the OT paradigm is less popular, but there have been interesting attempts to combine OT with LFG. The OT literature also includes important computational contributions (especially as regards OT models of language acquisition).</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: OT Syntax</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Language Understanding"></A>6. Language Understanding</h2>
+<h3>
+<A name="language_understanding/word_sense_disambiguation"></A>language_understanding/word_sense_disambiguation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Word Sense Disambiguation (WSD)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Word Sense Disambiguation is a subtask of semantic tagging, which consists of assigning a semantic class (sense) to a lexical item as specified by a semantic lexicon. If the semantic lexicon specifies more than one sense for a particular lexical item, a disambiguation procedure is needed to decide upon the most appropriate sense(s) for any given instance of the lexical item in text. WSD is not a self-contained application, but it may be included as an integrated part of a semantic processor.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: lexical sense resolution, sense discrimination, Lesartdesambiguierung</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_understanding/computational_psycholinguistics"></A>language_understanding/computational_psycholinguistics</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Computational Psycholinguistics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Computational models of the architectures and mechanisms which underly human language processing. Computational psycholinguistics aims to develop predictive computational theories of mind that explicitly characterize how people both use and acquire knowledge of language. Models are evaluated in terms of their ability to account for human linguistic performance in tasks such as incremental ambiguity resolution, language acquisition, and production.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: sentence processing</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_understanding/computational_semantics"></A>language_understanding/computational_semantics</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Computational Semantics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="language_understanding/computational_pragmatics"></A>language_understanding/computational_pragmatics</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Computational Pragmatics</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Pragmatics studies language use in relation to context, and particularly linguistic communication. For communication to work, hearers must recognize speakers' communicative intentions, whereby the connection between intentions and sentences relies on a shared system of beliefs and inferences. Communication is also a social affair, relying on a shared conception of the context situation. Current computational applications are mostly dialogue systems and text generation systems.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: computational discourse processing</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Knowledge Representation and Discovery"></A>7. Knowledge Representation and Discovery</h2>
+<h3>
+<A name="knowledge_representation_and_discovery/ontologies"></A>knowledge_representation_and_discovery/ontologies</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Ontologies</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> What are Ontologies? And why are they important for NLP? From a theoretical point of view, ontology is the metaphysical study of the nature of being and existence. In practice, an ontology is normally viewed as a formal representation of all semantic objects and their connections in a Universe of Discourse. Mapping these semantic objects onto language units (words, phrases, text segments, etc.) is the task of semantic processing in NLP.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="knowledge_representation_and_discovery/automatic_hyperlinking"></A>knowledge_representation_and_discovery/automatic_hyperlinking</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Automatic Hyperlinking</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="knowledge_representation_and_discovery/knowledge_discovery"></A>knowledge_representation_and_discovery/knowledge_discovery</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Knowledge Discovery</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Generally, knowledge discovery / data mining is the process of analyzing data from different perspectives and summarizing it into useful information - information that can be used to increase revenue, cuts costs, or both. Data mining software is one of a number of analytical tools for analyzing data. It allows users to analyze data from many different dimensions or angles, categorize it, and summarize the relationships identified. Technically, data mining is the process of finding correlations or patterns among dozens of fields in large relational databases.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Data Mining</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="knowledge_representation_and_discovery/semantic_web"></A>knowledge_representation_and_discovery/semantic_web</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Semantic Web</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> The Semantic Web is a W3C-based initiative for representing knowledge on the World Wide Web in a machine-readable fashion, such that it can be understood and used by machines for intelligent applications.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h2>
+<A name="Spoken Language Input"></A>8. Spoken Language Input</h2>
+<h3>
+<A name="spoken_language_input/speech_recognition"></A>spoken_language_input/speech_recognition</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Speech Recognition (ASR)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Automatic Speech Recognition deals with automatic transcribing spoken language as text which is further processed in application dependent ways. Important applications are dictation, control of machines and devices by speech, information systems, speech translation, aids for disabled persons</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Spracherkennung</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="spoken_language_input/acoustic_modelling_in_speech_recognition"></A>spoken_language_input/acoustic_modelling_in_speech_recognition</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Acoustic Modelling in Speech Recognition</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Modelling of basic recognition units in the microphone signal. These units are often phones (esp. if a large vocabulary is used), while systems with a small vocabulary sometimes use larger units like words. The acoustic signal is not used directly, but represented by spectral parameters derived from it. Spectral parameters that are often used are mel-frequency cepstral coefficients (MFCC's) or RASTA PLP coefficients (noise-robust linear predictive coding parameters), although many other parameter types, including parameters based on auditory processing or phonetic features, are also used sometimes. The models in most state-of-the-art systems are obtained through hidden Markov modelling (HMM), although dynamic time warping and neural nets are also used for acoustic modelling (the latter also in combination with HMM). A limited number of systems exist in which the acoustic modelling is not stochastic, but knowledge-based.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="spoken_language_input/spoken_language_understanding"></A>spoken_language_input/spoken_language_understanding</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Spoken Language Understanding</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> The analysis of spoken language for an application. Spoken language understanding can involve dealing with multiple recognition hypotheses from ASR, taking prosodic properties of utterances into account and having to deal with fragmentary and grammatically incorrect utterances. Commercial ASR products often are accompanied by analysis tools. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="spoken_language_input/signal_analysis_and_representation"></A>spoken_language_input/signal_analysis_and_representation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Signal Analysis and Representation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> In acoustic phonetics, the speech signal is represented as a waveform (amplitude curve over time). Through subsequent frequency analysis (e.g., using an FFT), a spectrogram (frequency distribution over time) is generated. For automatic speech processing (e.g., recognition, synthesis), further derived and discretised representations are required, e.g. mel-cepstrum coefficients (see also DSP Techniques).,</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Signalanalyse und Reprasentation, Analyse et representation du signal</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="spoken_language_input/language_modelling"></A>spoken_language_input/language_modelling</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Language Modelling</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Statistical Language Models define probability distributions over sequences of words, and can be used to select the best transcription of an utterance in a speech recognizer. Other applications include spelling correction, natural language generation, and machine translation. The parameters of statistical language models are estimated from a set of training examples. Useful techniques range from simple models based on trigram frequencies up to hybrid models that involve linguistic and world knowledge that may be optimized using sophisticated machine learning approaches. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Language Modeling, Statistical Language Modelling</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="spoken_language_input/emotion_recognition"></A>spoken_language_input/emotion_recognition</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Emotion Recognition</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> The recognition of emotions from text, speech, facial expressions, gestures and/or physiological measures. A key challenge is the appropriate representation of emotional states.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Emotionserkennung, Reconnaissance des emotions, Reconocimiento de las emociones</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="spoken_language_input/prosody_information_processing"></A>spoken_language_input/prosody_information_processing</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Prosody Information Processing </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Prosody can be defined as a feature of speech which extends over more than one segment and is often synonymous with 'suprasegmentals'. Prosodic features include fundamental frequency (F0),relative duration and intensity, and spectral quality. They determine the rhythm and intonation of utterances. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Prosodic Analysis, Prosodie</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="spoken_language_input/speaker_recognition"></A>spoken_language_input/speaker_recognition</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Speaker Recognition</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Speaker recognition, which can be classified into identification and verification, is the process of automatically recognizing who is speaking on the basis of individual information included in speech waves. This technique makes it possible to use the speaker's voice to verify their identity and control access to services such as voice dialing, banking by telephone, telephone shopping, database access services, information services, voice mail, security control for confidential information areas, and remote access to computers.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: speaker verification, speaker identification, voice recognition</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Written Language Input"></A>9. Written Language Input</h2>
+<h3>
+<A name="written_language_input/document_image_analysis"></A>written_language_input/document_image_analysis</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Document Image Analysis (DIA) </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Document Image Decoding</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="written_language_input/ocr_print"></A>written_language_input/ocr_print</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> OCR: Print (OCR)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Automatic transformation of bitmap images of printed textual documents into machine editable text documents. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Optical Character Recognition</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="written_language_input/ocr_handwriting"></A>written_language_input/ocr_handwriting</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> OCR: Handwriting (ICR) </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Automatic transformation of hand-written text into machine editable text.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Handwriting recognition, Cursive character recognition, Intelligent character recognition</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Natural Language Generation"></A>10. Natural Language Generation</h2>
+<h3>
+<A name="natural_language_generation/natural_language_generation"></A>natural_language_generation/natural_language_generation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Natural Language Generation (NLG)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> The field of Natural Language Generation (NLG) is concerned with building computer software systems which can produce meaningful texts in human languages from some underlying non-linguistic representation of information. For document production, NLG systems use knowledge about human languages and possibly the application domain. NLG components are used for e.g. automatic report generation, authoring, concept-to-speech and machine translation systems. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Human Language Generation, natuerlichsprachliche Generierung, generation du language naturel</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="natural_language_generation/deep_generation"></A>natural_language_generation/deep_generation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Deep Generation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> A knowledge-based approach to natural language generation that stresses theoretical motivation and re-usability of technology and knowledge sources.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="natural_language_generation/shallow_generation"></A>natural_language_generation/shallow_generation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Shallow Generation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> An approach to natural language generation in which the generator is specifically taylored around the specific needs of the given application.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="natural_language_generation/syntactic_generation"></A>natural_language_generation/syntactic_generation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Syntactic Generation (how-to-say) </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Generation of a syntactically well-formed natural language utterance from a given representation of its meaning, typically guided by a grammar that encodes the relevant syntactic and semantic constraints.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: NLG, syntaktische Generierung</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Spoken Output Technologies"></A>11. Spoken Output Technologies</h2>
+<h3>
+<A name="spoken_output_technologies/text-to-speech_synthesis"></A>spoken_output_technologies/text-to-speech_synthesis</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Text-to-speech Synthesis (TTS)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> The generation of synthetic speech from text. Typically, a text-to-speech synthesis system performs a text analysis using natural language processing techniques; determines the appropriate phonetic string and prosodic features; and generates a speech signal by employing a concatenative or rule-based synthesis method. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: speech synthesis, synthetic speech generation, Sprachsynthese, Text-to-Speech Synthese, Synthese de la parole, Habla sintetica</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="spoken_output_technologies/spoken_language_generation"></A>spoken_output_technologies/spoken_language_generation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Spoken Language Generation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Whereas the generation of spoken language from semantic representations can be sequentialized into generation of text followed by text-to-speech, using text as an intermediate representation may lose information that was available in the original input. An integrated solution can avoid this problem and thereby lead to improved quality and/or simpler system architecture. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Concept-to-Speech Generation, Meaning-to-Speech System</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Multilinguality"></A>12. Multilinguality</h2>
+<h3>
+<A name="multilinguality/machine_translation"></A>multilinguality/machine_translation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Machine Translation (MT)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="multilinguality/multilingual_information_retrieval"></A>multilinguality/multilingual_information_retrieval</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Multilingual Information Retrieval (CLIR)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Cross-language information retrieval means using queries in one language to search for documents in a different language. Multilingual information retrieval is a broader term, which includes the case where queries in different languages are used, but only for searching documents in the same language. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter8-5.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: cross-language information retrieval, translingual information retrieval, sprachubergreifendes Information Retrieval</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="multilinguality/example-based_translation_and_translation_memories"></A>multilinguality/example-based_translation_and_translation_memories</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Example-Based Translation and Translation Memories (TM)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Translation memories and example-based MT are techniques that reuse parts of existing translations to simplify the translation of new text from the same domain. Whereas translation memories concentrate on the reuse of translated sentences, example-based MT applies this idea to finer units like phrases, terms, and constructions.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="multilinguality/human-aided_machine_translation"></A>multilinguality/human-aided_machine_translation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Human Aided Machine Translation (HAMT)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> We call Human-aided Machine Translation all systems and techniques which rely on real automation of the translation function when porting a text from one language to another. As opposed to full Machine Translation, human-aided MT does not fully rely on computational translation, but assists this process by pre-editing and post-editing steps, possibly also interactive human intervention to steer or select from alternative translations. Translation of real-time spoken language, by contrast, does not allow for human intervention, except for negotiation functions, such as clarification dialogues. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter8-2.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="multilinguality/multilingual_speech_processing"></A>multilinguality/multilingual_speech_processing</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Multilingual Speech Processing</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Speech systems able to understand more than one language. Either the speakers' language is recognised automatically by a language identifier or multiple language specific input channels can be employed.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="multilinguality/statistical_machine_translation"></A>multilinguality/statistical_machine_translation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Statistical Machine Translation (SMT)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Techniques for machine translation that combine a stochastic model of the target language with a stochastic relation between target and source language. Translation is seen as a decoding task similar to speech recognition. Both types of models can be build automatically from suitable training data.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="multilinguality/machine-aided_human_translation"></A>multilinguality/machine-aided_human_translation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Machine-Aided Human Translation (MAHT)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Techniques that help to increase the productivity of human translators via suitable computational infrastructure, including translation memories, terminology management, partial machine translation, online lexicons, or other techniques that automate parts of the translator's work, such as speech recognition or accelerated typing techniques applied to human translations. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter8-4.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="multilinguality/automatic_language_identification"></A>multilinguality/automatic_language_identification</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Automatic Language Identification (LI)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Automatic Language Identification (LID) is the problem of identifying the language of a sample of speech or written text by an unknown person. Several important applications already exist for LID, viz., as a front-end to, e.g., a call router in a telephone-based application or a multi-lingual speech recognition system. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter8-7.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: language identification, Sprachenidentifizierung, Automatic Language Identification (speech and text)</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="multilinguality/multilingual_generation"></A>multilinguality/multilingual_generation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Multilingual Generation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h2>
+<A name="Multimodality"></A>13. Multimodality</h2>
+<h3>
+<A name="multimodality/representations of_space_and_time"></A>multimodality/representations of_space_and_time</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Representations of Space and Time</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Semantic representation and logic of temporal and spatial expressions and concepts in natural languages.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="multimodality/modality_integration_facial_movement_and_speech"></A>multimodality/modality_integration_facial_movement_and_speech</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Modality Integration: Facial Movement and Speech</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Multimodal fusion combines the output of speech understanding, gestures and mimic recognition (if available) to an uniform representation of the user intention.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: multimedia fusion, multimodal fusion</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Coding and Compression"></A>14.  Coding and Compression</h2>
+<h3>
+<A name="coding_and_compression/speech_coding"></A>coding_and_compression/speech_coding</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Speech Coding</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Coding algorithms seek to minimize the bit rate in the digital representation of a signal without an objectionable loss of signal quality in the process. High quality is attained at low bit rates by exploiting signal redundancy as well as the knowledge that certain types of coding distortion are imperceptible because they are masked by the signal. Models of signal redundancy and distortion masking are becoming increasingly more sophisticated, leading to continuing improvements in the quality of low bit rate signals. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter10-2.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="coding_and_compression/text_compression"></A>coding_and_compression/text_compression</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Text Compression</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Methods for text compression identify and exploit redundancy in text documents in order to obtain a more condensed representation of the information, from which the original data can be recovered without modification (lossless compression). In theory, there is a close relation between compression and prediction: The better a statistical language model can estimate the probability of a word, given some context, the more the text as a whole can be compressed.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="coding_and_compression/speech_nhancement"></A>coding_and_compression/speech_nhancement</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Speech Enhancement</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> The improvement of speech intelligibility by removing background noise from the speech signal. Due to the complexity of speech acoustics and perception, no simple mathematical error criterion can be applied instead, algorithms and measures need to be developed which accomodate human perception. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter10-3.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: noise cancellation, noise removal</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="coding_and_compression/text_encryption"></A>coding_and_compression/text_encryption</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Text Encryption</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> A cryptosystem or cipher system is a method of disguising messages so that only certain people can see through the disguise. Cryptography is the art of creating and using cryptosystems. Cryptanalysis is the art of breaking cryptosystems---seeing through the disguise even when you're not supposed to be able to. Cryptology is the study of both cryptography and cryptanalysis.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="coding_and_compression/speech_encryption"></A>coding_and_compression/speech_encryption</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Speech Encryption</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Application of encryption technology to the transmission of speech signals in real time.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Voice Encryption, Voice Scrambling, Speech Scrambling</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Mathematical Methods"></A>15. Mathematical Methods</h2>
+<h3>
+<A name="mathematical_methods/natural_language_parsing"></A>mathematical_methods/natural_language_parsing</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Natural Language Parsing (NL Parsing)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Parsing (from Latin "pars orationis" = parts of speech) is the syntactic analysis of languages. Natural Language Parsing is the syntactic analysis of natural languages, such as Finnish or Chinese. The objective of Natural Language is to determine parts of sentences (such as verbs, noun phrases, or relative clauses), and the relationships between then (such as subject or object). Unlike parsing of formally defined artificial languages (such as Java or predicate logic), parsing of natural languages presents problems due to ambiguity, and the productive and creative use of language. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter3-6.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: syntactic analysis</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/statistical_modeling_and_classification"></A>mathematical_methods/statistical_modeling_and_classification</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Statistical Modeling and Classification</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> In most applications of human language technology some tasks cannot be solved by purely deductive (rule-based) approaches, but need quantitative mechanisms to pick the most plausible out of a larger set of potential outcomes, or rank a set of possibilities. Often, the required preferences can be extracted from training examples by suitable statistical techniques. Statistical language modeling for speech recognition and text retrieval and categorization have been among the earliest applications. Recent work in many subfields of HLT focusses on the integration of statistical (implicit) and rule-based (explicit) knowledge. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter11-2.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/optimization_and_search_in_speech_and_language_processing"></A>mathematical_methods/optimization_and_search_in_speech_and_language_processing</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Optimization and Search in Speech and Language Processing</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Optimization and search are vital to modern speech and natural language processing systems, as speech recognition and parsing are combinatorial optimization problems, in which from a large number of potential analyses the best ones (those with highest overall probability, smallest number of assumed errors, best fit with contextual expectation...) need to be identified. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter11-7.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/maximum_entropy_methods"></A>mathematical_methods/maximum_entropy_methods</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Maximum Entropy Methods (ME, MEM, MEMD, MaxEnt)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Maximum entropy methods are techniques for the estimation of probability distributions that pick the "most uniform" distribution compatible with the observed statistics. The maximum entropy formulation has a unique solution which can be found by iterative scaling algorithms. Maximum entropy models have been applied to NLP-related task like text segmentation and classification, language modeling, part-of-speech tagging, parsing, and machine translation.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/latent_semantic_analysis"></A>mathematical_methods/latent_semantic_analysis</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Latent Semantic Analysis (LSA)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Latent Semantic Analysis is a technique for indexing and retrieval that takes advantage of implicit higher-order structure in the association of terms with documents ("semantic structure") in order to improve the detection of relevant documents on the basis of terms found in queries. Uses statistical techniques for dimensionality reduction such as singular-value decomposition or unsupervised soft clustering.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Latent Semantic Indexing</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/language_modeling"></A>mathematical_methods/language_modeling</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Language Modelling</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Statistical Language Models define probability distributions over sequences of words, and can be used to select the best transcription of an utterance in a speech recognizer. Other applications include spelling correction, natural language generation, and machine translation. The parameters of statistical language models are estimated from a set of training examples. Useful techniques range from simple models based on trigram frequencies up to hybrid models that involve linguistic and world knowledge that may be optimized using sophisticated machine learning approaches. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter1-5.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Language Modeling, Statistical Language Modelling</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/dsp_techniques"></A>mathematical_methods/dsp_techniques</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>DSP Techniques</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> A collective term for algorithms analysing, modifying, or coding a signal. DSP techniques are employed in most speech technology applications analysing, generating or transmitting a speech signal. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter11-3.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Digital Signal Processing, Digitale Signalverarbeitung</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/conditional_random_fields"></A>mathematical_methods/conditional_random_fields</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Conditional Random Fields (CRF)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> A framework for building probabilistic models to segment and label sequence data. According to their inventors, CRFs offer advantages over hidden markov models, stochastic grammars, and maximum entropy markov models.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/support_vector_machines"></A>mathematical_methods/support_vector_machines</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Support Vector Machines (SVM)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Support Vector Machines are machine learning algorithms for binary classification based on recent advances in statistical learning theory. The input is mapped into a high dimensional feature space, in which a linear classifier is constructed that maximizes the margin between the classes and hence generalizes well to unseen data. Learning requires only information about the relative distances of the training instances, so it can be performed for arbitrary distance metrics (called kernels) that may be specific to the application domain. These generalized SVMs are called kernel machines.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Kernel Machines</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/emerging_computing_paradigms"></A>mathematical_methods/emerging_computing_paradigms</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Emerging Computing Paradigms</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Emergent computaion is a type of computation that is bottom-up and not globally nor totally programmed. Only local information or very limited amount of information is used for a unit of computation. However, certain global information structure, which is often unexpected, is emerged from this computation. For the field of natural language processing, researchers are concerned with the question of the origin and evolution of language.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/finite_state_technology"></A>mathematical_methods/finite_state_technology</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Finite State Technology (FST)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Finite-state devices such as finite-state automata and finite-state transducers have been known since the emergence of computer science and are recently extensively used in many areas of natural language processing. Their use is motivated by their time and space efficiency and the fact that many relevant local language phenomena can be easily and intuitively expressed as finite-state devices. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter11-5.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Finite-State Technology</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/connectionist_techniques"></A>mathematical_methods/connectionist_techniques</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Connectionist Techniques (PDP)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Connectionist techniques are modelled on biological brains, whose higher-order cognitive processes appear to emerge from the interplay of large numbers of simple processing units, the neurons. Rather than being used as a substrate in which to implement known elements playing known roles, neural networks are let to evolve by themselves: they gradually adapt to the environment through a modification of inter-neural connection strengths, which come to reflect the neurons' history of co-activities. Typically, the emerging network represents objects, symbols, attributes, etc. (if at all) in states, involving larger numbers of neurons. Connectionism is a field of machine learning and has an affinity to statistics, fuzzy logic, and genetic programming. See also the corresponding HLT-Survey Section: http://www.lt-world.org/HLT_Survey/ltw-chapter11-5.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: connectionism, parallel distributed processing, neurocomputing, neural networks, Konnektionismus, Neuronale Netzwerke, Neurale Netzwerke</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/hmm_methods"></A>mathematical_methods/hmm_methods</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>HMM Methods (HMM)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Probabilistic modeling of sequential data by assuming underlying (hidden) state sequences that produce observed (visible) sequences. See also the related HLT-Survey Section on HMM Methods in Speech Recognition: http://www.lt-world.org/HLT_Survey/ltw-chapter1-5.pdf</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="mathematical_methods/inductive_logic_programming"></A>mathematical_methods/inductive_logic_programming</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Inductive Logic Programming (ILP)</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Inductive Logic Programming (ILP) is a research area formed at the intersection of Machine Learning and Logic Programming. ILP systems develop predicate descriptions from examples and background knowledge. The examples, background knowledge and final descriptions are all described as logic programs. A unifying theory of Inductive Logic Programming is being built up around lattice-based concepts such as refinement, least general generalisation, inverse resolution and most specific corrections. In addition to a well established tradition of learning-in-the-limit results, some results within Valiant's PAC-learning framework have been demonstrated for ILP systems. U-learnabilty, a new model of learnability, has also been developed.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: induktive Logikprogrammierung</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Discourse and Dialogue"></A>16. Discourse and Dialogue</h2>
+<h3>
+<A name="discourse_and_dialogue/discourse_and_dialogue"></A>discourse_and_dialogue/discourse_and_dialogue</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Discourse and Dialogue</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> A Discourse is a piece of language including more than one sentence. A Dialogue is a linguistic exchange involving more than one participant. Discourse and dialogue therefore encompasses almost all non-local phenomena in language, but in particular discourse coherence, anaphoric dependencies, dialogue structure and the relation between questions and answers. The most obvious practical application in this area is dialogue systems and, more recently, spoken dialogue systems.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Dialogue and Discourse, Diskurs und Dialog</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="discourse_and_dialogue/spoken_language_dialogue"></A>discourse_and_dialogue/spoken_language_dialogue</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Spoken Language Dialogue (SLD) </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Spoken Language Dialogue covers man-machine dialog systems using speech as main means of user interaction as well as systems analysing spoken dialogues between humans. Such systems presuppose speech recognition, speech synthesis and spoken language understanding.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="discourse_and_dialogue/discourse_modeling"></A>discourse_and_dialogue/discourse_modeling</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Discourse Modeling</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Discourse modeling describes all aspects of the relations between groups of sentences in monologue (text) or dialogue, e.g. text coherence, rhetorical relations, intentional and attentional state, centering, dialogue moves,dialogue acts, and reference phenomena, to name just a few. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Discourse Modelling, Diskursmodellierung</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="discourse_and_dialogue/spoken_dialogue_systems"></A>discourse_and_dialogue/spoken_dialogue_systems</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Spoken Dialogue Systems (SDS) </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Spoken Dialogue Systems are automatic systems that interact with humans (or other systems) by accepting spoken language input and producing spoken language output. Spoken language input is handled by speech recognition, and language analysis and understanding components. Spoken language output is achieved by playback of recorded human speech, or by speech synthesis. Spoken dialogue systems include a component for dialogue control, which may make use of artificial intelligence techniques. Spoken dialogue systems are widely used for information and transaction systems, such as stock market information or travel reservation.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: speech dialogue systems</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="discourse_and_dialogue/dialogue_modeling"></A>discourse_and_dialogue/dialogue_modeling</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Dialogue Modeling</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h2>
+<A name="Language Resources"></A>17. Language Resources</h2>
+<h3>
+<A name="language_resources/written_language_corpora"></A>language_resources/written_language_corpora</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Written Language Corpora</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Any collection of more than one text can be called a corpus, (corpus being Latin for "body", hence a corpus is any body of text). But the term "corpus" when used in the context of modern linguistics means a machine-readable text collection which is representative for the language use under investigation. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: written language resources, text corpora, Korpora der geschriebenen Sprache, Textkorpora, corpus de la langue ecrite, corpus textuel</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_resources/linguistically_annotated_corpora"></A>language_resources/linguistically_annotated_corpora</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Linguistically Annotated Corpora</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Linguistically annotated corpora are text collections which are enriched with linguistic information.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: annotated corpora, linguistically interpreted corpora, linguistically enriched corpora, annotierte Korpora, linguistisch annotierte Korpora, corpus annote, corpus linguistiquement annote</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_resources/thesauri_wordnets"></A>language_resources/thesauri_wordnets</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Thesauri WordNets</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="language_resources/spoken_language_corpora"></A>language_resources/spoken_language_corpora</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Spoken Language Corpora</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Spoken language corpora are collections of recorded spoken language, generally associated with transcriptions of speech and noises, and with annotations at different linguistic levels. Speech corpora can contain read speech, spontaneous speech, dialogues and may be recorded under different conditions with regard to microphones, environment (e.g., lab, office, background noise), and transmission channel (e.g., telephone, broadcast). Speech corpora are used for different purposes, including training and evaluation of speech recognisers, phonetic and phonological research, dialect research, dialogue research, and speech synthesis.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: speech corpora</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_resources/lexicons"></A>language_resources/lexicons</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Lexicons</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="language_resources/grammars"></A>language_resources/grammars</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Grammars </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="language_resources/multilingual_corpora"></A>language_resources/multilingual_corpora</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Multilingual Corpora</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Any collection of more than one text in more than one language can be called a multilingual corpus, (corpus being Latin for "body", hence a multilingual corpus is any body of multilingual texts). But the term "multilingual corpus" when used in the context of modern linguistics means a machine-readable text collection of multilingual texts which are representative for the language use under investigation.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: multilinguale Korpora, corpus multilingue</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="language_resources/terminology"></A>language_resources/terminology</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Terminology </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="language_resources/standards"></A>language_resources/standards</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Standards</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Standards provide a common framework for the creation, maintenance and exchangeability of linguistic resources.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Standards, standards</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Evaluation"></A>18. Evaluation</h2>
+<h3>
+<A name="evaluation/evaluation_of_machine_translation_and_translation_tools"></A>evaluation/evaluation_of_machine_translation_and_translation_tools</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Evaluation of Machine Translation and Translation Tools</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Evaluation of MT systems depends strongly on whether such a system is used for information dissemination, assimilation, or in a conversational context, the types of texts to be translated, whether there is a well-defined and limited application domain and many more factors. The growing number of MT systems on the market that span a wide range of quality along these dimensions has motivated activities towards evaluation standards from national and international organizations. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="evaluation/human_factors_and_user_acceptability"></A>evaluation/human_factors_and_user_acceptability</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Human Factors and User Acceptability</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="evaluation/usability_and_interface_design"></A>evaluation/usability_and_interface_design</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Usability and Interface Design</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="evaluation/evaluation_of_broad-coverage_natural-language_parsers"></A>evaluation/evaluation_of_broad-coverage_natural-language_parsers</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Evaluation of Broad-Coverage Natural-Language Parsers</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Measuring the success of (stochastic or symbolic) parsers.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Parser Evaluation, Parser-Evaluierung</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="evaluation/speech_input_assessment_and_evaluation"></A>evaluation/speech_input_assessment_and_evaluation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Speech Input - Assessment and Evaluation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Assessment and evaluation are concerned with the global quantification and detailed measurement of system performance. Assessment is the process of system appraisal which leads to global, overall, quantification of performance. Evaluation involves the analytic description of system performance in terms of defined factors.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: ASR Evaluation</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="evaluation/information_retrieval_evaluation"></A>evaluation/information_retrieval_evaluation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Information Retrieval Evaluation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="evaluation/deep_parser_performance_evaluation"></A>evaluation/deep_parser_performance_evaluation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Deep Parser Performance Evaluation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>TBD</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name="evaluation/speech_synthesis_evaluation"></A>evaluation/speech_synthesis_evaluation</h3>
+<table width="95%" align="center" cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td> Speech Synthesis Evaluation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td> Evaluation of speech synthesis traditionally considers intelligibility and naturalness. More recently, expressivity has become an issue with the increasing demand for expressive voices. Due to the multitude of aspects involved, there is no agreed standard for evaluation of speech synthesis systems. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Synonyms: Evaluation von Sprachsynthese, Evaluation de systemes de synthese de la parole, Evaluacion de sistemas de sintetizacion del habla</p>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Conclusion"></A>19. Conclusion</h2>
+</body>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td>[<a name="HLTv1">HLTv1</a>]</td><td>Language Technology - A Survey of the State of the Art (First Edition 1997)<br>
+      &lt;<a href="http://www.lt-world.org/HLT_Survey/Edit_Board/">http://www.lt-world.org/HLT_Survey/Edit_Board/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td>[<a name="HLTv2">HLTv2</a>]</td><td>Language Technology - A Survey of the State of the Art (Second Edition 2003 in preparation)<br>
+      &lt;<a href="http://www.lt-world.org/HLT_Survey/Edit_Board/">http://www.lt-world.org/HLT_Survey/Edit_Board/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td>[<a name="LT-World">LT-World</a>]</td><td>LT-World<br>
+      &lt;<a href="http://www.lt-world.org/">http://www.lt-world.org/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td>[<a name="OLAC-MS">OLAC-MS</a>]</td><td>OLAC Metadata Set.<br>
+      &lt;<a href="/OLAC/olacms.html">http://www.language-archives.org/OLAC/olacms.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

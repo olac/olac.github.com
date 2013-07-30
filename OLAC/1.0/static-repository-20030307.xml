@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository xmlns="http://www.openarchives.org/OAI/2.0/static-repository" 
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/" 
+            xmlns:olac="http://www.language-archives.org/OLAC/1.0/"
+            xmlns:olac-archive="http://www.language-archives.org/OLAC/1.0/olac-archive"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/static-repository 
+                                http://www.language-archives.org/OLAC/1.0/static-repository.xsd
+                                http://www.language-archives.org/OLAC/1.0/
+                                http://www.language-archives.org/OLAC/1.0/olac.xsd
+                                http://www.language-archives.org/OLAC/1.0/olac-archive
+                                http://www.language-archives.org/OLAC/1.0/olac-archive.xsd"> <!-- OLAC -->
+
+  <!-- OLAC: changes marked - Steven Bird 2002-12-14 -->
+
+  <!-- OLAC: This document is valid according to both of the following schemas:
+       http://www.openarchives.org/OAI/2.0/static-repository.xsd
+       http://www.language-archives.org/OLAC/1.0/static-repository.xsd
+  -->
+
+  <Identify>
+    <oai:repositoryName>Demo repository</oai:repositoryName>
+    <oai:baseURL>http://an.oai.org/ma/mini.xml</oai:baseURL>
+    <oai:protocolVersion>2.0</oai:protocolVersion>
+    <oai:adminEmail>jondoe@oai.org</oai:adminEmail>
+    <oai:earliestDatestamp>2002-09-19</oai:earliestDatestamp>
+    <oai:deletedRecord>no</oai:deletedRecord>
+    <oai:granularity>YYYY-MM-DD</oai:granularity>
+    <oai:description>
+
+        <olac-archive:olac-archive
+            xmlns="http://www.language-archives.org/OLAC/1.0/olac-archive"
+            type="institutional">
+            <archiveURL>http://www.ethnologue.com</archiveURL>
+            <curator>Raymond G. Gordon, Jr.</curator>
+            <curatorTitle>Ethnologue Editor</curatorTitle>
+            <curatorEmail>mailto:editor_ethnologue@sil.org</curatorEmail>
+            <institution>SIL International</institution>
+            <institutionURL>http://www.sil.org</institutionURL>
+            <shortLocation>Dallas, USA</shortLocation>
+            <location>7500 W. Camp Wisdom Rd., Dallas, TX 75236, U.S.A.</location>
+            <synopsis>The Ethnologue data provider gives a metadata record for every
+            language entry in the Web edition of the Ethnologue.  The latter provides
+            basic information about each of the 7,000+ modern language of the world
+            (both living and recently extinct).</synopsis>
+            <access>Every resource described by the Ethnologue data provider is a
+            public Web page that may be accessed without restriction. Reuse of 
+            material on the site is subject to the Terms of Use that are posted.</access>
+        </olac-archive:olac-archive>
+        
+    </oai:description>
+    
+  </Identify>
+  <ListMetadataFormats>
+    <oai:metadataFormat>
+      <oai:metadataPrefix>olac</oai:metadataPrefix>
+      <oai:schema>http://www.language-archives.org/OLAC/1.0/olac.xsd</oai:schema>
+      <oai:metadataNamespace>http://www.language-archives.org/OLAC/1.0/</oai:metadataNamespace>
+    </oai:metadataFormat>
+  </ListMetadataFormats>
+  <ListRecords metadataPrefix="olac">
+    <oai:record> 
+        <oai:header>
+            <oai:identifier>oai:arXiv:cs/0112017</oai:identifier> 
+            <oai:datestamp>2001-12-14</oai:datestamp>
+        </oai:header>
+        <oai:metadata>
+
+        <olac:olac xmlns="http://purl.org/dc/elements/1.1/"
+                   xmlns:dcterms="http://purl.org/dc/terms/">
+            <subject xsi:type="olac:linguistic-field" olac:code="phonology"/>
+            <contributor xsi:type="olac:role" olac:code="editor">Sapir, Edward</contributor>
+            <language xsi:type="olac:language" olac:code="x-sil-BAN">Dschang</language>
+            <subject xsi:type="olac:language" olac:code="x-sil-SKY"/>
+            <type xsi:type="olac:linguistic-type" olac:code="lexicon">thesaurus</type>
+            <rights xsi:type="olac:access" olac:code="commercial"/>
+
+            <title xml:lang="fr">Titre</title>
+            <dcterms:alternative>ALTERNATIVE</dcterms:alternative>
+            <dcterms:created xsi:type="dcterms:W3CDTF">1963-09-14</dcterms:created>
+            <relation xsi:type="dcterms:URI">http://oai.grainger.uiuc.edu</relation>
+         </olac:olac>
+
+         </oai:metadata>
+    </oai:record>  
+  </ListRecords>
+</Repository>

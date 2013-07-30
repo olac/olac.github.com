@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:software-cpu="http://www.compuling.net/projects/olac/software-cpu.xsd"
+            xmlns:software-os="http://www.compuling.net/projects/olac/software-os.xsd"
+            xmlns:software-sourcecode="http://www.compuling.net/projects/olac/software-sourcecode.xsd"
+            xmlns="http://www.compuling.net/projects/olac/software.xsd"
+            targetNamespace="http://www.compuling.net/projects/olac/software.xsd"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+  <xs:annotation>
+    <xs:documentation>
+      This schema provides several vocabularies for describing software.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:import namespace="http://purl.org/dc/elements/1.1/"
+             schemaLocation="http://www.ukoln.ac.uk/metadata/dcmi/xmlschema/20021007/dc.xsd"/>
+  <xs:import namespace="http://www.compuling.net/projects/olac/software-cpu.xsd"
+             schemaLocation="software-cpu.xsd"/>
+  <xs:import namespace="http://www.compuling.net/projects/olac/software-os.xsd"
+             schemaLocation="software-os.xsd"/>
+  <xs:import namespace="http://www.compuling.net/projects/olac/software-sourcecode.xsd"
+             schemaLocation="software-sourcecode.xsd"/>
+
+  <xs:complexType name="cpu">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="software-cpu:software-cpu" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="os">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="software-os:software-os" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sourcecode">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="software-sourcecode:software-sourcecode" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+</xs:schema>
+

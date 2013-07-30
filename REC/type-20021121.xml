@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc>
+  <header>
+    <status code="draft" type="recommendation"/>
+    <title>OLAC Linguistic Data Type Vocabulary</title>
+    <baseName>type</baseName>
+    <issued>20021121</issued>
+    <previousIssued>20020628</previousIssued>
+    <abstract><p>
+              This document specifies the codes, or controlled vocabulary,
+              for the Linguistic Data Type extension of the OLAC Type
+              element.  These codes describe the content of a resource
+              from the standpoint of recognized structural types of
+              linguistic information.
+    </p></abstract>
+    <editors>
+      Heidi Johnson (<url>mailto:ailla@ailla.org</url>)
+      Helen Aristar Dry (<url>mailto:hdry@linguistlist.org</url>)
+    </editors>
+    <copyright>
+      Heidi Johnson (University of Texas at Austin)
+      Helen Aristar Dry (Eastern Michigan University)
+    </copyright>
+    <changes>
+      <p>Adds: Grammar, Primary_Text</p>
+      <p>
+              Deletes: Transcription section,  Annotation section, Text
+              section (changed to Primary_Text), subtypes of Dataset,
+              subtypes of Lexicon, subtypes of Description.
+      </p>
+    </changes>
+  </header>
+
+  <body>
+    <section>
+    <heading>Introduction</heading>
+<p>
+Like all OLAC elements, the Type element is both optional  and repeatable.
+Since it is optional, the Linguistic Data Type extension of the Type element
+should only be used if a resource represents a recognized linguistic data
+type. However, if a resource represents more than one linguistic data type,
+the element may be repeated.  So, for example, a primary text accompanied by
+a lexicon of vocabulary items would be described as both a primary text and
+a lexicon.
+</p>
+
+<p>
+In many cases, adequate description of a linguistic resource will require
+that the Linguistic Data Type extension be used in conjunction with the
+Discourse Type extension of the Type element, or the Linguistic Field
+extension of the Subject element.    For example, a narrative text might  be
+described as both a primary text (OLAC Linguistic Type) and a narrative
+(OLAC Discourse Type). And a phoneme dataset might be describedboth as a
+dataset (OLAC Linguistic Type) and as relevant to phonology (OLAC Linguistic
+Field).
+</p>
+    </section>
+
+<section>
+<heading>Linguistic Data Type</heading>
+<p>
+Each term in the controlled vocabulary is described in one of the
+following subsections. The heading gives the encoded value for the
+term that is to be used as the value of the code attribute of the
+"OLAC-Linguistic-Type" extension of the Type metadata element
+<cit>OLAC-MS</cit>. Under the heading, the term is described in four
+ways. <i>Name</i> gives a descriptive label for the term.
+<i>Definition</i> is a one-line summary of what the term
+means. <i>Comments</i> offers more details on what the term
+represents. Examples may also be given to illustrate how the term is
+meant to be applied.
+</p>
+
+<term>
+  <code>dataset</code>
+  <name>Dataset</name>
+  <definition>The resource is a structured set of data items.</definition>
+  <comment><p>
+     A dataset is a collection of items organized in a
+     structured format for some specific research purpose.</p>
+  </comment>
+  <examples><p>
+     Examples of datasets are: a set of sentences
+     illustrating deictic terms; an inflectional affix
+     paradigm; a list of utterance tokens in a uniform
+     context (e.g. "Say [pat] now."); a chart giving a
+     phonemic inventory classified by place/manner; an audio
+     recording of minimal pairs.
+  </p></examples>
+</term>
+
+<term>
+  <code>lexicon</code>
+  <name>Lexicon</name>
+  <definition>The resource includes a systematic listing of lexical items.</definition>
+  <comment><p>
+    Lexicon may be used to describe any resource which
+    includes a systematic listing of lexical items. Each
+    lexical item may, but need not,  be accompanied by a
+    definition, a description of the referent (in the case
+    of proper names), or an indication of the item's
+    semantic relationship to other lexical items.
+  </p></comment>
+  <examples><p>
+    Examples include word lists (including comparative word
+    lists), thesauri,  wordnets, framenets, and
+    dictionaries, including specialized dictionaries such
+    as bilingual and multilingual dictionaries,
+    dictionaries of terminology, and dictionaries of proper
+    names. Non-word-based examples include phrasal lexicons
+    and lexicons of intonational tunes.
+  </p></examples>
+</term>
+
+<term>
+  <code>primary_text</code>
+  <name>Primary Text</name>
+  <definition>Linguistic material which is itself the object of study.</definition>
+  <comment><p>
+    Primary Text is used to describe material in the
+    subject language which embodies linguistic or cultural
+    features which make it an object of analysis or
+    research. What distinguishes a primary text from a
+    lexicon, dataset, or description is its temporal
+    structure. In a primary text, the timecourse of some
+    external linguistic event, e.g., a conversation or
+    elicitation session, is carried over into the archived
+    artefact.</p>
+
+    <p>Note:  Primary_text describes the content of the
+    resource, not the physical format.  A primary text may
+    be recorded in different physical media, e.g. as
+    videotaped, audiotaped, or written text.  Physical
+    format is described using the Format element.
+  </p></comment>
+  <examples><p>
+    Examples of primary texts include transcribed
+    interlinear texts, (audiotaped) elicitation sessions,
+    (videotaped) rituals or story-telling sessions, and any
+    other recorded speech or writing which exemplifies
+    language structure or use in such a way as to become an
+    object of study.
+  </p></examples>
+</term>
+
+<term>
+  <code>description</code>
+  <name>Description</name>
+  <definition>The resource is a linguistic description of a language
+              or some aspect(s) of a language.</definition>
+  <comment><p>
+    Not every resource with descriptive content should be
+    described with this code. Instead, it should be
+    reserved for a work that describes some aspect of a
+    particular language, typically in prose with
+    interspersed examples.
+  </p></comment>
+  <examples><p>
+    Examples of descriptions include a grammar, a sketch
+    grammar, a phonological sketch.
+  </p></examples>
+</term>
+</section>
+</body>
+
+<references>
+  <ref abbrev="OLAC-MS">OLAC Metadata Set.<br/>
+    &lt;<url>http://www.language-archives.org/OLAC/olacms.html</url>&gt;</ref>
+</references>
+</OLAC_doc>

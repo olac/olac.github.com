@@ -1,0 +1,117 @@
+News from the Open Language Archives Community (OLAC)
+
+Dear Community,
+
+Here is a summary of the developments in the Open Language
+Archives Community since our last general news posting in March.
+Full details are available at:
+  http://www.language-archives.org/
+
+
+OLAC AT THE LSA
+
+OLAC will be organizing a booth in the publisher's exhibit hall at the
+LSA meeting in San Francisco in January.  OLAC search services will be
+demonstrated, and OLAC archives are invited to send someone to help
+staff the booth, to give live demonstrations of their web interfaces
+and to hand out flyers for their projects.  The booth and web access
+are expensive and we welcome any offers of sponsorship.  If you would
+like to be involved, please contact Heidi Johnson < hjohnson@mail.utexas.edu>
+
+LSA Conference website:
+  http://www.lsadc.org/annmeet/
+
+
+LDC HOSTS NEW OLAC SEARCH INTERFACE
+
+The Linguistic Data Consortium at the University of Pennsylvania now
+hosts a powerful OLAC search interface.  Features include result
+summaries by archive, result ranking, approximate language name
+matching, and country-based searches.  The service was developed by
+Amol Kamat, Baden Hughes, and Steven Bird at the University of
+Melbourne, with sponsorship from the Department of Computer Science
+and Software Engineering and the Linguistic Data Consortium.
+
+OLAC Search Interface:
+  http://www.ldc.upenn.edu/olac/search.php
+
+
+ARCHIVE REPORT CARDS
+
+The archive report cards, added to the OLAC site in March, give
+summary statistics for each repository and an assessment of the
+quality of the repository's metadata.  The assessment is based on OLAC
+and Dublin Core guidelines.  An updated version of the system is now
+available, including a revised evaluation algorithm to account for
+changes in DC recommendations, and revised labelling of the reports
+for consistency with OLAC terminology.  The evaluation metric rewards
+the use of OLAC extensions (controlled vocabularies), and what we
+consider to be the most important DC elements: title, date, subject,
+description, and identifier.  The report cards can be accessed by
+clicking the "REPORT CARD" links on the OLAC Archives page.
+
+The service was developed by Amol Kamat, Baden Hughes, and Steven Bird
+at the University of Melbourne, with sponsorship from the Department
+of Computer Science and Software Engineering, and the Linguistic Data
+Consortium.
+
+OLAC Archives Page (see "REPORT CARD" links):
+  http://www.language-archives.org/archives.php4
+Report for full set of repositories:
+  http://www.language-archives.org/tools/reports/archiveReportCard.php?archive=all
+Documentation on report cards:
+  http://www.language-archives.org/tools/reports/ExplainReport.html
+
+
+LANGUAGE ARCHIVES NEWSLETTER
+
+The journal addresses interested linguistics, ethnologists, and other
+researchers working with linguistic and cultural data. The journal
+especially offers contributions to the following disciplines:
+linguistic data processing and archiving, speech data recordings,
+computer tools for linguistic data as well as papers on relevant
+developments in the area of language archiving. The journal is
+associated with the Language Corpus of the Max Planck Institute for
+Psycholinguistics in Nijmegen in the Netherlands, especially the
+DOBES-Archive (Documentation of endangered languages), but also
+accepts papers with a more general scope.
+
+Language Archives Newsletter
+  http://www.mpi.nl/LAN/
+MPI Language Corpus
+  http://www.mpi.nl/corpus
+DOBES-Archive
+  http://www.mpi.nl/DOBES/
+
+
+NEW OLAC PUBLICATION
+
+Steven Bird and Gary Simons (2004), Building an Open Language Archives
+    Community on the DC Foundation, in Hillmann and Westbrooks
+(editors),
+    Metadata in Practice: A Work in Progress, ALA Editions.
+
+    http://www.language-archives.org/documents/mip.pdf
+
+Abstract: The Open Language Archives Community is an international
+    partnership of institutions and individuals that is creating a
+    worldwide virtual library of language resources.  We report on the
+    development of OLAC metadata as a specialization of Dublin Core
+    metadata and then describe the interoperability framework in which
+    the metadata is validated, disseminated and aggregated.  We also
+    discuss the community-centered process by which OLAC standards and
+    practices are created and maintained.  In each of these three
+    areas, metadata, interoperability, and process, we show how OLAC
+    began with a model that was too cumbersome to implement then found
+    a new formulation which worked in practice.  By reporting on this
+    experience of metadata in practice, we hope to show how a
+    specialist community can address its resource discovery needs by
+    building on the Dublin Core foundation.
+
+
+Best wishes,
+Steven & Gary
+_______
+Steven Bird, University of Melbourne
+Gary Simons, SIL International
+OLAC Coordinators (www.language-archives.org)

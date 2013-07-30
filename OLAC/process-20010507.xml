@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc> 
+  <header> 
+    <status code="draft" type="standard"></status> 
+    <title>OLAC Process</title><baseName>process</baseName> 
+    <issued>20010507</issued><previousIssued></previousIssued> 
+    <abstract> 
+      <p>The document summarizes the governing ideas of OLAC (i.e. the purpose,
+        vision, and core values) and then describes how OLAC is organized and how it
+        operates.</p> 
+    </abstract> 
+    <editors>Gary Simons, SIL International
+      (<url>mailto:gary_simons@sil.org</url>)<br/>Steven Bird, University of
+      Pennsylvania (<url>mailto:sb@ldc.upenn.edu</url>) </editors> <copyright>2001
+    Gary Simons (SIL International) and Steven Bird (University of
+    Pennsylvania)</copyright> 
+    <changes> 
+    </changes> 
+  </header> 
+  <body> 
+    <section> 
+      <heading>Introduction</heading> 
+      <p>The document is the standard that defines how the Open Language
+        Archives Community (OLAC) is organized and how it operates. In developing this
+        standard, many ideas have been adapted from the process documents of four other
+        standards efforts: <cit>DCMI-Process</cit>, <cit>IETF-Process</cit>,
+        <cit>OASIS-Process</cit>, and <cit>W3C-Process</cit>. The organization and
+        process developed for OLAC are much simpler, however. This is fitting since
+        OLAC is a small community with limited resources and&#8212;like most open
+        source projects&#8212;it crucially depends upon the participation of many
+        part-time members. Before defining the organization and process, the
+        fundamental ideas that underlie them are first elaborated.</p> 
+    </section> 
+    <section> 
+      <heading>Governing ideas</heading> 
+      <p>In a successful enterprise, the participants have shared purpose,
+        vision, and core values. These are what Peter Senge calls the "governing ideas"
+        of the enterprise <cit>Senge94</cit>. The governing ideas answer three critical
+        questions: "Why?" "What?" and "How?" Taken as a unit, they answer the question,
+        "What do we believe in?":</p> 
+      <ul> 
+        <li> 
+          <p>Purpose (or mission) is the "Why?"&#8212;the enterprise's answer
+            to the question, "Why do we exist?"</p> 
+        </li> 
+        <li> 
+          <p>Vision is the "What?"&#8212;the picture of the future the
+            enterprise seeks to create.</p> 
+        </li> 
+        <li> 
+          <p>Core values are the "How?"&#8212;these answer the question, "How
+            do we want to act consistent with our mission, along the path toward achieving
+            our vision?"</p> 
+        </li> 
+      </ul> 
+      <p></p> 
+      <p>The purpose (or mission) of OLAC is as follows:</p><blockquote> 
+      <p>OLAC, the Open Language Archives Community, is an international
+        partnership of institutions and individuals who are creating a worldwide
+        virtual library of language resources by:</p> 
+      <ul> 
+        <li> 
+          <p>developing consensus on best current practice for the digital
+            archiving of language resources, and</p> 
+        </li> 
+        <li> 
+          <p> developing a network of interoperating repositories and services
+            for housing and accessing such resources.</p> 
+        </li> 
+      </ul></blockquote> 
+      <p>The vision of OLAC is described elsewhere in terms of "the seven
+        pillars of language archiving" <cit>OLAC-Vision</cit> and shares much in common
+        with the Open Archives Initiative <cit>OAI</cit>. In a nutshell, it is
+        that:</p><blockquote> 
+      <p>Any user on the Internet should be able go to a single GATEWAY to find
+        all the language resources available at all participating institutions, whether
+        the resources be DATA, TOOLS, or ADVICE. The community will ensure on-going
+        interoperation and quality by following STANDARDS for the METADATA that
+        describe resources and services and for processes that REVIEW
+        them.</p></blockquote> 
+      <p>The following core values guide the means that OLAC will employ to
+        achieve its vision:</p><dl><dt>Openness</dt><dd> 
+      <p>By <i>open</i> we mean "freely available to all interested parties."
+        This implies visibility, accessibility, and reusability. All of the metadata
+        published by participating archives will be open. All of the documents
+        developed by OLAC will be open. The processes by which those documents are
+        developed will also be open.</p></dd><dt>Consensus</dt><dd> 
+      <p>Decision making in OLAC will be governed by the principle of
+        consensus. A proposed standard or recommendation will be adopted only when
+        those who have reviewed it share substantial agreement that it is ready to be
+        adopted by the community. This principle does not require unanimous consent,
+        but requires far more than a simple majority. As a rule-of-thumb the OLAC
+        Coordinators will look for at least 80% approval among those responding before
+        moving ahead with a decision.</p></dd><dt>Empowering the players</dt><dd> 
+      <p>The standard protocols and processes that define the framework for the
+        community will not be set by an executive committee or by members who have paid
+        dues. Rather, they will be set by those who are actually "playing the game."
+        That is, the price of membership is to implement the standard protocol and
+        processes. All institutions who have made that investment will have an equal
+        voice in the consensus process that sets the standards. This seems only right
+        since any changes to those standards will entail a further investment by these
+        institutions to implement them.</p></dd><dt>Peer review</dt><dd> 
+      <p>As a part of the academic community, OLAC places a high value on peer
+        review. All of the standards and documents of OLAC will go through a process of
+        anonymous peer review that is open to all who want to participate. All of the
+        resources and services of participating sites will also be open to signed peer
+        review.</p></dd></dl> 
+    </section> 
+    <section> 
+      <heading>Organization</heading> 
+      <p>This section describes the organization of OLAC in terms of the groups
+        of participants that play key roles. This document only defines the groups; see
+        <cit>OLAC-Organization</cit> on the OLAC web site for a complete list of the
+        currently participating individuals and institutions.</p>
+      <dl><dt>Coordinators</dt><dd> 
+      <p>The persons who oversee the operation of the process described in this
+        document.</p></dd><dt>Advisory Board</dt><dd> 
+      <p>The members of the advisory board are persons who are recognized by
+        their peers as being leaders within a subcommunity (whether defined by
+        discipline or by geography) of the wider language resources community. They
+        serve at the invitation of the OLAC Coordinators. Their role is two-fold: to
+        advise the Coordinators about how to respond to particular concerns of their
+        subcommunities, and to promote OLAC within their subcommunities.
+        </p></dd><dt>Participating Archives and Services</dt><dd> 
+      <p>The data providers and service providers who are following the OLAC
+        standards and have successfully registered their membership on the OLAC
+        gateway. For each registered member, there is a designated contact person with
+        whom OLAC communicates to conduct community business.</p></dd><dt>Prospective
+      Participants</dt><dd> 
+      <p>Institutions or projects that have communicated their intent to the
+        OLAC Coordinators to become an OLAC data provider or service provider. For each
+        prospective participant, there is a designated contact
+        person.</p></dd><dt>Working Groups</dt><dd> 
+      <p>Groups of individuals who participate in the OLAC process by drafting
+        documents that are eventually submitted to the community as proposed standards,
+        recommendations, or notes. A working group may also be formed for the purpose
+        of cooperating in the implementation of standards, recommendations, or notes.
+        For each working group, there is a chairperson who serves as the designated
+        contact person.</p></dd><dt>Participating Individuals</dt><dd> 
+      <p>Members of the wider user community who are interested in
+        participating in the OLAC process and have registered with the OLAC gateway to
+        receive community news and invitations to review OLAC documents. </p></dd></dl>
+      
+    </section> 
+    <section> 
+      <heading>Type and status of documents</heading> 
+      <p>The OLAC process is about how documents are developed and promulgated,
+        for it is through documents that OLAC defines itself and the practices that it
+        promotes. The documents published by OLAC are of three types:</p>
+      <dl><dt>Standard</dt><dd> 
+      <p>A standard describes procedures that participating archives and
+        services must follow when participating in the activities of the community or
+        specifications they must follow when implementing data providers or service
+        providers.</p></dd><dt>Recommendation</dt><dd> 
+      <p>A recommendation describes the OLAC consensus on the best current
+        practice regarding some aspect of language-resource archiving. Data providers
+        and service providers (as well as the projects and individuals that create
+        language resources) are encouraged, but not required, to follow these
+        recommendations. The public review of data providers and service providers may
+        include an assessment of degree of conformance to best current
+        practice.</p></dd><dt>Note</dt><dd> 
+      <p>A note is any document published by OLAC which is neither a standard
+        nor a recommendation. One purpose of notes is to ensure that standards and
+        recommendations stay focused on rules and principles. Extended discussion or
+        details of implementations should be treated separately in supporting notes.
+        For instance, a note could be:</p> 
+      <ul> 
+        <li> 
+          <p><i>Experimental.</i> A note could propose a new or different
+            approach that is not mature enough to be put forward as a standard or a
+            recommendation but that has enough merit to put forward within the community
+            for peer review.</p> 
+        </li> 
+        <li> 
+          <p><i>Informational.</i> A note could give helpful information
+            related to some aspect of a standard or recommendation, such as a description
+            of historical background, an elaboration, a rationale, or a non-normative
+            explanation.</p> 
+        </li> 
+        <li> 
+          <p><i>Implementational.</i> A note could give a description of a
+            particular approach to implementing a standard or recommendation.</p> 
+        </li> 
+      </ul></dd></dl> 
+      <p>Orthogonal to the classification by type, OLAC documents are also
+        classified by status. The first five status categories correspond to phases in
+        the life cycle of a document; the sixth category represents withdrawal from the
+        life cycle.</p> <dl><dt>Draft</dt><dd> 
+      <p>A document has <i>draft</i> status from its inception until the point
+        at which its working group achieves consensus on its
+        content.</p></dd><dt>Proposed</dt><dd> 
+      <p>The status of a document moves from draft to <i>proposed</i> when it
+        moves out of its working group and is posted for open peer review by the whole
+        community. </p></dd><dt>Candidate</dt><dd> 
+      <p>The status of a document moves from proposed to <i>candidate</i> when
+        it has been approved by the community, but has not yet had sufficient
+        experience with implementation to be considered for full adoption. (A note that
+        needs no implementation may skip the candidate status.)
+        </p></dd><dt>Adopted</dt><dd> 
+      <p>The status of a document moves from candidate to <i>adopted</i> when
+        it has been approved by the community following an adequate period of
+        experience with implementation.</p></dd><dt>Retired</dt><dd> 
+      <p>The status of a document moves from adopted to <i>retired</i> when it
+        is no longer relevant.</p></dd><dt>Withdrawn</dt><dd> 
+      <p>The status of a document changes to <i>withdrawn</i> when it is
+        removed from the document process before attaining adopted
+        status.</p></dd></dl> 
+    </section> 
+    <section> 
+      <heading>The document process</heading> 
+      <p>The OLAC document process defines how documents get endorsed and
+        published by OLAC. This includes treatment of intellectual property rights, as
+        well as the means by which documents enter the process and progress from one
+        status to the next along the five-phase life cycle. </p> 
+      <p><i>Intellectual property rights.</i> All documents published by OLAC
+        on its web site are published under the terms of the Open Publication License
+        <cit>OPL</cit>. Typically, the authors or editors of the document will be
+        listed as the copyright holders.</p> 
+      <p><i>Entering the process.</i> A document may enter the process by one
+        of two means. (1) Any working group may develop a document and present it as a
+        proposal for review by the entire community. (2) The OLAC Coordinators may
+        present a document as a proposal for review by the entire community. Following
+        the latter path, an author who is not part of a working group may submit a
+        document directly to the Coordinators. The Coordinators may choose to pass the
+        document onto the community as a proposal following review by individuals they
+        designate, or they may direct the author to an existing working group or assist
+        the author in launching a new working group. </p> 
+      <p><i>Review.</i> Documents must pass a review process in order to move
+        to a higher status. When the developers of a document believe that it is ready
+        for advancement to the next status, it is submitted for review within the
+        appropriate segment of the community in order to ensure that there is consensus
+        that the document is indeed ready to advance. Reviewers are asked to vote for
+        one of four options when summarizing their evaluation of the document: </p> 
+      <ul> 
+        <li> 
+          <p><i>Release.</i> The document is ready as-is to be released to the
+            next phase in the process.</p> 
+        </li> 
+        <li> 
+          <p><i>Revise.</i> The document is ready for release without further
+            review once noted minor revisions are made.</p> 
+        </li> 
+        <li> 
+          <p><i>Resubmit.</i> The document should be revised and resubmitted
+            for another round of review.</p> 
+        </li> 
+        <li> 
+          <p><i>Reject.</i> The document does not have a solid enough basis to
+            build on; it should be withdrawn from the process.</p> 
+        </li> 
+      </ul> 
+      <p><i>Life-cycle phases.</i> The life-cycle phases are now defined in
+        terms of expected activity, duration, audience for review, and criteria for
+        advancing to the next phase:</p> <dl><dt>Development phase</dt><dd> 
+      <p>Within the development phase, a working group writes and revises the
+        document. Only working group members are involved in the review process during
+        this phase. The phase ends when the members of the working group reach
+        consensus that the document is ready to be presented to the entire OLAC
+        community for review.</p></dd><dt>Proposal phase</dt><dd> 
+      <p>When a document achieves proposed status, a call for review with a
+        specific deadline date is sent out to the community. Every participating
+        individual is invited to comment. In the case of standards, only participating
+        archives and services have a binding vote, though prospective participants will
+        also be encouraged to vote as the outcome could have a significant impact on
+        them. In the case of recommendations and notes, all participating individuals
+        have a vote. The tally of votes and specific comments (protecting reviewer
+        identity when desired) will be visible to the community. </p> 
+      <p>At the end of the review period, the Coordinators will evaluate the
+        results of the review to make a judgement as to whether there is a consensus in
+        the community that the document should advance to the next phase. If the
+        Coordinators feel that too few participants have responded to feel comfortable
+        about declaring a consensus, they may extend the review period. Otherwise, they
+        will advise the editors of the document as to the next step. A document could
+        remain in the proposal phase for multiple rounds of review. The phase ends when
+        the document is withdrawn, or when the community has indicated consensus that
+        the document is ready for release and the Coordinators have determined that the
+        editors have made any needed revisions.</p> 
+      <p>Standards, recommendations, and some notes require implementation and
+        community experience to ensure that they are ready for adoption. These
+        documents achieve candidate status and enter the testing phase. Other notes may
+        go straight to adoption. </p></dd><dt>Testing phase</dt><dd> 
+      <p>When a document enters candidate status, a call for implementation
+        with a specific deadline date is sent out to the community. The Coordinators
+        will set the implementation period for a duration not shorter than one month
+        nor longer than one year, depending on the anticipated difficulty of
+        implementation. At the end of the testing period, a call for review will be
+        issued in which the relevant community members (as per the proposal phase) who
+        have actually put the document to use are invited to describe their experience
+        and vote on whether it is ready to advance to adoption. The process for
+        evaluating the results of the review and advancing to the next phase is as
+        described for the proposal phase.</p> </dd><dt>Adoption phase</dt><dd> 
+      <p>A document may remain in the adopted status for an indefinite period.
+        Its status remains as adopted until community action is taken to move it to
+        retired status.</p> </dd><dt>Retirement phase</dt><dd> 
+      <p>A document enters the retirement phase when it is given retired
+        status. This could happen when it is superseded by the adoption of a newer
+        version of the same document, when it is superseded by the adoption of an
+        altogether different document, or when the community agrees that it has
+        otherwise outlived its usefulness.</p></dd></dl> 
+      <p><i>Changes to adopted documents.</i> In the case of corrections or
+        editorial refinements, the Coordinators may authorize a new version of an
+        adopted document without going through community review. However, any
+        substantive changes should be processed via a formal call for review. In this
+        case, the new version enters the process with proposed status and the adopted
+        version maintains its adopted status until it is retired by the adoption of the
+        new version. </p> 
+    </section> 
+    <section> 
+      <heading>The working group process</heading> 
+      <p>Working groups play a fundamental role in the OLAC process as the
+        primary source of the documents that enter the OLAC document process. In
+        keeping with the OLAC core value of openness, working groups are open to
+        observation and participation by any member of the community. They are
+        self-organizing in that members of the community may recognize the need for a
+        working group and set it up on their own initiative. </p> 
+      <p><i>Formation.</i> A working group is formed by three or more eligible
+        participants who represent at least three different institutions. Any person
+        who is registered with OLAC as a Participating Individual is eligible to
+        participate in an OLAC working group. In order to form a working group, the
+        prospective group must submit the following to the OLAC Coordinators:</p> 
+      <ul> 
+        <li> 
+          <p>the name of the working group</p> 
+        </li> 
+        <li> 
+          <p>a statement of purpose that is germane to the purpose of OLAC</p> 
+        </li> 
+        <li> 
+          <p>the names and email addresses of members representing at least
+            three different institutions</p> 
+        </li> 
+        <li> 
+          <p>the name of the chairperson</p> 
+        </li> 
+        <li> 
+          <p>a list of planned documents and the projected date for completing
+            the development phase of each</p> 
+        </li> 
+      </ul> 
+      <p>When the above conditions are satisfactorily met, the OLAC
+        Coordinators will set up a web page for the working group and a mailing list
+        that is seeded with the initial membership list. When those are in place, a
+        call for participation will be sent out to the entire OLAC community. Any
+        person who wants to participate in the development of the planned documents may
+        subscribe to the mailing list and thereby become a member of the working
+        group.</p> 
+      <p><i>Chairperson.</i> The working group chairperson serves as the point
+        of contact with the OLAC Coordinators concerning the activities of the working
+        group. The chairperson is responsible to keep the working group moving toward
+        completing the documents listed on its web page and to communicate changes of
+        plans for the working group to the OLAC Coordinators. A chairperson may resign
+        or may be removed by a 2/3 vote of the working group members. A vacancy is
+        filled by election from among members of the working group.</p> 
+      <p><i>Meetings.</i> Working groups typically conduct their business
+        electronically, via their web page and their mailing list. If and when working
+        groups do want to meet by teleconference or face-to-face, the working group
+        members or their institutions will bear such costs.</p> 
+      <p><i>Activities.</i> The most concerted activity of a working group
+        takes place during the development phase of its documents. Once a document
+        reaches proposed status, the working group gets involved only when the
+        community review calls for major revisions. Such revisions should be vetted
+        within the working group before the document is resubmitted for community-wide
+        review.</p> 
+      <p><i>Dissolution.</i> A working group will remain constituted as long as
+        it is making progress towards developing planned documents or as long as
+        documents it has developed are in proposed or candidate status. When these
+        conditions are not met, the working group may elect to dissolve itself or may
+        be dissolved by the OLAC Coordinators.</p> 
+    </section> 
+  </body> 
+  <references> 
+    <ref abbrev="DCMI-Process">Dublin Core Metadata Initiative - Structure and
+      Operation.<br/>&lt;<url>http://dublincore.org/documents/1999/05/31/dcmi-structure/</url>&gt;<br/>Guidelines
+      for Dublin Core Working Groups - Working Draft
+      1.4.<br/>&lt;<url>http://dublincore.org/documents/1999/06/02/wgguidelines/</url>&gt;</ref>
+    
+    <ref abbrev="IETF-Process">Internet Standards Process - RFC
+      2026.<br/>&lt;<url>http://www.ietf.org/rfc/rfc2026.txt</url>&gt;</ref>
+    <ref abbrev="OAI">Open Archives
+      Initiative.<br/>&lt;<url>http://www.openarchives.org/</url>&gt;</ref> 
+    <ref abbrev="OASIS-Process">OASIS [Organization for the Advancement of
+      Structured Information Standards] Technical Committee Process Overview.
+      <br/>&lt;<url>http://www.oasis-open.org/committees/process.shtml</url>&gt;
+      <br/>A Scalable Process for Information Standards, by Jon Bosak.
+      <br/>&lt;<url>http://www.xml.com/pub/a/2001/01/17/oasisprocess.html</url>&gt;</ref>
+    
+    <ref abbrev="W3C-Process">World Wide Web Consortium Process
+      Document.<br/>&lt;<url>http://www.w3.org/Consortium/Process-20010208/</url>&gt;</ref>
+    
+    <ref abbrev="Senge94">The Fifth Discipline: The art and practice of the
+      learning organization, by Peter M, Senge. New York: Currency Doubleday, 1994.
+      See especially, "Anchoring vision in a set of governing ideas," pages 223-225.
+      </ref> 
+    <ref abbrev="OLAC-Organization">OLAC
+      Organization.<br/>&lt;<url>http://www.language-archives.org/organization.html</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Vision">The Seven Pillars of Open Language Archiving: A
+      Vision Statement.
+      <br/>&lt;<url>http://www.language-archives.org/docs/vision.html</url>&gt;</ref>
+    
+    <ref abbrev="OPL">Open Publication
+      License.<br/>&lt;<url>http://www.opencontent.org/openpub/</url>&gt;</ref> 
+  </references>
+</OLAC_doc>

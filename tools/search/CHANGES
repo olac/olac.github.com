@@ -1,0 +1,8 @@
+Changes in version 1.1:
+------------------
+
+Searching:
+  - Logical connectors 'AND' and 'OR'.
+  - Inline syntax in searching (eg, creator:smith).
+  - New Google search terms, with support to use search terms in languages
+	other than English.

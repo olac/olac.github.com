@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.language-archives.org/OLAC/1.0b1/olac-date.xsd"
+           targetNamespace="http://www.language-archives.org/OLAC/1.0b1/olac-date.xsd"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:simpleType name="olac-date">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="created"/>
+      <xs:enumeration value="valid"/>
+      <xs:enumeration value="available"/>
+      <xs:enumeration value="issued"/>
+      <xs:enumeration value="modified"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="olac-date-format">  <!-- weak definition -->
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9][0-9][0-9][0-9](-[0-9][0-9](-?[0-9][0-9])?)?"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

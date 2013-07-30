@@ -1,0 +1,1023 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="OLAC_doc.xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc> 
+  <header> 
+    <status code="proposed" type="standard" endDate="20021211" supersededBy="metadata"/> 
+      <title>OLAC Metadata Set</title> <baseName>olacms</baseName> 
+      <issued>20011022</issued> <previousIssued>20010616</previousIssued> 
+      <abstract> 
+        <p>This document specifies the metadata set used by the Open Language
+          Archives Community <cit>OLAC</cit> for the interchange of metadata within the
+          framework of the Open Archives Initiative <cit>OAI</cit>.
+          This document is superseded by the OLAC Metadata standard:
+            <url>http://www.language-archives.org/OLAC/metadata.html</url></p> 
+      </abstract> 
+      <editors>Gary Simons, SIL International
+        (<url>mailto:gary_simons@sil.org</url>)<br/>Steven Bird, University of
+        Pennsylvania (<url>mailto:sb@ldc.upenn.edu</url>)</editors><copyright>2001 Gary
+      Simons (SIL International) and Steven Bird (University of
+      Pennsylvania)</copyright> 
+      <changes> 
+        <p>Adds <i>scheme</i> attribute (see sections 1 and 2). The <i>lang</i>
+          attribute on <tt>&lt;olac&gt;</tt> is renamed to <i>langs.</i> Following
+          <cit>DC-Q</cit>, adds <i>alternative</i> as a possible refinement for Title so
+          that the original title can be distinguished from translations. Type.data is
+          renamed as <xref>Type.linguistic</xref>. These changes are reflected in version
+          0.4 of the OLAC metadata schema which is being released at the same time.
+          (Another significant change to the schema is that the use of capitalization in
+          element names now conforms to the usage in the examples in this document.)
+          Significant addition to discussion of <xref>Coverage</xref>. Numerous minor
+          editorial revisions. </p> 
+      </changes> 
+  </header> 
+  <body> 
+    <section> 
+      <heading>Introduction</heading> 
+      <p>This document describes the OLAC metadata set and its implementation
+        in XML. The OLAC metadata set is based on the Dublin Core metadata set and uses
+        all fifteen elements defined in that standard <cit>DCMES1.1</cit>. (The
+        rationale for following DC is discussed in the OLAC white paper
+        <cit>OLAC-WP</cit>.) </p> 
+      <p>In order to meet the specific needs of the language archiving
+        community, the OLAC metadata set qualifies the fifteen DC elements following
+        principles articulated in <cit>DC-Q</cit> and exemplified in
+        <cit>DCQ-HTML</cit>. These documents describe three kinds of qualification:
+        element refinement, encoding scheme, and content language. The OLAC
+        implementation of qualified DC uses three attributes to support these kinds of
+        qualification: <i>refine, scheme,</i> and <i>lang,</i> respectively.</p> 
+      <p>The OLAC metadata standard prescribes a particular encoding scheme for
+        many elements. In these cases, a <i>code</i> attribute is used to store the
+        encoded element value, while the element content is still available for a value
+        that does not conform to the prescribed scheme. (Note that when applying a
+        so-called "dumb down" procedure to map the qualified OLAC metadata onto
+        unqualified DC, the value of the <i>code</i> attribute would be moved into the
+        content of the element. A more intelligent mapping could also translate the
+        coded value to a more readable descriptive label.)</p> 
+      <p>This standard also prescribes a particular encoding scheme for some
+        element refinements. In these cases the refinement is implemented as a new
+        element rather than via the <i>refine</i> attribute. This has been motivated by
+        a limitation of XML schemas for validating XML documents&#8212;namely, the
+        definition of validity for one attribute (e.g. <i>code</i>) cannot be made
+        dependent on the value of another attribute (e.g. <i>refine</i>). Thus, when a
+        particular refinement requires that the element value use a different encoding
+        scheme, then a unique element has been defined. The names for these refined
+        elements have been formed as in <cit>DCQ-HTML</cit> by concatenating the DC
+        element name and the refinement name with an intervening dot (e.g.
+        Subject.language).</p> 
+      <p>The XML implementation of the OLAC metadata elements is based on the
+        Open Archives Initiative's implementation of Dublin Core metadata elements
+        <cit>OAI-DC</cit> in that OLAC defines a proper superset of OAI DC. That is, if
+        the container element of a valid OAI DC record is renamed from
+        <tt>&lt;dc&gt;</tt> to <tt>&lt;olac&gt;</tt>, the result is still a valid OLAC
+        metadata record.</p> 
+      <p>The most recent version of the XML schema for the OLAC metadata set
+        (which matches this specification) is as follows:</p> 
+      <ul> 
+        <li> 
+          <p>Schema:
+            <url>http://www.language-archives.org/OLAC/0.4/olac.xsd</url> </p> 
+        </li> 
+        <li> 
+          <p>Example: <url>http://www.language-archives.org/OLAC/0.4/olac.xml
+            </url></p> 
+        </li> 
+      </ul> 
+      <p>Section 2 below describes the attributes used in implementing the OLAC
+        metadata set. Section 3 then describes each of the elements that make up the
+        OLAC metadata set.</p> 
+    </section> 
+    <section> 
+      <heading>Attributes</heading> 
+      <p>Four attributes&#8212;<i>refine, code, scheme,</i> and
+        <i>lang</i>&#8212;are used throughout the XML implementation of the metadata
+        elements. A fifth attribute, <i>langs,</i> is used on complete metadata
+        records. These are described in turn below.</p> 
+      <p> Some elements in the OLAC metadata set use the <i>refine</i>
+        attribute to identify element refinements. These qualifiers make the meaning of
+        an element narrower or more specific. A refined element shares the meaning of
+        the unqualified element, but with a more restricted scope <cit>DC-Q</cit>. When
+        an element does use a <i>refine</i> attribute, the possible values for the
+        attribute are restricted to a specified controlled vocabulary.</p> 
+      <p>Some elements in the OLAC metadata set use the <i>code</i> attribute
+        to hold metadata values that are taken from a specific encoding scheme. The
+        attribute value is always a precise value taken from a controlled vocabulary or
+        a formal notation that is described in another OLAC document. As a result, all
+        service providers are able to interpret uniformly the meaning of any
+        <i>code</i> value. The terms of a controlled vocabulary are also incorporated
+        into the XML schema for OLAC metadata; thus every <i>code</i> value is tested
+        for validity when the OLAC registration server tests a data provider for
+        conformance to OLAC standards <cit>OLAC-Registration</cit>. For elements that
+        have a <i>code</i> attribute, the element content may also be used to specify a
+        freeform elaboration of the coded value.</p> 
+      <p>Every element in the OLAC metadata set may use the <i>scheme</i>
+        attribute. It specifies a standardized name for the scheme that constrains how
+        the text in the content of the element is encoded. A scheme may be a controlled
+        vocabulary or a formal notation. Recommended best practice is to confine the
+        value of <i>scheme</i> to the label for one of the encoding schemes registered
+        with the Dublin Core Metadata Initiative <cit>DCMI-Registry</cit>. Members of
+        the OLAC community who want to use an unregistered scheme should submit it for
+        registration <cit>DCMI-Submit</cit>. When OLAC data providers are tested for
+        conformance to OLAC recommended best practice, only the value of the
+        <i>scheme</i> attribute is tested for inclusion in the list of registered
+        schemes. OLAC does not test the actual element content for conformance to the
+        scheme; a service provider for a subcommunity that has developed a particular
+        scheme could perform such a test. </p> 
+      <p>Every element in the OLAC metadata set may use the <i>lang</i>
+        attribute. It specifies the language in which the text in the content of the
+        element is written. The value for the attribute comes from the controlled
+        vocabulary defined by <cit>OLAC-Language</cit>. By default, the <i>lang</i>
+        attribute has the value "en", for English. Whenever the language of the element
+        content is other than English, recommended best practice is to use the
+        <i>lang</i> attribute to identify the language. By using multiple instances of
+        the metadata elements tagged for different languages, data providers may offer
+        their metadata records in multiple languages. </p> 
+      <p>The <i>langs</i> attribute is used on the <tt>&lt;olac&gt;</tt>
+        element&#8212;the container for all the metadata elements of a given metadata
+        record. It lists the languages in which the metadata record is designed to be
+        read. This attribute holds a space-delimited list of language codes from the
+        <cit>OLAC-Language</cit> controlled vocabulary. By default, this attribute has
+        the value "en", for English, indicating that the record is aimed only at
+        English readers. If an explicit value is given for the attribute, then the
+        record is aimed at readers of all the languages listed.</p> 
+      <p>Service providers should use this information in order to offer
+        localized views of the metadata. When a metadata record lists only one
+        language, then all elements should be displayed (regardless of their individual
+        languages), unless the user has requested to suppress all records in that
+        language. When a metadata record has multiple alternative languages, the user
+        should be able to select one and have display of elements in the other
+        languages suppressed. An element in a language not included in the list of
+        alternatives should always be displayed (for instance, the vernacular title of
+        a work).</p> 
+    </section> 
+    <section> 
+      <heading>Metadata elements</heading> 
+      <p>Each element of the OLAC metadata set is described in one of the
+        following subsections. The heading gives the generic identifier of the XML tag
+        used to encode the element. Under the heading, the element is described in five
+        ways. <i>Name</i> gives a descriptive label for the tag. <i>Definition</i> is a
+        one-line summary of what the element is used for. <i>Comments</i> offers
+        details on how to use the element; the first paragraph typically repeats the
+        comment from <cit>DCMES1.1</cit>, while the remaining paragraphs give further
+        specification for how OLAC uses the element. <i>Attributes</i> describes the
+        XML attributes used with the element. <i>Examples</i> shows samples of properly
+        encoded elements.</p> 
+      <p>In a given metadata record, every element is optional and every
+        element is repeatable.</p> 
+      <element> 
+        <tag>Contributor</tag> 
+        <name>Contributor </name> 
+        <definition>An entity responsible for making contributions to the
+          content of the resource.</definition> 
+        <comment> 
+          <p>A Contributor may be a person, an organization, or a service.
+            Contributor is closely related to <xref>Creator</xref>. The difference has to
+            do with degree of responsibility for the content. The Contributor designation
+            is used for those entities whose role in the creation of the resource is not
+            great enough to merit recognition as a primary source of the intellectual
+            content. This element may be used to identify institutions that sponsored or
+            funded the work. It may be used to identify individuals who played a secondary
+            role in the development of the resource. As a rule of thumb, Creator is used
+            when the contribution is such that it would be cited in the "author" field of a
+            bibliographic entry, and Contributor is used otherwise.</p> 
+          <p>Recommended best practice is to identify the entity by means of a
+            name and to give the name in a form that is ready for sorting within an index.
+            For the names of persons, this means that the name should be given in inverted
+            order with the surname first. For the names of organizations, this means that
+            any initial article should be omitted. When a resource has more than one
+            contributor, use a separate Contributor element for each one.</p> 
+        </comment> 
+        <attributes> 
+          <p>The <i>refine</i> attribute is optionally used to specify the role
+            (such as transcriber, sponsor, and so on) played by the named entity in the
+            creation of the resource. The role is expressed by means of a controlled
+            vocabulary; see <cit>OLAC-Role</cit> for the definition of the vocabulary. </p>
+          
+        </attributes> 
+        <examples> 
+          <p>A generic contributor:</p> 
+          <eg>&lt;contributor&gt;Smith, John L.&lt;/contributor&gt;</eg> 
+          <p>A funding agency:</p> 
+          <eg>&lt;contributor refine="sponsor"&gt;National Science
+    Foundation&lt;/contributor&gt;</eg> 
+          <p>The person who performed a role for which there is not a suitable
+            code:</p> 
+          <eg>&lt;contributor&gt;Smith, John L. (format conversion)&lt;/contributor&gt;</eg> 
+        </examples> 
+      </element> 
+      <element> 
+        <tag>Coverage</tag> 
+        <name>Coverage </name> 
+        <definition>The extent or scope of the content of the resource.
+          </definition> 
+        <comment> 
+          <p> Coverage will typically include spatial location (a place name or
+            geographic coordinates), temporal period (a period label, date, or date range)
+            or jurisdiction (such as a named administrative entity).
+            <cit>DCMES1.1</cit></p> 
+          <p>Recommended best practice is to select a value from a controlled
+            vocabulary that is identified in the <i>scheme</i> attribute (for example, the
+            Thesaurus of Geographic Names <cit>TGN</cit>). Where appropriate, named places
+            or time periods should be used in preference to numeric identifiers such as
+            sets of coordinates or date ranges.</p> 
+          <p>In the OLAC context, service providers already have a database
+            that maps languages to the countries in which they are spoken
+            <cit>OLAC-Language</cit>. Coverage should not be used to duplicate this
+            information; rather service providers will support searches concerning
+            languages spoken in a given country by referring to the language database.
+            Coverage should be used geographically only when the language involved has a
+            wide distribution and the resource focuses on its use in a particular region or
+            geopolitical jurisdiction, or conversely, when the resource deals with a region
+            that encompasses multiple languages. </p> 
+        </comment> 
+        <examples> 
+          <p>A resource about English in India:</p> 
+          <eg>&lt;subject.language code="en"/&gt;
+&lt;coverage&gt;India&lt;/coverage&gt;</eg> 
+          <p>A resource about languages spoken on Guadalcanal:</p> 
+          <eg>&lt;coverage scheme="TGN"&gt;Guadalcanal (island)&lt;/coverage&gt;</eg> 
+          <p>A resource about language use in the 19th century:</p> 
+          <eg>&lt;coverage&gt;19th century&lt;/coverage&gt;</eg> 
+        </examples> 
+      </element> 
+      <element> 
+        <tag>Creator</tag> 
+        <name>Creator</name> 
+        <definition>An entity primarily responsible for making the content of
+          the resource. </definition> 
+        <comment> 
+          <p>A Creator may be a person, an organization, or a service. Creator
+            is closely related to <xref>Contributor</xref>. In determining whether an
+            entity is a Creator (as opposed to a Contributor), use the same criteria that
+            are followed for deciding that an entity should be listed in the "author" slot
+            of a bibliographic reference as a primary source of the intellectual content.
+            Entities that do not merit that level of recognition should be treated as
+            Contributors.</p> 
+          <p>Recommended best practice is to identify a Creator by means of a
+            name and to give the name in a form that is ready for sorting within an index.
+            For the names of persons, this means that the name should be given in inverted
+            order with the surname first. For the names of organizations, this means that
+            any initial article should be omitted. When a resource has more than one
+            creator, use a separate Creator element for each one.</p> 
+        </comment> 
+        <attributes> 
+          <p>The <i>refine</i> attribute is optionally used to specify the role
+            (such as author, editor, translator, and so on) played by the named entity in
+            the creation of the resource. The role is expressed by means of a controlled
+            vocabulary; see <cit>OLAC-Role</cit> for the definition of the vocabulary. </p>
+          
+        </attributes> 
+        <examples> 
+          <p>A personal author:</p> 
+          <eg>&lt;creator&gt;Bloomfield, Leonard&lt;/creator&gt;</eg> 
+          <p>An institutional author:</p> 
+          <eg>&lt;creator&gt;Linguistic Society of America&lt;/creator&gt;</eg> 
+          <p>An editor:</p> 
+          <eg>&lt;creator refine="editor"&gt;Sapir, Edward&lt;/creator&gt;</eg> 
+        </examples> 
+        <todo> 
+          <p>Develop the controlled vocabulary and write the OLAC-Role
+            document. The MARC vocabulary for "relators" (i.e. the relationship between a
+            named entity and a work) may be a good place to start:
+            <url>http://lcweb.loc.gov/marc/relators/re0002r1.html</url></p> 
+          <p>Here, and with Contributor, we recommend a format that puts
+            surname first. We should probably go a step further and recommend that archives
+            follow the standards described in AACR2. We need help from a librarian to give
+            us a synopsis (or a pointer to such) of the rules for fomatting personal and
+            corporate names. </p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Date</tag> 
+        <name>Date </name> 
+        <definition>A date associated with an event in the life cycle of the
+          resource.</definition> 
+        <comment> 
+          <p>Recommended best practice is to use a coded value (see below) when
+            possible, since that guarantees that a service provider can do a straight
+            alphanumeric sort to put collections of metadata descriptions in correct
+            chronological order. The element content may always be used to express
+            date-related values or comments that cannot be fitted into the encoding
+            standard.</p> 
+        </comment> 
+        <attributes> 
+          <p>The <i>code</i> attribute is used to hold a standardized encoding
+            of a date. Following <cit>DCMES1.1</cit>, OLAC uses the YYYY-MM-DD format as
+            defined in <cit>W3CDTF</cit>. When a month or day value is less than 10, use a
+            leading 0 to maintain a two-digit length. The encoded value may be for the year
+            alone, for the year and month, or for an exact date. A range of years is also a
+            valid value for this attribute; in this case both years must be four-digit
+            values and the earliest year should come first. Thus, the encoded value may
+            match one of the four following patterns: <tt>YYYY</tt>, <tt>YYYY-MM</tt>,
+            <tt>YYYY-MM-DD</tt>, or <tt>YYYY-YYYY</tt>.</p> 
+          <p>The <i>refine</i> attribute is optionally used to refine the
+            meaning of the date using values from a controlled vocabulary (for instance,
+            date of creation versus date of issue versus date of modification, and so on).
+            The vocabulary for refinements to Date is defined in <cit>DC-Q</cit>. </p> 
+          <p>A Date with no refinement will be assumed to be the date of issue
+            (i.e. publication). A single resource should not have more than one instance of
+            each date refinement. In selecting a single date to associate with a resource,
+            a service provider will select the most recent of date created, issued, or
+            modified.</p> 
+        </attributes> 
+        <examples> 
+          <p>A typical year of publication:</p> 
+          <eg>&lt;date code="1992"/&gt;</eg> 
+          <p>A resource modified on October 16, 1996:</p> 
+          <eg>&lt;date refine="modified" code="1996-10-16"/&gt;</eg> 
+          <p>A resource from approximately 1950:</p> 
+          <eg>&lt;date code="1950"&gt;circa 1950&lt;/date&gt;</eg> 
+        </examples> 
+      </element> 
+      <element> 
+        <tag>Description</tag> 
+        <name>Description</name> 
+        <definition>An account of the content of the resource. </definition> 
+        <comment> 
+          <p>Description may include but is not limited to: an abstract, table
+            of contents, reference to a graphical representation of content, or a free-text
+            account of the content. <cit>DCMES1.1</cit></p> 
+          <p>No formatting conventions are defined within the text of
+            Description. Service providers may format the entire Description as a single
+            paragraph, collapsing adjacent white space characters into a single space.</p> 
+          <p>When there is a URL for a document that describes the resource,
+            use a separate Description element to encode just that URL. A Description that
+            begins with "http:" will be interpreted by service providers as consisting
+            solely of a URL and will be presented as a link in user interfaces. Service
+            providers are not obliged to search other Description text for the occurrence
+            of URLs.</p> 
+        </comment> 
+        <examples> 
+          <p>A prose description of a resource:</p> 
+          <eg>&lt;description&gt;The CALLHOME Japanese corpus of telephone speech consists
+    of 120 unscripted telephone conversations between native speakers
+    of Japanese. All calls, which lasted up to 30 minutes, originated
+    in North America and were placed to locations overseas (typically
+    Japan). Most participants called family members or close friends.
+    This corpus contains speech data files ONLY, along with the
+    minimal amount of documentation needed to describe the contents
+    and format of the speech files and the software packages needed to
+    uncompress the speech data. &lt;/description&gt;</eg> 
+          <p>A reference to an existing on-line description:</p> 
+          <eg>&lt;description&gt;http://www.ldc.upenn.edu/Catalog/LDC96S37.html<br/>&lt;/description&gt;</eg> 
+        </examples> 
+        <todo> 
+          <p><cit>DC-Q</cit> defines two refinements for Description: table of
+            contents and abstract. Do we want to introduce this?</p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Format</tag> 
+        <name>Format </name> 
+        <definition>The physical or digital manifestation of the resource.
+          </definition> 
+        <comment> 
+          <p>Typically, Format may include the media-type or dimensions of the
+            resource. Format may be used to determine the software, hardware or other
+            equipment needed to display or operate the resource. Examples of dimensions
+            include size and duration. <cit>DCMES1.1</cit></p> 
+        </comment> 
+        <attributes> 
+          <p>The <i>code</i> attribute should be used to make a precise
+            identification of the format using a controlled vocabulary. This is especially
+            important for digital resources since service providers may use this
+            information to match data resources with the software tools that are
+            appropriate for manipulating them. See <cit>OLAC-Format</cit> for the
+            definition of the vocabulary. </p> 
+          <p>The element content may be left empty, but it would typically be
+            used to add further details about the format of the resource, such as the
+            sampling rate for digital recordings, the size of computer files, the number of
+            pages and dimensions of a book, the appearance of a physical object, and so on.
+            </p> 
+        </attributes> 
+        <examples> 
+          <p>For a digitally encoded dictionary:</p> 
+          <eg>&lt;format code="text/xml"&gt;5,237 entries in a 1.2M XML
+    file.&lt;/format&gt;</eg> 
+          <p>For a digitally recorded text:</p> 
+          <eg>&lt;format code="audio/wav"&gt;Duration: 153 seconds. Size: 3.3M.
+    Sampling: 1 channel, 22 KHz, 8 bits.&lt;/format&gt;</eg> 
+        </examples> 
+        <todo> 
+          <p>We need to develop the vocabulary for Format. It should be based
+            on the list of Internet Media Types <cit>MIME</cit> but we will probably still
+            want our own vocabulary document at least for the purpose of explaining and
+            exemplifying the use of MIME types. But further than that, we may want to pull
+            out a subset of MIME types. We also may want to add some new categories and
+            subtypes for our purposes in order to cover archive holdings that are not
+            digital, e.g. manuscript, print, microform, and so on. The library or archive
+            world probably has such a controlled vocabulary already, e.g. does MARC have
+            standards for this?</p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Format.cpu</tag> 
+        <name>CPU Requirement</name> 
+        <definition>The CPU required to use a software resource.</definition> 
+        <comment> 
+          <p>This element is used in the description of executable programs to
+            identify the kind of CPU that is needed to run them.</p> 
+        </comment> 
+        <attributes> 
+          <p>The <i>code</i> attribute is used to make a precise identification
+            of the required CPU using a controlled vocabulary. See <cit>OLAC-CPU</cit> for
+            the definition of the vocabulary. </p> 
+          <p>The element content is typically left empty, but it can be used to
+            add further details about the hardware required for running the resource. These
+            could go beyond CPU details to include memory, disk, and so on. </p> 
+        </attributes> 
+        <examples> 
+          <p>Software that runs on a Power PC:</p> 
+          <eg>&lt;format.cpu code="ppc"/&gt;</eg> 
+          <p>Software that runs on the Intel family of processors but needs at
+            least 64 megabytes of memory:</p> 
+          <eg>&lt;format.cpu code="x86"&gt;At least 64M memory&lt;/format.cpu&gt;</eg> 
+        </examples> 
+        <todo> 
+          <p>We need to develop the vocabulary for CPU.</p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Format.encoding</tag> 
+        <name>Character Encoding</name> 
+        <definition>An encoded character set used by a digital resource.
+          </definition> 
+        <comment> 
+          <p>For a resource that is a digitally encoded text, Format.encoding
+            names the encoded character set it uses. For a resource that is a font,
+            Format.encoding names an encoded character set that it is able to render. For a
+            resource that is a software application, Format.encoding names an encoded
+            character set that it can read as input or write as output. Service providers
+            will use this information to match data files with the software tools that can
+            be applied to them.</p> 
+        </comment> 
+        <attributes> 
+          <p>The <i>code</i> attribute should be used to identify the character
+            set using a controlled vocabulary. See <cit>OLAC-Encoding</cit> for the
+            definition of the vocabulary. </p> 
+          <p>Recommended best practice is to specify the encoding via the
+            <i>code</i> attribute while leaving the element content empty. Use the element
+            content only when the controlled vocabulary does not offer an appropriate code,
+            or when further explanation about a custom encoding is needed. </p> 
+        </attributes> 
+        <todo> 
+          <p>We need to develop the controlled vocabulary for Format.encoding.
+            The IANA registry of character set names <cit>IANA-CS</cit> could be used as a
+            starting point, but we will need to innovate beyond this. For instance, we will
+            need to add something about levels of Unicode conformance as defined by our
+            Character Encoding working group. Does MARC have something for this?</p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Format.markup</tag> 
+        <name>Markup Scheme</name> 
+        <definition>A markup scheme used by a digital resource.</definition> 
+        <comment> 
+          <p>For a resource that is a text file including markup, Format.markup
+            identifies the markup system it uses, such as the SGML DTD, the XML Schema, the
+            set of Standard Format markers, and the like. For a resource that is a
+            stylesheet or a software application, Format.markup names a markup scheme that
+            it can read as input or write as output. Service providers will use this
+            information to match data files with the software tools that can be applied to
+            them.</p> 
+          <p>Recommended best practice is to identify the markup scheme by a
+            URI giving an OAI identifier for the markup scheme as a resource in an OLAC
+            archive. Thus, if the DTD, Schema, or markup documentation is not already
+            archived in an OLAC repository, the depositor of a marked-up resource should
+            also deposit the documentation for the markup scheme. </p> 
+          <p>A resource identified in Format.markup should not also be listed
+            with the <i>requires</i> refinement of Relation.</p> 
+        </comment> 
+        <todo> 
+          <p>Do we want to go a step further and have markup schemes be
+            deposited at OLAC so that we can try to avoid duplicate ids for the same DTD?
+            They could have identifiers like <tt>oai:olac:markup:...</tt> and be defined as
+            belonging to a set named <i>markup</i> at the OLAC community data provider so
+            that a single OAI harvesting request would retrieve the complete set of known
+            markup schemes.</p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Format.os</tag> 
+        <name>Operating System Requirement</name> 
+        <definition>An operating system required to use a software
+          resource.</definition> 
+        <comment> 
+          <p>This element is used in the description of executable programs to
+            identify the operating system environment that is needed to run them. If the
+            resource is a data file in a format that is typically associated with a
+            particular operating system, use Format only (since cross-platform readers are
+            always a possibility).</p> 
+        </comment> 
+        <attributes> 
+          <p>Recommended best practice is to specify the operating system via
+            the <i>code</i> attribute. See <cit>OLAC-OS</cit> for the definition of the
+            controlled vocabulary used for this purpose. </p> 
+          <p>The element content would typically be left empty, but it can be
+            used to add further details about the specific operating system version that is
+            required, or about other system software components that are required. </p> 
+        </attributes> 
+        <examples> 
+          <p>Software that runs under OS/2:</p> 
+          <eg>&lt;format.os code="OS2"/&gt;</eg> 
+          <p>Software that runs only under Windows NT 4.0 or higher:</p> 
+          <eg>&lt;format.os code="MSWindows"&gt;NT 4.0 or higher&lt;/format.os&gt;</eg> 
+        </examples> 
+      </element> 
+      <element> 
+        <tag>Format.sourcecode</tag> 
+        <name>Source Code Language</name> 
+        <definition>A programming language of software distributed in source
+          form. </definition> 
+        <comment> 
+          <p>Identifies a programming language used by software that is
+            distributed in source code form.</p> 
+        </comment> 
+        <attributes> 
+          <p>Recommended best practice is to specify the programming language
+            via the <i>code</i> attribute. See <cit>OLAC-Sourcecode</cit> for the
+            definition of the controlled vocabulary used for this purpose. </p> 
+          <p>The element content would typically be left empty, but it can be
+            used to add further details about the particular version or dialect that was
+            used. </p> 
+        </attributes> 
+        <examples> 
+          <p>Source code that is written in C++:</p> 
+          <eg>&lt;format.sourcecode code="C"/&gt;</eg> 
+          <p>Source code that is written in Java using the version 1.2
+            library:</p> 
+          <eg>&lt;format.sourcecode code="Java"&gt;Version 1.2 library&lt;/format.sourcecode&gt;</eg> 
+        </examples> 
+        <todo> 
+          <p>We need to develop the vocabulary for Sourcecode.</p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Identifier</tag> 
+        <name>Resource Identifier </name> 
+        <definition>An unambiguous reference to the resource within a given
+          context.</definition> 
+        <comment> 
+          <p>Recommended best practice is to identify the resource by means of
+            a string or number conforming to a globally-known formal identification system.
+            Example formal identification systems include the Uniform Resource Identifier
+            (URI) (including the Uniform Resource Locator (URL)), the Digital Object
+            Identifier (DOI), and the International Standard Book Number (ISBN).
+            <cit>DCMES1.1</cit></p> 
+          <p>In the case of a resource that is not electronically encoded, but
+            is housed in a conventional archive, Identifier may be used to give a local
+            shelf or box number, or whatever scheme is used to locate a resource within the
+            collection.</p> 
+          <p>Identifiers that begin with "http:" will be interpreted by service
+            providers as URLs and be presented as links in user interfaces. Note that
+            Identifier is to be used only for a URL that retrieves the actual resource; use
+            <xref>Description</xref> for a URL that retrieves just a description of the
+            resource.</p> 
+          <p>Do not specify the "oai:" identifier for the resource itself as a
+            value of Identifier, since it is already given in <tt>&lt;identifier&gt;</tt>
+            in the <tt>&lt;header&gt;</tt> of the <tt>&lt;record&gt;</tt>s returned by the
+            OAI protocol.</p> 
+        </comment> 
+        <examples> 
+          <p>A Uniform Resource Locator for retrieval of an electronically
+            encoded resource:</p> 
+          <eg>&lt;identifier&gt;http://arxiv.org/abs/cs.CL/0010033&lt;/identifier&gt;</eg> 
+          <p>A local identifier for retrieval within a physical collection:</p>
+          
+          <eg>&lt;identifier&gt;Shelf 12, Box 7&lt;/identifier&gt;</eg> 
+        </examples> 
+      </element> 
+      <element> 
+        <tag>Language</tag> 
+        <name>Audience Language </name> 
+        <definition>A language of the intellectual content of the
+          resource.</definition> 
+        <comment> 
+          <p>Language is used for a language the resource is in, as opposed to
+            the language it describes (see <xref>Subject.language</xref>). It is related to
+            the audience for the work in that it identifies a language that the creator of
+            the resource assumes that its eventual user will understand. When a resource is
+            in more than one language, use a separate Language element for each
+            language.</p> 
+          <p>For a work of literature or other monolingual document aimed at
+            the speakers of a particular language, use Language to identify that language.
+            For a sound recording, use Language for the language being spoken in the
+            recording. For a grammatical description, for instance, use Language for the
+            language the grammar is written in; use Subject.language for the language whose
+            grammar is being described. For an annotated text, use Language for the
+            language in which the annotations are made; use Subject.language for the
+            language of the base text that is being annotated. For a dictionary, use
+            Language for the language in which the definitions are written; use
+            Subject.language for the language whose words are being defined.</p> 
+        </comment> 
+        <attributes> 
+          <p>The <i>code</i> attribute should be used to make a precise
+            identification of the language using a controlled vocabulary. See
+            <cit>OLAC-Language</cit> for the definition of the vocabulary. </p> 
+          <p>Recommended best practice is to specify the language via the
+            <i>code</i> attribute while leaving the element content empty. Use the element
+            content only when the controlled vocabulary does not offer an appropriate code,
+            or when further specification is needed, such as to name a specific dialect or
+            to give an alternate name that differs from the default name given by the
+            controlled vocabulary. </p> 
+          <p>Service providers should use the <i>code</i> attribute to support
+            searches by language, and may use the element content in searches by keyword.
+            They also may supply the default language name in keyword searching when the
+            element content is missing.</p> 
+        </attributes> 
+        <examples> 
+          <p>A resource in English about the Sikaiana language:</p> 
+          <eg>&lt;language code="en"/&gt;
+&lt;subject.language code="x-sil-SKY"/&gt;</eg> 
+          <p>A Yemba-French dictionary, where the alternate name Dschang is
+            preferred.</p> 
+          <eg>&lt;language code="fr"/&gt;
+&lt;subject.language code="x-sil-BAN"&gt;Dschang&lt;/subject.language&gt;</eg> 
+          <p>The <i>American Heritage Dictionary</i>, which is both in and
+            about American English:</p> 
+          <eg>&lt;language code="en"/&gt;
+&lt;subject.language code="en"/&gt;
+&lt;coverage&gt;United States&lt;/coverage&gt;</eg> 
+          <p>A resource about a language for which the controlled vocabulary
+            does not yet provide a code:</p> 
+          <eg>&lt;subject.language&gt;Ancient Sumerian&lt;/subject.language&gt;</eg> 
+        </examples> 
+        <todo> 
+          <p>Add an example of specifying a dialect.</p> 
+          <p>Write the OLAC-Language document.</p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Publisher</tag> 
+        <name>Publisher</name> 
+        <definition>An entity responsible for making the resource available
+          </definition> 
+        <comment> 
+          <p>Examples of a Publisher include a person, an organization, or a
+            service. Typically, the name of a Publisher should be used to indicate the
+            entity. <cit>DCMES1.1</cit></p> 
+          <p>Recommended best practice is to identify a Publisher by means of a
+            name and to give the name in a form that is ready for sorting within an index.
+            For the names of persons, this means that the name should be given in inverted
+            order with the surname first. For the names of organizations, this means that
+            any initial article should be omitted. When a resource has more than one
+            publisher, use a separate Publisher element for each one.</p> 
+        </comment> 
+        <examples> 
+          <p>A typical publisher:</p> 
+          <eg>&lt;publisher&gt;Oxford University Press&lt;/publisher&gt;</eg> 
+          <p>The URL for a publisher:</p> 
+          <eg>&lt;publisher&gt;http://www.oup.com/&lt;/publisher&gt;</eg> 
+        </examples> 
+      </element> 
+      <element> 
+        <tag>Relation</tag> 
+        <name>Relation </name> 
+        <definition>A reference to a related resource.</definition> 
+        <comment> 
+          <p>This element is used to document relationships between resources,
+            for instance, part-whole relationships, version relationships, dependency
+            relationships, and so on. When the related resource is also in a participating
+            archive, the reference to the related resource should be by means of an "oai:"
+            identifier. A Relation that begins with "oai:" should be presented by service
+            providers as an active link that retrieves the metadata for that resource.</p> 
+          <p>For a required markup definition (like a DTD or Schema) use
+            <xref>Format.markup</xref> rather than Relation. When the required software or
+            hardware can be inferred from the <xref>Format</xref> of the resource, do not
+            also use Relation for this purpose.</p> 
+          <p>When the present resource is a derived work, the source resource
+            is typically indicated by <xref>Source</xref>. However, there are two cases in
+            which refinements of Relation are used for derived works. The
+            <i>isVersionOf</i> refinement is used when the present resource is a new
+            version or edition with added intellectual content that has been developed by
+            the same creators. When the new version is nothing more than a rendition in a
+            new format, then the <i>isForrmatOf</i> refinement is used. </p> 
+          <p> </p> 
+        </comment> 
+        <attributes> 
+          <p>The <i>refine</i> attribute should be used to clarify the nature
+            of the relationship using values from a controlled vocabulary (for instance,
+            <i>isReplacedBy, requires, hasPart, isPartOf,</i> and so on). The vocabulary
+            for refinements to Relation is defined in <cit>DC-Q</cit>. </p> 
+        </attributes> 
+        <examples> 
+          <p>A link to a required font:</p> 
+          <eg>&lt;relation refine="requires"&gt;oai:sil:software/ipafont&lt;/relation&gt;</eg> 
+          <p>Links to the component pieces of a collected work:</p> 
+          <eg>&lt;relation refine="hasPart"&gt;oai:somearchive:holding126&lt;/relation&gt;
+&lt;relation refine="hasPart"&gt;oai:somearchive:holding127&lt;/relation&gt;
+&lt;relation refine="hasPart"&gt;oai:somearchive:holding128&lt;/relation&gt;
+&lt;relation refine="hasPart"&gt;oai:somearchive:holding129&lt;/relation&gt;
+&lt;relation refine="hasPart"&gt;oai:somearchive:holding130&lt;/relation&gt;</eg> 
+          <p>A chapter that was published in a book (that does not have an
+            archived metadata record):</p> 
+          <eg>&lt;relation refine="isPartOf"&gt;In Joel Sherzer and Greg Urban (eds.),
+    Native South American discourse , 237-306. Berlin: Mouton.
+    &lt;/relation&gt;</eg> 
+        </examples> 
+      </element> 
+      <element> 
+        <tag>Rights</tag> 
+        <name>Rights Management </name> 
+        <definition>Information about rights held in and over the resource.
+          </definition> 
+        <comment> 
+          <p> Typically, a Rights element will contain a rights management
+            statement for the resource, or reference a service providing such information.
+            Rights information often encompasses Intellectual Property Rights (IPR),
+            Copyright, and various Property Rights. If the Rights element is absent, no
+            assumptions can be made about the status of these and other rights with respect
+            to the resource. <cit>DCMES1.1</cit></p> 
+        </comment> 
+        <attributes> 
+          <p>Recommended best practice is to use the <i>code</i> attribute to
+            make a summary statement about rights using a controlled vocabulary. If the
+            coded value adequately documents the rights management issues, leave the
+            element content empty. Otherwise, use the content to add the relevant details.
+            See <cit>OLAC-Rights</cit> for the definition of the vocabulary. </p> 
+        </attributes> 
+        <todo> 
+          <p>Write the OLAC-Rights document.</p> 
+          <p>Add examples after we work out the controlled vocabulary.</p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Source</tag> 
+        <name>Source </name> 
+        <definition>A reference to a resource from which the present resource
+          is derived.</definition> 
+        <comment> 
+          <p>The present resource may be derived from the Source resource in
+            whole or in part. <cit>DCMES1.1</cit> When the Source resource is also
+            available in an on-line archive, recommended best practice is to reference it
+            by means of an "oai:" identifier. In this case service providers should
+            presented the Source as an active link that retrieves the metadata for that
+            resource. </p> 
+          <p> In the legal parlance of intellectual property rights, a
+            "derivative work" is one that is based on one or more preexisting works. This
+            includes cases in which a work may be recast, transformed, or adapted in any
+            way, such as by translation, abridgement, dramatization, recording,
+            transcription, or digital encoding. A work consisting of editorial revisions,
+            annotations, elaborations, or other modifications, which, as a whole, represent
+            an original work of authorship is also a derivative work
+            <cit>Copyright</cit>.</p> 
+          <p>This legal definition elucidates the sense of "derived" that is
+            intended in the Dublin Core definition of Source. Note, however, that this
+            overlaps with <xref>Relation</xref>, since the <i>isFormatOf</i> and
+            <i>isVersionOf</i> refinements both refer to derivative works in the technical
+            sense.</p> 
+          <p>Recommended best practice for OLAC is to reserve the use of Source
+            for cases when the present resource has a substantially different
+            <xref>Type</xref> or <xref>Creator</xref> or <xref>Title</xref> than the Source
+            resource. When the difference from the original work is only a difference of
+            <xref>Date</xref> or <xref>Format</xref> or <xref>Publisher</xref> or
+            <xref>Identifier</xref> or edition designator in the <xref>Title</xref>, then
+            use Relation to encode the relationship to the original work.</p> 
+        </comment> 
+        <examples> 
+          <p>Source for a digital encoding of a manuscript in a participating
+            archive:</p> 
+          <eg>&lt;source&gt;oai:somearchive:holding1023&lt;/source&gt;</eg> 
+          <p>Source for data extracted from a published source:</p> 
+          <eg>&lt;source&gt;Kwara'ae flora vocabulary extracted from Guide to the
+        Forests of the British Solomon Islands, by T. C. Whitmore.
+        Oxford University Press, 1966.&lt;/source&gt;</eg> 
+        </examples> 
+      </element> 
+      <element> 
+        <tag>Subject</tag> 
+        <name>Subject and Keywords </name> 
+        <definition>The topic of the content of the resource.</definition> 
+        <comment> 
+          <p>Typically, a Subject will be expressed as keywords, key phrases or
+            classification codes that describe a topic of the resource.
+            <cit>DCMES1.1</cit></p> 
+          <p> Recommended best practice is to select a value from a controlled
+            vocabulary or formal classification scheme. The <i>scheme</i> attribute is used
+            to identify the scheme.</p> 
+        </comment> 
+        <examples> 
+          <p>A Library of Congress subject heading:</p> 
+          <eg>&lt;subject scheme="LCSH"&gt;African languages&lt;/subject&gt;</eg> 
+        </examples> 
+        <todo> 
+          <p>Geographic and temporal aspects of language varieties go in
+            Coverage. Subject is where social dimensions of language varieties would go.
+            Does the community need to develop an encoding scheme for this? Add an
+            example.</p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Subject.language</tag> 
+        <name>Subject Language </name> 
+        <definition>A language which the content of the resource describes or
+          discusses.</definition> 
+        <comment> 
+          <p>See <xref>Language</xref> for a complete discussion (with
+            examples) of using the Language and Subject.language elements.</p> 
+        </comment> 
+        <attributes> 
+          <p>As with the <xref>Language</xref> element, a <i>code</i> attribute
+            is used to identify the language precisely. </p> 
+        </attributes> 
+      </element> 
+      <element> 
+        <tag>Title</tag> 
+        <name>Title</name> 
+        <definition>A name given to the resource. </definition> 
+        <comment> 
+          <p>Typically, a Title will be a name by which the resource is
+            formally known. <cit>DCMES1.1</cit></p> 
+          <p>A translation of the title can be supplied in a second Title
+            element. Use the <i>lang</i> attribute to identify the language of these
+            elements.</p> 
+        </comment> 
+        <attributes> 
+          <p>The <i>refine</i> attribute may optionally be used for a single
+            refinement supported by <cit>DC-Q</cit>. The value <i>alternative</i> indicates
+            a form of the title that is used as a substitute or alternative to the formal
+            title of the resource. This qualifier can include abbreviated titles as well as
+            translations. Recommended best practice is that only one instance of Title,
+            namely the original title, be unqualified.</p> 
+        </attributes> 
+        <examples> 
+          <p>A typical title:</p> 
+          <eg>&lt;title&gt;A Dictionary of the Nggela Language&lt;/title&gt;</eg> 
+          <p>A vernacular title with translation:</p> 
+          <eg>&lt;title lang="x-sil-LLU"&gt;Na tala 'uria na idulaa diana&lt;/title&gt;
+&lt;title refine="alternative" lang="en"&gt;The road to good reading&lt;/title&gt;</eg> 
+        </examples> 
+      </element> 
+      <element> 
+        <tag>Type</tag> 
+        <name>Resource Type </name> 
+        <definition>The nature or genre of the content of the resource.
+          </definition> 
+        <comment> 
+          <p> Type includes terms describing general categories, functions,
+            genres, or aggregation levels for content. To describe the physical or digital
+            manifestation of the resource, use the <xref>Format</xref> element.
+            <cit>DCMES1.1</cit></p> 
+        </comment> 
+        <attributes> 
+          <p>Recommended best practice is to use the <i>code</i> attribute to
+            identify the type using the Dublin Core Types controlled vocabulary
+            <cit>DC-Type</cit>. The element content is typically left empty. Use the
+            element content only when the controlled vocabulary does not offer an
+            appropriate type, or when further specification is needed.</p> 
+        </attributes> 
+        <examples> 
+          <p>The resource is a video recording:</p> 
+          <eg>&lt;type code="Image"/&gt;</eg> 
+        </examples> 
+      </element> 
+      <element> 
+        <tag>Type.functionality</tag> 
+        <name>The functionality of a software resource.</name> 
+        <definition>Software Functionality</definition> 
+        <comment> 
+          <p>This element is used with resources that are software applications
+            to classify what they are used for.</p> 
+        </comment> 
+        <attributes> 
+          <p>Recommended best practice is to use the <i>code</i> attribute to
+            identify the functionality using a controlled vocabulary. See
+            <cit>OLAC-Functionality</cit> for the definition of the vocabulary. Use the
+            element content only when the controlled vocabulary does not offer an
+            appropriate code, or when further explanation about the functionality is
+            needed. </p> 
+        </attributes> 
+        <todo> 
+          <p>Write the OLAC-Functionality document. We may want to base it on
+            the HLT Survey <url>http://cslu.cse.ogi.edu/HLTsurvey/</url> as advocated by
+            the ACL/DFKI Natural Language Software Registry.</p> 
+          <p>Add examples after we figure out the vocabulary.</p> 
+        </todo> 
+      </element> 
+      <element> 
+        <tag>Type.linguistic</tag> 
+        <name>Linguistic Data Type</name> 
+        <definition>The nature or genre of the content of the resource from a
+          linguistic standpoint.</definition> 
+        <comment> 
+          <p>For a resource that is information in or about a language,
+            Type.linguistic identifies what kind of information it is from a linguistic
+            standpoint. For a resource that is a software tool, Type.linguistic identifies
+            what kind of information it processes. Service providers may use this
+            information to match data files with software tools that might be applied to
+            them.</p> 
+        </comment> 
+        <attributes> 
+          <p>Recommended best practice is to the <i>code</i> attribute to
+            identify the linguistic data type using a controlled vocabulary. See
+            <cit>OLAC-Linguistic-Type</cit> for the definition of the vocabulary. The
+            vocabulary uses a two-level coding system. There are four primary types
+            &#8212;<i>transcription, annotation, description,</i> and <i>lexicon</i>&#8212;
+            each of which have a number of subtypes. Use the element content only when the
+            controlled vocabulary does not offer an appropriate code, or when further
+            explanation about the data type is needed. </p> 
+        </attributes> 
+        <examples> 
+          <p>The resource describes the grammar of a language:</p> 
+          <eg>&lt;type.linguistic code="description/grammar"/&gt;</eg> 
+          <p>The resource includes the orthographic transcription of text:</p> 
+          <eg>&lt;type.linguistic code="transcription/orthographic"/&gt;</eg> 
+        </examples> 
+        <todo> 
+          <p>Write the OLAC-Linguistic-Type document. </p> 
+        </todo> 
+      </element> 
+    </section> 
+  </body> 
+  <todo> 
+    <p>There is not yet a provision for handling subject categorization by
+      linguistic classification.</p> 
+    <p>Rights.software has been left in limbo. It may be possible to unify it
+      with Rights.</p> 
+  </todo> 
+  <references> 
+    <ref abbrev="Copyright">Section 101, Definitions, Copyright Law of the
+      United States of America and Related Laws Contained in Title 17 of the United
+      States
+      Code.<br/>&lt;<url>http://www.loc.gov/copyright/title17/92chap1.html#101</url>&gt;</ref>
+    
+    <ref abbrev="DCMES1.1">Dublin Core Metadata Element Set, Version 1.1:
+      Reference Description.
+      <br/>&lt;<url>http://dublincore.org/documents/1999/07/02/dces/</url>&gt;</ref> 
+    <ref abbrev="DC-Q">Dublin Core
+      Qualifiers.<br/>&lt;<url>http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/</url>&gt;</ref>
+    
+    <ref abbrev="DCQ-HTML">Recording qualified Dublin Core metadata in HTML
+      meta
+      elements.<br/>&lt;<url>http://dublincore.org/documents/2000/08/15/dcq-html/</url>&gt;</ref>
+    
+    <ref abbrev="DCMI-Registry">DCMI Open Metadata
+      Registry.<br/>&lt;<url>http://wip.dublincore.org:8080/registry/Registry</url>&gt;</ref>
+    
+    <ref abbrev="DCMI-Submit">DCMI Open Metadata Registry: Submit a Scheme for
+      Registration.<br/>&lt;<url>http://wip.dublincore.org:8080/registry/authServlet?req_type=newscheme&amp;lang=enUS</url>&gt;</ref>
+    
+    <ref abbrev="DC-Type">DCMI Type
+      Vocabulary.<br/>&lt;<url>http://dublincore.org/documents/2000/07/11/dcmi-type-vocabulary/</url>&gt;</ref>
+    
+    <ref abbrev="IANA-CS">Internet Character
+      Sets.<br/>&lt;<url>http://www.isi.edu/in-notes/iana/assignments/character-sets</url>&gt;</ref>
+    
+    <ref abbrev="MIME">Internet Media
+      Types.<br/>&lt;<url>http://www.isi.edu/in-notes/iana/assignments/media-types/media-types</url>&gt;</ref>
+    
+    <ref abbrev="OAI">Open Archives Initiative.
+      <br/>&lt;<url>http://www.openarchives.org/</url>&gt;</ref> 
+    <ref abbrev="OLAC">Open Language Archives Community.
+      <br/>&lt;<url>http://www.language-archives.org/</url>&gt;</ref> 
+    <ref abbrev="OLAC-CPU">OLAC CPU
+      Vocabulary.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Linguistic-Type">OLAC Linguistic Data Type
+      Vocabulary.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Encoding">OLAC Encoding
+      Vocabulary.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Format">OLAC Format
+      Vocabulary.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Functionality">OLAC Functionality
+      Vocabulary.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Language">OLAC Language
+      Vocabulary.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-OS">OLAC Operating System
+      Vocabulary.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Registration">The OLAC Registration
+      Service.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Rights">OLAC Rights
+      Vocabulary.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Role">OLAC Role
+      Vocabulary.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Scheme">OLAC Vocabulary for Encoding
+      Schemes.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-Sourcecode">OLAC Source Code
+      Vocabulary.<br/>&lt;<url>http://www.language-archives.org/OLAC/???</url>&gt;</ref>
+    
+    <ref abbrev="TGN">Getty Thesaurus of Geographical
+      Terms.<br/>&lt;<url>http://www.getty.edu/research/tools/vocabulary/tgn/index.html</url>&gt;</ref>
+    
+    <ref abbrev="OLAC-WP">White Paper on Establishing an Infrastructure for
+      Open Language
+      Archiving<br/>&lt;<url>http://www.language-archives.org/docs/white-paper.html</url>&gt;</ref>
+    
+    <ref abbrev="W3CDTF">Date and Time Formats, W3C
+      Note.<br/>&lt;<url>http://www.w3.org/TR/NOTE-datetime</url>&gt;</ref> 
+    <ref abbrev="OAI-DC">Schema for OAI implementation of Dublin Core
+      metadata.<br/>&lt;<url>http://www.openarchives.org/OAI/1.1/dc.xsd</url>&gt;</ref>
+    
+  </references>
+</OLAC_doc>
+

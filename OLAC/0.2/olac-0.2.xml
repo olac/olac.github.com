@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olac
+  xmlns="http://www.language-archives.org/OLAC/0.2/"
+  xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+  xsi:schemaLocation="http://www.language-archives.org/OLAC/0.2/
+                http://www.language-archives.org/OLAC/olac-0.2.xsd">
+  <title>ECI Multilingual Text</title>
+  <type>text</type>
+  <identifier>http://morph.ldc.upenn.edu/Catalog/LDC94T5.html</identifier>
+  <date>1994-01-01</date>
+  <description>Applications: information retrieval, machine translation, language modeling</description>
+  <subject.language identifier="x-sil-BLG"/>   <!-- OLAC best practice -->
+  <subject.language identifier="x-sil-CHN">Chinese</subject.language>  <!-- redundant -->
+  <subject.language identifier="EN">English</subject.language>  <!-- ISO 639 -->
+  <subject.language>Danish</subject.language>  <!-- low-barrier for entry -->
+</olac>
+

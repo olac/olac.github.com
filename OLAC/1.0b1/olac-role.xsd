@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.language-archives.org/OLAC/1.0b1/olac-role.xsd"
+           targetNamespace="http://www.language-archives.org/OLAC/1.0b1/olac-role.xsd"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:simpleType name="olac-role">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="annotator"/>
+      <xs:enumeration value="artist"/>
+      <xs:enumeration value="author"/>
+      <xs:enumeration value="compiler"/>
+      <xs:enumeration value="consultant"/>
+      <xs:enumeration value="editor"/>
+      <xs:enumeration value="illustrator"/>
+      <xs:enumeration value="interlocutor"/>
+      <xs:enumeration value="interviewer"/>
+      <xs:enumeration value="performer"/>
+      <xs:enumeration value="photographer"/>
+      <xs:enumeration value="researcher"/>
+      <xs:enumeration value="recorder"/>
+      <xs:enumeration value="speaker"/>
+      <xs:enumeration value="sponsor"/>
+      <xs:enumeration value="transcriber"/>
+      <xs:enumeration value="translator"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

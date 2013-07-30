@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olac:olac xmlns:olac="http://www.language-archives.org/OLAC/1.0/"
+           xmlns="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.language-archives.org/OLAC/1.0/
+                http://www.language-archives.org/OLAC/1.0/olac.xsd">
+
+  <title>A grammar of Kayardild. With comparative notes on Tangkic.</title>
+  <creator>Evans, Nicholas D.</creator>
+  <subject>Kayardild grammar</subject>
+  <subject xsi:type="olac:language" olac:code="x-sil-GYD">Kayardild</subject>
+  <subject xsi:type="olac:language" olac:code="en">English</subject>
+  <description>Kayardild Grammar (ISBN 3110127954)</description>
+  <publisher>Berlin - Mouton de Gruyter</publisher>
+  <contributor xsi:type="olac:role" olac:code="author">Nicholas Evans</contributor>
+  <format>hardcover, 837 pages</format>
+  <relation>related to ISBN 0646119966</relation>
+  <coverage>Australia</coverage>
+</olac:olac>

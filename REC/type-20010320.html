@@ -1,0 +1,936 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>OLAC Type Vocabulary</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="OLAC Type Vocabulary">
+<meta name="Creator" content="&#10;      Steven Bird, University of Pennsylvania&#10;      (mailto:sb@ldc.upenn.edu)&#10;      Gary Simons, SIL International&#10;      (mailto:gary_simons@sil.org)&#10;    ">
+<meta name="Description" content="&#10;      This document specifies the controlled vocabulary of language&#10;         resource types used by OLAC.  The type vocabulary describes the&#10;         nature of the content of a resource.&#10;    ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20010320">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>OLAC Type Vocabulary</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2001-03-20</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>WithdrawnRecommendation. </i></td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/REC/type-20010320.html">http://www.language-archives.org/REC/type-20010320.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/REC/type.html">http://www.language-archives.org/REC/type.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td>None.</td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>This document specifies the controlled vocabulary of language
+         resource types used by OLAC.  The type vocabulary describes the
+         nature of the content of a resource.</p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>
+      Steven Bird, University of Pennsylvania
+      (<a href="mailto:sb@ldc.upenn.edu">mailto:sb@ldc.upenn.edu</a>)
+      Gary Simons, SIL International
+      (<a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>)<br>
+</editors>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 
+      Steven Bird, University of Pennsylvania
+      (mailto:sb@ldc.upenn.edu)
+      Gary Simons, SIL International
+      (mailto:gary_simons@sil.org)
+    . This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Data Type">Data Type</A>
+<UL>
+<LI>
+<A href="#transcription">transcription</A>
+<UL>
+<LI>
+<A href="#transcription/orthographic">transcription/orthographic</A>
+</LI>
+<LI>
+<A href="#transcription/phonetic">transcription/phonetic</A>
+</LI>
+<LI>
+<A href="#transcription/prosodic">transcription/prosodic</A>
+</LI>
+<LI>
+<A href="#transcription/morphological">transcription/morphological</A>
+</LI>
+<LI>
+<A href="#transcription/gestural">transcription/gestural</A>
+</LI>
+<LI>
+<A href="#transcription/part-of-speech">transcription/part-of-speech</A>
+</LI>
+<LI>
+<A href="#transcription/syntactic">transcription/syntactic</A>
+</LI>
+<LI>
+<A href="#transcription/discourse">transcription/discourse</A>
+</LI>
+<LI>
+<A href="#transcription/musical">transcription/musical</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#annotation">annotation</A>
+<UL>
+<LI>
+<A href="#annotation/orthographic">annotation/orthographic</A>
+</LI>
+<LI>
+<A href="#annotation/phonetic">annotation/phonetic</A>
+</LI>
+<LI>
+<A href="#annotation/prosodic">annotation/prosodic</A>
+</LI>
+<LI>
+<A href="#annotation/morphological">annotation/morphological</A>
+</LI>
+<LI>
+<A href="#annotation/gestural">annotation/gestural</A>
+</LI>
+<LI>
+<A href="#annotation/part-of-speech">annotation/part-of-speech</A>
+</LI>
+<LI>
+<A href="#annotation/syntactic">annotation/syntactic</A>
+</LI>
+<LI>
+<A href="#annotation/discourse">annotation/discourse</A>
+</LI>
+<LI>
+<A href="#annotation/musical">annotation/musical</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#description">description</A>
+<UL>
+<LI>
+<A href="#description/grammatical">description/grammatical</A>
+</LI>
+<LI>
+<A href="#description/phonological">description/phonological</A>
+</LI>
+<LI>
+<A href="#description/orthographic">description/orthographic</A>
+</LI>
+<LI>
+<A href="#description/paradigms">description/paradigms</A>
+</LI>
+<LI>
+<A href="#description/pedagogical">description/pedagogical</A>
+</LI>
+<LI>
+<A href="#description/dialectal">description/dialectal</A>
+</LI>
+<LI>
+<A href="#description/comparative">description/comparative</A>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#lexicon">lexicon</A>
+<UL>
+<LI>
+<A href="#lexicon/dictionary">lexicon/dictionary</A>
+</LI>
+<LI>
+<A href="#lexicon/wordlist">lexicon/wordlist</A>
+</LI>
+<LI>
+<A href="#lexicon/wordnet">lexicon/wordnet</A>
+</LI>
+<LI>
+<A href="#lexicon/thesaurus">lexicon/thesaurus</A>
+</LI>
+<LI>
+<A href="#lexicon/terminology">lexicon/terminology</A>
+</LI>
+<LI>
+<A href="#lexicon/proper-names">lexicon/proper-names</A>
+</LI>
+<LI>
+<A href="#lexicon/bilingual">lexicon/bilingual</A>
+</LI>
+<LI>
+<A href="#lexicon/etymological">lexicon/etymological</A>
+</LI>
+<LI>
+<A href="#lexicon/phonetic">lexicon/phonetic</A>
+</LI>
+<LI>
+<A href="#lexicon/frequency">lexicon/frequency</A>
+</LI>
+<LI>
+<A href="#lexicon/analytical">lexicon/analytical</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+<LI>
+<A href="#Genre Type">Genre Type</A>
+<UL>
+<LI>
+<A href="#narrative">narrative</A>
+<UL>
+<LI>
+<A href="#narrative/traditional">narrative/traditional</A>
+</LI>
+<LI>
+<A href="#narrative/personal">narrative/personal</A>
+</LI>
+<LI>
+<A href="#oratory/political">oratory/political</A>
+</LI>
+<LI>
+<A href="#oratory/religious">oratory/religious</A>
+</LI>
+<LI>
+<A href="#dialogue/conversation">dialogue/conversation</A>
+</LI>
+<LI>
+<A href="#dialogue/counsel">dialogue/counsel</A>
+</LI>
+<LI>
+<A href="#dialogue/interview">dialogue/interview</A>
+</LI>
+<LI>
+<A href="#dialogue/elicitation">dialogue/elicitation</A>
+</LI>
+<LI>
+<A href="#singing/individual">singing/individual</A>
+</LI>
+<LI>
+<A href="#singing/group">singing/group</A>
+</LI>
+</UL>
+</LI>
+</UL>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>
+Key points: two-level systems, multiple categories for a single resource,
+parallelism of the transcription and annotation subcategories.
+</p>
+<h2>
+<A name="Data Type"></A>2. Data Type</h2>
+<p>Each term of the controlled vocabulary is described in one of the
+        following subsections. The heading gives the encoded value for the term that is
+        to be used as the value of the <i>code</i> attribute of the <i>fooBar</i>
+        metadata element [<a href="http://www.language-archives.org/OLAC/olacms.html">OLAC-MS</a>]. Under the heading, the term is described
+        in four ways. <i>Name</i> gives a descriptive label for the term.
+        <i>Definition</i> is a one-line summary of what the term means. <i>Comments</i>
+        offers more details on what the term represents. <i>Examples</i> may also be
+        given to illustrate how the term is meant to be applied.</p>
+<p>A further label, <i>Subterms,</i> appears when the term permits more
+        specific refinements. In such cases, the generic (top-level) terms may be
+        chosen, or one of its more specific refinements.</p>
+<h3>
+<A name="transcription"></A>transcription</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Transcription</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes a transcription of a linguistic event.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Subterms</i></td><td>
+<h4>
+<A name="transcription/orthographic"></A>transcription/orthographic</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Orthographic transcription</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes orthographic transcription.</td>
+</tr>
+</table>
+<h4>
+<A name="transcription/phonetic"></A>transcription/phonetic</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Phonetic transcription</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes phonetic transcription.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Phonetic transcription may be narrow or broad, and will typically
+               use the International Phonetic Alphabet [<a href="#IPA">IPA</a>] in a
+               standard encoding (e.g. [<a href="http://www.unicode.org/unicode/uni2book/ch07.pdf">Unicode-IPA</a>], [<a href="http://www.phon.ucl.ac.uk/home/sampa/home.htm">SAMPA</a>]).
+               Phonological transcriptions are also classified here.</p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="transcription/prosodic"></A>transcription/prosodic</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Prosodic transcription</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes prosodic transcription.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>A prosodic transcription is a symbolic record of
+               intonation, stress, tone or other suprasegmental features
+               that is expressed independently of regular phonetic transcription.</p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="transcription/morphological"></A>transcription/morphological</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Morphological transcription</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes morphological transcription.</td>
+</tr>
+</table>
+<h4>
+<A name="transcription/gestural"></A>transcription/gestural</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Gestural transcription</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes gestural transcription.</td>
+</tr>
+</table>
+<h4>
+<A name="transcription/part-of-speech"></A>transcription/part-of-speech</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Part-of-speech transcription</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes part-of-speech tags.</td>
+</tr>
+</table>
+<h4>
+<A name="transcription/syntactic"></A>transcription/syntactic</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Syntactic transcription</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes syntactic transcription.</td>
+</tr>
+</table>
+<h4>
+<A name="transcription/discourse"></A>transcription/discourse</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Discourse transcription</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes discourse transcription.</td>
+</tr>
+</table>
+<h4>
+<A name="transcription/musical"></A>transcription/musical</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Musical transcription</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes musical transcription.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>
+<A name="annotation"></A>annotation</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Annotation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes information which annotates some
+          other linguistic record.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>A linguistic annotation is defined as structured linguistic
+             information that is explicitly aligned to some spatial and/or
+             temporal extent of some other linguistic record.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Subterms</i></td><td>
+<h4>
+<A name="annotation/orthographic"></A>annotation/orthographic</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Orthographic annotation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes orthographic annotation.</td>
+</tr>
+</table>
+<h4>
+<A name="annotation/phonetic"></A>annotation/phonetic</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Phonetic annotation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes phonetic annotation.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>An example of a phonetic annotation is the TIMIT database, in
+               which each element of phonetic transcription is associated with
+               a range of samples in a digital audio file [<a href="http://www.ldc.upenn.edu/Catalog/LDC93S1.html">TIMIT</a>].
+               Phonological annotations are also classified here.</p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="annotation/prosodic"></A>annotation/prosodic</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Prosodic annotation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes prosodic annotation.</td>
+</tr>
+</table>
+<h4>
+<A name="annotation/morphological"></A>annotation/morphological</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Morphological annotation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes morphological annotation.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>A morphological annotation is a morphological transcription
+               where the component morphemes are aligned with some other
+               linguistic record, such as an orthographic transcription or
+               a speech signal.  An example of morphological annotation is
+               interlinear text with aligned morphemic glosses.</p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="annotation/gestural"></A>annotation/gestural</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Gestural annotation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes gestural annotation.</td>
+</tr>
+</table>
+<h4>
+<A name="annotation/part-of-speech"></A>annotation/part-of-speech</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Part-of-speech annotation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes aligned part-of-speech tags.</td>
+</tr>
+</table>
+<h4>
+<A name="annotation/syntactic"></A>annotation/syntactic</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Syntactic annotation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes aligned syntactic transcription.</td>
+</tr>
+</table>
+<h4>
+<A name="annotation/discourse"></A>annotation/discourse</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Discourse annotation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes aligned discourse transcription.</td>
+</tr>
+</table>
+<h4>
+<A name="annotation/musical"></A>annotation/musical</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Musical annotation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes musical annotation.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>
+<A name="description"></A>description</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Description</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes linguistic description.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>A description is any description or analysis of a language.
+             Unlike a transcription or an annotation, the structure of a
+             description is independent of the structure of the linguistic
+             events that it describes.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Subterms</i></td><td>
+<h4>
+<A name="description/grammatical"></A>description/grammatical</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Grammatical description</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes grammatical description.</td>
+</tr>
+</table>
+<h4>
+<A name="description/phonological"></A>description/phonological</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Phonological description</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes phonological description.</td>
+</tr>
+</table>
+<h4>
+<A name="description/orthographic"></A>description/orthographic</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Orthographic description</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes documentation of a writing system.</td>
+</tr>
+</table>
+<h4>
+<A name="description/paradigms"></A>description/paradigms</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Linguistic paradigms</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes linguistic paradigms.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>A paradigm is a tabulation of linguistic forms designed to
+               illustrate one or more systematic contrasts.</p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="description/pedagogical"></A>description/pedagogical</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Pedagogical description</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes pedagogical description.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>A pedagogical description is a style of presentation intended
+               for use in teaching people to use the language.</p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="description/dialectal"></A>description/dialectal</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Dialectal description</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes dialectal description.</td>
+</tr>
+</table>
+<h4>
+<A name="description/comparative"></A>description/comparative</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Comparative description</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes comparative or typological description.</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h3>
+<A name="lexicon"></A>lexicon</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Lexicon</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes a systematic listing of lexical items.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Subterms</i></td><td>
+<h4>
+<A name="lexicon/dictionary"></A>lexicon/dictionary</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Dictionary</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes a dictionary.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>This includes any resource that lists words or morphemes and
+              defines them. It contrasts with a word list in that the definitions are complex
+              (rather than being one-word equivalents) and the entries may include other
+              information like part of speech, related words, and illustrative sentences.</p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="lexicon/wordlist"></A>lexicon/wordlist</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Word list</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes a word list.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>A word list is a list of reference words in a major language for
+              which the nearest equivalent word in a target language has been elicited (for
+              instance, the Swadesh 100-word list). </p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="lexicon/wordnet"></A>lexicon/wordnet</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>WordNet</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes a semantic wordnet.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Whereas a dictionary documents the meanings of words by means of
+              definitions, a word net documents meanings by building a web of semantic
+              relationships [<a href="http://www.cogsci.princeton.edu/~wn/">WordNet</a>].</p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="lexicon/thesaurus"></A>lexicon/thesaurus</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Thesaurus</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes a thesaurus.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>A thesaurus is a list of words or concepts arranged according to sense.</p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="lexicon/terminology"></A>lexicon/terminology</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Terminology</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes a terminological lexicon.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>A terminological lexicon is a glossary of domain-specific terms.
+              Examples are technical terminology, kinship terms, color terms,
+              acronyms, ...</p>
+</td>
+</tr>
+</table>
+<h4>
+<A name="lexicon/proper-names"></A>lexicon/proper-names</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Name Dictionary</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes proper names.</td>
+</tr>
+</table>
+<h4>
+<A name="lexicon/bilingual"></A>lexicon/bilingual</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Bilingual Lexicon</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource includes definitions in another language.</td>
+</tr>
+</table>
+<h4>
+<A name="lexicon/etymological"></A>lexicon/etymological</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Etymological Lexicon</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The lexicon contains etymological information.</td>
+</tr>
+</table>
+<h4>
+<A name="lexicon/phonetic"></A>lexicon/phonetic</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Phonetic Lexicon</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The lexicon contains phonetic information, including
+             pronunciation, phonology, stress, rhymes.</td>
+</tr>
+</table>
+<h4>
+<A name="lexicon/frequency"></A>lexicon/frequency</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Frequency Lexicon</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The lexicon contains frequency information.</td>
+</tr>
+</table>
+<h4>
+<A name="lexicon/analytical"></A>lexicon/analytical</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Analytical Lexicon</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The lexicon contains analytical information.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Analytical information includes such things as morphological
+              derivation, grammatically related forms, argument structure, ...</p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<h2>
+<A name="Genre Type"></A>3. Genre Type</h2>
+<h3>
+<A name="narrative"></A>narrative</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Narrative</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Subterms</i></td><td>
+<h4>
+<A name="narrative/traditional"></A>narrative/traditional</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Traditional Narrative</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+</table>
+<h4>
+<A name="narrative/personal"></A>narrative/personal</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Personal Narrative</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+</table>
+<h4>
+<A name="oratory/political"></A>oratory/political</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Political Oratory</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+</table>
+<h4>
+<A name="oratory/religious"></A>oratory/religious</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Religious Oratory</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+</table>
+<h4>
+<A name="dialogue/conversation"></A>dialogue/conversation</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Conversation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+</table>
+<h4>
+<A name="dialogue/counsel"></A>dialogue/counsel</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Counsel</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+</table>
+<h4>
+<A name="dialogue/interview"></A>dialogue/interview</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Interview</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+</table>
+<h4>
+<A name="dialogue/elicitation"></A>dialogue/elicitation</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Elicitation</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+</table>
+<h4>
+<A name="singing/individual"></A>singing/individual</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Individual Singing</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+</table>
+<h4>
+<A name="singing/group"></A>singing/group</h4>
+<table cellspacing="12">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Group Singing</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+<hr>
+<h2>
+<font color="red">To do</font>
+</h2>
+<font color="red">
+<p>
+    Explain that typical resources will contain multiple types.
+    Do we want to include genre?
+  </p>
+</font><a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="OLAC-MS">OLAC-MS</a>]</td><td>OLAC Metadata Set.<br>
+      &lt;<a href="http://www.language-archives.org/OLAC/olacms.html">http://www.language-archives.org/OLAC/olacms.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="SAMPA">SAMPA</a>]</td><td>Speech Assessment Methods Phonetic Alphabet<br>
+      &lt;<a href="http://www.phon.ucl.ac.uk/home/sampa/home.htm">http://www.phon.ucl.ac.uk/home/sampa/home.htm</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="TIMIT">TIMIT</a>]</td><td>TIMIT Acoustic-Phonetic Continuous Speech Corpus<br>
+      &lt;<a href="http://www.ldc.upenn.edu/Catalog/LDC93S1.html">http://www.ldc.upenn.edu/Catalog/LDC93S1.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="Unicode-IPA">Unicode-IPA</a>]</td><td>Unicode IPA Extensions<br>
+      &lt;<a href="http://www.unicode.org/unicode/uni2book/ch07.pdf">http://www.unicode.org/unicode/uni2book/ch07.pdf</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="WordNet">WordNet</a>]</td><td>WordNet - a Lexical Database for English<br>
+      &lt;<a href="http://www.cogsci.princeton.edu/~wn/">http://www.cogsci.princeton.edu/~wn/</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

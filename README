@@ -1,0 +1,15 @@
+
+This SubVersion repository is for the Open Language Archives Community
+
+olac-admin@language-archives.org
+
+
+Process for building new file releases:
+
+1. Copy the latest dated version of xml file to a new dated xml file,
+  then edit this file
+2. Make the needed changes to the corresponding Makefile.
+3. Commit these changes to Subversion and send SB email.
+4. SB run the Makefile
+5. SB commit the changes to Subversion.
+6. SB rsync to the live web site.

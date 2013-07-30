@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>CSE</title>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="/olaccse.js"></script>
+<link type="text/css" rel="stylesheet" href="/olaccse.css"></link>
+</head>
+<body>
+
+<!-- It's difficult to implement a layout with css, so we use table. -->
+<table>
+  <tr>
+    <td id="logo-box" rowspan="2">
+    </td>
+    <td>
+      <select id="area-selector">
+	<option>-- all areas --</option>
+	<option value="africa">Africa</option>
+	<option value="america">Americas</optioin>
+	<option value="asia">Asia</option>
+	<option value="europe">Europe</option>
+	<option value="pacific">Pacific</option>
+      </select>
+    </td>
+    <td>
+      <select id="archive-selector">
+	<option>-- all archives --</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <div id="search-box"></div>
+    </td>
+  </tr>
+</table>
+
+<hr></hr>
+
+<!-- Search results goes here.
+     We are not supposed to have much control over what's inside. -->
+<div id="result-box">
+</div>
+
+</body>
+</html>

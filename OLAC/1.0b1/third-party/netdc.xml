@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<olac:olac xmlns="http://purl.org/dc/elements/1.1/"
+           xmlns:dcterms="http://purl.org/dc/terms/"
+           xmlns:olac="http://www.language-archives.org/OLAC/1.0b1/olac.xsd"
+           xmlns:netdc="http://www.ldc.upenn.edu/Projects/netdc/netdc.xsd"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.ldc.upenn.edu/Projects/netdc/netdc.xsd netdc.xsd">
+
+  <identifier>http://www.ldc.upenn.edu/Catalog/CatalogEntry.jsp?catalogId=LDC96S59</identifier>
+  <title>CALLFRIEND Tamil</title>
+  <creator xsi:type="olac:role" code="author">Canavan, Alexandra</creator>
+  <creator xsi:type="olac:role" code="author">Zipperlen, George</creator>
+  <identifier>LDC96S59</identifier>
+  <identifier>1-58563-074-8</identifier>
+  <type>speech</type>
+  <format xsi:type="netdc:speechformat" rate="8000" channels="2" coding="ULAW"/>
+  <source>telephone</source>
+  <type>language identification</type>
+  <subject xsi:type="olac:language" code="ta"/>
+  <format xsi:type="netdc:distribution" method="CD-ROM" size="3"/>
+  <date xsi:type="netdc:memberyear" year="1996"/>
+  <date xsi:type="netdc:memberyear" year="1997"/>
+  <rights xsi:type="netdc:price" value="600" currency="USD" membership="nonmember"/>
+  <rights xsi:type="netdc:license" membership="nonmember">http://www.ldc.upenn.edu/Catalog/nonmem_agree/generic.license.html</rights>
+  <description>http://www.ldc.upenn.edu/Catalog/docs/LDC96S59/</description>
+  <description>The CALLFRIEND project supports the development of
+  language identification technology.  The corpus consists of 60
+  unscripted telephone conversations, lasting between 5 and 30
+  minutes. The corpus also includes documentation describing speaker
+  information (sex, age, education, callee telephone number) and call
+  information (channel quality, number of speakers).  For each
+  conversation, both the caller and callee are native speakers of
+  Tamil. All calls are domestic and were placed inside the continental
+  United States and Canada.
+  </description>
+  <identifier>http://www.ldc.upenn.edu/Catalog/online/speech/</identifier>
+</olac:olac>

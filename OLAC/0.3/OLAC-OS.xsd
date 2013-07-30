@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.language-archives.org/OLAC/0.3/">
+
+  <annotation>
+    <documentation>
+      OLAC Schema for operating system types, Steven Bird, 4/27/01
+    </documentation>
+  </annotation>
+
+  <simpleType name="OLAC-OS-Code">
+    <restriction base="string">
+      <enumeration value="Unix"/>
+      <enumeration value="Unix/Linux"/>
+      <enumeration value="Unix/Solaris"/>
+      <enumeration value="Unix/SunOS"/>
+      <enumeration value="Unix/SCO"/>
+      <enumeration value="Unix/AIX"/>
+      <enumeration value="Unix/BSDi"/>
+      <enumeration value="Unix/DECAlpha"/>
+      <enumeration value="Unix/HPBLS"/>
+      <enumeration value="Unix/HPUX"/>
+      <enumeration value="Unix/IRIX"/>
+      <enumeration value="Unix/AIX"/>
+      <enumeration value="Unix/UnixWare"/>
+      <enumeration value="Unix/Xenix"/>
+      <enumeration value="MacOS"/>
+      <enumeration value="MacOS/OSX"/>
+      <enumeration value="OS2"/>    <!-- cannot use OS/2 with the slash -->
+      <enumeration value="MSDOS"/>
+      <enumeration value="MSWindows"/>
+      <enumeration value="MSWindows/win31"/>
+      <enumeration value="MSWindows/win95"/>
+      <enumeration value="MSWindows/winNT"/>
+      <enumeration value="MSWindows/win98"/>
+      <enumeration value="MSWindows/win2k"/>
+      <enumeration value="MSWindows/winCE"/>
+      <enumeration value="MSWindows/winME"/>
+      <enumeration value="MSWindows/winXP"/>
+    </restriction>
+  </simpleType>
+  
+</schema>
+  

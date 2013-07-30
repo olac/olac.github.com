@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc> 
+  <header> 
+    <status code="draft" type="informational"/> 
+      <title>Specifications for an OLAC metadata display format and an OLAC-to-OAI_DC
+        crosswalk</title><baseName>olac_display</baseName> 
+      <issued>20020810</issued><previousIssued></previousIssued> 
+      <abstract> 
+        <p>Specifies OLAC_Display, the OLAC metadata display format implemented by the OLAC Aggregator service. This format is a reader-friendly view of OLAC metadata that icorporates attribute values into the element content and translates coded values into display labels. The document further specifies the transformation from OLAC_Display format to OAI_DC format. </p> 
+      </abstract> 
+      <editors>Gary Simons, SIL International
+        (<url>mailto:gary_simons@sil.org</url>)</editors><copyright>2002 Gary Simons
+      (SIL International)</copyright> 
+      <changes> 
+      </changes> 
+  </header> 
+  <body> 
+    <section> 
+      <heading>Introduction</heading> 
+      <p>In order to improve recall and precision in searching, the OLAC metadata format <cit>OLACMS</cit> uses attributes to support resource description using controlled vocabularies. Service providers may use these attributes to perform precise searches. However, service providers also need to be able to display metadata records to users in a manner that shows all available  information in an easy-to-read form. Not only does this involve combining attributes with element content to produce a display of all information pertaining to a metadata element, but it also requires that coded attribute values (such as three-letter language codes) be translated into friendly display forms.</p><p>Transforming OLAC metadata records into such a display format is a non-trivial task that each service provider should not have to implement independently. Thus the OLAC Aggregator <cit>OLACA</cit> offers such a translation service. It supports a metadata format named OLAC_Display. When metadata are harvested using this metadata prefix, the content of the metadata elements contains a reader-friendly view of all the information associated with the element. For instance,</p><eg>http://www.language-archives.org/cgi-bin/olaca.pl?
+   verb=GetRecord&amp;metadataPrefix=olac&amp;identifier=oai:ethnologue:AAA</eg><p>will retrieve the metadata in OLAC format as specified in <cit>OLACMS</cit>, whereas</p><eg>http://www.language-archives.org/cgi-bin/olaca.pl?
+   verb=GetRecord&amp;metadataPrefix=olac_display&amp;identifier=oai:ethnologue:AAA</eg><p>retrieves the same metadata record in the reader-friendly form specified in this document.</p><p>In order to participate in the wider Open Archives Initiative (OAI) community of service providers, OLAC data providers must publish their metadata
+        records in both the OLAC format  and the Dublin Core format
+        prescribed by the OAI <cit>OAI_DC</cit>. There is no
+        need for data providers to store the records in both formats, however, since the OAI_DC format is
+        a subset of the OLAC format. An OAI_DC record may thus be automatically derived
+        from an OLAC record. A program that transforms a metadata record from one
+        format to another is conventionally called a "crosswalk"; see
+        <cit>Day2001</cit> for other examples of crosswalks and pointers to discussions
+        of crosswalking issues.</p> 
+      <p>It turns out that implementing an OLAC-to-OAI_DC crosswalk involves the same kind of transformation of attribute values that is involved in generating the reader-friendly OLAC_Display format. The final section of this paper describes additional transformations performed by the OLAC Aggregator to achieve an OLAC-to-OAI_DC crosswalk. In addition to documenting the  transformation made by the community's centralized OLAC-to-OAI_DC crosswalk, this note can be used as a specification by those who implement an OLAC-to-OAI_DC crosswalk in their own data provider.</p> 
+    </section> 
+    <section> 
+      <heading>Display format strategy</heading> 
+      <p>The XML schema that implements the OLAC metadata set uses seven
+        devices for recording information:</p> 
+      <ol> 
+        <li> 
+          <p>The basic DC metadata element name (e.g. <i>format</i> in
+            <tt>&lt;format&gt;</tt> and <tt>&lt;format.markup&gt;</tt>)</p> 
+        </li> 
+        <li> 
+          <p>A metadata element refinement expressed in a compound tag name
+            (e.g. <i>marrkup</i> in <tt>&lt;format.markup&gt;</tt></p> 
+        </li><li> 
+          <p>The value of a metadata element expressed as XML element
+            content</p> 
+        </li> 
+        <li> 
+          <p>The value of a metadata element expressed as the value of the
+            <i>code</i> attribute</p> 
+        </li> 
+         
+        <li> 
+          <p>A metadata element refinement expressed in a <i>refine</i>
+            attribute</p> 
+        </li> 
+        <li> 
+          <p>The encoding scheme for the element content expressed in the
+            <i>scheme</i> attribute</p> 
+        </li> 
+        <li> 
+          <p>The language of the element content expressed in the <i>lang</i>
+            attribute</p> 
+        </li> 
+      </ol> 
+      <p>A straightforward  display of OLAC metadata that shows only the element tag and the element content includes only items 1 through 3. But it is critical that item 4 also be displayed, since it is
+        an alternative way of expressing the value of a metadata element. Items 5 and 6 are similarly important because they qualify the meaning of the element value. Only item 7 seems unnecessary as part of the  display form of a metadata element.</p><p>It is not enough, however, to incorporate the attribute values into a presentation of the element content. This is because the attribute values are typically coded values; the display form must also translate the coded values to display labels. Furthermore, there should be a standard display template that uses punctuation in a consistent way to set off the various pieces of information. Thus,  a metadata element like the following,</p><eg>&lt;element scheme="S" code="C" refine="R"&gt;Content&lt;/element&gt;</eg><p>translates to the following display form:</p><eg>Label-for-S: Label-for-C, Content [Label-for-R]</eg><p> The
+        strategy for the OLAC_Display format is to provide the attribute information both as coded attribute values and as display strings incorporated into the element content.  Thus, the schema for the <tt>olac_display</tt> metadata format supported by the OLAC Aggregator is identical to the schema for the <tt>olac</tt> metadata format. In this way, services that harvest records from the OLAC Aggregator in OLAC_Display format can still use the coded attribute values to support high recall and precision in queries, and at the same time have the convenience of all the attribute information being incorporated into the element content in a reader-friendly view.</p> 
+       
+       
+      <p>The next section illustrates the exact transformations made in
+        converting the information recorded by means of items 3 through 5 into
+        annotations in the DC element content.</p> 
+    </section> 
+    <section> 
+      <heading>Element transformations</heading> 
+      <p>This section illustrates how the content string for the OLAC_Display format is generated from the information in an OLAC element. The discussion is organized in terms of the attributes present in the element:</p> 
+      <ol> 
+        <li> 
+          <p><i>The OLAC element has no attributes.</i></p> 
+          <p>In this case the transformation simply copies the original
+            content into the display form content. For instance,</p> 
+          <eg>OLAC:         &lt;coverage&gt;19th century&lt;/coverage&gt;
+OLAC_Display: 19th century</eg> 
+        </li> 
+        <li> 
+          <p><i>The OLAC element has  the code attribute.</i></p> 
+          <p>In this case the transformation copies the display label for the coded value into the
+            display form content. If the OLAC element has both a coded value and a free value in the
+            content, a comma is inserted to separate the two. For instance,</p> 
+          <eg>OLAC:         &lt;language code="en"/&gt;
+OLAC_Display: English
+
+OLAC:         &lt;language code="x-sil-ban"&gt;Dschang&lt;/language&gt;
+OLAC_Display: Yemba, Dschang</eg> 
+        </li> 
+         
+        <li> 
+          <p><i>The OLAC element has  the refine attribute.</i></p> 
+          <p> In this case the transformation places the display label for the refinement
+            after the element content in square brackets. For
+            instance,</p> 
+          <eg>OLAC:         &lt;relation refine="hasPart"&gt;oai:somearchive:holding126&lt;/relation&gt;
+OLAC_Display: oai:somearchive:holding126 [Has part]</eg> 
+           
+          <eg>OLAC:         &lt;creator refine="editor"&gt;Sapir, Edward&lt;/creator&gt;
+OLAC_Display: Sapir, Edward [editor]</eg> 
+           
+          <eg>OLAC:         &lt;title lang="x-sil-llu"&gt;Na tala 'uria na idulaa diana&lt;/title&gt;
+              &lt;title refine="alternative" lang="en"&gt;The road to good reading&lt;/title&gt;
+OLAC_Display: Na tala 'uria na idulaa diana
+              The road to good reading [alternative]</eg> 
+        </li> 
+        <li> 
+          <p><i>The OLAC element has the code attribute and the refine
+            attribute.</i></p> 
+          <p>Date is the only element that may have both attributes. The transformation
+            treats the code, content, and refinement as in the cases above.  For
+            instance,</p> 
+          <eg>OLAC:         &lt;date code="1950"&gt;circa&lt;/date&gt;
+OLAC_Display: 1950, circa
+
+OLAC:         &lt;date refine="modified" code="1996-10-16"/&gt;
+OLAC_Display: 1996-10-16 [modified]</eg> 
+        </li> 
+       
+        <li> 
+          <p><i>The OLAC element has a scheme attribute.</i></p> 
+          <p>A scheme is typically ignored in making the transformation to the display format. For instance,</p> 
+          <eg>OLAC:         &lt;subject scheme="LCSH"&gt;African languages&lt;/subject&gt;
+OLAC_Display: African languages</eg> 
+        <p>However, a scheme that has the force of a user-defined refinement may be registered with OLAC along with a display label to be used  formatting an element for display. In this case, the label for the scheme is prefixed to the element content with a final colon. For instance,</p><eg>OLAC:         &lt;format scheme="audioSamp"&gt;8 bit, 22 KHz&lt;/format&gt;
+OLAC_Display: Audio sampling: 8 bit, 22 KHz</eg></li></ol> 
+    </section> 
+    <section> 
+      <heading>An OLAC-to-OAI_DC crosswalk</heading><p>The OLAC Aggregator also supports the OAI_DC metadata format. It functions as an OLAC-to-OAI_DC crosswalk since it harvests only OLAC metadata and performs the transformation to OAI_DC on request. Transforming a metadata record from OLAC format to  OLAC_Display format goes most of the way toward implementing the OLAC-to-OAI_DC crosswalk. Two further changes must be made to transform OLAC_Display to OAI_DC:</p><ol><li><p><i>Remove all the attributes.</i></p><p>This can be done without loss of information since the information in the attributes is already incorporated into the element content.</p></li><li><p><i>Move refinements that are part of the tag name into the element content.</i></p><p>when the OLAC element contains a refinement in the tag itself, this is treated like a registered scheme (as in the final case in the section above). A display label representing the refinement is prefixed to the element content. For
+            instance,</p> 
+          <eg>OLAC:   &lt;format.sourcecode code="Java"/&gt;
+OAI_DC: &lt;format&gt;Source code: Java&lt;/format&gt;
+
+OLAC:   &lt;type.functionality&gt;Morphological parser&lt;/type.functionality&gt;
+OAI_DC: &lt;type&gt;Software functionality: Morphological parser&lt;/type&gt;
+
+OLAC:   &lt;subject.language code="x-sil-ban"&gt;Dschang&lt;/subject.language&gt;
+OAI_DC: &lt;subject&gt;Language: Yemba, Dschang&lt;/subject&gt;</eg></li></ol> 
+    </section> 
+  </body>
+   
+  <references> 
+    <ref abbrev="Day2001">Day, Michael. Mapping between metadata formats. UK
+      Office for Library and Information
+      Networking.<br/>&lt;<url>http://www.ukoln.ac.uk/metadata/interoperability/</url>&gt;</ref>
+    
+    <ref abbrev="OLACA">OLAC Aggregator Service.<br/>&lt;<url>http://www.language-archives.org/cgi-bin/olaca.pl</url>&gt;</ref><ref abbrev="OLACMS">OLAC Metadata
+      Set.<br/>&lt;<url>http://www.language-archives.org/OLAC/olacms.html</url>&gt;</ref>
+    
+    <ref abbrev="OAI_DC">Dublin Core Metadata Element Set, Version 1.1:
+      Reference Description.
+      <br/>&lt;<url>http://dublincore.org/documents/1999/07/02/dces/</url>&gt;<br/>XML
+      schema for OAI implementation of Dublin Core
+      metadata.<br/>&lt;<url>http://www.openarchives.org/OAI/1.1/dc.xsd</url>&gt;</ref>
+    
+  </references>
+</OLAC_doc>

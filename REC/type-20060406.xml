@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="../OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "../OLAC_doc.dtd">
+<OLAC_doc>
+  <header>
+     <status code="adopted" type="recommendation"/>
+     <!-- Promoted to Adopted on 2008-12-19 -->
+    <title>OLAC Linguistic Data Type Vocabulary</title>
+    <baseName>type</baseName>
+    <issued>20060406</issued>
+    <previousIssued>20021212</previousIssued>
+    <abstract><p>
+              This document specifies the codes, or controlled vocabulary, for the Linguistic Data Type extension of the DCMI Type element. These codes describe the content of a resource from the standpoint of recognized structural types of linguistic information. 
+    </p></abstract>
+    <editors>
+      Helen Aristar Dry (<url>mailto:hdry@linguistlist.org</url>),
+      Heidi Johnson (<url>mailto:ailla@ailla.org</url>)
+    </editors>
+    <copyright>
+      Helen Aristar Dry (Eastern Michigan University),
+      Heidi Johnson (University of Texas at Austin)
+    </copyright>
+    <changes>
+      <p>Promoted to candidate status, with a call for review by
+        those who have put the document into practice.</p>
+    </changes>
+  </header>
+
+  <body>
+    <section>
+    <heading>Introduction</heading>
+<p>
+Like all elements in the OLAC metadata standard, the Type element is both optional and repeatable. Since it is optional, the Linguistic Type extension of the Type element should only be used if a resource contains a significant amount of primary data and represents one of the structural types described below.  Many linguistic papers and analyses thus will not be described using this element.  However, the element may be repeated if a resource represents more than one linguistic type. So, for example, a primary text accompanied by a lexicon of vocabulary items would be described as both a primary text and a lexicon. 
+
+</p>
+
+<p>
+In many cases, adequate description of a linguistic resource will require that the Linguistic Type extension be used in conjunction with the Discourse Type extension of the Type element, or the Linguistic extension of the Subject element. For example, a narrative text might be described as both a primary text (OLAC Linguistic Type) and a narrative (OLAC Discourse Type).
+</p>
+
+<p>
+Note that a dataset should be described using the DCMI Type vocabulary, e.g. Dataset, Collection.  See: <cit>DC-TYPE</cit>.
+</p>
+    </section>
+
+<section>
+<heading>Linguistic Data Type</heading>
+<p>
+Each term in the controlled vocabulary is described in one of the
+following subsections. The heading gives the encoded value for the
+term that is to be used as the value of the code attribute of the
+"OLAC-Linguistic-Type" extension of the Type metadata element
+<cit>OLAC-MS</cit>. Under the heading, the term is described in four
+ways. <i>Name</i> gives a descriptive label for the term.
+<i>Definition</i> is a one-line summary of what the term
+means. <i>Comments</i> offers more details on what the term
+represents. Examples may also be given to illustrate how the term is
+meant to be applied.
+</p>
+<!-- A resource which is a dataset should be classified using the vocabulary for the DCMI Type element.
+<term>
+  <code>dataset</code>
+  <name>Dataset</name>
+  <definition>The resource is a structured set of data items.</definition>
+  <comment><p>
+     A dataset is a collection of items organized in a
+     structured format for some specific research purpose.</p>
+  </comment>
+  <examples><p>
+     Examples of datasets are: a set of sentences
+     illustrating deictic terms; an inflectional affix
+     paradigm; a list of utterance tokens in a uniform
+     context (e.g. "Say [pat] now."); a chart giving a
+     phonemic inventory classified by place/manner; an audio
+     recording of minimal pairs.
+  </p></examples>
+</term>
+-->
+<term>
+  <code>lexicon</code>
+  <name>Lexicon</name>
+  <definition>The resource includes a systematic listing of lexical items.</definition>
+  <comment><p>
+    Lexicon may be used to describe any resource which
+    includes a systematic listing of lexical items. Each
+    lexical item may, but need not,  be accompanied by a
+    definition, a description of the referent (in the case
+    of proper names), or an indication of the item's
+    semantic relationship to other lexical items.
+  </p></comment>
+  <examples><p>
+    Examples include word lists (including comparative word
+    lists), thesauri,  wordnets, framenets, and
+    dictionaries, including specialized dictionaries such
+    as bilingual and multilingual dictionaries,
+    dictionaries of terminology, and dictionaries of proper
+    names. Non-word-based examples include phrasal lexicons
+    and lexicons of intonational tunes.
+  </p></examples>
+</term>
+
+<term>
+  <code>primary_text</code>
+  <name>Primary Text</name>
+  <definition>Linguistic material which is itself the object of study, typically material in the subject language which is a performance of a speech event, or the written analog of such an event.  </definition>
+  <comment><p>
+    Primary Text is used to describe material in the subject language; it reflects a speech event, or is the written analog, and embodies linguistic features  which make it an object of analysis or research.  Typically, a primary text has temporal structure.  Most often in a primary text, the timecourse of some real or fictional linguistic event, e.g., a conversation, elicitation session, or imagined scene, is carried over into the archived artifact.</p>
+
+    <p>Note:  Primary_text describes the content of the
+    resource, not the physical format.  A primary text may
+    be recorded in different physical media, e.g. as
+    videotaped, audiotaped, or written text.  Physical
+    format is described using the Format element.
+  </p></comment>
+  <examples><p>
+    Examples of primary texts include transcribed interlinear texts, letters, (audiotaped) elicitation sessions, (videotaped) rituals or story-telling sessions, and any other recorded speech or writing which exemplifies language structure or use in such a way as to become an object of study.  When a corpus is a collection of primary texts, it should be described both as a primary text (OLAC Linguistic Type) and as a collection (DC Type).
+  </p></examples>
+</term>
+
+<term>
+  <code>language_description</code>
+  <name>Language Description</name>
+  <definition>The resource describes a language or some aspect(s) of a language via a systematic documentation of linguistic structures.</definition>
+  <comment><p>
+Not every resource commonly termed 'descriptive' should be described with this code; for example, a description of Zamenhof, the creator of Esperanto, would not be classified using this code. Instead, the code should be reserved for a resource that describes a language or some aspect of a language, typically in prose with interspersed examples. 
+  </p>
+  <p>
+The similarly named code, Language Documentation (in the Linguistic Subject extension) refers to a field of study. This category, Language Description, refers to recognized structural   types of linguistic information, which are the products of the field of study, e.g., grammars and field notes.
+   </p>
+  </comment>
+  <examples><p>
+Examples of descriptions include a formal grammar, a sketch grammar, field notes, a phonological sketch. 
+  </p></examples>
+</term>
+</section>
+</body>
+
+<references>
+  <ref abbrev="DC-TYPE">Dublin Core Type Vocabulary.<br/>
+    &lt;<url>http://dublincore.org/usage/terms/dcmitype/</url>&gt;</ref>
+
+  <ref abbrev="OLAC-MS">OLAC Metadata Set.<br/>
+    &lt;<url>http://www.language-archives.org/OLAC/olacms.html</url>&gt;</ref>
+</references>
+</OLAC_doc>

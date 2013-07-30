@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>A query facility for selective harvesting of OLAC metadata</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="A query facility for selective harvesting of OLAC metadata">
+<meta name="Creator" content="Gary Simons, SIL International&#10;        (mailto:gary_simons@sil.org)">
+<meta name="Description" content=" &#10;        Documents a verb, Query, supported by the CGI interface to the OLAC Aggregator. The purpose of the verb is to support selective harvesting of OLAC metadata, such as would be needed in order to offer a  specialized service based on OLAC metadata. The  request returns a ListRecords response; its parameters support the construction of an SQL query to specify the subset of records to harvest. &#10;      ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20030729">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>A query facility for selective harvesting of OLAC metadata</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2003-07-29</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Implementation Note. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/NOTE/query-20030729.html">http://www.language-archives.org/NOTE/query-20030729.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/NOTE/query.html">http://www.language-archives.org/NOTE/query.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td><a href="http://www.language-archives.org/NOTE/query-20021102.html">http://www.language-archives.org/NOTE/query-20021102.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>Documents a verb, Query, supported by the CGI interface to the OLAC Aggregator. The purpose of the verb is to support selective harvesting of OLAC metadata, such as would be needed in order to offer a  specialized service based on OLAC metadata. The  request returns a ListRecords response; its parameters support the construction of an SQL query to specify the subset of records to harvest.</p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>Gary Simons, SIL International
+        (<a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>)</editors>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Changes since previous version:</th><td>
+<p>Updated to reflect changes from version 0.4 of the OLAC metadata standard to version 1.0.</p>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 2003 Gary Simons
+      (SIL International). This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#The query interface">The query interface</A>
+</LI>
+<LI>
+<A href="#Expressing the selection criterion">Expressing the selection criterion</A>
+</LI>
+<LI>
+<A href="#Implementation">Implementation</A>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>A key feature of the openness of the Open Archives Initiative protocol  for metadata harvesting [<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm">OAI-PMH</a>] on which OLAC is based is that any site on the web is free to become a service provider. That is, it may harvest metadata from the participating data providers and offer a service based on the harvested metadata. In general, it is complicated to implement and operate a complete harvester with the result that few sites rise to the challenge of becoming a service provider.</p>
+<p>The Open Language Archives Community is seeking to change this. It has taken the following steps to make it easy for the members of its community to offer services based on OLAC metadata:</p>
+<ol>
+<li>
+<p>The OLAC Aggregator [<a href="http://www.language-archives.org/cgi-bin/olaca3.pl">OLACA</a>] is a  service that harvests metadata from all OLAC data providers and in turn serves as a single data provider for all OLAC metadata. </p>
+</li>
+<li>
+<p>It is planned that the OLAC Aggregator will support a special OLAC Display format [<a href="http://www.language-archives.org/NOTE/olac_display.html">OLAC-Display</a>] that resolves coded attribute values to display labels and presents a reader-friendly view of OLAC metadata.</p>
+</li>
+<li>
+<p>The OLAC Aggregator supports a query interface (described in this document) that makes it possible for a would-be service provider to harvest only the metadata records of interest.</p>
+</li>
+<li>
+<p>The OLAC Aggregator cooperates with the virtual service provider [<a href="http://www.language-archives.org/NOTE/viser.html">Viser</a>] so that the results of a selective harvesting query to OLACA can be rendered as an HTML page that presents a service to an end user.</p>
+</li>
+</ol>
+<p>The purpose of this document is to document the query interface and to illustrate how it can be used.</p>
+<h2>
+<A name="The query interface"></A>2. The query interface</h2>
+<p>In addition to the six verbs of the OAI harvesting protocol [<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm">OAI-PMH</a>], the OLAC Aggregator supports a seventh&mdash;Query. The Query verb takes the following arguments:</p>
+<blockquote>
+<dl>
+<dt>
+<b>elements</b>
+</dt>
+<dd>
+<p>A required argument that specifies the number of metadata elements that are referred to in the selection criterion.</p>
+</dd>
+<dt>
+<b>sql</b>
+</dt>
+<dd>
+<p>A required argument that specifies the selection criterion expressed as the content of a WHERE clause in MySQL syntax. </p>
+</dd>
+<dt>
+<b>count</b>
+</dt>
+<dd>
+<p>An optional argument that specifies the number of metadata records to return in a single response.  If this argument is not specified, a default value of 20 is assumed.</p>
+</dd>
+<dt>
+<b>resumptionToken</b>
+</dt>
+<dd>
+<p>An exclusive argument  with a value that is the flow control token [<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#FlowControl">OAI-FC</a>] returned by a previous Query request that issued a partial response. It is exclusive in that when it is used, it is the only argument in addition to <i>verb</i>.</p>
+</dd>
+</dl>
+</blockquote>
+<p>The result of a Query request is a ListRecords response [<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#ListRecords">OAI-LR</a>]. The metadata records are returned in order of their OAI identifiers. In the current implementation, the records are returned in OLAC format; it is intended that they will be returned in OLAC Display format [<a href="http://www.language-archives.org/NOTE/olac_display.html">OLAC-Display</a>] when it is implemented. If more records match the selection criterion than the number indicated by the <i>count</i> parameter, a resumption token is returned at the end of the response as described in [<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#FlowControl">OAI-FC</a>].</p>
+<h2>
+<A name="Expressing the selection criterion"></A>3. Expressing the selection criterion</h2>
+<p>The selection criterion is expressed  as a <i>where_definition</i> in MySQL syntax [<a href="http://www.mysql.com/documentation/mysql/bychapter/manual_Reference.html">MySQL</a>]. The query has access to each element in a metadata record and to all the parts of an element, which are named as follows:</p>
+<blockquote>
+<table cellpadding="4">
+<tr valign="top">
+<td>TagName&nbsp;&nbsp;</td><td>
+<p>The generic identifier for the element's XML tag.</p>
+</td>
+</tr>
+<tr valign="top">
+<td>Content&nbsp;&nbsp;</td><td>
+<p>The value of the element's content.</p>
+</td>
+</tr>
+<tr valign="top">
+<td>Code&nbsp;&nbsp;</td><td>
+<p>The value of the element's <i>olac:code</i> attribute.</p>
+</td>
+</tr>
+<tr valign="top">
+<td>Lang&nbsp;&nbsp;</td><td>
+<p>The value of the element's <i>xml:lang</i> attribute.</p>
+</td>
+</tr>
+<tr valign="top">
+<td>Type&nbsp;&nbsp;</td><td>
+<p>The value of the element's <i>xsi:type</i> attribute.</p>
+</td>
+</tr>
+</table>
+</blockquote>
+<p>The first step in designing a query is to identify how many elements in a metadata record must be consulted in order to test the criterion. This number is the value of the <i>elements</i> argument. In the query, the elements are referred to as <tt>e1</tt> through <tt>e</tt><i>n</i>, where <i>n</i> is the value of <i>elements</i>. Thus, the content of the first element is referred to as <tt>e1.Content</tt>, while the generic identifier of the second element is referred to as <tt>e2.TagName</tt>. Selection criterion may also make use of the <tt>OaiIdentifier</tt> column in order to limit a search to the holdings of a particular archive.</p>
+<p>The following are some sample queries.</p>
+<ul>
+<li>
+<p>All resources that pertain to Fijian or Western Fijian (whether in the language or about the language):</p>
+<pre style="margin-left: 18pt">e1.code='x-sil-FJI' or e1.code='x-sil-WYY'</pre>
+</li>
+<li>
+<p>All resources that are about Fijian:</p>
+<pre style="margin-left: 18pt">e1.code='x-sil-FJI' and e1.TagName='subject'</pre>
+</li>
+<li>
+<p>All resources that conform to the DTD that is deposited as item <i>oai:someArchive:someDTD</i>:</p>
+<pre style="margin-left: 18pt">e1.TagName='format' and e1.Content='oai:someArchive:someDTD'</pre>
+</li>
+<li>
+<p>All resources in the LDC repository:</p>
+<pre style="margin-left: 18pt">OaiIdentifier like 'oai:www.ldc.upenn.edu:%'</pre>
+</li>
+<li>
+<p>All resources in the LDC repository that have been published since the beginning of 2000:</p>
+<pre style="margin-left: 18pt">OaiIdentifier like 'oai:www.ldc.upenn.edu:%' and e1.TagName='date' and e1.Content&gt;='2000'</pre>
+</li>
+<li>
+<p>All resources that are marked up in XML and are in the French language:</p>
+<pre style="margin-left: 18pt">e1.Content='text/xml' and e2.TagName='language' and e2.Code='fr'</pre>
+</li>
+</ul>
+<p>The above examples illustrate that testing for the element tag itself is often redundant when a code or content value is only associated with one metadata element. For instance, in the last example, 'text/xml' is the <i>Content</i> value for the <tt>&lt;format&gt;</tt> element.  </p>
+<p>In order to pass the criterion expression as an argument in a URL, it must be URL encoded.  The key changes to make are:</p>
+<ul>
+<li>
+<p>Change each space to "+".</p>
+</li>
+<li>
+<p>Change each "=" to "%3D".</p>
+</li>
+<li>
+<p>Change each "%" to "%25".</p>
+</li>
+<li>
+<p>Change each "&amp;" to "%26".</p>
+</li>
+</ul>
+<p>Thus, for instance, the third-to-last and last sample queries listed above translate into the following requests to the OLAC Aggregator (which you may test by clicking on the links):</p>
+<ul>
+<li>
+<p>All resources in the LDC repository:</p>
+<p>
+<a href="http://www.language-archives.org/cgi-bin/olaca3.pl?verb=Query&amp;%0Aelements=0&amp;sql=OaiIdentifier+like+'oai:www.ldc.upenn.edu:%25'">http://www.language-archives.org/cgi-bin/olaca3.pl?verb=Query&amp;
+elements=0&amp;sql=OaiIdentifier+like+'oai:www.ldc.upenn.edu:%25'</a>
+</p>
+</li>
+<li>
+<p>All resources that are marked up in XML and are in the French language:</p>
+<p>
+<a href="http://www.language-archives.org/cgi-bin/olaca3.pl?verb=Query&amp;%0Aelements=2&amp;sql=e1.Content%3D'text/xml'+and+e2.tagName%3D'language'+and+e2.Code%3D'fr'">http://www.language-archives.org/cgi-bin/olaca3.pl?verb=Query&amp;
+elements=2&amp;sql=e1.Content%3D'text/xml'+and+e2.tagName%3D'language'+and+e2.Code%3D'fr'</a>
+</p>
+</li>
+</ul>
+<h2>
+<A name="Implementation"></A>4. Implementation</h2>
+<p>The Query request is implemented by the <tt>serve_Query</tt> subroutine in the <tt>Aggregator.pm</tt> module and the <tt>getTable_Query</tt> subroutine in the <tt>DB.pm</tt> module. These are part of the [<a href="http://sourceforge.net/project/showfiles.php?group_id=6577">OLAC-Suite</a>] release. More insight on the functioning of the query expression can be gained by consulting the schema of the MySQL harvesting database [<a href="http://www.language-archives.org/tools/olac_schema.sql">OLAC-Schema</a>].</p>
+<p>The Query request builds an SQL query like the following:</p>
+<pre style="margin-left: 18pt">select OaiIdentifier, DateStamp, a.Item_ID {, e1.*}
+from ARCHIVED_ITEM as a {, METADATA_ELEM as e1}
+where {a.Item_ID=e1.Item_ID and} ( URL-unencoded-sql-argument )
+order by OaiIdentifier</pre>
+<p>The three code fragments in curly braces are repeated the same number of times as the value of the <i>elements</i> argument. The table alias is incremented with each repetition (e.g., <tt>e1</tt>, <tt>e2</tt>, and so on). The value of the <i>sql</i> argument is URL unencoded and then placed within parentheses in order to ensure the correct precedence of operators with respect to the rest of the WHERE clause.  </p>
+</body>
+<a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="MySQL">MySQL</a>]</td><td>MySQL Language Reference (especially section 6.3).
+<br>&lt;<a href="http://www.mysql.com/documentation/mysql/bychapter/manual_Reference.html">http://www.mysql.com/documentation/mysql/bychapter/manual_Reference.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OAI-FC">OAI-FC</a>]</td><td>"Flow Control," section 3.5 of     <i>The Open Archives Initiative Protocol for Metadata Harvesting, Version 2.0</i> (2002-06-14).
+<br>&lt;<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#FlowControl">http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#FlowControl</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OAI-LR">OAI-LR</a>]</td><td>"ListRecords," section 4.5 of     <i>The Open Archives Initiative Protocol for Metadata Harvesting, Version 2.0</i> (2002-06-14).
+<br>&lt;<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#ListRecords">http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm#ListRecords</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OAI-PMH">OAI-PMH</a>]</td><td>The Open Archives Initiative Protocol for Metadata Harvesting, Version 2.0 (2002-06-14).
+.<br>&lt;<a href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm">http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Display">OLAC-Display</a>]</td><td>Specifications for an OLAC metadata display format and an OLAC-to-OAI_DC crosswalk.
+      <br>&lt;<a href="http://www.language-archives.org/NOTE/olac_display.html">http://www.language-archives.org/NOTE/olac_display.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Schema">OLAC-Schema</a>]</td><td>Relational database schema for OLAC metadata harvester.<br>&lt;<a href="http://www.language-archives.org/tools/olac_schema.sql">http://www.language-archives.org/tools/olac_schema.sql</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Suite">OLAC-Suite</a>]</td><td>OLAC Suite: A suite of OLAC harvesting tools implemented in MySQL + Perl.<br>&lt;<a href="http://sourceforge.net/project/showfiles.php?group_id=6577">http://sourceforge.net/project/showfiles.php?group_id=6577</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLACA">OLACA</a>]</td><td>OLAC Aggregator Service.<br>&lt;<a href="http://www.language-archives.org/cgi-bin/olaca3.pl">http://www.language-archives.org/cgi-bin/olaca3.pl</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="Viser">Viser</a>]</td><td>Viser: A virtual service provider for displaying selected OLAC metadata.<br>&lt;<a href="http://www.language-archives.org/NOTE/viser.html">http://www.language-archives.org/NOTE/viser.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

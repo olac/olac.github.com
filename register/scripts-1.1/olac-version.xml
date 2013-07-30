@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!--
+Schematron schema for checking OLAC version.
+
+Author: Haejoong Lee
+-->
+	
+<schema xmlns="http://www.ascc.net/xml/schematron">
+
+  <ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema-instance"/>
+  <ns prefix="oai" uri="http://www.openarchives.org/OAI/2.0/"/>
+  <ns prefix="oai-identifier" uri="http://www.openarchives.org/OAI/2.0/oai-identifier"/>
+  <ns prefix="sr" uri="http://www.openarchives.org/OAI/2.0/static-repository"/>
+  <ns prefix="olac10" uri="http://www.language-archives.org/OLAC/1.0/"/>
+  <ns prefix="olac11" uri="http://www.language-archives.org/OLAC/1.1/"/>
+  <ns prefix="olac-archive10" uri="http://www.language-archives.org/OLAC/1.0/olac-archive"/>
+  <ns prefix="olac-archive11" uri="http://www.language-archives.org/OLAC/1.1/olac-archive"/>
+  <ns prefix="dc" uri="http://purl.org/dc/elements/1.1/"/>
+  <ns prefix="dcterms" uri="http://purl.org/dc/terms/"/>
+
+  <pattern name="OLAC Version"
+           see="http://www.language-archives.org/OLAC/repositories.html#Identify">
+    <rule context="sr:Identify">
+      <report test="oai:description/olac-archive10:olac-archive">OLAC 1.0 static</report>
+      <report test="oai:description/olac-archive11:olac-archive">OLAC 1.1 static</report>
+    </rule>
+    <rule context="oai:Identify">
+      <report test="oai:description/olac-archive10:olac-archive">OLAC 1.0 dynamic</report>
+      <report test="oai:description/olac-archive11:olac-archive">OLAC 1.1 dynamic</report>
+    </rule>
+    <rule context="sr:ListRecords/oai:record">
+      <report test="oai:metadata/olac10:olac">OLAC 1.0 static</report>
+      <report test="oai:metadata/olac11:olac">OLAC 1.1 static</report>
+    </rule>
+    <rule context="oai:ListRecords/oai:record">
+      <report test="oai:metadata/olac10:olac">OLAC 1.0 dynamic</report>
+      <report test="oai:metadata/olac11:olac">OLAC 1.1 dynamic</report>
+    </rule>
+  </pattern>
+
+</schema>

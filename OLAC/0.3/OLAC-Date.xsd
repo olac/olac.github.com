@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.language-archives.org/OLAC/0.3/">
+
+  <annotation>
+    <documentation>
+      OLAC Schema for dates, Steven Bird, 5/7/01
+      ** this is XML DTF without times, but with year-ranges
+      Refinements are from DC Qualifiers
+      http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/
+      A possibility for date ranges is the DCSV method described in
+      http://dublincore.org/documents/dcmi-period/
+    </documentation>
+  </annotation>
+
+  <simpleType name="OLAC-Date-Refine">
+    <restriction base="string">
+      <enumeration value="Created"/>
+      <enumeration value="Valid"/>
+      <enumeration value="Available"/>
+      <enumeration value="Issued"/>
+      <enumeration value="Modified"/>
+    </restriction>
+  </simpleType>
+  
+  <simpleType name="OLAC-Date-Code">  <!-- weak definition -->
+    <restriction base="string">
+      <pattern value="[0-9][0-9][0-9][0-9](-[0-9][0-9](-?[0-9][0-9]))"/>
+    </restriction>
+  </simpleType>
+  
+</schema>
+  

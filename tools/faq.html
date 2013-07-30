@@ -1,0 +1,746 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <!-- Dynamic repository -->
+
+   <head>
+      <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+      <title>OLAC Implementers' FAQ</title>
+      <script type="text/javascript" src="/js/gatrack.js"></script>
+      <link href="../olac.css" rel="stylesheet" type="text/css" />
+      <style type="text/css">
+         body {
+            counter-reset: question;
+             
+         }
+         H3.Question:before {
+         /* Autonumber questions in FAQ */   
+            counter-increment: question;
+         /* Add 1 to question counter */   
+            content: counter(question) ". ";
+             
+         }
+         H3.Question {
+            font-style:italic;
+             
+         }</style>
+      <meta content="OLAC Implementers' FAQ" name="Title" />
+      <meta
+         content="Frequently asked questions about implenting a metadata
+ repository to participate in OLAC (Open Language Archives Community)."
+         name="Description" />
+      <meta
+         content="OLAC, Open Language Archives Community, OAI, 
+ Open Archives Initiative, language resource, metadata, metadata repository, 
+ static repositoy, dynamic repository, controlled vocabulary, Dublin Core"
+         name="Keywords" />
+      <meta content="20011-08-13" name="Date" />
+   </head>
+
+   <body bgcolor="white">
+      <hr />
+      <table cellpadding="10">
+         <tr>
+            <td>
+               <a href="/">
+                  <img alt="OLAC logo" border="0" src="/images/olac100.gif" />
+               </a>
+            </td>
+            <td valign="middle">
+               <h1>
+                  <font color="0x00004a">OLAC Implementers' FAQ</font>
+               </h1>
+            </td>
+         </tr>
+      </table>
+      <hr />
+      <div id="contents">
+         <h2>Answers to Frequently Asked Questions about Implementing an OLAC Metadata Repository</h2>
+         <ol>
+            <li>
+               <a href="#archive">Is it required that an OLAC metadata repository describe an
+                  archive?</a>
+            </li>
+            <li>
+               <a href="#record">What do the records in an OLAC metadata repository represent?</a>
+            </li>
+            <li>
+               <a href="#starting">How do I get started on implementing an OLAC metadata
+               repository?</a>
+            </li>
+            <li>
+               <a href="#granularity">How do I decide what to treat as an individual item?</a>
+            </li>
+            <li>
+               <a href="#database">How do I create records for a web database?</a>
+            </li>
+            <li>
+               <a href="#examples">Where can I find good examples of sample metadata records?</a>
+            </li>
+            <li>
+               <a href="#approaches">How do I decide if I should implement a static repository or a
+                  dynamic repository?</a>
+            </li>
+         </ol>
+         <h4>Implementing a static repository</h4>
+         <ol start="8">
+            <li>
+               <a href="#eg-static">Where can I find complete examples of static repositories?</a>
+            </li>
+            <li>
+               <a href="#manual">How would I create and maintain a static repository by hand?</a>
+            </li>
+            <li>
+               <a href="#sample1">Where can I find sample code for generating a static repository
+                  from a database?</a>
+            </li>
+            <li>
+               <a href="#test1">How do I test whether my static repository is valid?</a>
+            </li>
+            <li>
+               <a href="#publish">Where do I put my static repository when it is ready to
+               publish?</a>
+            </li>
+         </ol>
+         <h4>Implementing a dynamic repository</h4>
+         <ol start="13">
+            <li>
+               <a href="#eg-dynamic">Where can I find complete examples of dynamic repositories?</a>
+            </li>
+            <li>
+               <a href="#sample2">Where can I find sample code for implementing a dynamic
+                  repository?</a>
+            </li>
+     <!--   <li>
+               <a href="#tokens">What are resumption tokens and how do they work?</a>
+            </li>   -->
+            <li>
+               <a href="#test2">How do I test my dynamic repository to make sure it works?</a>
+            </li>
+         </ol>
+         <h4>Registering and improving a repository</h4>
+         <ol start="17">
+            <li>
+               <a href="#register">How do I register my repository with OLAC?</a>
+            </li>
+            <li>
+               <a href="#quality">How do I improve the quality of the metadata in my repository?</a>
+            </li>
+            <li>
+               <a href="#update">What do I do when I want to update the information in my
+                  repository?</a>
+            </li>
+            <li>
+               <a href="#changes">Why aren't my changes being harvested?</a>
+            </li>
+            <li>
+               <a href="#move">How do I move my repository?</a>
+            </li>
+         </ol>
+
+         <h4>General questions</h4>
+         <p>The following questions are answered elsewhere in the general OLAC FAQ:</p>
+         <ol>
+            <li>
+               <a href="../documents/faq.html#1">What is the Open Language Archives Community?</a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#2">What is a language resource?</a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#3">What is language resource discovery?</a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#4">What is metadata?</a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#5">What is the OLAC Metadata Set?</a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#6">How is OLAC metadata disseminated?</a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#7">Who can benefit from using OLAC metadata?</a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#8">What is meant by <i>Open</i> in the context of Open
+                  Language Archives? </a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#9">How does a language archive join OLAC?</a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#10">Can an individual or small archive join OLAC
+                  without bothering with formats and protocols?</a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#11">How are language standards like the TEI
+                  represented in OLAC?</a>
+            </li>
+            <li>
+               <a href="../documents/faq.html#12">How do I contribute new proposals for OLAC
+                  metadata?</a>
+            </li>
+         </ol>
+      </div>
+      <hr />
+      <div id="prelim">
+         <h3 class="Question">
+            <a name="archive">Is it required that an OLAC metadata repository describe an
+            archive?</a>
+         </h3>
+         <p>In the prototypical case, a participating institution is an archive that curates
+            language resources. In this case, the OLAC metadata repository it implements is a
+            catalog of its archival holdings. (Participants that operate such archives can be
+            identified by the presence of the <i>&lt;archivalSubmissionPolicy&gt;</i>
+            element in the <i>&lt;olac-archive&gt;</i> description that is part of the
+            Identify response of their repository.) But operating an archive is not a requirement.
+            The mission of OLAC is to create a "worldwide virtual library of language resources" and
+            anyone who can contribute useful information to the catalog of known language resources
+            is invited to do so. This may include contributions from individuals rather than
+            institutions. It may also include metadata repositories that are indexes to language
+            resources supplied by others or that describe entry points into an online database of
+            language-related information.</p>
+
+         <h3 class="Question">
+            <a name="record">What do the records in an OLAC metadata repository represent?</a>
+         </h3>
+         <p>Each record in an OLAC metadata repository represents a <a
+               href="../documents/faq.html#2">language resource</a> that the participating archive
+            wants to inform the world about. The resource could be a physical object like a book, a
+            CD-ROM, a wax cylinder or a box of unpublished field notes. In such cases, the metadata
+            record allows potential users to discover that the resource exists. When the resource is
+            a digital object that is posted on the web (such as a document, a corpus of recordings,
+            a database or a software program), then the metadata record can go a step further to
+            provide access to the resource by supplying the URL in the
+               <i>&lt;dc:identifier&gt;</i> element. The record need not describe resource
+            that the contributor actually has under archival control. For instance, a record could
+            be an annotated bibliography entry in which the contributor has added value to the basic
+            citations by supplying a description and subject classification. Or a record could
+            describe a web page that is an index page giving links to language resources that are
+            posted on other web sites. </p>
+
+         <h3 class="Question">
+            <a name="starting">How do I get started on implementing an OLAC metadata repository?</a>
+         </h3>
+         <p>An OLAC metadata repository is essentially a set of language resource descriptions. A
+            good place to start is to look at the <a
+               href="/NOTE/usage.html">OLAC Metadata Usage
+               Guidelines</a> to learn how OLAC describes language resources. That document defines
+            and illustrates each of the possible elements of a language resource description. It
+            will be helpful at the same time to be looking at <a href="#examples">examples of
+               complete metadata records</a> from existing OLAC participants. A key decision you
+            must make before you can begin implementing is to <a href="#granularity">decide what to
+               treat as an individual item</a>. As you are looking at examples from other OLAC
+            participants, make note of records that match your situation and which you could use as
+            models for resource description in your repository. However, rather than simply using an
+            existing record as a template for your own records, you should evaluate it against
+            OLAC's <a href="/REC/bpr.html"> best practice
+               recommendations for language resource description</a>. In the process you may
+            discover ways to improve the quality of the metadata records you will produce. </p>
+         <p>Once you have a good idea of what the records in your repository will be like, the next
+            step is to read carefully the <a
+               href="/OLAC/repositories.html">OLAC Repositories</a>
+            standard. You will see that it defines two approaches, implementing a static repository
+            versus a dynamic repository. You need to <a href="#approaches">decide which kind of
+               repository to implement</a>, then focus on the corresponding section of the OLAC
+            standard. If you are implementing a static repository, you will want to look at the more
+            complete <a href="http://www.openarchives.org/OAI/2.0/guidelines-static-repository.htm"
+               >Specification for an OAI Static Repository</a> which is the standard from the
+            digital library community that the OLAC standard is based on. You may also find it
+            helpful at this stage to look at <a href="#eg-static">complete examples of static
+               repositories</a>. When you are ready to begin implementing, you may follow the
+            instructions for <a href="#manual">creating a repository by hand</a> or for using a
+            script to <a href="#sample1">generate a repository from a database</a>. </p>
+         <p>Similarly, if you are implementing a dynamic repository, you will need to consult the
+            complete specification of the <a
+               href="http://www.openarchives.org/OAI/2.0/openarchivesprotocol.htm">Open Archives
+               Initiative Protocol for Metadata Harvesting</a> and may want to see <a
+               href="#eg-dynamic">complete examples of dynamic repositories</a>. When you are ready
+            to begin implementing, you will want to start by searching for <a href="#sample2">sample
+               code</a> that you can use as a basis for your implementation. </p>
+
+         <h3 class="Question">
+            <a name="granularity">How do I decide what to treat as an individual item?</a>
+         </h3>
+         <p>The <i>OLAC Repositories</i> standard addresses this issue in a section on <a
+               href="/OLAC/repositories.html#Guidelines%20concerning%20relevance%20and%20granularity"
+               >Guidelines concerning relevance and granularity</a>. The basic guideline is this: "A
+            metadata repository should treat resources with a single provenance as constituting a
+            single unit with respect to OLAC metadata and should, therefore, describe them within a
+            single record." For published resources, the publication unit typically constitutes the
+            appropriate unit for the OLAC metadata record. For unpublished papers presenting
+            findings of research, these closely parallel typical published works, and can be treated
+            at a comparable level in an OLAC metadata record. For primary source materials (e.g.,
+            recordings, transcriptions, annotations, notes, data sets), the typical practice of
+            archivists is to gather such materials into collections based on shared provenance—this
+            is, based on having a common origin and history. These collections are then the primary
+            units for metadata description, resulting in OLAC records of <a
+               href="http://dublincore.org/documents/dcmi-type-vocabulary/">DCMI Type</a>
+            Collection. See the section on <a
+               href="/NOTE/usage.html#Granularity%20of%20resources"
+               >Granularity of resources</a> in the <i>OLAC Metadata Usage Guidelines</i> for a more
+            in-depth discussion of the principle of provenance as applied to collections and
+            metadata within the OLAC context.</p>
+
+         <h3 class="Question">
+            <a name="database">How do I create records for a web database?</a>
+         </h3>
+         <p>There are many valuable language resources that are underused because they are part of
+            the <a href="http://en.wikipedia.org/wiki/Deep_Web">Deep Web</a> (that is, the portion
+            of the Internet that is obscured from discovery by general search engines because the
+            resources are in a database that is accessible only via a search interface on its host
+            site). Such resources can be brought to the indexable web by creating OLAC records for
+            them, since it is a built-in service of OLAC to convert every record into a page that
+            gets crawled by web spiders. (To see the set of pages for a given archive, click the <a
+               href="/archives.php">Archives</a> link on the OLAC
+            home page, click the "More Details" link for the desired archive, and then click the
+            "Records in Archive" link on the resulting Archive Details page.) </p>
+         <p>The only requirement on a web database for using an OLAC repository to expose and access
+            its language resources is that it have publicly accessible URLs for the resources. These
+            often involve a base URL that uses parameters to provide arguments to a query. For
+            instance, the resources in the <a
+               href="/archive/linguistlist.org">LINGUIST List
+               Language Resources</a> repository and the <a
+               href="/archive/odin.csufresno.edu">ODIN: Online
+               Database of Interlinear Text</a> repository are dynamic pages that generate a listing
+            of everything held in the database about a particular language; the ISO 639-3 code for
+            the language is a parameter to the URL that is given in the
+               <i>&lt;dc:identifier&gt;</i> element of each record. (Click the "Records in
+            Archive" link on the referenced Archive Details pages to see sample records.) </p>
+
+         <h3 class="Question">
+            <a name="examples">Where can I find good examples of sample metadata records?</a>
+         </h3>
+         <p>To see the metadata records from a given archive, click the <a
+               href="/archives.php">Archives</a> link on the OLAC
+            home page, click the "More Details" link for the desired archive, and then click the
+            "Records in Archive" link on the resulting Archive Details page. Alternatively, you may
+            get to the same place by going to the <a
+               href="/archive_records/">List Records from an OLAC
+               Archive</a> page, selecting an archive from the dropdown list, and then clicking the
+            Submit Query button. When you click on the identifier for a particular item, you will
+            see an HTML representation of the metadata. To see the underlying XML format of the OLAC
+            metadata record, click on the "OAI-PMH request for OLAC format" link. </p>
+         <p>The following are good examples of records for different kinds of resources: </p>
+         <ul>
+            <li>A collection of field recordings for a single language [<a
+                  href="/item/oai:blc.berkeley.edu:la.1"
+                  >oai:blc.berkeley.edu:la.1</a>]</li>
+            <li>A transcribed longitudinal corpus of a bilingual child's language acquisition [<a
+                  href="/item/oai:childes.psy.cmu.edu:Biling-DeHouwer"
+                  >oai:childes.psy.cmu.edu:Biling-DeHouwer</a>]</li>
+            <li>A sound recording with a related transcription [<a
+                  href="/item/oai:crdo.vjf.cnrs.fr:crdo-ADY_FEU_SOUND"
+                  >oai:crdo.vjf.cnrs.fr:crdo-ADY_FEU_SOUND</a>]</li>
+            <li>A wordlist in XML that conforms to a named DTD and has an accompanying sound
+               recording [<a
+                  href="/item/oai:crdo.vjf.cnrs.fr:crdo-ADY_LISTE_KAT"
+                  >oai:crdo.vjf.cnrs.fr:crdo-ADY_LISTE_KAT</a>]</li>
+            <li>A treebank corpus that is a licensed product [<a
+                  href="/item/oai:www.ldc.upenn.edu:LDC2005T02"
+                  >oai:www.ldc.upenn.edu:LDC2005T02</a>]</li>
+            <li>A grammar published as a book [<a
+                  href="/item/oai:sil.org:15582"
+               >oai:sil.org:15582</a>]</li>
+            <li>A working paper that is published online [<a
+                  href="/item/oai:sil.org:44667"
+               >oai:sil.org:44667</a>]</li>
+         </ul>
+         <p>The <a href="/tools/survey.php">Metadata Usage
+            Survey</a> tool may be used to see examples of how individual metadata elements have
+            been used throughout the OLAC catalog. Note, however, that many uses do not conform to
+            best practice recommendations. A good way to use the tool is to identify ways of using
+            elements that do conform to best practice and then click on the link for the number of
+            occurrences to see a list of the records in which it has been used in this way. It is
+            often helpful to see these elements in context to get ideas of how best to use them in
+            complete metadata records. </p>
+
+         <h3 class="Question">
+            <a name="approaches">How do I decide if I should implement a static repository or a
+               dynamic repository?</a>
+         </h3>
+         <p>There are two basic approaches as laid out in the <a
+               href="/OLAC/repositories.html">OLAC Repositories</a>
+            standard. The first is to build a <i>static repository.</i> In a static repository, the
+            entire catalog for the repository is expressed in a single XML file that contains all of
+            the metadata records. This is the simpler of the two approaches and can be used when the
+            repository is relatively small&#x2014;up to approximately 5,000 records. When there
+            is no existing catalog database, the implementer can use an XML editor to <a
+               href="#manual">create and maintain a repository by hand</a>. When there is an
+            existing catalog database, the implementer can <a href="#sample1">use a script to export
+               it</a> to the proper XML format.</p>
+         <p>The second approach is to implement a <i>dynamic repository.</i> This approach can be
+            used for a catalog of any size, but when the catalog is larger than 5,000 records, it
+            becomes necessary to use this approach. In a dynamic repository, the implementer <a
+               href="#sample2">writes program code</a> that resides at a base URL on a web site and
+            responds to the requests of the OAI Protocol for Metadata Harvesting in order to provide
+            dynamic access to information in an existing catalog database. The trickiest part about
+            implementing a dynamic repository is that it is necessary to implement flow control
+            using a <a href="#tokens">resumption token</a> mechanism in order to ensure that the
+            responses to individual protocol requests are not exceedingly large. The OAI community
+            considers half a megabyte to be a reasonable response size (which corresponds to about
+            500 records in a typical repository).</p>
+      </div>
+
+      <!-- Static repository -->
+      <div id="static">
+         <h2>Implementing a static repository</h2>
+         <h3 class="Question">
+            <a name="eg-static">Where can I find complete examples of static repositories?</a>
+         </h3>
+         <p>The last thing in the <a
+               href="/OLAC/repositories.html#Requirements%20on%20static%20repositories"
+               >section on static repositories</a> in the <i>OLAC Repositories</i> standard is a
+            link to a <a href="/OLAC/1.1/static-repository.xml"
+               >complete example</a>. Clicking this link retrieves an XML document which is a
+            hypothetical sample repository containing two records. </p>
+         <p>It is also possible to see the XML document behind each of the static repositories that
+            have been implemented by participating archives. Approximately nine-tenths of the
+            repositories are implemented in this way. The XML document for a static repository can
+            be retrieved in whole by inspecting its base URL. That URL is found by clicking the <a
+               href="/archives.php">Archives</a> link on the OLAC
+            home page, then clicking the "More Details" link for the desired archive. Find the line
+            that says "Base URL", copy the URL, and paste it into a web browser. If the repository
+            is dynamic, the result will be a documentation page or an error response concerning an
+            illegal verb. However, in nine-tenths of the cases, the repository is static and the
+            result will be the XML document that holds all the contents of the repository.</p>
+
+         <h3 class="Question">
+            <a name="manual">How would I create and maintain a static repository by hand?</a>
+         </h3>
+         <p>For a repository that has only a few records, it is very straightforward to create it
+            from scratch using an XML editor. It also makes sense to build and maintain a larger
+            repository by hand if there is no existing database for the metadata. In essence, an XML
+            editor can be used to create and maintain a static repository as the database. For
+            instructions on how to do this, see the OLAC Informational Note on <a
+               href="http://olac.googlecode.com/svn/web/NOTE/oxygen.html">Using
+               &lt;oXygen/&gt; XML Editor to Create or Validate an OLAC Static
+            Repository</a>. &lt;oXygen/&gt; is a mature and full-featured product that
+            offers a 30-day free trial and attractive academic pricing ($48 at the time of writing). </p>
+
+         <h3 class="Question">
+            <a name="sample1">Where can I find sample code for generating a static repository from a
+               database?</a>
+         </h3>
+         <p>Follow this <a href="http://code.google.com/p/olac/source/browse/#svn/src/data_providers/ailla_php">link</a>
+            to find sample code for generating a static repository. It
+         is written in PHP and extracts the metadata from a MySQL
+         database.  Another package (written in C) 
+            <a href="https://sourceforge.net/project/showfiles.php?group_id=6577&package_id=200507&release_id=439285">converts a BibTeX file</a> to an OLAC
+         Static Repository.</p>
+         <p>Note that it will not work to supply the URL of your script as the base URL for a static
+            repository. While accessing such a URL might return a valid static repository document
+            that is up-to-the-minute with respect to the underlying database, this will not work
+            correctly with the harvester because the harvesting protocol assumes that a
+            static repository is a static  data file. The static repository harvester uses the HTTP protocol to
+            issue a HEAD request to determine if the file has changed.
+            It reharvests the repository only if the "Last-Modified" time in
+            the response is more recent than the time of the last successful harvest. </p>
+
+         <h3 class="Question">
+            <a name="test1">How do I test whether my static repository is valid?</a>
+         </h3>
+         <p>The <a href="/register/register.php">OLAC Archive
+               Registration</a> page provides a service that makes a final test of conformance to
+            the <a href="/OLAC/repositories.html">OLAC
+            Repositories</a> standard before a new repository is admitted to the registration
+            process. This same service can be used at any time to test the conformance of a
+            repository file, even if you know it is not ready for registration or even if a previous
+            version is already registered. There are two cases: </p>
+         <ul>
+            <li>
+               <p><i>The repository file is posted on a public web site.</i> If your static
+                  repository file has been placed on a publicly accessible web site, then go to the
+                     <a href="/register/register.php">OLAC Archive
+                     Registration</a> page and paste the URL for your repository file into the first
+                  text box on the page. Click the "VALIDATE" button to test the file. </p>
+            </li>
+            <li>
+               <p><i>The repository file is only on your work station.</i> If your static repository
+                  file is on your local work station, then go to the <a
+                     href="/register/register.php">OLAC Archive
+                     Registration</a> page and click the "Browse" button to the right of the second
+                  text box on the page. After you have located the repository file, click the
+                  "UPLOAD &amp; VALIDATE" button to test the file.</p>
+            </li>
+         </ul>
+         <p>If the final line of the report says "SUCCESS," then you are ready to proceed to the <a
+               href="#register">registration step</a>. On the other hand, if the final line says
+            "FAILURE," you still have work to do. Make note of all the individual tests that failed
+            and fix the offending content in the repository; then repeat the validation process. In
+            the case of failing to pass an XML Schema Validation test, click on the "error logs"
+            link to see the list of errors generated by the validator. The two validators report the
+            errors differently, so look at both logs to get a fuller idea of what is wrong. Before
+            the job is finished, you will also want to test some of your records for metadata
+            quality; see below on how to <a href="#quality">improve the quality of the metadata</a>
+            in your repository.</p>
+
+         <h3 class="Question">
+            <a name="publish">Where do I put my repository when it is ready to publish?</a>
+         </h3>
+         <p>There are two options. The first option is to post the XML file for your static
+            repository on a public web site, such as the site run by your repository's host
+            institution. Ideally you will want it where you have write access, since you will want
+            to be able to update the repository from time to time. Once your repository is posted
+            for public access, you are ready to <a href="#register">register with OLAC</a>. </p>
+         <p>If you do not have access to a public web site, the second option is to let OLAC host
+            your static repository. If you choose this option, the uploading is done as part of the
+            registration process so you are ready to proceed to <a href="#register">registering with
+               OLAC</a>.</p>
+      </div>
+
+      <!-- Dynamic repository -->
+      <div id="dynamic">
+         <h2>Implementing a dynamic repository</h2>
+         <h3 class="Question">
+            <a name="eg-dynamic">Where can I find complete examples of dynamic repositories?</a>
+         </h3>
+         <p>Only about one-tenth of the OLAC repositories are implemented in this way. Two of them,
+               <a href="http://www.ethnologue.com/oai2.asp">Ethnologue</a> and <a
+               href="http://www.ethnologue.com/sil_archives2.asp">SIL Language and Culture
+            Archives</a>, implement a documentation page that provides a large set of links for
+            testing all the verbs of the harvesting protocol with various combinations of
+            parameters, including combinations that should generate error responses. You may
+            experience a sample implementation and get a better feel for how the protocol works by
+            clicking on one of the above links and trying the various links on the documentation
+            page. The text of each link gives the complete parameter string that is appended to the
+            Base URL to form a full URL. Clicking the link will retrieve the XML document which the
+            dynamic repository returns as the response to the request. The full request URL will
+            show in the location box of your browser. Click the browser's Back button to go back to
+            the documentation page and try another protocol request. </p>
+
+         <h3 class="Question">
+            <a name="sample2">Where can I find sample code for implementing a dynamic
+            repository?</a>
+         </h3>
+         <p>The <a href="http://www.openarchives.org/pmh/tools/tools.php">tools page</a> provided 
+            by the Open Archives Initiative gives links to
+            implementations of OAI data providers in
+            <a href="http://sourceforge.net/projects/uilib-oai/files/">Java</a>,
+            
+            <a href="http://www.dlib.vt.edu/projects/OAI/software/altperl/altperl.html">Perl</a>,
+            <a href="http://www.ibiblio.org/oaibiblio/">PHP</a>, and
+            <a href="http://sourceforge.net/projects/uilib-oai/files/">Microsoft ASP</a>.
+            These would need to be enriched to support
+            the additional <a
+               href="http://www.language-archives.org/OLAC/repositories.html#Requirements%20on%20dynamic%20repositories">requirements
+               on dynamic repositories</a> in the <i>OLAC Repositories</i> standard.
+         </p>
+
+     <!-- <h3 class="Question">
+            <a name="tokens">What are resumption tokens and how do they work?</a>
+         </h3>
+         <p>Forthcoming.</p>  -->
+
+         <h3 class="Question">
+            <a name="test2">How do I test my dynamic repository to make sure it works?</a>
+         </h3>
+         <p>A best practice that has been suggested within the OAI
+            community is to implement <i>Document</i> as an additional
+            verb that provides a human-readable
+            documentation page. The base URL of your dynamic repository
+            (with no request parameters) can then be redirected to
+            <i>?verb=Document</i>. OLACA 
+            (the OLAC Aggregator) is implemented in this way. It is
+            recommended that you begin your development by
+            making a copy of the 
+            <a href="http://www.language-archives.org/cgi-bin/olaca3.pl?verb=Document">OLACA documentation page</a>
+             and changing
+            it to match your situation. 
+            (Be sure to set the &lt;BASE> tag with
+            your base URL up to the script name so that the HREFs can
+            simply begin with the script name.)
+            The page contains a sample
+            link to test
+            each significant case of each protocol verb, including all the
+            error conditions. As you are developing and debugging your
+            repository, a
+            first level of testing can be done by clicking these links to
+            manually test the calls and examine the resulting XML responses. 
+            
+         </p>
+         <p>When you are satisfied with the results you are getting,
+            the next step is to try the more formal tests at 
+            the <a
+               href="http://re.cs.uct.ac.za/cgi-bin/Explorer/2.0-1.46/addarchive">Open
+               Archives Initiative - Repository Explorer</a>. After
+            entering the base URL of your repository, this tool
+            will put it through a battery of tests as well as provide
+            a web interface that will allow you to query and explore your
+            repository. When your repository passes all the tests of
+            the OAI protocol, then you are ready to proceed to the
+            OLAC validation and registration process which is
+            described under the next question.</p>
+      </div>
+
+      <!-- Registering and updating -->
+      <div id="registering">
+         <h2>Registering and improving a repository</h2>
+         <h3 class="Question">
+            <a name="register">How do I register my repository with OLAC?</a>
+         </h3>
+         <p>A new repository is registered by means of the <a
+               href="/register/register.php">OLAC Archive
+               Registration</a> page. There are two cases: </p>
+         <ul>
+            <li>
+               <p><i>The repository file is posted on a public web site.</i> If you have a dynamic
+                  repository or a static repository that has been placed on a publicly accessible
+                  web site, then go to the <a
+                     href="/register/register.php">OLAC Archive
+                     Registration</a> page and paste the URL for your repository into the first text
+                  box on the page. Click the "VALIDATE" button to test the file. </p>
+            </li>
+            <li>
+               <p><i>The repository file is only on your work station.</i> If your static repository
+                  file is on your local work station, then go to the <a
+                     href="/register/register.php">OLAC Archive
+                     Registration</a> page and click the "Browse" button to the right of the second
+                  text box on the page. After you have located the repository file, click the
+                  "UPLOAD &amp; VALIDATE" button to test the file.</p>
+            </li>
+         </ul>
+
+         <p>If the final line of the resulting validation report says "FAILURE," then you still have
+            work to do. Make note of all the individual tests that failed and fix the offending
+            content in the repository; then repeat the validation process. If the XML Schema
+            Validation is failing, click on the "error logs" link to see the list of errors
+            generated by the XML parsers. The two parsers report the errors differently, so look at
+            both logs to get a fuller idea of what is wrong.</p>
+         <p>When the final line of the validation report says "SUCCESS," then you will be presented
+            with a button that allows you to submit a registration request. After clicking the
+            button, you should get an email confirmation of the submission. The OLAC Coordinators
+            also receive notification of the pending registration request. They review the
+            repository to ensure that it meets the criteria enumerated in the <a
+               href="/OLAC/process.html#The%20registration%20process"
+               >OLAC Process</a> standard, namely, that it must catalog language resources and must
+            conform to the standards of OLAC. Following this review you will receive an email
+            notification describing the outcome, either confirmation that the repository has been
+            accepted and harvested, or an explanation concerning what is not yet in order.</p>
+
+         <h3 class="Question">
+            <a name="quality">How do I improve the quality of the metadata in my repository?</a>
+         </h3>
+         <p>OLAC has defined <a href="/REC/bpr.html">best practice
+               recommendations for language resource description</a>. You should review a few
+            records from your repository against this list of recommendations to see if there are
+            things you could change in the implementation of your repository (or of the underlying
+            database on which it is based) to follow even more of the recommendations. It is not
+            possible to automate tests for compliance to all the recommendations, so a complete
+            review must be done by hand. If you would like help doing such an audit of metadata
+            quality, contact the OLAC Coordinators; the link in the footer of this page is a
+               <tt>mailto:</tt> link to their addresses. </p>
+         <p> However, many aspects of metadata quality can be automatically tested. OLAC has
+            implemented <a href="/NOTE/metrics.html">metadata
+               metrics</a> to give implementers feedback on how well they have followed those
+            recommendations. The <a
+               href="/tools/metadata/freestanding.html">Freestanding
+               Metadata Service</a> allows you to learn the metadata quality score for any record.
+            Simply paste the complete <i>&lt;olac:olac></i> record into the text box on the page
+            and click the "Analyze" button. If the format of the record is not valid, the resulting
+            page will report the errors. Otherwise, the resulting page shows an analysis of the
+            record. The bottom part of the page gives the metadata quality score along with
+            recommendations on changes that would improve the score. It is possible to click the
+            browser's Back button to return to the record entry form, edit the record to make
+            changes that you think will improve the quality score, and then click "Analyze" again to
+            test the result.</p>
+
+         <h3 class="Question">
+            <a name="update">What do I do when I want to update the information in my
+            repository?</a>
+         </h3>
+         <p>If the repository is hosted on your own site (whether it is static or dynamic), simply
+            update it on your site. There is no need to inform OLAC. As long as the repository is at
+            the same base URL, it will be harvested on the regular schedule (explained in next
+            answer) and your updates will be automatically uploaded into the database at that time.</p>
+         <p>If it is a static repository that is hosted on the OLAC site, then you must use the
+            registration service to upload the new version. Go to the <a
+               href="/register/register.php">OLAC Archive
+               Registration</a> page and click the "Browse" button to the right of the second text
+            box on the page. After you have located the revised repository file on your hard disk,
+            click the "UPLOAD &amp; VALIDATE" button to upload the file. This will also test the
+            file for conformance to the <a
+               href="/OLAC/repositories.html">OLAC Repositories</a>
+            standard. If there are problems, you will be notified and instructed to correct the
+            problems and repeat the process. If the validation is successful, you will be offered an
+            option to replace the existing repository with the new one. When you select that option,
+            a confirmation request will be sent to the adminEmail declared in the original
+            repository. Once the request is confirmed, the repository will be replaced with the new
+            file. </p>
+
+         <h3 class="Question">
+            <a name="changes">Why aren't my changes being harvested?</a>
+         </h3>
+         <p>Incremental harvesting takes place every day. Before issuing the <tt>ListRecords</tt>
+            command of the OAI-PMH protocol, the harvester looks up the date of the last successful
+            harvest of the repository and adds that date as the value of the <tt>from</tt>
+            parameter. All records with an <tt>oai:datestamp</tt> in their header that is equal to
+            or later than that date will be returned by the data provider and uploaded by the
+            harvester. In the case of a static repository, it requires two harvesting cycles to
+            propagate updates &#x2014; the first harvesting request following an update fails
+            because the static repository gateway recognizes that it must refresh its cache of
+            records; thus by the next request the gateway is able to respond with the updated
+            records.</p>
+         <p>If more than two days have elapsed since you updated your repository, and the changes
+            you made are not showing when you go to <a
+               href="/archive_records/"
+               >http://www.language-archives.org/archive_records/</a> to inspect your records, then
+            look at the <a href="/archives.php">Participating
+               Archives</a> page to see if your repository is successfully harvesting. There are two
+            possible cases: </p>
+         <ul>
+            <li>
+               <p>If the end of the line for your repository shows a red X, then the last harvest
+                  failed. (Click on "More Details"; you will see the date of the last successful
+                  harvest near the bottom of the page.) Failure to harvest means that your base URL
+                  is not accessible or that your repository has a serious validation problem; enter
+                  your base URL into the <a
+                     href="/register/register.php">registration</a>
+                  page to generate a validation report.</p>
+            </li>
+            <li>
+               <p>If the end of the line for your repository shows a light green check mark, then it
+                  is harvesting successfully. The reason for failure to update is likely to be the
+                  datestamps in the record headers. Remember that the datestamp is the revision date
+                  for the metadata record, not for the resource it describes. Thus if the datestamp
+                  is not updated to the current date when a record is updated, it will not be picked
+                  up by an incremental harvest. The remedy is to update the datestamps.</p>
+            </li>
+         </ul>
+         <p>As a guard against failure to update datestamps, a complete reharvest of every
+            repository is performed approximately monthly. The date of full harvesting for any given
+            repository cannot be predicted exactly since the scheduling algorithm is dynamic
+            &#x2014; using randomization to spread the load across the month and recalibrating
+            priorities when a particular repository fails to harvest. This reharvest takes care of
+            another problem, namely, the purging of deleted records. In a dynamic repository it is
+            possible to specify <tt>status="deleted"</tt> on a record and the incremental harvest
+            will delete it from the database. However, static repositories do not support deletion.
+            Therefore, any record that is deleted from a static repository will persist in the OLACA
+            database for up to one month until the monthly reharvest is performed.</p>
+
+         <h3 class="Question">
+            <a name="move">How do I move my repository to a different base URL?</a>
+         </h3>
+         <p>If you want to move the base URL for your repository (without changing the repository
+            identifier), you must re-register. Go to the <a
+               href="/register/register.php">registration</a> page,
+            enter your new base URL, and click the Validate button. If there are no validation
+            errors, you will be presented with a "Change Registration" button. Clicking it will move
+            your repository to the new base URL. If you also want to change the repository
+            identifier, then you must contact the OLAC administrators who will manually remove your
+            existing repository and registration, and then instruct you to register the new
+            repository.</p>
+      </div>
+
+      <hr />
+      <p><i>Comments? Further questions? Please click the </i>mailto:<i> link below to give us
+            feedback so that we can make this page more helpful to future implementers.</i></p>
+      <p><tt>http://www.language-archives.org/tools/faq.html</tt><br/>
+         Last revised: 13 August 2011</p>
+      <p>
+         <font size="-2">
+            <a href="mailto:sb@ldc.upenn.edu,Gary_Simons@sil.org">Steven Bird and Gary Simons</a>
+         </font>
+      </p>
+   </body>
+</html>

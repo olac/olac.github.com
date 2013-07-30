@@ -1,0 +1,82 @@
+#!/usr/local/bin/python
+
+import sys, getopt, os, re, time
+
+### globals
+
+olac = '/pkg/ldc/wwwhome/htdocs/language-archives';
+date_file = 'document_build_date.xml'
+xsl = 'OLAC_doc.xsl';
+rxp = '/pkg/bin/rxp -Vs %s';
+xslt = '/usr/bin/java -classpath /pkg/x/xp-0.5/xp.jar:/pkg/x/xt-19991105/xt.jar:/pkg/x/xt-19991105/sax.jar:/usr/java1.1/lib/classes.zip com.jclark.xsl.sax.Driver %s %s > %s';
+doc_list_xml = olac + '/document_list.xml';
+doc_list_xsl = olac + '/document_list.xsl';
+doc_list_html = olac + '/document_list.html';
+mv_up = '/bin/mv -f %s ..';
+ln = '/bin/ln -s %s %s';
+rm = '/bin/rm -f %s';
+chmod = '/bin/chmod -f 664 %s';
+chgrp = '/bin/chgrp -f olac %s';
+date = "<date>%4d-%02d-%02d</date>" % (time.gmtime()[0:3]);
+
+def print_usage():
+    sys.exit("%s -i -h file-NNNNNNNN.xml\ni=install, h=help" % sys.argv[0]);
+def datestamp():
+    f = open(olac + '/' + date_file, 'w');
+    print "Write datestamp ", date, "to date file", date_file;
+    f.write("<?xml version=\"1.0\"?>\n%s\n" % date);
+    f.close();
+def system(cmd):
+    print "Executing:", cmd;
+    result = os.system(cmd);
+    if result != 0:
+        sys.exit("Command failed, exiting...");
+
+### process command line arguments
+
+(opts, args) = getopt.getopt(sys.argv[1:], "ih?");
+
+install = usage = 0;
+for opt in map(lambda x: x[0], opts):
+    if opt == '-i':
+        install = 1;
+    elif opt == '-h' or opt == '-?':
+        print_usage();
+
+if len(args) != 1:
+    print_usage();
+
+xml_file = args[0];
+
+if re.search(r'[0-9]{8,8}\.xml$', xml_file):
+    html_file = re.sub(r'\.xml$', '.html', xml_file);
+    base_xml_file = re.sub(r'-[0-9]{8,8}\.xml$', '.xml', xml_file);
+    base_html_file = re.sub(r'\.xml$', '.html', base_xml_file);
+else:
+    print_usage();
+
+### process XML file
+
+print "Validating", xml_file;
+system(rxp % xml_file);
+
+print "Transforming", xml_file, "to", html_file;
+system(xslt % (xml_file, xsl, html_file));
+system(chmod % xml_file);
+system(chgrp % xml_file);
+system(chmod % html_file);
+system(chgrp % html_file);
+
+if (install):
+    datestamp();
+    system(rm % base_xml_file);
+    system(rm % base_html_file);
+    system(ln % (xml_file, base_xml_file));
+    system(ln % (html_file, base_html_file));
+    system(mv_up % html_file);
+    system(mv_up % base_html_file);
+    system(xslt % (doc_list_xml, doc_list_xsl, doc_list_html));
+    system(chmod % doc_list_xml);
+    system(chgrp % doc_list_xml);
+    system(chmod % doc_list_html);
+    system(chgrp % doc_list_html);

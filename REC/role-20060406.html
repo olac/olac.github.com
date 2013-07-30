@@ -1,0 +1,555 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>OLAC Role Vocabulary</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="OLAC Role Vocabulary">
+<meta name="Creator" content="&#10;          Heidi Johnson (mailto:ailla@ailla.org)&#10;        ">
+<meta name="Description" content="&#10;      Role is an attribute of both the Creator and Contributor elements. (Please note that Dublin&#10;      Core now discourages the use of the Creator element, recommending that all Role information be&#10;      associated with Contributor elements.) This document specifies the controlled vocabulary of the &#10;      Role attribute used by OLAC. This attribute specifies the functional role of the entity named&#10;      in the creation of a given resource.&#10;    ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20060406">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>OLAC Role Vocabulary</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2006-04-06</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Recommendation. </i>This document embodies an OLAC consensus concerning best current practice.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/REC/role-20060406.html">http://www.language-archives.org/REC/role-20060406.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/REC/role.html">http://www.language-archives.org/REC/role.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td><a href="http://www.language-archives.org/REC/role-20031010.html">http://www.language-archives.org/REC/role-20031010.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>Role is an attribute of both the Creator and Contributor elements. (Please note that Dublin
+      Core now discourages the use of the Creator element, recommending that all Role information be
+      associated with Contributor elements.) This document specifies the controlled vocabulary of the 
+      Role attribute used by OLAC. This attribute specifies the functional role of the entity named
+      in the creation of a given resource.</p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>
+          Heidi Johnson (<a href="mailto:ailla@ailla.org">mailto:ailla@ailla.org</a>)
+        </editors>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Changes since previous version:</th><td>
+<p>Promoted to candidate status, with a call for review by
+        those who have put the document into practice.</p>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 
+          Heidi Johnson (University of Texas at Austin)
+        . This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Role">Role</A>
+<UL>
+<LI>
+<A href="#annotator">annotator</A>
+</LI>
+<LI>
+<A href="#author">author</A>
+</LI>
+<LI>
+<A href="#compiler">compiler</A>
+</LI>
+<LI>
+<A href="#consultant">consultant</A>
+</LI>
+<LI>
+<A href="#data_inputter">data_inputter</A>
+</LI>
+<LI>
+<A href="#depositor">depositor</A>
+</LI>
+<LI>
+<A href="#developer">developer</A>
+</LI>
+<LI>
+<A href="#editor">editor</A>
+</LI>
+<LI>
+<A href="#illustrator">illustrator</A>
+</LI>
+<LI>
+<A href="#interpreter">interpreter</A>
+</LI>
+<LI>
+<A href="#interviewer">interviewer</A>
+</LI>
+<LI>
+<A href="#participant">participant</A>
+</LI>
+<LI>
+<A href="#performer">performer</A>
+</LI>
+<LI>
+<A href="#photographer">photographer</A>
+</LI>
+<LI>
+<A href="#recorder">recorder</A>
+</LI>
+<LI>
+<A href="#researcher">researcher</A>
+</LI>
+<LI>
+<A href="#research_participant">research_participant</A>
+</LI>
+<LI>
+<A href="#responder">responder</A>
+</LI>
+<LI>
+<A href="#signer">signer</A>
+</LI>
+<LI>
+<A href="#singer">singer</A>
+</LI>
+<LI>
+<A href="#speaker">speaker</A>
+</LI>
+<LI>
+<A href="#sponsor">sponsor</A>
+</LI>
+<LI>
+<A href="#transcriber">transcriber</A>
+</LI>
+<LI>
+<A href="#translator">translator</A>
+</LI>
+</UL>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>Key points: multiple choices are allowed for a single participant.</p>
+<h2>
+<A name="Role"></A>2. Role</h2>
+<p>Each term of the controlled vocabulary is described in one of the
+        following subsections. The heading gives the encoded value for the term that is
+        to be used as the value of the <i>code</i> attribute of the <i>Contributor</i> metadata
+        element [<a href="http://www.language-archives.org/OLAC/metadata.html">OLAC-Metadata</a>]. Under the heading, the term is described in four ways. 
+        <i>Name</i> gives a descriptive label for the term. <i>Definition</i> is a one-line summary
+        of what the term means. 
+        <i>Comments</i>  offers more details on what the term represents, and may also include
+         examples given to illustrate how the term is meant to be applied.</p>
+<p>Additional roles may be found in the MARC Relator set [<a href="http://www.loc.gov/marc/relators/relators.html">MARC-RELATOR</a>]. Any MARC
+         term that does not appear in the OLAC Roles set defined below may be used in the sense
+         defined in the MARC document. The roles defined here are either very commonly used to
+         characterize the creators of linguistic resources, or have been re-defined to reflect
+         specifically linguistic practice. Some examples of MARC Relator terms that may be used 
+		 without modification are 'copyright_holder','artist', 'metadata_contact', 'director', 
+		 and 'calligrapher'.</p>
+<h3>
+<A name="annotator"></A>annotator</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Annotator</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant produced an annotation of this or a related
+         resource.</td>
+</tr>
+</table>
+<h3>
+<A name="author"></A>author</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Author</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant contributed original writings to the resource.</td>
+</tr>
+</table>
+<h3>
+<A name="compiler"></A>compiler</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Compiler</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant is responsible for collecting the sub-parts of the 
+        resource together.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>This refers to someone who creates a <i>single</i> resource with multiple
+                    parts, such as a book of short stories, or a person who
+                    produces a corpus of resources, which may be archived separately.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A compiler of a book of short stories or a CD with several songs on it; 
+          a collector of a corpus of recordings in some language or on a given topic; 
+          a person who assembles a suite of software tools.</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="consultant"></A>consultant</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Consultant</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant contributes expertise to the creation of a work.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>This term is commonly used by field linguists for the native speakers who work with
+          them in describing and analyzing a language.  They contribute their expertise in their
+          native language to the resource, although their speech, sign, or writing may not appear 
+          directly in  the resource. In some parts of the world the preferred term for this role is
+          "informant".</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="data_inputter"></A>data_inputter</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Data Inputter</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant was responsible for entering, re-typing, and/or structuring the data 
+              contained in the resource.</td>
+</tr>
+</table>
+<h3>
+<A name="depositor"></A>depositor</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Depositor</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant was responsible for depositing the resource in an archive.</td>
+</tr>
+</table>
+<h3>
+<A name="developer"></A>developer</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Developer</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant developed the methodology or tools that constitute the resource,
+        or that were used to create the resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A software programmer, designer, or analyst; a designer of a questionnaire
+        or research task.
+        </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="editor"></A>editor</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Editor</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant reviewed, corrected, and/or tested the resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>This role includes anyone whose role was editorial in nature, such as proof-readers,
+                    debuggers, testers, etc.  It may overlap the Compiler role in some cases.</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="illustrator"></A>illustrator</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Illustrator</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant contributed drawings or other illustrations to the resource.</td>
+</tr>
+</table>
+<h3>
+<A name="interpreter"></A>interpreter</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Interpreter</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant translates in real-time or explains the discourse recorded in the resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p> The choice between 'interpreter' and 'translator' may depend on the dynamics of the resource creation
+          event or process. Generally, if the participant is translating 'live'; that is, while the speaker or signer is 
+          speaking or signing, she or he should be identified as an interpreter. Also, some discourse genres include a
+          participant who interprets or explains a performance of some kind.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A person translating from English to ASL during a speech; a Kuna chief who interprets a chant that
+          another chief has just performed, thus completing the ceremony.</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="interviewer"></A>interviewer</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Interviewer</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant conducted an interview that forms part of the resource.</td>
+</tr>
+</table>
+<h3>
+<A name="participant"></A>participant</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Participant</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant was present during the creation of the resource, but did not
+        contribute substantially to its content.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>This role is intended for minor participants such as audience members or other peripherally-involved
+          participants in the event.  These interlocutors need not have been physically present.  They could be 
+          participants in some form of long-distance communication, such as lurkers in an online discussion, or they
+          may have participated in general sense of having allowed the creation event to take place, such as the
+          mayor of an indigenous community.</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="performer"></A>performer</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Performer</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant performed some portion of a recorded, filmed, or transcribed resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>It is recommended that this term be used only for creative participants whose role is not better
+          indicated by a more specific term, such as 'speaker', 'signer', or 'singer'. </p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A person performing a ceremony or delivering an oration or a sermon; native speakers 
+          re-enacting a traditional genre of speech, such as ritual greetings or insults; an actor or musician.</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="photographer"></A>photographer</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Photographer</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant took the photograph, or shot the film, that appears in or 
+                constitutes the resource.</td>
+</tr>
+</table>
+<h3>
+<A name="recorder"></A>recorder</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Recorder</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant operated the recording machinery used to create the resource.</td>
+</tr>
+</table>
+<h3>
+<A name="researcher"></A>researcher</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Researcher</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The resource was created as part of the participant's research, or the research
+        presents interim or final results from the participant's research.</td>
+</tr>
+</table>
+<h3>
+<A name="research_participant"></A>research_participant</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Research Participant</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant acted as a research subject or responded to a questionnaire, the
+                results of which study form the basis of the resource.</td>
+</tr>
+</table>
+<h3>
+<A name="responder"></A>responder</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Responder</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant was an interlocutor in some sort of discourse event.   
+		</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>This person's voice can be  heard (or their words can be read)
+          in the resource, typically saying the 
+          language-appropriate equivalent of "uh-huh", "amen", "you don't say", etc.
+          This role is sometimes referred
+          to as a "yes-sayer", "backchanneler, or "co-conversant".
+        </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="signer"></A>signer</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Signer</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant was a principal signer in a resource that consists of a
+                recording, a film, or a transcription of a recorded resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Signers are those whose gestures predominate in a recorded or filmed 
+          resource. (This resource may be a transcription of that recording.)</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Participants in a recorded conversation, elicitation session, or informal 
+          narration would be termed Signers.  Audience members who do not participate 
+          beyond the occasional backchannel would be termed Responders.
+        </p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="singer"></A>singer</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Singer</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant sang, either individually or as part of a group, in 
+			a resource that consists of a recording, a film, or a transcription of a recorded
+			resource.
+	    </td>
+</tr>
+</table>
+<h3>
+<A name="speaker"></A>speaker</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Speaker</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant was a principal speaker in a resource that consists of a
+                recording, a film, or a  transcription of a recorded resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Comments</i></td><td>
+<p>Speakers are those whose voices predominate in a recorded or filmed 
+          resource. (This resource may be a transcription of that recording.) </p>
+<p>Examples: Participants in a recorded conversation, elicitation session, or informal 
+          narration would be termed Speakers.  Audience members who do not participate 
+          beyond the occasional backchannel would be termed Responders.</p>
+</td>
+</tr>
+</table>
+<h3>
+<A name="sponsor"></A>sponsor</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Sponsor</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant contributed financial support to the creation of the resource.</td>
+</tr>
+</table>
+<h3>
+<A name="transcriber"></A>transcriber</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Transcriber</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant produced a transcription of this or a related resource.</td>
+</tr>
+</table>
+<h3>
+<A name="translator"></A>translator</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Name</i></td><td>Translator</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The participant produced a translation of this or a related resource.</td>
+</tr>
+</table>
+</body>
+<hr>
+<h2>
+<font color="red">To do</font>
+</h2>
+<font color="red">
+<p>
+      Elicit roles from language researchers other than documentary linguists.
+    </p>
+</font><a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="MARC-RELATOR">MARC-RELATOR</a>]</td><td>MARC Relator Terms.<br>
+      &lt;<a href="http://www.loc.gov/marc/relators/relators.html">http://www.loc.gov/marc/relators/relators.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Metadata">OLAC-Metadata</a>]</td><td>OLAC Metadata<br>
+      &lt;<a href="http://www.language-archives.org/OLAC/metadata.html">http://www.language-archives.org/OLAC/metadata.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

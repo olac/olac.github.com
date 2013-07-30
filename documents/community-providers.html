@@ -1,0 +1,468 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad//DTD HoTMetaL PRO 5.0::19980907::extensions to HTML 4.0//EN" "hmpro5.dtd">
+ 
+<HTML>
+ 
+<HEAD>
+<TITLE>Supporting archive communities in the OAI framework</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+</HEAD>
+ 
+<BODY>
+<H1>Supporting archive communities in the framework of the Open Archives
+Initiative</H1>
+<P><A HREF="http://www.sil.org/SIL/roster/simons.htm">Gary Simons</A>, SIL
+International<BR>
+<A HREF="http://www.ldc.upenn.edu/sb/"> Steven Bird</A>, University of
+Pennsylvania</P>
+<P>18 November 2000</P>
+<HR>
+<H2>What is an archive community?</H2>
+<P>One of the strengths of the <A HREF="http://www.openarchives.org/">Open
+Archives Initiative</A> is that it allows participating archives (as data
+providers) to employ multiple metadata standards. Different metadata standards
+are typically motivated by the different needs of different user communities.
+>From the standpoint of the Open Archives Initiative, we can thus define an
+archive community as:</P>
+<BLOCKQUOTE><P>A community of users, data providers, and service providers who
+are united by their common interest in the approach to information archiving
+embodied in a particular metadata standard.</P>
+</BLOCKQUOTE>
+<H2>What does an archive community need?</H2>
+<P>The people who want to use archived resources that follow a particular
+approach (as embodied in a metadata standard) have the problem of finding these
+resources among the vast array of resources on the Internet and of judging the
+quality of the content and services offered by the data provider once they find
+such a resource. This leads to the following requirement statements:</P>
+<UL>
+<LI>The users within an archive community need to know which particular
+archives (out of the whole set of open archives) are members of the community
+(that is, they offer records that use the community's metadata format).</LI>
+<LI>The users within an archive community need to know which service providers
+offer a service built around the community's metadata format.</LI>
+<LI>The users within an archive community need to be confident that the
+metadescriptions of archived materials consistently and validly apply the
+community's metadata format.</LI>
+<LI>The users within an archive community (as in any academic community) need
+to be able to share peer reviews of the content of particular archived items
+and of the services offered by particular archives.</LI>
+</UL>
+<P>The existence of multiple metadata formats complicates things for service
+providers, since a service must make assumptions about the metadata it will
+process. A service provider aimed at the needs of a particular archive
+community will necessarily build its service to exploit the details of that
+community's metadata format. In order for such a service to successfully input
+the metadata records it is built around, those records must be well-formed and
+valid with respect to the metadata schema. This leads to two requirements:</P>
+<UL>
+<LI>The service provider needs a way to know which particular archives (out of
+the whole set of open archives) are members of the community and thus need to
+be tracked by its service. </LI>
+<LI>The service provider needs the metadata records it processes to be valid
+instances of the metadata standard.</LI>
+</UL>
+<H2>What is the function of a community provider?</H2>
+<P>In order to meet these needs of an archiving community, we propose that a
+third kind of provider be added to the Open Archives model, namely, a community
+provider. A community provider is a server that implements a protocol which
+supports the above requirements of an archive community. Given the definitions
+of the current Open Archives model, such a server would be neither a data
+provider (since it does not manage a document collection) nor a service
+provider (since it does not create end-user services based on data stored in
+archives). Rather, it provides essential services needed by both data providers
+and service providers.</P>
+<P>A community provider has two primary functions under which we can recognize
+significant subfunctions:</P>
+<UL>
+<LI>Provide the point of focus for an archive community, by:<UL>
+<LI>providing the definitive list of data providers that are part of the
+community</LI>
+<LI>providing the definitive list of service providers which support the
+community</LI>
+</UL>
+</LI>
+<LI>Provide quality control for an archive community, by:<UL>
+<LI>providing the authoritative schema for the metadata format that the
+community is built around</LI>
+<LI>providing certification that the metadata records provided by a member of
+the community are valid</LI>
+<LI>providing a mechanism that allows the users in a community to share peer
+reviews of the content and services of member providers</LI>
+</UL>
+</LI>
+</UL>
+<H2> Proposed protocol for a community provider</H2>
+<P>This section lists the protocol requests (verbs) that are proposed for
+implementing a Community Provider within the Open Archives Initiative
+framework. This section offers a core protocol; specifically not addressed is
+the issue of sharing peer reviews. Some ideas on this are given in the final
+section.</P>
+<DIV>
+<H3>1. Identify</H3>
+<TABLE BGCOLOR="#c0c0c0" BORDER="1" CELLPADDING="12">
+<TBODY>
+<TR>
+<TD VALIGN="middle" WIDTH="20%"> <A NAME="Identify"></A><B><FONT
+FACE="Courier New" SIZE="+1">Identify</FONT></B> </TD>
+<TD VALIGN="middle" WIDTH="80%"> <CENTER>
+<B><FONT SIZE="+1">Retrieve identity information about the community</FONT></B>
+</CENTER>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H4>Arguments</H4>
+<P>None</P>
+<H4>Behavior</H4>
+<P>Returns information about the server and about the community it services. 
+</P>
+</DIV>
+<DIV>
+<H3>2. GetSchema</H3>
+<TABLE BGCOLOR="#c0c0c0" BORDER="1" CELLPADDING="12">
+<TBODY>
+<TR>
+<TD VALIGN="middle" WIDTH="20%"> <A NAME="Identify"></A><B><FONT
+FACE="Courier New" SIZE="+1">GetSchema</FONT></B> </TD>
+<TD VALIGN="middle" WIDTH="80%"> <CENTER>
+<B><FONT SIZE="+1">Retrieve the schema for the community's metadata format
+</FONT></B> 
+</CENTER>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H4>Arguments</H4>
+<P>None</P>
+<H4>Behavior</H4>
+<P>Returns the authoritative version of the XML schema that defines the
+metadata format that the community is built around.</P>
+</DIV>
+<DIV>
+<H3>3. GetDTD</H3>
+<TABLE BGCOLOR="#c0c0c0" BORDER="1" CELLPADDING="12">
+<TBODY>
+<TR>
+<TD VALIGN="middle" WIDTH="20%"> <A NAME="Identify"></A><B><FONT
+FACE="Courier New" SIZE="+1">GetDTD</FONT></B> </TD>
+<TD VALIGN="middle" WIDTH="80%"> <CENTER>
+<B><FONT SIZE="+1">Retrieve the DTD for the community's metadata
+format</FONT></B> 
+</CENTER>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H4>Arguments</H4>
+<P>None</P>
+<H4>Behavior</H4>
+<P>Returns an XML DTD that corresponds to the XML schema that defines the
+metadata format that the community is built around. One element of the response
+packet indicates whether this DTD is authoritative (that is, the DTD is
+completely equivalent to the Schema); and if it differs, whether it is stronger
+(accepts a subset of the documents accepted by the Schema), weaker (accepts a
+superset of the documents accepted by the Schema), or overlapping (both rejects
+some the Schema would accept and accepts some the Schema would reject).</P>
+</DIV>
+<DIV ALIGN="left">
+<H3>4. ValidateRecord </H3>
+<TABLE BGCOLOR="#c0c0c0" BORDER="1" CELLPADDING="12">
+<TBODY>
+<TR>
+<TD VALIGN="middle" WIDTH="19%"> <A NAME="GetRecord"></A><B><FONT
+FACE="Courier New" SIZE="+1">ValidateRecord</FONT></B> </TD>
+<TD VALIGN="middle" WIDTH="81%"> <CENTER>
+<B><FONT SIZE="+1">Validate an individual record</FONT></B> 
+</CENTER>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H4 ALIGN="left">Arguments </H4>
+<UL>
+<LI><FONT FACE="Courier New" SIZE="2"><B>identifier</B> </FONT>a
+<I>REQUIRED</I> argument that specifies the unique identifier for an item in an
+OAI-conformant repository. </LI>
+</UL>
+<H4>Behavior</H4>
+<P>The community server connects with the repository named in the identifier,
+and requests that record in the metadata format of the community. It then
+validates the metadata record against the community's schema and returns a
+report indicating either that the record conforms to the metadata standard or
+that it does not. In the latter case, the report should contain a message
+explaining at least one way in which the record fails to conform.</P>
+</DIV>
+<DIV ALIGN="left">
+<H3>5. RegisterMember</H3>
+<TABLE BGCOLOR="#c0c0c0" BORDER="1" CELLPADDING="12">
+<TBODY>
+<TR>
+<TD VALIGN="middle" WIDTH="19%"> <A NAME="GetRecord"></A><B><FONT
+FACE="Courier New" SIZE="+1">RegisterMember</FONT></B> </TD>
+<TD VALIGN="middle" WIDTH="81%"> <CENTER>
+<B><FONT SIZE="+1">Register a new community member</FONT></B> 
+</CENTER>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H4 ALIGN="left">Arguments </H4>
+<UL>
+<LI><FONT FACE="Courier New" SIZE="2"><B>identifier</B> </FONT>a
+<I>REQUIRED</I> argument that specifies the unique identifier of the archive
+that is requesting to join the community.</LI>
+</UL>
+<H4>Behavior</H4>
+<P>This is how an existing OAI data provider makes the request to join the
+community. The request results in the archive being added to the membership
+list maintained by the community server only if every record in the archive
+which claims to offer metadata in the community's standard is found to conform
+to the authoritative metadata schema. Otherwise, the request results in a
+message explaining why the requesting archive cannot be registered.</P>
+<P>The registration process would proceed something like this:</P>
+<OL>
+<LI>If the named archive is already registered, return a message to that
+effect.</LI>
+<LI>Send a request to the OAI server (see next section) to validate that the
+supplied identifier is indeed a compliant OAI data provider (and get its base
+URL in the process). If not, return a message explaining that the archive must
+first register with OAI.</LI>
+<LI>Send a <TT>ListMetadataFormats</TT> request back to the requesting archive
+to ensure that it claims to support the community's metadata standard. If not,
+return a message explaining that the archive must support the community's
+metadata standard before it can register to join the community.</LI>
+<LI>Send back a <TT>ListRecords</TT> request with <TT>metadataPrefix</TT> set
+to the community's metadata standard.</LI>
+<LI>Validate each retrieved record against the metadata schema. If any fail to
+validate, return a message explaining that registration has failed, along with
+a description of how some specific records are not valid.</LI>
+<LI>If all records are valid, registration succeeds. The community provider
+adds a record to its database containing at least the name, the unique
+identifier, and the base URL of the data server for the newly registered
+member. The fields for date of joining the community and date when metadata
+records were last validated are set to the current timestamp. A message
+indicating successful registration is returned.</LI>
+</OL>
+</DIV>
+<DIV ALIGN="left">
+<H3>6. RevalidateMember</H3>
+<TABLE BGCOLOR="#c0c0c0" BORDER="1" CELLPADDING="12">
+<TBODY>
+<TR>
+<TD VALIGN="middle" WIDTH="19%"> <A NAME="GetRecord"></A><B><FONT
+FACE="Courier New" SIZE="+1">RevalidateMember</FONT></B> </TD>
+<TD VALIGN="middle" WIDTH="81%"> <CENTER>
+<B><FONT SIZE="+1">Revalidate an existing community member</FONT></B> 
+</CENTER>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H4 ALIGN="left">Arguments </H4>
+<UL>
+<LI><FONT FACE="Courier New" SIZE="2"><B>identifier</B> </FONT>a
+<I>REQUIRED</I> argument that specifies the unique identifier of the archive
+that is requesting revalidation.</LI>
+</UL>
+<H4>Behavior</H4>
+<P>This is how a member of the community updates its registration to indicate
+that all new metadata records have been validated against the schema. The
+registration is updated only if every record added or modified since the last
+revalidation is found to conform to the authoritative metadata schema. (If the
+OAI protocol is augmented to deal with expiration of records, then records that
+have been reactivated following expiration would show up among those that are
+new or different.) Otherwise, the request results in a message explaining why
+the revalidation did not succeed. </P>
+<P>The revalidation process would proceed something like this:</P>
+<OL>
+<LI>If the named archive is not yet registered, return a message explaining
+that it is necessary to be a registered member of the community.</LI>
+<LI>Send a <TT>ListRecords</TT> request with <TT>metadataPrefix</TT> set to the
+community's metadata standard and <TT>from</TT> set to the timestamp recorded
+in the database for the last validation.</LI>
+<LI>Validate each retrieved record against the metadata schema. If any fail to
+validate, return a message explaining that revalidation has failed, along with
+a description of how some specific records are not valid.</LI>
+<LI>If all new and changed records are valid, revalidation succeeds. The
+community provider updates the database record for this archive by setting the
+date when metadata records were last validated to the current timestamp. A
+message indicating successful revalidation is returned.</LI>
+</OL>
+<P>Note that both for this operation and for <TT>RegisterMember</TT>, it is not
+necessary to build in security measures to ensure that the requesting agent is
+indeed the archive itself. In this model of community, membership is not a
+covenant between the archive and the community, it is a certification on behalf
+of the community that the archive conforms to the metadata standards of the
+community. Under this model, it would be appropriate for any community member
+to request that a particular archive that claims to use the community's
+metadata standard be certified. In fact, the community provider would typically
+generate a request for the revalidation of its members on a regular basis.</P>
+</DIV>
+<DIV ALIGN="left">
+<H3>7. GetMember</H3>
+<TABLE BGCOLOR="#c0c0c0" BORDER="1" CELLPADDING="12">
+<TBODY>
+<TR>
+<TD VALIGN="middle" WIDTH="19%"> <A NAME="GetRecord"></A><B><FONT
+FACE="Courier New" SIZE="+1">GetMember</FONT></B> </TD>
+<TD VALIGN="middle" WIDTH="81%"> <CENTER>
+<B><FONT SIZE="+1">Get information on a community member</FONT></B> 
+</CENTER>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H4 ALIGN="left">Arguments </H4>
+<UL>
+<LI><FONT FACE="Courier New" SIZE="2"><B>identifier</B> </FONT>a
+<I>REQUIRED</I> argument that specifies the unique identifier of the archive
+that is presumed to be a member of the community.</LI>
+</UL>
+<H4>Behavior</H4>
+<P>If the requested archive is a registered member of the community, return an
+XML representation of its registration information. If not, return an error
+report.</P>
+</DIV>
+<DIV ALIGN="left">
+<H3>8. ListMembers</H3>
+<TABLE BGCOLOR="#c0c0c0" BORDER="1" CELLPADDING="12">
+<TBODY>
+<TR>
+<TD VALIGN="middle" WIDTH="28%"> <A NAME="ListIdentifers"></A><B><FONT
+FACE="Courier New" SIZE="+1">ListMembers</FONT></B> </TD>
+<TD VALIGN="middle" WIDTH="72%"> <CENTER>
+<B><FONT SIZE="+1">List members of the community</FONT></B> 
+</CENTER>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H4 ALIGN="left">Arguments</H4>
+<UL>
+<LI><FONT FACE="Courier New" SIZE="2"><B>until</B></FONT> an <I>OPTIONAL</I>
+argument with a date value, which specifies that only the unique identifiers of
+archives that joined the community on or before the specified date should be
+returned. </LI>
+<LI><FONT FACE="Courier New" SIZE="2"><B>from</B></FONT>an <I>OPTIONAL</I>
+argument with a date value, which specifies that only the unique identifiers of
+archives that joined the community on or after the specified date should be
+returned. </LI>
+</UL>
+<H4>Behavior</H4>
+<P>Returns a list of the data providers that are members of the community. The
+data element returned for each member should include subelements for at least
+the name, the unique identifier, the base URL of its data server, the date it
+joined the community, and the date its metadata records were last validated. 
+</P>
+</DIV>
+<DIV ALIGN="left">
+<H3>9. ListServices</H3>
+<TABLE BGCOLOR="#c0c0c0" BORDER="1" CELLPADDING="12">
+<TBODY>
+<TR>
+<TD VALIGN="middle" WIDTH="28%"> <A NAME="ListIdentifers"></A><B><FONT
+FACE="Courier New" SIZE="+1">ListServices</FONT></B> </TD>
+<TD VALIGN="middle" WIDTH="72%"> <CENTER>
+<B><FONT SIZE="+1">List service providers for the community</FONT></B> 
+</CENTER>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+<H4 ALIGN="left">Arguments</H4>
+<UL>
+<LI><FONT FACE="Courier New" SIZE="2"><B>until</B></FONT> an <I>OPTIONAL</I>
+argument with a date value, which specifies that only the service providers
+that joined the community on or before the specified date should be returned. 
+</LI>
+<LI><FONT FACE="Courier New" SIZE="2"><B>from</B></FONT>an <I>OPTIONAL</I>
+argument with a date value, which specifies that only the service providers
+that joined the community on or after the specified date should be returned. 
+</LI>
+</UL>
+<H4>Behavior</H4>
+<P>Returns a list of the service providers that are members of the community.
+The data element returned for each member should include subelements for at
+least the name of the service, the URL, the date it joined the community, and a
+description of the service. </P>
+<P>Note that the protocol contains no registration request for service
+providers. This is because the validation of a request to be recognized as a
+service provider for the community cannot be done automatically. The request to
+register a service provider would be made via email to the leaders of the
+archive community. Before adding the service provider to the list of service
+providers for the community, hey would try the service and verify that it
+appropriately uses the community's metadata to perform a useful service for the
+community.</P>
+</DIV>
+<H2>Support needed from OAI</H2>
+<P>This proposal for implementing a Community Provider protocol depends
+crucially on a service that is not currently supported by the Open Archives
+Initiative. Currently, the registration of a data provider as an Open Archive
+is handled by filling out a standard informational template that is stored as
+an HTML page on the data provider's site. This page is then linked to from a
+list of participating sites that is stored as an HTML page on the Open Archives
+site.</P>
+<P>In order to implement the proposed community provider protocol, we need
+access to an OAI server that would offer a protocol that allows systems to
+request the registration information for a participating data provider and
+receive it back in XML format. This corresponds to request 7, <TT>GetMember
+</TT>, in the above protocol. If an OAI server were to handle just this one
+request, the above community provider protocol could be implemented:</P>
+<P>The central OAI server could also implement the entire Community Provider
+protocol in order to serve as a community provider for the entire Open Archives
+community. As such it would provide the authoritative Dublin Core schema,
+validate metadata records against that schema, supply the list of participating
+open archives that service providers would use to drive their metadata
+harvesting operations, and supply a complete list of service providers. The
+only case in which the OAI server protocol would need to diverge from the
+community provider protocol is in the <TT>RegisterMember</TT> request. That
+request would require an additional parameter to supply all the registration
+information (i.e. the information that is currently put into the HTML page). A
+workable approach would be for the registering repository to post the
+registration information in an XML format as a page on its site and provide the
+URL to the page as a further required argument to the <TT>RegisterMember</TT>
+request. The OAI server would then access the file and validate it against the
+schema for registration information before proceeding with the registration
+process.</P>
+<P>Another possibly useful extension for an OAI server would be for it to add a
+set of functions for keeping track of communities (<TT>RegisterCommunity</TT>, 
+<TT>GetCommunity</TT>, <TT>ListCommunities</TT>). It could then add an 
+<TT>identifier</TT> parameter to the <TT>GetSchema</TT> request, so that any
+participating archive or service could request the authoritative schema for a
+named community (which the OAI server would implement by looking up the base
+URL of the community provider and then sending it a <TT>GetSchema</TT>
+request). By using a community identifier rather than a URL to refer to a
+schema, we would avoid the potential problem that different providers could
+provide different versions of the same metadata schema (as is currently
+possible since the registration information for a data provider uses a URL to
+identify the schema for each metadata format it supports).</P>
+<H2>Handling peer review</H2>
+<P>The proposed requirement that</P>
+<BLOCKQUOTE><P>The users within an archive community (as in any academic
+community) need to be able to share peer reviews of the content of particular
+archived items and of the services offered by particular archives.</P>
+</BLOCKQUOTE>
+<P>may not be one that would be generally adopted for a community provider. It
+could be a requirement that we would implement specially for the Open Language
+Archives Community. An intermediate position would be that the notion of
+offering archive community users a means to review an archive as a whole (and
+to read other users' reviews) is functionality that should be built into the
+general protocol for community providers, but not the ability to review
+individual archive items. The latter could be a service offered by a service
+provider.</P>
+<P>We do not take the time at this point to fully specify the protocol for peer
+reviews, but just offer the following list of requests as suggestive of the
+direction we might go. All requests have a required parameter <TT>identifier 
+</TT> which identifies the archive or the archive item of interest:</P>
+<UL>
+<LI><TT>Evaluate</TT> invokes an interactive form in which the user can enter
+an evaluation.</LI>
+<LI><TT>RespondToEvaluation</TT> invokes an interactive form in which the user
+can respond to a posted evaluation.</LI>
+<LI><TT>ListEvaluations</TT> (with optional parameters <TT>until</TT> and 
+<TT>from</TT>) lists available evaluations.</LI>
+<LI><TT>GetEvaluation</TT> retrieves a particular evaluation with its
+responses.</LI>
+</UL>
+</BODY>
+</HTML>
+ 

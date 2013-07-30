@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.language-archives.org/OLAC/0.3/">
+
+  <annotation>
+    <documentation>
+      OLAC Schema for sourcecode language, Steven Bird, 5/7/01
+    </documentation>
+  </annotation>
+
+  <simpleType name="OLAC-Sourcecode-Code">
+    <restriction base="string">
+      <enumeration value="C"/>  <!-- including C++, Visual C, Concurrent C, etc... -->
+      <enumeration value="BASIC"/>   <!-- including VB? -->
+      <enumeration value="Prolog"/>
+      <enumeration value="Pascal"/>
+      <enumeration value="Java"/>
+      <enumeration value="Perl"/>
+      <enumeration value="Python"/>
+      <enumeration value="Tcl"/>
+      <enumeration value="Fortran"/>
+      <enumeration value="SmallTalk"/>
+      <enumeration value="COBOL"/>
+      <enumeration value="shell"/>
+      <enumeration value="Lisp"/>  <!-- including Scheme... -->
+      <enumeration value="Modula"/>
+      <enumeration value="SNOBOL"/>
+      <enumeration value="SQL"/>
+      <!-- many more:
+         http://www.hypernews.org/HyperNews/get/computing/lang-list.html
+       -->
+    </restriction>
+  </simpleType>
+  
+</schema>
+  

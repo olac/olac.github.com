@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.language-archives.org/OLAC/1.0/olac-archive"
+           targetNamespace="http://www.language-archives.org/OLAC/1.0/olac-archive"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:annotation>
+    <xs:documentation>
+
+      Schema for the OLAC Archive Description, Version 1.0
+      Steven Bird, 2002-12-10
+
+      Schema validated at http://www.w3.org/2001/03/webdata/xsv
+      XSV 2.2-1 of 2002/12/01 21:59:33
+
+      OLAC Archive Description semantics available at:
+      http://www.language-archives.org/OLAC/protocol.html
+
+      2002-05-20: added length restrictions (varchar255)
+      2002-12-10: added shortLocation, changed to version 1.0
+      2003-09-23: shortLocation made obligatory (as per OLAC Repositories)
+
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="olac-archive" type="olac-archive"/>
+
+  <xs:complexType name="olac-archive">
+    <xs:complexContent>
+      <xs:restriction base="xs:anyType">
+        <xs:sequence>
+          <xs:element name="archiveURL" minOccurs="0" type="xs:anyURI"/>
+          <xs:element name="curator" type="varchar255"/>
+          <xs:element name="curatorTitle" minOccurs="0" type="varchar255"/>
+          <xs:element name="curatorEmail" minOccurs="0" type="mailto"/>
+          <xs:element name="institution" type="varchar255"/>
+          <xs:element name="institutionURL" minOccurs="0" type="xs:anyURI"/>
+          <xs:element name="shortLocation" type="varchar50"/>
+          <xs:element name="location" minOccurs="0" type="block"/>
+          <xs:element name="synopsis" type="block"/>
+          <xs:element name="access" type="block"/>
+        </xs:sequence>
+        <xs:attribute name="type" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="institutional"/>
+              <xs:enumeration value="personal"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="mailto">
+    <xs:restriction base="xs:anyURI">
+      <xs:pattern value="mailto:.*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="block">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="varchar255">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="255"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="varchar50">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

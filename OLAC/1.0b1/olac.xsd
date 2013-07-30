@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:dc="http://purl.org/dc/elements/1.1/"
+            xmlns:dcterms="http://purl.org/dc/terms/"
+            xmlns:olac-date="http://www.language-archives.org/OLAC/1.0b1/olac-date.xsd"
+            xmlns:olac-language="http://www.language-archives.org/OLAC/1.0b1/olac-language.xsd"
+            xmlns:olac-linguistic-field="http://www.language-archives.org/OLAC/1.0b1/olac-linguistic-field.xsd"
+            xmlns:olac-linguistic-type="http://www.language-archives.org/OLAC/1.0b1/olac-linguistic-type.xsd"
+            xmlns:olac-role="http://www.language-archives.org/OLAC/1.0b1/olac-role.xsd"
+            xmlns="http://www.language-archives.org/OLAC/1.0b1/"
+            targetNamespace="http://www.language-archives.org/OLAC/1.0b1/olac.xsd"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+  <xs:annotation>
+    <xs:documentation>
+      Schema for the OLAC Metadata Set, Version 1.0 beta 1
+      Steven Bird, 2002-10-31
+      Schema validated at http://www.w3.org/2001/03/webdata/xsv
+      XSV 1.6 of 2002/09/23 21:47:52
+    </xs:documentation>
+  </xs:annotation>
+
+  <!-- DC and DCQ -->
+  <xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="http://www.ukoln.ac.uk/metadata/dcmi/xmlschema/20021007/dc.xsd"/>
+  <xs:import namespace="http://purl.org/dc/terms/" schemaLocation="http://www.ukoln.ac.uk/metadata/dcmi/xmlschema/20021007/dcterms.xsd"/>
+
+  <!-- OLAC encoding schemes -->
+
+  <xs:import namespace="http://www.language-archives.org/OLAC/1.0b1/olac-date.xsd"/>
+  <xs:import namespace="http://www.language-archives.org/OLAC/1.0b1/olac-language.xsd"/>
+  <xs:import namespace="http://www.language-archives.org/OLAC/1.0b1/olac-linguistic-field.xsd"/>
+  <xs:import namespace="http://www.language-archives.org/OLAC/1.0b1/olac-linguistic-type.xsd"/>
+  <xs:import namespace="http://www.language-archives.org/OLAC/1.0b1/olac-role.xsd"/>
+
+  <!-- top level olac element -->
+  <xs:element name="olac" type="dcterms:elementOrRefinementContainer"/>
+
+  <!-- OLAC Extensions -->
+
+  <xs:complexType name="date">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="olac-date:olac-date" use="optional"/>
+        <xs:attribute name="date" type="olac-date:olac-date-format" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="language">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="olac-language:olac-language" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="linguistic-type">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="olac-linguistic-type:olac-linguistic-type" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="role">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="olac-role:olac-role" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="linguistic-field">
+    <xs:complexContent mixed="true">
+      <xs:extension base="dc:SimpleLiteral">
+        <xs:attribute name="code" type="olac-linguistic-field:olac-linguistic-field" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+</xs:schema>
+

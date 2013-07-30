@@ -1,0 +1,16383 @@
+%-12345X@PJL JOB
+@PJL SET RESOLUTION = 600
+@PJL SET BITSPERPIXEL = 2
+@PJL SET ECONOMODE = OFF
+@PJL SET HOLDKEY = "0000"
+@PJL ENTER LANGUAGE = POSTSCRIPT 
+%!PS-Adobe-3.0
+%%Title: Microsoft PowerPoint - access
+%%Creator: Windows NT 4.0
+%%CreationDate: 17:17 12/13/2002
+%%Pages: (atend)
+%%BoundingBox: 13 13 599 779
+%%LanguageLevel: 2
+%%DocumentNeededFonts: (atend)
+%%DocumentSuppliedFonts: (atend)
+%%EndComments
+%%BeginProlog
+
+%%BeginResource: procset NTPSOct95
+/NTPSOct95 100 dict dup begin/bd{bind def}bind def/ld{load def}bd/ed{exch def}
+bd/a{currentpoint}bd/c/curveto ld/d/dup ld/e/eofill ld/f/fill ld/tr/translate
+ld/gr/grestore ld/gs/gsave ld/j/setlinejoin ld/L/lineto ld/M/moveto ld/n
+/newpath ld/cp/closepath ld/rm/rmoveto ld/sl/setlinewidth ld/sd/setdash ld/g
+/setgray ld/r/setrgbcolor ld/s/stroke ld/t/show ld/aw/awidthshow ld/im
+/imagemask ld/MS{moveto show}bd/SF{findfont exch scalefont setfont}bd/SM{cmtx
+setmatrix}bd/MF{findfont exch makefont setfont}bd/CM{/cmtx matrix currentmatrix
+def}bd/B{M exch dup 0 rlt exch 0 exch rlt neg 0 rlt}bd/CB{B cp eoclip}bd/EA{1
+index 0/G0 put 4 string 1 1 4 -1 roll{3 copy neg exch cvs dup 0 71 put cvn 3 -1
+roll exch put}for pop}bd/rlt/rlineto ld/L2?/languagelevel where{pop
+languagelevel 2 ge}{false}ifelse def end def 
+%%EndResource
+%%EndProlog
+%%BeginSetup
+[{0
+/languagelevel where{pop languagelevel 2 ge}{false}ifelse
+{1 dict dup/JobTimeout 4 -1 roll put setuserparams}
+{statusdict/setjobtimeout get exec}ifelse
+}stopped cleartomark
+[{120
+/languagelevel where{pop languagelevel 2 ge}{false}ifelse
+{1 dict dup/WaitTimeout 4 -1 roll put setuserparams}
+{statusdict/waittimeout 3 -1 roll put}ifelse
+}stopped cleartomark
+/#copies 1 def
+[{
+%%BeginFeature: *HPPaperPolicy PromptUser
+
+   <</DeferredMediaSelection true>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPHalftone PrinterDefault
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPCollate False
+<</Collate false>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Smoothing True
+
+  << /PostRenderingEnhance true /PostRenderingEnhanceDetails << /REValue 2 /Type 8 >>
+  >> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *PageSize Letter
+
+  <</PageSize [612 792] /ImagingBBox null>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Duplex None
+
+  <</Duplex false>> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmTextAngle Deg45
+userdict /HPwmAngle 45 put
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmText None
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmFont HelveticaB
+
+  /Helvetica-Bold findfont dup length dict begin
+    {1 index /FID ne {def} {pop pop} ifelse} forall
+    /Encoding ISOLatin1Encoding def currentdict 
+  end
+  /HPwmFont exch definefont pop
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmLocation True
+userdict /HPwmLocation true put
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmTextStyle Medium
+userdict /HPwmStyle .48 put
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPwmFontSize pt48
+userdict /HPwmSize 48 put
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPNup OneUp
+
+% Copyright (c) Hewlett-Packard Co 1997
+  userdict begin
+  true setglobal /HPwm 5 dict dup begin /HPwmOn true def /HPwmOdd true def end def false setglobal
+
+  userdict /HPwmAngle known not {/HPwmAngle 45 def} if
+  userdict /HPwmSize known not {/HPwmSize 48 def} if
+  userdict /HPwmLocation known not {/HPwmLocation true def} if
+  userdict /HPwmStyle known not {/HPwmStyle .48 def} if
+  userdict /HPwmDuplex known not {/HPwmDuplex 0 def} if
+
+  /HPwmEOP {HPwmDuplex 0 eq {true}{HPwmDuplex 1 eq HPwmOdd eq dup not {erasepage}if
+    true setglobal /HPwmOdd HPwmOdd not def false setglobal}ifelse} bind def
+  end
+
+  <<
+  /EndPage {userdict begin
+  userdict /HPwmText known HPwm /HPwmOn get and
+    {initmatrix
+     0 setgray 1 setlinewidth true setstrokeadjust 0 setlinejoin 0 setlinecap [] 0 setdash
+     currentpagedevice /PageSize get aload pop 2 div exch 2 div exch translate
+     HPwmAngle rotate /HPwmFont userdict /HPppScale known {HPwmSize HPppScale mul}{HPwmSize}ifelse selectfont
+     HPwmText stringwidth 2 div neg exch 2 div neg exch
+       userdict /HPppScale known {HPwmSize HPppScale mul}{HPwmSize}ifelse .25 mul sub moveto
+     HPwmText false charpath userdict /HPwmStyle1 known
+       {gsave 1 setgray HPwmStyle1 HPwmStyle add setlinewidth stroke grestore} if
+     0 setgray HPwmStyle setlinewidth stroke
+     HPwmLocation not {true setglobal HPwm /HPwmOn false put false setglobal} if
+    } if
+    2 eq {pop false}{pop HPwm begin HPwmEOP end} ifelse
+    end } bind
+  >> setpagedevice
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *HPScalePatterns Scale
+/GDIBWPatternDict 18 dict def
+/dtransform {GDIBWPatternDict /Width known {currentpagedevice /HWResolution get 0 get
+150 div mul exch currentpagedevice /HWResolution get 0 get 150 div mul exch dtransform}{dtransform}ifelse} bind def
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *OptionTrays 2Trays
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Option3 False
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Option4 False
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *Option5 False
+
+%%EndFeature
+} stopped cleartomark
+[{
+%%BeginFeature: *VMOption 8MB
+
+%%EndFeature
+} stopped cleartomark
+%%EndSetup
+NTPSOct95 begin
+%%Page: 1 1
+NTPSOct95 /PageSV save put
+13 779.762 translate 72 600 div dup neg scale
+0 0 transform .25 add round .25 sub exch .25 add round .25 sub exch itransform translate
+n
+4499 5999 194 194 B
+1 g
+f
+%%IncludeFont: Times-Roman
+[100 0 0 -100 0 0]/Times-Roman MF
+0 g
+(O)254 6140 MS (L)327 6140 MS (A)386 6140 MS (C)458 6140 MS ( )525 6140 MS (A)550 6140 MS (c)623 6140 MS (c)667 6140 MS (e)712 6140 MS (s)756 6140 MS (s)795 6140 MS ( )834 6140 MS (V)859 6140 MS (o)931 6140 MS (c)981 6140 MS (a)1026 6140 MS
+(b)1070 6140 MS (u)1120 6140 MS (l)1170 6140 MS (a)1199 6140 MS (r)1243 6140 MS (y)1277 6140 MS
+(1)4583 6140 MS
+n
+1758 1319 551 794 B
+1 g
+f
+n
+278 20 624 794 B
+0.191 g
+f
+n
+278 19 624 815 B
+f
+n
+278 20 624 835 B
+f
+n
+278 19 624 856 B
+0.195 g
+f
+n
+278 20 624 876 B
+0.199 g
+f
+n
+278 20 624 897 B
+0.203 g
+f
+n
+278 19 624 918 B
+f
+n
+278 20 624 938 B
+0.207 g
+f
+n
+278 19 624 959 B
+0.215 g
+f
+n
+278 20 624 979 B
+0.219 g
+f
+n
+278 20 624 1000 B
+0.223 g
+f
+n
+278 19 624 1021 B
+0.23 g
+f
+n
+278 20 624 1041 B
+0.234 g
+f
+n
+278 20 624 1062 B
+0.242 g
+f
+n
+278 19 624 1083 B
+0.25 g
+f
+n
+278 20 624 1103 B
+0.254 g
+f
+n
+278 19 624 1124 B
+0.262 g
+f
+n
+278 20 624 1144 B
+0.266 g
+f
+n
+278 20 624 1165 B
+0.273 g
+f
+n
+278 19 624 1186 B
+0.277 g
+f
+n
+278 20 624 1206 B
+0.281 g
+f
+n
+278 19 624 1227 B
+0.289 g
+f
+n
+278 20 624 1247 B
+0.293 g
+f
+n
+278 20 624 1268 B
+0.297 g
+f
+n
+278 19 624 1289 B
+f
+n
+278 20 624 1309 B
+0.301 g
+f
+n
+278 19 624 1330 B
+0.305 g
+f
+n
+278 20 624 1350 B
+f
+n
+278 20 624 1371 B
+0.309 g
+f
+n
+278 19 624 1392 B
+f
+n
+278 20 624 1412 B
+f
+n
+278 20 624 1433 B
+0.313 g
+f
+n
+278 19 624 1454 B
+f
+n
+278 20 624 1474 B
+0.309 g
+f
+n
+278 19 624 1495 B
+f
+n
+278 20 624 1515 B
+f
+n
+278 20 624 1536 B
+0.305 g
+f
+n
+278 19 624 1557 B
+f
+n
+278 20 624 1577 B
+0.301 g
+f
+n
+278 19 624 1598 B
+0.297 g
+f
+n
+278 20 624 1618 B
+0.293 g
+f
+n
+278 20 624 1639 B
+0.289 g
+f
+n
+278 19 624 1660 B
+0.285 g
+f
+n
+278 20 624 1680 B
+0.281 g
+f
+n
+278 19 624 1701 B
+0.277 g
+f
+n
+278 20 624 1721 B
+0.273 g
+f
+n
+278 20 624 1742 B
+0.266 g
+f
+n
+278 19 624 1763 B
+0.262 g
+f
+n
+278 20 624 1783 B
+0.254 g
+f
+n
+278 19 624 1804 B
+0.246 g
+f
+n
+278 20 624 1824 B
+0.242 g
+f
+n
+278 20 624 1845 B
+0.234 g
+f
+n
+278 19 624 1866 B
+0.23 g
+f
+n
+278 20 624 1886 B
+0.223 g
+f
+n
+278 20 624 1907 B
+0.219 g
+f
+n
+278 19 624 1928 B
+0.211 g
+f
+n
+278 20 624 1948 B
+0.207 g
+f
+n
+278 19 624 1969 B
+0.203 g
+f
+n
+278 20 624 1989 B
+0.199 g
+f
+n
+278 20 624 2010 B
+f
+n
+278 19 624 2031 B
+0.195 g
+f
+n
+278 20 624 2051 B
+0.191 g
+f
+n
+278 19 624 2072 B
+f
+n
+278 20 624 2092 B
+f
+n
+23 146 683 1263 B
+0.309 g
+f
+n
+22 146 707 1263 B
+f
+n
+23 146 730 1263 B
+f
+n
+22 146 754 1263 B
+f
+n
+23 146 777 1263 B
+f
+n
+22 146 801 1263 B
+f
+n
+23 146 824 1263 B
+0.305 g
+f
+n
+23 146 848 1263 B
+f
+n
+22 146 872 1263 B
+f
+n
+23 146 895 1263 B
+0.301 g
+f
+n
+22 146 919 1263 B
+f
+n
+23 146 942 1263 B
+f
+n
+23 146 966 1263 B
+0.297 g
+f
+n
+22 146 990 1263 B
+f
+n
+23 146 1013 1263 B
+0.293 g
+f
+n
+22 146 1037 1263 B
+f
+n
+23 146 1060 1263 B
+0.289 g
+f
+n
+22 146 1084 1263 B
+f
+n
+23 146 1107 1263 B
+0.285 g
+f
+n
+23 146 1131 1263 B
+0.281 g
+f
+n
+22 146 1155 1263 B
+0.277 g
+f
+n
+23 146 1178 1263 B
+f
+n
+22 146 1202 1263 B
+0.273 g
+f
+n
+23 146 1225 1263 B
+0.27 g
+f
+n
+22 146 1249 1263 B
+0.266 g
+f
+n
+23 146 1272 1263 B
+0.262 g
+f
+n
+23 146 1296 1263 B
+0.258 g
+f
+n
+22 146 1320 1263 B
+0.254 g
+f
+n
+23 146 1343 1263 B
+0.25 g
+f
+n
+22 146 1367 1263 B
+0.246 g
+f
+n
+23 146 1390 1263 B
+0.242 g
+f
+n
+23 146 1414 1263 B
+0.238 g
+f
+n
+22 146 1438 1263 B
+0.23 g
+f
+n
+23 146 1461 1263 B
+0.227 g
+f
+n
+22 146 1485 1263 B
+0.223 g
+f
+n
+23 146 1508 1263 B
+0.215 g
+f
+n
+22 146 1532 1263 B
+0.211 g
+f
+n
+23 146 1555 1263 B
+0.203 g
+f
+n
+23 146 1579 1263 B
+0.199 g
+f
+n
+22 146 1603 1263 B
+0.195 g
+f
+n
+23 146 1626 1263 B
+0.188 g
+f
+n
+22 146 1650 1263 B
+0.184 g
+f
+n
+23 146 1673 1263 B
+0.176 g
+f
+n
+23 146 1697 1263 B
+0.172 g
+f
+n
+22 146 1721 1263 B
+0.164 g
+f
+n
+23 146 1744 1263 B
+0.16 g
+f
+n
+22 146 1768 1263 B
+0.152 g
+f
+n
+23 146 1791 1263 B
+0.148 g
+f
+n
+22 146 1815 1263 B
+0.141 g
+f
+n
+23 146 1838 1263 B
+0.137 g
+f
+n
+23 146 1862 1263 B
+0.129 g
+f
+n
+22 146 1886 1263 B
+0.125 g
+f
+n
+23 146 1909 1263 B
+0.121 g
+f
+n
+22 146 1933 1263 B
+0.113 g
+f
+n
+23 146 1956 1263 B
+0.109 g
+f
+n
+22 146 1980 1263 B
+0.105 g
+f
+n
+23 146 2003 1263 B
+0.098 g
+f
+n
+23 146 2027 1263 B
+0.094 g
+f
+n
+22 146 2051 1263 B
+0.086 g
+f
+n
+23 146 2074 1263 B
+0.082 g
+f
+n
+22 146 2098 1263 B
+0.078 g
+f
+n
+23 146 2121 1263 B
+0.074 g
+f
+n
+23 146 2145 1263 B
+0.07 g
+f
+n
+22 146 2169 1263 B
+0.066 g
+f
+n
+23 146 2192 1263 B
+0.063 g
+f
+n
+22 146 2216 1263 B
+0.055 g
+f
+n
+23 146 2239 1263 B
+f
+n
+22 146 2263 1263 B
+0.051 g
+f
+n
+23 146 2286 1263 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)1183 2018 MS (R)1194 2018 MS (C)1217 2018 MS (S)1240 2018 MS ( )1259 2018 MS (W)1268 2018 MS (o)1300 2018 MS (r)1317 2018 MS (k)1328 2018 MS (s)1345 2018 MS (h)1359 2018 MS (o)1375 2018 MS (p)1392 2018 MS ( )1409 2018 MS (o)1418 2018 MS (n)1436 2018 MS
+( )1452 2018 MS (O)1461 2018 MS (p)1486 2018 MS (e)1503 2018 MS (n)1519 2018 MS ( )1535 2018 MS (L)1544 2018 MS (a)1565 2018 MS (n)1581 2018 MS (g)1597 2018 MS (u)1614 2018 MS (a)1631 2018 MS (g)1646 2018 MS (e)1664 2018 MS ( )1679 2018 MS
+(A)1369 2059 MS (r)1393 2059 MS (c)1404 2059 MS (h)1420 2059 MS (i)1437 2059 MS (v)1447 2059 MS (e)1463 2059 MS (s)1479 2059 MS
+(1)2144 2038 MS
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+551 1469 M
+551 1498 L
+1460 1498 L
+1460 1469 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 551 1469 B
+0.645 g
+f
+n
+908 0 551 1473 B
+f
+n
+908 0 551 1477 B
+f
+n
+908 0 551 1481 B
+f
+n
+908 0 551 1485 B
+f
+n
+908 0 551 1489 B
+f
+n
+908 0 551 1493 B
+f
+gr
+[108 0 0 -108 0 0]/Times-Roman MF
+(O)700 1383 MS (L)778 1383 MS (A)844 1383 MS (C)922 1383 MS ( )994 1383 MS (A)1020 1383 MS (c)1098 1383 MS (c)1146 1383 MS (e)1193 1383 MS (s)1241 1383 MS (s)1283 1383 MS ( )1325 1383 MS (V)1351 1383 MS (o)1429 1383 MS (c)1483 1383 MS (a)1531 1383 MS
+(b)1578 1383 MS (u)1632 1383 MS (l)1686 1383 MS (a)1715 1383 MS (r)1763 1383 MS (y)1800 1383 MS
+[78 0 0 -78 0 0]/Times-Roman MF
+(H)1190 1671 MS (e)1246 1671 MS (i)1281 1671 MS (d)1303 1671 MS (i)1342 1671 MS ( )1364 1671 MS (J)1384 1671 MS (o)1415 1671 MS (h)1453 1671 MS (n)1492 1671 MS (s)1531 1671 MS (o)1562 1671 MS (n)1600 1671 MS ( )1639 1671 MS (/)1659 1671 MS ( )1681 1671 MS
+(A)1701 1671 MS (I)1757 1671 MS (L)1783 1671 MS (L)1831 1671 MS (A)1878 1671 MS
+1 setlinecap
+8 sl
+gs
+n
+1760 1320 551 794 CB
+n
+1752 1312 555 798 B
+cp
+CM [1 0 0 1 551 794] concat
+s
+SM
+gr
+n
+1758 1319 2576 794 B
+1 g
+f
+n
+278 40 2649 794 B
+0.309 g
+f
+n
+278 40 2649 835 B
+f
+n
+278 41 2649 876 B
+f
+n
+278 40 2649 918 B
+f
+n
+278 40 2649 959 B
+0.305 g
+f
+n
+278 40 2649 1000 B
+f
+n
+278 41 2649 1041 B
+0.301 g
+f
+n
+278 40 2649 1083 B
+0.297 g
+f
+n
+278 40 2649 1124 B
+0.293 g
+f
+n
+278 40 2649 1165 B
+0.289 g
+f
+n
+278 40 2649 1206 B
+0.285 g
+f
+n
+278 41 2649 1247 B
+0.281 g
+f
+n
+278 40 2649 1289 B
+0.277 g
+f
+n
+278 40 2649 1330 B
+0.273 g
+f
+n
+278 40 2649 1371 B
+0.266 g
+f
+n
+278 41 2649 1412 B
+0.262 g
+f
+n
+278 40 2649 1454 B
+0.254 g
+f
+n
+278 40 2649 1495 B
+0.246 g
+f
+n
+278 40 2649 1536 B
+0.242 g
+f
+n
+278 40 2649 1577 B
+0.234 g
+f
+n
+278 41 2649 1618 B
+0.23 g
+f
+n
+278 40 2649 1660 B
+0.223 g
+f
+n
+278 40 2649 1701 B
+0.219 g
+f
+n
+278 40 2649 1742 B
+0.211 g
+f
+n
+278 40 2649 1783 B
+0.207 g
+f
+n
+278 41 2649 1824 B
+0.203 g
+f
+n
+278 40 2649 1866 B
+0.199 g
+f
+n
+278 40 2649 1907 B
+f
+n
+278 40 2649 1948 B
+0.195 g
+f
+n
+278 41 2649 1989 B
+0.191 g
+f
+n
+278 40 2649 2031 B
+f
+n
+278 40 2649 2072 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+2605 1131 M
+2605 1161 L
+3514 1161 L
+3514 1131 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 2605 1133 B
+0.645 g
+f
+n
+908 0 2605 1137 B
+f
+n
+908 0 2605 1141 B
+f
+n
+908 0 2605 1145 B
+f
+n
+908 0 2605 1149 B
+f
+n
+908 0 2605 1153 B
+f
+n
+908 0 2605 1157 B
+f
+gr
+n
+2 42 2708 2070 B
+0.359 g
+f
+n
+2 42 2711 2070 B
+f
+n
+2 42 2714 2070 B
+f
+n
+2 42 2717 2070 B
+0.363 g
+f
+n
+2 42 2720 2070 B
+f
+n
+3 42 2723 2070 B
+0.367 g
+f
+n
+2 42 2727 2070 B
+f
+n
+2 42 2730 2070 B
+0.371 g
+f
+n
+2 42 2733 2070 B
+f
+n
+2 42 2736 2070 B
+0.375 g
+f
+n
+2 42 2739 2070 B
+0.379 g
+f
+n
+2 42 2742 2070 B
+0.383 g
+f
+n
+2 42 2745 2070 B
+f
+n
+2 42 2748 2070 B
+0.387 g
+f
+n
+2 42 2751 2070 B
+0.391 g
+f
+n
+2 42 2754 2070 B
+0.395 g
+f
+n
+3 42 2757 2070 B
+f
+n
+2 42 2761 2070 B
+0.398 g
+f
+n
+2 42 2764 2070 B
+0.402 g
+f
+n
+2 42 2767 2070 B
+0.406 g
+f
+n
+2 42 2770 2070 B
+0.41 g
+f
+n
+2 42 2773 2070 B
+0.414 g
+f
+n
+2 42 2776 2070 B
+0.418 g
+f
+n
+2 42 2779 2070 B
+0.426 g
+f
+n
+2 42 2782 2070 B
+0.43 g
+f
+n
+2 42 2785 2070 B
+0.434 g
+f
+n
+2 42 2788 2070 B
+0.438 g
+f
+n
+3 42 2791 2070 B
+0.441 g
+f
+n
+2 42 2795 2070 B
+0.449 g
+f
+n
+2 42 2798 2070 B
+0.453 g
+f
+n
+2 42 2801 2070 B
+0.457 g
+f
+n
+2 42 2804 2070 B
+0.465 g
+f
+n
+2 42 2807 2070 B
+0.469 g
+f
+n
+2 42 2810 2070 B
+0.477 g
+f
+n
+2 42 2813 2070 B
+0.484 g
+f
+n
+2 42 2816 2070 B
+0.488 g
+f
+n
+2 42 2819 2070 B
+0.492 g
+f
+n
+2 42 2822 2070 B
+0.5 g
+f
+n
+3 42 2825 2070 B
+0.512 g
+f
+n
+2 42 2829 2070 B
+0.516 g
+f
+n
+2 42 2832 2070 B
+0.523 g
+f
+n
+2 42 2835 2070 B
+0.527 g
+f
+n
+2 42 2838 2070 B
+0.535 g
+f
+n
+2 42 2841 2070 B
+0.543 g
+f
+n
+2 42 2844 2070 B
+0.547 g
+f
+n
+2 42 2847 2070 B
+0.551 g
+f
+n
+2 42 2850 2070 B
+0.563 g
+f
+n
+2 42 2853 2070 B
+0.566 g
+f
+n
+2 42 2856 2070 B
+0.57 g
+f
+n
+3 42 2859 2070 B
+0.578 g
+f
+n
+2 42 2863 2070 B
+0.586 g
+f
+n
+2 42 2866 2070 B
+0.59 g
+f
+n
+2 42 2869 2070 B
+0.598 g
+f
+n
+2 42 2872 2070 B
+0.602 g
+f
+n
+2 42 2875 2070 B
+0.609 g
+f
+n
+2 42 2878 2070 B
+0.617 g
+f
+n
+2 42 2881 2070 B
+0.621 g
+f
+n
+2 42 2884 2070 B
+0.629 g
+f
+n
+2 42 2887 2070 B
+0.633 g
+f
+n
+3 42 2890 2070 B
+0.641 g
+f
+n
+2 42 2894 2070 B
+0.645 g
+f
+n
+2 42 2897 2070 B
+0.652 g
+f
+n
+2 42 2900 2070 B
+0.656 g
+f
+n
+2 42 2903 2070 B
+0.664 g
+f
+n
+2 42 2906 2070 B
+0.668 g
+f
+n
+2 42 2909 2070 B
+0.672 g
+f
+n
+2 42 2912 2070 B
+0.68 g
+f
+n
+2 42 2915 2070 B
+0.684 g
+f
+n
+2 42 2918 2070 B
+0.688 g
+f
+n
+2 42 2921 2070 B
+0.691 g
+f
+n
+3 42 2924 2070 B
+0.695 g
+f
+n
+2 42 2928 2070 B
+0.699 g
+f
+n
+2 42 2931 2070 B
+0.707 g
+f
+n
+2 42 2934 2070 B
+f
+n
+2 42 2937 2070 B
+0.711 g
+f
+n
+2 42 2940 2070 B
+0.719 g
+f
+n
+2 42 2943 2070 B
+f
+n
+2 42 2946 2070 B
+0.727 g
+f
+n
+2 42 2949 2070 B
+f
+n
+2 42 2952 2070 B
+0.73 g
+f
+n
+2 42 2955 2070 B
+0.734 g
+f
+n
+3 42 2958 2070 B
+0.738 g
+f
+n
+2 42 2962 2070 B
+0.742 g
+f
+n
+2 42 2965 2070 B
+f
+n
+2 42 2968 2070 B
+0.746 g
+f
+n
+2 42 2971 2070 B
+0.75 g
+f
+n
+2 42 2974 2070 B
+f
+n
+2 42 2977 2070 B
+0.754 g
+f
+n
+2 42 2980 2070 B
+f
+n
+2 42 2983 2070 B
+0.758 g
+f
+n
+2 42 2986 2070 B
+0.762 g
+f
+n
+2 42 2989 2070 B
+f
+n
+3 42 2992 2070 B
+0.766 g
+f
+n
+2 42 2996 2070 B
+f
+n
+2 42 2999 2070 B
+f
+n
+2 42 3002 2070 B
+0.77 g
+f
+n
+2 42 3005 2070 B
+f
+n
+2 42 3008 2070 B
+0.773 g
+f
+n
+2 42 3011 2070 B
+f
+n
+2 42 3014 2070 B
+f
+n
+2 42 3017 2070 B
+0.777 g
+f
+n
+2 42 3020 2070 B
+f
+n
+2 42 3023 2070 B
+f
+n
+3 42 3026 2070 B
+f
+n
+2 42 3030 2070 B
+0.781 g
+f
+n
+2 42 3033 2070 B
+f
+n
+2 42 3036 2070 B
+f
+n
+2 42 3039 2070 B
+f
+n
+2 42 3042 2070 B
+0.785 g
+f
+n
+2 42 3045 2070 B
+f
+n
+2 42 3048 2070 B
+0.781 g
+f
+n
+2 42 3051 2070 B
+f
+n
+2 42 3054 2070 B
+f
+n
+2 42 3057 2070 B
+f
+n
+3 42 3060 2070 B
+0.777 g
+f
+n
+2 42 3064 2070 B
+f
+n
+2 42 3067 2070 B
+f
+n
+2 42 3070 2070 B
+f
+n
+2 42 3073 2070 B
+0.773 g
+f
+n
+2 42 3076 2070 B
+f
+n
+2 42 3079 2070 B
+f
+n
+2 42 3082 2070 B
+0.77 g
+f
+n
+2 42 3085 2070 B
+f
+n
+2 42 3088 2070 B
+0.766 g
+f
+n
+2 42 3091 2070 B
+f
+n
+3 42 3094 2070 B
+f
+n
+2 42 3098 2070 B
+0.762 g
+f
+n
+2 42 3101 2070 B
+f
+n
+2 42 3104 2070 B
+0.758 g
+f
+n
+2 42 3107 2070 B
+0.754 g
+f
+n
+2 42 3110 2070 B
+f
+n
+2 42 3113 2070 B
+0.75 g
+f
+n
+2 42 3116 2070 B
+f
+n
+2 42 3119 2070 B
+0.746 g
+f
+n
+2 42 3122 2070 B
+0.742 g
+f
+n
+2 42 3125 2070 B
+f
+n
+3 42 3128 2070 B
+0.738 g
+f
+n
+2 42 3132 2070 B
+0.734 g
+f
+n
+2 42 3135 2070 B
+0.73 g
+f
+n
+2 42 3138 2070 B
+0.727 g
+f
+n
+2 42 3141 2070 B
+f
+n
+2 42 3144 2070 B
+0.719 g
+f
+n
+2 42 3147 2070 B
+f
+n
+2 42 3150 2070 B
+0.711 g
+f
+n
+2 42 3153 2070 B
+0.707 g
+f
+n
+2 42 3156 2070 B
+f
+n
+2 42 3159 2070 B
+0.699 g
+f
+n
+3 42 3162 2070 B
+0.695 g
+f
+n
+2 42 3166 2070 B
+0.691 g
+f
+n
+2 42 3169 2070 B
+0.688 g
+f
+n
+2 42 3172 2070 B
+0.684 g
+f
+n
+2 42 3175 2070 B
+0.68 g
+f
+n
+2 42 3178 2070 B
+0.672 g
+f
+n
+2 42 3181 2070 B
+0.668 g
+f
+n
+2 42 3184 2070 B
+0.664 g
+f
+n
+2 42 3187 2070 B
+0.656 g
+f
+n
+2 42 3190 2070 B
+0.652 g
+f
+n
+2 42 3193 2070 B
+0.645 g
+f
+n
+3 42 3196 2070 B
+0.641 g
+f
+n
+2 42 3200 2070 B
+0.633 g
+f
+n
+2 42 3203 2070 B
+0.629 g
+f
+n
+2 42 3206 2070 B
+0.621 g
+f
+n
+2 42 3209 2070 B
+0.617 g
+f
+n
+2 42 3212 2070 B
+0.609 g
+f
+n
+2 42 3215 2070 B
+0.602 g
+f
+n
+2 42 3218 2070 B
+0.598 g
+f
+n
+2 42 3221 2070 B
+0.59 g
+f
+n
+2 42 3224 2070 B
+0.586 g
+f
+n
+3 42 3227 2070 B
+0.578 g
+f
+n
+2 42 3231 2070 B
+0.57 g
+f
+n
+2 42 3234 2070 B
+0.566 g
+f
+n
+2 42 3237 2070 B
+0.563 g
+f
+n
+2 42 3240 2070 B
+0.551 g
+f
+n
+2 42 3243 2070 B
+0.547 g
+f
+n
+2 42 3246 2070 B
+0.543 g
+f
+n
+2 42 3249 2070 B
+0.535 g
+f
+n
+2 42 3252 2070 B
+0.527 g
+f
+n
+2 42 3255 2070 B
+0.523 g
+f
+n
+2 42 3258 2070 B
+0.516 g
+f
+n
+3 42 3261 2070 B
+0.512 g
+f
+n
+2 42 3265 2070 B
+0.5 g
+f
+n
+2 42 3268 2070 B
+0.492 g
+f
+n
+2 42 3271 2070 B
+0.488 g
+f
+n
+2 42 3274 2070 B
+0.484 g
+f
+n
+2 42 3277 2070 B
+0.477 g
+f
+n
+2 42 3280 2070 B
+0.469 g
+f
+n
+2 42 3283 2070 B
+0.465 g
+f
+n
+2 42 3286 2070 B
+0.457 g
+f
+n
+2 42 3289 2070 B
+0.453 g
+f
+n
+2 42 3292 2070 B
+0.449 g
+f
+n
+3 42 3295 2070 B
+0.441 g
+f
+n
+2 42 3299 2070 B
+0.438 g
+f
+n
+2 42 3302 2070 B
+0.434 g
+f
+n
+2 42 3305 2070 B
+0.43 g
+f
+n
+2 42 3308 2070 B
+0.426 g
+f
+n
+2 42 3311 2070 B
+0.418 g
+f
+n
+2 42 3314 2070 B
+0.414 g
+f
+n
+2 42 3317 2070 B
+0.41 g
+f
+n
+2 42 3320 2070 B
+0.406 g
+f
+n
+2 42 3323 2070 B
+0.402 g
+f
+n
+2 42 3326 2070 B
+0.398 g
+f
+n
+3 42 3329 2070 B
+0.395 g
+f
+n
+2 42 3333 2070 B
+f
+n
+2 42 3336 2070 B
+0.391 g
+f
+n
+2 42 3339 2070 B
+0.387 g
+f
+n
+2 42 3342 2070 B
+0.383 g
+f
+n
+2 42 3345 2070 B
+f
+n
+2 42 3348 2070 B
+0.379 g
+f
+n
+2 42 3351 2070 B
+0.375 g
+f
+n
+2 42 3354 2070 B
+0.371 g
+f
+n
+2 42 3357 2070 B
+f
+n
+2 42 3360 2070 B
+0.367 g
+f
+n
+3 42 3363 2070 B
+f
+n
+2 42 3367 2070 B
+0.363 g
+f
+n
+2 42 3370 2070 B
+f
+n
+2 42 3373 2070 B
+0.359 g
+f
+n
+2 42 3376 2070 B
+f
+n
+2 42 3379 2070 B
+f
+n
+22 145 2723 941 B
+0.309 g
+f
+n
+23 145 2746 941 B
+f
+n
+22 145 2770 941 B
+f
+n
+22 145 2793 941 B
+f
+n
+23 145 2816 941 B
+f
+n
+22 145 2840 941 B
+f
+n
+23 145 2863 941 B
+0.305 g
+f
+n
+22 145 2887 941 B
+f
+n
+22 145 2910 941 B
+f
+n
+23 145 2933 941 B
+0.301 g
+f
+n
+22 145 2957 941 B
+f
+n
+22 145 2980 941 B
+f
+n
+23 145 3003 941 B
+0.297 g
+f
+n
+22 145 3027 941 B
+f
+n
+22 145 3050 941 B
+0.293 g
+f
+n
+23 145 3073 941 B
+f
+n
+22 145 3097 941 B
+0.289 g
+f
+n
+23 145 3120 941 B
+f
+n
+22 145 3144 941 B
+0.285 g
+f
+n
+22 145 3167 941 B
+0.281 g
+f
+n
+23 145 3190 941 B
+0.277 g
+f
+n
+22 145 3214 941 B
+f
+n
+22 145 3237 941 B
+0.273 g
+f
+n
+23 145 3260 941 B
+0.27 g
+f
+n
+22 145 3284 941 B
+0.266 g
+f
+n
+22 145 3307 941 B
+0.262 g
+f
+n
+23 145 3330 941 B
+0.258 g
+f
+n
+22 145 3354 941 B
+0.254 g
+f
+n
+23 145 3377 941 B
+0.25 g
+f
+n
+22 145 3401 941 B
+0.246 g
+f
+n
+22 145 3424 941 B
+0.242 g
+f
+n
+23 145 3447 941 B
+0.238 g
+f
+n
+22 145 3471 941 B
+0.23 g
+f
+n
+22 145 3494 941 B
+0.227 g
+f
+n
+23 145 3517 941 B
+0.223 g
+f
+n
+22 145 3541 941 B
+0.215 g
+f
+n
+22 145 3564 941 B
+0.211 g
+f
+n
+23 145 3587 941 B
+0.203 g
+f
+n
+22 145 3611 941 B
+0.199 g
+f
+n
+22 145 3634 941 B
+0.195 g
+f
+n
+23 145 3657 941 B
+0.188 g
+f
+n
+22 145 3681 941 B
+0.184 g
+f
+n
+23 145 3704 941 B
+0.176 g
+f
+n
+22 145 3728 941 B
+0.172 g
+f
+n
+22 145 3751 941 B
+0.164 g
+f
+n
+23 145 3774 941 B
+0.16 g
+f
+n
+22 145 3798 941 B
+0.152 g
+f
+n
+22 145 3821 941 B
+0.148 g
+f
+n
+23 145 3844 941 B
+0.141 g
+f
+n
+22 145 3868 941 B
+0.137 g
+f
+n
+22 145 3891 941 B
+0.129 g
+f
+n
+23 145 3914 941 B
+0.125 g
+f
+n
+22 145 3938 941 B
+0.121 g
+f
+n
+23 145 3961 941 B
+0.113 g
+f
+n
+22 145 3985 941 B
+0.109 g
+f
+n
+22 145 4008 941 B
+0.105 g
+f
+n
+23 145 4031 941 B
+0.098 g
+f
+n
+22 145 4055 941 B
+0.094 g
+f
+n
+22 145 4078 941 B
+0.086 g
+f
+n
+23 145 4101 941 B
+0.082 g
+f
+n
+22 145 4125 941 B
+0.078 g
+f
+n
+22 145 4148 941 B
+0.074 g
+f
+n
+23 145 4171 941 B
+0.07 g
+f
+n
+22 145 4195 941 B
+0.066 g
+f
+n
+23 145 4218 941 B
+0.063 g
+f
+n
+22 145 4242 941 B
+0.055 g
+f
+n
+22 145 4265 941 B
+f
+n
+23 145 4288 941 B
+0.051 g
+f
+n
+22 145 4312 941 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)3208 2018 MS (R)3219 2018 MS (C)3242 2018 MS (S)3265 2018 MS ( )3284 2018 MS (W)3293 2018 MS (o)3325 2018 MS (r)3342 2018 MS (k)3353 2018 MS (s)3370 2018 MS (h)3384 2018 MS (o)3400 2018 MS (p)3417 2018 MS ( )3434 2018 MS (o)3443 2018 MS (n)3461 2018 MS
+( )3477 2018 MS (O)3486 2018 MS (p)3511 2018 MS (e)3528 2018 MS (n)3544 2018 MS ( )3560 2018 MS (L)3569 2018 MS (a)3590 2018 MS (n)3606 2018 MS (g)3622 2018 MS (u)3639 2018 MS (a)3656 2018 MS (g)3671 2018 MS (e)3689 2018 MS ( )3704 2018 MS
+(A)3394 2059 MS (r)3418 2059 MS (c)3429 2059 MS (h)3445 2059 MS (i)3462 2059 MS (v)3472 2059 MS (e)3488 2059 MS (s)3504 2059 MS
+(2)4169 2038 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(O)2725 1061 MS (v)2803 1061 MS (e)2857 1061 MS (r)2905 1061 MS (v)2941 1061 MS (i)2995 1061 MS (e)3024 1061 MS (w)3072 1061 MS
+NTPSOct95 /FontSV save put
+%%BeginFont: Wingdings06479698
+10 dict dup begin
+/FontType 3 def
+/FontMatrix [1 64 div 0 0 1 64 div 0 0] def
+/FontBBox [0 -57 86 14] def
+/Encoding 256 array def
+0 1 255 {Encoding exch /.notdef put} for
+/BuildGlyph {0 begin
+exch /CD get exch get /CI exch def
+CI 0 get 0 CI 1 4 getinterval aload pop setcachedevice
+CI 5 get CI 6 get true
+[1 0 0 -1 0 0] dup 4 CI 7 get put dup 5 CI 8 get put
+CI 9 get imagemask end}def
+/BuildGlyph load 0 5 dict put
+/BuildChar {1 index /Encoding get exch get
+1 index /BuildGlyph get exec} bind def
+/CD 227 dict def
+CD /.notdef[.24 0 0 0 0 1 1 0 0 {<>}]put
+Encoding 122 /c122 put CD /c122 [48 5 42 42 5 37 37 -5 42
+<~!!E3#!!",@^]4@as6p!gs8Vio"98E#!!iQ(rr<T0s8RT[s8W+L+92B@^d%l!s56-As8V#,s8W,gJ,fQKn:1K<s7$'gs8Vlos8W,os8W-!q#CBos7lWos8Vlos8W,os8W-!q#CBos7lWos8VkDs8W,gJ,fQKn:1K<s6r8Qs8V"As8W,W+92B@^^pJFs*tX[s8RTSs8W*!"98E#!!*'!p](;Ds6p!g+90+V!!E3#!!~>]put
+end
+/Wingdings06479698 exch definefont pop
+%%EndFont
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 1260 MS
+%%IncludeFont: Helvetica-Bold
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(A)2791 1260 MS (t)2845 1260 MS (t)2872 1260 MS (r)2899 1260 MS (i)2929 1260 MS (b)2951 1260 MS (u)2999 1260 MS (t)3047 1260 MS (e)3073 1260 MS ( )3116 1260 MS (o)3138 1260 MS (f)3186 1260 MS ( )3212 1260 MS (t)3234 1260 MS (h)3260 1260 MS (e)3308 1260 MS
+( )3351 1260 MS (R)3373 1260 MS (i)3429 1260 MS (g)3451 1260 MS (h)3499 1260 MS (t)3547 1260 MS (s)3573 1260 MS ( )3616 1260 MS (e)3638 1260 MS (l)3681 1260 MS (e)3703 1260 MS (m)3745 1260 MS (e)3814 1260 MS (n)3857 1260 MS (t)3905 1260 MS (.)3931 1260 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 1372 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(B)2791 1372 MS (r)2847 1372 MS (o)2877 1372 MS (a)2925 1372 MS (d)2968 1372 MS (l)3016 1372 MS (y)3039 1372 MS ( )3081 1372 MS (c)3103 1372 MS (l)3146 1372 MS (a)3168 1372 MS (s)3211 1372 MS (s)3255 1372 MS (i)3298 1372 MS (f)3320 1372 MS (i)3346 1372 MS
+(e)3368 1372 MS (s)3411 1372 MS ( )3454 1372 MS (t)3476 1372 MS (h)3502 1372 MS (e)3550 1372 MS ( )3593 1372 MS (w)3614 1372 MS (a)3678 1372 MS (y)3721 1372 MS ( )3763 1372 MS (a)3785 1372 MS ( )3828 1372 MS (r)3850 1372 MS (e)3880 1372 MS (s)3923 1372 MS
+(o)3966 1372 MS (u)4014 1372 MS (r)4062 1372 MS (c)4093 1372 MS (e)4136 1372 MS ( )4179 1372 MS
+(m)2791 1466 MS (a)2860 1466 MS (y)2904 1466 MS ( )2946 1466 MS (b)2968 1466 MS (e)3016 1466 MS ( )3059 1466 MS (u)3081 1466 MS (s)3129 1466 MS (e)3172 1466 MS (d)3215 1466 MS (.)3263 1466 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 1579 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(D)2791 1579 MS (e)2847 1579 MS (t)2890 1579 MS (a)2916 1579 MS (i)2959 1579 MS (l)2981 1579 MS (s)3003 1579 MS (,)3046 1579 MS ( )3068 1579 MS (o)3090 1579 MS (r)3138 1579 MS ( )3168 1579 MS (r)3190 1579 MS (e)3220 1579 MS (f)3263 1579 MS (e)3290 1579 MS
+(r)3333 1579 MS (e)3364 1579 MS (n)3407 1579 MS (c)3455 1579 MS (e)3498 1579 MS ( )3541 1579 MS (t)3563 1579 MS (o)3589 1579 MS ( )3637 1579 MS (a)3659 1579 MS ( )3702 1579 MS (d)3724 1579 MS (o)3772 1579 MS (c)3820 1579 MS (u)3863 1579 MS (m)3911 1579 MS
+(e)3980 1579 MS (n)4023 1579 MS (t)4071 1579 MS ( )4097 1579 MS
+(d)2791 1672 MS (e)2839 1672 MS (f)2882 1672 MS (i)2908 1672 MS (n)2930 1672 MS (i)2978 1672 MS (n)3000 1672 MS (g)3047 1672 MS ( )3095 1672 MS (t)3117 1672 MS (h)3143 1672 MS (e)3191 1672 MS ( )3234 1672 MS (d)3255 1672 MS (e)3303 1672 MS (t)3346 1672 MS
+(a)3372 1672 MS (i)3415 1672 MS (l)3437 1672 MS (s)3459 1672 MS (,)3502 1672 MS ( )3524 1672 MS (s)3546 1672 MS (h)3589 1672 MS (o)3637 1672 MS (u)3685 1672 MS (l)3732 1672 MS (d)3754 1672 MS ( )3801 1672 MS (b)3823 1672 MS (e)3871 1672 MS ( )3914 1672 MS
+(g)3936 1672 MS (i)3984 1672 MS (v)4006 1672 MS (e)4048 1672 MS (n)4091 1672 MS ( )4139 1672 MS
+(i)2791 1766 MS (n)2813 1766 MS ( )2861 1766 MS (t)2883 1766 MS (h)2909 1766 MS (e)2957 1766 MS ( )3000 1766 MS (e)3022 1766 MS (l)3065 1766 MS (e)3087 1766 MS (m)3130 1766 MS (e)3199 1766 MS (n)3242 1766 MS (t)3290 1766 MS ( )3316 1766 MS (c)3338 1766 MS
+(o)3381 1766 MS (n)3429 1766 MS (t)3477 1766 MS (e)3503 1766 MS (n)3546 1766 MS (t)3594 1766 MS (.)3620 1766 MS
+gs
+n
+1760 1320 2576 794 CB
+n
+1752 1312 2580 798 B
+cp
+CM [1 0 0 1 2576 794] concat
+s
+SM
+gr
+n
+1758 1318 551 2534 B
+1 g
+f
+n
+278 40 624 2534 B
+0.309 g
+f
+n
+278 40 624 2575 B
+f
+n
+278 41 624 2616 B
+f
+n
+278 40 624 2658 B
+f
+n
+278 40 624 2699 B
+0.305 g
+f
+n
+278 40 624 2740 B
+f
+n
+278 41 624 2781 B
+0.301 g
+f
+n
+278 40 624 2823 B
+0.297 g
+f
+n
+278 40 624 2864 B
+0.293 g
+f
+n
+278 40 624 2905 B
+0.289 g
+f
+n
+278 40 624 2946 B
+0.285 g
+f
+n
+278 41 624 2987 B
+0.281 g
+f
+n
+278 40 624 3029 B
+0.277 g
+f
+n
+278 40 624 3070 B
+0.273 g
+f
+n
+278 40 624 3111 B
+0.266 g
+f
+n
+278 41 624 3152 B
+0.262 g
+f
+n
+278 40 624 3194 B
+0.254 g
+f
+n
+278 40 624 3235 B
+0.246 g
+f
+n
+278 40 624 3276 B
+0.242 g
+f
+n
+278 40 624 3317 B
+0.234 g
+f
+n
+278 41 624 3358 B
+0.23 g
+f
+n
+278 40 624 3400 B
+0.223 g
+f
+n
+278 40 624 3441 B
+0.219 g
+f
+n
+278 40 624 3482 B
+0.211 g
+f
+n
+278 40 624 3523 B
+0.207 g
+f
+n
+278 41 624 3564 B
+0.203 g
+f
+n
+278 40 624 3606 B
+0.199 g
+f
+n
+278 40 624 3647 B
+f
+n
+278 40 624 3688 B
+0.195 g
+f
+n
+278 41 624 3729 B
+0.191 g
+f
+n
+278 40 624 3771 B
+f
+n
+278 40 624 3812 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+580 2871 M
+580 2901 L
+1489 2901 L
+1489 2871 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 580 2873 B
+0.645 g
+f
+n
+908 0 580 2877 B
+f
+n
+908 0 580 2881 B
+f
+n
+908 0 580 2885 B
+f
+n
+908 0 580 2889 B
+f
+n
+908 0 580 2893 B
+f
+n
+908 0 580 2897 B
+f
+gr
+n
+2 42 683 3810 B
+0.359 g
+f
+n
+2 42 686 3810 B
+f
+n
+2 42 689 3810 B
+f
+n
+2 42 692 3810 B
+0.363 g
+f
+n
+2 42 695 3810 B
+f
+n
+3 42 698 3810 B
+0.367 g
+f
+n
+2 42 702 3810 B
+f
+n
+2 42 705 3810 B
+0.371 g
+f
+n
+2 42 708 3810 B
+f
+n
+2 42 711 3810 B
+0.375 g
+f
+n
+2 42 714 3810 B
+0.379 g
+f
+n
+2 42 717 3810 B
+0.383 g
+f
+n
+2 42 720 3810 B
+f
+n
+2 42 723 3810 B
+0.387 g
+f
+n
+2 42 726 3810 B
+0.391 g
+f
+n
+2 42 729 3810 B
+0.395 g
+f
+n
+3 42 732 3810 B
+f
+n
+2 42 736 3810 B
+0.398 g
+f
+n
+2 42 739 3810 B
+0.402 g
+f
+n
+2 42 742 3810 B
+0.406 g
+f
+n
+2 42 745 3810 B
+0.41 g
+f
+n
+2 42 748 3810 B
+0.414 g
+f
+n
+2 42 751 3810 B
+0.418 g
+f
+n
+2 42 754 3810 B
+0.426 g
+f
+n
+2 42 757 3810 B
+0.43 g
+f
+n
+2 42 760 3810 B
+0.434 g
+f
+n
+2 42 763 3810 B
+0.438 g
+f
+n
+3 42 766 3810 B
+0.441 g
+f
+n
+2 42 770 3810 B
+0.449 g
+f
+n
+2 42 773 3810 B
+0.453 g
+f
+n
+2 42 776 3810 B
+0.457 g
+f
+n
+2 42 779 3810 B
+0.465 g
+f
+n
+2 42 782 3810 B
+0.469 g
+f
+n
+2 42 785 3810 B
+0.477 g
+f
+n
+2 42 788 3810 B
+0.484 g
+f
+n
+2 42 791 3810 B
+0.488 g
+f
+n
+2 42 794 3810 B
+0.492 g
+f
+n
+2 42 797 3810 B
+0.5 g
+f
+n
+3 42 800 3810 B
+0.512 g
+f
+n
+2 42 804 3810 B
+0.516 g
+f
+n
+2 42 807 3810 B
+0.523 g
+f
+n
+2 42 810 3810 B
+0.527 g
+f
+n
+2 42 813 3810 B
+0.535 g
+f
+n
+2 42 816 3810 B
+0.543 g
+f
+n
+2 42 819 3810 B
+0.547 g
+f
+n
+2 42 822 3810 B
+0.551 g
+f
+n
+2 42 825 3810 B
+0.563 g
+f
+n
+2 42 828 3810 B
+0.566 g
+f
+n
+2 42 831 3810 B
+0.57 g
+f
+n
+3 42 834 3810 B
+0.578 g
+f
+n
+2 42 838 3810 B
+0.586 g
+f
+n
+2 42 841 3810 B
+0.59 g
+f
+n
+2 42 844 3810 B
+0.598 g
+f
+n
+2 42 847 3810 B
+0.602 g
+f
+n
+2 42 850 3810 B
+0.609 g
+f
+n
+2 42 853 3810 B
+0.617 g
+f
+n
+2 42 856 3810 B
+0.621 g
+f
+n
+2 42 859 3810 B
+0.629 g
+f
+n
+2 42 862 3810 B
+0.633 g
+f
+n
+3 42 865 3810 B
+0.641 g
+f
+n
+2 42 869 3810 B
+0.645 g
+f
+n
+2 42 872 3810 B
+0.652 g
+f
+n
+2 42 875 3810 B
+0.656 g
+f
+n
+2 42 878 3810 B
+0.664 g
+f
+n
+2 42 881 3810 B
+0.668 g
+f
+n
+2 42 884 3810 B
+0.672 g
+f
+n
+2 42 887 3810 B
+0.68 g
+f
+n
+2 42 890 3810 B
+0.684 g
+f
+n
+2 42 893 3810 B
+0.688 g
+f
+n
+2 42 896 3810 B
+0.691 g
+f
+n
+3 42 899 3810 B
+0.695 g
+f
+n
+2 42 903 3810 B
+0.699 g
+f
+n
+2 42 906 3810 B
+0.707 g
+f
+n
+2 42 909 3810 B
+f
+n
+2 42 912 3810 B
+0.711 g
+f
+n
+2 42 915 3810 B
+0.719 g
+f
+n
+2 42 918 3810 B
+f
+n
+2 42 921 3810 B
+0.727 g
+f
+n
+2 42 924 3810 B
+f
+n
+2 42 927 3810 B
+0.73 g
+f
+n
+2 42 930 3810 B
+0.734 g
+f
+n
+3 42 933 3810 B
+0.738 g
+f
+n
+2 42 937 3810 B
+0.742 g
+f
+n
+2 42 940 3810 B
+f
+n
+2 42 943 3810 B
+0.746 g
+f
+n
+2 42 946 3810 B
+0.75 g
+f
+n
+2 42 949 3810 B
+f
+n
+2 42 952 3810 B
+0.754 g
+f
+n
+2 42 955 3810 B
+f
+n
+2 42 958 3810 B
+0.758 g
+f
+n
+2 42 961 3810 B
+0.762 g
+f
+n
+2 42 964 3810 B
+f
+n
+3 42 967 3810 B
+0.766 g
+f
+n
+2 42 971 3810 B
+f
+n
+2 42 974 3810 B
+f
+n
+2 42 977 3810 B
+0.77 g
+f
+n
+2 42 980 3810 B
+f
+n
+2 42 983 3810 B
+0.773 g
+f
+n
+2 42 986 3810 B
+f
+n
+2 42 989 3810 B
+f
+n
+2 42 992 3810 B
+0.777 g
+f
+n
+2 42 995 3810 B
+f
+n
+2 42 998 3810 B
+f
+n
+3 42 1001 3810 B
+f
+n
+2 42 1005 3810 B
+0.781 g
+f
+n
+2 42 1008 3810 B
+f
+n
+2 42 1011 3810 B
+f
+n
+2 42 1014 3810 B
+f
+n
+2 42 1017 3810 B
+0.785 g
+f
+n
+2 42 1020 3810 B
+f
+n
+2 42 1023 3810 B
+0.781 g
+f
+n
+2 42 1026 3810 B
+f
+n
+2 42 1029 3810 B
+f
+n
+2 42 1032 3810 B
+f
+n
+3 42 1035 3810 B
+0.777 g
+f
+n
+2 42 1039 3810 B
+f
+n
+2 42 1042 3810 B
+f
+n
+2 42 1045 3810 B
+f
+n
+2 42 1048 3810 B
+0.773 g
+f
+n
+2 42 1051 3810 B
+f
+n
+2 42 1054 3810 B
+f
+n
+2 42 1057 3810 B
+0.77 g
+f
+n
+2 42 1060 3810 B
+f
+n
+2 42 1063 3810 B
+0.766 g
+f
+n
+2 42 1066 3810 B
+f
+n
+3 42 1069 3810 B
+f
+n
+2 42 1073 3810 B
+0.762 g
+f
+n
+2 42 1076 3810 B
+f
+n
+2 42 1079 3810 B
+0.758 g
+f
+n
+2 42 1082 3810 B
+0.754 g
+f
+n
+2 42 1085 3810 B
+f
+n
+2 42 1088 3810 B
+0.75 g
+f
+n
+2 42 1091 3810 B
+f
+n
+2 42 1094 3810 B
+0.746 g
+f
+n
+2 42 1097 3810 B
+0.742 g
+f
+n
+2 42 1100 3810 B
+f
+n
+3 42 1103 3810 B
+0.738 g
+f
+n
+2 42 1107 3810 B
+0.734 g
+f
+n
+2 42 1110 3810 B
+0.73 g
+f
+n
+2 42 1113 3810 B
+0.727 g
+f
+n
+2 42 1116 3810 B
+f
+n
+2 42 1119 3810 B
+0.719 g
+f
+n
+2 42 1122 3810 B
+f
+n
+2 42 1125 3810 B
+0.711 g
+f
+n
+2 42 1128 3810 B
+0.707 g
+f
+n
+2 42 1131 3810 B
+f
+n
+2 42 1134 3810 B
+0.699 g
+f
+n
+3 42 1137 3810 B
+0.695 g
+f
+n
+2 42 1141 3810 B
+0.691 g
+f
+n
+2 42 1144 3810 B
+0.688 g
+f
+n
+2 42 1147 3810 B
+0.684 g
+f
+n
+2 42 1150 3810 B
+0.68 g
+f
+n
+2 42 1153 3810 B
+0.672 g
+f
+n
+2 42 1156 3810 B
+0.668 g
+f
+n
+2 42 1159 3810 B
+0.664 g
+f
+n
+2 42 1162 3810 B
+0.656 g
+f
+n
+2 42 1165 3810 B
+0.652 g
+f
+n
+2 42 1168 3810 B
+0.645 g
+f
+n
+3 42 1171 3810 B
+0.641 g
+f
+n
+2 42 1175 3810 B
+0.633 g
+f
+n
+2 42 1178 3810 B
+0.629 g
+f
+n
+2 42 1181 3810 B
+0.621 g
+f
+n
+2 42 1184 3810 B
+0.617 g
+f
+n
+2 42 1187 3810 B
+0.609 g
+f
+n
+2 42 1190 3810 B
+0.602 g
+f
+n
+2 42 1193 3810 B
+0.598 g
+f
+n
+2 42 1196 3810 B
+0.59 g
+f
+n
+2 42 1199 3810 B
+0.586 g
+f
+n
+3 42 1202 3810 B
+0.578 g
+f
+n
+2 42 1206 3810 B
+0.57 g
+f
+n
+2 42 1209 3810 B
+0.566 g
+f
+n
+2 42 1212 3810 B
+0.563 g
+f
+n
+2 42 1215 3810 B
+0.551 g
+f
+n
+2 42 1218 3810 B
+0.547 g
+f
+n
+2 42 1221 3810 B
+0.543 g
+f
+n
+2 42 1224 3810 B
+0.535 g
+f
+n
+2 42 1227 3810 B
+0.527 g
+f
+n
+2 42 1230 3810 B
+0.523 g
+f
+n
+2 42 1233 3810 B
+0.516 g
+f
+n
+3 42 1236 3810 B
+0.512 g
+f
+n
+2 42 1240 3810 B
+0.5 g
+f
+n
+2 42 1243 3810 B
+0.492 g
+f
+n
+2 42 1246 3810 B
+0.488 g
+f
+n
+2 42 1249 3810 B
+0.484 g
+f
+n
+2 42 1252 3810 B
+0.477 g
+f
+n
+2 42 1255 3810 B
+0.469 g
+f
+n
+2 42 1258 3810 B
+0.465 g
+f
+n
+2 42 1261 3810 B
+0.457 g
+f
+n
+2 42 1264 3810 B
+0.453 g
+f
+n
+2 42 1267 3810 B
+0.449 g
+f
+n
+3 42 1270 3810 B
+0.441 g
+f
+n
+2 42 1274 3810 B
+0.438 g
+f
+n
+2 42 1277 3810 B
+0.434 g
+f
+n
+2 42 1280 3810 B
+0.43 g
+f
+n
+2 42 1283 3810 B
+0.426 g
+f
+n
+2 42 1286 3810 B
+0.418 g
+f
+n
+2 42 1289 3810 B
+0.414 g
+f
+n
+2 42 1292 3810 B
+0.41 g
+f
+n
+2 42 1295 3810 B
+0.406 g
+f
+n
+2 42 1298 3810 B
+0.402 g
+f
+n
+2 42 1301 3810 B
+0.398 g
+f
+n
+3 42 1304 3810 B
+0.395 g
+f
+n
+2 42 1308 3810 B
+f
+n
+2 42 1311 3810 B
+0.391 g
+f
+n
+2 42 1314 3810 B
+0.387 g
+f
+n
+2 42 1317 3810 B
+0.383 g
+f
+n
+2 42 1320 3810 B
+f
+n
+2 42 1323 3810 B
+0.379 g
+f
+n
+2 42 1326 3810 B
+0.375 g
+f
+n
+2 42 1329 3810 B
+0.371 g
+f
+n
+2 42 1332 3810 B
+f
+n
+2 42 1335 3810 B
+0.367 g
+f
+n
+3 42 1338 3810 B
+f
+n
+2 42 1342 3810 B
+0.363 g
+f
+n
+2 42 1345 3810 B
+f
+n
+2 42 1348 3810 B
+0.359 g
+f
+n
+2 42 1351 3810 B
+f
+n
+2 42 1354 3810 B
+f
+n
+22 145 698 2681 B
+0.309 g
+f
+n
+23 145 721 2681 B
+f
+n
+22 145 745 2681 B
+f
+n
+22 145 768 2681 B
+f
+n
+23 145 791 2681 B
+f
+n
+22 145 815 2681 B
+f
+n
+23 145 838 2681 B
+0.305 g
+f
+n
+22 145 862 2681 B
+f
+n
+22 145 885 2681 B
+f
+n
+23 145 908 2681 B
+0.301 g
+f
+n
+22 145 932 2681 B
+f
+n
+22 145 955 2681 B
+f
+n
+23 145 978 2681 B
+0.297 g
+f
+n
+22 145 1002 2681 B
+f
+n
+22 145 1025 2681 B
+0.293 g
+f
+n
+23 145 1048 2681 B
+f
+n
+22 145 1072 2681 B
+0.289 g
+f
+n
+23 145 1095 2681 B
+f
+n
+22 145 1119 2681 B
+0.285 g
+f
+n
+22 145 1142 2681 B
+0.281 g
+f
+n
+23 145 1165 2681 B
+0.277 g
+f
+n
+22 145 1189 2681 B
+f
+n
+22 145 1212 2681 B
+0.273 g
+f
+n
+23 145 1235 2681 B
+0.27 g
+f
+n
+22 145 1259 2681 B
+0.266 g
+f
+n
+22 145 1282 2681 B
+0.262 g
+f
+n
+23 145 1305 2681 B
+0.258 g
+f
+n
+22 145 1329 2681 B
+0.254 g
+f
+n
+23 145 1352 2681 B
+0.25 g
+f
+n
+22 145 1376 2681 B
+0.246 g
+f
+n
+22 145 1399 2681 B
+0.242 g
+f
+n
+23 145 1422 2681 B
+0.238 g
+f
+n
+22 145 1446 2681 B
+0.23 g
+f
+n
+22 145 1469 2681 B
+0.227 g
+f
+n
+23 145 1492 2681 B
+0.223 g
+f
+n
+22 145 1516 2681 B
+0.215 g
+f
+n
+22 145 1539 2681 B
+0.211 g
+f
+n
+23 145 1562 2681 B
+0.203 g
+f
+n
+22 145 1586 2681 B
+0.199 g
+f
+n
+22 145 1609 2681 B
+0.195 g
+f
+n
+23 145 1632 2681 B
+0.188 g
+f
+n
+22 145 1656 2681 B
+0.184 g
+f
+n
+23 145 1679 2681 B
+0.176 g
+f
+n
+22 145 1703 2681 B
+0.172 g
+f
+n
+22 145 1726 2681 B
+0.164 g
+f
+n
+23 145 1749 2681 B
+0.16 g
+f
+n
+22 145 1773 2681 B
+0.152 g
+f
+n
+22 145 1796 2681 B
+0.148 g
+f
+n
+23 145 1819 2681 B
+0.141 g
+f
+n
+22 145 1843 2681 B
+0.137 g
+f
+n
+22 145 1866 2681 B
+0.129 g
+f
+n
+23 145 1889 2681 B
+0.125 g
+f
+n
+22 145 1913 2681 B
+0.121 g
+f
+n
+23 145 1936 2681 B
+0.113 g
+f
+n
+22 145 1960 2681 B
+0.109 g
+f
+n
+22 145 1983 2681 B
+0.105 g
+f
+n
+23 145 2006 2681 B
+0.098 g
+f
+n
+22 145 2030 2681 B
+0.094 g
+f
+n
+22 145 2053 2681 B
+0.086 g
+f
+n
+23 145 2076 2681 B
+0.082 g
+f
+n
+22 145 2100 2681 B
+0.078 g
+f
+n
+22 145 2123 2681 B
+0.074 g
+f
+n
+23 145 2146 2681 B
+0.07 g
+f
+n
+22 145 2170 2681 B
+0.066 g
+f
+n
+23 145 2193 2681 B
+0.063 g
+f
+n
+22 145 2217 2681 B
+0.055 g
+f
+n
+22 145 2240 2681 B
+f
+n
+23 145 2263 2681 B
+0.051 g
+f
+n
+22 145 2287 2681 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)1183 3758 MS (R)1194 3758 MS (C)1217 3758 MS (S)1240 3758 MS ( )1259 3758 MS (W)1268 3758 MS (o)1300 3758 MS (r)1317 3758 MS (k)1328 3758 MS (s)1345 3758 MS (h)1359 3758 MS (o)1375 3758 MS (p)1392 3758 MS ( )1409 3758 MS (o)1418 3758 MS (n)1436 3758 MS
+( )1452 3758 MS (O)1461 3758 MS (p)1486 3758 MS (e)1503 3758 MS (n)1519 3758 MS ( )1535 3758 MS (L)1544 3758 MS (a)1565 3758 MS (n)1581 3758 MS (g)1597 3758 MS (u)1614 3758 MS (a)1631 3758 MS (g)1646 3758 MS (e)1664 3758 MS ( )1679 3758 MS
+(A)1369 3799 MS (r)1393 3799 MS (c)1404 3799 MS (h)1420 3799 MS (i)1437 3799 MS (v)1447 3799 MS (e)1463 3799 MS (s)1479 3799 MS
+(3)2144 3778 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(E)700 2801 MS (x)766 2801 MS (a)820 2801 MS (m)868 2801 MS (p)951 2801 MS (l)1005 2801 MS (e)1035 2801 MS (s)1083 2801 MS (:)1125 2801 MS
+%%BeginFont: Wingdings05479700
+10 dict dup begin
+/FontType 3 def
+/FontMatrix [1 54 div 0 0 1 54 div 0 0] def
+/FontBBox [0 -48 74 11] def
+/Encoding 256 array def
+0 1 255 {Encoding exch /.notdef put} for
+/BuildGlyph {0 begin
+exch /CD get exch get /CI exch def
+CI 0 get 0 CI 1 4 getinterval aload pop setcachedevice
+CI 5 get CI 6 get true
+[1 0 0 -1 0 0] dup 4 CI 7 get put dup 5 CI 8 get put
+CI 9 get imagemask end}def
+/BuildGlyph load 0 5 dict put
+/BuildChar {1 index /Encoding get exch get
+1 index /BuildGlyph get exec} bind def
+/CD 227 dict def
+CD /.notdef[.24 0 0 0 0 1 1 0 0 {<>}]put
+Encoding 122 /c122 put CD /c122 [40 5 35 36 4 31 31 -5 35
+<~!$C\1!.XnH!WW0""98CO#QOh>&-)[f+92B15QCcY5QCcYJ,fQHJ,fQHs8W,us8W,us8W,us8W,us8W,us8W,us8W,us8W,us8W,uJ,fQHJ,fQH5QCcY5QCcY+92B1&-)[f#QOh>"98CO!WW0"!.XnH!$C\1~>]put
+end
+/Wingdings05479700 exch definefont pop
+%%EndFont
+[54.004 0 0 -54.004 0 0]/Wingdings05479700 MF
+(z)700 2990 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(<)766 2990 MS (r)806 2990 MS (i)832 2990 MS (g)851 2990 MS (h)893 2990 MS (t)935 2990 MS (s)958 2990 MS ( )996 2990 MS (x)1015 2990 MS (s)1053 2990 MS (i)1091 2990 MS (:)1110 2990 MS (t)1133 2990 MS (y)1157 2990 MS (p)1194 2990 MS (e)1236 2990 MS
+(:)1274 2990 MS (")1297 2990 MS (o)1329 2990 MS (l)1371 2990 MS (a)1390 2990 MS (c)1428 2990 MS (:)1466 2990 MS (a)1489 2990 MS (c)1528 2990 MS (c)1566 2990 MS (e)1604 2990 MS (s)1642 2990 MS (s)1680 2990 MS (")1719 2990 MS ( )1751 2990 MS
+(c)766 3072 MS (o)804 3072 MS (d)846 3072 MS (e)888 3072 MS (=)926 3072 MS (")966 3072 MS (s)998 3072 MS (t)1036 3072 MS (a)1059 3072 MS (n)1097 3072 MS (d)1139 3072 MS (a)1181 3072 MS (r)1219 3072 MS (d)1245 3072 MS (")1288 3072 MS (>)1320 3072 MS
+(O)1360 3072 MS (L)1413 3072 MS (A)1456 3072 MS (C)1504 3072 MS ( )1554 3072 MS (S)1573 3072 MS (t)1618 3072 MS (a)1641 3072 MS (n)1679 3072 MS (d)1721 3072 MS (a)1764 3072 MS (r)1802 3072 MS (d)1828 3072 MS ( )1870 3072 MS (U)1889 3072 MS (s)1938 3072 MS
+(e)1976 3072 MS ( )2014 3072 MS
+(G)766 3155 MS (u)819 3155 MS (i)861 3155 MS (d)880 3155 MS (e)922 3155 MS (l)960 3155 MS (i)979 3155 MS (n)998 3155 MS (e)1040 3155 MS (s)1078 3155 MS (<)1116 3155 MS (/)1156 3155 MS (r)1175 3155 MS (i)1201 3155 MS (g)1220 3155 MS (h)1262 3155 MS
+(t)1304 3155 MS (s)1327 3155 MS (>)1365 3155 MS
+[54.004 0 0 -54.004 0 0]/Wingdings05479700 MF
+(z)700 3253 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(<)766 3253 MS (r)806 3253 MS (i)832 3253 MS (g)851 3253 MS (h)893 3253 MS (t)935 3253 MS (s)958 3253 MS ( )996 3253 MS (x)1015 3253 MS (s)1053 3253 MS (i)1091 3253 MS (:)1110 3253 MS (t)1133 3253 MS (y)1157 3253 MS (p)1194 3253 MS (e)1236 3253 MS
+(:)1274 3253 MS (")1297 3253 MS (o)1329 3253 MS (l)1371 3253 MS (a)1390 3253 MS (c)1428 3253 MS (:)1466 3253 MS (a)1489 3253 MS (c)1528 3253 MS (c)1566 3253 MS (e)1604 3253 MS (s)1642 3253 MS (s)1680 3253 MS (")1719 3253 MS ( )1751 3253 MS
+(c)766 3336 MS (o)804 3336 MS (d)846 3336 MS (e)888 3336 MS (=)926 3336 MS (")966 3336 MS (r)998 3336 MS (e)1024 3336 MS (s)1062 3336 MS (t)1100 3336 MS (r)1124 3336 MS (i)1150 3336 MS (c)1169 3336 MS (t)1207 3336 MS (e)1230 3336 MS (d)1268 3336 MS
+(")1310 3336 MS (>)1343 3336 MS (P)1383 3336 MS (e)1428 3336 MS (r)1467 3336 MS (m)1494 3336 MS (i)1554 3336 MS (s)1573 3336 MS (s)1611 3336 MS (i)1649 3336 MS (o)1668 3336 MS (n)1710 3336 MS ( )1752 3336 MS (f)1772 3336 MS (r)1795 3336 MS (o)1821 3336 MS
+(m)1863 3336 MS ( )1923 3336 MS (t)1942 3336 MS (h)1965 3336 MS (e)2007 3336 MS ( )2045 3336 MS
+(d)766 3418 MS (e)808 3418 MS (p)846 3418 MS (o)888 3418 MS (s)930 3418 MS (i)968 3418 MS (t)987 3418 MS (o)1010 3418 MS (r)1052 3418 MS ( )1078 3418 MS (i)1097 3418 MS (s)1116 3418 MS ( )1154 3418 MS (r)1173 3418 MS (e)1199 3418 MS (q)1237 3418 MS
+(u)1279 3418 MS (i)1321 3418 MS (r)1340 3418 MS (e)1367 3418 MS (d)1405 3418 MS (.)1447 3418 MS ( )1466 3418 MS (L)1485 3418 MS (o)1527 3418 MS (g)1569 3418 MS ( )1611 3418 MS (i)1630 3418 MS (n)1649 3418 MS ( )1691 3418 MS (t)1710 3418 MS (o)1733 3418 MS
+( )1774 3418 MS
+(h)766 3500 MS (t)808 3500 MS (t)831 3500 MS (p)854 3500 MS (:)896 3500 MS (/)919 3500 MS (/)938 3500 MS (w)957 3500 MS (w)1010 3500 MS (w)1063 3500 MS (.)1116 3500 MS (a)1135 3500 MS (i)1173 3500 MS (l)1192 3500 MS (l)1211 3500 MS (a)1230 3500 MS
+(.)1268 3500 MS (o)1287 3500 MS (r)1329 3500 MS (g)1355 3500 MS ( )1397 3500 MS (a)1416 3500 MS (n)1454 3500 MS (d)1496 3500 MS ( )1538 3500 MS (f)1557 3500 MS (o)1580 3500 MS (l)1622 3500 MS (l)1641 3500 MS (o)1660 3500 MS (w)1702 3500 MS ( )1755 3500 MS
+(i)766 3582 MS (n)785 3582 MS (s)827 3582 MS (t)865 3582 MS (r)888 3582 MS (u)914 3582 MS (c)956 3582 MS (t)994 3582 MS (i)1017 3582 MS (o)1036 3582 MS (n)1078 3582 MS (s)1120 3582 MS ( )1158 3582 MS (f)1177 3582 MS (o)1200 3582 MS (r)1242 3582 MS
+( )1268 3582 MS (t)1287 3582 MS (h)1310 3582 MS (i)1352 3582 MS (s)1371 3582 MS ( )1409 3582 MS (r)1428 3582 MS (e)1454 3582 MS (s)1492 3582 MS (o)1530 3582 MS (u)1572 3582 MS (r)1615 3582 MS (c)1641 3582 MS (e)1679 3582 MS (.)1717 3582 MS (<)1736 3582 MS
+(/)1777 3582 MS (r)1796 3582 MS (i)1822 3582 MS (g)1841 3582 MS (h)1883 3582 MS (t)1925 3582 MS (s)1948 3582 MS (>)1986 3582 MS
+gs
+n
+1760 1319 551 2534 CB
+n
+1752 1311 555 2538 B
+cp
+CM [1 0 0 1 551 2534] concat
+s
+SM
+gr
+n
+1758 1318 2576 2534 B
+1 g
+f
+n
+278 40 2649 2534 B
+0.309 g
+f
+n
+278 40 2649 2575 B
+f
+n
+278 41 2649 2616 B
+f
+n
+278 40 2649 2658 B
+f
+n
+278 40 2649 2699 B
+0.305 g
+f
+n
+278 40 2649 2740 B
+f
+n
+278 41 2649 2781 B
+0.301 g
+f
+n
+278 40 2649 2823 B
+0.297 g
+f
+n
+278 40 2649 2864 B
+0.293 g
+f
+n
+278 40 2649 2905 B
+0.289 g
+f
+n
+278 40 2649 2946 B
+0.285 g
+f
+n
+278 41 2649 2987 B
+0.281 g
+f
+n
+278 40 2649 3029 B
+0.277 g
+f
+n
+278 40 2649 3070 B
+0.273 g
+f
+n
+278 40 2649 3111 B
+0.266 g
+f
+n
+278 41 2649 3152 B
+0.262 g
+f
+n
+278 40 2649 3194 B
+0.254 g
+f
+n
+278 40 2649 3235 B
+0.246 g
+f
+n
+278 40 2649 3276 B
+0.242 g
+f
+n
+278 40 2649 3317 B
+0.234 g
+f
+n
+278 41 2649 3358 B
+0.23 g
+f
+n
+278 40 2649 3400 B
+0.223 g
+f
+n
+278 40 2649 3441 B
+0.219 g
+f
+n
+278 40 2649 3482 B
+0.211 g
+f
+n
+278 40 2649 3523 B
+0.207 g
+f
+n
+278 41 2649 3564 B
+0.203 g
+f
+n
+278 40 2649 3606 B
+0.199 g
+f
+n
+278 40 2649 3647 B
+f
+n
+278 40 2649 3688 B
+0.195 g
+f
+n
+278 41 2649 3729 B
+0.191 g
+f
+n
+278 40 2649 3771 B
+f
+n
+278 40 2649 3812 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+2605 2871 M
+2605 2901 L
+3514 2901 L
+3514 2871 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 2605 2873 B
+0.645 g
+f
+n
+908 0 2605 2877 B
+f
+n
+908 0 2605 2881 B
+f
+n
+908 0 2605 2885 B
+f
+n
+908 0 2605 2889 B
+f
+n
+908 0 2605 2893 B
+f
+n
+908 0 2605 2897 B
+f
+gr
+n
+2 42 2708 3810 B
+0.359 g
+f
+n
+2 42 2711 3810 B
+f
+n
+2 42 2714 3810 B
+f
+n
+2 42 2717 3810 B
+0.363 g
+f
+n
+2 42 2720 3810 B
+f
+n
+3 42 2723 3810 B
+0.367 g
+f
+n
+2 42 2727 3810 B
+f
+n
+2 42 2730 3810 B
+0.371 g
+f
+n
+2 42 2733 3810 B
+f
+n
+2 42 2736 3810 B
+0.375 g
+f
+n
+2 42 2739 3810 B
+0.379 g
+f
+n
+2 42 2742 3810 B
+0.383 g
+f
+n
+2 42 2745 3810 B
+f
+n
+2 42 2748 3810 B
+0.387 g
+f
+n
+2 42 2751 3810 B
+0.391 g
+f
+n
+2 42 2754 3810 B
+0.395 g
+f
+n
+3 42 2757 3810 B
+f
+n
+2 42 2761 3810 B
+0.398 g
+f
+n
+2 42 2764 3810 B
+0.402 g
+f
+n
+2 42 2767 3810 B
+0.406 g
+f
+n
+2 42 2770 3810 B
+0.41 g
+f
+n
+2 42 2773 3810 B
+0.414 g
+f
+n
+2 42 2776 3810 B
+0.418 g
+f
+n
+2 42 2779 3810 B
+0.426 g
+f
+n
+2 42 2782 3810 B
+0.43 g
+f
+n
+2 42 2785 3810 B
+0.434 g
+f
+n
+2 42 2788 3810 B
+0.438 g
+f
+n
+3 42 2791 3810 B
+0.441 g
+f
+n
+2 42 2795 3810 B
+0.449 g
+f
+n
+2 42 2798 3810 B
+0.453 g
+f
+n
+2 42 2801 3810 B
+0.457 g
+f
+n
+2 42 2804 3810 B
+0.465 g
+f
+n
+2 42 2807 3810 B
+0.469 g
+f
+n
+2 42 2810 3810 B
+0.477 g
+f
+n
+2 42 2813 3810 B
+0.484 g
+f
+n
+2 42 2816 3810 B
+0.488 g
+f
+n
+2 42 2819 3810 B
+0.492 g
+f
+n
+2 42 2822 3810 B
+0.5 g
+f
+n
+3 42 2825 3810 B
+0.512 g
+f
+n
+2 42 2829 3810 B
+0.516 g
+f
+n
+2 42 2832 3810 B
+0.523 g
+f
+n
+2 42 2835 3810 B
+0.527 g
+f
+n
+2 42 2838 3810 B
+0.535 g
+f
+n
+2 42 2841 3810 B
+0.543 g
+f
+n
+2 42 2844 3810 B
+0.547 g
+f
+n
+2 42 2847 3810 B
+0.551 g
+f
+n
+2 42 2850 3810 B
+0.563 g
+f
+n
+2 42 2853 3810 B
+0.566 g
+f
+n
+2 42 2856 3810 B
+0.57 g
+f
+n
+3 42 2859 3810 B
+0.578 g
+f
+n
+2 42 2863 3810 B
+0.586 g
+f
+n
+2 42 2866 3810 B
+0.59 g
+f
+n
+2 42 2869 3810 B
+0.598 g
+f
+n
+2 42 2872 3810 B
+0.602 g
+f
+n
+2 42 2875 3810 B
+0.609 g
+f
+n
+2 42 2878 3810 B
+0.617 g
+f
+n
+2 42 2881 3810 B
+0.621 g
+f
+n
+2 42 2884 3810 B
+0.629 g
+f
+n
+2 42 2887 3810 B
+0.633 g
+f
+n
+3 42 2890 3810 B
+0.641 g
+f
+n
+2 42 2894 3810 B
+0.645 g
+f
+n
+2 42 2897 3810 B
+0.652 g
+f
+n
+2 42 2900 3810 B
+0.656 g
+f
+n
+2 42 2903 3810 B
+0.664 g
+f
+n
+2 42 2906 3810 B
+0.668 g
+f
+n
+2 42 2909 3810 B
+0.672 g
+f
+n
+2 42 2912 3810 B
+0.68 g
+f
+n
+2 42 2915 3810 B
+0.684 g
+f
+n
+2 42 2918 3810 B
+0.688 g
+f
+n
+2 42 2921 3810 B
+0.691 g
+f
+n
+3 42 2924 3810 B
+0.695 g
+f
+n
+2 42 2928 3810 B
+0.699 g
+f
+n
+2 42 2931 3810 B
+0.707 g
+f
+n
+2 42 2934 3810 B
+f
+n
+2 42 2937 3810 B
+0.711 g
+f
+n
+2 42 2940 3810 B
+0.719 g
+f
+n
+2 42 2943 3810 B
+f
+n
+2 42 2946 3810 B
+0.727 g
+f
+n
+2 42 2949 3810 B
+f
+n
+2 42 2952 3810 B
+0.73 g
+f
+n
+2 42 2955 3810 B
+0.734 g
+f
+n
+3 42 2958 3810 B
+0.738 g
+f
+n
+2 42 2962 3810 B
+0.742 g
+f
+n
+2 42 2965 3810 B
+f
+n
+2 42 2968 3810 B
+0.746 g
+f
+n
+2 42 2971 3810 B
+0.75 g
+f
+n
+2 42 2974 3810 B
+f
+n
+2 42 2977 3810 B
+0.754 g
+f
+n
+2 42 2980 3810 B
+f
+n
+2 42 2983 3810 B
+0.758 g
+f
+n
+2 42 2986 3810 B
+0.762 g
+f
+n
+2 42 2989 3810 B
+f
+n
+3 42 2992 3810 B
+0.766 g
+f
+n
+2 42 2996 3810 B
+f
+n
+2 42 2999 3810 B
+f
+n
+2 42 3002 3810 B
+0.77 g
+f
+n
+2 42 3005 3810 B
+f
+n
+2 42 3008 3810 B
+0.773 g
+f
+n
+2 42 3011 3810 B
+f
+n
+2 42 3014 3810 B
+f
+n
+2 42 3017 3810 B
+0.777 g
+f
+n
+2 42 3020 3810 B
+f
+n
+2 42 3023 3810 B
+f
+n
+3 42 3026 3810 B
+f
+n
+2 42 3030 3810 B
+0.781 g
+f
+n
+2 42 3033 3810 B
+f
+n
+2 42 3036 3810 B
+f
+n
+2 42 3039 3810 B
+f
+n
+2 42 3042 3810 B
+0.785 g
+f
+n
+2 42 3045 3810 B
+f
+n
+2 42 3048 3810 B
+0.781 g
+f
+n
+2 42 3051 3810 B
+f
+n
+2 42 3054 3810 B
+f
+n
+2 42 3057 3810 B
+f
+n
+3 42 3060 3810 B
+0.777 g
+f
+n
+2 42 3064 3810 B
+f
+n
+2 42 3067 3810 B
+f
+n
+2 42 3070 3810 B
+f
+n
+2 42 3073 3810 B
+0.773 g
+f
+n
+2 42 3076 3810 B
+f
+n
+2 42 3079 3810 B
+f
+n
+2 42 3082 3810 B
+0.77 g
+f
+n
+2 42 3085 3810 B
+f
+n
+2 42 3088 3810 B
+0.766 g
+f
+n
+2 42 3091 3810 B
+f
+n
+3 42 3094 3810 B
+f
+n
+2 42 3098 3810 B
+0.762 g
+f
+n
+2 42 3101 3810 B
+f
+n
+2 42 3104 3810 B
+0.758 g
+f
+n
+2 42 3107 3810 B
+0.754 g
+f
+n
+2 42 3110 3810 B
+f
+n
+2 42 3113 3810 B
+0.75 g
+f
+n
+2 42 3116 3810 B
+f
+n
+2 42 3119 3810 B
+0.746 g
+f
+n
+2 42 3122 3810 B
+0.742 g
+f
+n
+2 42 3125 3810 B
+f
+n
+3 42 3128 3810 B
+0.738 g
+f
+n
+2 42 3132 3810 B
+0.734 g
+f
+n
+2 42 3135 3810 B
+0.73 g
+f
+n
+2 42 3138 3810 B
+0.727 g
+f
+n
+2 42 3141 3810 B
+f
+n
+2 42 3144 3810 B
+0.719 g
+f
+n
+2 42 3147 3810 B
+f
+n
+2 42 3150 3810 B
+0.711 g
+f
+n
+2 42 3153 3810 B
+0.707 g
+f
+n
+2 42 3156 3810 B
+f
+n
+2 42 3159 3810 B
+0.699 g
+f
+n
+3 42 3162 3810 B
+0.695 g
+f
+n
+2 42 3166 3810 B
+0.691 g
+f
+n
+2 42 3169 3810 B
+0.688 g
+f
+n
+2 42 3172 3810 B
+0.684 g
+f
+n
+2 42 3175 3810 B
+0.68 g
+f
+n
+2 42 3178 3810 B
+0.672 g
+f
+n
+2 42 3181 3810 B
+0.668 g
+f
+n
+2 42 3184 3810 B
+0.664 g
+f
+n
+2 42 3187 3810 B
+0.656 g
+f
+n
+2 42 3190 3810 B
+0.652 g
+f
+n
+2 42 3193 3810 B
+0.645 g
+f
+n
+3 42 3196 3810 B
+0.641 g
+f
+n
+2 42 3200 3810 B
+0.633 g
+f
+n
+2 42 3203 3810 B
+0.629 g
+f
+n
+2 42 3206 3810 B
+0.621 g
+f
+n
+2 42 3209 3810 B
+0.617 g
+f
+n
+2 42 3212 3810 B
+0.609 g
+f
+n
+2 42 3215 3810 B
+0.602 g
+f
+n
+2 42 3218 3810 B
+0.598 g
+f
+n
+2 42 3221 3810 B
+0.59 g
+f
+n
+2 42 3224 3810 B
+0.586 g
+f
+n
+3 42 3227 3810 B
+0.578 g
+f
+n
+2 42 3231 3810 B
+0.57 g
+f
+n
+2 42 3234 3810 B
+0.566 g
+f
+n
+2 42 3237 3810 B
+0.563 g
+f
+n
+2 42 3240 3810 B
+0.551 g
+f
+n
+2 42 3243 3810 B
+0.547 g
+f
+n
+2 42 3246 3810 B
+0.543 g
+f
+n
+2 42 3249 3810 B
+0.535 g
+f
+n
+2 42 3252 3810 B
+0.527 g
+f
+n
+2 42 3255 3810 B
+0.523 g
+f
+n
+2 42 3258 3810 B
+0.516 g
+f
+n
+3 42 3261 3810 B
+0.512 g
+f
+n
+2 42 3265 3810 B
+0.5 g
+f
+n
+2 42 3268 3810 B
+0.492 g
+f
+n
+2 42 3271 3810 B
+0.488 g
+f
+n
+2 42 3274 3810 B
+0.484 g
+f
+n
+2 42 3277 3810 B
+0.477 g
+f
+n
+2 42 3280 3810 B
+0.469 g
+f
+n
+2 42 3283 3810 B
+0.465 g
+f
+n
+2 42 3286 3810 B
+0.457 g
+f
+n
+2 42 3289 3810 B
+0.453 g
+f
+n
+2 42 3292 3810 B
+0.449 g
+f
+n
+3 42 3295 3810 B
+0.441 g
+f
+n
+2 42 3299 3810 B
+0.438 g
+f
+n
+2 42 3302 3810 B
+0.434 g
+f
+n
+2 42 3305 3810 B
+0.43 g
+f
+n
+2 42 3308 3810 B
+0.426 g
+f
+n
+2 42 3311 3810 B
+0.418 g
+f
+n
+2 42 3314 3810 B
+0.414 g
+f
+n
+2 42 3317 3810 B
+0.41 g
+f
+n
+2 42 3320 3810 B
+0.406 g
+f
+n
+2 42 3323 3810 B
+0.402 g
+f
+n
+2 42 3326 3810 B
+0.398 g
+f
+n
+3 42 3329 3810 B
+0.395 g
+f
+n
+2 42 3333 3810 B
+f
+n
+2 42 3336 3810 B
+0.391 g
+f
+n
+2 42 3339 3810 B
+0.387 g
+f
+n
+2 42 3342 3810 B
+0.383 g
+f
+n
+2 42 3345 3810 B
+f
+n
+2 42 3348 3810 B
+0.379 g
+f
+n
+2 42 3351 3810 B
+0.375 g
+f
+n
+2 42 3354 3810 B
+0.371 g
+f
+n
+2 42 3357 3810 B
+f
+n
+2 42 3360 3810 B
+0.367 g
+f
+n
+3 42 3363 3810 B
+f
+n
+2 42 3367 3810 B
+0.363 g
+f
+n
+2 42 3370 3810 B
+f
+n
+2 42 3373 3810 B
+0.359 g
+f
+n
+2 42 3376 3810 B
+f
+n
+2 42 3379 3810 B
+f
+n
+22 145 2723 2681 B
+0.309 g
+f
+n
+23 145 2746 2681 B
+f
+n
+22 145 2770 2681 B
+f
+n
+22 145 2793 2681 B
+f
+n
+23 145 2816 2681 B
+f
+n
+22 145 2840 2681 B
+f
+n
+23 145 2863 2681 B
+0.305 g
+f
+n
+22 145 2887 2681 B
+f
+n
+22 145 2910 2681 B
+f
+n
+23 145 2933 2681 B
+0.301 g
+f
+n
+22 145 2957 2681 B
+f
+n
+22 145 2980 2681 B
+f
+n
+23 145 3003 2681 B
+0.297 g
+f
+n
+22 145 3027 2681 B
+f
+n
+22 145 3050 2681 B
+0.293 g
+f
+n
+23 145 3073 2681 B
+f
+n
+22 145 3097 2681 B
+0.289 g
+f
+n
+23 145 3120 2681 B
+f
+n
+22 145 3144 2681 B
+0.285 g
+f
+n
+22 145 3167 2681 B
+0.281 g
+f
+n
+23 145 3190 2681 B
+0.277 g
+f
+n
+22 145 3214 2681 B
+f
+n
+22 145 3237 2681 B
+0.273 g
+f
+n
+23 145 3260 2681 B
+0.27 g
+f
+n
+22 145 3284 2681 B
+0.266 g
+f
+n
+22 145 3307 2681 B
+0.262 g
+f
+n
+23 145 3330 2681 B
+0.258 g
+f
+n
+22 145 3354 2681 B
+0.254 g
+f
+n
+23 145 3377 2681 B
+0.25 g
+f
+n
+22 145 3401 2681 B
+0.246 g
+f
+n
+22 145 3424 2681 B
+0.242 g
+f
+n
+23 145 3447 2681 B
+0.238 g
+f
+n
+22 145 3471 2681 B
+0.23 g
+f
+n
+22 145 3494 2681 B
+0.227 g
+f
+n
+23 145 3517 2681 B
+0.223 g
+f
+n
+22 145 3541 2681 B
+0.215 g
+f
+n
+22 145 3564 2681 B
+0.211 g
+f
+n
+23 145 3587 2681 B
+0.203 g
+f
+n
+22 145 3611 2681 B
+0.199 g
+f
+n
+22 145 3634 2681 B
+0.195 g
+f
+n
+23 145 3657 2681 B
+0.188 g
+f
+n
+22 145 3681 2681 B
+0.184 g
+f
+n
+23 145 3704 2681 B
+0.176 g
+f
+n
+22 145 3728 2681 B
+0.172 g
+f
+n
+22 145 3751 2681 B
+0.164 g
+f
+n
+23 145 3774 2681 B
+0.16 g
+f
+n
+22 145 3798 2681 B
+0.152 g
+f
+n
+22 145 3821 2681 B
+0.148 g
+f
+n
+23 145 3844 2681 B
+0.141 g
+f
+n
+22 145 3868 2681 B
+0.137 g
+f
+n
+22 145 3891 2681 B
+0.129 g
+f
+n
+23 145 3914 2681 B
+0.125 g
+f
+n
+22 145 3938 2681 B
+0.121 g
+f
+n
+23 145 3961 2681 B
+0.113 g
+f
+n
+22 145 3985 2681 B
+0.109 g
+f
+n
+22 145 4008 2681 B
+0.105 g
+f
+n
+23 145 4031 2681 B
+0.098 g
+f
+n
+22 145 4055 2681 B
+0.094 g
+f
+n
+22 145 4078 2681 B
+0.086 g
+f
+n
+23 145 4101 2681 B
+0.082 g
+f
+n
+22 145 4125 2681 B
+0.078 g
+f
+n
+22 145 4148 2681 B
+0.074 g
+f
+n
+23 145 4171 2681 B
+0.07 g
+f
+n
+22 145 4195 2681 B
+0.066 g
+f
+n
+23 145 4218 2681 B
+0.063 g
+f
+n
+22 145 4242 2681 B
+0.055 g
+f
+n
+22 145 4265 2681 B
+f
+n
+23 145 4288 2681 B
+0.051 g
+f
+n
+22 145 4312 2681 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)3208 3758 MS (R)3219 3758 MS (C)3242 3758 MS (S)3265 3758 MS ( )3284 3758 MS (W)3293 3758 MS (o)3325 3758 MS (r)3342 3758 MS (k)3353 3758 MS (s)3370 3758 MS (h)3384 3758 MS (o)3400 3758 MS (p)3417 3758 MS ( )3434 3758 MS (o)3443 3758 MS (n)3461 3758 MS
+( )3477 3758 MS (O)3486 3758 MS (p)3511 3758 MS (e)3528 3758 MS (n)3544 3758 MS ( )3560 3758 MS (L)3569 3758 MS (a)3590 3758 MS (n)3606 3758 MS (g)3622 3758 MS (u)3639 3758 MS (a)3656 3758 MS (g)3671 3758 MS (e)3689 3758 MS ( )3704 3758 MS
+(A)3394 3799 MS (r)3418 3799 MS (c)3429 3799 MS (h)3445 3799 MS (i)3462 3799 MS (v)3472 3799 MS (e)3488 3799 MS (s)3504 3799 MS
+(4)4169 3778 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(V)2725 2801 MS (o)2803 2801 MS (c)2857 2801 MS (a)2905 2801 MS (b)2952 2801 MS (u)3006 2801 MS (l)3060 2801 MS (a)3090 2801 MS (r)3138 2801 MS (y)3174 2801 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 3000 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(4)2842 3000 MS ( )2885 3000 MS (l)2907 3000 MS (e)2929 3000 MS (v)2973 3000 MS (e)3015 3000 MS (l)3058 3000 MS (s)3080 3000 MS ( )3123 3000 MS (o)3145 3000 MS (f)3193 3000 MS ( )3219 3000 MS (d)3241 3000 MS (i)3289 3000 MS (s)3311 3000 MS (t)3354 3000 MS
+(i)3380 3000 MS (n)3402 3000 MS (c)3450 3000 MS (t)3493 3000 MS (i)3519 3000 MS (o)3541 3000 MS (n)3589 3000 MS (:)3636 3000 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(1)2813 3101 MS (.)2851 3101 MS
+(R)2916 3101 MS (e)2965 3101 MS (s)3003 3101 MS (t)3041 3101 MS (r)3064 3101 MS (i)3090 3101 MS (c)3110 3101 MS (t)3148 3101 MS (e)3171 3101 MS (d)3209 3101 MS
+(2)2813 3199 MS (.)2851 3199 MS
+(S)2916 3199 MS (t)2961 3199 MS (a)2984 3199 MS (n)3022 3199 MS (d)3064 3199 MS (a)3106 3199 MS (r)3144 3199 MS (d)3170 3199 MS
+(3)2813 3298 MS (.)2851 3298 MS
+(N)2916 3298 MS (o)2965 3298 MS (n)3007 3298 MS
+(-)3049 3298 MS
+(p)3072 3298 MS (r)3114 3298 MS (o)3140 3298 MS (f)3182 3298 MS (i)3205 3298 MS (t)3224 3298 MS
+(4)2813 3397 MS (.)2851 3397 MS
+(C)2916 3397 MS (o)2965 3397 MS (m)3007 3397 MS (m)3068 3397 MS (e)3128 3397 MS (r)3167 3397 MS (c)3193 3397 MS (i)3231 3397 MS (a)3250 3397 MS (l)3288 3397 MS
+gs
+n
+1760 1319 2576 2534 CB
+n
+1752 1311 2580 2538 B
+cp
+CM [1 0 0 1 2576 2534] concat
+s
+SM
+gr
+n
+1758 1319 551 4273 B
+1 g
+f
+n
+278 40 624 4273 B
+0.309 g
+f
+n
+278 40 624 4314 B
+f
+n
+278 41 624 4355 B
+f
+n
+278 40 624 4397 B
+f
+n
+278 40 624 4438 B
+0.305 g
+f
+n
+278 40 624 4479 B
+f
+n
+278 41 624 4520 B
+0.301 g
+f
+n
+278 40 624 4562 B
+0.297 g
+f
+n
+278 40 624 4603 B
+0.293 g
+f
+n
+278 40 624 4644 B
+0.289 g
+f
+n
+278 40 624 4685 B
+0.285 g
+f
+n
+278 41 624 4726 B
+0.281 g
+f
+n
+278 40 624 4768 B
+0.277 g
+f
+n
+278 40 624 4809 B
+0.273 g
+f
+n
+278 40 624 4850 B
+0.266 g
+f
+n
+278 41 624 4891 B
+0.262 g
+f
+n
+278 40 624 4933 B
+0.254 g
+f
+n
+278 40 624 4974 B
+0.246 g
+f
+n
+278 40 624 5015 B
+0.242 g
+f
+n
+278 40 624 5056 B
+0.234 g
+f
+n
+278 41 624 5097 B
+0.23 g
+f
+n
+278 40 624 5139 B
+0.223 g
+f
+n
+278 40 624 5180 B
+0.219 g
+f
+n
+278 40 624 5221 B
+0.211 g
+f
+n
+278 40 624 5262 B
+0.207 g
+f
+n
+278 41 624 5303 B
+0.203 g
+f
+n
+278 40 624 5345 B
+0.199 g
+f
+n
+278 40 624 5386 B
+f
+n
+278 40 624 5427 B
+0.195 g
+f
+n
+278 41 624 5468 B
+0.191 g
+f
+n
+278 40 624 5510 B
+f
+n
+278 40 624 5551 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+580 4610 M
+580 4640 L
+1489 4640 L
+1489 4610 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 580 4612 B
+0.645 g
+f
+n
+908 0 580 4616 B
+f
+n
+908 0 580 4620 B
+f
+n
+908 0 580 4624 B
+f
+n
+908 0 580 4628 B
+f
+n
+908 0 580 4632 B
+f
+n
+908 0 580 4636 B
+f
+gr
+n
+2 42 683 5549 B
+0.359 g
+f
+n
+2 42 686 5549 B
+f
+n
+2 42 689 5549 B
+f
+n
+2 42 692 5549 B
+0.363 g
+f
+n
+2 42 695 5549 B
+f
+n
+3 42 698 5549 B
+0.367 g
+f
+n
+2 42 702 5549 B
+f
+n
+2 42 705 5549 B
+0.371 g
+f
+n
+2 42 708 5549 B
+f
+n
+2 42 711 5549 B
+0.375 g
+f
+n
+2 42 714 5549 B
+0.379 g
+f
+n
+2 42 717 5549 B
+0.383 g
+f
+n
+2 42 720 5549 B
+f
+n
+2 42 723 5549 B
+0.387 g
+f
+n
+2 42 726 5549 B
+0.391 g
+f
+n
+2 42 729 5549 B
+0.395 g
+f
+n
+3 42 732 5549 B
+f
+n
+2 42 736 5549 B
+0.398 g
+f
+n
+2 42 739 5549 B
+0.402 g
+f
+n
+2 42 742 5549 B
+0.406 g
+f
+n
+2 42 745 5549 B
+0.41 g
+f
+n
+2 42 748 5549 B
+0.414 g
+f
+n
+2 42 751 5549 B
+0.418 g
+f
+n
+2 42 754 5549 B
+0.426 g
+f
+n
+2 42 757 5549 B
+0.43 g
+f
+n
+2 42 760 5549 B
+0.434 g
+f
+n
+2 42 763 5549 B
+0.438 g
+f
+n
+3 42 766 5549 B
+0.441 g
+f
+n
+2 42 770 5549 B
+0.449 g
+f
+n
+2 42 773 5549 B
+0.453 g
+f
+n
+2 42 776 5549 B
+0.457 g
+f
+n
+2 42 779 5549 B
+0.465 g
+f
+n
+2 42 782 5549 B
+0.469 g
+f
+n
+2 42 785 5549 B
+0.477 g
+f
+n
+2 42 788 5549 B
+0.484 g
+f
+n
+2 42 791 5549 B
+0.488 g
+f
+n
+2 42 794 5549 B
+0.492 g
+f
+n
+2 42 797 5549 B
+0.5 g
+f
+n
+3 42 800 5549 B
+0.512 g
+f
+n
+2 42 804 5549 B
+0.516 g
+f
+n
+2 42 807 5549 B
+0.523 g
+f
+n
+2 42 810 5549 B
+0.527 g
+f
+n
+2 42 813 5549 B
+0.535 g
+f
+n
+2 42 816 5549 B
+0.543 g
+f
+n
+2 42 819 5549 B
+0.547 g
+f
+n
+2 42 822 5549 B
+0.551 g
+f
+n
+2 42 825 5549 B
+0.563 g
+f
+n
+2 42 828 5549 B
+0.566 g
+f
+n
+2 42 831 5549 B
+0.57 g
+f
+n
+3 42 834 5549 B
+0.578 g
+f
+n
+2 42 838 5549 B
+0.586 g
+f
+n
+2 42 841 5549 B
+0.59 g
+f
+n
+2 42 844 5549 B
+0.598 g
+f
+n
+2 42 847 5549 B
+0.602 g
+f
+n
+2 42 850 5549 B
+0.609 g
+f
+n
+2 42 853 5549 B
+0.617 g
+f
+n
+2 42 856 5549 B
+0.621 g
+f
+n
+2 42 859 5549 B
+0.629 g
+f
+n
+2 42 862 5549 B
+0.633 g
+f
+n
+3 42 865 5549 B
+0.641 g
+f
+n
+2 42 869 5549 B
+0.645 g
+f
+n
+2 42 872 5549 B
+0.652 g
+f
+n
+2 42 875 5549 B
+0.656 g
+f
+n
+2 42 878 5549 B
+0.664 g
+f
+n
+2 42 881 5549 B
+0.668 g
+f
+n
+2 42 884 5549 B
+0.672 g
+f
+n
+2 42 887 5549 B
+0.68 g
+f
+n
+2 42 890 5549 B
+0.684 g
+f
+n
+2 42 893 5549 B
+0.688 g
+f
+n
+2 42 896 5549 B
+0.691 g
+f
+n
+3 42 899 5549 B
+0.695 g
+f
+n
+2 42 903 5549 B
+0.699 g
+f
+n
+2 42 906 5549 B
+0.707 g
+f
+n
+2 42 909 5549 B
+f
+n
+2 42 912 5549 B
+0.711 g
+f
+n
+2 42 915 5549 B
+0.719 g
+f
+n
+2 42 918 5549 B
+f
+n
+2 42 921 5549 B
+0.727 g
+f
+n
+2 42 924 5549 B
+f
+n
+2 42 927 5549 B
+0.73 g
+f
+n
+2 42 930 5549 B
+0.734 g
+f
+n
+3 42 933 5549 B
+0.738 g
+f
+n
+2 42 937 5549 B
+0.742 g
+f
+n
+2 42 940 5549 B
+f
+n
+2 42 943 5549 B
+0.746 g
+f
+n
+2 42 946 5549 B
+0.75 g
+f
+n
+2 42 949 5549 B
+f
+n
+2 42 952 5549 B
+0.754 g
+f
+n
+2 42 955 5549 B
+f
+n
+2 42 958 5549 B
+0.758 g
+f
+n
+2 42 961 5549 B
+0.762 g
+f
+n
+2 42 964 5549 B
+f
+n
+3 42 967 5549 B
+0.766 g
+f
+n
+2 42 971 5549 B
+f
+n
+2 42 974 5549 B
+f
+n
+2 42 977 5549 B
+0.77 g
+f
+n
+2 42 980 5549 B
+f
+n
+2 42 983 5549 B
+0.773 g
+f
+n
+2 42 986 5549 B
+f
+n
+2 42 989 5549 B
+f
+n
+2 42 992 5549 B
+0.777 g
+f
+n
+2 42 995 5549 B
+f
+n
+2 42 998 5549 B
+f
+n
+3 42 1001 5549 B
+f
+n
+2 42 1005 5549 B
+0.781 g
+f
+n
+2 42 1008 5549 B
+f
+n
+2 42 1011 5549 B
+f
+n
+2 42 1014 5549 B
+f
+n
+2 42 1017 5549 B
+0.785 g
+f
+n
+2 42 1020 5549 B
+f
+n
+2 42 1023 5549 B
+0.781 g
+f
+n
+2 42 1026 5549 B
+f
+n
+2 42 1029 5549 B
+f
+n
+2 42 1032 5549 B
+f
+n
+3 42 1035 5549 B
+0.777 g
+f
+n
+2 42 1039 5549 B
+f
+n
+2 42 1042 5549 B
+f
+n
+2 42 1045 5549 B
+f
+n
+2 42 1048 5549 B
+0.773 g
+f
+n
+2 42 1051 5549 B
+f
+n
+2 42 1054 5549 B
+f
+n
+2 42 1057 5549 B
+0.77 g
+f
+n
+2 42 1060 5549 B
+f
+n
+2 42 1063 5549 B
+0.766 g
+f
+n
+2 42 1066 5549 B
+f
+n
+3 42 1069 5549 B
+f
+n
+2 42 1073 5549 B
+0.762 g
+f
+n
+2 42 1076 5549 B
+f
+n
+2 42 1079 5549 B
+0.758 g
+f
+n
+2 42 1082 5549 B
+0.754 g
+f
+n
+2 42 1085 5549 B
+f
+n
+2 42 1088 5549 B
+0.75 g
+f
+n
+2 42 1091 5549 B
+f
+n
+2 42 1094 5549 B
+0.746 g
+f
+n
+2 42 1097 5549 B
+0.742 g
+f
+n
+2 42 1100 5549 B
+f
+n
+3 42 1103 5549 B
+0.738 g
+f
+n
+2 42 1107 5549 B
+0.734 g
+f
+n
+2 42 1110 5549 B
+0.73 g
+f
+n
+2 42 1113 5549 B
+0.727 g
+f
+n
+2 42 1116 5549 B
+f
+n
+2 42 1119 5549 B
+0.719 g
+f
+n
+2 42 1122 5549 B
+f
+n
+2 42 1125 5549 B
+0.711 g
+f
+n
+2 42 1128 5549 B
+0.707 g
+f
+n
+2 42 1131 5549 B
+f
+n
+2 42 1134 5549 B
+0.699 g
+f
+n
+3 42 1137 5549 B
+0.695 g
+f
+n
+2 42 1141 5549 B
+0.691 g
+f
+n
+2 42 1144 5549 B
+0.688 g
+f
+n
+2 42 1147 5549 B
+0.684 g
+f
+n
+2 42 1150 5549 B
+0.68 g
+f
+n
+2 42 1153 5549 B
+0.672 g
+f
+n
+2 42 1156 5549 B
+0.668 g
+f
+n
+2 42 1159 5549 B
+0.664 g
+f
+n
+2 42 1162 5549 B
+0.656 g
+f
+n
+2 42 1165 5549 B
+0.652 g
+f
+n
+2 42 1168 5549 B
+0.645 g
+f
+n
+3 42 1171 5549 B
+0.641 g
+f
+n
+2 42 1175 5549 B
+0.633 g
+f
+n
+2 42 1178 5549 B
+0.629 g
+f
+n
+2 42 1181 5549 B
+0.621 g
+f
+n
+2 42 1184 5549 B
+0.617 g
+f
+n
+2 42 1187 5549 B
+0.609 g
+f
+n
+2 42 1190 5549 B
+0.602 g
+f
+n
+2 42 1193 5549 B
+0.598 g
+f
+n
+2 42 1196 5549 B
+0.59 g
+f
+n
+2 42 1199 5549 B
+0.586 g
+f
+n
+3 42 1202 5549 B
+0.578 g
+f
+n
+2 42 1206 5549 B
+0.57 g
+f
+n
+2 42 1209 5549 B
+0.566 g
+f
+n
+2 42 1212 5549 B
+0.563 g
+f
+n
+2 42 1215 5549 B
+0.551 g
+f
+n
+2 42 1218 5549 B
+0.547 g
+f
+n
+2 42 1221 5549 B
+0.543 g
+f
+n
+2 42 1224 5549 B
+0.535 g
+f
+n
+2 42 1227 5549 B
+0.527 g
+f
+n
+2 42 1230 5549 B
+0.523 g
+f
+n
+2 42 1233 5549 B
+0.516 g
+f
+n
+3 42 1236 5549 B
+0.512 g
+f
+n
+2 42 1240 5549 B
+0.5 g
+f
+n
+2 42 1243 5549 B
+0.492 g
+f
+n
+2 42 1246 5549 B
+0.488 g
+f
+n
+2 42 1249 5549 B
+0.484 g
+f
+n
+2 42 1252 5549 B
+0.477 g
+f
+n
+2 42 1255 5549 B
+0.469 g
+f
+n
+2 42 1258 5549 B
+0.465 g
+f
+n
+2 42 1261 5549 B
+0.457 g
+f
+n
+2 42 1264 5549 B
+0.453 g
+f
+n
+2 42 1267 5549 B
+0.449 g
+f
+n
+3 42 1270 5549 B
+0.441 g
+f
+n
+2 42 1274 5549 B
+0.438 g
+f
+n
+2 42 1277 5549 B
+0.434 g
+f
+n
+2 42 1280 5549 B
+0.43 g
+f
+n
+2 42 1283 5549 B
+0.426 g
+f
+n
+2 42 1286 5549 B
+0.418 g
+f
+n
+2 42 1289 5549 B
+0.414 g
+f
+n
+2 42 1292 5549 B
+0.41 g
+f
+n
+2 42 1295 5549 B
+0.406 g
+f
+n
+2 42 1298 5549 B
+0.402 g
+f
+n
+2 42 1301 5549 B
+0.398 g
+f
+n
+3 42 1304 5549 B
+0.395 g
+f
+n
+2 42 1308 5549 B
+f
+n
+2 42 1311 5549 B
+0.391 g
+f
+n
+2 42 1314 5549 B
+0.387 g
+f
+n
+2 42 1317 5549 B
+0.383 g
+f
+n
+2 42 1320 5549 B
+f
+n
+2 42 1323 5549 B
+0.379 g
+f
+n
+2 42 1326 5549 B
+0.375 g
+f
+n
+2 42 1329 5549 B
+0.371 g
+f
+n
+2 42 1332 5549 B
+f
+n
+2 42 1335 5549 B
+0.367 g
+f
+n
+3 42 1338 5549 B
+f
+n
+2 42 1342 5549 B
+0.363 g
+f
+n
+2 42 1345 5549 B
+f
+n
+2 42 1348 5549 B
+0.359 g
+f
+n
+2 42 1351 5549 B
+f
+n
+2 42 1354 5549 B
+f
+n
+22 145 698 4420 B
+0.309 g
+f
+n
+23 145 721 4420 B
+f
+n
+22 145 745 4420 B
+f
+n
+22 145 768 4420 B
+f
+n
+23 145 791 4420 B
+f
+n
+22 145 815 4420 B
+f
+n
+23 145 838 4420 B
+0.305 g
+f
+n
+22 145 862 4420 B
+f
+n
+22 145 885 4420 B
+f
+n
+23 145 908 4420 B
+0.301 g
+f
+n
+22 145 932 4420 B
+f
+n
+22 145 955 4420 B
+f
+n
+23 145 978 4420 B
+0.297 g
+f
+n
+22 145 1002 4420 B
+f
+n
+22 145 1025 4420 B
+0.293 g
+f
+n
+23 145 1048 4420 B
+f
+n
+22 145 1072 4420 B
+0.289 g
+f
+n
+23 145 1095 4420 B
+f
+n
+22 145 1119 4420 B
+0.285 g
+f
+n
+22 145 1142 4420 B
+0.281 g
+f
+n
+23 145 1165 4420 B
+0.277 g
+f
+n
+22 145 1189 4420 B
+f
+n
+22 145 1212 4420 B
+0.273 g
+f
+n
+23 145 1235 4420 B
+0.27 g
+f
+n
+22 145 1259 4420 B
+0.266 g
+f
+n
+22 145 1282 4420 B
+0.262 g
+f
+n
+23 145 1305 4420 B
+0.258 g
+f
+n
+22 145 1329 4420 B
+0.254 g
+f
+n
+23 145 1352 4420 B
+0.25 g
+f
+n
+22 145 1376 4420 B
+0.246 g
+f
+n
+22 145 1399 4420 B
+0.242 g
+f
+n
+23 145 1422 4420 B
+0.238 g
+f
+n
+22 145 1446 4420 B
+0.23 g
+f
+n
+22 145 1469 4420 B
+0.227 g
+f
+n
+23 145 1492 4420 B
+0.223 g
+f
+n
+22 145 1516 4420 B
+0.215 g
+f
+n
+22 145 1539 4420 B
+0.211 g
+f
+n
+23 145 1562 4420 B
+0.203 g
+f
+n
+22 145 1586 4420 B
+0.199 g
+f
+n
+22 145 1609 4420 B
+0.195 g
+f
+n
+23 145 1632 4420 B
+0.188 g
+f
+n
+22 145 1656 4420 B
+0.184 g
+f
+n
+23 145 1679 4420 B
+0.176 g
+f
+n
+22 145 1703 4420 B
+0.172 g
+f
+n
+22 145 1726 4420 B
+0.164 g
+f
+n
+23 145 1749 4420 B
+0.16 g
+f
+n
+22 145 1773 4420 B
+0.152 g
+f
+n
+22 145 1796 4420 B
+0.148 g
+f
+n
+23 145 1819 4420 B
+0.141 g
+f
+n
+22 145 1843 4420 B
+0.137 g
+f
+n
+22 145 1866 4420 B
+0.129 g
+f
+n
+23 145 1889 4420 B
+0.125 g
+f
+n
+22 145 1913 4420 B
+0.121 g
+f
+n
+23 145 1936 4420 B
+0.113 g
+f
+n
+22 145 1960 4420 B
+0.109 g
+f
+n
+22 145 1983 4420 B
+0.105 g
+f
+n
+23 145 2006 4420 B
+0.098 g
+f
+n
+22 145 2030 4420 B
+0.094 g
+f
+n
+22 145 2053 4420 B
+0.086 g
+f
+n
+23 145 2076 4420 B
+0.082 g
+f
+n
+22 145 2100 4420 B
+0.078 g
+f
+n
+22 145 2123 4420 B
+0.074 g
+f
+n
+23 145 2146 4420 B
+0.07 g
+f
+n
+22 145 2170 4420 B
+0.066 g
+f
+n
+23 145 2193 4420 B
+0.063 g
+f
+n
+22 145 2217 4420 B
+0.055 g
+f
+n
+22 145 2240 4420 B
+f
+n
+23 145 2263 4420 B
+0.051 g
+f
+n
+22 145 2287 4420 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)1183 5497 MS (R)1194 5497 MS (C)1217 5497 MS (S)1240 5497 MS ( )1259 5497 MS (W)1268 5497 MS (o)1300 5497 MS (r)1317 5497 MS (k)1328 5497 MS (s)1345 5497 MS (h)1359 5497 MS (o)1375 5497 MS (p)1392 5497 MS ( )1409 5497 MS (o)1418 5497 MS (n)1436 5497 MS
+( )1452 5497 MS (O)1461 5497 MS (p)1486 5497 MS (e)1503 5497 MS (n)1519 5497 MS ( )1535 5497 MS (L)1544 5497 MS (a)1565 5497 MS (n)1581 5497 MS (g)1597 5497 MS (u)1614 5497 MS (a)1631 5497 MS (g)1646 5497 MS (e)1664 5497 MS ( )1679 5497 MS
+(A)1369 5538 MS (r)1393 5538 MS (c)1404 5538 MS (h)1420 5538 MS (i)1437 5538 MS (v)1447 5538 MS (e)1463 5538 MS (s)1479 5538 MS
+(5)2144 5517 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(V)700 4540 MS (o)778 4540 MS (c)832 4540 MS (a)880 4540 MS (b)927 4540 MS (u)981 4540 MS (l)1035 4540 MS (a)1065 4540 MS (r)1113 4540 MS (y)1149 4540 MS (:)1200 4540 MS ( )1230 4540 MS (R)1257 4540 MS (e)1329 4540 MS (s)1377 4540 MS (t)1419 4540 MS
+(r)1449 4540 MS (i)1485 4540 MS (c)1515 4540 MS (t)1563 4540 MS (e)1593 4540 MS (d)1641 4540 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)700 4739 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(A)766 4739 MS (c)821 4739 MS (c)865 4739 MS (e)909 4739 MS (s)952 4739 MS (s)995 4739 MS ( )1038 4739 MS (t)1060 4739 MS (o)1086 4739 MS ( )1134 4739 MS (t)1156 4739 MS (h)1182 4739 MS (e)1230 4739 MS ( )1273 4739 MS (r)1295 4739 MS (e)1325 4739 MS
+(s)1369 4739 MS (o)1412 4739 MS (u)1460 4739 MS (r)1508 4739 MS (c)1538 4739 MS (e)1581 4739 MS ( )1624 4739 MS (i)1646 4739 MS (s)1668 4739 MS ( )1711 4739 MS (r)1733 4739 MS (e)1764 4739 MS (s)1807 4739 MS (t)1850 4739 MS (r)1876 4739 MS (i)1906 4739 MS
+(c)1928 4739 MS (t)1971 4739 MS (e)1998 4739 MS (d)2041 4739 MS (.)2089 4739 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)700 4851 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(T)766 4851 MS (h)813 4851 MS (i)861 4851 MS (s)883 4851 MS ( )926 4851 MS (i)948 4851 MS (n)970 4851 MS (c)1018 4851 MS (l)1061 4851 MS (u)1083 4851 MS (d)1131 4851 MS (e)1179 4851 MS (s)1222 4851 MS ( )1265 4851 MS (a)1287 4851 MS (n)1330 4851 MS
+(y)1378 4851 MS ( )1420 4851 MS (k)1442 4851 MS (i)1485 4851 MS (n)1507 4851 MS (d)1555 4851 MS ( )1603 4851 MS (o)1625 4851 MS (f)1673 4851 MS ( )1699 4851 MS (r)1721 4851 MS (e)1750 4851 MS (s)1793 4851 MS (t)1836 4851 MS (r)1862 4851 MS (i)1892 4851 MS
+(c)1914 4851 MS (t)1957 4851 MS (i)1983 4851 MS (o)2005 4851 MS (n)2053 4851 MS ( )2101 4851 MS
+(b)766 4945 MS (e)814 4945 MS (y)857 4945 MS (o)899 4945 MS (n)947 4945 MS (d)995 4945 MS ( )1043 4945 MS (t)1065 4945 MS (h)1091 4945 MS (e)1139 4945 MS ( )1182 4945 MS (s)1204 4945 MS (t)1247 4945 MS (a)1273 4945 MS (n)1316 4945 MS (d)1364 4945 MS
+(a)1412 4945 MS (r)1455 4945 MS (d)1485 4945 MS ( )1533 4945 MS (")1555 4945 MS (f)1592 4945 MS (a)1618 4945 MS (i)1661 4945 MS (r)1683 4945 MS ( )1713 4945 MS (u)1735 4945 MS (s)1783 4945 MS (e)1826 4945 MS (")1869 4945 MS ( )1906 4945 MS
+(r)766 5039 MS (e)796 5039 MS (s)839 5039 MS (t)882 5039 MS (r)909 5039 MS (i)939 5039 MS (c)961 5039 MS (t)1004 5039 MS (i)1030 5039 MS (o)1052 5039 MS (n)1100 5039 MS (s)1148 5039 MS ( )1191 5039 MS (t)1213 5039 MS (h)1239 5039 MS (a)1287 5039 MS
+(t)1330 5039 MS ( )1356 5039 MS (a)1378 5039 MS (p)1421 5039 MS (p)1469 5039 MS (l)1517 5039 MS (y)1539 5039 MS ( )1581 5039 MS (t)1603 5039 MS (o)1629 5039 MS ( )1677 5039 MS (p)1699 5039 MS (u)1746 5039 MS (b)1794 5039 MS (l)1842 5039 MS (i)1864 5039 MS
+(s)1886 5039 MS (h)1929 5039 MS (e)1977 5039 MS (d)2020 5039 MS ( )2068 5039 MS
+(m)766 5133 MS (a)835 5133 MS (t)878 5133 MS (e)904 5133 MS (r)948 5133 MS (i)978 5133 MS (a)1000 5133 MS (l)1043 5133 MS (s)1065 5133 MS ( )1108 5133 MS (i)1130 5133 MS (n)1152 5133 MS ( )1200 5133 MS (g)1222 5133 MS (e)1270 5133 MS (n)1313 5133 MS
+(e)1361 5133 MS (r)1404 5133 MS (a)1434 5133 MS (l)1477 5133 MS (.)1499 5133 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)700 5245 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(T)766 5245 MS (h)813 5245 MS (e)861 5245 MS ( )904 5245 MS (v)927 5245 MS (o)968 5245 MS (c)1017 5245 MS (a)1060 5245 MS (b)1103 5245 MS (u)1151 5245 MS (l)1199 5245 MS (a)1221 5245 MS (r)1264 5245 MS (y)1295 5245 MS ( )1337 5245 MS (d)1359 5245 MS
+(o)1407 5245 MS (e)1455 5245 MS (s)1498 5245 MS ( )1541 5245 MS (N)1564 5245 MS (O)1620 5245 MS (T)1681 5245 MS ( )1728 5245 MS (d)1751 5245 MS (e)1799 5245 MS (f)1842 5245 MS (i)1868 5245 MS (n)1890 5245 MS (e)1938 5245 MS ( )1981 5245 MS (t)2003 5245 MS
+(h)2029 5245 MS (e)2077 5245 MS ( )2120 5245 MS
+(s)766 5339 MS (p)809 5339 MS (e)857 5339 MS (c)900 5339 MS (i)943 5339 MS (f)965 5339 MS (i)991 5339 MS (c)1013 5339 MS ( )1056 5339 MS (n)1078 5339 MS (a)1126 5339 MS (t)1169 5339 MS (u)1195 5339 MS (r)1243 5339 MS (e)1273 5339 MS ( )1316 5339 MS
+(o)1338 5339 MS (f)1386 5339 MS ( )1412 5339 MS (t)1434 5339 MS (h)1460 5339 MS (e)1508 5339 MS ( )1551 5339 MS (r)1573 5339 MS (e)1603 5339 MS (s)1646 5339 MS (t)1689 5339 MS (r)1716 5339 MS (i)1746 5339 MS (c)1768 5339 MS (t)1811 5339 MS (i)1837 5339 MS
+(o)1859 5339 MS (n)1907 5339 MS (.)1955 5339 MS
+gs
+n
+1760 1320 551 4273 CB
+n
+1752 1312 555 4277 B
+cp
+CM [1 0 0 1 551 4273] concat
+s
+SM
+gr
+n
+1758 1319 2576 4273 B
+1 g
+f
+n
+278 40 2649 4273 B
+0.309 g
+f
+n
+278 40 2649 4314 B
+f
+n
+278 41 2649 4355 B
+f
+n
+278 40 2649 4397 B
+f
+n
+278 40 2649 4438 B
+0.305 g
+f
+n
+278 40 2649 4479 B
+f
+n
+278 41 2649 4520 B
+0.301 g
+f
+n
+278 40 2649 4562 B
+0.297 g
+f
+n
+278 40 2649 4603 B
+0.293 g
+f
+n
+278 40 2649 4644 B
+0.289 g
+f
+n
+278 40 2649 4685 B
+0.285 g
+f
+n
+278 41 2649 4726 B
+0.281 g
+f
+n
+278 40 2649 4768 B
+0.277 g
+f
+n
+278 40 2649 4809 B
+0.273 g
+f
+n
+278 40 2649 4850 B
+0.266 g
+f
+n
+278 41 2649 4891 B
+0.262 g
+f
+n
+278 40 2649 4933 B
+0.254 g
+f
+n
+278 40 2649 4974 B
+0.246 g
+f
+n
+278 40 2649 5015 B
+0.242 g
+f
+n
+278 40 2649 5056 B
+0.234 g
+f
+n
+278 41 2649 5097 B
+0.23 g
+f
+n
+278 40 2649 5139 B
+0.223 g
+f
+n
+278 40 2649 5180 B
+0.219 g
+f
+n
+278 40 2649 5221 B
+0.211 g
+f
+n
+278 40 2649 5262 B
+0.207 g
+f
+n
+278 41 2649 5303 B
+0.203 g
+f
+n
+278 40 2649 5345 B
+0.199 g
+f
+n
+278 40 2649 5386 B
+f
+n
+278 40 2649 5427 B
+0.195 g
+f
+n
+278 41 2649 5468 B
+0.191 g
+f
+n
+278 40 2649 5510 B
+f
+n
+278 40 2649 5551 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+2605 4610 M
+2605 4640 L
+3514 4640 L
+3514 4610 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 2605 4612 B
+0.645 g
+f
+n
+908 0 2605 4616 B
+f
+n
+908 0 2605 4620 B
+f
+n
+908 0 2605 4624 B
+f
+n
+908 0 2605 4628 B
+f
+n
+908 0 2605 4632 B
+f
+n
+908 0 2605 4636 B
+f
+gr
+n
+2 42 2708 5549 B
+0.359 g
+f
+n
+2 42 2711 5549 B
+f
+n
+2 42 2714 5549 B
+f
+n
+2 42 2717 5549 B
+0.363 g
+f
+n
+2 42 2720 5549 B
+f
+n
+3 42 2723 5549 B
+0.367 g
+f
+n
+2 42 2727 5549 B
+f
+n
+2 42 2730 5549 B
+0.371 g
+f
+n
+2 42 2733 5549 B
+f
+n
+2 42 2736 5549 B
+0.375 g
+f
+n
+2 42 2739 5549 B
+0.379 g
+f
+n
+2 42 2742 5549 B
+0.383 g
+f
+n
+2 42 2745 5549 B
+f
+n
+2 42 2748 5549 B
+0.387 g
+f
+n
+2 42 2751 5549 B
+0.391 g
+f
+n
+2 42 2754 5549 B
+0.395 g
+f
+n
+3 42 2757 5549 B
+f
+n
+2 42 2761 5549 B
+0.398 g
+f
+n
+2 42 2764 5549 B
+0.402 g
+f
+n
+2 42 2767 5549 B
+0.406 g
+f
+n
+2 42 2770 5549 B
+0.41 g
+f
+n
+2 42 2773 5549 B
+0.414 g
+f
+n
+2 42 2776 5549 B
+0.418 g
+f
+n
+2 42 2779 5549 B
+0.426 g
+f
+n
+2 42 2782 5549 B
+0.43 g
+f
+n
+2 42 2785 5549 B
+0.434 g
+f
+n
+2 42 2788 5549 B
+0.438 g
+f
+n
+3 42 2791 5549 B
+0.441 g
+f
+n
+2 42 2795 5549 B
+0.449 g
+f
+n
+2 42 2798 5549 B
+0.453 g
+f
+n
+2 42 2801 5549 B
+0.457 g
+f
+n
+2 42 2804 5549 B
+0.465 g
+f
+n
+2 42 2807 5549 B
+0.469 g
+f
+n
+2 42 2810 5549 B
+0.477 g
+f
+n
+2 42 2813 5549 B
+0.484 g
+f
+n
+2 42 2816 5549 B
+0.488 g
+f
+n
+2 42 2819 5549 B
+0.492 g
+f
+n
+2 42 2822 5549 B
+0.5 g
+f
+n
+3 42 2825 5549 B
+0.512 g
+f
+n
+2 42 2829 5549 B
+0.516 g
+f
+n
+2 42 2832 5549 B
+0.523 g
+f
+n
+2 42 2835 5549 B
+0.527 g
+f
+n
+2 42 2838 5549 B
+0.535 g
+f
+n
+2 42 2841 5549 B
+0.543 g
+f
+n
+2 42 2844 5549 B
+0.547 g
+f
+n
+2 42 2847 5549 B
+0.551 g
+f
+n
+2 42 2850 5549 B
+0.563 g
+f
+n
+2 42 2853 5549 B
+0.566 g
+f
+n
+2 42 2856 5549 B
+0.57 g
+f
+n
+3 42 2859 5549 B
+0.578 g
+f
+n
+2 42 2863 5549 B
+0.586 g
+f
+n
+2 42 2866 5549 B
+0.59 g
+f
+n
+2 42 2869 5549 B
+0.598 g
+f
+n
+2 42 2872 5549 B
+0.602 g
+f
+n
+2 42 2875 5549 B
+0.609 g
+f
+n
+2 42 2878 5549 B
+0.617 g
+f
+n
+2 42 2881 5549 B
+0.621 g
+f
+n
+2 42 2884 5549 B
+0.629 g
+f
+n
+2 42 2887 5549 B
+0.633 g
+f
+n
+3 42 2890 5549 B
+0.641 g
+f
+n
+2 42 2894 5549 B
+0.645 g
+f
+n
+2 42 2897 5549 B
+0.652 g
+f
+n
+2 42 2900 5549 B
+0.656 g
+f
+n
+2 42 2903 5549 B
+0.664 g
+f
+n
+2 42 2906 5549 B
+0.668 g
+f
+n
+2 42 2909 5549 B
+0.672 g
+f
+n
+2 42 2912 5549 B
+0.68 g
+f
+n
+2 42 2915 5549 B
+0.684 g
+f
+n
+2 42 2918 5549 B
+0.688 g
+f
+n
+2 42 2921 5549 B
+0.691 g
+f
+n
+3 42 2924 5549 B
+0.695 g
+f
+n
+2 42 2928 5549 B
+0.699 g
+f
+n
+2 42 2931 5549 B
+0.707 g
+f
+n
+2 42 2934 5549 B
+f
+n
+2 42 2937 5549 B
+0.711 g
+f
+n
+2 42 2940 5549 B
+0.719 g
+f
+n
+2 42 2943 5549 B
+f
+n
+2 42 2946 5549 B
+0.727 g
+f
+n
+2 42 2949 5549 B
+f
+n
+2 42 2952 5549 B
+0.73 g
+f
+n
+2 42 2955 5549 B
+0.734 g
+f
+n
+3 42 2958 5549 B
+0.738 g
+f
+n
+2 42 2962 5549 B
+0.742 g
+f
+n
+2 42 2965 5549 B
+f
+n
+2 42 2968 5549 B
+0.746 g
+f
+n
+2 42 2971 5549 B
+0.75 g
+f
+n
+2 42 2974 5549 B
+f
+n
+2 42 2977 5549 B
+0.754 g
+f
+n
+2 42 2980 5549 B
+f
+n
+2 42 2983 5549 B
+0.758 g
+f
+n
+2 42 2986 5549 B
+0.762 g
+f
+n
+2 42 2989 5549 B
+f
+n
+3 42 2992 5549 B
+0.766 g
+f
+n
+2 42 2996 5549 B
+f
+n
+2 42 2999 5549 B
+f
+n
+2 42 3002 5549 B
+0.77 g
+f
+n
+2 42 3005 5549 B
+f
+n
+2 42 3008 5549 B
+0.773 g
+f
+n
+2 42 3011 5549 B
+f
+n
+2 42 3014 5549 B
+f
+n
+2 42 3017 5549 B
+0.777 g
+f
+n
+2 42 3020 5549 B
+f
+n
+2 42 3023 5549 B
+f
+n
+3 42 3026 5549 B
+f
+n
+2 42 3030 5549 B
+0.781 g
+f
+n
+2 42 3033 5549 B
+f
+n
+2 42 3036 5549 B
+f
+n
+2 42 3039 5549 B
+f
+n
+2 42 3042 5549 B
+0.785 g
+f
+n
+2 42 3045 5549 B
+f
+n
+2 42 3048 5549 B
+0.781 g
+f
+n
+2 42 3051 5549 B
+f
+n
+2 42 3054 5549 B
+f
+n
+2 42 3057 5549 B
+f
+n
+3 42 3060 5549 B
+0.777 g
+f
+n
+2 42 3064 5549 B
+f
+n
+2 42 3067 5549 B
+f
+n
+2 42 3070 5549 B
+f
+n
+2 42 3073 5549 B
+0.773 g
+f
+n
+2 42 3076 5549 B
+f
+n
+2 42 3079 5549 B
+f
+n
+2 42 3082 5549 B
+0.77 g
+f
+n
+2 42 3085 5549 B
+f
+n
+2 42 3088 5549 B
+0.766 g
+f
+n
+2 42 3091 5549 B
+f
+n
+3 42 3094 5549 B
+f
+n
+2 42 3098 5549 B
+0.762 g
+f
+n
+2 42 3101 5549 B
+f
+n
+2 42 3104 5549 B
+0.758 g
+f
+n
+2 42 3107 5549 B
+0.754 g
+f
+n
+2 42 3110 5549 B
+f
+n
+2 42 3113 5549 B
+0.75 g
+f
+n
+2 42 3116 5549 B
+f
+n
+2 42 3119 5549 B
+0.746 g
+f
+n
+2 42 3122 5549 B
+0.742 g
+f
+n
+2 42 3125 5549 B
+f
+n
+3 42 3128 5549 B
+0.738 g
+f
+n
+2 42 3132 5549 B
+0.734 g
+f
+n
+2 42 3135 5549 B
+0.73 g
+f
+n
+2 42 3138 5549 B
+0.727 g
+f
+n
+2 42 3141 5549 B
+f
+n
+2 42 3144 5549 B
+0.719 g
+f
+n
+2 42 3147 5549 B
+f
+n
+2 42 3150 5549 B
+0.711 g
+f
+n
+2 42 3153 5549 B
+0.707 g
+f
+n
+2 42 3156 5549 B
+f
+n
+2 42 3159 5549 B
+0.699 g
+f
+n
+3 42 3162 5549 B
+0.695 g
+f
+n
+2 42 3166 5549 B
+0.691 g
+f
+n
+2 42 3169 5549 B
+0.688 g
+f
+n
+2 42 3172 5549 B
+0.684 g
+f
+n
+2 42 3175 5549 B
+0.68 g
+f
+n
+2 42 3178 5549 B
+0.672 g
+f
+n
+2 42 3181 5549 B
+0.668 g
+f
+n
+2 42 3184 5549 B
+0.664 g
+f
+n
+2 42 3187 5549 B
+0.656 g
+f
+n
+2 42 3190 5549 B
+0.652 g
+f
+n
+2 42 3193 5549 B
+0.645 g
+f
+n
+3 42 3196 5549 B
+0.641 g
+f
+n
+2 42 3200 5549 B
+0.633 g
+f
+n
+2 42 3203 5549 B
+0.629 g
+f
+n
+2 42 3206 5549 B
+0.621 g
+f
+n
+2 42 3209 5549 B
+0.617 g
+f
+n
+2 42 3212 5549 B
+0.609 g
+f
+n
+2 42 3215 5549 B
+0.602 g
+f
+n
+2 42 3218 5549 B
+0.598 g
+f
+n
+2 42 3221 5549 B
+0.59 g
+f
+n
+2 42 3224 5549 B
+0.586 g
+f
+n
+3 42 3227 5549 B
+0.578 g
+f
+n
+2 42 3231 5549 B
+0.57 g
+f
+n
+2 42 3234 5549 B
+0.566 g
+f
+n
+2 42 3237 5549 B
+0.563 g
+f
+n
+2 42 3240 5549 B
+0.551 g
+f
+n
+2 42 3243 5549 B
+0.547 g
+f
+n
+2 42 3246 5549 B
+0.543 g
+f
+n
+2 42 3249 5549 B
+0.535 g
+f
+n
+2 42 3252 5549 B
+0.527 g
+f
+n
+2 42 3255 5549 B
+0.523 g
+f
+n
+2 42 3258 5549 B
+0.516 g
+f
+n
+3 42 3261 5549 B
+0.512 g
+f
+n
+2 42 3265 5549 B
+0.5 g
+f
+n
+2 42 3268 5549 B
+0.492 g
+f
+n
+2 42 3271 5549 B
+0.488 g
+f
+n
+2 42 3274 5549 B
+0.484 g
+f
+n
+2 42 3277 5549 B
+0.477 g
+f
+n
+2 42 3280 5549 B
+0.469 g
+f
+n
+2 42 3283 5549 B
+0.465 g
+f
+n
+2 42 3286 5549 B
+0.457 g
+f
+n
+2 42 3289 5549 B
+0.453 g
+f
+n
+2 42 3292 5549 B
+0.449 g
+f
+n
+3 42 3295 5549 B
+0.441 g
+f
+n
+2 42 3299 5549 B
+0.438 g
+f
+n
+2 42 3302 5549 B
+0.434 g
+f
+n
+2 42 3305 5549 B
+0.43 g
+f
+n
+2 42 3308 5549 B
+0.426 g
+f
+n
+2 42 3311 5549 B
+0.418 g
+f
+n
+2 42 3314 5549 B
+0.414 g
+f
+n
+2 42 3317 5549 B
+0.41 g
+f
+n
+2 42 3320 5549 B
+0.406 g
+f
+n
+2 42 3323 5549 B
+0.402 g
+f
+n
+2 42 3326 5549 B
+0.398 g
+f
+n
+3 42 3329 5549 B
+0.395 g
+f
+n
+2 42 3333 5549 B
+f
+n
+2 42 3336 5549 B
+0.391 g
+f
+n
+2 42 3339 5549 B
+0.387 g
+f
+n
+2 42 3342 5549 B
+0.383 g
+f
+n
+2 42 3345 5549 B
+f
+n
+2 42 3348 5549 B
+0.379 g
+f
+n
+2 42 3351 5549 B
+0.375 g
+f
+n
+2 42 3354 5549 B
+0.371 g
+f
+n
+2 42 3357 5549 B
+f
+n
+2 42 3360 5549 B
+0.367 g
+f
+n
+3 42 3363 5549 B
+f
+n
+2 42 3367 5549 B
+0.363 g
+f
+n
+2 42 3370 5549 B
+f
+n
+2 42 3373 5549 B
+0.359 g
+f
+n
+2 42 3376 5549 B
+f
+n
+2 42 3379 5549 B
+f
+n
+22 145 2723 4420 B
+0.309 g
+f
+n
+23 145 2746 4420 B
+f
+n
+22 145 2770 4420 B
+f
+n
+22 145 2793 4420 B
+f
+n
+23 145 2816 4420 B
+f
+n
+22 145 2840 4420 B
+f
+n
+23 145 2863 4420 B
+0.305 g
+f
+n
+22 145 2887 4420 B
+f
+n
+22 145 2910 4420 B
+f
+n
+23 145 2933 4420 B
+0.301 g
+f
+n
+22 145 2957 4420 B
+f
+n
+22 145 2980 4420 B
+f
+n
+23 145 3003 4420 B
+0.297 g
+f
+n
+22 145 3027 4420 B
+f
+n
+22 145 3050 4420 B
+0.293 g
+f
+n
+23 145 3073 4420 B
+f
+n
+22 145 3097 4420 B
+0.289 g
+f
+n
+23 145 3120 4420 B
+f
+n
+22 145 3144 4420 B
+0.285 g
+f
+n
+22 145 3167 4420 B
+0.281 g
+f
+n
+23 145 3190 4420 B
+0.277 g
+f
+n
+22 145 3214 4420 B
+f
+n
+22 145 3237 4420 B
+0.273 g
+f
+n
+23 145 3260 4420 B
+0.27 g
+f
+n
+22 145 3284 4420 B
+0.266 g
+f
+n
+22 145 3307 4420 B
+0.262 g
+f
+n
+23 145 3330 4420 B
+0.258 g
+f
+n
+22 145 3354 4420 B
+0.254 g
+f
+n
+23 145 3377 4420 B
+0.25 g
+f
+n
+22 145 3401 4420 B
+0.246 g
+f
+n
+22 145 3424 4420 B
+0.242 g
+f
+n
+23 145 3447 4420 B
+0.238 g
+f
+n
+22 145 3471 4420 B
+0.23 g
+f
+n
+22 145 3494 4420 B
+0.227 g
+f
+n
+23 145 3517 4420 B
+0.223 g
+f
+n
+22 145 3541 4420 B
+0.215 g
+f
+n
+22 145 3564 4420 B
+0.211 g
+f
+n
+23 145 3587 4420 B
+0.203 g
+f
+n
+22 145 3611 4420 B
+0.199 g
+f
+n
+22 145 3634 4420 B
+0.195 g
+f
+n
+23 145 3657 4420 B
+0.188 g
+f
+n
+22 145 3681 4420 B
+0.184 g
+f
+n
+23 145 3704 4420 B
+0.176 g
+f
+n
+22 145 3728 4420 B
+0.172 g
+f
+n
+22 145 3751 4420 B
+0.164 g
+f
+n
+23 145 3774 4420 B
+0.16 g
+f
+n
+22 145 3798 4420 B
+0.152 g
+f
+n
+22 145 3821 4420 B
+0.148 g
+f
+n
+23 145 3844 4420 B
+0.141 g
+f
+n
+22 145 3868 4420 B
+0.137 g
+f
+n
+22 145 3891 4420 B
+0.129 g
+f
+n
+23 145 3914 4420 B
+0.125 g
+f
+n
+22 145 3938 4420 B
+0.121 g
+f
+n
+23 145 3961 4420 B
+0.113 g
+f
+n
+22 145 3985 4420 B
+0.109 g
+f
+n
+22 145 4008 4420 B
+0.105 g
+f
+n
+23 145 4031 4420 B
+0.098 g
+f
+n
+22 145 4055 4420 B
+0.094 g
+f
+n
+22 145 4078 4420 B
+0.086 g
+f
+n
+23 145 4101 4420 B
+0.082 g
+f
+n
+22 145 4125 4420 B
+0.078 g
+f
+n
+22 145 4148 4420 B
+0.074 g
+f
+n
+23 145 4171 4420 B
+0.07 g
+f
+n
+22 145 4195 4420 B
+0.066 g
+f
+n
+23 145 4218 4420 B
+0.063 g
+f
+n
+22 145 4242 4420 B
+0.055 g
+f
+n
+22 145 4265 4420 B
+f
+n
+23 145 4288 4420 B
+0.051 g
+f
+n
+22 145 4312 4420 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)3208 5497 MS (R)3219 5497 MS (C)3242 5497 MS (S)3265 5497 MS ( )3284 5497 MS (W)3293 5497 MS (o)3325 5497 MS (r)3342 5497 MS (k)3353 5497 MS (s)3370 5497 MS (h)3384 5497 MS (o)3400 5497 MS (p)3417 5497 MS ( )3434 5497 MS (o)3443 5497 MS (n)3461 5497 MS
+( )3477 5497 MS (O)3486 5497 MS (p)3511 5497 MS (e)3528 5497 MS (n)3544 5497 MS ( )3560 5497 MS (L)3569 5497 MS (a)3590 5497 MS (n)3606 5497 MS (g)3622 5497 MS (u)3639 5497 MS (a)3656 5497 MS (g)3671 5497 MS (e)3689 5497 MS ( )3704 5497 MS
+(A)3394 5538 MS (r)3418 5538 MS (c)3429 5538 MS (h)3445 5538 MS (i)3462 5538 MS (v)3472 5538 MS (e)3488 5538 MS (s)3504 5538 MS
+(6)4169 5517 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(V)2725 4540 MS (o)2803 4540 MS (c)2857 4540 MS (a)2905 4540 MS (b)2952 4540 MS (u)3006 4540 MS (l)3060 4540 MS (a)3090 4540 MS (r)3138 4540 MS (y)3174 4540 MS (:)3225 4540 MS ( )3255 4540 MS (R)3282 4540 MS (e)3354 4540 MS (s)3402 4540 MS (t)3444 4540 MS
+(r)3474 4540 MS (i)3510 4540 MS (c)3540 4540 MS (t)3588 4540 MS (e)3618 4540 MS (d)3666 4540 MS (,)3720 4540 MS ( )3746 4540 MS (C)3773 4540 MS (o)3845 4540 MS (n)3899 4540 MS (t)3953 4540 MS (.)3983 4540 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 4731 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(E)2791 4731 MS (x)2843 4731 MS (a)2886 4731 MS (m)2930 4731 MS (p)2999 4731 MS (l)3047 4731 MS (e)3069 4731 MS (s)3112 4731 MS ( )3155 4731 MS (o)3177 4731 MS (f)3225 4731 MS ( )3251 4731 MS (r)3273 4731 MS (e)3303 4731 MS (s)3346 4731 MS (t)3389 4731 MS
+(r)3416 4731 MS (i)3446 4731 MS (c)3468 4731 MS (t)3511 4731 MS (i)3537 4731 MS (o)3559 4731 MS (n)3607 4731 MS (s)3655 4731 MS (:)3698 4731 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 4834 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(P)2791 4834 MS (e)2843 4834 MS (r)2886 4834 MS (m)2917 4834 MS (i)2986 4834 MS (s)3008 4834 MS (s)3051 4834 MS (i)3094 4834 MS (o)3116 4834 MS (n)3164 4834 MS ( )3212 4834 MS (r)3234 4834 MS (e)3264 4834 MS (q)3307 4834 MS (u)3355 4834 MS (i)3403 4834 MS
+(r)3425 4834 MS (e)3455 4834 MS (d)3498 4834 MS ( )3546 4834 MS (f)3568 4834 MS (r)3594 4834 MS (o)3624 4834 MS (m)3672 4834 MS ( )3741 4834 MS (s)3763 4834 MS (o)3807 4834 MS (m)3855 4834 MS (e)3924 4834 MS (o)3967 4834 MS (n)4015 4834 MS (e)4063 4834 MS
+( )4106 4834 MS
+(j)2791 4919 MS (u)2812 4919 MS (s)2860 4919 MS (t)2903 4919 MS ( )2929 4919 MS (t)2951 4919 MS (o)2977 4919 MS ( )3025 4919 MS (a)3047 4919 MS (c)3090 4919 MS (c)3133 4919 MS (e)3176 4919 MS (s)3220 4919 MS (s)3263 4919 MS ( )3306 4919 MS (t)3328 4919 MS
+(h)3354 4919 MS (e)3402 4919 MS ( )3445 4919 MS (r)3467 4919 MS (e)3497 4919 MS (s)3541 4919 MS (o)3584 4919 MS (u)3632 4919 MS (r)3680 4919 MS (c)3710 4919 MS (e)3753 4919 MS (.)3797 4919 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 5022 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(T)2791 5022 MS (i)2838 5022 MS (m)2860 5022 MS (e)2929 5022 MS ( )2972 5022 MS (l)2994 5022 MS (i)3016 5022 MS (m)3038 5022 MS (i)3107 5022 MS (t)3129 5022 MS (s)3155 5022 MS (:)3198 5022 MS ( )3225 5022 MS (t)3247 5022 MS (h)3273 5022 MS (e)3321 5022 MS
+( )3364 5022 MS (r)3386 5022 MS (e)3416 5022 MS (s)3459 5022 MS (o)3502 5022 MS (u)3550 5022 MS (r)3598 5022 MS (c)3628 5022 MS (e)3672 5022 MS ( )3715 5022 MS (w)3736 5022 MS (i)3798 5022 MS (l)3820 5022 MS (l)3842 5022 MS ( )3864 5022 MS (b)3885 5022 MS
+(e)3933 5022 MS ( )3976 5022 MS
+(p)2791 5106 MS (u)2839 5106 MS (b)2887 5106 MS (l)2935 5106 MS (i)2956 5106 MS (c)2978 5106 MS (a)3021 5106 MS (l)3064 5106 MS (l)3086 5106 MS (y)3108 5106 MS ( )3150 5106 MS (a)3172 5106 MS (v)3216 5106 MS (a)3258 5106 MS (i)3301 5106 MS (l)3323 5106 MS
+(a)3346 5106 MS (b)3389 5106 MS (l)3437 5106 MS (e)3459 5106 MS ( )3502 5106 MS (o)3524 5106 MS (n)3572 5106 MS ( )3620 5106 MS (d)3642 5106 MS (a)3690 5106 MS (t)3733 5106 MS (e)3759 5106 MS ( )3801 5106 MS (X)3823 5106 MS (.)3875 5106 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 5209 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(S)2791 5209 MS (p)2843 5209 MS (e)2891 5209 MS (c)2934 5209 MS (i)2977 5209 MS (a)2999 5209 MS (l)3042 5209 MS ( )3064 5209 MS (c)3086 5209 MS (o)3129 5209 MS (n)3177 5209 MS (d)3225 5209 MS (i)3273 5209 MS (t)3295 5209 MS (i)3321 5209 MS (o)3343 5209 MS
+(n)3390 5209 MS (s)3438 5209 MS ( )3481 5209 MS (m)3503 5209 MS (u)3572 5209 MS (s)3620 5209 MS (t)3663 5209 MS ( )3689 5209 MS (b)3711 5209 MS (e)3759 5209 MS ( )3802 5209 MS (a)3824 5209 MS (g)3867 5209 MS (r)3915 5209 MS (e)3945 5209 MS (e)3988 5209 MS
+(d)4031 5209 MS ( )4079 5209 MS
+(t)2791 5293 MS (o)2817 5293 MS (,)2865 5293 MS ( )2887 5293 MS (e)2909 5293 MS (.)2952 5293 MS (g)2974 5293 MS (.)3021 5293 MS ( )3043 5293 MS (k)3065 5293 MS (e)3108 5293 MS (e)3151 5293 MS (p)3194 5293 MS ( )3242 5293 MS (s)3264 5293 MS (p)3307 5293 MS
+(e)3355 5293 MS (a)3398 5293 MS (k)3441 5293 MS (e)3484 5293 MS (r)3528 5293 MS (s)3558 5293 MS ( )3601 5293 MS (n)3623 5293 MS (a)3671 5293 MS (m)3715 5293 MS (e)3785 5293 MS (s)3828 5293 MS ( )3871 5293 MS
+(a)2791 5378 MS (n)2834 5378 MS (o)2882 5378 MS (n)2930 5378 MS (y)2978 5378 MS (m)3020 5378 MS (o)3089 5378 MS (u)3137 5378 MS (s)3185 5378 MS (.)3228 5378 MS
+gs
+n
+1760 1320 2576 4273 CB
+n
+1752 1312 2580 4277 B
+cp
+CM [1 0 0 1 2576 4273] concat
+s
+SM
+gr
+showpage
+%%Page: 2 2
+13 779.762 translate 72 600 div dup neg scale
+0 0 transform .25 add round .25 sub exch .25 add round .25 sub exch itransform translate
+n
+4499 5999 194 194 B
+1 g
+f
+[100 0 0 -100 0 0]/Times-Roman MF
+0 g
+(O)254 6140 MS (L)327 6140 MS (A)386 6140 MS (C)458 6140 MS ( )525 6140 MS (A)550 6140 MS (c)623 6140 MS (c)667 6140 MS (e)712 6140 MS (s)756 6140 MS (s)795 6140 MS ( )834 6140 MS (V)859 6140 MS (o)931 6140 MS (c)981 6140 MS (a)1026 6140 MS
+(b)1070 6140 MS (u)1120 6140 MS (l)1170 6140 MS (a)1199 6140 MS (r)1243 6140 MS (y)1277 6140 MS
+(2)4583 6140 MS
+n
+1758 1319 551 794 B
+1 g
+f
+n
+278 40 624 794 B
+0.309 g
+f
+n
+278 40 624 835 B
+f
+n
+278 41 624 876 B
+f
+n
+278 40 624 918 B
+f
+n
+278 40 624 959 B
+0.305 g
+f
+n
+278 40 624 1000 B
+f
+n
+278 41 624 1041 B
+0.301 g
+f
+n
+278 40 624 1083 B
+0.297 g
+f
+n
+278 40 624 1124 B
+0.293 g
+f
+n
+278 40 624 1165 B
+0.289 g
+f
+n
+278 40 624 1206 B
+0.285 g
+f
+n
+278 41 624 1247 B
+0.281 g
+f
+n
+278 40 624 1289 B
+0.277 g
+f
+n
+278 40 624 1330 B
+0.273 g
+f
+n
+278 40 624 1371 B
+0.266 g
+f
+n
+278 41 624 1412 B
+0.262 g
+f
+n
+278 40 624 1454 B
+0.254 g
+f
+n
+278 40 624 1495 B
+0.246 g
+f
+n
+278 40 624 1536 B
+0.242 g
+f
+n
+278 40 624 1577 B
+0.234 g
+f
+n
+278 41 624 1618 B
+0.23 g
+f
+n
+278 40 624 1660 B
+0.223 g
+f
+n
+278 40 624 1701 B
+0.219 g
+f
+n
+278 40 624 1742 B
+0.211 g
+f
+n
+278 40 624 1783 B
+0.207 g
+f
+n
+278 41 624 1824 B
+0.203 g
+f
+n
+278 40 624 1866 B
+0.199 g
+f
+n
+278 40 624 1907 B
+f
+n
+278 40 624 1948 B
+0.195 g
+f
+n
+278 41 624 1989 B
+0.191 g
+f
+n
+278 40 624 2031 B
+f
+n
+278 40 624 2072 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+580 1131 M
+580 1161 L
+1489 1161 L
+1489 1131 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 580 1133 B
+0.645 g
+f
+n
+908 0 580 1137 B
+f
+n
+908 0 580 1141 B
+f
+n
+908 0 580 1145 B
+f
+n
+908 0 580 1149 B
+f
+n
+908 0 580 1153 B
+f
+n
+908 0 580 1157 B
+f
+gr
+n
+2 42 683 2070 B
+0.359 g
+f
+n
+2 42 686 2070 B
+f
+n
+2 42 689 2070 B
+f
+n
+2 42 692 2070 B
+0.363 g
+f
+n
+2 42 695 2070 B
+f
+n
+3 42 698 2070 B
+0.367 g
+f
+n
+2 42 702 2070 B
+f
+n
+2 42 705 2070 B
+0.371 g
+f
+n
+2 42 708 2070 B
+f
+n
+2 42 711 2070 B
+0.375 g
+f
+n
+2 42 714 2070 B
+0.379 g
+f
+n
+2 42 717 2070 B
+0.383 g
+f
+n
+2 42 720 2070 B
+f
+n
+2 42 723 2070 B
+0.387 g
+f
+n
+2 42 726 2070 B
+0.391 g
+f
+n
+2 42 729 2070 B
+0.395 g
+f
+n
+3 42 732 2070 B
+f
+n
+2 42 736 2070 B
+0.398 g
+f
+n
+2 42 739 2070 B
+0.402 g
+f
+n
+2 42 742 2070 B
+0.406 g
+f
+n
+2 42 745 2070 B
+0.41 g
+f
+n
+2 42 748 2070 B
+0.414 g
+f
+n
+2 42 751 2070 B
+0.418 g
+f
+n
+2 42 754 2070 B
+0.426 g
+f
+n
+2 42 757 2070 B
+0.43 g
+f
+n
+2 42 760 2070 B
+0.434 g
+f
+n
+2 42 763 2070 B
+0.438 g
+f
+n
+3 42 766 2070 B
+0.441 g
+f
+n
+2 42 770 2070 B
+0.449 g
+f
+n
+2 42 773 2070 B
+0.453 g
+f
+n
+2 42 776 2070 B
+0.457 g
+f
+n
+2 42 779 2070 B
+0.465 g
+f
+n
+2 42 782 2070 B
+0.469 g
+f
+n
+2 42 785 2070 B
+0.477 g
+f
+n
+2 42 788 2070 B
+0.484 g
+f
+n
+2 42 791 2070 B
+0.488 g
+f
+n
+2 42 794 2070 B
+0.492 g
+f
+n
+2 42 797 2070 B
+0.5 g
+f
+n
+3 42 800 2070 B
+0.512 g
+f
+n
+2 42 804 2070 B
+0.516 g
+f
+n
+2 42 807 2070 B
+0.523 g
+f
+n
+2 42 810 2070 B
+0.527 g
+f
+n
+2 42 813 2070 B
+0.535 g
+f
+n
+2 42 816 2070 B
+0.543 g
+f
+n
+2 42 819 2070 B
+0.547 g
+f
+n
+2 42 822 2070 B
+0.551 g
+f
+n
+2 42 825 2070 B
+0.563 g
+f
+n
+2 42 828 2070 B
+0.566 g
+f
+n
+2 42 831 2070 B
+0.57 g
+f
+n
+3 42 834 2070 B
+0.578 g
+f
+n
+2 42 838 2070 B
+0.586 g
+f
+n
+2 42 841 2070 B
+0.59 g
+f
+n
+2 42 844 2070 B
+0.598 g
+f
+n
+2 42 847 2070 B
+0.602 g
+f
+n
+2 42 850 2070 B
+0.609 g
+f
+n
+2 42 853 2070 B
+0.617 g
+f
+n
+2 42 856 2070 B
+0.621 g
+f
+n
+2 42 859 2070 B
+0.629 g
+f
+n
+2 42 862 2070 B
+0.633 g
+f
+n
+3 42 865 2070 B
+0.641 g
+f
+n
+2 42 869 2070 B
+0.645 g
+f
+n
+2 42 872 2070 B
+0.652 g
+f
+n
+2 42 875 2070 B
+0.656 g
+f
+n
+2 42 878 2070 B
+0.664 g
+f
+n
+2 42 881 2070 B
+0.668 g
+f
+n
+2 42 884 2070 B
+0.672 g
+f
+n
+2 42 887 2070 B
+0.68 g
+f
+n
+2 42 890 2070 B
+0.684 g
+f
+n
+2 42 893 2070 B
+0.688 g
+f
+n
+2 42 896 2070 B
+0.691 g
+f
+n
+3 42 899 2070 B
+0.695 g
+f
+n
+2 42 903 2070 B
+0.699 g
+f
+n
+2 42 906 2070 B
+0.707 g
+f
+n
+2 42 909 2070 B
+f
+n
+2 42 912 2070 B
+0.711 g
+f
+n
+2 42 915 2070 B
+0.719 g
+f
+n
+2 42 918 2070 B
+f
+n
+2 42 921 2070 B
+0.727 g
+f
+n
+2 42 924 2070 B
+f
+n
+2 42 927 2070 B
+0.73 g
+f
+n
+2 42 930 2070 B
+0.734 g
+f
+n
+3 42 933 2070 B
+0.738 g
+f
+n
+2 42 937 2070 B
+0.742 g
+f
+n
+2 42 940 2070 B
+f
+n
+2 42 943 2070 B
+0.746 g
+f
+n
+2 42 946 2070 B
+0.75 g
+f
+n
+2 42 949 2070 B
+f
+n
+2 42 952 2070 B
+0.754 g
+f
+n
+2 42 955 2070 B
+f
+n
+2 42 958 2070 B
+0.758 g
+f
+n
+2 42 961 2070 B
+0.762 g
+f
+n
+2 42 964 2070 B
+f
+n
+3 42 967 2070 B
+0.766 g
+f
+n
+2 42 971 2070 B
+f
+n
+2 42 974 2070 B
+f
+n
+2 42 977 2070 B
+0.77 g
+f
+n
+2 42 980 2070 B
+f
+n
+2 42 983 2070 B
+0.773 g
+f
+n
+2 42 986 2070 B
+f
+n
+2 42 989 2070 B
+f
+n
+2 42 992 2070 B
+0.777 g
+f
+n
+2 42 995 2070 B
+f
+n
+2 42 998 2070 B
+f
+n
+3 42 1001 2070 B
+f
+n
+2 42 1005 2070 B
+0.781 g
+f
+n
+2 42 1008 2070 B
+f
+n
+2 42 1011 2070 B
+f
+n
+2 42 1014 2070 B
+f
+n
+2 42 1017 2070 B
+0.785 g
+f
+n
+2 42 1020 2070 B
+f
+n
+2 42 1023 2070 B
+0.781 g
+f
+n
+2 42 1026 2070 B
+f
+n
+2 42 1029 2070 B
+f
+n
+2 42 1032 2070 B
+f
+n
+3 42 1035 2070 B
+0.777 g
+f
+n
+2 42 1039 2070 B
+f
+n
+2 42 1042 2070 B
+f
+n
+2 42 1045 2070 B
+f
+n
+2 42 1048 2070 B
+0.773 g
+f
+n
+2 42 1051 2070 B
+f
+n
+2 42 1054 2070 B
+f
+n
+2 42 1057 2070 B
+0.77 g
+f
+n
+2 42 1060 2070 B
+f
+n
+2 42 1063 2070 B
+0.766 g
+f
+n
+2 42 1066 2070 B
+f
+n
+3 42 1069 2070 B
+f
+n
+2 42 1073 2070 B
+0.762 g
+f
+n
+2 42 1076 2070 B
+f
+n
+2 42 1079 2070 B
+0.758 g
+f
+n
+2 42 1082 2070 B
+0.754 g
+f
+n
+2 42 1085 2070 B
+f
+n
+2 42 1088 2070 B
+0.75 g
+f
+n
+2 42 1091 2070 B
+f
+n
+2 42 1094 2070 B
+0.746 g
+f
+n
+2 42 1097 2070 B
+0.742 g
+f
+n
+2 42 1100 2070 B
+f
+n
+3 42 1103 2070 B
+0.738 g
+f
+n
+2 42 1107 2070 B
+0.734 g
+f
+n
+2 42 1110 2070 B
+0.73 g
+f
+n
+2 42 1113 2070 B
+0.727 g
+f
+n
+2 42 1116 2070 B
+f
+n
+2 42 1119 2070 B
+0.719 g
+f
+n
+2 42 1122 2070 B
+f
+n
+2 42 1125 2070 B
+0.711 g
+f
+n
+2 42 1128 2070 B
+0.707 g
+f
+n
+2 42 1131 2070 B
+f
+n
+2 42 1134 2070 B
+0.699 g
+f
+n
+3 42 1137 2070 B
+0.695 g
+f
+n
+2 42 1141 2070 B
+0.691 g
+f
+n
+2 42 1144 2070 B
+0.688 g
+f
+n
+2 42 1147 2070 B
+0.684 g
+f
+n
+2 42 1150 2070 B
+0.68 g
+f
+n
+2 42 1153 2070 B
+0.672 g
+f
+n
+2 42 1156 2070 B
+0.668 g
+f
+n
+2 42 1159 2070 B
+0.664 g
+f
+n
+2 42 1162 2070 B
+0.656 g
+f
+n
+2 42 1165 2070 B
+0.652 g
+f
+n
+2 42 1168 2070 B
+0.645 g
+f
+n
+3 42 1171 2070 B
+0.641 g
+f
+n
+2 42 1175 2070 B
+0.633 g
+f
+n
+2 42 1178 2070 B
+0.629 g
+f
+n
+2 42 1181 2070 B
+0.621 g
+f
+n
+2 42 1184 2070 B
+0.617 g
+f
+n
+2 42 1187 2070 B
+0.609 g
+f
+n
+2 42 1190 2070 B
+0.602 g
+f
+n
+2 42 1193 2070 B
+0.598 g
+f
+n
+2 42 1196 2070 B
+0.59 g
+f
+n
+2 42 1199 2070 B
+0.586 g
+f
+n
+3 42 1202 2070 B
+0.578 g
+f
+n
+2 42 1206 2070 B
+0.57 g
+f
+n
+2 42 1209 2070 B
+0.566 g
+f
+n
+2 42 1212 2070 B
+0.563 g
+f
+n
+2 42 1215 2070 B
+0.551 g
+f
+n
+2 42 1218 2070 B
+0.547 g
+f
+n
+2 42 1221 2070 B
+0.543 g
+f
+n
+2 42 1224 2070 B
+0.535 g
+f
+n
+2 42 1227 2070 B
+0.527 g
+f
+n
+2 42 1230 2070 B
+0.523 g
+f
+n
+2 42 1233 2070 B
+0.516 g
+f
+n
+3 42 1236 2070 B
+0.512 g
+f
+n
+2 42 1240 2070 B
+0.5 g
+f
+n
+2 42 1243 2070 B
+0.492 g
+f
+n
+2 42 1246 2070 B
+0.488 g
+f
+n
+2 42 1249 2070 B
+0.484 g
+f
+n
+2 42 1252 2070 B
+0.477 g
+f
+n
+2 42 1255 2070 B
+0.469 g
+f
+n
+2 42 1258 2070 B
+0.465 g
+f
+n
+2 42 1261 2070 B
+0.457 g
+f
+n
+2 42 1264 2070 B
+0.453 g
+f
+n
+2 42 1267 2070 B
+0.449 g
+f
+n
+3 42 1270 2070 B
+0.441 g
+f
+n
+2 42 1274 2070 B
+0.438 g
+f
+n
+2 42 1277 2070 B
+0.434 g
+f
+n
+2 42 1280 2070 B
+0.43 g
+f
+n
+2 42 1283 2070 B
+0.426 g
+f
+n
+2 42 1286 2070 B
+0.418 g
+f
+n
+2 42 1289 2070 B
+0.414 g
+f
+n
+2 42 1292 2070 B
+0.41 g
+f
+n
+2 42 1295 2070 B
+0.406 g
+f
+n
+2 42 1298 2070 B
+0.402 g
+f
+n
+2 42 1301 2070 B
+0.398 g
+f
+n
+3 42 1304 2070 B
+0.395 g
+f
+n
+2 42 1308 2070 B
+f
+n
+2 42 1311 2070 B
+0.391 g
+f
+n
+2 42 1314 2070 B
+0.387 g
+f
+n
+2 42 1317 2070 B
+0.383 g
+f
+n
+2 42 1320 2070 B
+f
+n
+2 42 1323 2070 B
+0.379 g
+f
+n
+2 42 1326 2070 B
+0.375 g
+f
+n
+2 42 1329 2070 B
+0.371 g
+f
+n
+2 42 1332 2070 B
+f
+n
+2 42 1335 2070 B
+0.367 g
+f
+n
+3 42 1338 2070 B
+f
+n
+2 42 1342 2070 B
+0.363 g
+f
+n
+2 42 1345 2070 B
+f
+n
+2 42 1348 2070 B
+0.359 g
+f
+n
+2 42 1351 2070 B
+f
+n
+2 42 1354 2070 B
+f
+n
+22 145 698 941 B
+0.309 g
+f
+n
+23 145 721 941 B
+f
+n
+22 145 745 941 B
+f
+n
+22 145 768 941 B
+f
+n
+23 145 791 941 B
+f
+n
+22 145 815 941 B
+f
+n
+23 145 838 941 B
+0.305 g
+f
+n
+22 145 862 941 B
+f
+n
+22 145 885 941 B
+f
+n
+23 145 908 941 B
+0.301 g
+f
+n
+22 145 932 941 B
+f
+n
+22 145 955 941 B
+f
+n
+23 145 978 941 B
+0.297 g
+f
+n
+22 145 1002 941 B
+f
+n
+22 145 1025 941 B
+0.293 g
+f
+n
+23 145 1048 941 B
+f
+n
+22 145 1072 941 B
+0.289 g
+f
+n
+23 145 1095 941 B
+f
+n
+22 145 1119 941 B
+0.285 g
+f
+n
+22 145 1142 941 B
+0.281 g
+f
+n
+23 145 1165 941 B
+0.277 g
+f
+n
+22 145 1189 941 B
+f
+n
+22 145 1212 941 B
+0.273 g
+f
+n
+23 145 1235 941 B
+0.27 g
+f
+n
+22 145 1259 941 B
+0.266 g
+f
+n
+22 145 1282 941 B
+0.262 g
+f
+n
+23 145 1305 941 B
+0.258 g
+f
+n
+22 145 1329 941 B
+0.254 g
+f
+n
+23 145 1352 941 B
+0.25 g
+f
+n
+22 145 1376 941 B
+0.246 g
+f
+n
+22 145 1399 941 B
+0.242 g
+f
+n
+23 145 1422 941 B
+0.238 g
+f
+n
+22 145 1446 941 B
+0.23 g
+f
+n
+22 145 1469 941 B
+0.227 g
+f
+n
+23 145 1492 941 B
+0.223 g
+f
+n
+22 145 1516 941 B
+0.215 g
+f
+n
+22 145 1539 941 B
+0.211 g
+f
+n
+23 145 1562 941 B
+0.203 g
+f
+n
+22 145 1586 941 B
+0.199 g
+f
+n
+22 145 1609 941 B
+0.195 g
+f
+n
+23 145 1632 941 B
+0.188 g
+f
+n
+22 145 1656 941 B
+0.184 g
+f
+n
+23 145 1679 941 B
+0.176 g
+f
+n
+22 145 1703 941 B
+0.172 g
+f
+n
+22 145 1726 941 B
+0.164 g
+f
+n
+23 145 1749 941 B
+0.16 g
+f
+n
+22 145 1773 941 B
+0.152 g
+f
+n
+22 145 1796 941 B
+0.148 g
+f
+n
+23 145 1819 941 B
+0.141 g
+f
+n
+22 145 1843 941 B
+0.137 g
+f
+n
+22 145 1866 941 B
+0.129 g
+f
+n
+23 145 1889 941 B
+0.125 g
+f
+n
+22 145 1913 941 B
+0.121 g
+f
+n
+23 145 1936 941 B
+0.113 g
+f
+n
+22 145 1960 941 B
+0.109 g
+f
+n
+22 145 1983 941 B
+0.105 g
+f
+n
+23 145 2006 941 B
+0.098 g
+f
+n
+22 145 2030 941 B
+0.094 g
+f
+n
+22 145 2053 941 B
+0.086 g
+f
+n
+23 145 2076 941 B
+0.082 g
+f
+n
+22 145 2100 941 B
+0.078 g
+f
+n
+22 145 2123 941 B
+0.074 g
+f
+n
+23 145 2146 941 B
+0.07 g
+f
+n
+22 145 2170 941 B
+0.066 g
+f
+n
+23 145 2193 941 B
+0.063 g
+f
+n
+22 145 2217 941 B
+0.055 g
+f
+n
+22 145 2240 941 B
+f
+n
+23 145 2263 941 B
+0.051 g
+f
+n
+22 145 2287 941 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)1183 2018 MS (R)1194 2018 MS (C)1217 2018 MS (S)1240 2018 MS ( )1259 2018 MS (W)1268 2018 MS (o)1300 2018 MS (r)1317 2018 MS (k)1328 2018 MS (s)1345 2018 MS (h)1359 2018 MS (o)1375 2018 MS (p)1392 2018 MS ( )1409 2018 MS (o)1418 2018 MS (n)1436 2018 MS
+( )1452 2018 MS (O)1461 2018 MS (p)1486 2018 MS (e)1503 2018 MS (n)1519 2018 MS ( )1535 2018 MS (L)1544 2018 MS (a)1565 2018 MS (n)1581 2018 MS (g)1597 2018 MS (u)1614 2018 MS (a)1631 2018 MS (g)1646 2018 MS (e)1664 2018 MS ( )1679 2018 MS
+(A)1369 2059 MS (r)1393 2059 MS (c)1404 2059 MS (h)1420 2059 MS (i)1437 2059 MS (v)1447 2059 MS (e)1463 2059 MS (s)1479 2059 MS
+(7)2144 2038 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(V)700 1061 MS (o)778 1061 MS (c)832 1061 MS (a)880 1061 MS (b)927 1061 MS (u)981 1061 MS (l)1035 1061 MS (a)1065 1061 MS (r)1113 1061 MS (y)1149 1061 MS (:)1200 1061 MS ( )1230 1061 MS (S)1257 1061 MS (t)1317 1061 MS (a)1347 1061 MS (n)1395 1061 MS
+(d)1449 1061 MS (a)1503 1061 MS (r)1551 1061 MS (d)1587 1061 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)700 1260 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(A)766 1260 MS (c)821 1260 MS (c)865 1260 MS (e)909 1260 MS (s)952 1260 MS (s)995 1260 MS ( )1038 1260 MS (t)1060 1260 MS (o)1086 1260 MS ( )1134 1260 MS (t)1156 1260 MS (h)1182 1260 MS (e)1230 1260 MS ( )1273 1260 MS (r)1295 1260 MS (e)1325 1260 MS
+(s)1369 1260 MS (o)1412 1260 MS (u)1460 1260 MS (r)1508 1260 MS (c)1538 1260 MS (e)1581 1260 MS ( )1624 1260 MS (i)1646 1260 MS (s)1668 1260 MS ( )1711 1260 MS (s)1733 1260 MS (t)1777 1260 MS (a)1803 1260 MS (n)1846 1260 MS (d)1894 1260 MS (a)1942 1260 MS
+(r)1985 1260 MS (d)2015 1260 MS (;)2063 1260 MS ( )2090 1260 MS
+(t)766 1354 MS (h)792 1354 MS (a)840 1354 MS (t)883 1354 MS ( )909 1354 MS (i)931 1354 MS (s)953 1354 MS (,)996 1354 MS ( )1018 1354 MS (i)1040 1354 MS (t)1062 1354 MS ( )1088 1354 MS (c)1110 1354 MS (a)1153 1354 MS (n)1196 1354 MS ( )1244 1354 MS
+(b)1265 1354 MS (e)1313 1354 MS ( )1356 1354 MS (u)1378 1354 MS (s)1426 1354 MS (e)1469 1354 MS (d)1512 1354 MS ( )1560 1354 MS (l)1582 1354 MS (i)1604 1354 MS (k)1626 1354 MS (e)1669 1354 MS ( )1712 1354 MS (a)1734 1354 MS (n)1776 1354 MS (y)1824 1354 MS
+( )1866 1354 MS
+(p)766 1448 MS (u)814 1448 MS (b)862 1448 MS (l)910 1448 MS (i)931 1448 MS (s)953 1448 MS (h)996 1448 MS (e)1044 1448 MS (d)1087 1448 MS ( )1135 1448 MS (w)1155 1448 MS (o)1218 1448 MS (r)1266 1448 MS (k)1296 1448 MS (.)1339 1448 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)700 1560 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(N)766 1560 MS (o)822 1560 MS (t)870 1560 MS (e)896 1560 MS (:)939 1560 MS ( )966 1560 MS (w)986 1560 MS (e)1049 1560 MS ( )1092 1560 MS (n)1114 1560 MS (e)1162 1560 MS (e)1205 1560 MS (d)1248 1560 MS ( )1296 1560 MS (a)1318 1560 MS ( )1361 1560 MS
+(d)1383 1560 MS (o)1430 1560 MS (c)1478 1560 MS (u)1521 1560 MS (m)1569 1560 MS (e)1638 1560 MS (n)1681 1560 MS (t)1729 1560 MS ( )1755 1560 MS (d)1777 1560 MS (e)1825 1560 MS (f)1868 1560 MS (i)1894 1560 MS (n)1916 1560 MS (i)1964 1560 MS (n)1986 1560 MS
+(g)2033 1560 MS ( )2081 1560 MS
+(w)766 1654 MS (h)828 1654 MS (a)876 1654 MS (t)919 1654 MS ( )945 1654 MS (t)966 1654 MS (h)992 1654 MS (i)1040 1654 MS (s)1062 1654 MS ( )1105 1654 MS (m)1127 1654 MS (e)1196 1654 MS (a)1239 1654 MS (n)1282 1654 MS (s)1330 1654 MS ( )1373 1654 MS
+(f)1395 1654 MS (o)1421 1654 MS (r)1469 1654 MS ( )1499 1654 MS (o)1521 1654 MS (u)1569 1654 MS (r)1617 1654 MS ( )1647 1654 MS (u)1669 1654 MS (s)1717 1654 MS (e)1760 1654 MS (r)1803 1654 MS (s)1833 1654 MS (.)1876 1654 MS
+1 setlinecap
+8 sl
+gs
+n
+1760 1320 551 794 CB
+n
+1752 1312 555 798 B
+cp
+CM [1 0 0 1 551 794] concat
+s
+SM
+gr
+n
+1758 1319 2576 794 B
+1 g
+f
+n
+278 40 2649 794 B
+0.309 g
+f
+n
+278 40 2649 835 B
+f
+n
+278 41 2649 876 B
+f
+n
+278 40 2649 918 B
+f
+n
+278 40 2649 959 B
+0.305 g
+f
+n
+278 40 2649 1000 B
+f
+n
+278 41 2649 1041 B
+0.301 g
+f
+n
+278 40 2649 1083 B
+0.297 g
+f
+n
+278 40 2649 1124 B
+0.293 g
+f
+n
+278 40 2649 1165 B
+0.289 g
+f
+n
+278 40 2649 1206 B
+0.285 g
+f
+n
+278 41 2649 1247 B
+0.281 g
+f
+n
+278 40 2649 1289 B
+0.277 g
+f
+n
+278 40 2649 1330 B
+0.273 g
+f
+n
+278 40 2649 1371 B
+0.266 g
+f
+n
+278 41 2649 1412 B
+0.262 g
+f
+n
+278 40 2649 1454 B
+0.254 g
+f
+n
+278 40 2649 1495 B
+0.246 g
+f
+n
+278 40 2649 1536 B
+0.242 g
+f
+n
+278 40 2649 1577 B
+0.234 g
+f
+n
+278 41 2649 1618 B
+0.23 g
+f
+n
+278 40 2649 1660 B
+0.223 g
+f
+n
+278 40 2649 1701 B
+0.219 g
+f
+n
+278 40 2649 1742 B
+0.211 g
+f
+n
+278 40 2649 1783 B
+0.207 g
+f
+n
+278 41 2649 1824 B
+0.203 g
+f
+n
+278 40 2649 1866 B
+0.199 g
+f
+n
+278 40 2649 1907 B
+f
+n
+278 40 2649 1948 B
+0.195 g
+f
+n
+278 41 2649 1989 B
+0.191 g
+f
+n
+278 40 2649 2031 B
+f
+n
+278 40 2649 2072 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+2605 1131 M
+2605 1161 L
+3514 1161 L
+3514 1131 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 2605 1133 B
+0.645 g
+f
+n
+908 0 2605 1137 B
+f
+n
+908 0 2605 1141 B
+f
+n
+908 0 2605 1145 B
+f
+n
+908 0 2605 1149 B
+f
+n
+908 0 2605 1153 B
+f
+n
+908 0 2605 1157 B
+f
+gr
+n
+2 42 2708 2070 B
+0.359 g
+f
+n
+2 42 2711 2070 B
+f
+n
+2 42 2714 2070 B
+f
+n
+2 42 2717 2070 B
+0.363 g
+f
+n
+2 42 2720 2070 B
+f
+n
+3 42 2723 2070 B
+0.367 g
+f
+n
+2 42 2727 2070 B
+f
+n
+2 42 2730 2070 B
+0.371 g
+f
+n
+2 42 2733 2070 B
+f
+n
+2 42 2736 2070 B
+0.375 g
+f
+n
+2 42 2739 2070 B
+0.379 g
+f
+n
+2 42 2742 2070 B
+0.383 g
+f
+n
+2 42 2745 2070 B
+f
+n
+2 42 2748 2070 B
+0.387 g
+f
+n
+2 42 2751 2070 B
+0.391 g
+f
+n
+2 42 2754 2070 B
+0.395 g
+f
+n
+3 42 2757 2070 B
+f
+n
+2 42 2761 2070 B
+0.398 g
+f
+n
+2 42 2764 2070 B
+0.402 g
+f
+n
+2 42 2767 2070 B
+0.406 g
+f
+n
+2 42 2770 2070 B
+0.41 g
+f
+n
+2 42 2773 2070 B
+0.414 g
+f
+n
+2 42 2776 2070 B
+0.418 g
+f
+n
+2 42 2779 2070 B
+0.426 g
+f
+n
+2 42 2782 2070 B
+0.43 g
+f
+n
+2 42 2785 2070 B
+0.434 g
+f
+n
+2 42 2788 2070 B
+0.438 g
+f
+n
+3 42 2791 2070 B
+0.441 g
+f
+n
+2 42 2795 2070 B
+0.449 g
+f
+n
+2 42 2798 2070 B
+0.453 g
+f
+n
+2 42 2801 2070 B
+0.457 g
+f
+n
+2 42 2804 2070 B
+0.465 g
+f
+n
+2 42 2807 2070 B
+0.469 g
+f
+n
+2 42 2810 2070 B
+0.477 g
+f
+n
+2 42 2813 2070 B
+0.484 g
+f
+n
+2 42 2816 2070 B
+0.488 g
+f
+n
+2 42 2819 2070 B
+0.492 g
+f
+n
+2 42 2822 2070 B
+0.5 g
+f
+n
+3 42 2825 2070 B
+0.512 g
+f
+n
+2 42 2829 2070 B
+0.516 g
+f
+n
+2 42 2832 2070 B
+0.523 g
+f
+n
+2 42 2835 2070 B
+0.527 g
+f
+n
+2 42 2838 2070 B
+0.535 g
+f
+n
+2 42 2841 2070 B
+0.543 g
+f
+n
+2 42 2844 2070 B
+0.547 g
+f
+n
+2 42 2847 2070 B
+0.551 g
+f
+n
+2 42 2850 2070 B
+0.563 g
+f
+n
+2 42 2853 2070 B
+0.566 g
+f
+n
+2 42 2856 2070 B
+0.57 g
+f
+n
+3 42 2859 2070 B
+0.578 g
+f
+n
+2 42 2863 2070 B
+0.586 g
+f
+n
+2 42 2866 2070 B
+0.59 g
+f
+n
+2 42 2869 2070 B
+0.598 g
+f
+n
+2 42 2872 2070 B
+0.602 g
+f
+n
+2 42 2875 2070 B
+0.609 g
+f
+n
+2 42 2878 2070 B
+0.617 g
+f
+n
+2 42 2881 2070 B
+0.621 g
+f
+n
+2 42 2884 2070 B
+0.629 g
+f
+n
+2 42 2887 2070 B
+0.633 g
+f
+n
+3 42 2890 2070 B
+0.641 g
+f
+n
+2 42 2894 2070 B
+0.645 g
+f
+n
+2 42 2897 2070 B
+0.652 g
+f
+n
+2 42 2900 2070 B
+0.656 g
+f
+n
+2 42 2903 2070 B
+0.664 g
+f
+n
+2 42 2906 2070 B
+0.668 g
+f
+n
+2 42 2909 2070 B
+0.672 g
+f
+n
+2 42 2912 2070 B
+0.68 g
+f
+n
+2 42 2915 2070 B
+0.684 g
+f
+n
+2 42 2918 2070 B
+0.688 g
+f
+n
+2 42 2921 2070 B
+0.691 g
+f
+n
+3 42 2924 2070 B
+0.695 g
+f
+n
+2 42 2928 2070 B
+0.699 g
+f
+n
+2 42 2931 2070 B
+0.707 g
+f
+n
+2 42 2934 2070 B
+f
+n
+2 42 2937 2070 B
+0.711 g
+f
+n
+2 42 2940 2070 B
+0.719 g
+f
+n
+2 42 2943 2070 B
+f
+n
+2 42 2946 2070 B
+0.727 g
+f
+n
+2 42 2949 2070 B
+f
+n
+2 42 2952 2070 B
+0.73 g
+f
+n
+2 42 2955 2070 B
+0.734 g
+f
+n
+3 42 2958 2070 B
+0.738 g
+f
+n
+2 42 2962 2070 B
+0.742 g
+f
+n
+2 42 2965 2070 B
+f
+n
+2 42 2968 2070 B
+0.746 g
+f
+n
+2 42 2971 2070 B
+0.75 g
+f
+n
+2 42 2974 2070 B
+f
+n
+2 42 2977 2070 B
+0.754 g
+f
+n
+2 42 2980 2070 B
+f
+n
+2 42 2983 2070 B
+0.758 g
+f
+n
+2 42 2986 2070 B
+0.762 g
+f
+n
+2 42 2989 2070 B
+f
+n
+3 42 2992 2070 B
+0.766 g
+f
+n
+2 42 2996 2070 B
+f
+n
+2 42 2999 2070 B
+f
+n
+2 42 3002 2070 B
+0.77 g
+f
+n
+2 42 3005 2070 B
+f
+n
+2 42 3008 2070 B
+0.773 g
+f
+n
+2 42 3011 2070 B
+f
+n
+2 42 3014 2070 B
+f
+n
+2 42 3017 2070 B
+0.777 g
+f
+n
+2 42 3020 2070 B
+f
+n
+2 42 3023 2070 B
+f
+n
+3 42 3026 2070 B
+f
+n
+2 42 3030 2070 B
+0.781 g
+f
+n
+2 42 3033 2070 B
+f
+n
+2 42 3036 2070 B
+f
+n
+2 42 3039 2070 B
+f
+n
+2 42 3042 2070 B
+0.785 g
+f
+n
+2 42 3045 2070 B
+f
+n
+2 42 3048 2070 B
+0.781 g
+f
+n
+2 42 3051 2070 B
+f
+n
+2 42 3054 2070 B
+f
+n
+2 42 3057 2070 B
+f
+n
+3 42 3060 2070 B
+0.777 g
+f
+n
+2 42 3064 2070 B
+f
+n
+2 42 3067 2070 B
+f
+n
+2 42 3070 2070 B
+f
+n
+2 42 3073 2070 B
+0.773 g
+f
+n
+2 42 3076 2070 B
+f
+n
+2 42 3079 2070 B
+f
+n
+2 42 3082 2070 B
+0.77 g
+f
+n
+2 42 3085 2070 B
+f
+n
+2 42 3088 2070 B
+0.766 g
+f
+n
+2 42 3091 2070 B
+f
+n
+3 42 3094 2070 B
+f
+n
+2 42 3098 2070 B
+0.762 g
+f
+n
+2 42 3101 2070 B
+f
+n
+2 42 3104 2070 B
+0.758 g
+f
+n
+2 42 3107 2070 B
+0.754 g
+f
+n
+2 42 3110 2070 B
+f
+n
+2 42 3113 2070 B
+0.75 g
+f
+n
+2 42 3116 2070 B
+f
+n
+2 42 3119 2070 B
+0.746 g
+f
+n
+2 42 3122 2070 B
+0.742 g
+f
+n
+2 42 3125 2070 B
+f
+n
+3 42 3128 2070 B
+0.738 g
+f
+n
+2 42 3132 2070 B
+0.734 g
+f
+n
+2 42 3135 2070 B
+0.73 g
+f
+n
+2 42 3138 2070 B
+0.727 g
+f
+n
+2 42 3141 2070 B
+f
+n
+2 42 3144 2070 B
+0.719 g
+f
+n
+2 42 3147 2070 B
+f
+n
+2 42 3150 2070 B
+0.711 g
+f
+n
+2 42 3153 2070 B
+0.707 g
+f
+n
+2 42 3156 2070 B
+f
+n
+2 42 3159 2070 B
+0.699 g
+f
+n
+3 42 3162 2070 B
+0.695 g
+f
+n
+2 42 3166 2070 B
+0.691 g
+f
+n
+2 42 3169 2070 B
+0.688 g
+f
+n
+2 42 3172 2070 B
+0.684 g
+f
+n
+2 42 3175 2070 B
+0.68 g
+f
+n
+2 42 3178 2070 B
+0.672 g
+f
+n
+2 42 3181 2070 B
+0.668 g
+f
+n
+2 42 3184 2070 B
+0.664 g
+f
+n
+2 42 3187 2070 B
+0.656 g
+f
+n
+2 42 3190 2070 B
+0.652 g
+f
+n
+2 42 3193 2070 B
+0.645 g
+f
+n
+3 42 3196 2070 B
+0.641 g
+f
+n
+2 42 3200 2070 B
+0.633 g
+f
+n
+2 42 3203 2070 B
+0.629 g
+f
+n
+2 42 3206 2070 B
+0.621 g
+f
+n
+2 42 3209 2070 B
+0.617 g
+f
+n
+2 42 3212 2070 B
+0.609 g
+f
+n
+2 42 3215 2070 B
+0.602 g
+f
+n
+2 42 3218 2070 B
+0.598 g
+f
+n
+2 42 3221 2070 B
+0.59 g
+f
+n
+2 42 3224 2070 B
+0.586 g
+f
+n
+3 42 3227 2070 B
+0.578 g
+f
+n
+2 42 3231 2070 B
+0.57 g
+f
+n
+2 42 3234 2070 B
+0.566 g
+f
+n
+2 42 3237 2070 B
+0.563 g
+f
+n
+2 42 3240 2070 B
+0.551 g
+f
+n
+2 42 3243 2070 B
+0.547 g
+f
+n
+2 42 3246 2070 B
+0.543 g
+f
+n
+2 42 3249 2070 B
+0.535 g
+f
+n
+2 42 3252 2070 B
+0.527 g
+f
+n
+2 42 3255 2070 B
+0.523 g
+f
+n
+2 42 3258 2070 B
+0.516 g
+f
+n
+3 42 3261 2070 B
+0.512 g
+f
+n
+2 42 3265 2070 B
+0.5 g
+f
+n
+2 42 3268 2070 B
+0.492 g
+f
+n
+2 42 3271 2070 B
+0.488 g
+f
+n
+2 42 3274 2070 B
+0.484 g
+f
+n
+2 42 3277 2070 B
+0.477 g
+f
+n
+2 42 3280 2070 B
+0.469 g
+f
+n
+2 42 3283 2070 B
+0.465 g
+f
+n
+2 42 3286 2070 B
+0.457 g
+f
+n
+2 42 3289 2070 B
+0.453 g
+f
+n
+2 42 3292 2070 B
+0.449 g
+f
+n
+3 42 3295 2070 B
+0.441 g
+f
+n
+2 42 3299 2070 B
+0.438 g
+f
+n
+2 42 3302 2070 B
+0.434 g
+f
+n
+2 42 3305 2070 B
+0.43 g
+f
+n
+2 42 3308 2070 B
+0.426 g
+f
+n
+2 42 3311 2070 B
+0.418 g
+f
+n
+2 42 3314 2070 B
+0.414 g
+f
+n
+2 42 3317 2070 B
+0.41 g
+f
+n
+2 42 3320 2070 B
+0.406 g
+f
+n
+2 42 3323 2070 B
+0.402 g
+f
+n
+2 42 3326 2070 B
+0.398 g
+f
+n
+3 42 3329 2070 B
+0.395 g
+f
+n
+2 42 3333 2070 B
+f
+n
+2 42 3336 2070 B
+0.391 g
+f
+n
+2 42 3339 2070 B
+0.387 g
+f
+n
+2 42 3342 2070 B
+0.383 g
+f
+n
+2 42 3345 2070 B
+f
+n
+2 42 3348 2070 B
+0.379 g
+f
+n
+2 42 3351 2070 B
+0.375 g
+f
+n
+2 42 3354 2070 B
+0.371 g
+f
+n
+2 42 3357 2070 B
+f
+n
+2 42 3360 2070 B
+0.367 g
+f
+n
+3 42 3363 2070 B
+f
+n
+2 42 3367 2070 B
+0.363 g
+f
+n
+2 42 3370 2070 B
+f
+n
+2 42 3373 2070 B
+0.359 g
+f
+n
+2 42 3376 2070 B
+f
+n
+2 42 3379 2070 B
+f
+n
+22 145 2723 941 B
+0.309 g
+f
+n
+23 145 2746 941 B
+f
+n
+22 145 2770 941 B
+f
+n
+22 145 2793 941 B
+f
+n
+23 145 2816 941 B
+f
+n
+22 145 2840 941 B
+f
+n
+23 145 2863 941 B
+0.305 g
+f
+n
+22 145 2887 941 B
+f
+n
+22 145 2910 941 B
+f
+n
+23 145 2933 941 B
+0.301 g
+f
+n
+22 145 2957 941 B
+f
+n
+22 145 2980 941 B
+f
+n
+23 145 3003 941 B
+0.297 g
+f
+n
+22 145 3027 941 B
+f
+n
+22 145 3050 941 B
+0.293 g
+f
+n
+23 145 3073 941 B
+f
+n
+22 145 3097 941 B
+0.289 g
+f
+n
+23 145 3120 941 B
+f
+n
+22 145 3144 941 B
+0.285 g
+f
+n
+22 145 3167 941 B
+0.281 g
+f
+n
+23 145 3190 941 B
+0.277 g
+f
+n
+22 145 3214 941 B
+f
+n
+22 145 3237 941 B
+0.273 g
+f
+n
+23 145 3260 941 B
+0.27 g
+f
+n
+22 145 3284 941 B
+0.266 g
+f
+n
+22 145 3307 941 B
+0.262 g
+f
+n
+23 145 3330 941 B
+0.258 g
+f
+n
+22 145 3354 941 B
+0.254 g
+f
+n
+23 145 3377 941 B
+0.25 g
+f
+n
+22 145 3401 941 B
+0.246 g
+f
+n
+22 145 3424 941 B
+0.242 g
+f
+n
+23 145 3447 941 B
+0.238 g
+f
+n
+22 145 3471 941 B
+0.23 g
+f
+n
+22 145 3494 941 B
+0.227 g
+f
+n
+23 145 3517 941 B
+0.223 g
+f
+n
+22 145 3541 941 B
+0.215 g
+f
+n
+22 145 3564 941 B
+0.211 g
+f
+n
+23 145 3587 941 B
+0.203 g
+f
+n
+22 145 3611 941 B
+0.199 g
+f
+n
+22 145 3634 941 B
+0.195 g
+f
+n
+23 145 3657 941 B
+0.188 g
+f
+n
+22 145 3681 941 B
+0.184 g
+f
+n
+23 145 3704 941 B
+0.176 g
+f
+n
+22 145 3728 941 B
+0.172 g
+f
+n
+22 145 3751 941 B
+0.164 g
+f
+n
+23 145 3774 941 B
+0.16 g
+f
+n
+22 145 3798 941 B
+0.152 g
+f
+n
+22 145 3821 941 B
+0.148 g
+f
+n
+23 145 3844 941 B
+0.141 g
+f
+n
+22 145 3868 941 B
+0.137 g
+f
+n
+22 145 3891 941 B
+0.129 g
+f
+n
+23 145 3914 941 B
+0.125 g
+f
+n
+22 145 3938 941 B
+0.121 g
+f
+n
+23 145 3961 941 B
+0.113 g
+f
+n
+22 145 3985 941 B
+0.109 g
+f
+n
+22 145 4008 941 B
+0.105 g
+f
+n
+23 145 4031 941 B
+0.098 g
+f
+n
+22 145 4055 941 B
+0.094 g
+f
+n
+22 145 4078 941 B
+0.086 g
+f
+n
+23 145 4101 941 B
+0.082 g
+f
+n
+22 145 4125 941 B
+0.078 g
+f
+n
+22 145 4148 941 B
+0.074 g
+f
+n
+23 145 4171 941 B
+0.07 g
+f
+n
+22 145 4195 941 B
+0.066 g
+f
+n
+23 145 4218 941 B
+0.063 g
+f
+n
+22 145 4242 941 B
+0.055 g
+f
+n
+22 145 4265 941 B
+f
+n
+23 145 4288 941 B
+0.051 g
+f
+n
+22 145 4312 941 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)3208 2018 MS (R)3219 2018 MS (C)3242 2018 MS (S)3265 2018 MS ( )3284 2018 MS (W)3293 2018 MS (o)3325 2018 MS (r)3342 2018 MS (k)3353 2018 MS (s)3370 2018 MS (h)3384 2018 MS (o)3400 2018 MS (p)3417 2018 MS ( )3434 2018 MS (o)3443 2018 MS (n)3461 2018 MS
+( )3477 2018 MS (O)3486 2018 MS (p)3511 2018 MS (e)3528 2018 MS (n)3544 2018 MS ( )3560 2018 MS (L)3569 2018 MS (a)3590 2018 MS (n)3606 2018 MS (g)3622 2018 MS (u)3639 2018 MS (a)3656 2018 MS (g)3671 2018 MS (e)3689 2018 MS ( )3704 2018 MS
+(A)3394 2059 MS (r)3418 2059 MS (c)3429 2059 MS (h)3445 2059 MS (i)3462 2059 MS (v)3472 2059 MS (e)3488 2059 MS (s)3504 2059 MS
+(8)4169 2038 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(V)2725 1061 MS (o)2803 1061 MS (c)2857 1061 MS (a)2905 1061 MS (b)2952 1061 MS (u)3006 1061 MS (l)3060 1061 MS (a)3090 1061 MS (r)3138 1061 MS (y)3174 1061 MS (:)3225 1061 MS ( )3255 1061 MS (S)3282 1061 MS (t)3342 1061 MS (a)3372 1061 MS (n)3420 1061 MS
+(d)3474 1061 MS (a)3528 1061 MS (r)3576 1061 MS (d)3612 1061 MS (,)3666 1061 MS ( )3693 1061 MS (C)3719 1061 MS (o)3791 1061 MS (n)3845 1061 MS (t)3899 1061 MS (.)3929 1061 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 1260 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(G)2791 1260 MS (e)2852 1260 MS (n)2895 1260 MS (e)2943 1260 MS (r)2986 1260 MS (a)3016 1260 MS (l)3059 1260 MS (l)3081 1260 MS (y)3104 1260 MS (,)3146 1260 MS ( )3168 1260 MS (s)3190 1260 MS (t)3233 1260 MS (a)3259 1260 MS (n)3302 1260 MS (d)3350 1260 MS
+(a)3398 1260 MS (r)3441 1260 MS (d)3471 1260 MS ( )3519 1260 MS (u)3541 1260 MS (s)3589 1260 MS (e)3632 1260 MS ( )3675 1260 MS (a)3697 1260 MS (l)3740 1260 MS (l)3762 1260 MS (o)3785 1260 MS (w)3831 1260 MS (s)3895 1260 MS (:)3937 1260 MS
+%%IncludeFont: Helvetica
+[68 0 0 -68 0 0]/Helvetica MF
+/IsChar{exch/CharStrings get exch known}bd/MapCh{3 -1 roll/Encoding get 3 1
+roll put}bd/MapDegree{dup 16#b0 exch/degree IsChar{/degree}{/ring}ifelse MapCh}
+bd/MapBB{dup 16#a6 exch/brokenbar IsChar{/brokenbar}{/bar}ifelse MapCh}bd
+/reencode{findfont begin currentdict dup length dict begin{1 index/FID ne{def}
+{pop pop}ifelse}forall/FontName exch def dup length 0 ne{/Encoding Encoding 256
+array copy def 0 exch{dup type/nametype eq{Encoding 2 index 2 index put pop 1
+add}{exch pop}ifelse}forall}if pop currentdict dup end end/FontName get exch
+definefont dup MapDegree MapBB}bd/LATENC[0/grave/acute/circumflex/tilde/macron
+/breve/dotaccent/dieresis/ring/cedilla/hungarumlaut/ogonek/caron/dotlessi/fi/fl
+/Lslash/lslash/Zcaron/zcaron/minus/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/space/exclam/quotedbl
+/numbersign/dollar/percent/ampersand/quotesingle/parenleft/parenright/asterisk
+/plus/comma/hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight
+/nine/colon/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M
+/N/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum
+/underscore/grave/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft
+/bar/braceright/asciitilde/.notdef/.notdef/.notdef/quotesinglbase/florin
+/quotedblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron
+/guilsinglleft/OE/.notdef/.notdef/.notdef/.notdef/quoteleft/quoteright
+/quotedblleft/quotedblright/bullet/endash/emdash/tilde/trademark/scaron
+/guilsinglright/oe/.notdef/.notdef/Ydieresis/.notdef/exclamdown/cent/sterling
+/currency/yen/brokenbar/section/dieresis/copyright/ordfeminine/guillemotleft
+/logicalnot/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown/Agrave/Aacute
+/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex
+/Edieresis/Igrave/Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute
+/Ocircumflex/Otilde/Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex
+/Udieresis/Yacute/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave/iacute
+/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis
+/divide/oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]def
+LATENC /_Helvetica /Helvetica reencode
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)2813 1361 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(Q)2868 1361 MS (u)2921 1361 MS (o)2963 1361 MS (t)3005 1361 MS (a)3028 1361 MS (t)3066 1361 MS (i)3089 1361 MS (o)3108 1361 MS (n)3150 1361 MS ( )3192 1361 MS (o)3211 1361 MS (f)3253 1361 MS ( )3276 1361 MS (s)3295 1361 MS (m)3333 1361 MS (a)3393 1361 MS
+(l)3431 1361 MS (l)3450 1361 MS ( )3469 1361 MS (p)3488 1361 MS (o)3530 1361 MS (r)3572 1361 MS (t)3598 1361 MS (i)3621 1361 MS (o)3640 1361 MS (n)3682 1361 MS (s)3724 1361 MS (;)3762 1361 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)2813 1459 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(S)2868 1459 MS (u)2913 1459 MS (m)2955 1459 MS (m)3016 1459 MS (a)3076 1459 MS (r)3115 1459 MS (i)3141 1459 MS (e)3160 1459 MS (s)3198 1459 MS (,)3236 1459 MS ( )3255 1459 MS (c)3274 1459 MS (r)3313 1459 MS (i)3339 1459 MS (t)3358 1459 MS (i)3381 1459 MS
+(q)3400 1459 MS (u)3442 1459 MS (e)3484 1459 MS (s)3522 1459 MS (,)3560 1459 MS ( )3579 1459 MS (a)3598 1459 MS (n)3636 1459 MS (a)3678 1459 MS (l)3716 1459 MS (y)3736 1459 MS (s)3773 1459 MS (e)3811 1459 MS (s)3850 1459 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 1570 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(S)2791 1570 MS (t)2843 1570 MS (a)2869 1570 MS (n)2912 1570 MS (d)2960 1570 MS (a)3008 1570 MS (r)3051 1570 MS (d)3081 1570 MS ( )3129 1570 MS (u)3151 1570 MS (s)3199 1570 MS (e)3242 1570 MS ( )3285 1570 MS (p)3307 1570 MS (r)3355 1570 MS (o)3385 1570 MS
+(h)3433 1570 MS (i)3481 1570 MS (b)3503 1570 MS (i)3551 1570 MS (t)3573 1570 MS (s)3599 1570 MS (:)3641 1570 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)2813 1670 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(C)2868 1670 MS (o)2917 1670 MS (p)2959 1670 MS (y)3002 1670 MS (i)3038 1670 MS (n)3057 1670 MS (g)3099 1670 MS ( )3141 1670 MS (&)3161 1670 MS ( )3210 1670 MS (r)3229 1670 MS (e)3255 1670 MS (d)3293 1670 MS (i)3335 1670 MS (s)3354 1670 MS (t)3392 1670 MS
+(r)3416 1670 MS (i)3442 1670 MS (b)3461 1670 MS (u)3503 1670 MS (t)3545 1670 MS (i)3568 1670 MS (o)3587 1670 MS (n)3629 1670 MS (;)3671 1670 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)2813 1769 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(W)2868 1769 MS (h)2933 1769 MS (o)2975 1769 MS (l)3017 1769 MS (e)3036 1769 MS (s)3074 1769 MS (a)3112 1769 MS (l)3150 1769 MS (e)3169 1769 MS ( )3207 1769 MS (i)3226 1769 MS (n)3245 1769 MS (c)3287 1769 MS (o)3325 1769 MS (r)3367 1769 MS (p)3393 1769 MS
+(o)3435 1769 MS (r)3477 1769 MS (a)3503 1769 MS (t)3541 1769 MS (i)3564 1769 MS (o)3583 1769 MS (n)3625 1769 MS ( )3667 1769 MS (o)3686 1769 MS (f)3728 1769 MS ( )3751 1769 MS (t)3770 1769 MS (h)3793 1769 MS (e)3835 1769 MS ( )3873 1769 MS (w)3892 1769 MS
+(o)3945 1769 MS (r)3987 1769 MS (k)4013 1769 MS (;)4051 1769 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)2813 1868 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(U)2868 1868 MS (s)2917 1868 MS (e)2955 1868 MS ( )2993 1868 MS (w)3012 1868 MS (i)3065 1868 MS (t)3084 1868 MS (h)3107 1868 MS (o)3149 1868 MS (u)3191 1868 MS (t)3233 1868 MS ( )3256 1868 MS (p)3275 1868 MS (r)3317 1868 MS (o)3343 1868 MS (p)3385 1868 MS
+(e)3427 1868 MS (r)3465 1868 MS ( )3491 1868 MS (c)3510 1868 MS (i)3548 1868 MS (t)3567 1868 MS (a)3590 1868 MS (t)3628 1868 MS (i)3651 1868 MS (o)3670 1868 MS (n)3712 1868 MS (.)3754 1868 MS
+gs
+n
+1760 1320 2576 794 CB
+n
+1752 1312 2580 798 B
+cp
+CM [1 0 0 1 2576 794] concat
+s
+SM
+gr
+n
+1758 1318 551 2534 B
+1 g
+f
+n
+278 40 624 2534 B
+0.309 g
+f
+n
+278 40 624 2575 B
+f
+n
+278 41 624 2616 B
+f
+n
+278 40 624 2658 B
+f
+n
+278 40 624 2699 B
+0.305 g
+f
+n
+278 40 624 2740 B
+f
+n
+278 41 624 2781 B
+0.301 g
+f
+n
+278 40 624 2823 B
+0.297 g
+f
+n
+278 40 624 2864 B
+0.293 g
+f
+n
+278 40 624 2905 B
+0.289 g
+f
+n
+278 40 624 2946 B
+0.285 g
+f
+n
+278 41 624 2987 B
+0.281 g
+f
+n
+278 40 624 3029 B
+0.277 g
+f
+n
+278 40 624 3070 B
+0.273 g
+f
+n
+278 40 624 3111 B
+0.266 g
+f
+n
+278 41 624 3152 B
+0.262 g
+f
+n
+278 40 624 3194 B
+0.254 g
+f
+n
+278 40 624 3235 B
+0.246 g
+f
+n
+278 40 624 3276 B
+0.242 g
+f
+n
+278 40 624 3317 B
+0.234 g
+f
+n
+278 41 624 3358 B
+0.23 g
+f
+n
+278 40 624 3400 B
+0.223 g
+f
+n
+278 40 624 3441 B
+0.219 g
+f
+n
+278 40 624 3482 B
+0.211 g
+f
+n
+278 40 624 3523 B
+0.207 g
+f
+n
+278 41 624 3564 B
+0.203 g
+f
+n
+278 40 624 3606 B
+0.199 g
+f
+n
+278 40 624 3647 B
+f
+n
+278 40 624 3688 B
+0.195 g
+f
+n
+278 41 624 3729 B
+0.191 g
+f
+n
+278 40 624 3771 B
+f
+n
+278 40 624 3812 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+580 2871 M
+580 2901 L
+1489 2901 L
+1489 2871 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 580 2873 B
+0.645 g
+f
+n
+908 0 580 2877 B
+f
+n
+908 0 580 2881 B
+f
+n
+908 0 580 2885 B
+f
+n
+908 0 580 2889 B
+f
+n
+908 0 580 2893 B
+f
+n
+908 0 580 2897 B
+f
+gr
+n
+2 42 683 3810 B
+0.359 g
+f
+n
+2 42 686 3810 B
+f
+n
+2 42 689 3810 B
+f
+n
+2 42 692 3810 B
+0.363 g
+f
+n
+2 42 695 3810 B
+f
+n
+3 42 698 3810 B
+0.367 g
+f
+n
+2 42 702 3810 B
+f
+n
+2 42 705 3810 B
+0.371 g
+f
+n
+2 42 708 3810 B
+f
+n
+2 42 711 3810 B
+0.375 g
+f
+n
+2 42 714 3810 B
+0.379 g
+f
+n
+2 42 717 3810 B
+0.383 g
+f
+n
+2 42 720 3810 B
+f
+n
+2 42 723 3810 B
+0.387 g
+f
+n
+2 42 726 3810 B
+0.391 g
+f
+n
+2 42 729 3810 B
+0.395 g
+f
+n
+3 42 732 3810 B
+f
+n
+2 42 736 3810 B
+0.398 g
+f
+n
+2 42 739 3810 B
+0.402 g
+f
+n
+2 42 742 3810 B
+0.406 g
+f
+n
+2 42 745 3810 B
+0.41 g
+f
+n
+2 42 748 3810 B
+0.414 g
+f
+n
+2 42 751 3810 B
+0.418 g
+f
+n
+2 42 754 3810 B
+0.426 g
+f
+n
+2 42 757 3810 B
+0.43 g
+f
+n
+2 42 760 3810 B
+0.434 g
+f
+n
+2 42 763 3810 B
+0.438 g
+f
+n
+3 42 766 3810 B
+0.441 g
+f
+n
+2 42 770 3810 B
+0.449 g
+f
+n
+2 42 773 3810 B
+0.453 g
+f
+n
+2 42 776 3810 B
+0.457 g
+f
+n
+2 42 779 3810 B
+0.465 g
+f
+n
+2 42 782 3810 B
+0.469 g
+f
+n
+2 42 785 3810 B
+0.477 g
+f
+n
+2 42 788 3810 B
+0.484 g
+f
+n
+2 42 791 3810 B
+0.488 g
+f
+n
+2 42 794 3810 B
+0.492 g
+f
+n
+2 42 797 3810 B
+0.5 g
+f
+n
+3 42 800 3810 B
+0.512 g
+f
+n
+2 42 804 3810 B
+0.516 g
+f
+n
+2 42 807 3810 B
+0.523 g
+f
+n
+2 42 810 3810 B
+0.527 g
+f
+n
+2 42 813 3810 B
+0.535 g
+f
+n
+2 42 816 3810 B
+0.543 g
+f
+n
+2 42 819 3810 B
+0.547 g
+f
+n
+2 42 822 3810 B
+0.551 g
+f
+n
+2 42 825 3810 B
+0.563 g
+f
+n
+2 42 828 3810 B
+0.566 g
+f
+n
+2 42 831 3810 B
+0.57 g
+f
+n
+3 42 834 3810 B
+0.578 g
+f
+n
+2 42 838 3810 B
+0.586 g
+f
+n
+2 42 841 3810 B
+0.59 g
+f
+n
+2 42 844 3810 B
+0.598 g
+f
+n
+2 42 847 3810 B
+0.602 g
+f
+n
+2 42 850 3810 B
+0.609 g
+f
+n
+2 42 853 3810 B
+0.617 g
+f
+n
+2 42 856 3810 B
+0.621 g
+f
+n
+2 42 859 3810 B
+0.629 g
+f
+n
+2 42 862 3810 B
+0.633 g
+f
+n
+3 42 865 3810 B
+0.641 g
+f
+n
+2 42 869 3810 B
+0.645 g
+f
+n
+2 42 872 3810 B
+0.652 g
+f
+n
+2 42 875 3810 B
+0.656 g
+f
+n
+2 42 878 3810 B
+0.664 g
+f
+n
+2 42 881 3810 B
+0.668 g
+f
+n
+2 42 884 3810 B
+0.672 g
+f
+n
+2 42 887 3810 B
+0.68 g
+f
+n
+2 42 890 3810 B
+0.684 g
+f
+n
+2 42 893 3810 B
+0.688 g
+f
+n
+2 42 896 3810 B
+0.691 g
+f
+n
+3 42 899 3810 B
+0.695 g
+f
+n
+2 42 903 3810 B
+0.699 g
+f
+n
+2 42 906 3810 B
+0.707 g
+f
+n
+2 42 909 3810 B
+f
+n
+2 42 912 3810 B
+0.711 g
+f
+n
+2 42 915 3810 B
+0.719 g
+f
+n
+2 42 918 3810 B
+f
+n
+2 42 921 3810 B
+0.727 g
+f
+n
+2 42 924 3810 B
+f
+n
+2 42 927 3810 B
+0.73 g
+f
+n
+2 42 930 3810 B
+0.734 g
+f
+n
+3 42 933 3810 B
+0.738 g
+f
+n
+2 42 937 3810 B
+0.742 g
+f
+n
+2 42 940 3810 B
+f
+n
+2 42 943 3810 B
+0.746 g
+f
+n
+2 42 946 3810 B
+0.75 g
+f
+n
+2 42 949 3810 B
+f
+n
+2 42 952 3810 B
+0.754 g
+f
+n
+2 42 955 3810 B
+f
+n
+2 42 958 3810 B
+0.758 g
+f
+n
+2 42 961 3810 B
+0.762 g
+f
+n
+2 42 964 3810 B
+f
+n
+3 42 967 3810 B
+0.766 g
+f
+n
+2 42 971 3810 B
+f
+n
+2 42 974 3810 B
+f
+n
+2 42 977 3810 B
+0.77 g
+f
+n
+2 42 980 3810 B
+f
+n
+2 42 983 3810 B
+0.773 g
+f
+n
+2 42 986 3810 B
+f
+n
+2 42 989 3810 B
+f
+n
+2 42 992 3810 B
+0.777 g
+f
+n
+2 42 995 3810 B
+f
+n
+2 42 998 3810 B
+f
+n
+3 42 1001 3810 B
+f
+n
+2 42 1005 3810 B
+0.781 g
+f
+n
+2 42 1008 3810 B
+f
+n
+2 42 1011 3810 B
+f
+n
+2 42 1014 3810 B
+f
+n
+2 42 1017 3810 B
+0.785 g
+f
+n
+2 42 1020 3810 B
+f
+n
+2 42 1023 3810 B
+0.781 g
+f
+n
+2 42 1026 3810 B
+f
+n
+2 42 1029 3810 B
+f
+n
+2 42 1032 3810 B
+f
+n
+3 42 1035 3810 B
+0.777 g
+f
+n
+2 42 1039 3810 B
+f
+n
+2 42 1042 3810 B
+f
+n
+2 42 1045 3810 B
+f
+n
+2 42 1048 3810 B
+0.773 g
+f
+n
+2 42 1051 3810 B
+f
+n
+2 42 1054 3810 B
+f
+n
+2 42 1057 3810 B
+0.77 g
+f
+n
+2 42 1060 3810 B
+f
+n
+2 42 1063 3810 B
+0.766 g
+f
+n
+2 42 1066 3810 B
+f
+n
+3 42 1069 3810 B
+f
+n
+2 42 1073 3810 B
+0.762 g
+f
+n
+2 42 1076 3810 B
+f
+n
+2 42 1079 3810 B
+0.758 g
+f
+n
+2 42 1082 3810 B
+0.754 g
+f
+n
+2 42 1085 3810 B
+f
+n
+2 42 1088 3810 B
+0.75 g
+f
+n
+2 42 1091 3810 B
+f
+n
+2 42 1094 3810 B
+0.746 g
+f
+n
+2 42 1097 3810 B
+0.742 g
+f
+n
+2 42 1100 3810 B
+f
+n
+3 42 1103 3810 B
+0.738 g
+f
+n
+2 42 1107 3810 B
+0.734 g
+f
+n
+2 42 1110 3810 B
+0.73 g
+f
+n
+2 42 1113 3810 B
+0.727 g
+f
+n
+2 42 1116 3810 B
+f
+n
+2 42 1119 3810 B
+0.719 g
+f
+n
+2 42 1122 3810 B
+f
+n
+2 42 1125 3810 B
+0.711 g
+f
+n
+2 42 1128 3810 B
+0.707 g
+f
+n
+2 42 1131 3810 B
+f
+n
+2 42 1134 3810 B
+0.699 g
+f
+n
+3 42 1137 3810 B
+0.695 g
+f
+n
+2 42 1141 3810 B
+0.691 g
+f
+n
+2 42 1144 3810 B
+0.688 g
+f
+n
+2 42 1147 3810 B
+0.684 g
+f
+n
+2 42 1150 3810 B
+0.68 g
+f
+n
+2 42 1153 3810 B
+0.672 g
+f
+n
+2 42 1156 3810 B
+0.668 g
+f
+n
+2 42 1159 3810 B
+0.664 g
+f
+n
+2 42 1162 3810 B
+0.656 g
+f
+n
+2 42 1165 3810 B
+0.652 g
+f
+n
+2 42 1168 3810 B
+0.645 g
+f
+n
+3 42 1171 3810 B
+0.641 g
+f
+n
+2 42 1175 3810 B
+0.633 g
+f
+n
+2 42 1178 3810 B
+0.629 g
+f
+n
+2 42 1181 3810 B
+0.621 g
+f
+n
+2 42 1184 3810 B
+0.617 g
+f
+n
+2 42 1187 3810 B
+0.609 g
+f
+n
+2 42 1190 3810 B
+0.602 g
+f
+n
+2 42 1193 3810 B
+0.598 g
+f
+n
+2 42 1196 3810 B
+0.59 g
+f
+n
+2 42 1199 3810 B
+0.586 g
+f
+n
+3 42 1202 3810 B
+0.578 g
+f
+n
+2 42 1206 3810 B
+0.57 g
+f
+n
+2 42 1209 3810 B
+0.566 g
+f
+n
+2 42 1212 3810 B
+0.563 g
+f
+n
+2 42 1215 3810 B
+0.551 g
+f
+n
+2 42 1218 3810 B
+0.547 g
+f
+n
+2 42 1221 3810 B
+0.543 g
+f
+n
+2 42 1224 3810 B
+0.535 g
+f
+n
+2 42 1227 3810 B
+0.527 g
+f
+n
+2 42 1230 3810 B
+0.523 g
+f
+n
+2 42 1233 3810 B
+0.516 g
+f
+n
+3 42 1236 3810 B
+0.512 g
+f
+n
+2 42 1240 3810 B
+0.5 g
+f
+n
+2 42 1243 3810 B
+0.492 g
+f
+n
+2 42 1246 3810 B
+0.488 g
+f
+n
+2 42 1249 3810 B
+0.484 g
+f
+n
+2 42 1252 3810 B
+0.477 g
+f
+n
+2 42 1255 3810 B
+0.469 g
+f
+n
+2 42 1258 3810 B
+0.465 g
+f
+n
+2 42 1261 3810 B
+0.457 g
+f
+n
+2 42 1264 3810 B
+0.453 g
+f
+n
+2 42 1267 3810 B
+0.449 g
+f
+n
+3 42 1270 3810 B
+0.441 g
+f
+n
+2 42 1274 3810 B
+0.438 g
+f
+n
+2 42 1277 3810 B
+0.434 g
+f
+n
+2 42 1280 3810 B
+0.43 g
+f
+n
+2 42 1283 3810 B
+0.426 g
+f
+n
+2 42 1286 3810 B
+0.418 g
+f
+n
+2 42 1289 3810 B
+0.414 g
+f
+n
+2 42 1292 3810 B
+0.41 g
+f
+n
+2 42 1295 3810 B
+0.406 g
+f
+n
+2 42 1298 3810 B
+0.402 g
+f
+n
+2 42 1301 3810 B
+0.398 g
+f
+n
+3 42 1304 3810 B
+0.395 g
+f
+n
+2 42 1308 3810 B
+f
+n
+2 42 1311 3810 B
+0.391 g
+f
+n
+2 42 1314 3810 B
+0.387 g
+f
+n
+2 42 1317 3810 B
+0.383 g
+f
+n
+2 42 1320 3810 B
+f
+n
+2 42 1323 3810 B
+0.379 g
+f
+n
+2 42 1326 3810 B
+0.375 g
+f
+n
+2 42 1329 3810 B
+0.371 g
+f
+n
+2 42 1332 3810 B
+f
+n
+2 42 1335 3810 B
+0.367 g
+f
+n
+3 42 1338 3810 B
+f
+n
+2 42 1342 3810 B
+0.363 g
+f
+n
+2 42 1345 3810 B
+f
+n
+2 42 1348 3810 B
+0.359 g
+f
+n
+2 42 1351 3810 B
+f
+n
+2 42 1354 3810 B
+f
+n
+22 145 698 2681 B
+0.309 g
+f
+n
+23 145 721 2681 B
+f
+n
+22 145 745 2681 B
+f
+n
+22 145 768 2681 B
+f
+n
+23 145 791 2681 B
+f
+n
+22 145 815 2681 B
+f
+n
+23 145 838 2681 B
+0.305 g
+f
+n
+22 145 862 2681 B
+f
+n
+22 145 885 2681 B
+f
+n
+23 145 908 2681 B
+0.301 g
+f
+n
+22 145 932 2681 B
+f
+n
+22 145 955 2681 B
+f
+n
+23 145 978 2681 B
+0.297 g
+f
+n
+22 145 1002 2681 B
+f
+n
+22 145 1025 2681 B
+0.293 g
+f
+n
+23 145 1048 2681 B
+f
+n
+22 145 1072 2681 B
+0.289 g
+f
+n
+23 145 1095 2681 B
+f
+n
+22 145 1119 2681 B
+0.285 g
+f
+n
+22 145 1142 2681 B
+0.281 g
+f
+n
+23 145 1165 2681 B
+0.277 g
+f
+n
+22 145 1189 2681 B
+f
+n
+22 145 1212 2681 B
+0.273 g
+f
+n
+23 145 1235 2681 B
+0.27 g
+f
+n
+22 145 1259 2681 B
+0.266 g
+f
+n
+22 145 1282 2681 B
+0.262 g
+f
+n
+23 145 1305 2681 B
+0.258 g
+f
+n
+22 145 1329 2681 B
+0.254 g
+f
+n
+23 145 1352 2681 B
+0.25 g
+f
+n
+22 145 1376 2681 B
+0.246 g
+f
+n
+22 145 1399 2681 B
+0.242 g
+f
+n
+23 145 1422 2681 B
+0.238 g
+f
+n
+22 145 1446 2681 B
+0.23 g
+f
+n
+22 145 1469 2681 B
+0.227 g
+f
+n
+23 145 1492 2681 B
+0.223 g
+f
+n
+22 145 1516 2681 B
+0.215 g
+f
+n
+22 145 1539 2681 B
+0.211 g
+f
+n
+23 145 1562 2681 B
+0.203 g
+f
+n
+22 145 1586 2681 B
+0.199 g
+f
+n
+22 145 1609 2681 B
+0.195 g
+f
+n
+23 145 1632 2681 B
+0.188 g
+f
+n
+22 145 1656 2681 B
+0.184 g
+f
+n
+23 145 1679 2681 B
+0.176 g
+f
+n
+22 145 1703 2681 B
+0.172 g
+f
+n
+22 145 1726 2681 B
+0.164 g
+f
+n
+23 145 1749 2681 B
+0.16 g
+f
+n
+22 145 1773 2681 B
+0.152 g
+f
+n
+22 145 1796 2681 B
+0.148 g
+f
+n
+23 145 1819 2681 B
+0.141 g
+f
+n
+22 145 1843 2681 B
+0.137 g
+f
+n
+22 145 1866 2681 B
+0.129 g
+f
+n
+23 145 1889 2681 B
+0.125 g
+f
+n
+22 145 1913 2681 B
+0.121 g
+f
+n
+23 145 1936 2681 B
+0.113 g
+f
+n
+22 145 1960 2681 B
+0.109 g
+f
+n
+22 145 1983 2681 B
+0.105 g
+f
+n
+23 145 2006 2681 B
+0.098 g
+f
+n
+22 145 2030 2681 B
+0.094 g
+f
+n
+22 145 2053 2681 B
+0.086 g
+f
+n
+23 145 2076 2681 B
+0.082 g
+f
+n
+22 145 2100 2681 B
+0.078 g
+f
+n
+22 145 2123 2681 B
+0.074 g
+f
+n
+23 145 2146 2681 B
+0.07 g
+f
+n
+22 145 2170 2681 B
+0.066 g
+f
+n
+23 145 2193 2681 B
+0.063 g
+f
+n
+22 145 2217 2681 B
+0.055 g
+f
+n
+22 145 2240 2681 B
+f
+n
+23 145 2263 2681 B
+0.051 g
+f
+n
+22 145 2287 2681 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)1183 3758 MS (R)1194 3758 MS (C)1217 3758 MS (S)1240 3758 MS ( )1259 3758 MS (W)1268 3758 MS (o)1300 3758 MS (r)1317 3758 MS (k)1328 3758 MS (s)1345 3758 MS (h)1359 3758 MS (o)1375 3758 MS (p)1392 3758 MS ( )1409 3758 MS (o)1418 3758 MS (n)1436 3758 MS
+( )1452 3758 MS (O)1461 3758 MS (p)1486 3758 MS (e)1503 3758 MS (n)1519 3758 MS ( )1535 3758 MS (L)1544 3758 MS (a)1565 3758 MS (n)1581 3758 MS (g)1597 3758 MS (u)1614 3758 MS (a)1631 3758 MS (g)1646 3758 MS (e)1664 3758 MS ( )1679 3758 MS
+(A)1369 3799 MS (r)1393 3799 MS (c)1404 3799 MS (h)1420 3799 MS (i)1437 3799 MS (v)1447 3799 MS (e)1463 3799 MS (s)1479 3799 MS
+(9)2144 3778 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(V)700 2801 MS (o)778 2801 MS (c)832 2801 MS (a)880 2801 MS (b)927 2801 MS (u)981 2801 MS (l)1035 2801 MS (a)1065 2801 MS (r)1113 2801 MS (y)1149 2801 MS (:)1200 2801 MS ( )1230 2801 MS (N)1257 2801 MS (o)1335 2801 MS (n)1389 2801 MS
+(-)1443 2801 MS
+(p)1479 2801 MS (r)1533 2801 MS (o)1569 2801 MS (f)1622 2801 MS (i)1659 2801 MS (t)1689 2801 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)700 3000 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(T)766 3000 MS (h)813 3000 MS (e)861 3000 MS ( )904 3000 MS (r)926 3000 MS (e)956 3000 MS (s)1000 3000 MS (o)1043 3000 MS (u)1091 3000 MS (r)1139 3000 MS (c)1169 3000 MS (e)1212 3000 MS ( )1255 3000 MS (c)1277 3000 MS (a)1321 3000 MS (n)1364 3000 MS
+( )1412 3000 MS (b)1434 3000 MS (e)1482 3000 MS ( )1525 3000 MS (u)1547 3000 MS (s)1595 3000 MS (e)1638 3000 MS (d)1681 3000 MS ( )1729 3000 MS (f)1751 3000 MS (o)1777 3000 MS (r)1825 3000 MS ( )1855 3000 MS (a)1877 3000 MS (n)1920 3000 MS (y)1968 3000 MS
+( )2010 3000 MS
+(n)766 3094 MS (o)814 3094 MS (n)862 3094 MS
+(-)910 3094 MS
+(p)936 3094 MS (r)984 3094 MS (o)1014 3094 MS (f)1062 3094 MS (i)1088 3094 MS (t)1109 3094 MS ( )1135 3094 MS (p)1157 3094 MS (u)1205 3094 MS (r)1253 3094 MS (p)1283 3094 MS (o)1330 3094 MS (s)1378 3094 MS (e)1421 3094 MS (.)1464 3094 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)700 3206 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(I)766 3206 MS (n)788 3206 MS (c)836 3206 MS (l)879 3206 MS (u)901 3206 MS (d)949 3206 MS (e)997 3206 MS (s)1040 3206 MS ( )1083 3206 MS (p)1105 3206 MS (e)1153 3206 MS (r)1196 3206 MS (m)1226 3206 MS (i)1295 3206 MS (s)1317 3206 MS (s)1360 3206 MS
+(i)1403 3206 MS (o)1425 3206 MS (n)1473 3206 MS ( )1521 3206 MS (t)1543 3206 MS (o)1569 3206 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)788 3307 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(C)843 3307 MS (o)892 3307 MS (p)934 3307 MS (y)977 3307 MS ( )1013 3307 MS (&)1033 3307 MS ( )1082 3307 MS (d)1101 3307 MS (i)1143 3307 MS (s)1162 3307 MS (t)1200 3307 MS (r)1223 3307 MS (i)1249 3307 MS (b)1268 3307 MS (u)1310 3307 MS (t)1352 3307 MS
+(e)1375 3307 MS ( )1413 3307 MS (\()1432 3307 MS (f)1455 3307 MS (r)1478 3307 MS (e)1505 3307 MS (e)1543 3307 MS ( )1581 3307 MS (o)1600 3307 MS (f)1642 3307 MS ( )1665 3307 MS (c)1684 3307 MS (h)1722 3307 MS (a)1764 3307 MS (r)1802 3307 MS (g)1829 3307 MS
+(e)1871 3307 MS (\))1909 3307 MS (;)1932 3307 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)788 3405 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(I)843 3405 MS (n)862 3405 MS (c)904 3405 MS (o)942 3405 MS (r)984 3405 MS (p)1010 3405 MS (o)1052 3405 MS (r)1094 3405 MS (a)1120 3405 MS (t)1158 3405 MS (e)1181 3405 MS ( )1219 3405 MS (w)1238 3405 MS (h)1291 3405 MS (o)1333 3405 MS (l)1375 3405 MS
+(l)1394 3405 MS (y)1414 3405 MS ( )1451 3405 MS (i)1470 3405 MS (n)1489 3405 MS (t)1531 3405 MS (o)1554 3405 MS ( )1596 3405 MS (a)1615 3405 MS (c)1653 3405 MS (a)1691 3405 MS (d)1729 3405 MS (e)1771 3405 MS (m)1810 3405 MS (i)1870 3405 MS (c)1889 3405 MS
+( )1927 3405 MS
+(m)843 3488 MS (a)903 3488 MS (t)941 3488 MS (e)964 3488 MS (r)1003 3488 MS (i)1029 3488 MS (a)1048 3488 MS (l)1086 3488 MS (s)1105 3488 MS (;)1143 3488 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)788 3586 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(C)843 3586 MS (r)892 3586 MS (e)918 3586 MS (a)956 3586 MS (t)994 3586 MS (e)1018 3586 MS ( )1056 3586 MS (d)1075 3586 MS (e)1117 3586 MS (r)1155 3586 MS (i)1181 3586 MS (v)1201 3586 MS (a)1238 3586 MS (t)1276 3586 MS (i)1299 3586 MS (v)1319 3586 MS
+(e)1357 3586 MS ( )1395 3586 MS (w)1414 3586 MS (o)1467 3586 MS (r)1509 3586 MS (k)1535 3586 MS (s)1574 3586 MS (,)1612 3586 MS ( )1631 3586 MS (s)1650 3586 MS (u)1688 3586 MS (c)1730 3586 MS (h)1768 3586 MS ( )1810 3586 MS (a)1830 3586 MS (s)1868 3586 MS
+( )1906 3586 MS
+(t)843 3669 MS (r)866 3669 MS (a)892 3669 MS (n)930 3669 MS (s)972 3669 MS (l)1010 3669 MS (a)1029 3669 MS (t)1067 3669 MS (i)1090 3669 MS (o)1109 3669 MS (n)1151 3669 MS (s)1193 3669 MS (.)1231 3669 MS
+gs
+n
+1760 1319 551 2534 CB
+n
+1752 1311 555 2538 B
+cp
+CM [1 0 0 1 551 2534] concat
+s
+SM
+gr
+n
+1758 1318 2576 2534 B
+1 g
+f
+n
+278 40 2649 2534 B
+0.309 g
+f
+n
+278 40 2649 2575 B
+f
+n
+278 41 2649 2616 B
+f
+n
+278 40 2649 2658 B
+f
+n
+278 40 2649 2699 B
+0.305 g
+f
+n
+278 40 2649 2740 B
+f
+n
+278 41 2649 2781 B
+0.301 g
+f
+n
+278 40 2649 2823 B
+0.297 g
+f
+n
+278 40 2649 2864 B
+0.293 g
+f
+n
+278 40 2649 2905 B
+0.289 g
+f
+n
+278 40 2649 2946 B
+0.285 g
+f
+n
+278 41 2649 2987 B
+0.281 g
+f
+n
+278 40 2649 3029 B
+0.277 g
+f
+n
+278 40 2649 3070 B
+0.273 g
+f
+n
+278 40 2649 3111 B
+0.266 g
+f
+n
+278 41 2649 3152 B
+0.262 g
+f
+n
+278 40 2649 3194 B
+0.254 g
+f
+n
+278 40 2649 3235 B
+0.246 g
+f
+n
+278 40 2649 3276 B
+0.242 g
+f
+n
+278 40 2649 3317 B
+0.234 g
+f
+n
+278 41 2649 3358 B
+0.23 g
+f
+n
+278 40 2649 3400 B
+0.223 g
+f
+n
+278 40 2649 3441 B
+0.219 g
+f
+n
+278 40 2649 3482 B
+0.211 g
+f
+n
+278 40 2649 3523 B
+0.207 g
+f
+n
+278 41 2649 3564 B
+0.203 g
+f
+n
+278 40 2649 3606 B
+0.199 g
+f
+n
+278 40 2649 3647 B
+f
+n
+278 40 2649 3688 B
+0.195 g
+f
+n
+278 41 2649 3729 B
+0.191 g
+f
+n
+278 40 2649 3771 B
+f
+n
+278 40 2649 3812 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+2605 2871 M
+2605 2901 L
+3514 2901 L
+3514 2871 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 2605 2873 B
+0.645 g
+f
+n
+908 0 2605 2877 B
+f
+n
+908 0 2605 2881 B
+f
+n
+908 0 2605 2885 B
+f
+n
+908 0 2605 2889 B
+f
+n
+908 0 2605 2893 B
+f
+n
+908 0 2605 2897 B
+f
+gr
+n
+2 42 2708 3810 B
+0.359 g
+f
+n
+2 42 2711 3810 B
+f
+n
+2 42 2714 3810 B
+f
+n
+2 42 2717 3810 B
+0.363 g
+f
+n
+2 42 2720 3810 B
+f
+n
+3 42 2723 3810 B
+0.367 g
+f
+n
+2 42 2727 3810 B
+f
+n
+2 42 2730 3810 B
+0.371 g
+f
+n
+2 42 2733 3810 B
+f
+n
+2 42 2736 3810 B
+0.375 g
+f
+n
+2 42 2739 3810 B
+0.379 g
+f
+n
+2 42 2742 3810 B
+0.383 g
+f
+n
+2 42 2745 3810 B
+f
+n
+2 42 2748 3810 B
+0.387 g
+f
+n
+2 42 2751 3810 B
+0.391 g
+f
+n
+2 42 2754 3810 B
+0.395 g
+f
+n
+3 42 2757 3810 B
+f
+n
+2 42 2761 3810 B
+0.398 g
+f
+n
+2 42 2764 3810 B
+0.402 g
+f
+n
+2 42 2767 3810 B
+0.406 g
+f
+n
+2 42 2770 3810 B
+0.41 g
+f
+n
+2 42 2773 3810 B
+0.414 g
+f
+n
+2 42 2776 3810 B
+0.418 g
+f
+n
+2 42 2779 3810 B
+0.426 g
+f
+n
+2 42 2782 3810 B
+0.43 g
+f
+n
+2 42 2785 3810 B
+0.434 g
+f
+n
+2 42 2788 3810 B
+0.438 g
+f
+n
+3 42 2791 3810 B
+0.441 g
+f
+n
+2 42 2795 3810 B
+0.449 g
+f
+n
+2 42 2798 3810 B
+0.453 g
+f
+n
+2 42 2801 3810 B
+0.457 g
+f
+n
+2 42 2804 3810 B
+0.465 g
+f
+n
+2 42 2807 3810 B
+0.469 g
+f
+n
+2 42 2810 3810 B
+0.477 g
+f
+n
+2 42 2813 3810 B
+0.484 g
+f
+n
+2 42 2816 3810 B
+0.488 g
+f
+n
+2 42 2819 3810 B
+0.492 g
+f
+n
+2 42 2822 3810 B
+0.5 g
+f
+n
+3 42 2825 3810 B
+0.512 g
+f
+n
+2 42 2829 3810 B
+0.516 g
+f
+n
+2 42 2832 3810 B
+0.523 g
+f
+n
+2 42 2835 3810 B
+0.527 g
+f
+n
+2 42 2838 3810 B
+0.535 g
+f
+n
+2 42 2841 3810 B
+0.543 g
+f
+n
+2 42 2844 3810 B
+0.547 g
+f
+n
+2 42 2847 3810 B
+0.551 g
+f
+n
+2 42 2850 3810 B
+0.563 g
+f
+n
+2 42 2853 3810 B
+0.566 g
+f
+n
+2 42 2856 3810 B
+0.57 g
+f
+n
+3 42 2859 3810 B
+0.578 g
+f
+n
+2 42 2863 3810 B
+0.586 g
+f
+n
+2 42 2866 3810 B
+0.59 g
+f
+n
+2 42 2869 3810 B
+0.598 g
+f
+n
+2 42 2872 3810 B
+0.602 g
+f
+n
+2 42 2875 3810 B
+0.609 g
+f
+n
+2 42 2878 3810 B
+0.617 g
+f
+n
+2 42 2881 3810 B
+0.621 g
+f
+n
+2 42 2884 3810 B
+0.629 g
+f
+n
+2 42 2887 3810 B
+0.633 g
+f
+n
+3 42 2890 3810 B
+0.641 g
+f
+n
+2 42 2894 3810 B
+0.645 g
+f
+n
+2 42 2897 3810 B
+0.652 g
+f
+n
+2 42 2900 3810 B
+0.656 g
+f
+n
+2 42 2903 3810 B
+0.664 g
+f
+n
+2 42 2906 3810 B
+0.668 g
+f
+n
+2 42 2909 3810 B
+0.672 g
+f
+n
+2 42 2912 3810 B
+0.68 g
+f
+n
+2 42 2915 3810 B
+0.684 g
+f
+n
+2 42 2918 3810 B
+0.688 g
+f
+n
+2 42 2921 3810 B
+0.691 g
+f
+n
+3 42 2924 3810 B
+0.695 g
+f
+n
+2 42 2928 3810 B
+0.699 g
+f
+n
+2 42 2931 3810 B
+0.707 g
+f
+n
+2 42 2934 3810 B
+f
+n
+2 42 2937 3810 B
+0.711 g
+f
+n
+2 42 2940 3810 B
+0.719 g
+f
+n
+2 42 2943 3810 B
+f
+n
+2 42 2946 3810 B
+0.727 g
+f
+n
+2 42 2949 3810 B
+f
+n
+2 42 2952 3810 B
+0.73 g
+f
+n
+2 42 2955 3810 B
+0.734 g
+f
+n
+3 42 2958 3810 B
+0.738 g
+f
+n
+2 42 2962 3810 B
+0.742 g
+f
+n
+2 42 2965 3810 B
+f
+n
+2 42 2968 3810 B
+0.746 g
+f
+n
+2 42 2971 3810 B
+0.75 g
+f
+n
+2 42 2974 3810 B
+f
+n
+2 42 2977 3810 B
+0.754 g
+f
+n
+2 42 2980 3810 B
+f
+n
+2 42 2983 3810 B
+0.758 g
+f
+n
+2 42 2986 3810 B
+0.762 g
+f
+n
+2 42 2989 3810 B
+f
+n
+3 42 2992 3810 B
+0.766 g
+f
+n
+2 42 2996 3810 B
+f
+n
+2 42 2999 3810 B
+f
+n
+2 42 3002 3810 B
+0.77 g
+f
+n
+2 42 3005 3810 B
+f
+n
+2 42 3008 3810 B
+0.773 g
+f
+n
+2 42 3011 3810 B
+f
+n
+2 42 3014 3810 B
+f
+n
+2 42 3017 3810 B
+0.777 g
+f
+n
+2 42 3020 3810 B
+f
+n
+2 42 3023 3810 B
+f
+n
+3 42 3026 3810 B
+f
+n
+2 42 3030 3810 B
+0.781 g
+f
+n
+2 42 3033 3810 B
+f
+n
+2 42 3036 3810 B
+f
+n
+2 42 3039 3810 B
+f
+n
+2 42 3042 3810 B
+0.785 g
+f
+n
+2 42 3045 3810 B
+f
+n
+2 42 3048 3810 B
+0.781 g
+f
+n
+2 42 3051 3810 B
+f
+n
+2 42 3054 3810 B
+f
+n
+2 42 3057 3810 B
+f
+n
+3 42 3060 3810 B
+0.777 g
+f
+n
+2 42 3064 3810 B
+f
+n
+2 42 3067 3810 B
+f
+n
+2 42 3070 3810 B
+f
+n
+2 42 3073 3810 B
+0.773 g
+f
+n
+2 42 3076 3810 B
+f
+n
+2 42 3079 3810 B
+f
+n
+2 42 3082 3810 B
+0.77 g
+f
+n
+2 42 3085 3810 B
+f
+n
+2 42 3088 3810 B
+0.766 g
+f
+n
+2 42 3091 3810 B
+f
+n
+3 42 3094 3810 B
+f
+n
+2 42 3098 3810 B
+0.762 g
+f
+n
+2 42 3101 3810 B
+f
+n
+2 42 3104 3810 B
+0.758 g
+f
+n
+2 42 3107 3810 B
+0.754 g
+f
+n
+2 42 3110 3810 B
+f
+n
+2 42 3113 3810 B
+0.75 g
+f
+n
+2 42 3116 3810 B
+f
+n
+2 42 3119 3810 B
+0.746 g
+f
+n
+2 42 3122 3810 B
+0.742 g
+f
+n
+2 42 3125 3810 B
+f
+n
+3 42 3128 3810 B
+0.738 g
+f
+n
+2 42 3132 3810 B
+0.734 g
+f
+n
+2 42 3135 3810 B
+0.73 g
+f
+n
+2 42 3138 3810 B
+0.727 g
+f
+n
+2 42 3141 3810 B
+f
+n
+2 42 3144 3810 B
+0.719 g
+f
+n
+2 42 3147 3810 B
+f
+n
+2 42 3150 3810 B
+0.711 g
+f
+n
+2 42 3153 3810 B
+0.707 g
+f
+n
+2 42 3156 3810 B
+f
+n
+2 42 3159 3810 B
+0.699 g
+f
+n
+3 42 3162 3810 B
+0.695 g
+f
+n
+2 42 3166 3810 B
+0.691 g
+f
+n
+2 42 3169 3810 B
+0.688 g
+f
+n
+2 42 3172 3810 B
+0.684 g
+f
+n
+2 42 3175 3810 B
+0.68 g
+f
+n
+2 42 3178 3810 B
+0.672 g
+f
+n
+2 42 3181 3810 B
+0.668 g
+f
+n
+2 42 3184 3810 B
+0.664 g
+f
+n
+2 42 3187 3810 B
+0.656 g
+f
+n
+2 42 3190 3810 B
+0.652 g
+f
+n
+2 42 3193 3810 B
+0.645 g
+f
+n
+3 42 3196 3810 B
+0.641 g
+f
+n
+2 42 3200 3810 B
+0.633 g
+f
+n
+2 42 3203 3810 B
+0.629 g
+f
+n
+2 42 3206 3810 B
+0.621 g
+f
+n
+2 42 3209 3810 B
+0.617 g
+f
+n
+2 42 3212 3810 B
+0.609 g
+f
+n
+2 42 3215 3810 B
+0.602 g
+f
+n
+2 42 3218 3810 B
+0.598 g
+f
+n
+2 42 3221 3810 B
+0.59 g
+f
+n
+2 42 3224 3810 B
+0.586 g
+f
+n
+3 42 3227 3810 B
+0.578 g
+f
+n
+2 42 3231 3810 B
+0.57 g
+f
+n
+2 42 3234 3810 B
+0.566 g
+f
+n
+2 42 3237 3810 B
+0.563 g
+f
+n
+2 42 3240 3810 B
+0.551 g
+f
+n
+2 42 3243 3810 B
+0.547 g
+f
+n
+2 42 3246 3810 B
+0.543 g
+f
+n
+2 42 3249 3810 B
+0.535 g
+f
+n
+2 42 3252 3810 B
+0.527 g
+f
+n
+2 42 3255 3810 B
+0.523 g
+f
+n
+2 42 3258 3810 B
+0.516 g
+f
+n
+3 42 3261 3810 B
+0.512 g
+f
+n
+2 42 3265 3810 B
+0.5 g
+f
+n
+2 42 3268 3810 B
+0.492 g
+f
+n
+2 42 3271 3810 B
+0.488 g
+f
+n
+2 42 3274 3810 B
+0.484 g
+f
+n
+2 42 3277 3810 B
+0.477 g
+f
+n
+2 42 3280 3810 B
+0.469 g
+f
+n
+2 42 3283 3810 B
+0.465 g
+f
+n
+2 42 3286 3810 B
+0.457 g
+f
+n
+2 42 3289 3810 B
+0.453 g
+f
+n
+2 42 3292 3810 B
+0.449 g
+f
+n
+3 42 3295 3810 B
+0.441 g
+f
+n
+2 42 3299 3810 B
+0.438 g
+f
+n
+2 42 3302 3810 B
+0.434 g
+f
+n
+2 42 3305 3810 B
+0.43 g
+f
+n
+2 42 3308 3810 B
+0.426 g
+f
+n
+2 42 3311 3810 B
+0.418 g
+f
+n
+2 42 3314 3810 B
+0.414 g
+f
+n
+2 42 3317 3810 B
+0.41 g
+f
+n
+2 42 3320 3810 B
+0.406 g
+f
+n
+2 42 3323 3810 B
+0.402 g
+f
+n
+2 42 3326 3810 B
+0.398 g
+f
+n
+3 42 3329 3810 B
+0.395 g
+f
+n
+2 42 3333 3810 B
+f
+n
+2 42 3336 3810 B
+0.391 g
+f
+n
+2 42 3339 3810 B
+0.387 g
+f
+n
+2 42 3342 3810 B
+0.383 g
+f
+n
+2 42 3345 3810 B
+f
+n
+2 42 3348 3810 B
+0.379 g
+f
+n
+2 42 3351 3810 B
+0.375 g
+f
+n
+2 42 3354 3810 B
+0.371 g
+f
+n
+2 42 3357 3810 B
+f
+n
+2 42 3360 3810 B
+0.367 g
+f
+n
+3 42 3363 3810 B
+f
+n
+2 42 3367 3810 B
+0.363 g
+f
+n
+2 42 3370 3810 B
+f
+n
+2 42 3373 3810 B
+0.359 g
+f
+n
+2 42 3376 3810 B
+f
+n
+2 42 3379 3810 B
+f
+n
+22 145 2723 2681 B
+0.309 g
+f
+n
+23 145 2746 2681 B
+f
+n
+22 145 2770 2681 B
+f
+n
+22 145 2793 2681 B
+f
+n
+23 145 2816 2681 B
+f
+n
+22 145 2840 2681 B
+f
+n
+23 145 2863 2681 B
+0.305 g
+f
+n
+22 145 2887 2681 B
+f
+n
+22 145 2910 2681 B
+f
+n
+23 145 2933 2681 B
+0.301 g
+f
+n
+22 145 2957 2681 B
+f
+n
+22 145 2980 2681 B
+f
+n
+23 145 3003 2681 B
+0.297 g
+f
+n
+22 145 3027 2681 B
+f
+n
+22 145 3050 2681 B
+0.293 g
+f
+n
+23 145 3073 2681 B
+f
+n
+22 145 3097 2681 B
+0.289 g
+f
+n
+23 145 3120 2681 B
+f
+n
+22 145 3144 2681 B
+0.285 g
+f
+n
+22 145 3167 2681 B
+0.281 g
+f
+n
+23 145 3190 2681 B
+0.277 g
+f
+n
+22 145 3214 2681 B
+f
+n
+22 145 3237 2681 B
+0.273 g
+f
+n
+23 145 3260 2681 B
+0.27 g
+f
+n
+22 145 3284 2681 B
+0.266 g
+f
+n
+22 145 3307 2681 B
+0.262 g
+f
+n
+23 145 3330 2681 B
+0.258 g
+f
+n
+22 145 3354 2681 B
+0.254 g
+f
+n
+23 145 3377 2681 B
+0.25 g
+f
+n
+22 145 3401 2681 B
+0.246 g
+f
+n
+22 145 3424 2681 B
+0.242 g
+f
+n
+23 145 3447 2681 B
+0.238 g
+f
+n
+22 145 3471 2681 B
+0.23 g
+f
+n
+22 145 3494 2681 B
+0.227 g
+f
+n
+23 145 3517 2681 B
+0.223 g
+f
+n
+22 145 3541 2681 B
+0.215 g
+f
+n
+22 145 3564 2681 B
+0.211 g
+f
+n
+23 145 3587 2681 B
+0.203 g
+f
+n
+22 145 3611 2681 B
+0.199 g
+f
+n
+22 145 3634 2681 B
+0.195 g
+f
+n
+23 145 3657 2681 B
+0.188 g
+f
+n
+22 145 3681 2681 B
+0.184 g
+f
+n
+23 145 3704 2681 B
+0.176 g
+f
+n
+22 145 3728 2681 B
+0.172 g
+f
+n
+22 145 3751 2681 B
+0.164 g
+f
+n
+23 145 3774 2681 B
+0.16 g
+f
+n
+22 145 3798 2681 B
+0.152 g
+f
+n
+22 145 3821 2681 B
+0.148 g
+f
+n
+23 145 3844 2681 B
+0.141 g
+f
+n
+22 145 3868 2681 B
+0.137 g
+f
+n
+22 145 3891 2681 B
+0.129 g
+f
+n
+23 145 3914 2681 B
+0.125 g
+f
+n
+22 145 3938 2681 B
+0.121 g
+f
+n
+23 145 3961 2681 B
+0.113 g
+f
+n
+22 145 3985 2681 B
+0.109 g
+f
+n
+22 145 4008 2681 B
+0.105 g
+f
+n
+23 145 4031 2681 B
+0.098 g
+f
+n
+22 145 4055 2681 B
+0.094 g
+f
+n
+22 145 4078 2681 B
+0.086 g
+f
+n
+23 145 4101 2681 B
+0.082 g
+f
+n
+22 145 4125 2681 B
+0.078 g
+f
+n
+22 145 4148 2681 B
+0.074 g
+f
+n
+23 145 4171 2681 B
+0.07 g
+f
+n
+22 145 4195 2681 B
+0.066 g
+f
+n
+23 145 4218 2681 B
+0.063 g
+f
+n
+22 145 4242 2681 B
+0.055 g
+f
+n
+22 145 4265 2681 B
+f
+n
+23 145 4288 2681 B
+0.051 g
+f
+n
+22 145 4312 2681 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)3208 3758 MS (R)3219 3758 MS (C)3242 3758 MS (S)3265 3758 MS ( )3284 3758 MS (W)3293 3758 MS (o)3325 3758 MS (r)3342 3758 MS (k)3353 3758 MS (s)3370 3758 MS (h)3384 3758 MS (o)3400 3758 MS (p)3417 3758 MS ( )3434 3758 MS (o)3443 3758 MS (n)3461 3758 MS
+( )3477 3758 MS (O)3486 3758 MS (p)3511 3758 MS (e)3528 3758 MS (n)3544 3758 MS ( )3560 3758 MS (L)3569 3758 MS (a)3590 3758 MS (n)3606 3758 MS (g)3622 3758 MS (u)3639 3758 MS (a)3656 3758 MS (g)3671 3758 MS (e)3689 3758 MS ( )3704 3758 MS
+(A)3394 3799 MS (r)3418 3799 MS (c)3429 3799 MS (h)3445 3799 MS (i)3462 3799 MS (v)3472 3799 MS (e)3488 3799 MS (s)3504 3799 MS
+(1)4151 3778 MS (0)4168 3778 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(V)2725 2801 MS (o)2803 2801 MS (c)2857 2801 MS (a)2905 2801 MS (b)2952 2801 MS (u)3006 2801 MS (l)3060 2801 MS (a)3090 2801 MS (r)3138 2801 MS (y)3174 2801 MS (:)3225 2801 MS ( )3255 2801 MS (C)3282 2801 MS (o)3354 2801 MS (m)3409 2801 MS (m)3492 2801 MS
+(e)3575 2801 MS (r)3623 2801 MS (c)3659 2801 MS (i)3707 2801 MS (a)3737 2801 MS (l)3785 2801 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 3000 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(T)2791 3000 MS (h)2838 3000 MS (e)2886 3000 MS ( )2929 3000 MS (r)2951 3000 MS (e)2981 3000 MS (s)3025 3000 MS (o)3068 3000 MS (u)3116 3000 MS (r)3164 3000 MS (c)3194 3000 MS (e)3237 3000 MS ( )3280 3000 MS (c)3302 3000 MS (a)3346 3000 MS (n)3389 3000 MS
+( )3437 3000 MS (b)3459 3000 MS (e)3507 3000 MS ( )3550 3000 MS (u)3572 3000 MS (s)3620 3000 MS (e)3663 3000 MS (d)3706 3000 MS ( )3754 3000 MS (f)3776 3000 MS (o)3802 3000 MS (r)3850 3000 MS ( )3880 3000 MS
+(c)2791 3094 MS (o)2834 3094 MS (m)2882 3094 MS (m)2951 3094 MS (e)3021 3094 MS (r)3064 3094 MS (c)3095 3094 MS (i)3138 3094 MS (a)3160 3094 MS (l)3203 3094 MS ( )3225 3094 MS (p)3247 3094 MS (u)3295 3094 MS (r)3343 3094 MS (p)3373 3094 MS (o)3421 3094 MS
+(s)3469 3094 MS (e)3512 3094 MS (s)3555 3094 MS (.)3598 3094 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 3206 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(I)2791 3206 MS (n)2813 3206 MS (c)2861 3206 MS (l)2904 3206 MS (u)2926 3206 MS (d)2974 3206 MS (e)3022 3206 MS (s)3065 3206 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)2813 3307 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(C)2868 3307 MS (o)2917 3307 MS (p)2959 3307 MS (y)3002 3307 MS (i)3038 3307 MS (n)3057 3307 MS (g)3099 3307 MS ( )3141 3307 MS (&)3161 3307 MS ( )3210 3307 MS (d)3229 3307 MS (i)3271 3307 MS (s)3290 3307 MS (t)3328 3307 MS (r)3351 3307 MS (i)3377 3307 MS
+(b)3396 3307 MS (u)3438 3307 MS (t)3480 3307 MS (i)3503 3307 MS (n)3522 3307 MS (g)3564 3307 MS ( )3606 3307 MS (f)3625 3307 MS (o)3648 3307 MS (r)3690 3307 MS ( )3716 3307 MS (p)3735 3307 MS (r)3777 3307 MS (o)3803 3307 MS (f)3845 3307 MS (i)3868 3307 MS
+(t)3888 3307 MS (;)3911 3307 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)2813 3405 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(C)2868 3405 MS (r)2917 3405 MS (e)2943 3405 MS (a)2981 3405 MS (t)3019 3405 MS (i)3042 3405 MS (n)3061 3405 MS (g)3103 3405 MS ( )3145 3405 MS (a)3164 3405 MS (n)3202 3405 MS (d)3244 3405 MS ( )3286 3405 MS (s)3305 3405 MS (e)3343 3405 MS (l)3381 3405 MS
+(l)3400 3405 MS (i)3419 3405 MS (n)3438 3405 MS (g)3480 3405 MS ( )3522 3405 MS (d)3541 3405 MS (e)3583 3405 MS (r)3621 3405 MS (i)3647 3405 MS (v)3667 3405 MS (a)3705 3405 MS (t)3743 3405 MS (i)3766 3405 MS (v)3786 3405 MS (e)3823 3405 MS ( )3861 3405 MS
+(w)3881 3405 MS (o)3934 3405 MS (r)3976 3405 MS (k)4002 3405 MS (s)4040 3405 MS (;)4078 3405 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)2813 3504 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(I)2868 3504 MS (n)2887 3504 MS (c)2929 3504 MS (o)2967 3504 MS (r)3009 3504 MS (p)3035 3504 MS (o)3077 3504 MS (r)3119 3504 MS (a)3145 3504 MS (t)3183 3504 MS (i)3206 3504 MS (o)3225 3504 MS (n)3267 3504 MS ( )3309 3504 MS (i)3328 3504 MS (n)3347 3504 MS
+(t)3389 3504 MS (o)3412 3504 MS ( )3454 3504 MS (c)3473 3504 MS (o)3511 3504 MS (m)3553 3504 MS (m)3614 3504 MS (e)3674 3504 MS (r)3712 3504 MS (c)3739 3504 MS (i)3777 3504 MS (a)3796 3504 MS (l)3834 3504 MS ( )3853 3504 MS (p)3873 3504 MS (r)3915 3504 MS
+(o)3941 3504 MS (d)3983 3504 MS (u)4025 3504 MS (c)4067 3504 MS (t)4105 3504 MS (s)4128 3504 MS (.)4166 3504 MS
+gs
+n
+1760 1319 2576 2534 CB
+n
+1752 1311 2580 2538 B
+cp
+CM [1 0 0 1 2576 2534] concat
+s
+SM
+gr
+n
+1758 1319 551 4273 B
+1 g
+f
+n
+278 40 624 4273 B
+0.309 g
+f
+n
+278 40 624 4314 B
+f
+n
+278 41 624 4355 B
+f
+n
+278 40 624 4397 B
+f
+n
+278 40 624 4438 B
+0.305 g
+f
+n
+278 40 624 4479 B
+f
+n
+278 41 624 4520 B
+0.301 g
+f
+n
+278 40 624 4562 B
+0.297 g
+f
+n
+278 40 624 4603 B
+0.293 g
+f
+n
+278 40 624 4644 B
+0.289 g
+f
+n
+278 40 624 4685 B
+0.285 g
+f
+n
+278 41 624 4726 B
+0.281 g
+f
+n
+278 40 624 4768 B
+0.277 g
+f
+n
+278 40 624 4809 B
+0.273 g
+f
+n
+278 40 624 4850 B
+0.266 g
+f
+n
+278 41 624 4891 B
+0.262 g
+f
+n
+278 40 624 4933 B
+0.254 g
+f
+n
+278 40 624 4974 B
+0.246 g
+f
+n
+278 40 624 5015 B
+0.242 g
+f
+n
+278 40 624 5056 B
+0.234 g
+f
+n
+278 41 624 5097 B
+0.23 g
+f
+n
+278 40 624 5139 B
+0.223 g
+f
+n
+278 40 624 5180 B
+0.219 g
+f
+n
+278 40 624 5221 B
+0.211 g
+f
+n
+278 40 624 5262 B
+0.207 g
+f
+n
+278 41 624 5303 B
+0.203 g
+f
+n
+278 40 624 5345 B
+0.199 g
+f
+n
+278 40 624 5386 B
+f
+n
+278 40 624 5427 B
+0.195 g
+f
+n
+278 41 624 5468 B
+0.191 g
+f
+n
+278 40 624 5510 B
+f
+n
+278 40 624 5551 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+580 4610 M
+580 4640 L
+1489 4640 L
+1489 4610 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 580 4612 B
+0.645 g
+f
+n
+908 0 580 4616 B
+f
+n
+908 0 580 4620 B
+f
+n
+908 0 580 4624 B
+f
+n
+908 0 580 4628 B
+f
+n
+908 0 580 4632 B
+f
+n
+908 0 580 4636 B
+f
+gr
+n
+2 42 683 5549 B
+0.359 g
+f
+n
+2 42 686 5549 B
+f
+n
+2 42 689 5549 B
+f
+n
+2 42 692 5549 B
+0.363 g
+f
+n
+2 42 695 5549 B
+f
+n
+3 42 698 5549 B
+0.367 g
+f
+n
+2 42 702 5549 B
+f
+n
+2 42 705 5549 B
+0.371 g
+f
+n
+2 42 708 5549 B
+f
+n
+2 42 711 5549 B
+0.375 g
+f
+n
+2 42 714 5549 B
+0.379 g
+f
+n
+2 42 717 5549 B
+0.383 g
+f
+n
+2 42 720 5549 B
+f
+n
+2 42 723 5549 B
+0.387 g
+f
+n
+2 42 726 5549 B
+0.391 g
+f
+n
+2 42 729 5549 B
+0.395 g
+f
+n
+3 42 732 5549 B
+f
+n
+2 42 736 5549 B
+0.398 g
+f
+n
+2 42 739 5549 B
+0.402 g
+f
+n
+2 42 742 5549 B
+0.406 g
+f
+n
+2 42 745 5549 B
+0.41 g
+f
+n
+2 42 748 5549 B
+0.414 g
+f
+n
+2 42 751 5549 B
+0.418 g
+f
+n
+2 42 754 5549 B
+0.426 g
+f
+n
+2 42 757 5549 B
+0.43 g
+f
+n
+2 42 760 5549 B
+0.434 g
+f
+n
+2 42 763 5549 B
+0.438 g
+f
+n
+3 42 766 5549 B
+0.441 g
+f
+n
+2 42 770 5549 B
+0.449 g
+f
+n
+2 42 773 5549 B
+0.453 g
+f
+n
+2 42 776 5549 B
+0.457 g
+f
+n
+2 42 779 5549 B
+0.465 g
+f
+n
+2 42 782 5549 B
+0.469 g
+f
+n
+2 42 785 5549 B
+0.477 g
+f
+n
+2 42 788 5549 B
+0.484 g
+f
+n
+2 42 791 5549 B
+0.488 g
+f
+n
+2 42 794 5549 B
+0.492 g
+f
+n
+2 42 797 5549 B
+0.5 g
+f
+n
+3 42 800 5549 B
+0.512 g
+f
+n
+2 42 804 5549 B
+0.516 g
+f
+n
+2 42 807 5549 B
+0.523 g
+f
+n
+2 42 810 5549 B
+0.527 g
+f
+n
+2 42 813 5549 B
+0.535 g
+f
+n
+2 42 816 5549 B
+0.543 g
+f
+n
+2 42 819 5549 B
+0.547 g
+f
+n
+2 42 822 5549 B
+0.551 g
+f
+n
+2 42 825 5549 B
+0.563 g
+f
+n
+2 42 828 5549 B
+0.566 g
+f
+n
+2 42 831 5549 B
+0.57 g
+f
+n
+3 42 834 5549 B
+0.578 g
+f
+n
+2 42 838 5549 B
+0.586 g
+f
+n
+2 42 841 5549 B
+0.59 g
+f
+n
+2 42 844 5549 B
+0.598 g
+f
+n
+2 42 847 5549 B
+0.602 g
+f
+n
+2 42 850 5549 B
+0.609 g
+f
+n
+2 42 853 5549 B
+0.617 g
+f
+n
+2 42 856 5549 B
+0.621 g
+f
+n
+2 42 859 5549 B
+0.629 g
+f
+n
+2 42 862 5549 B
+0.633 g
+f
+n
+3 42 865 5549 B
+0.641 g
+f
+n
+2 42 869 5549 B
+0.645 g
+f
+n
+2 42 872 5549 B
+0.652 g
+f
+n
+2 42 875 5549 B
+0.656 g
+f
+n
+2 42 878 5549 B
+0.664 g
+f
+n
+2 42 881 5549 B
+0.668 g
+f
+n
+2 42 884 5549 B
+0.672 g
+f
+n
+2 42 887 5549 B
+0.68 g
+f
+n
+2 42 890 5549 B
+0.684 g
+f
+n
+2 42 893 5549 B
+0.688 g
+f
+n
+2 42 896 5549 B
+0.691 g
+f
+n
+3 42 899 5549 B
+0.695 g
+f
+n
+2 42 903 5549 B
+0.699 g
+f
+n
+2 42 906 5549 B
+0.707 g
+f
+n
+2 42 909 5549 B
+f
+n
+2 42 912 5549 B
+0.711 g
+f
+n
+2 42 915 5549 B
+0.719 g
+f
+n
+2 42 918 5549 B
+f
+n
+2 42 921 5549 B
+0.727 g
+f
+n
+2 42 924 5549 B
+f
+n
+2 42 927 5549 B
+0.73 g
+f
+n
+2 42 930 5549 B
+0.734 g
+f
+n
+3 42 933 5549 B
+0.738 g
+f
+n
+2 42 937 5549 B
+0.742 g
+f
+n
+2 42 940 5549 B
+f
+n
+2 42 943 5549 B
+0.746 g
+f
+n
+2 42 946 5549 B
+0.75 g
+f
+n
+2 42 949 5549 B
+f
+n
+2 42 952 5549 B
+0.754 g
+f
+n
+2 42 955 5549 B
+f
+n
+2 42 958 5549 B
+0.758 g
+f
+n
+2 42 961 5549 B
+0.762 g
+f
+n
+2 42 964 5549 B
+f
+n
+3 42 967 5549 B
+0.766 g
+f
+n
+2 42 971 5549 B
+f
+n
+2 42 974 5549 B
+f
+n
+2 42 977 5549 B
+0.77 g
+f
+n
+2 42 980 5549 B
+f
+n
+2 42 983 5549 B
+0.773 g
+f
+n
+2 42 986 5549 B
+f
+n
+2 42 989 5549 B
+f
+n
+2 42 992 5549 B
+0.777 g
+f
+n
+2 42 995 5549 B
+f
+n
+2 42 998 5549 B
+f
+n
+3 42 1001 5549 B
+f
+n
+2 42 1005 5549 B
+0.781 g
+f
+n
+2 42 1008 5549 B
+f
+n
+2 42 1011 5549 B
+f
+n
+2 42 1014 5549 B
+f
+n
+2 42 1017 5549 B
+0.785 g
+f
+n
+2 42 1020 5549 B
+f
+n
+2 42 1023 5549 B
+0.781 g
+f
+n
+2 42 1026 5549 B
+f
+n
+2 42 1029 5549 B
+f
+n
+2 42 1032 5549 B
+f
+n
+3 42 1035 5549 B
+0.777 g
+f
+n
+2 42 1039 5549 B
+f
+n
+2 42 1042 5549 B
+f
+n
+2 42 1045 5549 B
+f
+n
+2 42 1048 5549 B
+0.773 g
+f
+n
+2 42 1051 5549 B
+f
+n
+2 42 1054 5549 B
+f
+n
+2 42 1057 5549 B
+0.77 g
+f
+n
+2 42 1060 5549 B
+f
+n
+2 42 1063 5549 B
+0.766 g
+f
+n
+2 42 1066 5549 B
+f
+n
+3 42 1069 5549 B
+f
+n
+2 42 1073 5549 B
+0.762 g
+f
+n
+2 42 1076 5549 B
+f
+n
+2 42 1079 5549 B
+0.758 g
+f
+n
+2 42 1082 5549 B
+0.754 g
+f
+n
+2 42 1085 5549 B
+f
+n
+2 42 1088 5549 B
+0.75 g
+f
+n
+2 42 1091 5549 B
+f
+n
+2 42 1094 5549 B
+0.746 g
+f
+n
+2 42 1097 5549 B
+0.742 g
+f
+n
+2 42 1100 5549 B
+f
+n
+3 42 1103 5549 B
+0.738 g
+f
+n
+2 42 1107 5549 B
+0.734 g
+f
+n
+2 42 1110 5549 B
+0.73 g
+f
+n
+2 42 1113 5549 B
+0.727 g
+f
+n
+2 42 1116 5549 B
+f
+n
+2 42 1119 5549 B
+0.719 g
+f
+n
+2 42 1122 5549 B
+f
+n
+2 42 1125 5549 B
+0.711 g
+f
+n
+2 42 1128 5549 B
+0.707 g
+f
+n
+2 42 1131 5549 B
+f
+n
+2 42 1134 5549 B
+0.699 g
+f
+n
+3 42 1137 5549 B
+0.695 g
+f
+n
+2 42 1141 5549 B
+0.691 g
+f
+n
+2 42 1144 5549 B
+0.688 g
+f
+n
+2 42 1147 5549 B
+0.684 g
+f
+n
+2 42 1150 5549 B
+0.68 g
+f
+n
+2 42 1153 5549 B
+0.672 g
+f
+n
+2 42 1156 5549 B
+0.668 g
+f
+n
+2 42 1159 5549 B
+0.664 g
+f
+n
+2 42 1162 5549 B
+0.656 g
+f
+n
+2 42 1165 5549 B
+0.652 g
+f
+n
+2 42 1168 5549 B
+0.645 g
+f
+n
+3 42 1171 5549 B
+0.641 g
+f
+n
+2 42 1175 5549 B
+0.633 g
+f
+n
+2 42 1178 5549 B
+0.629 g
+f
+n
+2 42 1181 5549 B
+0.621 g
+f
+n
+2 42 1184 5549 B
+0.617 g
+f
+n
+2 42 1187 5549 B
+0.609 g
+f
+n
+2 42 1190 5549 B
+0.602 g
+f
+n
+2 42 1193 5549 B
+0.598 g
+f
+n
+2 42 1196 5549 B
+0.59 g
+f
+n
+2 42 1199 5549 B
+0.586 g
+f
+n
+3 42 1202 5549 B
+0.578 g
+f
+n
+2 42 1206 5549 B
+0.57 g
+f
+n
+2 42 1209 5549 B
+0.566 g
+f
+n
+2 42 1212 5549 B
+0.563 g
+f
+n
+2 42 1215 5549 B
+0.551 g
+f
+n
+2 42 1218 5549 B
+0.547 g
+f
+n
+2 42 1221 5549 B
+0.543 g
+f
+n
+2 42 1224 5549 B
+0.535 g
+f
+n
+2 42 1227 5549 B
+0.527 g
+f
+n
+2 42 1230 5549 B
+0.523 g
+f
+n
+2 42 1233 5549 B
+0.516 g
+f
+n
+3 42 1236 5549 B
+0.512 g
+f
+n
+2 42 1240 5549 B
+0.5 g
+f
+n
+2 42 1243 5549 B
+0.492 g
+f
+n
+2 42 1246 5549 B
+0.488 g
+f
+n
+2 42 1249 5549 B
+0.484 g
+f
+n
+2 42 1252 5549 B
+0.477 g
+f
+n
+2 42 1255 5549 B
+0.469 g
+f
+n
+2 42 1258 5549 B
+0.465 g
+f
+n
+2 42 1261 5549 B
+0.457 g
+f
+n
+2 42 1264 5549 B
+0.453 g
+f
+n
+2 42 1267 5549 B
+0.449 g
+f
+n
+3 42 1270 5549 B
+0.441 g
+f
+n
+2 42 1274 5549 B
+0.438 g
+f
+n
+2 42 1277 5549 B
+0.434 g
+f
+n
+2 42 1280 5549 B
+0.43 g
+f
+n
+2 42 1283 5549 B
+0.426 g
+f
+n
+2 42 1286 5549 B
+0.418 g
+f
+n
+2 42 1289 5549 B
+0.414 g
+f
+n
+2 42 1292 5549 B
+0.41 g
+f
+n
+2 42 1295 5549 B
+0.406 g
+f
+n
+2 42 1298 5549 B
+0.402 g
+f
+n
+2 42 1301 5549 B
+0.398 g
+f
+n
+3 42 1304 5549 B
+0.395 g
+f
+n
+2 42 1308 5549 B
+f
+n
+2 42 1311 5549 B
+0.391 g
+f
+n
+2 42 1314 5549 B
+0.387 g
+f
+n
+2 42 1317 5549 B
+0.383 g
+f
+n
+2 42 1320 5549 B
+f
+n
+2 42 1323 5549 B
+0.379 g
+f
+n
+2 42 1326 5549 B
+0.375 g
+f
+n
+2 42 1329 5549 B
+0.371 g
+f
+n
+2 42 1332 5549 B
+f
+n
+2 42 1335 5549 B
+0.367 g
+f
+n
+3 42 1338 5549 B
+f
+n
+2 42 1342 5549 B
+0.363 g
+f
+n
+2 42 1345 5549 B
+f
+n
+2 42 1348 5549 B
+0.359 g
+f
+n
+2 42 1351 5549 B
+f
+n
+2 42 1354 5549 B
+f
+n
+22 145 698 4420 B
+0.309 g
+f
+n
+23 145 721 4420 B
+f
+n
+22 145 745 4420 B
+f
+n
+22 145 768 4420 B
+f
+n
+23 145 791 4420 B
+f
+n
+22 145 815 4420 B
+f
+n
+23 145 838 4420 B
+0.305 g
+f
+n
+22 145 862 4420 B
+f
+n
+22 145 885 4420 B
+f
+n
+23 145 908 4420 B
+0.301 g
+f
+n
+22 145 932 4420 B
+f
+n
+22 145 955 4420 B
+f
+n
+23 145 978 4420 B
+0.297 g
+f
+n
+22 145 1002 4420 B
+f
+n
+22 145 1025 4420 B
+0.293 g
+f
+n
+23 145 1048 4420 B
+f
+n
+22 145 1072 4420 B
+0.289 g
+f
+n
+23 145 1095 4420 B
+f
+n
+22 145 1119 4420 B
+0.285 g
+f
+n
+22 145 1142 4420 B
+0.281 g
+f
+n
+23 145 1165 4420 B
+0.277 g
+f
+n
+22 145 1189 4420 B
+f
+n
+22 145 1212 4420 B
+0.273 g
+f
+n
+23 145 1235 4420 B
+0.27 g
+f
+n
+22 145 1259 4420 B
+0.266 g
+f
+n
+22 145 1282 4420 B
+0.262 g
+f
+n
+23 145 1305 4420 B
+0.258 g
+f
+n
+22 145 1329 4420 B
+0.254 g
+f
+n
+23 145 1352 4420 B
+0.25 g
+f
+n
+22 145 1376 4420 B
+0.246 g
+f
+n
+22 145 1399 4420 B
+0.242 g
+f
+n
+23 145 1422 4420 B
+0.238 g
+f
+n
+22 145 1446 4420 B
+0.23 g
+f
+n
+22 145 1469 4420 B
+0.227 g
+f
+n
+23 145 1492 4420 B
+0.223 g
+f
+n
+22 145 1516 4420 B
+0.215 g
+f
+n
+22 145 1539 4420 B
+0.211 g
+f
+n
+23 145 1562 4420 B
+0.203 g
+f
+n
+22 145 1586 4420 B
+0.199 g
+f
+n
+22 145 1609 4420 B
+0.195 g
+f
+n
+23 145 1632 4420 B
+0.188 g
+f
+n
+22 145 1656 4420 B
+0.184 g
+f
+n
+23 145 1679 4420 B
+0.176 g
+f
+n
+22 145 1703 4420 B
+0.172 g
+f
+n
+22 145 1726 4420 B
+0.164 g
+f
+n
+23 145 1749 4420 B
+0.16 g
+f
+n
+22 145 1773 4420 B
+0.152 g
+f
+n
+22 145 1796 4420 B
+0.148 g
+f
+n
+23 145 1819 4420 B
+0.141 g
+f
+n
+22 145 1843 4420 B
+0.137 g
+f
+n
+22 145 1866 4420 B
+0.129 g
+f
+n
+23 145 1889 4420 B
+0.125 g
+f
+n
+22 145 1913 4420 B
+0.121 g
+f
+n
+23 145 1936 4420 B
+0.113 g
+f
+n
+22 145 1960 4420 B
+0.109 g
+f
+n
+22 145 1983 4420 B
+0.105 g
+f
+n
+23 145 2006 4420 B
+0.098 g
+f
+n
+22 145 2030 4420 B
+0.094 g
+f
+n
+22 145 2053 4420 B
+0.086 g
+f
+n
+23 145 2076 4420 B
+0.082 g
+f
+n
+22 145 2100 4420 B
+0.078 g
+f
+n
+22 145 2123 4420 B
+0.074 g
+f
+n
+23 145 2146 4420 B
+0.07 g
+f
+n
+22 145 2170 4420 B
+0.066 g
+f
+n
+23 145 2193 4420 B
+0.063 g
+f
+n
+22 145 2217 4420 B
+0.055 g
+f
+n
+22 145 2240 4420 B
+f
+n
+23 145 2263 4420 B
+0.051 g
+f
+n
+22 145 2287 4420 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)1183 5497 MS (R)1194 5497 MS (C)1217 5497 MS (S)1240 5497 MS ( )1259 5497 MS (W)1268 5497 MS (o)1300 5497 MS (r)1317 5497 MS (k)1328 5497 MS (s)1345 5497 MS (h)1359 5497 MS (o)1375 5497 MS (p)1392 5497 MS ( )1409 5497 MS (o)1418 5497 MS (n)1436 5497 MS
+( )1452 5497 MS (O)1461 5497 MS (p)1486 5497 MS (e)1503 5497 MS (n)1519 5497 MS ( )1535 5497 MS (L)1544 5497 MS (a)1565 5497 MS (n)1581 5497 MS (g)1597 5497 MS (u)1614 5497 MS (a)1631 5497 MS (g)1646 5497 MS (e)1664 5497 MS ( )1679 5497 MS
+(A)1369 5538 MS (r)1393 5538 MS (c)1404 5538 MS (h)1420 5538 MS (i)1437 5538 MS (v)1447 5538 MS (e)1463 5538 MS (s)1479 5538 MS
+(1)2126 5517 MS (1)2143 5517 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(F)700 4540 MS (i)760 4540 MS (r)790 4540 MS (s)826 4540 MS (t)868 4540 MS ( )898 4540 MS (q)925 4540 MS (u)979 4540 MS (e)1032 4540 MS (s)1080 4540 MS (t)1122 4540 MS (i)1152 4540 MS (o)1182 4540 MS (n)1236 4540 MS (:)1290 4540 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)700 4739 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(I)766 4739 MS (s)788 4739 MS ( )831 4739 MS (t)853 4739 MS (h)879 4739 MS (i)927 4739 MS (s)949 4739 MS ( )992 4739 MS (e)1014 4739 MS (n)1057 4739 MS (o)1105 4739 MS (u)1153 4739 MS (g)1200 4739 MS (h)1248 4739 MS (?)1296 4739 MS ( )1343 4739 MS
+( )1365 4739 MS (A)1388 4739 MS (r)1442 4739 MS (e)1472 4739 MS ( )1515 4739 MS (t)1537 4739 MS (h)1563 4739 MS (e)1611 4739 MS (r)1655 4739 MS (e)1685 4739 MS ( )1728 4739 MS (o)1751 4739 MS (t)1799 4739 MS (h)1825 4739 MS (e)1873 4739 MS (r)1916 4739 MS
+( )1946 4739 MS
+(a)766 4833 MS (t)809 4833 MS (t)835 4833 MS (r)861 4833 MS (i)891 4833 MS (b)913 4833 MS (u)961 4833 MS (t)1009 4833 MS (e)1035 4833 MS (s)1078 4833 MS ( )1121 4833 MS (w)1142 4833 MS (e)1206 4833 MS ( )1248 4833 MS (s)1270 4833 MS (h)1313 4833 MS
+(o)1361 4833 MS (u)1409 4833 MS (l)1456 4833 MS (d)1478 4833 MS ( )1526 4833 MS (d)1547 4833 MS (e)1595 4833 MS (v)1639 4833 MS (e)1681 4833 MS (l)1724 4833 MS (o)1746 4833 MS (p)1794 4833 MS ( )1842 4833 MS (f)1864 4833 MS (o)1890 4833 MS (r)1938 4833 MS
+( )1968 4833 MS (t)1990 4833 MS (h)2016 4833 MS (e)2064 4833 MS ( )2107 4833 MS
+(R)766 4927 MS (i)822 4927 MS (g)844 4927 MS (h)892 4927 MS (t)940 4927 MS (s)966 4927 MS ( )1009 4927 MS (e)1031 4927 MS (l)1074 4927 MS (e)1096 4927 MS (m)1139 4927 MS (e)1208 4927 MS (n)1251 4927 MS (t)1299 4927 MS (?)1325 4927 MS
+gs
+n
+1760 1320 551 4273 CB
+n
+1752 1312 555 4277 B
+cp
+CM [1 0 0 1 551 4273] concat
+s
+SM
+gr
+n
+1758 1319 2576 4273 B
+1 g
+f
+n
+278 40 2649 4273 B
+0.309 g
+f
+n
+278 40 2649 4314 B
+f
+n
+278 41 2649 4355 B
+f
+n
+278 40 2649 4397 B
+f
+n
+278 40 2649 4438 B
+0.305 g
+f
+n
+278 40 2649 4479 B
+f
+n
+278 41 2649 4520 B
+0.301 g
+f
+n
+278 40 2649 4562 B
+0.297 g
+f
+n
+278 40 2649 4603 B
+0.293 g
+f
+n
+278 40 2649 4644 B
+0.289 g
+f
+n
+278 40 2649 4685 B
+0.285 g
+f
+n
+278 41 2649 4726 B
+0.281 g
+f
+n
+278 40 2649 4768 B
+0.277 g
+f
+n
+278 40 2649 4809 B
+0.273 g
+f
+n
+278 40 2649 4850 B
+0.266 g
+f
+n
+278 41 2649 4891 B
+0.262 g
+f
+n
+278 40 2649 4933 B
+0.254 g
+f
+n
+278 40 2649 4974 B
+0.246 g
+f
+n
+278 40 2649 5015 B
+0.242 g
+f
+n
+278 40 2649 5056 B
+0.234 g
+f
+n
+278 41 2649 5097 B
+0.23 g
+f
+n
+278 40 2649 5139 B
+0.223 g
+f
+n
+278 40 2649 5180 B
+0.219 g
+f
+n
+278 40 2649 5221 B
+0.211 g
+f
+n
+278 40 2649 5262 B
+0.207 g
+f
+n
+278 41 2649 5303 B
+0.203 g
+f
+n
+278 40 2649 5345 B
+0.199 g
+f
+n
+278 40 2649 5386 B
+f
+n
+278 40 2649 5427 B
+0.195 g
+f
+n
+278 41 2649 5468 B
+0.191 g
+f
+n
+278 40 2649 5510 B
+f
+n
+278 40 2649 5551 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+2605 4610 M
+2605 4640 L
+3514 4640 L
+3514 4610 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 2605 4612 B
+0.645 g
+f
+n
+908 0 2605 4616 B
+f
+n
+908 0 2605 4620 B
+f
+n
+908 0 2605 4624 B
+f
+n
+908 0 2605 4628 B
+f
+n
+908 0 2605 4632 B
+f
+n
+908 0 2605 4636 B
+f
+gr
+n
+2 42 2708 5549 B
+0.359 g
+f
+n
+2 42 2711 5549 B
+f
+n
+2 42 2714 5549 B
+f
+n
+2 42 2717 5549 B
+0.363 g
+f
+n
+2 42 2720 5549 B
+f
+n
+3 42 2723 5549 B
+0.367 g
+f
+n
+2 42 2727 5549 B
+f
+n
+2 42 2730 5549 B
+0.371 g
+f
+n
+2 42 2733 5549 B
+f
+n
+2 42 2736 5549 B
+0.375 g
+f
+n
+2 42 2739 5549 B
+0.379 g
+f
+n
+2 42 2742 5549 B
+0.383 g
+f
+n
+2 42 2745 5549 B
+f
+n
+2 42 2748 5549 B
+0.387 g
+f
+n
+2 42 2751 5549 B
+0.391 g
+f
+n
+2 42 2754 5549 B
+0.395 g
+f
+n
+3 42 2757 5549 B
+f
+n
+2 42 2761 5549 B
+0.398 g
+f
+n
+2 42 2764 5549 B
+0.402 g
+f
+n
+2 42 2767 5549 B
+0.406 g
+f
+n
+2 42 2770 5549 B
+0.41 g
+f
+n
+2 42 2773 5549 B
+0.414 g
+f
+n
+2 42 2776 5549 B
+0.418 g
+f
+n
+2 42 2779 5549 B
+0.426 g
+f
+n
+2 42 2782 5549 B
+0.43 g
+f
+n
+2 42 2785 5549 B
+0.434 g
+f
+n
+2 42 2788 5549 B
+0.438 g
+f
+n
+3 42 2791 5549 B
+0.441 g
+f
+n
+2 42 2795 5549 B
+0.449 g
+f
+n
+2 42 2798 5549 B
+0.453 g
+f
+n
+2 42 2801 5549 B
+0.457 g
+f
+n
+2 42 2804 5549 B
+0.465 g
+f
+n
+2 42 2807 5549 B
+0.469 g
+f
+n
+2 42 2810 5549 B
+0.477 g
+f
+n
+2 42 2813 5549 B
+0.484 g
+f
+n
+2 42 2816 5549 B
+0.488 g
+f
+n
+2 42 2819 5549 B
+0.492 g
+f
+n
+2 42 2822 5549 B
+0.5 g
+f
+n
+3 42 2825 5549 B
+0.512 g
+f
+n
+2 42 2829 5549 B
+0.516 g
+f
+n
+2 42 2832 5549 B
+0.523 g
+f
+n
+2 42 2835 5549 B
+0.527 g
+f
+n
+2 42 2838 5549 B
+0.535 g
+f
+n
+2 42 2841 5549 B
+0.543 g
+f
+n
+2 42 2844 5549 B
+0.547 g
+f
+n
+2 42 2847 5549 B
+0.551 g
+f
+n
+2 42 2850 5549 B
+0.563 g
+f
+n
+2 42 2853 5549 B
+0.566 g
+f
+n
+2 42 2856 5549 B
+0.57 g
+f
+n
+3 42 2859 5549 B
+0.578 g
+f
+n
+2 42 2863 5549 B
+0.586 g
+f
+n
+2 42 2866 5549 B
+0.59 g
+f
+n
+2 42 2869 5549 B
+0.598 g
+f
+n
+2 42 2872 5549 B
+0.602 g
+f
+n
+2 42 2875 5549 B
+0.609 g
+f
+n
+2 42 2878 5549 B
+0.617 g
+f
+n
+2 42 2881 5549 B
+0.621 g
+f
+n
+2 42 2884 5549 B
+0.629 g
+f
+n
+2 42 2887 5549 B
+0.633 g
+f
+n
+3 42 2890 5549 B
+0.641 g
+f
+n
+2 42 2894 5549 B
+0.645 g
+f
+n
+2 42 2897 5549 B
+0.652 g
+f
+n
+2 42 2900 5549 B
+0.656 g
+f
+n
+2 42 2903 5549 B
+0.664 g
+f
+n
+2 42 2906 5549 B
+0.668 g
+f
+n
+2 42 2909 5549 B
+0.672 g
+f
+n
+2 42 2912 5549 B
+0.68 g
+f
+n
+2 42 2915 5549 B
+0.684 g
+f
+n
+2 42 2918 5549 B
+0.688 g
+f
+n
+2 42 2921 5549 B
+0.691 g
+f
+n
+3 42 2924 5549 B
+0.695 g
+f
+n
+2 42 2928 5549 B
+0.699 g
+f
+n
+2 42 2931 5549 B
+0.707 g
+f
+n
+2 42 2934 5549 B
+f
+n
+2 42 2937 5549 B
+0.711 g
+f
+n
+2 42 2940 5549 B
+0.719 g
+f
+n
+2 42 2943 5549 B
+f
+n
+2 42 2946 5549 B
+0.727 g
+f
+n
+2 42 2949 5549 B
+f
+n
+2 42 2952 5549 B
+0.73 g
+f
+n
+2 42 2955 5549 B
+0.734 g
+f
+n
+3 42 2958 5549 B
+0.738 g
+f
+n
+2 42 2962 5549 B
+0.742 g
+f
+n
+2 42 2965 5549 B
+f
+n
+2 42 2968 5549 B
+0.746 g
+f
+n
+2 42 2971 5549 B
+0.75 g
+f
+n
+2 42 2974 5549 B
+f
+n
+2 42 2977 5549 B
+0.754 g
+f
+n
+2 42 2980 5549 B
+f
+n
+2 42 2983 5549 B
+0.758 g
+f
+n
+2 42 2986 5549 B
+0.762 g
+f
+n
+2 42 2989 5549 B
+f
+n
+3 42 2992 5549 B
+0.766 g
+f
+n
+2 42 2996 5549 B
+f
+n
+2 42 2999 5549 B
+f
+n
+2 42 3002 5549 B
+0.77 g
+f
+n
+2 42 3005 5549 B
+f
+n
+2 42 3008 5549 B
+0.773 g
+f
+n
+2 42 3011 5549 B
+f
+n
+2 42 3014 5549 B
+f
+n
+2 42 3017 5549 B
+0.777 g
+f
+n
+2 42 3020 5549 B
+f
+n
+2 42 3023 5549 B
+f
+n
+3 42 3026 5549 B
+f
+n
+2 42 3030 5549 B
+0.781 g
+f
+n
+2 42 3033 5549 B
+f
+n
+2 42 3036 5549 B
+f
+n
+2 42 3039 5549 B
+f
+n
+2 42 3042 5549 B
+0.785 g
+f
+n
+2 42 3045 5549 B
+f
+n
+2 42 3048 5549 B
+0.781 g
+f
+n
+2 42 3051 5549 B
+f
+n
+2 42 3054 5549 B
+f
+n
+2 42 3057 5549 B
+f
+n
+3 42 3060 5549 B
+0.777 g
+f
+n
+2 42 3064 5549 B
+f
+n
+2 42 3067 5549 B
+f
+n
+2 42 3070 5549 B
+f
+n
+2 42 3073 5549 B
+0.773 g
+f
+n
+2 42 3076 5549 B
+f
+n
+2 42 3079 5549 B
+f
+n
+2 42 3082 5549 B
+0.77 g
+f
+n
+2 42 3085 5549 B
+f
+n
+2 42 3088 5549 B
+0.766 g
+f
+n
+2 42 3091 5549 B
+f
+n
+3 42 3094 5549 B
+f
+n
+2 42 3098 5549 B
+0.762 g
+f
+n
+2 42 3101 5549 B
+f
+n
+2 42 3104 5549 B
+0.758 g
+f
+n
+2 42 3107 5549 B
+0.754 g
+f
+n
+2 42 3110 5549 B
+f
+n
+2 42 3113 5549 B
+0.75 g
+f
+n
+2 42 3116 5549 B
+f
+n
+2 42 3119 5549 B
+0.746 g
+f
+n
+2 42 3122 5549 B
+0.742 g
+f
+n
+2 42 3125 5549 B
+f
+n
+3 42 3128 5549 B
+0.738 g
+f
+n
+2 42 3132 5549 B
+0.734 g
+f
+n
+2 42 3135 5549 B
+0.73 g
+f
+n
+2 42 3138 5549 B
+0.727 g
+f
+n
+2 42 3141 5549 B
+f
+n
+2 42 3144 5549 B
+0.719 g
+f
+n
+2 42 3147 5549 B
+f
+n
+2 42 3150 5549 B
+0.711 g
+f
+n
+2 42 3153 5549 B
+0.707 g
+f
+n
+2 42 3156 5549 B
+f
+n
+2 42 3159 5549 B
+0.699 g
+f
+n
+3 42 3162 5549 B
+0.695 g
+f
+n
+2 42 3166 5549 B
+0.691 g
+f
+n
+2 42 3169 5549 B
+0.688 g
+f
+n
+2 42 3172 5549 B
+0.684 g
+f
+n
+2 42 3175 5549 B
+0.68 g
+f
+n
+2 42 3178 5549 B
+0.672 g
+f
+n
+2 42 3181 5549 B
+0.668 g
+f
+n
+2 42 3184 5549 B
+0.664 g
+f
+n
+2 42 3187 5549 B
+0.656 g
+f
+n
+2 42 3190 5549 B
+0.652 g
+f
+n
+2 42 3193 5549 B
+0.645 g
+f
+n
+3 42 3196 5549 B
+0.641 g
+f
+n
+2 42 3200 5549 B
+0.633 g
+f
+n
+2 42 3203 5549 B
+0.629 g
+f
+n
+2 42 3206 5549 B
+0.621 g
+f
+n
+2 42 3209 5549 B
+0.617 g
+f
+n
+2 42 3212 5549 B
+0.609 g
+f
+n
+2 42 3215 5549 B
+0.602 g
+f
+n
+2 42 3218 5549 B
+0.598 g
+f
+n
+2 42 3221 5549 B
+0.59 g
+f
+n
+2 42 3224 5549 B
+0.586 g
+f
+n
+3 42 3227 5549 B
+0.578 g
+f
+n
+2 42 3231 5549 B
+0.57 g
+f
+n
+2 42 3234 5549 B
+0.566 g
+f
+n
+2 42 3237 5549 B
+0.563 g
+f
+n
+2 42 3240 5549 B
+0.551 g
+f
+n
+2 42 3243 5549 B
+0.547 g
+f
+n
+2 42 3246 5549 B
+0.543 g
+f
+n
+2 42 3249 5549 B
+0.535 g
+f
+n
+2 42 3252 5549 B
+0.527 g
+f
+n
+2 42 3255 5549 B
+0.523 g
+f
+n
+2 42 3258 5549 B
+0.516 g
+f
+n
+3 42 3261 5549 B
+0.512 g
+f
+n
+2 42 3265 5549 B
+0.5 g
+f
+n
+2 42 3268 5549 B
+0.492 g
+f
+n
+2 42 3271 5549 B
+0.488 g
+f
+n
+2 42 3274 5549 B
+0.484 g
+f
+n
+2 42 3277 5549 B
+0.477 g
+f
+n
+2 42 3280 5549 B
+0.469 g
+f
+n
+2 42 3283 5549 B
+0.465 g
+f
+n
+2 42 3286 5549 B
+0.457 g
+f
+n
+2 42 3289 5549 B
+0.453 g
+f
+n
+2 42 3292 5549 B
+0.449 g
+f
+n
+3 42 3295 5549 B
+0.441 g
+f
+n
+2 42 3299 5549 B
+0.438 g
+f
+n
+2 42 3302 5549 B
+0.434 g
+f
+n
+2 42 3305 5549 B
+0.43 g
+f
+n
+2 42 3308 5549 B
+0.426 g
+f
+n
+2 42 3311 5549 B
+0.418 g
+f
+n
+2 42 3314 5549 B
+0.414 g
+f
+n
+2 42 3317 5549 B
+0.41 g
+f
+n
+2 42 3320 5549 B
+0.406 g
+f
+n
+2 42 3323 5549 B
+0.402 g
+f
+n
+2 42 3326 5549 B
+0.398 g
+f
+n
+3 42 3329 5549 B
+0.395 g
+f
+n
+2 42 3333 5549 B
+f
+n
+2 42 3336 5549 B
+0.391 g
+f
+n
+2 42 3339 5549 B
+0.387 g
+f
+n
+2 42 3342 5549 B
+0.383 g
+f
+n
+2 42 3345 5549 B
+f
+n
+2 42 3348 5549 B
+0.379 g
+f
+n
+2 42 3351 5549 B
+0.375 g
+f
+n
+2 42 3354 5549 B
+0.371 g
+f
+n
+2 42 3357 5549 B
+f
+n
+2 42 3360 5549 B
+0.367 g
+f
+n
+3 42 3363 5549 B
+f
+n
+2 42 3367 5549 B
+0.363 g
+f
+n
+2 42 3370 5549 B
+f
+n
+2 42 3373 5549 B
+0.359 g
+f
+n
+2 42 3376 5549 B
+f
+n
+2 42 3379 5549 B
+f
+n
+22 145 2723 4420 B
+0.309 g
+f
+n
+23 145 2746 4420 B
+f
+n
+22 145 2770 4420 B
+f
+n
+22 145 2793 4420 B
+f
+n
+23 145 2816 4420 B
+f
+n
+22 145 2840 4420 B
+f
+n
+23 145 2863 4420 B
+0.305 g
+f
+n
+22 145 2887 4420 B
+f
+n
+22 145 2910 4420 B
+f
+n
+23 145 2933 4420 B
+0.301 g
+f
+n
+22 145 2957 4420 B
+f
+n
+22 145 2980 4420 B
+f
+n
+23 145 3003 4420 B
+0.297 g
+f
+n
+22 145 3027 4420 B
+f
+n
+22 145 3050 4420 B
+0.293 g
+f
+n
+23 145 3073 4420 B
+f
+n
+22 145 3097 4420 B
+0.289 g
+f
+n
+23 145 3120 4420 B
+f
+n
+22 145 3144 4420 B
+0.285 g
+f
+n
+22 145 3167 4420 B
+0.281 g
+f
+n
+23 145 3190 4420 B
+0.277 g
+f
+n
+22 145 3214 4420 B
+f
+n
+22 145 3237 4420 B
+0.273 g
+f
+n
+23 145 3260 4420 B
+0.27 g
+f
+n
+22 145 3284 4420 B
+0.266 g
+f
+n
+22 145 3307 4420 B
+0.262 g
+f
+n
+23 145 3330 4420 B
+0.258 g
+f
+n
+22 145 3354 4420 B
+0.254 g
+f
+n
+23 145 3377 4420 B
+0.25 g
+f
+n
+22 145 3401 4420 B
+0.246 g
+f
+n
+22 145 3424 4420 B
+0.242 g
+f
+n
+23 145 3447 4420 B
+0.238 g
+f
+n
+22 145 3471 4420 B
+0.23 g
+f
+n
+22 145 3494 4420 B
+0.227 g
+f
+n
+23 145 3517 4420 B
+0.223 g
+f
+n
+22 145 3541 4420 B
+0.215 g
+f
+n
+22 145 3564 4420 B
+0.211 g
+f
+n
+23 145 3587 4420 B
+0.203 g
+f
+n
+22 145 3611 4420 B
+0.199 g
+f
+n
+22 145 3634 4420 B
+0.195 g
+f
+n
+23 145 3657 4420 B
+0.188 g
+f
+n
+22 145 3681 4420 B
+0.184 g
+f
+n
+23 145 3704 4420 B
+0.176 g
+f
+n
+22 145 3728 4420 B
+0.172 g
+f
+n
+22 145 3751 4420 B
+0.164 g
+f
+n
+23 145 3774 4420 B
+0.16 g
+f
+n
+22 145 3798 4420 B
+0.152 g
+f
+n
+22 145 3821 4420 B
+0.148 g
+f
+n
+23 145 3844 4420 B
+0.141 g
+f
+n
+22 145 3868 4420 B
+0.137 g
+f
+n
+22 145 3891 4420 B
+0.129 g
+f
+n
+23 145 3914 4420 B
+0.125 g
+f
+n
+22 145 3938 4420 B
+0.121 g
+f
+n
+23 145 3961 4420 B
+0.113 g
+f
+n
+22 145 3985 4420 B
+0.109 g
+f
+n
+22 145 4008 4420 B
+0.105 g
+f
+n
+23 145 4031 4420 B
+0.098 g
+f
+n
+22 145 4055 4420 B
+0.094 g
+f
+n
+22 145 4078 4420 B
+0.086 g
+f
+n
+23 145 4101 4420 B
+0.082 g
+f
+n
+22 145 4125 4420 B
+0.078 g
+f
+n
+22 145 4148 4420 B
+0.074 g
+f
+n
+23 145 4171 4420 B
+0.07 g
+f
+n
+22 145 4195 4420 B
+0.066 g
+f
+n
+23 145 4218 4420 B
+0.063 g
+f
+n
+22 145 4242 4420 B
+0.055 g
+f
+n
+22 145 4265 4420 B
+f
+n
+23 145 4288 4420 B
+0.051 g
+f
+n
+22 145 4312 4420 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)3208 5497 MS (R)3219 5497 MS (C)3242 5497 MS (S)3265 5497 MS ( )3284 5497 MS (W)3293 5497 MS (o)3325 5497 MS (r)3342 5497 MS (k)3353 5497 MS (s)3370 5497 MS (h)3384 5497 MS (o)3400 5497 MS (p)3417 5497 MS ( )3434 5497 MS (o)3443 5497 MS (n)3461 5497 MS
+( )3477 5497 MS (O)3486 5497 MS (p)3511 5497 MS (e)3528 5497 MS (n)3544 5497 MS ( )3560 5497 MS (L)3569 5497 MS (a)3590 5497 MS (n)3606 5497 MS (g)3622 5497 MS (u)3639 5497 MS (a)3656 5497 MS (g)3671 5497 MS (e)3689 5497 MS ( )3704 5497 MS
+(A)3394 5538 MS (r)3418 5538 MS (c)3429 5538 MS (h)3445 5538 MS (i)3462 5538 MS (v)3472 5538 MS (e)3488 5538 MS (s)3504 5538 MS
+(1)4151 5517 MS (2)4168 5517 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(T)2725 4540 MS (h)2791 4540 MS (e)2845 4540 MS ( )2893 4540 MS (s)2920 4540 MS (h)2962 4540 MS (o)3015 4540 MS (r)3069 4540 MS (t)3105 4540 MS ( )3135 4540 MS (a)3162 4540 MS (n)3209 4540 MS (s)3263 4540 MS (w)3305 4540 MS (e)3383 4540 MS (r)3430 4540 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)2725 4739 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(I)2791 4739 MS (n)2813 4739 MS (t)2861 4739 MS (e)2887 4739 MS (l)2930 4739 MS (l)2952 4739 MS (e)2974 4739 MS (c)3017 4739 MS (t)3060 4739 MS (u)3086 4739 MS (a)3134 4739 MS (l)3177 4739 MS ( )3199 4739 MS (p)3221 4739 MS (r)3269 4739 MS (o)3299 4739 MS
+(p)3347 4739 MS (e)3395 4739 MS (r)3438 4739 MS (t)3468 4739 MS (y)3494 4739 MS ( )3536 4739 MS (r)3558 4739 MS (i)3588 4739 MS (g)3610 4739 MS (h)3658 4739 MS (t)3706 4739 MS (s)3732 4739 MS ( )3775 4739 MS (a)3797 4739 MS (r)3840 4739 MS (e)3870 4739 MS
+( )3913 4739 MS
+(c)2791 4833 MS (o)2834 4833 MS (m)2882 4833 MS (p)2951 4833 MS (l)2999 4833 MS (e)3021 4833 MS (x)3064 4833 MS ( )3107 4833 MS (&)3129 4833 MS ( )3185 4833 MS (s)3207 4833 MS (o)3250 4833 MS (l)3298 4833 MS (u)3320 4833 MS (t)3368 4833 MS (i)3394 4833 MS
+(o)3416 4833 MS (n)3464 4833 MS (s)3512 4833 MS ( )3555 4833 MS (a)3577 4833 MS (r)3620 4833 MS (e)3650 4833 MS ( )3693 4833 MS (h)3715 4833 MS (i)3763 4833 MS (g)3785 4833 MS (h)3833 4833 MS (l)3881 4833 MS (y)3903 4833 MS ( )3945 4833 MS
+(v)2791 4927 MS (a)2833 4927 MS (r)2877 4927 MS (i)2907 4927 MS (e)2929 4927 MS (d)2972 4927 MS ( )3020 4927 MS (&)3042 4927 MS ( )3098 4927 MS (s)3120 4927 MS (i)3163 4927 MS (t)3185 4927 MS (u)3211 4927 MS (a)3259 4927 MS (t)3302 4927 MS (i)3328 4927 MS
+(o)3350 4927 MS (n)3398 4927 MS
+(-)3446 4927 MS
+(d)3472 4927 MS (e)3520 4927 MS (p)3563 4927 MS (e)3611 4927 MS (n)3654 4927 MS (d)3702 4927 MS (e)3750 4927 MS (n)3793 4927 MS (t)3841 4927 MS (,)3867 4927 MS ( )3889 4927 MS (s)3911 4927 MS (o)3954 4927 MS ( )4002 4927 MS (i)4023 4927 MS (t)4045 4927 MS
+( )4071 4927 MS (i)4093 4927 MS (s)4115 4927 MS ( )4158 4927 MS
+(p)2791 5020 MS (r)2839 5020 MS (o)2869 5020 MS (b)2917 5020 MS (a)2965 5020 MS (b)3008 5020 MS (l)3056 5020 MS (y)3078 5020 MS ( )3120 5020 MS (n)3142 5020 MS (o)3190 5020 MS (t)3238 5020 MS ( )3264 5020 MS (p)3286 5020 MS (o)3334 5020 MS (s)3382 5020 MS
+(s)3425 5020 MS (i)3468 5020 MS (b)3490 5020 MS (l)3538 5020 MS (e)3560 5020 MS ( )3603 5020 MS (f)3625 5020 MS (o)3650 5020 MS (r)3698 5020 MS ( )3728 5020 MS (u)3750 5020 MS (s)3797 5020 MS ( )3840 5020 MS (t)3862 5020 MS (o)3888 5020 MS ( )3936 5020 MS
+(d)2791 5114 MS (e)2839 5114 MS (f)2882 5114 MS (i)2908 5114 MS (n)2930 5114 MS (e)2978 5114 MS ( )3021 5114 MS (c)3043 5114 MS (o)3086 5114 MS (n)3134 5114 MS (t)3182 5114 MS (r)3208 5114 MS (o)3238 5114 MS (l)3286 5114 MS (l)3308 5114 MS (e)3330 5114 MS
+(d)3373 5114 MS ( )3421 5114 MS (v)3443 5114 MS (o)3484 5114 MS (c)3532 5114 MS (a)3575 5114 MS (b)3618 5114 MS (u)3666 5114 MS (l)3714 5114 MS (a)3736 5114 MS (r)3779 5114 MS (i)3810 5114 MS (e)3832 5114 MS (s)3875 5114 MS ( )3918 5114 MS (t)3940 5114 MS
+(h)3966 5114 MS (a)4014 5114 MS (t)4057 5114 MS ( )4083 5114 MS
+(c)2791 5208 MS (o)2834 5208 MS (v)2883 5208 MS (e)2925 5208 MS (r)2968 5208 MS ( )2998 5208 MS (t)3020 5208 MS (h)3046 5208 MS (e)3094 5208 MS ( )3137 5208 MS (s)3159 5208 MS (u)3202 5208 MS (b)3250 5208 MS (j)3298 5208 MS (e)3320 5208 MS (c)3363 5208 MS
+(t)3406 5208 MS (.)3432 5208 MS
+gs
+n
+1760 1320 2576 4273 CB
+n
+1752 1312 2580 4277 B
+cp
+CM [1 0 0 1 2576 4273] concat
+s
+SM
+gr
+showpage
+%%Page: 3 3
+13 779.762 translate 72 600 div dup neg scale
+0 0 transform .25 add round .25 sub exch .25 add round .25 sub exch itransform translate
+n
+4499 5999 194 194 B
+1 g
+f
+[100 0 0 -100 0 0]/Times-Roman MF
+0 g
+(O)254 6140 MS (L)327 6140 MS (A)386 6140 MS (C)458 6140 MS ( )525 6140 MS (A)550 6140 MS (c)623 6140 MS (c)667 6140 MS (e)712 6140 MS (s)756 6140 MS (s)795 6140 MS ( )834 6140 MS (V)859 6140 MS (o)931 6140 MS (c)981 6140 MS (a)1026 6140 MS
+(b)1070 6140 MS (u)1120 6140 MS (l)1170 6140 MS (a)1199 6140 MS (r)1243 6140 MS (y)1277 6140 MS
+(3)4583 6140 MS
+n
+1758 1319 551 794 B
+1 g
+f
+n
+278 40 624 794 B
+0.309 g
+f
+n
+278 40 624 835 B
+f
+n
+278 41 624 876 B
+f
+n
+278 40 624 918 B
+f
+n
+278 40 624 959 B
+0.305 g
+f
+n
+278 40 624 1000 B
+f
+n
+278 41 624 1041 B
+0.301 g
+f
+n
+278 40 624 1083 B
+0.297 g
+f
+n
+278 40 624 1124 B
+0.293 g
+f
+n
+278 40 624 1165 B
+0.289 g
+f
+n
+278 40 624 1206 B
+0.285 g
+f
+n
+278 41 624 1247 B
+0.281 g
+f
+n
+278 40 624 1289 B
+0.277 g
+f
+n
+278 40 624 1330 B
+0.273 g
+f
+n
+278 40 624 1371 B
+0.266 g
+f
+n
+278 41 624 1412 B
+0.262 g
+f
+n
+278 40 624 1454 B
+0.254 g
+f
+n
+278 40 624 1495 B
+0.246 g
+f
+n
+278 40 624 1536 B
+0.242 g
+f
+n
+278 40 624 1577 B
+0.234 g
+f
+n
+278 41 624 1618 B
+0.23 g
+f
+n
+278 40 624 1660 B
+0.223 g
+f
+n
+278 40 624 1701 B
+0.219 g
+f
+n
+278 40 624 1742 B
+0.211 g
+f
+n
+278 40 624 1783 B
+0.207 g
+f
+n
+278 41 624 1824 B
+0.203 g
+f
+n
+278 40 624 1866 B
+0.199 g
+f
+n
+278 40 624 1907 B
+f
+n
+278 40 624 1948 B
+0.195 g
+f
+n
+278 41 624 1989 B
+0.191 g
+f
+n
+278 40 624 2031 B
+f
+n
+278 40 624 2072 B
+f
+gs
+n
+/s {} def /e {} def
+1 sl
+1 g
+580 1131 M
+580 1161 L
+1489 1161 L
+1489 1131 L
+cp
+s
+/s /stroke ld /e /eofill ld
+eoclip
+n
+908 0 580 1133 B
+0.645 g
+f
+n
+908 0 580 1137 B
+f
+n
+908 0 580 1141 B
+f
+n
+908 0 580 1145 B
+f
+n
+908 0 580 1149 B
+f
+n
+908 0 580 1153 B
+f
+n
+908 0 580 1157 B
+f
+gr
+n
+2 42 683 2070 B
+0.359 g
+f
+n
+2 42 686 2070 B
+f
+n
+2 42 689 2070 B
+f
+n
+2 42 692 2070 B
+0.363 g
+f
+n
+2 42 695 2070 B
+f
+n
+3 42 698 2070 B
+0.367 g
+f
+n
+2 42 702 2070 B
+f
+n
+2 42 705 2070 B
+0.371 g
+f
+n
+2 42 708 2070 B
+f
+n
+2 42 711 2070 B
+0.375 g
+f
+n
+2 42 714 2070 B
+0.379 g
+f
+n
+2 42 717 2070 B
+0.383 g
+f
+n
+2 42 720 2070 B
+f
+n
+2 42 723 2070 B
+0.387 g
+f
+n
+2 42 726 2070 B
+0.391 g
+f
+n
+2 42 729 2070 B
+0.395 g
+f
+n
+3 42 732 2070 B
+f
+n
+2 42 736 2070 B
+0.398 g
+f
+n
+2 42 739 2070 B
+0.402 g
+f
+n
+2 42 742 2070 B
+0.406 g
+f
+n
+2 42 745 2070 B
+0.41 g
+f
+n
+2 42 748 2070 B
+0.414 g
+f
+n
+2 42 751 2070 B
+0.418 g
+f
+n
+2 42 754 2070 B
+0.426 g
+f
+n
+2 42 757 2070 B
+0.43 g
+f
+n
+2 42 760 2070 B
+0.434 g
+f
+n
+2 42 763 2070 B
+0.438 g
+f
+n
+3 42 766 2070 B
+0.441 g
+f
+n
+2 42 770 2070 B
+0.449 g
+f
+n
+2 42 773 2070 B
+0.453 g
+f
+n
+2 42 776 2070 B
+0.457 g
+f
+n
+2 42 779 2070 B
+0.465 g
+f
+n
+2 42 782 2070 B
+0.469 g
+f
+n
+2 42 785 2070 B
+0.477 g
+f
+n
+2 42 788 2070 B
+0.484 g
+f
+n
+2 42 791 2070 B
+0.488 g
+f
+n
+2 42 794 2070 B
+0.492 g
+f
+n
+2 42 797 2070 B
+0.5 g
+f
+n
+3 42 800 2070 B
+0.512 g
+f
+n
+2 42 804 2070 B
+0.516 g
+f
+n
+2 42 807 2070 B
+0.523 g
+f
+n
+2 42 810 2070 B
+0.527 g
+f
+n
+2 42 813 2070 B
+0.535 g
+f
+n
+2 42 816 2070 B
+0.543 g
+f
+n
+2 42 819 2070 B
+0.547 g
+f
+n
+2 42 822 2070 B
+0.551 g
+f
+n
+2 42 825 2070 B
+0.563 g
+f
+n
+2 42 828 2070 B
+0.566 g
+f
+n
+2 42 831 2070 B
+0.57 g
+f
+n
+3 42 834 2070 B
+0.578 g
+f
+n
+2 42 838 2070 B
+0.586 g
+f
+n
+2 42 841 2070 B
+0.59 g
+f
+n
+2 42 844 2070 B
+0.598 g
+f
+n
+2 42 847 2070 B
+0.602 g
+f
+n
+2 42 850 2070 B
+0.609 g
+f
+n
+2 42 853 2070 B
+0.617 g
+f
+n
+2 42 856 2070 B
+0.621 g
+f
+n
+2 42 859 2070 B
+0.629 g
+f
+n
+2 42 862 2070 B
+0.633 g
+f
+n
+3 42 865 2070 B
+0.641 g
+f
+n
+2 42 869 2070 B
+0.645 g
+f
+n
+2 42 872 2070 B
+0.652 g
+f
+n
+2 42 875 2070 B
+0.656 g
+f
+n
+2 42 878 2070 B
+0.664 g
+f
+n
+2 42 881 2070 B
+0.668 g
+f
+n
+2 42 884 2070 B
+0.672 g
+f
+n
+2 42 887 2070 B
+0.68 g
+f
+n
+2 42 890 2070 B
+0.684 g
+f
+n
+2 42 893 2070 B
+0.688 g
+f
+n
+2 42 896 2070 B
+0.691 g
+f
+n
+3 42 899 2070 B
+0.695 g
+f
+n
+2 42 903 2070 B
+0.699 g
+f
+n
+2 42 906 2070 B
+0.707 g
+f
+n
+2 42 909 2070 B
+f
+n
+2 42 912 2070 B
+0.711 g
+f
+n
+2 42 915 2070 B
+0.719 g
+f
+n
+2 42 918 2070 B
+f
+n
+2 42 921 2070 B
+0.727 g
+f
+n
+2 42 924 2070 B
+f
+n
+2 42 927 2070 B
+0.73 g
+f
+n
+2 42 930 2070 B
+0.734 g
+f
+n
+3 42 933 2070 B
+0.738 g
+f
+n
+2 42 937 2070 B
+0.742 g
+f
+n
+2 42 940 2070 B
+f
+n
+2 42 943 2070 B
+0.746 g
+f
+n
+2 42 946 2070 B
+0.75 g
+f
+n
+2 42 949 2070 B
+f
+n
+2 42 952 2070 B
+0.754 g
+f
+n
+2 42 955 2070 B
+f
+n
+2 42 958 2070 B
+0.758 g
+f
+n
+2 42 961 2070 B
+0.762 g
+f
+n
+2 42 964 2070 B
+f
+n
+3 42 967 2070 B
+0.766 g
+f
+n
+2 42 971 2070 B
+f
+n
+2 42 974 2070 B
+f
+n
+2 42 977 2070 B
+0.77 g
+f
+n
+2 42 980 2070 B
+f
+n
+2 42 983 2070 B
+0.773 g
+f
+n
+2 42 986 2070 B
+f
+n
+2 42 989 2070 B
+f
+n
+2 42 992 2070 B
+0.777 g
+f
+n
+2 42 995 2070 B
+f
+n
+2 42 998 2070 B
+f
+n
+3 42 1001 2070 B
+f
+n
+2 42 1005 2070 B
+0.781 g
+f
+n
+2 42 1008 2070 B
+f
+n
+2 42 1011 2070 B
+f
+n
+2 42 1014 2070 B
+f
+n
+2 42 1017 2070 B
+0.785 g
+f
+n
+2 42 1020 2070 B
+f
+n
+2 42 1023 2070 B
+0.781 g
+f
+n
+2 42 1026 2070 B
+f
+n
+2 42 1029 2070 B
+f
+n
+2 42 1032 2070 B
+f
+n
+3 42 1035 2070 B
+0.777 g
+f
+n
+2 42 1039 2070 B
+f
+n
+2 42 1042 2070 B
+f
+n
+2 42 1045 2070 B
+f
+n
+2 42 1048 2070 B
+0.773 g
+f
+n
+2 42 1051 2070 B
+f
+n
+2 42 1054 2070 B
+f
+n
+2 42 1057 2070 B
+0.77 g
+f
+n
+2 42 1060 2070 B
+f
+n
+2 42 1063 2070 B
+0.766 g
+f
+n
+2 42 1066 2070 B
+f
+n
+3 42 1069 2070 B
+f
+n
+2 42 1073 2070 B
+0.762 g
+f
+n
+2 42 1076 2070 B
+f
+n
+2 42 1079 2070 B
+0.758 g
+f
+n
+2 42 1082 2070 B
+0.754 g
+f
+n
+2 42 1085 2070 B
+f
+n
+2 42 1088 2070 B
+0.75 g
+f
+n
+2 42 1091 2070 B
+f
+n
+2 42 1094 2070 B
+0.746 g
+f
+n
+2 42 1097 2070 B
+0.742 g
+f
+n
+2 42 1100 2070 B
+f
+n
+3 42 1103 2070 B
+0.738 g
+f
+n
+2 42 1107 2070 B
+0.734 g
+f
+n
+2 42 1110 2070 B
+0.73 g
+f
+n
+2 42 1113 2070 B
+0.727 g
+f
+n
+2 42 1116 2070 B
+f
+n
+2 42 1119 2070 B
+0.719 g
+f
+n
+2 42 1122 2070 B
+f
+n
+2 42 1125 2070 B
+0.711 g
+f
+n
+2 42 1128 2070 B
+0.707 g
+f
+n
+2 42 1131 2070 B
+f
+n
+2 42 1134 2070 B
+0.699 g
+f
+n
+3 42 1137 2070 B
+0.695 g
+f
+n
+2 42 1141 2070 B
+0.691 g
+f
+n
+2 42 1144 2070 B
+0.688 g
+f
+n
+2 42 1147 2070 B
+0.684 g
+f
+n
+2 42 1150 2070 B
+0.68 g
+f
+n
+2 42 1153 2070 B
+0.672 g
+f
+n
+2 42 1156 2070 B
+0.668 g
+f
+n
+2 42 1159 2070 B
+0.664 g
+f
+n
+2 42 1162 2070 B
+0.656 g
+f
+n
+2 42 1165 2070 B
+0.652 g
+f
+n
+2 42 1168 2070 B
+0.645 g
+f
+n
+3 42 1171 2070 B
+0.641 g
+f
+n
+2 42 1175 2070 B
+0.633 g
+f
+n
+2 42 1178 2070 B
+0.629 g
+f
+n
+2 42 1181 2070 B
+0.621 g
+f
+n
+2 42 1184 2070 B
+0.617 g
+f
+n
+2 42 1187 2070 B
+0.609 g
+f
+n
+2 42 1190 2070 B
+0.602 g
+f
+n
+2 42 1193 2070 B
+0.598 g
+f
+n
+2 42 1196 2070 B
+0.59 g
+f
+n
+2 42 1199 2070 B
+0.586 g
+f
+n
+3 42 1202 2070 B
+0.578 g
+f
+n
+2 42 1206 2070 B
+0.57 g
+f
+n
+2 42 1209 2070 B
+0.566 g
+f
+n
+2 42 1212 2070 B
+0.563 g
+f
+n
+2 42 1215 2070 B
+0.551 g
+f
+n
+2 42 1218 2070 B
+0.547 g
+f
+n
+2 42 1221 2070 B
+0.543 g
+f
+n
+2 42 1224 2070 B
+0.535 g
+f
+n
+2 42 1227 2070 B
+0.527 g
+f
+n
+2 42 1230 2070 B
+0.523 g
+f
+n
+2 42 1233 2070 B
+0.516 g
+f
+n
+3 42 1236 2070 B
+0.512 g
+f
+n
+2 42 1240 2070 B
+0.5 g
+f
+n
+2 42 1243 2070 B
+0.492 g
+f
+n
+2 42 1246 2070 B
+0.488 g
+f
+n
+2 42 1249 2070 B
+0.484 g
+f
+n
+2 42 1252 2070 B
+0.477 g
+f
+n
+2 42 1255 2070 B
+0.469 g
+f
+n
+2 42 1258 2070 B
+0.465 g
+f
+n
+2 42 1261 2070 B
+0.457 g
+f
+n
+2 42 1264 2070 B
+0.453 g
+f
+n
+2 42 1267 2070 B
+0.449 g
+f
+n
+3 42 1270 2070 B
+0.441 g
+f
+n
+2 42 1274 2070 B
+0.438 g
+f
+n
+2 42 1277 2070 B
+0.434 g
+f
+n
+2 42 1280 2070 B
+0.43 g
+f
+n
+2 42 1283 2070 B
+0.426 g
+f
+n
+2 42 1286 2070 B
+0.418 g
+f
+n
+2 42 1289 2070 B
+0.414 g
+f
+n
+2 42 1292 2070 B
+0.41 g
+f
+n
+2 42 1295 2070 B
+0.406 g
+f
+n
+2 42 1298 2070 B
+0.402 g
+f
+n
+2 42 1301 2070 B
+0.398 g
+f
+n
+3 42 1304 2070 B
+0.395 g
+f
+n
+2 42 1308 2070 B
+f
+n
+2 42 1311 2070 B
+0.391 g
+f
+n
+2 42 1314 2070 B
+0.387 g
+f
+n
+2 42 1317 2070 B
+0.383 g
+f
+n
+2 42 1320 2070 B
+f
+n
+2 42 1323 2070 B
+0.379 g
+f
+n
+2 42 1326 2070 B
+0.375 g
+f
+n
+2 42 1329 2070 B
+0.371 g
+f
+n
+2 42 1332 2070 B
+f
+n
+2 42 1335 2070 B
+0.367 g
+f
+n
+3 42 1338 2070 B
+f
+n
+2 42 1342 2070 B
+0.363 g
+f
+n
+2 42 1345 2070 B
+f
+n
+2 42 1348 2070 B
+0.359 g
+f
+n
+2 42 1351 2070 B
+f
+n
+2 42 1354 2070 B
+f
+n
+22 145 698 941 B
+0.309 g
+f
+n
+23 145 721 941 B
+f
+n
+22 145 745 941 B
+f
+n
+22 145 768 941 B
+f
+n
+23 145 791 941 B
+f
+n
+22 145 815 941 B
+f
+n
+23 145 838 941 B
+0.305 g
+f
+n
+22 145 862 941 B
+f
+n
+22 145 885 941 B
+f
+n
+23 145 908 941 B
+0.301 g
+f
+n
+22 145 932 941 B
+f
+n
+22 145 955 941 B
+f
+n
+23 145 978 941 B
+0.297 g
+f
+n
+22 145 1002 941 B
+f
+n
+22 145 1025 941 B
+0.293 g
+f
+n
+23 145 1048 941 B
+f
+n
+22 145 1072 941 B
+0.289 g
+f
+n
+23 145 1095 941 B
+f
+n
+22 145 1119 941 B
+0.285 g
+f
+n
+22 145 1142 941 B
+0.281 g
+f
+n
+23 145 1165 941 B
+0.277 g
+f
+n
+22 145 1189 941 B
+f
+n
+22 145 1212 941 B
+0.273 g
+f
+n
+23 145 1235 941 B
+0.27 g
+f
+n
+22 145 1259 941 B
+0.266 g
+f
+n
+22 145 1282 941 B
+0.262 g
+f
+n
+23 145 1305 941 B
+0.258 g
+f
+n
+22 145 1329 941 B
+0.254 g
+f
+n
+23 145 1352 941 B
+0.25 g
+f
+n
+22 145 1376 941 B
+0.246 g
+f
+n
+22 145 1399 941 B
+0.242 g
+f
+n
+23 145 1422 941 B
+0.238 g
+f
+n
+22 145 1446 941 B
+0.23 g
+f
+n
+22 145 1469 941 B
+0.227 g
+f
+n
+23 145 1492 941 B
+0.223 g
+f
+n
+22 145 1516 941 B
+0.215 g
+f
+n
+22 145 1539 941 B
+0.211 g
+f
+n
+23 145 1562 941 B
+0.203 g
+f
+n
+22 145 1586 941 B
+0.199 g
+f
+n
+22 145 1609 941 B
+0.195 g
+f
+n
+23 145 1632 941 B
+0.188 g
+f
+n
+22 145 1656 941 B
+0.184 g
+f
+n
+23 145 1679 941 B
+0.176 g
+f
+n
+22 145 1703 941 B
+0.172 g
+f
+n
+22 145 1726 941 B
+0.164 g
+f
+n
+23 145 1749 941 B
+0.16 g
+f
+n
+22 145 1773 941 B
+0.152 g
+f
+n
+22 145 1796 941 B
+0.148 g
+f
+n
+23 145 1819 941 B
+0.141 g
+f
+n
+22 145 1843 941 B
+0.137 g
+f
+n
+22 145 1866 941 B
+0.129 g
+f
+n
+23 145 1889 941 B
+0.125 g
+f
+n
+22 145 1913 941 B
+0.121 g
+f
+n
+23 145 1936 941 B
+0.113 g
+f
+n
+22 145 1960 941 B
+0.109 g
+f
+n
+22 145 1983 941 B
+0.105 g
+f
+n
+23 145 2006 941 B
+0.098 g
+f
+n
+22 145 2030 941 B
+0.094 g
+f
+n
+22 145 2053 941 B
+0.086 g
+f
+n
+23 145 2076 941 B
+0.082 g
+f
+n
+22 145 2100 941 B
+0.078 g
+f
+n
+22 145 2123 941 B
+0.074 g
+f
+n
+23 145 2146 941 B
+0.07 g
+f
+n
+22 145 2170 941 B
+0.066 g
+f
+n
+23 145 2193 941 B
+0.063 g
+f
+n
+22 145 2217 941 B
+0.055 g
+f
+n
+22 145 2240 941 B
+f
+n
+23 145 2263 941 B
+0.051 g
+f
+n
+22 145 2287 941 B
+0.047 g
+f
+[34 0 0 -34 0 0]/Times-Roman MF
+0 g
+(I)1183 2018 MS (R)1194 2018 MS (C)1217 2018 MS (S)1240 2018 MS ( )1259 2018 MS (W)1268 2018 MS (o)1300 2018 MS (r)1317 2018 MS (k)1328 2018 MS (s)1345 2018 MS (h)1359 2018 MS (o)1375 2018 MS (p)1392 2018 MS ( )1409 2018 MS (o)1418 2018 MS (n)1436 2018 MS
+( )1452 2018 MS (O)1461 2018 MS (p)1486 2018 MS (e)1503 2018 MS (n)1519 2018 MS ( )1535 2018 MS (L)1544 2018 MS (a)1565 2018 MS (n)1581 2018 MS (g)1597 2018 MS (u)1614 2018 MS (a)1631 2018 MS (g)1646 2018 MS (e)1664 2018 MS ( )1679 2018 MS
+(A)1369 2059 MS (r)1393 2059 MS (c)1404 2059 MS (h)1420 2059 MS (i)1437 2059 MS (v)1447 2059 MS (e)1463 2059 MS (s)1479 2059 MS
+(1)2126 2038 MS (3)2143 2038 MS
+[108 0 0 -108 0 0]/Times-Roman MF
+(R)700 1061 MS (e)772 1061 MS (m)820 1061 MS (a)903 1061 MS (i)951 1061 MS (n)981 1061 MS (i)1035 1061 MS (n)1065 1061 MS (g)1119 1061 MS ( )1173 1061 MS (t)1200 1061 MS (a)1230 1061 MS (s)1277 1061 MS (k)1319 1061 MS (s)1373 1061 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)700 1252 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(M)766 1252 MS (a)831 1252 MS (k)874 1252 MS (e)917 1252 MS ( )960 1252 MS (a)982 1252 MS ( )1025 1252 MS (l)1047 1252 MS (i)1069 1252 MS (s)1091 1252 MS (t)1134 1252 MS ( )1160 1252 MS (o)1182 1252 MS (f)1230 1252 MS ( )1256 1252 MS (t)1278 1252 MS
+(h)1304 1252 MS (e)1352 1252 MS ( )1395 1252 MS (d)1417 1252 MS (o)1465 1252 MS (c)1513 1252 MS (u)1556 1252 MS (m)1604 1252 MS (e)1673 1252 MS (n)1716 1252 MS (t)1764 1252 MS (s)1790 1252 MS ( )1833 1252 MS (t)1855 1252 MS (h)1881 1252 MS (a)1929 1252 MS
+(t)1972 1252 MS ( )1998 1252 MS (w)2019 1252 MS (e)2082 1252 MS ( )2125 1252 MS
+(s)766 1337 MS (h)809 1337 MS (o)857 1337 MS (u)905 1337 MS (l)953 1337 MS (d)975 1337 MS ( )1022 1337 MS (p)1044 1337 MS (r)1092 1337 MS (o)1122 1337 MS (v)1171 1337 MS (i)1212 1337 MS (d)1234 1337 MS (e)1282 1337 MS ( )1325 1337 MS (t)1347 1337 MS
+(o)1373 1337 MS ( )1421 1337 MS (O)1443 1337 MS (L)1504 1337 MS (A)1553 1337 MS (C)1607 1337 MS ( )1663 1337 MS (u)1685 1337 MS (s)1733 1337 MS (e)1777 1337 MS (r)1820 1337 MS (s)1850 1337 MS ( )1893 1337 MS
+(c)766 1421 MS (o)809 1421 MS (n)857 1421 MS (c)905 1421 MS (e)948 1421 MS (r)991 1421 MS (n)1021 1421 MS (i)1069 1421 MS (n)1091 1421 MS (g)1139 1421 MS ( )1187 1421 MS (R)1209 1421 MS (i)1265 1421 MS (g)1287 1421 MS (h)1335 1421 MS (t)1383 1421 MS
+(s)1409 1421 MS ( )1452 1421 MS (&)1474 1421 MS ( )1530 1421 MS (A)1553 1421 MS (c)1607 1421 MS (c)1651 1421 MS (e)1694 1421 MS (s)1737 1421 MS (s)1781 1421 MS (,)1824 1421 MS ( )1846 1421 MS (a)1868 1421 MS (n)1911 1421 MS (d)1959 1421 MS ( )2007 1421 MS
+(g)2029 1421 MS (e)2077 1421 MS (t)2120 1421 MS ( )2146 1421 MS
+(p)766 1505 MS (e)814 1505 MS (o)857 1505 MS (p)905 1505 MS (l)953 1505 MS (e)975 1505 MS ( )1018 1505 MS (t)1040 1505 MS (o)1066 1505 MS ( )1113 1505 MS (v)1136 1505 MS (o)1177 1505 MS (l)1225 1505 MS (u)1247 1505 MS (n)1295 1505 MS (t)1343 1505 MS
+(e)1369 1505 MS (e)1412 1505 MS (r)1455 1505 MS ( )1485 1505 MS (t)1507 1505 MS (o)1533 1505 MS ( )1581 1505 MS (w)1602 1505 MS (r)1665 1505 MS (i)1695 1505 MS (t)1717 1505 MS (e)1743 1505 MS ( )1785 1505 MS (t)1807 1505 MS (h)1833 1505 MS (e)1881 1505 MS
+(m)1924 1505 MS (.)1993 1505 MS
+[63.996 0 0 -63.996 0 0]/Wingdings06479698 MF
+(z)700 1608 MS
+[78 0 0 -78 0 0]/Helvetica-Bold MF
+(F)766 1608 MS (i)814 1608 MS (r)836 1608 MS (s)866 1608 MS (t)909 1608 MS ( )935 1608 MS (p)957 1608 MS (a)1005 1608 MS (s)1048 1608 MS (s)1091 1608 MS (:)1134 1608 MS
+[68 0 0 -68 0 0]/Helvetica MF
+/IsChar{exch/CharStrings get exch known}bd/MapCh{3 -1 roll/Encoding get 3 1
+roll put}bd/MapDegree{dup 16#b0 exch/degree IsChar{/degree}{/ring}ifelse MapCh}
+bd/MapBB{dup 16#a6 exch/brokenbar IsChar{/brokenbar}{/bar}ifelse MapCh}bd
+/reencode{findfont begin currentdict dup length dict begin{1 index/FID ne{def}
+{pop pop}ifelse}forall/FontName exch def dup length 0 ne{/Encoding Encoding 256
+array copy def 0 exch{dup type/nametype eq{Encoding 2 index 2 index put pop 1
+add}{exch pop}ifelse}forall}if pop currentdict dup end end/FontName get exch
+definefont dup MapDegree MapBB}bd/LATENC[0/grave/acute/circumflex/tilde/macron
+/breve/dotaccent/dieresis/ring/cedilla/hungarumlaut/ogonek/caron/dotlessi/fi/fl
+/Lslash/lslash/Zcaron/zcaron/minus/.notdef/.notdef/.notdef/.notdef/.notdef
+/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/space/exclam/quotedbl
+/numbersign/dollar/percent/ampersand/quotesingle/parenleft/parenright/asterisk
+/plus/comma/hyphen/period/slash/zero/one/two/three/four/five/six/seven/eight
+/nine/colon/semicolon/less/equal/greater/question/at/A/B/C/D/E/F/G/H/I/J/K/L/M
+/N/O/P/Q/R/S/T/U/V/W/X/Y/Z/bracketleft/backslash/bracketright/asciicircum
+/underscore/grave/a/b/c/d/e/f/g/h/i/j/k/l/m/n/o/p/q/r/s/t/u/v/w/x/y/z/braceleft
+/bar/braceright/asciitilde/.notdef/.notdef/.notdef/quotesinglbase/florin
+/quotedblbase/ellipsis/dagger/daggerdbl/circumflex/perthousand/Scaron
+/guilsinglleft/OE/.notdef/.notdef/.notdef/.notdef/quoteleft/quoteright
+/quotedblleft/quotedblright/bullet/endash/emdash/tilde/trademark/scaron
+/guilsinglright/oe/.notdef/.notdef/Ydieresis/.notdef/exclamdown/cent/sterling
+/currency/yen/brokenbar/section/dieresis/copyright/ordfeminine/guillemotleft
+/logicalnot/hyphen/registered/macron/degree/plusminus/twosuperior/threesuperior
+/acute/mu/paragraph/periodcentered/cedilla/onesuperior/ordmasculine
+/guillemotright/onequarter/onehalf/threequarters/questiondown/Agrave/Aacute
+/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla/Egrave/Eacute/Ecircumflex
+/Edieresis/Igrave/Iacute/Icircumflex/Idieresis/Eth/Ntilde/Ograve/Oacute
+/Ocircumflex/Otilde/Odieresis/multiply/Oslash/Ugrave/Uacute/Ucircumflex
+/Udieresis/Yacute/Thorn/germandbls/agrave/aacute/acircumflex/atilde/adieresis
+/aring/ae/ccedilla/egrave/eacute/ecircumflex/edieresis/igrave/iacute
+/icircumflex/idieresis/eth/ntilde/ograve/oacute/ocircumflex/otilde/odieresis
+/divide/oslash/ugrave/uacute/ucircumflex/udieresis/yacute/thorn/ydieresis]def
+LATENC /_Helvetica /Helvetica reencode
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)788 1701 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(O)843 1701 MS (L)896 1701 MS (A)939 1701 MS (C)987 1701 MS ( )1036 1701 MS (G)1055 1701 MS (u)1108 1701 MS (i)1150 1701 MS (d)1169 1701 MS (e)1211 1701 MS ( )1249 1701 MS (t)1268 1701 MS (o)1291 1701 MS ( )1333 1701 MS (S)1352 1701 MS (t)1397 1701 MS
+(a)1420 1701 MS (n)1458 1701 MS (d)1500 1701 MS (a)1542 1701 MS (r)1581 1701 MS (d)1607 1701 MS ( )1649 1701 MS (U)1668 1701 MS (s)1717 1701 MS (e)1755 1701 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)788 1791 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(O)843 1791 MS (L)896 1791 MS (A)939 1791 MS (C)987 1791 MS ( )1036 1791 MS (C)1055 1791 MS (i)1104 1791 MS (t)1123 1791 MS (a)1147 1791 MS (t)1185 1791 MS (i)1208 1791 MS (o)1227 1791 MS (n)1269 1791 MS ( )1311 1791 MS (G)1330 1791 MS (u)1383 1791 MS
+(i)1425 1791 MS (d)1444 1791 MS (e)1486 1791 MS (l)1524 1791 MS (i)1543 1791 MS (n)1562 1791 MS (e)1604 1791 MS (s)1642 1791 MS
+[68 0 0 -68 0 0]/_Helvetica MF
+(\226)788 1882 MS
+[68 0 0 -68 0 0]/Helvetica-Bold MF
+(S)843 1882 MS (t)888 1882 MS (a)911 1882 MS (n)949 1882 MS (d)991 1882 MS (a)1033 1882 MS (r)1071 1882 MS (d)1097 1882 MS ( )1139 1882 MS (r)1159 1882 MS (e)1185 1882 MS (s)1223 1882 MS (o)1261 1882 MS (u)1303 1882 MS (r)1345 1882 MS (c)1371 1882 MS
+(e)1410 1882 MS ( )1448 1882 MS (l)1467 1882 MS (i)1486 1882 MS (c)1505 1882 MS (e)1543 1882 MS (n)1581 1882 MS (s)1623 1882 MS (e)1661 1882 MS ( )1699 1882 MS (a)1718 1882 MS (g)1756 1882 MS (r)1799 1882 MS (e)1825 1882 MS (e)1864 1882 MS (m)1902 1882 MS
+(e)1962 1882 MS (n)2000 1882 MS (t)2042 1882 MS (?)2065 1882 MS
+1 setlinecap
+8 sl
+gs
+n
+1760 1320 551 794 CB
+n
+1752 1312 555 798 B
+cp
+CM [1 0 0 1 551 794] concat
+s
+SM
+gr
+showpage
+FontSV restore
+PageSV restore
+%%Trailer
+%%DocumentNeededFonts:
+%%+ Helvetica
+%%+ Helvetica-Bold
+%%+ Times-Roman
+%%DocumentSuppliedFonts:
+%%+ Wingdings05479700
+%%+ Wingdings06479698
+end
+%%Pages: 3
+%%EOF
+%-12345X@PJL EOJ

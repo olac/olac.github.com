@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="OLAC_doc.xsl" type="text/xsl"?>
+<!DOCTYPE OLAC_doc SYSTEM "OLAC_doc.dtd">
+<OLAC_doc> 
+  <header>
+    <status type="recommendation" code="proposed"/> 
+    <title>OLAC Language Vocabulary</title> 
+<baseName>language</baseName>
+    <issued>20031213</issued> 
+ <previousIssued>20010319</previousIssued>
+
+    <abstract> 
+      <p> This document specifies the controlled vocabulary of language
+        identifiers used by OLAC. </p> 
+    </abstract> 
+      <editors>Gary Simons, SIL International
+        (<url>mailto:gary_simons@sil.org</url>)<br/>Steven Bird, University of Melbourne and University of
+        Pennsylvania (<url>mailto:sb@csse.unimelb.edu.au</url>)</editors>
+<copyright>2003 Gary Simons (SIL International) and Steven Bird (University of Melbourne and University of
+        Pennsylvania)</copyright> 
+
+    <changes> 
+    <p>A major rework of the earlier draft. It documents the sources of the codes listed in the schema for the OLAC-Language extension (<tt>OLAC-Language.xsd</tt>). A significant addition from the previous version is the incorporation of the Linguist List codes for ancient and constructed languages. </p></changes> 
+  </header> 
+  <body> 
+    <section> 
+      <heading>Introduction</heading> 
+      <p>Language identification is an important dimension of language resource
+        description. However, using the character-string representation of language names as identifiers
+        is problematic for several reasons: </p> 
+      <ul> 
+        <li> 
+          <p>Different languages (in different parts of the world) may have the
+            same name.</p> 
+        </li> 
+        <li> 
+          <p>The same language may have a different name in each country where
+            it is spoken.</p> 
+        </li> 
+        <li> 
+          <p>Within the same country, the preferred name for a language may
+            change over time.</p> 
+        </li> 
+        <li> 
+          <p>In the early history of discovering new languages (before names
+            were standardized), different people referred to the same language by different
+            names.</p> 
+        </li> 
+        <li> 
+          <p>For languages having non-Roman orthographies, the language name
+            may have several possible romanizations.</p> 
+        </li> 
+      </ul> 
+      <p>The sum of these facts taken together suggests that a standard based
+        on names will not work. Rather, what is needed is a standard based on unique
+        identifiers that do not change, combined with accessible documentation that
+        clarifies the particular speech variety denoted by each identifier. </p> 
+      <p>The information technology community has a standard for language
+        identification, namely, ISO 639 <cit>ISO639</cit>. Part 1 of this standard
+        lists two-letter codes for identifying about 160 of the world's major
+        languages; part 2 of the standard lists three-letter codes for identifying
+        about 380 languages. ISO 639 in turn forms the core of the standard followed by the Internet Engineering Task Force (IETF), namely, RFC
+        3066 <cit>RFC3066</cit> (formerly RFC 1766 <cit>RFC1766</cit>). This is the
+        standard used for language identification in the <tt>xml:lang</tt> attribute of XML <cit>XML-lang</cit> and
+        in the language element of the Dublin Core Metadata Initiative <cit>DCMT</cit>. RFC 3166
+        provides a mechanism for users to register new language identification codes
+        for languages not covered by ISO 639, but very few additional languages have
+        been registered. </p> 
+      <p>Unfortunately, the existing standard falls far short of meeting the
+        needs of the language resources community since it fails to account for more
+        than 90% of the world's languages, and it fails to adequately document what
+        languages the codes refer to (<cit>CS2000</cit>, <cit>Simons2000</cit>). In order to achieve complete coverage, OLAC makes use of SIL International's Ethnologue <cit>Ethnologue</cit> which provides a unique three-letter code for all known living languages, plus  recently extinct languages. In order to extend coverage to all known languages, OLAC also uses the four-letter codes that have been developed by Linguist List to identify ancient  <cit>LL-Ancient</cit> and constructed languages <cit>LL-Constructed</cit> that are not within scope for the Ethnologue. The extension
+        mechanism of RFC 3066 is used in order to develop a means of referring to these codes that is compatible with the IETF's standard.</p> 
+    </section><section><heading>The OLAC-Language extension</heading><p>The complete vocabulary of OLAC language identifiers consists of three sets of codes:</p><ul><li><p>all two-letter codes from ISO 639-1</p></li><li><p>all three-letter codes from SIL's Ethnologue (prefixed by <tt>x-sil-</tt> to make them compatible with RFC 3066)</p></li><li><p>all four-letter codes from Linguist List  (prefixed by <tt>x-ll-</tt> to make them compatible with RFC 3066)</p></li></ul><p>This complete vocabulary is defined in the following XML schema which conforms to the conventions for an OLAC metadata extension as defined in <cit>OLAC-Metadata</cit>:</p><blockquote><p><url>http://www.language-archives.org/OLAC/1.0/olac-language.xsd</url></p></blockquote><p>This schema in turn includes another schema that contains only the simple type that enumerates all the recognized code values. The code list itself is contained in:</p><blockquote><p><url>http://www.language-archives.org/OLAC/1.0/LanguageCodes.xsd</url></p></blockquote><p>The latter schema provides a complete list of all language identifiers recognized by OLAC.  Each enumerated value provides both a code (in the <tt>value</tt> attribute) and an associated language name (in the <tt>label</tt> attribute) that can be used for display purposes.</p></section> 
+    <section> 
+      <heading>Looking up the code for a language</heading> 
+      <p>The SIL Ethnologue <cit>Ethnologue</cit> provides approximately 7,000
+        three-letter codes, along with detailed information about language names,
+        genetic affiliations, and geographical locus, amongst other things. The easiest way to find the code for a language is to type a language name into the site search form at:</p><blockquote><p><url>http://www.ethnologue.com/site_search.asp</url></p></blockquote><p>When you know the country the language is spoken in, another approach is to use the country index to find a listing of all the languages in that particular country and then to browse the list:</p><blockquote><p><url>http://www.ethnologue.com/country_index.asp</url></p></blockquote> 
+      <p>Linguist List offers a form for searching for three-letter codes, given all or part of a language name:</p><blockquote><p><url>http://www.linguistlist.org/forms/langs/find-a-language-or-family.html</url></p></blockquote><p>A three-letter Ethnologue code <tt>AAA</tt> will be represented in the OLAC language vocabulary
+        as <tt>x-sil-AAA</tt>.</p> 
+       
+       
+    <p>To build a language search facility into your own software, you may download tables of codes, language names, alternate names, and countries where spoken from the Ethnologue web site <cit>Ethnologue-Codes</cit>, and load them into a relational database using the schema described
+            in <cit>Simons2000</cit>.</p><p>If you do not find the language you are looking for in the Ethnologue and it is an extinct or constructed language, then consult the Linguist List code tables at <cit>LL-Ancient</cit> and <cit>LL-Constructed</cit>.  The Linguist List search form cited above finds codes from both the Ethnologue and Linguist List sets. A four-letter Linguist List code <tt>XAAA</tt> will be represented in the OLAC language vocabulary
+        as <tt>x-ll-XAAA</tt>.</p><p>See <cit>Ethnologue-Codes</cit> for instructions on how to communicate with the Ethnologue staff about changes that might be needed to the code set. Note that the codes QVA through QZZ are reserved for local use. That is, they will never be assigned by SIL International as language identifiers. Thus, when users feel that a needed code is missing from the code set, they may freely use a code from the local use range as a temporary measure until the outcome of a change request is known. 
+</p></section> 
+     
+     
+     
+  </body> 
+  <todo> 
+    <p>This document is frozen in proposed status for the time being since major changes are anticipated in the near future.  When the 15th edition of the Ethnologue is published in mid 2004, it is planned to incorporate a major revision of the three-letter codes in order to bring them into alignment with Part 2 of the ISO 639 standard.  When this happens, nearly ten per cent of the Ethnologue codes will change.  The result, however, will be a single universal standard for three-letter language code that is compatible with ISO 639-2 and has the full coverage of the Ethnologue and the Linguist List codes.  At that time it is anticipated that the OLAC Language vocabulary will change to encompass just this universal code set.</p><p>We could offer an alternative to LanguageCodes.xsd, e.g. LanguageCodePatterns.xsd, that simply defines patterns for the two-, three- and four-letter codes for use with software that can't handle an enumeration with 8000 values.</p>
+    
+  </todo> 
+  <references><ref abbrev="DCMT">DCMI Metadata Terms.<br/>&lt;<url>http://dublincore.org/documents/2003/03/04/dcmi-terms/</url>&gt;</ref> 
+    <ref abbrev="OLAC-Metadata">OLAC Metadata.
+     <br/>&lt;<url>http://www.language-archives.org/OLAC/metadata.html</url>&gt;</ref>
+    
+    <ref abbrev="RFC1766">Tags for the Identification of
+      Languages.<br/>&lt;<url>http://www.ietf.org/rfc/rfc1766.txt</url>&gt;</ref> 
+    <ref abbrev="RFC3066">Tags for the Identification of Languages (replaces
+      1766).<br/>&lt;<url>ftp://ftp.isi.edu/in-notes/rfc3066.txt</url>&gt;</ref> 
+    <ref abbrev="ISO639">Codes for the Representation of Names of
+      Languages-Part 2: Alpha-3
+      Code.<br/>&lt;<url>http://lcweb.loc.gov/standards/iso639-2/langhome.html</url>&gt;</ref>
+    
+    
+    
+    <ref abbrev="Simons2000">Simons, Gary. 2000. Language identification in metadata descriptions
+      of language archive
+      holdings. Proceedings of Workshop on Web-Based Language Documentation and Description,
+12-15 December 2000, Philadelphia, USA. <br/>&lt;<url>http://www.ldc.upenn.edu/exploration/expl2000/papers/simons/simons.htm</url>&gt;</ref><ref abbrev="CS2000">Constable, Peter, and Gary Simons. 2000. Language identification and IT: Addressing problems
+of linguistic diversity on a global scale. SIL Electronic Working Papers, 2000-001. Dallas:
+SIL International.<br/>&lt;<url>http://www.sil.org/silewp/2000/001/SILEWP2000-001.html</url>&gt;</ref>
+    
+    <ref abbrev="Ethnologue">Ethnologue: Languages of the
+      World.<br/>&lt;<url>http://www.ethnologue.com/</url>&gt;</ref> 
+    
+    
+    <ref abbrev="Ethnologue-Codes">SIL Three-letter Codes for Identifying Languages.<br/>&lt;<url>http://www.ethnologue.com/codes/</url>&gt;</ref>
+    
+    
+    
+  <ref abbrev="XML-lang">Extensible Markup Language (XML) 1.0 (Second Edition),
+W3C Recommendation 6 October 2000. Section 2.12, Language Identification.<br/>&lt;<url>http://www.w3.org/TR/REC-xml#sec-lang-tag</url>&gt;</ref><ref abbrev="LL-Ancient">Linguist List Codes for Ancient and Extinct Languages.<br/>&lt;<url>http:/linguistlist.org/ancientlgs.html</url>&gt;</ref><ref abbrev="LL-Constructed">Linguist List Codes for Constructed Languages.<br/>&lt;<url>http://linguistlist.org/constructedlgs.html</url>&gt;</ref></references>
+</OLAC_doc>

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>OLAC Data Provider Registration</title>
+  <script type="text/javascript" src="/js/gatrack.js"></script>
+  <link rel="stylesheet" type="text/css" href="/olac.css">
+</head>
+<body>
+  
+<hr> 
+<table cellpadding="10">
+  <tbody>
+    <tr>
+      <td> <a href="/"> <img
+ src="/images/olac100.gif" border="0">
+      </a></td>
+ <td> 
+      <h1><font color="#00004a"> OLAC Data Provider Registration </font></h1>
+ </td>
+    </tr>
+ 
+  </tbody>
+</table>
+ 
+<hr>  
+<h2><b>Registering as an OLAC Data Provider</b> </h2>
+  
+<p>Data providers who support the OLAC protocol are encouraged to list their 
+repository in the OLAC registry.&nbsp; The goals of the registry are:</p>
+ 
+<ul>
+ <li>Provide a publicly accessible list of OLAC conformant repositories,
+making it easy for service providers to discover repositories from which
+metadata about language-related resources can be harvested. </li>
+ <li>Provide a mechanism for data providers to ensure their conformance with
+the OLAC protocol specification, and evaluate their degree of compliance
+with OLAC recommended best practices. </li>
+ <li>Provide a basis for participating in the governance of OLAC in the role
+of "participating archive". </li>
+ 
+</ul>
+ 
+<p>This page allows you to register your repository by entering your <a
+ href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#HTTPRequestFormat"><font
+ face="Courier">BASE-URL</font></a> in the text box at the bottom of this 
+page.&nbsp; <i>Before</i> doing that, please read all of this instruction
+page so you understand what registration means.</p>
+ 
+<blockquote>
+  <p><a href="#consequences">Consequences of Registration</a><br>
+ <a href="#register">Register Your Repository</a></p>
+ <a href="#confirmation">Confirmation of Registration</a><br>
+ </blockquote>
+  
+<h2><a name="consequences"></a>Consequences of Registration</h2>
+  
+<p>By registering your repository you agree to the following:&nbsp;</p>
+ 
+<ul>
+ <li>OLAC will immediately run a set of conformance tests on your repository.&nbsp;
+To ensure integrity of the registry, we will only register those repositories
+that complete these tests.&nbsp; An email confirming the results of the conformance
+test will be sent to the address specified in the <font face="Courier">adminEmail</font>
+element returned via the <a
+ href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Identify"><font
+ face="Courier">Identify</font></a> protocol request. </li>
+ <li>OLAC will periodically retest your repository for conformance.&nbsp;
+In the case that your repository fails to complete the tests, we will remove
+your repository from the registry and send an email with information to help
+you return to conformance.</li>
+ <li>OLAC will periodically harvest all the metadata from your repository
+in order to evaluate it for compliance with OLAC's best practice recommendations. 
+A report documenting extent of compliance will be posted for access by the 
+community. Non-compliance to recommended best practice will not be a grounds 
+for removal from the registry</li>
+ <li>OLAC will offer members of the end-user community the opportunity to
+write peer reviews of your archive. When your archive is reviewed, you will
+be given a chance to write a response that will be posted with the review.</li>
+ <li>The registry database will store the information returned via the <font
+ face="Bell MT"><a
+ href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Identify">Identify</a></font> 
+protocol request. Contents of the registration database are open for public 
+searching and browsing.</li>
+ <li> Your repository will be listed on the OLAC server, in both <a
+ href="/community.php4">human-readable</a>
+and <a
+ href="/register/archive_list.php">machine-readable</a>
+form. You agree that any potential service provider is authorized to harvest
+and redistribute metadata from your repository using this base URL.</li>
+ <li>Your archive will be considered to be a participating archive and will
+be allowed to participate in the governance of OLAC as described in the <a
+ href="/OLAC/process.html">OLAC process document</a>.</li>
+ 
+</ul>
+
+
+<h2><a name="register"></a>Register Your Repository</h2>
+
+<p>You can register your OLAC repository using our <a
+href="/register/register.php">registration interface</a>.
+Your repository is validated first.
+Once it is successfully validated, you will be invited to submit a registration
+request by clicking on the "REGISTER" button.  If you click on the button,
+the request is forwarded to OLAC Coordinators.</p>
+
+
+<h2><a name="confirmation"></a>Confirmation of Registration</h2>
+  
+<p>Once a registration request is submitted,
+it is forwarded to the OLAC Coordinators
+who will check that the archive is relevant to language resources before
+adding it to the&nbsp;<a
+ href="/register/archive_list.php"> List
+of Registered OLAC Archives</a>. </p>
+  
+</body>
+</html>

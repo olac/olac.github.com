@@ -1,0 +1,72 @@
+For immediate release - January 2nd, 2002
+
+Archives in Cyberspace
+
+San Francisco, C.A. -- On January 4th 2002, a new worldwide web
+archive system, called OLAC, will be launched in the Grand Ballroom of
+the Embarcadero Hyatt Regency.  The system, to be unveiled at the
+annual conference of the Linguistic Society of America, will permit
+students, educators and scholars to locate information about the
+world's 7,000 languages.  Also included are new linguistic
+technologies, such as automatic speech recognition, machine
+translation, and information retrieval on the web.
+
+..................................................................
+
+Further information for science writers:
+
+The Open Language Archives Community (OLAC) is an international
+partnership of institutions and individuals who are creating a
+worldwide virtual library of language resources.  Language resources
+include dictionaries and thesauri, text collections, transcribed audio
+and video recordings, linguistic field notes, as well as computer
+software for creating, searching and publishing these materials.
+Language resources are created and used in the development of language
+technologies, such as automatic speech recognition, machine
+translation, and information retrieval on the web.  Language resources
+are also created and used in language teaching, in the linguistic
+sciences, and in documenting thousands of endangered languages.
+
+In the past, scholars have used proprietary software (such as
+Microsoft Word) for creating dictionaries and other resources.  Today,
+much of the information on endangered languages is stored in binary
+files which are outdated and unreadable in less than a decade.  Steven
+Bird, Associate Professor of Linguistics and Computer Science at the
+University of Pennsylvania, has described this process as "encrypting
+the world's linguistic heritage".  OLAC is responding to this
+difficult problem with a new process for identifying international
+best practices for long-term digital language preservation.
+
+Recently, OLAC has undergone rapid growth, and today boasts a network
+of archives containing over 18,000 resources in five countries.  The
+diversity of the archives is striking.  Institutions such as the
+American Philosophical Society in Philadelphia and the Alaska Native
+Language Center have over a century of historical documents and sound
+recordings for American Indian languages.  The Comparative Bantu
+Online Dictionary at Berkeley has dictionaries for hundreds of
+languages from sub-Saharan Africa.  The Ethnologue Database of the
+Summer Institute of Linguistics contains basic information for over
+7,000 living and recently extinct languages.  The Linguistic Data
+Consortium at the University of Pennsylvania has resources for the
+development of speech recognition, machine translation, and
+information retrieval systems.  All of these resources can be searched
+using the OLAC gateway, hosted at http://linguistlist.org/olac/.
+
+The OLAC Launch will take place at the San Francisco Hyatt Regency,
+5 Embarcadero Center, in Grand Ballroom B, 2:00-4:30pm, Friday 4 January.
+
+OLAC is supported by the National Science Foundation, and is a member
+of the Open Archives Initiative (supported by the Digital Library
+Federation and the Coalition for Networked Information).
+
+For further information, please see www.language-archives.org
+
+Contact:
+
+Steven Bird Ph.D.
+University of Pennsylvania
+sb@ldc.upenn.edu
+215 573-3352 (Philadelphia)
+415 788-1234 (Hyatt Regency Embarcadero, 3-7 January)
+
+----end----

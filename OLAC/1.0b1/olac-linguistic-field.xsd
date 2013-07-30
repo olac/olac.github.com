@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.language-archives.org/OLAC/1.0b1/olac-linguistic-field.xsd"
+           targetNamespace="http://www.language-archives.org/OLAC/1.0b1/olac-linguistic-field.xsd"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
+
+  <xs:simpleType name="olac-linguistic-field">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="anthropological_linguistics"/>
+      <xs:enumeration value="applied_linguistics"/>
+      <xs:enumeration value="cognitive_science"/>
+      <xs:enumeration value="computational_linguistics"/>
+      <xs:enumeration value="discourse_analysis"/>
+      <xs:enumeration value="general_linguistics"/>
+      <xs:enumeration value="historical_linguistics"/>
+      <xs:enumeration value="history_of_linguistics"/>
+      <xs:enumeration value="language_description"/>
+      <xs:enumeration value="lexicography"/>
+      <xs:enumeration value="linguistics_and_literature"/>
+      <xs:enumeration value="linguistic_theories"/>
+      <xs:enumeration value="morphology"/>
+      <xs:enumeration value="neurolinguistics"/>
+      <xs:enumeration value="philosophy_of_language"/>
+      <xs:enumeration value="phonetics"/>
+      <xs:enumeration value="phonology"/>
+      <xs:enumeration value="pragmatics"/>
+      <xs:enumeration value="psycholinguistics"/>
+      <xs:enumeration value="semantics"/>
+      <xs:enumeration value="sociolinguistics"/>
+      <xs:enumeration value="syntax"/>
+      <xs:enumeration value="text_and_corpus_linguistics"/>
+      <xs:enumeration value="translation"/>
+      <xs:enumeration value="typology"/>
+      <xs:enumeration value="writing_systems"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

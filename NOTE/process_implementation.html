@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>Implementing the OLAC
+      Process</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="Implementing the OLAC
+      Process">
+<meta name="Creator" content="Gary Simons, SIL International
+      (mailto:gary_simons@sil.org)Steven Bird, Linguistic Data
+      Consortium (mailto:sb@ldc.upenn.edu) ">
+<meta name="Description" content="Describes how the OLAC process OLAC-Process is implemented
+        at www.language-archives.org.">
+<meta name="Publisher" content="OLAC (Open Language Archives Community)">
+<meta name="Date" content="20010506">
+<STYLE>
+          BODY       { MARGIN:10px; BACKGROUND: white; COLOR: navy; 
+                              FONT-FAMILY: sans-serif; FONT-SIZE: 12pt }
+          H1    {FONT-SIZE: 24pt }
+          H2    {FONT-SIZE: 18pt }
+          H3    {FONT-SIZE: 16pt }
+
+        </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>Implementing the OLAC
+      Process</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th width="100" align="left">Date issued:</th><td>2001-05-06</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Implementation Note.</i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/NOTE/process_implementation-20010506.html">http://www.language-archives.org/NOTE/process_implementation-20010506.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/NOTE/process_implementation.html">http://www.language-archives.org/NOTE/process_implementation.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous version:</th><td>None.</td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td><abstract>
+<p>Describes how the OLAC process [<a href="#OLAC-Process">OLAC-Process</a>] is implemented
+        at <tt>www.language-archives.org</tt>.</p>
+</abstract></td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td><editors>Gary Simons, SIL International
+      (<a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>)<br>Steven Bird, Linguistic Data
+      Consortium (<a href="mailto:sb@ldc.upenn.edu">mailto:sb@ldc.upenn.edu</a>) </editors></td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright © 2001 Gary
+    Simons (SIL International) and Steven Bird (University of
+    Pennsylvania). This material may be distributed only subject to the terms and conditions set forth in the Open Publication License, v1.0 or later (the latest version is presently available at <a href="http://www.opencontent.org/openpub/">http://www.opencontent.org/openpub/</a>).</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Site organization">Site organization</A>
+</LI>
+<LI>
+<A href="#Use of mailing lists">Use of mailing lists</A>
+</LI>
+<LI>
+<A href="#Working group pages">Working group pages</A>
+</LI>
+</ol>
+<hr>
+<body>
+<h2>
+<A name="Site organization"></A>1. Site organization</h2>
+<p>The gateway for the Open Language Archives Community is hosted at
+        <a href="http://www.language-archives.org/">http://www.language-archives.org/</a>. The following are the pages in
+        the root folder of the site:</p>
+<pre style="margin-left: 12pt">/                    Home page
+/organization.html   How OLAC is organized
+/archives.html       Index of participating archives
+/services.html       Index of participating services
+</pre>
+<p>The following are root-level folders:</p>
+<pre style="margin-left: 12pt">/OLAC/    Holds documents in the standards track
+/REC/     Holds documents in the recommendations track
+/NOTE/    Holds docuemnts in the notes track
+/src/     Holds XML source files for documents in the above three tracks
+/docs/    Holds documents that are not official OLAC documents
+/wg/      Holds the home pages for the working groups</pre>
+<p>An index page in each of these folders (except <tt>src</tt>) offers
+        visitors a complete list of what is available.</p>
+<h2>
+<A name="Use of mailing lists"></A>2. Use of mailing lists</h2>
+<p>Mailing lists are used to implement much of the business of the
+        community. The mailing lists are hosted at
+        <tt>listserv.linguistlist.org.</tt>
+</p>
+<p>Two lists are closed. Their subscriber lists are maintained by the
+        OLAC Coordinators. In order to prevent subscription requests from the public at
+        large, the lists are not made visible on the OLAC site nor on the mailing list
+        archives page at Linguist List [<a href="#LL-Archives">LL-Archives</a>]. The identity of the
+        subscribers, however, is open and visible on the OLAC Organization page
+        [<a href="#OLAC-Organization">OLAC-Organization</a>]. The list archives can also be openly accessed via
+        the form for accessing unlisted archives [<a href="#LL-Unlisted">LL-Unlisted</a>]. The two closed
+        lists are:</p>
+<blockquote>
+<dl>
+<dt>
+<b>OLAC-Advisors</b>
+</dt>
+<dd>
+<p>A mailing list that the OLAC Coordinators use for interacting with the
+        OLAC Advisory Board, and which the board members may also use for interacting
+        with each other.</p>
+</dd>
+<dt>
+<b>OLAC-Archives</b>
+</dt>
+<dd>
+<p>A mailing list that the OLAC Coordinators use for interacting with the
+        Participating Archives and Services, and which the participants may also use
+        for interacting with each other. There is only one subscriber per participating
+        archive or service, and that is the person who is designated by the sponsoring
+        institution to be the official contact person for OLAC business. At the
+        discretion of the Coordinators, a contact person from selected Prospective
+        Participants may also be subscribed.</p>
+</dd>
+</dl>
+</blockquote>
+<p>All other lists are open. They are listed on the OLAC site and at
+        Linguist List [<a href="#LL-Archives">LL-Archives</a>]. They are set up in such a way that
+        interested parties may subscribe themselves to the lists. There are two
+        "built-in" public lists:</p>
+<blockquote>
+<dl>
+<dt>
+<b>OLAC-General</b>
+</dt>
+<dd>
+<p>A mailing list that the OLAC Coordinators use to make Calls for
+        Pariticipation, Calls for Review, and other public announcements to the full
+        list of Participating Individuals. This list is set up as a moderated list so
+        that the only traffic on it is annoucements from OLAC.
+        </p>
+</dd>
+<dt>
+<b>OLAC-Implementors</b>
+</dt>
+<dd>
+<p>A mailing list for a working group consisting of all those who are
+        implementing the OLAC standards or are interested in doing so. While a working
+        group is, in general, constituted for the purpose of developing designated
+        documents and may dissolve once its documents are completed, this working group
+        is created as a perpetual group to support those who are implementing the
+        standards. It may also develop documents, but its existence is not dependent on
+        this. This list is unmoderated so that implementors may interact freely with
+        each other.</p>
+</dd>
+</dl>
+</blockquote>
+<p>For every other working group, there is an open and unmoderated
+        mailing list with a name of the form: OLAC-<i>Groupname</i>
+</p>
+<h2>
+<A name="Working group pages"></A>3. Working group pages</h2>
+<p>Every working group has a home page on the OLAC site. That page
+        includes the following information in a format which is uniform across all
+        working group pages:</p>
+<ul>
+<li>
+<p>the name of the working group</p>
+</li>
+<li>
+<p>a statement of purpose for the working group</p>
+</li>
+<li>
+<p>the name and email address of the chair</p>
+</li>
+<li>
+<p>links to the mailing list which offer the following functions:
+            list group members, read mail archive, join group, resign from group</p>
+</li>
+<li>
+<p>links to ballots that are currently open </p>
+</li>
+<li>
+<p>links to results of ballots that have closed</p>
+</li>
+<li>
+<p>a listing of the documents of the working group</p>
+</li>
+</ul>
+<p>The document listing should include both documents that are in
+        progress and those that are. Only the latest version of each document should be
+        listed since each version of a document gives a link to its previous version
+        (and so on). For each document the following information should be shown:</p>
+<ul>
+<li>
+<p>the name of the document (as a link)</p>
+</li>
+<li>
+<p>the type of the document</p>
+</li>
+<li>
+<p>the status of the document</p>
+</li>
+<li>
+<p>the latest date of issue</p>
+</li>
+<li>
+<p>an optional comment describing the next major milestone and a
+            target date</p>
+</li>
+</ul>
+</body>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td>[<a name="LL-Archives">LL-Archives</a>]</td><td>List archives at
+      LISTSERV.LINGUISTLIST.ORG.<br>&lt;<a href="http://listserv.linguistlist.org/archives/">http://listserv.linguistlist.org/archives/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td>[<a name="LL-Unlisted">LL-Unlisted</a>]</td><td>Access unlisted
+      archives.<br>&lt;<a href="http://listserv.linguistlist.org/cgi-bin/wa?LIST">http://listserv.linguistlist.org/cgi-bin/wa?LIST</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td>[<a name="OLAC-Organization">OLAC-Organization</a>]</td><td>OLAC
+      Organization.<br>&lt;<a href="http://www.language-archives.org/organization.html">http://www.language-archives.org/organization.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td>[<a name="OLAC-Process">OLAC-Process</a>]</td><td>OLAC
+      Process.<br>&lt;<a href="http://www.language-archives.org/OLAC/process.html">http://www.language-archives.org/OLAC/process.html</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>

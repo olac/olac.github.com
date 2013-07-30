@@ -1,0 +1,1346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:olac="http://www.language-archives.org/OLAC/1.1/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<TITLE>OLAC Metadata Set</TITLE>
+<script type="text/javascript" src="/js/gatrack.js"></script>
+<meta name="Title" content="OLAC Metadata Set">
+<meta name="Creator" content="Gary Simons, SIL International (&#10;        mailto:gary_simons@sil.org)Steven Bird, Linguistic Data&#10;        Consortium ( mailto:sb@ldc.upenn.edu)">
+<meta name="Description" content=" &#10;        This document specifies the metadata set used by the Open Language&#10;          Archives Community OLAC for the interchange of metadata within the&#10;          framework of the Open Archives Initiative OAI. &#10;      ">
+<meta content="OLAC (Open Language Archives Community)" name="Publisher">
+<meta name="Date" content="20010616">
+<STYLE> BODY { MARGIN:10px; BACKGROUND: white; COLOR:
+               navy; FONT-FAMILY: sans-serif; }
+            </STYLE>
+</HEAD>
+<BODY>
+<hr>
+<H1>OLAC Metadata Set</H1>
+<table cellspacing="10">
+<tr valign="top">
+<th align="left" width="100">Date&nbsp;issued:</th><td>2001-06-16</td>
+</tr>
+<tr valign="top">
+<th align="left">Status of document:</th><td><i>Draft Standard. </i>This is only a preliminary draft that is still under development; it has not yet been presented to the whole community for review.</td>
+</tr>
+<tr valign="top">
+<th align="left">This version:</th><td><a href="http://www.language-archives.org/OLAC/olacms-20010616.html">http://www.language-archives.org/OLAC/olacms-20010616.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Latest version:</th><td><a href="http://www.language-archives.org/OLAC/olacms.html">http://www.language-archives.org/OLAC/olacms.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Previous&nbsp;version:</th><td><a href="http://www.language-archives.org/OLAC/olacms-20010425.html">http://www.language-archives.org/OLAC/olacms-20010425.html</a></td>
+</tr>
+<tr valign="top">
+<th align="left">Abstract:</th><td>
+<p>This document specifies the metadata set used by the Open Language
+          Archives Community [<a href="http://www.language-archives.org/">OLAC</a>] for the interchange of metadata within the
+          framework of the Open Archives Initiative [<a href="http://www.openarchives.org/">OAI</a>].</p>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Editors:</th><td>
+<editors>Gary Simons, SIL International (
+        <a href="mailto:gary_simons@sil.org">mailto:gary_simons@sil.org</a>)<br>Steven Bird, Linguistic Data
+        Consortium ( <a href="mailto:sb@ldc.upenn.edu">mailto:sb@ldc.upenn.edu</a>)</editors>
+</td>
+</tr>
+<tr valign="top">
+<th align="left">Changes since previous version:</th><td>
+<p>Reinstates the "Comments" section of each element description; these
+          were inadvertently lost in the previous version due to a stylesheet error.
+          Introduction gives link to version 0.3 of the XML metadata schema which is now
+          compatible with this document. The <i>code</i> attribute is added to
+          <a href="#Date">Date</a> and the notation for encoding date values is elaborated. The
+          explanatory comments for <a href="#Contributor">Contributor</a>, <a href="#Relation">Relation</a>, and
+          <a href="#Source">Source</a> have been tightened up following community feedback.</p>
+</td>
+</tr>
+</table>
+<blockquote>
+<small>Copyright &copy; 2001 Gary
+      Simons (SIL International) and Steven Bird (University of
+      Pennsylvania). This material may be distributed and repurposed subject to the terms and conditions set forth in the <a href="http://creativecommons.org/licenses/by-sa/2.5/" rel="license">Creative Commons
+               Attribution-ShareAlike 2.5 License</a>.</small>
+</blockquote>
+<hr>
+<h3>Table of contents</h3>
+<ol>
+<LI>
+<A href="#Introduction">Introduction</A>
+</LI>
+<LI>
+<A href="#Attributes">Attributes</A>
+</LI>
+<LI>
+<A href="#Elements">Elements</A>
+</LI>
+</ol>
+<blockquote>
+<a href="#References">References</a>
+<br>
+</blockquote>
+<hr>
+<body>
+<h2>
+<A name="Introduction"></A>1. Introduction</h2>
+<p>The OLAC metadata set is based on the Dublin Core metadata set
+        [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]. The rationale for this is discussed in the OLAC white
+        paper [<a href="http://www.language-archives.org/docs/white-paper.html">OLAC-WP</a>]. </p>
+<p>All fifteen Dublin Core elements are used in the OLAC metadata set. In
+        order to suit the specific needs of the language archiving community, the
+        elements have been qualified following principles articulated in
+        [<a href="http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/">DC-Q</a>] and exemplified in [<a href="http://dublincore.org/documents/2000/08/15/dcq-html/">DCQ-HTML</a>]. A further principle
+        followed in developing the OLAC implementation of qualified DC is that any
+        element may use at most one encoding scheme. In this way, an XML DTD or schema
+        can be used in validating encoded values; by contrast, if the definition of
+        validity for one attribute depends on the value of another, then XML validation
+        mechanisms could not be employed. Thus when all the refinements of an element
+        use the same encoding scheme, the refinement is implemented by means of the
+        <i>refine</i> attribute. However, when a particular refinement requires that
+        the element value use a different encoding scheme, then a unique element has
+        been be defined. The names for these refined elements have been formed as in
+        [<a href="http://dublincore.org/documents/2000/08/15/dcq-html/">DCQ-HTML</a>] by concatenating the DC element name and the refinement
+        name with an intervening dot.</p>
+<p>The most recent version of the XML schema for the OLAC metadata set
+        (which should match this specification) is as follows:</p>
+<ul>
+<li>
+<p>Schema:
+            <a href="http://www.language-archives.org/OLAC/olac-0.3.xsd">http://www.language-archives.org/OLAC/olac-0.3.xsd</a>
+</p>
+</li>
+<li>
+<p>Example: <a href="http://www.language-archives.org/OLAC/olac-0.3.xml%0A            ">http://www.language-archives.org/OLAC/olac-0.3.xml
+            </a>
+</p>
+</li>
+</ul>
+<p>Section 2 below describes the attributes used in implementing the OLAC
+        metadata set. Section 3 then describes each of the elements that make up the
+        OLAC metadata set.</p>
+<h2>
+<A name="Attributes"></A>2. Attributes</h2>
+<p>Three attributes&mdash;<i>refine, code,</i> and <i>lang</i>&mdash;are
+        used throughout the metadata set to handle most qualifications to Dublin Core.
+        Some elements in the OLAC metadata set use the <i>refine</i> attribute to
+        identify element refinements. These qualifiers make the meaning of an element
+        narrower or more specific. A refined element shares the meaning of the
+        unqualified element, but with a more restricted scope [<a href="http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/">DC-Q</a>]. </p>
+<p>Some elements in the OLAC metadata set use the <i>code</i> attribute
+        to hold metadata values that are taken from a specific encoding scheme. When an
+        element may take this attribute, the attribute value specifies a precise value
+        for the element taken from a controlled vocabulary or formal notation described
+        in another OLAC document. In such cases, the element content may also be used
+        to specify a freeform elaboration of the coded value.</p>
+<p>Every element in the OLAC metadata set may use the <i>lang</i>
+        attribute. It specifies the language in which the text in the content of the
+        element is written. The value for the attribute comes from the controlled
+        vocabulary defined by [<a href="http://www.language-archives.org/OLAC/???">OLAC-Language</a>]. By default, the <i>lang</i>
+        attribute has the value "en", for English. Whenever the language of the element
+        content is other than English, the <i>lang</i> attribute should be used to
+        identify the language. By using multiple instances of the metadata elements
+        tagged for different languages, data providers may offer their metadata records
+        in multiple languages. </p>
+<p>In addition, there is a <i>lang</i> attribute on the
+        <i>&lt;olac&gt;</i> element that contains the metadata elements for a given
+        metadata record. It lists the languages in which the metadata record is
+        designed to be read. This attribute holds a space-delimited list of language
+        codes from the [<a href="http://www.language-archives.org/OLAC/???">OLAC-Language</a>] controlled vocabulary. By default, this
+        attribute has the value "en", for English, indicating that the record is aimed
+        only at English readers. If an explicit value is given for the attribute, then
+        the record is aimed at readers of all the languages listed.</p>
+<p>Service providers should use this information in order to offer
+        multilingual views of the metadata. When a metadata record lists only one
+        alternative language, then all elements are displayed (regardless of their
+        individual languages), unless the user has requested to suppress all records in
+        that language. When a metadata record has multiple alternative languages, the
+        user should be able to select one and have display of elements in the other
+        languages suppressed. An element in a language not included in the list of
+        alternatives should always be displayed (for instance, the vernacular title of
+        a work).</p>
+<h2>
+<A name="Elements"></A>3. Elements</h2>
+<p>Each element of the OLAC metadata set is described in one of the
+        following subsections. The heading gives the generic identifier of the XML tag
+        used to encode the element. Under the heading, the element is described in five
+        ways. <i>Name</i> gives a descriptive label for the tag. <i>Definition</i> is a
+        one-line summary of what the element is used for. <i>Comments</i> offers
+        details on how to use the element; the first paragraph typically repeats the
+        comment from [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>], while the remaining paragraphs give further
+        specification for how OLAC uses the element. <i>Attributes</i> describes the
+        XML attributes used with the element. <i>Examples</i> shows samples of properly
+        encoded elements.</p>
+<p>In a given metadata record, every element is optional and every
+        element is repeatable.</p>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>An entity responsible for making contributions to the
+          content of the resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Examples of a Contributor include a person, an organization, or a
+            service. Typically, the name of a Contributor should be used to indicate the
+            entity. [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+<p>The name should be given in a form that is ready for sorting
+            within an index. For the names of persons, this means that the name should be
+            given in inverted order with the surname first. For the names of organizations,
+            this means that any initial article should be omitted. When a resource has more
+            than one contributor, use a separate Contributor element for each one.</p>
+<p>Contributor is closely related to <a href="#Creator">Creator</a>. The
+            Contributor designation is used for those entities whose role in the creation
+            of the resource is not great enough to merit recognition as a primary source of
+            the intellectual content. This element may be used to identify institutions
+            that sponsored or funded the work. It may be used to identify individuals who
+            played a secondary role in the development of the resource. As a rule of thumb,
+            Creator is used when the contribution is such that it would be cited in the
+            "author" field of a bibliographic entry, and Contributor is used otherwise.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A generic contributor:</p>
+<pre style="margin-left: 18pt">&lt;contributor&gt;Smith, John L.&lt;/contributor&gt;</pre>
+<p>A funding agency:</p>
+<pre style="margin-left: 18pt">&lt;contributor refine="funder"&gt;National Science
+    Foundation&lt;/contributor&gt;</pre>
+<p>The person who did the format conversion on a digital
+            resource:</p>
+<pre style="margin-left: 18pt">&lt;contributor&gt;Smith, John L. (format conversion)&lt;/contributor&gt;</pre>
+</td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The extent or scope of the content of the resource.
+          </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p> Coverage will typically include spatial location (a place name or
+            geographic coordinates), temporal period (a period label, date, or date range)
+            or jurisdiction (such as a named administrative entity). Recommended best
+            practice is to select a value from a controlled vocabulary (for example, the
+            Thesaurus of Geographic Names [TGN]) and that, where appropriate, named places
+            or time periods be used in preference to numeric identifiers such as sets of
+            coordinates or date ranges. [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td></td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>We need help from our librarians and archivists here. How do we
+            want to recommend using this element? I suspect we will want to modify the
+            above comment from DCMI. Since our database of the 6,800+ languages of the
+            world already records where they are spoken we don't need to encode that in the
+            metadata. The service providers can supply options to search by country, and
+            then use the language database to find the languages spoken in that country. In
+            the OLAC context, what would be good ways to use the Coverage element?</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>An entity primarily responsible for making the content of
+          the resource. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Examples of a Creator include a person, an organization, or a
+            service. Typically, the name of a Creator should be used to indicate the
+            entity. [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+<p>The name should be given in a form that is ready for sorting
+            within an index. For the names of persons, this means that the name should be
+            given in inverted order with the surname first. For the names of organizations,
+            this means that any initial article should be omitted. When a resource has more
+            than one creator, use a separate Creator element for each one.</p>
+<p>Creator is closely related to <a href="#Contributor">Contributor</a>. In
+            determining whether an entity is a Creator (as opposed to a Contributor), use
+            the same criteria that are followed for deciding that an entity should be
+            listed in the "author" slot of a bibliographic reference as a primary source of
+            the intellectual content. Entities that do not merit that level of recognition
+            should be treated as Contributors.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A personal author:</p>
+<pre style="margin-left: 18pt">&lt;creator&gt;Bloomfield, Leonard&lt;/creator&gt;</pre>
+<p>An institutional author:</p>
+<pre style="margin-left: 18pt">&lt;creator&gt;Linguistic Society of America&lt;/creator&gt;</pre>
+<p>An editor:</p>
+<pre style="margin-left: 18pt">&lt;creator refine="editor"&gt;Sapir, Edward&lt;/creator&gt;</pre>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>Develop the controlled vocabulary and write the OLAC-Role
+            document.</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>A date associated with an event in the life cycle of the
+          resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Use a coded value (see below) when possible, since that guarantees
+            that a service provider can do a straight alphanumeric sort to put collections
+            of metadata descriptions in correct chronological order. The element content
+            may always be used to express date-related values or comments that cannot be
+            fitted into the encoding standard.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A typical year of publication:</p>
+<pre style="margin-left: 18pt">&lt;date code="1992"/&gt;</pre>
+<p>A resource modified on October 16, 1996:</p>
+<pre style="margin-left: 18pt">&lt;date refine="modified" code="1996-10-16"/&gt;</pre>
+<p>A resource from approximately 1950:</p>
+<pre style="margin-left: 18pt">&lt;date code="1950"&gt;circa 1950&lt;/date&gt;</pre>
+</td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>An account of the content of the resource. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Description may include but is not limited to: an abstract, table
+            of contents, reference to a graphical representation of content, or a free-text
+            account of the content. [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+<p>No formatting conventions are defined within the text of
+            Description. Service providers may format the entire Description as a single
+            paragraph, collapsing adjacent white space characters into a single space.</p>
+<p>When there is a URL for a document that describes the resource,
+            use a separate Description element to encode just that URL. A Description that
+            begins with "http:" will be interpreted by service providers as consisting
+            solely of a URL and will be presented as a link in user interfaces. Service
+            providers are not obliged to search other Description text for the occurrence
+            of URLs.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A prose description of a resource:</p>
+<pre style="margin-left: 18pt">&lt;description&gt;The CALLHOME Japanese corpus of telephone speech consists
+    of 120 unscripted telephone conversations between native speakers
+    of Japanese. All calls, which lasted up to 30 minutes, originated
+    in North America and were placed to locations overseas (typically
+    Japan). Most participants called family members or close friends.
+    This corpus contains speech data files ONLY, along with the
+    minimal amount of documentation needed to describe the contents
+    and format of the speech files and the software packages needed to
+    uncompress the speech data. &lt;/description&gt;</pre>
+<p>A reference to an existing on-line description:</p>
+<pre style="margin-left: 18pt">&lt;description&gt;http://www.ldc.upenn.edu/Catalog/LDC96S37.html<br>&lt;/description&gt;</pre>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>[<a href="http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/">DC-Q</a>] defines two refinements for Description: table of
+            contents and abstract. Do we want to introduce this?</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The physical or digital manifestation of the resource.
+          </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Typically, Format may include the media-type or dimensions of the
+            resource. Format may be used to determine the software, hardware or other
+            equipment needed to display or operate the resource. Examples of dimensions
+            include size and duration. [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>For a digitally encoded dictionary:</p>
+<pre style="margin-left: 18pt">&lt;format code="text/xml"&gt;5,237 entries in a 1.2M XML
+    file.&lt;/format&gt;</pre>
+<p>For a digitally recorded text:</p>
+<pre style="margin-left: 18pt">&lt;format code="audio/wav"&gt;Duration: 153 seconds. Size: 3.3M.
+    Sampling: 1 channel, 22 KHz, 8 bits.&lt;/format&gt;</pre>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>We need to develop the vocabulary for Format. It should be based
+            on the list of Internet Media Types [<a href="http://www.isi.edu/in-notes/iana/assignments/media-types/media-types">MIME</a>] but we will still want our
+            own vocabulary document at least for the purpose of explaining and exemplifying
+            the use of MIME types. But further than that, we may want to pull out a subset
+            of MIME types. We also may want to add some new categories and subtypes for our
+            purposes in order to cover archive holdings that are not digital, e.g.
+            manuscript, print, microform, and so on. The library or archive world probably
+            has such a controlled vocabulary already.</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The CPU required to use a software resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>This element is used in the description of executable programs to
+            identify the kind of CPU that is needed to run them.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Software that runs on a Power PC:</p>
+<pre style="margin-left: 18pt">&lt;format.cpu code="ppc"/&gt;</pre>
+<p>Software that runs on the Intel family of processors but needs at
+            least 64 megabytes of memory:</p>
+<pre style="margin-left: 18pt">&lt;format.cpu code="x86"&gt;At least 64M memory&lt;/format.cpu&gt;</pre>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>We need to develop the vocabulary for CPU.</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>An encoded character set used by a digital resource.
+          </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>For a resource that is a digitally encoded text, Format.encoding
+            names the encoded character set it uses. For a resource that is a font,
+            Format.encoding names an encoded character set that it is able to render. For a
+            resource that is a software application, Format.encoding names an encoded
+            character set that it can read as input or write as output. Service providers
+            will use this information to match data files with the software tools that can
+            be applied to them.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td></td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>We need to develop the controlled vocabulary for Format.encoding.
+            The IANA registry of character set names [<a href="http://www.isi.edu/in-notes/iana/assignments/character-sets">IANA-CS</a>] could be used as a
+            starting point, but we will need to innovate beyond this. For instance, we will
+            need to add something about levels of Unicode conformance as defined by our
+            Character Encoding working group.</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>A markup scheme used by a digital resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>For a resource that is a text file including markup, Format.markup
+            identifies the markup system it uses, such as the SGML DTD, the XML Schema, the
+            set of Standard Format markers, and the like. For a resource that is a
+            stylesheet or a software application, Format.markup names a markup scheme that
+            it can read as input or write as output. Service providers will use this
+            information to match data files with the software tools that can be applied to
+            them.</p>
+<p>The content of the element should be a URI giving an OAI
+            identifier for the markup scheme itself as a resource in an OLAC archive. Thus,
+            if the DTD, Schema, or markup documentation is not already archived in an OLAC
+            repository, the depositer of a marked-up resource must also deposit the
+            documentation for the markup scheme. A resource identified in Format.markup
+            should not also be listed with the <i>requires</i> refinement of Relation.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td></td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>Do we want to go a step further and have markup schemes be
+            deposited at OLAC so that we can try to avoid duplicate ids for the same DTD?
+            They could have identifiers like <tt>oai:olac:markup:...</tt> and be defined as
+            belonging to a set named <i>markup</i> at the OLAC community data provider so
+            that a single OAI harvesting request would retrieve the complete set of known
+            markup schemes.</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>An operating system required to use a software
+          resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>This element is used in the description of executable programs to
+            identify the operating system environment that is needed to run them.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Software that runs under OS/2:</p>
+<pre style="margin-left: 18pt">&lt;format.os code="OS/2"/&gt;</pre>
+<p>Software that runs only under Windows NT 4.0 or higher:</p>
+<pre style="margin-left: 18pt">&lt;format.os code="MSWindows"&gt;NT 4.0 or higher&lt;/format.os&gt;</pre>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>We need to develop the vocabulary for OS.</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>A programming language of software distributed in source
+          form. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Identifies a programming language used by software that is
+            distributed in source code form.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Source code that is written in C++:</p>
+<pre style="margin-left: 18pt">&lt;format.sourcecode code="C++"/&gt;</pre>
+<p>Source code that is written in Java using the version 1.2
+            library:</p>
+<pre style="margin-left: 18pt">&lt;format.sourcecode code="Java"&gt;Version 1.2 library&lt;/format.sourcecode&gt;</pre>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>We need to develop the vocabulary for Sourcecode.</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>An unambiguous reference to the resource within a given
+          context.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Recommended best practice is to identify the resource by means of
+            a string or number conforming to a globally-known formal identification system.
+            Example formal identification systems include the Uniform Resource Identifier
+            (URI) (including the Uniform Resource Locator (URL)), the Digital Object
+            Identifier (DOI), and the International Standard Book Number (ISBN).
+            [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+<p>In the case of a resource that is not electronically encoded, but
+            is housed in a conventional archive, Identifier may be used to give a local
+            shelf or box number, or whatever scheme is used to locate a resource within the
+            collection.</p>
+<p>Identifiers that begin with "http:" will be interpreted by service
+            providers as URLs and be presented as links in user interfaces. Note that
+            Identifier is to be used only for a URL that retrieves the actual resource; use
+            <a href="#Description">Description</a> for a URL that retrieves just a description of the
+            resource.</p>
+<p>Do not specify the "oai:" identifier for the resource itself as a
+            value of Identifier, since it is already given in <tt>&lt;identifier&gt;</tt>
+            in the <tt>&lt;header&gt;</tt> of the <tt>&lt;record&gt;</tt>s returned by the
+            OAI protocol.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A Uniform Resource Locator for retrieval of an electronically
+            encoded resource:</p>
+<pre style="margin-left: 18pt">&lt;identifier&gt;http://arxiv.org/abs/cs.CL/0010033&lt;/identifier&gt;</pre>
+<p>A local identifier for retrieval within a physical collection:</p>
+<pre style="margin-left: 18pt">&lt;identifier&gt;Shelf 12, Box 7&lt;/identifier&gt;</pre>
+</td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>A language of the intellectual content of the
+          resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Language is used for a language the resource is in, as opposed to
+            the language it describes (see <a href="#Subject.language">Subject.language</a>). It is related to
+            the audience for the work in that it identifies a language that the creator of
+            the resource assumes that its eventual user will understand. When a resource is
+            in more than one language, use a separate Language element for each
+            language.</p>
+<p>For a work of literature or other monolingual document aimed at
+            the speakers of a particular language, use Language to identify that language.
+            For a sound recording, use Language for the language being spoken in the
+            recording. For a grammatical description, for instance, use Language for the
+            language the grammar is written in; use Subject.language for the language whose
+            grammar is being described. For an annotated text, use Language for the
+            language in which the annotations are made; use Subject.language for the
+            language of the base text that is being annotated. For a bilingual dictionary,
+            use Language for the language in which the definitions are written; use
+            Subject.language for the language whose words are being defined.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A resource in English about the Sikaiana language:</p>
+<pre style="margin-left: 18pt">&lt;language code="en"/&gt;
+&lt;subject.language code="x-sil-sky"/&gt;</pre>
+<p>A Yemba-French dictionary, where the alternate name Dschang is
+            preferred.</p>
+<pre style="margin-left: 18pt">&lt;language code="fr"/&gt;
+&lt;subject.language code="x-sil-ban"&gt;Dschang&lt;/subject.language&gt;</pre>
+<p>The <i>American Heritage Dictionary</i>, which is both in and
+            about American English:</p>
+<pre style="margin-left: 18pt">&lt;language code="en-us"/&gt;
+&lt;subject.language code="en-us"/&gt;</pre>
+<p>A resource about a language for which the controlled vocabulary
+            does not yet provide a code:</p>
+<pre style="margin-left: 18pt">&lt;subject.language&gt;Ancient Sumerian&lt;/subject.language&gt;</pre>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>Add an example of specifying a dialect.</p>
+<p>Write the OLAC-Language document.</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>An entity responsible for making the resource available
+          </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Examples of a Publisher include a person, an organization, or a
+            service. Typically, the name of a Publisher should be used to indicate the
+            entity. [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+<p>The name should be given in a form that is ready for sorting
+            within an index. For the names of persons, this means that the name should be
+            given in inverted order with the surname first. For the names of organizations,
+            this means that any initial article should be omitted. When a resource has more
+            than one publisher, use a separate Publisher element for each one.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A typical publisher:</p>
+<pre style="margin-left: 18pt">&lt;publisher&gt;Oxford University Press&lt;/publisher&gt;</pre>
+</td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>A reference to a related resource. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>This element is used to document relationships between resources.
+            When the related resource is also in a participating archive, the reference to
+            the related resource should be by means of an "oai:" identifier. A Relation
+            that begins with "oai:" should be presented by service providers as an active
+            link that retrieves the metadata for that resource.</p>
+<p>For a required markup definition (like a DTD or Schema) use
+            <a href="#Format.markup">Format.markup</a> rather than Relation. When the present resource is a
+            derived work, the source resource is typically indicated by
+            <a href="#Source">Source</a>; however, there are two cases in which refinements of
+            Relation are used. The <i>isVersionOf</i> refinement is used when the present
+            resource is a new version or edition with added intellectual content that has
+            been developed by the same creators. When the new version is nothing more than
+            a rendition in a new format, then the <i>isForrmatOf</i> refinement is used.
+            </p>
+<p></p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A link to a required font:</p>
+<pre style="margin-left: 18pt">&lt;relation refine="requires"&gt;oai:sil:software/ipafont&lt;/relation&gt;</pre>
+<p>Links to the component pieces of a collected work:</p>
+<pre style="margin-left: 18pt">&lt;relation refine="hasPart"&gt;oai:somearchive:holding126&lt;/relation&gt;
+&lt;relation refine="hasPart"&gt;oai:somearchive:holding127&lt;/relation&gt;
+&lt;relation refine="hasPart"&gt;oai:somearchive:holding128&lt;/relation&gt;
+&lt;relation refine="hasPart"&gt;oai:somearchive:holding129&lt;/relation&gt;
+&lt;relation refine="hasPart"&gt;oai:somearchive:holding130&lt;/relation&gt;</pre>
+<p>A chapter that was published in a book (that does not have an
+            archived metadata record):</p>
+<pre style="margin-left: 18pt">&lt;relation refine="isPartOf"&gt;In Joel Sherzer and Greg Urban (eds.),
+    Native South American discourse , 237-306. Berlin: Mouton.
+    &lt;/relation&gt;</pre>
+</td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>Information about rights held in and over the resource.
+          </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p> Typically, a Rights element will contain a rights management
+            statement for the resource, or reference a service providing such information.
+            Rights information often encompasses Intellectual Property Rights (IPR),
+            Copyright, and various Property Rights. If the Rights element is absent, no
+            assumptions can be made about the status of these and other rights with respect
+            to the resource. [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td></td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>Write the OLAC-Rights document.</p>
+<p>Add examples after we work out the controlled vocabulary.</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>A reference to a resource from which the present resource
+          is derived.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>The present resource may be derived from the Source resource in
+            whole or in part. [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>] When the Source resource is also
+            available in an on-line archive, recommended best practice is to reference it
+            by means of an "oai:" identifier. In this case service providers should
+            presented the Source as an active link that retrieves the metadata for that
+            resource. </p>
+<p> In the legal parlance of intellectual property rights, a
+            "derivative work" is one that is based on one or more preexisting works. This
+            includes cases in which a work may be recast, transformed, or adapted in any
+            way, such as by translation, abridgement, dramatization, recording,
+            transcription, or digital encoding. A work consisting of editorial revisions,
+            annotations, elaborations, or other modifications, which, as a whole, represent
+            an original work of authorship is also a derivative work
+            [<a href="http://www.loc.gov/copyright/title17/92chap1.html#101">Copyright</a>].</p>
+<p>This legal definition elucidates the sense of "derived" that is
+            intended in the Dublin Core definition of Source. Note, however, that this
+            overlaps with <a href="#Relation">Relation</a>, since the <i>isFormatOf</i> and
+            <i>isVersionOf</i> refinements both refer to derivative works in the technical
+            sense.</p>
+<p>Recommended best practice for OLAC is to reserve the use of Source
+            for cases when the present resource has a substantially different
+            <a href="#Type">Type</a> or <a href="#Creator">Creator</a> or <a href="#Title">Title</a> than the Source
+            resource. When the difference from the original work is only a difference of
+            <a href="#Date">Date</a> or <a href="#Format">Format</a> or <a href="#Publisher">Publisher</a> or
+            <a href="#Identifier">Identifier</a> or edition designator in the <a href="#Title">Title</a>, then
+            use Relation to encode the relationship to the original work.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>Source for a digital encoding of a manuscript in a participating
+            archive:</p>
+<pre style="margin-left: 18pt">&lt;source&gt;oai:somearchive:holding1023&lt;/source&gt;</pre>
+<p>Source for data extracted from a published source:</p>
+<pre style="margin-left: 18pt">&lt;source&gt;Kwara'ae flora vocabulary extracted from Guide to the
+        Forests of the British Solomon Islands, by T. C. Whitmore.
+        Oxford University Press, 1966.&lt;/source&gt;</pre>
+</td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The topic of the content of the resource.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Typically, a Subject will be expressed as keywords, key phrases or
+            classification codes that describe a topic of the resource. Recommended best
+            practice is to select a value from a controlled vocabulary or formal
+            classification scheme. [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td></td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>Need help here from our librarians and archivists. Is there a
+            controlled vocabulary we want to recommend, or should we just recommend
+            freeform use of keywords?</p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>A language which the content of the resource describes or
+          discusses.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>See <a href="#Language">Language</a> for a complete discussion (with
+            examples) of using the Language and Subject.language elements.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>A name given to the resource. </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>Typically, a Title will be a name by which the resource is
+            formally known. [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+<p>A translation of the title can be supplied in a second Title
+            element. Use the <i>lang</i> attribute to identify the language of these
+            elements.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>A typical title:</p>
+<pre style="margin-left: 18pt">&lt;title&gt;A Dictionary of the Nggela Language&lt;/title&gt;</pre>
+<p>A vernacular title with translation:</p>
+<pre style="margin-left: 18pt">&lt;title lang="x-sil-llu"&gt;Na tala 'uria na idulaa diana&lt;/language&gt;
+&lt;title lang="en"&gt;The road to good reading&lt;/language&gt;</pre>
+</td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The nature or genre of the content of the resource.
+          </td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p> Type includes terms describing general categories, functions,
+            genres, or aggregation levels for content. To describe the physical or digital
+            manifestation of the resource, use the <a href="#Format">Format</a> element.
+            [<a href="http://dublincore.org/documents/1999/07/02/dces/">DCMES1.1</a>]</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>The resource is a video recording:</p>
+<pre style="margin-left: 18pt">&lt;type code="image"/&gt;</pre>
+</td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>The nature or genre of the content of the resource from a
+          linguistic standpoint.</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>For a resource that is information in or about a language,
+            Type.data identifies what kind of information it is from a linguistic
+            standpoint. For a resource that is a software tool, Type.data identifies what
+            kind of information it processes. Service providers may use this information to
+            match data files with software tools that might be applied to them.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td>
+<p>The resource describes the grammar of a language:</p>
+<pre style="margin-left: 18pt">&lt;Type.data code="description/grammar"/&gt;</pre>
+<p>The resource includes the orthographic transcription of text:</p>
+<pre style="margin-left: 18pt">&lt;Type.data code="transcription/orthographic"/&gt;</pre>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>Write the OLAC-Data document. </p>
+</font></td>
+</tr>
+</table>
+<h3>
+<A name=""></A>
+</h3>
+<table align="center" cellspacing="12" width="95%">
+<tr valign="top">
+<td width="100"><i>Definition</i></td><td>Software Functionality</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Refinements</i></td><td>
+<p>There are no refinements for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Schemes</i></td><td>
+<p>There are no encoding schemes for this element.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Usage&nbsp;notes&nbsp;</i></td><td>
+<p>This element is used with resources that are software applications
+            to classify what they are used for.</p>
+</td>
+</tr>
+<tr valign="top">
+<td width="100"><i>Examples</i></td><td></td>
+</tr>
+<tr valign="top">
+<td width="100"><b><font color="red">
+<p>
+<i>To do</i>
+</p>
+</font></b></td><td><font color="red">
+<p>Write the OLAC-Functionality document. We may want to base it on
+            the HLT Survey <a href="http://cslu.cse.ogi.edu/HLTsurvey/">http://cslu.cse.ogi.edu/HLTsurvey/</a> as advocated by
+            the ACL/DFKI Natural Language Software Registry.</p>
+<p>Add examples after we figure out the vocabulary.</p>
+</font></td>
+</tr>
+</table>
+</body>
+<hr>
+<h2>
+<font color="red">To do</font>
+</h2>
+<font color="red">
+<p>There is not yet a provision for handling subject categorization by
+      linguistic classification.</p>
+<p>Rights.software has been left in limbo. It may be possible to unify it
+      with Rights.</p>
+</font><a name="References"></a>
+<hr>
+<h2>References</h2>
+<table cellspacing="10">
+<tr valign="top">
+<td width="150">[<a name="Copyright">Copyright</a>]</td><td>Section 101, Definitions, Copyright Law of the
+      United States of America and Related Laws Contained in Title 17 of the United
+      States
+      Code.<br>&lt;<a href="http://www.loc.gov/copyright/title17/92chap1.html#101">http://www.loc.gov/copyright/title17/92chap1.html#101</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="DC-Q">DC-Q</a>]</td><td>Dublin Core
+      Qualifiers.<br>&lt;<a href="http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/">http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="DC-Type">DC-Type</a>]</td><td>DCMI Type
+      Vocabulary.<br>&lt;<a href="http://dublincore.org/documents/2000/07/11/dcmi-type-vocabulary/">http://dublincore.org/documents/2000/07/11/dcmi-type-vocabulary/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="DCMES1.1">DCMES1.1</a>]</td><td>Dublin Core Metadata Element Set, Version 1.1:
+      Reference Description.
+      <br>&lt;<a href="http://dublincore.org/documents/1999/07/02/dces/">http://dublincore.org/documents/1999/07/02/dces/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="DCQ-HTML">DCQ-HTML</a>]</td><td>Recording qualified Dublin Core metadata in HTML
+      meta
+      elements.<br>&lt;<a href="http://dublincore.org/documents/2000/08/15/dcq-html/">http://dublincore.org/documents/2000/08/15/dcq-html/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="IANA-CS">IANA-CS</a>]</td><td>Internet Character
+      Sets.<br>&lt;<a href="http://www.isi.edu/in-notes/iana/assignments/character-sets">http://www.isi.edu/in-notes/iana/assignments/character-sets</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="MIME">MIME</a>]</td><td>Internet Media
+      Types.<br>&lt;<a href="http://www.isi.edu/in-notes/iana/assignments/media-types/media-types">http://www.isi.edu/in-notes/iana/assignments/media-types/media-types</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OAI">OAI</a>]</td><td>Open Archives Initiative.
+      <br>&lt;<a href="http://www.openarchives.org/">http://www.openarchives.org/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC">OLAC</a>]</td><td>Open Language Archives Community.
+      <br>&lt;<a href="http://www.language-archives.org/">http://www.language-archives.org/</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-CPU">OLAC-CPU</a>]</td><td>OLAC CPU
+      Vocabulary.<br>&lt;<a href="http://www.language-archives.org/OLAC/???">http://www.language-archives.org/OLAC/???</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Data">OLAC-Data</a>]</td><td>OLAC Data Type
+      Vocabulary.<br>&lt;<a href="http://www.language-archives.org/OLAC/???">http://www.language-archives.org/OLAC/???</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Encoding">OLAC-Encoding</a>]</td><td>OLAC Encoding
+      Vocabulary.<br>&lt;<a href="http://www.language-archives.org/OLAC/???">http://www.language-archives.org/OLAC/???</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Format">OLAC-Format</a>]</td><td>OLAC Format
+      Vocabulary.<br>&lt;<a href="http://www.language-archives.org/OLAC/???">http://www.language-archives.org/OLAC/???</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Functionality">OLAC-Functionality</a>]</td><td>OLAC Functionality
+      Vocabulary.<br>&lt;<a href="http://www.language-archives.org/OLAC/???">http://www.language-archives.org/OLAC/???</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Language">OLAC-Language</a>]</td><td>OLAC Language
+      Vocabulary.<br>&lt;<a href="http://www.language-archives.org/OLAC/???">http://www.language-archives.org/OLAC/???</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-OS">OLAC-OS</a>]</td><td>OLAC Operating System
+      Vocabulary.<br>&lt;<a href="http://www.language-archives.org/OLAC/???">http://www.language-archives.org/OLAC/???</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Rights">OLAC-Rights</a>]</td><td>OLAC Rights
+      Vocabulary.<br>&lt;<a href="http://www.language-archives.org/OLAC/???">http://www.language-archives.org/OLAC/???</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Role">OLAC-Role</a>]</td><td>OLAC Role
+      Vocabulary.<br>&lt;<a href="http://www.language-archives.org/OLAC/???">http://www.language-archives.org/OLAC/???</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-Sourcecode">OLAC-Sourcecode</a>]</td><td>OLAC Source Code
+      Vocabulary.<br>&lt;<a href="http://www.language-archives.org/OLAC/???">http://www.language-archives.org/OLAC/???</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="OLAC-WP">OLAC-WP</a>]</td><td>White Paper on Establishing an Infrastructure for
+      Open Language
+      Archiving<br>&lt;<a href="http://www.language-archives.org/docs/white-paper.html">http://www.language-archives.org/docs/white-paper.html</a>&gt;</td>
+</tr>
+<tr valign="top">
+<td width="150">[<a name="W3CDTF">W3CDTF</a>]</td><td>Date and Time Formats, W3C
+      Note.<br>&lt;<a href="http://www.w3.org/TR/NOTE-datetime">http://www.w3.org/TR/NOTE-datetime</a>&gt;</td>
+</tr>
+</table>
+</BODY>
+</HTML>
